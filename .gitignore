@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Dados locais do bot (contêm dados de clientes — NÃO subir)
+bot/leads.csv
+bot/replies_pending.json
+bot/config.local.json
+
+# Empacotamento
+site-deploy.zip
+
+# SO / editor
+Thumbs.db
+.DS_Store
+*.log

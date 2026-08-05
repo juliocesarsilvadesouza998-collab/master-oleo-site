@@ -1,0 +1,34 @@
+{
+  "empresa": {
+    "nome": "Master Óleo",
+    "cidade": "Salto/SP",
+    "telefone_whatsapp": "(11) 98599-7495",
+    "link_whatsapp": "https://wa.me/5511985997495",
+    "site": "https://master-oleo.vercel.app",
+    "email_contato": "contato@masteroleo.com.br",
+    "email_bot": "contato@masteroleo.com.br",
+    "link_guia": "https://master-oleo.vercel.app/guia-descarte-oleo.pdf"
+  },
+  "email": {
+    "imap_host": "imap.gmail.com",
+    "imap_port": 993,
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 465,
+    "usuario": "COLOQUE_O_EMAIL_AQUI@gmail.com",
+    "senha_app": "COLOQUE_A_SENHA_DE_APP_AQUI",
+    "remetente_nome": "Master Óleo"
+  },
+  "sequencia": {
+    "boas_vindas_dias": 0,
+    "follow_1_dias": 2,
+    "follow_2_dias": 5,
+    "follow_3_dias": 9,
+    "max_follows_sem_resposta": 3
+  },
+  "atendente": {
+    "horario_inicio": "08:00",
+    "horario_fim": "19:00",
+    "responder_sabado": true,
+    "responder_domingo": false
+  }
+}
