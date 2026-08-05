@@ -16,3 +16,6 @@ site-deploy.zip
 Thumbs.db
 .DS_Store
 *.log
+
+# Credenciais reais do bot (NUNCA subir)
+bot/config.json
