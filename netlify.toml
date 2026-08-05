@@ -1,0 +1,14 @@
+# Configuração do Netlify — publica a pasta do site
+[build]
+  publish = "deploy-vercel"
+
+# Redirecionamento amigável (opcional): /industrias → /industrias.html
+[[redirects]]
+  from = "/industrias"
+  to = "/industrias.html"
+  status = 200
+
+[[redirects]]
+  from = "/guia"
+  to = "/guia-descarte-oleo.pdf"
+  status = 302
