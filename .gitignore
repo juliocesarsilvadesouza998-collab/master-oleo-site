@@ -19,3 +19,6 @@ Thumbs.db
 
 # Credenciais reais do bot (NUNCA subir)
 bot/config.json
+
+# Local Netlify folder
+.netlify
