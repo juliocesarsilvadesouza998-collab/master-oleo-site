@@ -4,10 +4,10 @@
     "cidade": "Salto/SP",
     "telefone_whatsapp": "(11) 98599-7495",
     "link_whatsapp": "https://wa.me/5511985997495",
-    "site": "https://master-oleo.vercel.app",
+    "site": "https://master-oleo.netlify.app",
     "email_contato": "contato@masteroleo.com.br",
     "email_bot": "contato@masteroleo.com.br",
-    "link_guia": "https://master-oleo.vercel.app/guia-descarte-oleo.pdf"
+    "link_guia": "https://master-oleo.netlify.app/guia-descarte-oleo.pdf"
   },
   "email": {
     "imap_host": "imap.gmail.com",

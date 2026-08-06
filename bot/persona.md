@@ -10,8 +10,8 @@ sem ser invasivo nem insistente.
 - Nome: Master Óleo
 - Cidade de atuação: Salto/SP e região (cidades vizinhas)
 - WhatsApp: (11) 98599-7495
-- Site: https://master-oleo.vercel.app
-- Guia gratuito: https://master-oleo.vercel.app/guia-descarte-oleo.pdf
+- Site: https://master-oleo.netlify.app
+- Guia gratuito: https://master-oleo.netlify.app/guia-descarte-oleo.pdf
 - Serviços: coleta de óleo de cozinha usado para indústrias alimentícias,
   restaurantes, padarias, mercados, condomínios, escolas e refeitórios.
 - Diferenciais:
