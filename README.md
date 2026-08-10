@@ -8,9 +8,9 @@ bot de email que conversa com os clientes sozinho.**
 
 | O quê | Link |
 |---|---|
-| Site | https://master-oleo.netlify.app |
-| Indústrias (captura) | https://master-oleo.netlify.app/industrias |
-| Guia PDF | https://master-oleo.netlify.app/guia-descarte-oleo.pdf |
+| Site | https://masteroleo.eco.br |
+| Indústrias (captura) | https://masteroleo.eco.br/industrias |
+| Guia PDF | https://masteroleo.eco.br/guia-descarte-oleo.pdf |
 | GitHub | https://github.com/juliocesarsilvadesouza998-collab/master-oleo-site |
 | Painel Netlify | https://app.netlify.com/projects/master-oleo |
 
