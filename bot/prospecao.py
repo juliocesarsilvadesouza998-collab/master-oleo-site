@@ -150,7 +150,7 @@ def prospecao(args):
         write_leads(leads)
         print(f"\n{enviados} email(s) enviado(s) e registrado(s) no leads.csv.")
     elif args.dry_run:
-        print(f"\n{dry-run} — {enviados} envio(s) simulado(s) (nada foi enviado).")
+        print(f"\nDRY-RUN — {enviados} envio(s) simulado(s) (nada foi enviado).")
     
     smtp.quit()
 
