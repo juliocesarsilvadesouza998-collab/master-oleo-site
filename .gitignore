@@ -22,3 +22,4 @@ bot/config.json
 
 # Local Netlify folder
 .netlify
+bot/bounces.json
