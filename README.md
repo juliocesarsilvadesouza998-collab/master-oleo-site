@@ -87,4 +87,4 @@ python bot_oleo.py leads
 
 - Credenciais reais ficam só em `bot/config.json` (gitignore).
 - No Netlify Free, projetos novos podem nascer **private** (login). Este projeto já foi aberto para público (`sso_login=false`).
-- O bot acelera atendimento; orçamento final e coleta real fecham no WhatsApp (11) 98599-7495.
+- O bot acelera atendimento; orçamento final e coleta real fecham no WhatsApp (11) 96785-9631.
