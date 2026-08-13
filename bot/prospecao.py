@@ -24,16 +24,17 @@ FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
           "ultima_resposta","respondido_em","respondido_por"]
 
-# Empresas com MX válido + email padrão contato@dominio
+# Empresas com MX válido + email (corrigido onde houve bounce)
 EMPRESAS = [
     {"nome": "Alimentare Servicos", "empresa": "Alimentare Servicos de Alimentacao LTDA", "email": "contato@alimentare.com.br", "cidade": "Salto/SP", "segmento": "Restaurantes e refeicoes coletivas"},
     {"nome": "Casa Alianca Gourmet", "empresa": "Casa Alianca - Padaria Gourmet", "email": "contato@padariaalianca.com.br", "cidade": "Salto/SP", "segmento": "Padaria e confeitaria"},
-    {"nome": "Restaurante Scallet", "empresa": "Restaurante e Pizzaria Scallet", "email": "contato@scallet.com.br", "cidade": "Salto/SP", "segmento": "Restaurante"},
+    {"nome": "Restaurante Scallet", "empresa": "Restaurante e Pizzaria Scallet", "email": "pedidos@scallet.com.br", "cidade": "Salto/SP", "segmento": "Restaurante"},
     {"nome": "Supermercados Dias", "empresa": "Supermercados Dias", "email": "contato@jvmsupermarket.com.br", "cidade": "Salto/SP", "segmento": "Supermercado"},
     {"nome": "Sapore S.A.", "empresa": "Sapore S.A.", "email": "contato@sapore.com.br", "cidade": "Campinas/SP", "segmento": "Restaurantes (rede nacional)"},
-    {"nome": "Kerry do Brasil", "empresa": "Kerry do Brasil LTDA", "email": "contato@kerry.com", "cidade": "Campinas/SP", "segmento": "Industria de ingredientes"},
-    {"nome": "Bagley do Brasil", "empresa": "Bagley do Brasil Alimentos LTDA", "email": "contato@arcor.com", "cidade": "Campinas/SP", "segmento": "Industria de alimentos (snacks)"},
+    {"nome": "Kerry do Brasil", "empresa": "Kerry do Brasil LTDA", "email": "dpo.kerry@lbca.com.br", "cidade": "Campinas/SP", "segmento": "Industria de ingredientes"},
+    {"nome": "Bagley do Brasil", "empresa": "Bagley do Brasil Alimentos LTDA", "email": "aquiarcor@arcor.com", "cidade": "Campinas/SP", "segmento": "Industria de alimentos (snacks)"},
     {"nome": "Massima Alimentacao", "empresa": "Massima Alimentacao", "email": "contato@massimaalimentacao.com.br", "cidade": "Regiao", "segmento": "Refeicoes coletivas"},
+    {"nome": "Monin Brasil", "empresa": "Monin Brasil Industria", "email": "faleconosco@monin.com", "cidade": "Itu/SP", "segmento": "Industria de xaropes e sabores"},
 ]
 
 def now_iso():
@@ -65,21 +66,21 @@ def tpl_apresentacao(cfg, lead):
     """Template de email de apresentação B2B (prospecção fria)."""
     g = cfg["empresa"]
     return {
-        "subject": f"Coleta de óleo em {lead['cidade']} — Master Óleo",
+        "subject": f"Compramos óleo usado em {lead['cidade']} — Master Óleo",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, <b>{lead['nome']}</b>!</p>
-<p>Meu nome é <b>{g['nome']}</b> e atuamos na <b>coleta de óleo de cozinha usado</b> em {g['cidade']} e região.</p>
-<p>Sabemos que empresas como a <b>{lead['empresa']}</b> ({lead['segmento']}) geram óleo de cozinha saturado com frequência — e o descarte correto é <b>obrigação legal</b> (PNRS, Lei 12.305/2010), além de uma questão ambiental importante.</p>
-<p>Gostaria de apresentar o que fazemos:</p>
+<p>Meu nome é <b>{g['nome']}</b> e atuamos na <b>compra de óleo de cozinha usado e gordura vegetal usada</b> em {g['cidade']} e região.</p>
+<p>Sabemos que empresas como a <b>{lead['empresa']}</b> ({lead['segmento']}) geram óleo de fritura e gordura vegetal saturados com frequência — e o descarte correto é <b>obrigação legal</b> (PNRS, Lei 12.305/2010), além de uma questão ambiental importante.</p>
+<p>E aqui vai a boa notícia: <b>nós compramos esse material</b>. Gostaria de apresentar o que fazemos:</p>
 <ul>
+  <li><b>Pagamos pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade</li>
   <li><b>Coleta programada</b> — semanal, quinzenal ou sob demanda, conforme o seu volume</li>
   <li><b>Certificado de destinação</b> emitido em <b>toda coleta</b> (comprovação legal)</li>
   <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
-  <li><b>Para bom volume, a coleta é gratuita</b> — o valor está no destino sustentável do óleo (biodiesel)</li>
 </ul>
-<p>Atendemos em {g['cidade']} e região. Gostaria de saber qual o <b>volume aproximado de óleo</b> que a {lead['empresa']} gera por mês? Posso preparar uma proposta sem compromisso.</p>
+<p>Atendemos em {g['cidade']} e região. Gostaria de saber qual a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> que a {lead['empresa']} gera? Com isso, alinho a melhor proposta de compra sem compromisso.</p>
 <p>Se preferir, estou disponível pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> — resposta rápida em horário comercial.</p>
-<p>Atenciosamente,<br><b>{g['nome']}</b><br>Coleta de óleo de cozinha usado · {g['cidade']}<br>WhatsApp: {g['telefone_whatsapp']}</p>
+<p>Atenciosamente,<br><b>{g['nome']}</b><br>Compra de óleo de cozinha usado · {g['cidade']}<br>WhatsApp: {g['telefone_whatsapp']}</p>
 </div>"""}
 
 def prospecao(args):

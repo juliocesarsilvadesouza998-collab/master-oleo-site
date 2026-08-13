@@ -1,0 +1,51 @@
+{
+  "Alimentare": {
+    "emails": [],
+    "urls": [
+      "https://monitorcnpj.com.br/cnpj/22391172000176/",
+      "https://salto.sp.gov.br/",
+      "https://www.instagram.com/reel/DXXDTQJDQ_x/?hl=en",
+      "https://www.instagram.com/p/DJXDbccA9OM/?hl=en",
+      "https://dosp.com.br/exibe_do.php?i=MjUwMTEz"
+    ]
+  },
+  "Kerry": {
+    "emails": [],
+    "urls": [
+      "http://www.kerry.com.br/"
+    ]
+  },
+  "Arcor": {
+    "emails": [
+      "aquiarcor@arcor.com.",
+      "arcor@arcor.com."
+    ],
+    "urls": [
+      "https://www.arcor.com.br/contato/",
+      "https://br.linkedin.com/company/arcor-do-brasil",
+      "https://arcor.gupy.io/",
+      "https://www.arcor.com/en/contact-us-products",
+      "https://www.arcor.com.br/"
+    ]
+  },
+  "Itu-alimentos": {
+    "emails": [],
+    "urls": [
+      "https://www.econodata.com.br/maiores-empresas/sp-itu/alimentos",
+      "https://sohelices.com.br/14-maiores-fabricas-de-alimentos-no-brasil/?srsltid=AfmBOopxExK5vtmswVl_ObQU1S4E7r-h7Vww1XGRnpUKEjccJhJp27nu",
+      "https://valor.globo.com/empresas/noticia/2024/11/18/as-maiores-empresas-de-alimentos-e-bebidas-do-brasil.ghtml",
+      "https://www.empresaqui.com.br/listas-de-empresas/SP/ITU",
+      "https://pt.scribd.com/document/459837936/100-Maiores-Empresas-Alimenticias"
+    ]
+  },
+  "Campinas-alimentos": {
+    "emails": [],
+    "urls": [
+      "https://www.econodata.com.br/maiores-empresas/sp-campinas/alimentos",
+      "https://www.instagram.com/p/DVyJS5ADuRt/?hl=en",
+      "https://sohelices.com.br/14-maiores-fabricas-de-alimentos-no-brasil/?srsltid=AfmBOoraJI61jpilnG35bOI9JC6LCac6tUOc-aURciyhhzLiZz7ZOpVJ",
+      "https://www.empresaqui.com.br/listas-de-empresas/SP/CAMPINAS",
+      "https://valor.globo.com/empresas/noticia/2024/11/18/as-maiores-empresas-de-alimentos-e-bebidas-do-brasil.ghtml"
+    ]
+  }
+}

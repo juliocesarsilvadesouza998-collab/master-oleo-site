@@ -1,0 +1,41 @@
+{
+  "Alimentare": {
+    "emails": [],
+    "urls": []
+  },
+  "Scallet": {
+    "emails": [
+      "pedidos@scallet.com.br"
+    ],
+    "urls": [
+      "https://scallet.com.br/"
+    ]
+  },
+  "Alimentare2": {
+    "emails": [
+      "admin@adfood.com.br",
+      "catia@trigoleve.com.br",
+      "contato@marketalimentacao.com.br",
+      "contato@qualitarestaurantes.com.br",
+      "gerenciaitabira@trigoleve.com.br",
+      "kellyjf@trigoleve.com.br"
+    ],
+    "urls": [
+      "https://www.instagram.com/p/Db5wPidjCx6/",
+      "https://www.instagram.com/reel/C8UfpyzMR0s/",
+      "https://foodleve.com.br/",
+      "https://marketalimentacao.com.br/refeicoes-coletivas/"
+    ]
+  },
+  "Scallet2": {
+    "emails": [
+      "pedidos@scallet.com.br"
+    ],
+    "urls": [
+      "https://www.tripadvisor.com/Restaurant_Review-g2343079-d5996176-Reviews-Restaurante_E_Pizzaria_Scallet-Salto_State_of_Sao_Paulo.html",
+      "https://www.facebook.com/restaurantescallet/",
+      "https://www.instagram.com/p/DVYgqI_E3t6/",
+      "https://www.instagram.com/reel/C56l1azpW_8/"
+    ]
+  }
+}

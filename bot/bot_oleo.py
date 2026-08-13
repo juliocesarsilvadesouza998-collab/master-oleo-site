@@ -137,18 +137,19 @@ def add_lead(args):
 def tpl_boas_vindas(cfg, lead):
     g = cfg["empresa"]
     return {
-        "subject": "Guia de descarte de óleo para indústrias alimentícias",
+        "subject": "Compramos seu óleo de cozinha usado — Master Óleo",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, <b>{lead['nome']}</b>!</p>
-<p>Obrigado pelo seu interesse no serviço da <b>{g['nome']}</b>. Segue o guia gratuito que você solicitou:</p>
+<p>Obrigado pelo seu interesse na <b>{g['nome']}</b>. Segue o guia gratuito que você solicitou:</p>
 <p style="text-align:center;margin:24px 0">
   <a href="{g['link_guia']}" style="background:#f59e0b;color:#3b2600;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:bold">📘 Baixar Guia de Descarte</a>
 </p>
 <p>Nele você encontra o que a lei exige (PNRS), o checklist para escolher um coletor confiável e as boas práticas de acondicionamento para grandes volumes.</p>
-<p>Se preferir, posso já agendar uma <b>avaliação gratuita do seu volume de óleo</b> e enviar uma proposta de coleta. É só responder este e-mail contando um pouco da sua operação:</p>
+<p><b>E uma boa notícia:</b> além de coletar com certificado de destinação, <b>compramos o óleo de cozinha usado e a gordura vegetal usada</b> — o valor é negociado conforme a quantidade e a qualidade do material.</p>
+<p>Para alinhar a melhor proposta, me conta:</p>
 <ul>
-  <li>Qual o volume aproximado de óleo por mês?</li>
-  <li>Qual a frequência de coleta ideal para você?</li>
+  <li>Qual a <b>quantidade aproximada</b> de óleo/gordura por mês (litros ou kg)?</li>
+  <li>Qual o <b>tipo de material</b> (óleo de fritura, gordura vegetal, etc.)?</li>
 </ul>
 <p>Atendemos {g['cidade']} e região, com certificado de destinação em toda coleta.</p>
 <p>Atenciosamente,<br><b>{g['nome']}</b><br>WhatsApp: {g['telefone_whatsapp']}</p>
@@ -157,36 +158,33 @@ def tpl_boas_vindas(cfg, lead):
 def tpl_follow(cfg, lead, n):
     g = cfg["empresa"]
     if n == 1:
-        subj, html = "Você baixou o guia. E o próximo passo?", f"""
-<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+        subj, html = "Seu óleo usado vale dinheiro. Vamos negociar?", f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, <b>{lead['nome']}</b>!</p>
-<p>Espero que o guia tenha sido útil. Muitas indústrias nos contam que o desafio não é <i>saber</i> a regra, e sim <i>colocar em prática</i> com um coletor que realmente emita certificado e cumpra a frequência combinada.</p>
-<p>É exatamente isso que fazemos: <b>coleta programada, bombonas fornecidas e certificado em cada retirada</b>, sem você precisar cobrar.</p>
-<p>Quer que eu prepare uma <b>proposta sem compromisso</b> para a sua empresa? Me responda com o volume aproximado de óleo por mês e a frequência que prefere.</p>
+<p>Espero que o guia tenha sido útil. E se eu te disser que o seu óleo usado pode virar <b>dinheiro na conta</b>?</p>
+<p>A {g['nome']} <b>compra óleo de cozinha usado e gordura vegetal usada</b> — o valor é negociado conforme a quantidade e a qualidade do material, com coleta programada e certificado em cada retirada.</p>
+<p>Quer que eu prepare uma <b>proposta de compra sem compromisso</b>? Me responda com a quantidade aproximada (litros ou kg por mês) e o tipo de material (óleo de fritura, gordura vegetal, etc.).</p>
 <p>WhatsApp: {g['telefone_whatsapp']} — resposta rápida em horário comercial.</p>
 <p>Abraço,<br><b>{g['nome']}</b></p>
 </div>"""
     elif n == 2:
-        subj, html = "Como está o descarte de óleo na sua operação?", f"""
-<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+        subj, html = "Quanto vale o óleo que a sua operação descarta?", f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, <b>{lead['nome']}</b>!</p>
 <p>Pensando na sua operação, montei um resumo de como funciona a parceria com a {g['nome']}:</p>
 <ul>
-  <li><b>Avaliação gratuita</b> do seu volume e da estrutura atual</li>
+  <li><b>Pagamos pelo óleo e gordura vegetal usados</b> — valor negociado por quantidade</li>
   <li><b>Coleta programada</b> (diária, semanal ou quinzenal)</li>
   <li><b>Certificado de destinação</b> emitido a cada retirada</li>
   <li><b>Bombonas</b> fornecidas com troca cheia/vazia</li>
   <li><b>Contrato simples</b>, sem fidelidade e sem burocracia</li>
 </ul>
-<p>Posso agendar uma conversa rápida de <b>10 minutos</b> para entender seu caso? É só responder este e-mail com o melhor horário.</p>
+<p>Posso agendar uma conversa rápida de <b>10 minutos</b> para entender a sua quantidade e alinhar o valor? É só responder este e-mail com o melhor horário.</p>
 <p>Um abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
-        subj, html = "Último lembrete: avaliação gratuita de coleta de óleo", f"""
-<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+        subj, html = "Último lembrete: vendemos o seu óleo usado por um bom valor", f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, <b>{lead['nome']}</b>!</p>
 <p>Este é nosso último e-mail sobre o assunto — não quero ser chato. 😊</p>
-<p>Se ainda faz sentido para a sua empresa ter um descarte de óleo <b>100% documentado</b> (com certificado em toda coleta), a oferta continua de pé: <b>avaliação gratuita do seu volume e proposta sem compromisso</b>.</p>
+<p>Se ainda faz sentido para a sua empresa <b>vender o óleo e a gordura vegetal usados</b> com certificado em toda coleta, a proposta continua de pé: <b>negociação de valor conforme a quantidade, sem compromisso</b>.</p>
 <p>É só responder este e-mail ou chamar no WhatsApp {g['telefone_whatsapp']}. Se preferir, fico à disposição para quando o momento for melhor.</p>
 <p>Obrigado pela atenção!<br><b>{g['nome']}</b></p>
 </div>"""
