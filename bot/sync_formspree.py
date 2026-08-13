@@ -26,6 +26,22 @@ SUBJECT_FILTER = "New submission"
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
 
+# Bounces detectados automaticamente (emails que o Gmail devolveu como inválidos)
+BOUNCE_CACHE = os.path.join(BASE, "bounces.json")
+
+def load_bounces():
+    if os.path.exists(BOUNCE_CACHE):
+        try:
+            with open(BOUNCE_CACHE, encoding="utf-8") as f:
+                return set(json.load(f))
+        except Exception:
+            return set()
+    return set()
+
+def save_bounces(bounces):
+    with open(BOUNCE_CACHE, "w", encoding="utf-8") as f:
+        json.dump(sorted(bounces), f, ensure_ascii=False, indent=2)
+
 def load_config():
     with open(CONFIG_PATH, encoding="utf-8") as f:
         return json.load(f)
@@ -82,11 +98,39 @@ def process_notifications(args):
         sys.exit("ERRO: configure bot/config.json com email e senha de app (Gmail).")
     leads = read_leads()
     existing = {l.get("email","").strip().lower() for l in leads}
+    bounces = load_bounces()
 
     ctx = ssl.create_default_context()
     m = imaplib.IMAP4_SSL(e["imap_host"], e["imap_port"], ssl_context=ctx, timeout=30)
     m.login(e["usuario"], e["senha_app"].replace(" ",""))
     try:
+        # 1) Detectar bounces: emails que o Gmail devolveu como inválidos
+        m.select("INBOX")
+        typ, data = m.search(None, '(FROM "mailer-daemon@googlemail.com")')
+        bounce_ids = data[0].split() if typ == "OK" and data[0] else []
+        for i in bounce_ids:
+            typ2, msg_data = m.fetch(i, "(BODY.PEEK[TEXT])")
+            if typ2 != "OK" or not msg_data or not msg_data[0]:
+                continue
+            body = msg_data[0][1].decode("utf-8","replace")
+            for em in re.findall(r"[\w.+-]+@[\w-]+\.[\w.]+", body):
+                el = em.lower()
+                if "masteroleo" not in el and "gmail.com" not in el and "@" in el:
+                    bounces.add(el)
+        if bounces:
+            save_bounces(bounces)
+            # marca leads existentes com email que deu bounce
+            mudou = False
+            for l in leads:
+                if l.get("email","").strip().lower() in bounces and l.get("status") != "bounce":
+                    l["status"] = "bounce"
+                    l["ultima_resposta"] = "EMAIL INVÁLIDO (bounce) — não reenviar"
+                    mudou = True
+            if mudou:
+                write_leads(leads)
+            print(f"{len(bounces)} email(s) em bounce cache (leads marcados como bounce).")
+
+        # 2) Processar notificações do Formspree
         m.select("INBOX")
         search_cmd = '(UNSEEN FROM "%s")' % FROM_FILTER
         if args.all:

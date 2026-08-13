@@ -203,7 +203,7 @@ def send_sequence(args):
     now = datetime.datetime.now().astimezone()
     env = cfg["sequencia"]
     for l in leads:
-        if l["status"] == "respondido":
+        if l["status"] in ("respondido", "bounce", "encerrado"):
             continue
         try:
             criado = datetime.datetime.fromisoformat(l["criado_em"])
