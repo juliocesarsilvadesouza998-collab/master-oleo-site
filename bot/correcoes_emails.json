@@ -68,5 +68,19 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-08-14T10:36:54-03:00"
+  },
+  {
+    "email_antigo": "avesideal@rosaves.com.br",
+    "empresa": "Abatedouro de Aves Ideal LTDA (Rosaves)",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T18:30:28-03:00"
+  },
+  {
+    "email_antigo": "faleconosco@beirariosm.com.br",
+    "empresa": "Beira Rio Comercio, Exportacao e Importacao de Produtos Alimenticios LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T18:30:28-03:00"
   }
 ]

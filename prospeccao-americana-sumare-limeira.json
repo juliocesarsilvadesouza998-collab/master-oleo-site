@@ -1,0 +1,59 @@
+{
+  "Dohler": {
+    "emails": [],
+    "urls": [
+      "https://www.doehler.com/pt/sobre-a-doehler/nossas-localizacoes.html",
+      "https://www.doehler.com/pt/"
+    ]
+  },
+  "SempreVale": {
+    "emails": [],
+    "urls": [
+      "https://www.semprevale.com.br/sac.php",
+      "https://www.semprevale.com.br/contato.php"
+    ]
+  },
+  "Selmi": {
+    "emails": [
+      "JSmith@selmi.com.br",
+      "John@selmi.com.br",
+      "JohnSmith@selmi.com.br",
+      "SmithJohn@selmi.com.br."
+    ],
+    "urls": [
+      "https://br.linkedin.com/company/pastificio-selmi",
+      "https://en.selmi.com.br/"
+    ]
+  },
+  "Oba": {
+    "emails": [
+      "First.Last@redeoba.com.br.",
+      "layane@pccomunicacao.com",
+      "ouvidoria@redeoba.com.br.",
+      "paula@pccomunicacao.com"
+    ],
+    "urls": [
+      "https://www.obahortifruti.com.br/contato?srsltid=AfmBOoqgDRy3v106my7LMJux8-7rrUB6f8pNOiGJE9g1PCLoB_j4X6NY",
+      "https://ri.obahortifruti.com.br/en/contact-oba/press-office/"
+    ]
+  },
+  "Potenza": {
+    "emails": [
+      "contato@moinhopotenza.com.br",
+      "contato@moinhopotenza.com.br."
+    ],
+    "urls": [
+      "https://moinhopotenza.com.br/contato/",
+      "https://www.linkedin.com/company/moinho-potenza"
+    ]
+  },
+  "CBR": {
+    "emails": [
+      "fiscal@cbr-refeicoes.com.br"
+    ],
+    "urls": [
+      "https://www.econodata.com.br/consulta-empresa/43168624000125-c-b-r-fornecedora-de-refeicoes-ltda",
+      "https://empresas.serasaexperian.com.br/consulta-gratis/C-B-R-FORNECEDORA-DE-REFEICOES-LTDA-43168624000206"
+    ]
+  }
+}

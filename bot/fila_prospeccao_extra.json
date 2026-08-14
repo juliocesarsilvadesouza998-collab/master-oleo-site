@@ -131,5 +131,47 @@
     "email": "atendimento@agrana.com",
     "cidade": "Cabreuva/SP",
     "segmento": "Industria de frutas e ingredientes"
+  },
+  {
+    "nome": "Oba Hortifruti",
+    "empresa": "Grupo Fartura de Hortifruti S/A (Oba)",
+    "email": "ouvidoria@redeoba.com.br",
+    "cidade": "Sumare/SP",
+    "segmento": "Varejo de hortifruti (rede)"
+  },
+  {
+    "nome": "Moinho Potenza",
+    "empresa": "Industria Moageira Nova Odessa LTDA",
+    "email": "contato@moinhopotenza.com.br",
+    "cidade": "Hortolandia/SP",
+    "segmento": "Industria de farinhas e moagem"
+  },
+  {
+    "nome": "CBR Refeicoes",
+    "empresa": "C.B.R. Fornecedora de Refeicoes LTDA",
+    "email": "fiscal@cbr-refeicoes.com.br",
+    "cidade": "Hortolandia/SP",
+    "segmento": "Refeicoes coletivas"
+  },
+  {
+    "nome": "Pastificio Selmi",
+    "empresa": "Pastificio Selmi S/A",
+    "email": "contato@selmi.com.br",
+    "cidade": "Sumare/SP",
+    "segmento": "Industria de massas"
+  },
+  {
+    "nome": "Mania de Churrasco",
+    "empresa": "Restaurante Limeira Comercio de Alimentos LTDA",
+    "email": "sac@maniadechurrasco.com",
+    "cidade": "Limeira/SP",
+    "segmento": "Restaurantes (rede steak house)"
+  },
+  {
+    "nome": "Bem Casado",
+    "empresa": "Bem Casado Industria de Alimentos e Bebidas LTDA",
+    "email": "sac@arrozbemcasado.com.br",
+    "cidade": "Nova Odessa/SP",
+    "segmento": "Industria de arroz e alimentos"
   }
 ]
