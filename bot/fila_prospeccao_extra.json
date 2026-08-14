@@ -110,5 +110,26 @@
     "email": "sac@atacadodiniz.com.br",
     "cidade": "Louveira/SP",
     "segmento": "Atacado e distribuicao de alimentos"
+  },
+  {
+    "nome": "Natari Alimentos",
+    "empresa": "Natari Alimentos LTDA",
+    "email": "natari@alhonatari.com.br",
+    "cidade": "Monte Mor/SP",
+    "segmento": "Atacado de hortifrutis e alimentos"
+  },
+  {
+    "nome": "Flamboia Alimentos",
+    "empresa": "Flamboia Alimentos LTDA",
+    "email": "comercial@flamboia.com.br",
+    "cidade": "Cabreuva/SP",
+    "segmento": "Industria de alimentos"
+  },
+  {
+    "nome": "Agrana Fruit Brasil",
+    "empresa": "Agrana Fruit Brasil Industria e Comercio LTDA",
+    "email": "atendimento@agrana.com",
+    "cidade": "Cabreuva/SP",
+    "segmento": "Industria de frutas e ingredientes"
   }
 ]

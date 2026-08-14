@@ -1,0 +1,45 @@
+{
+  "Flamboia": {
+    "emails": [
+      "comercial@flamboia.com.br"
+    ],
+    "urls": [
+      "https://flamboiaalimentosltda.com/contact-us/",
+      "https://www.flamboia.com.br/"
+    ]
+  },
+  "Agrana": {
+    "emails": [
+      "atendimento@agrana.com",
+      "dataprotection@agrana.com.",
+      "recruiting@agrana.com"
+    ],
+    "urls": [
+      "https://br.agrana.com/localizacao-e-contato/contato",
+      "https://br.agrana.com/en/locations-contact/contact"
+    ]
+  },
+  "GT": {
+    "emails": [],
+    "urls": [
+      "https://empresas.serasaexperian.com.br/consulta-gratis/G-T-COZINHA-INDUSTRIAL-LTDA-10705738000108",
+      "https://www.econodata.com.br/consulta-empresa/10705738000612-g-t-cozinha-industrial-ltda"
+    ]
+  },
+  "Aruman": {
+    "emails": [
+      "contabil@princesadoeste.com.br"
+    ],
+    "urls": [
+      "https://cnpj.biz/14915218000180",
+      "https://www.emis.com/php/company-profile/BR/Abatedouro_Aruman_Ltda_pt_15988669.html"
+    ]
+  },
+  "BomLugar": {
+    "emails": [],
+    "urls": [
+      "https://www.redebomlugar.com.br/atendimento-central-de-distribuicao",
+      "https://www.instagram.com/redebomlugar.une/?hl=en"
+    ]
+  }
+}
