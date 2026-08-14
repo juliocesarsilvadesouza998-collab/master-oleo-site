@@ -25,6 +25,7 @@ LEADS_PATH = os.path.join(BASE, "leads.csv")
 REPLIES_PATH = os.path.join(BASE, "replies_pending.json")
 FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
+          "apresentacao_em","fp1_em","fp2_em","fp3_em",
           "ultima_resposta","respondido_em","respondido_por"]
 
 def load_config():
@@ -202,6 +203,10 @@ def send_sequence(args):
     env = cfg["sequencia"]
     for l in leads:
         if l["status"] in ("respondido", "bounce", "encerrado"):
+            continue
+        # Leads de prospecção (outbound) têm fluxo próprio (apresentação + follow-ups),
+        # NÃO a sequência de boas-vindas do guia (que é para quem nos procurou).
+        if str(l.get("fonte","")).startswith("prospeccao"):
             continue
         try:
             criado = datetime.datetime.fromisoformat(l["criado_em"])

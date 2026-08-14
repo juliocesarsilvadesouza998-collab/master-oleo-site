@@ -95,24 +95,23 @@ def find_lead(leads, email_addr):
     return None
 
 def tpl_apresentacao(cfg, lead):
-    """Template de email de apresentação B2B (prospecção fria)."""
+    """Template de email de apresentação B2B (prospecção fria — NÓS contatamos)."""
     g = cfg["empresa"]
     return {
-        "subject": f"Compramos óleo usado em {lead['cidade']} — Master Óleo",
+        "subject": f"Compra de óleo usado — Master Óleo ({lead['cidade']})",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, <b>{lead['nome']}</b>!</p>
-<p>Meu nome é <b>{g['nome']}</b> e atuamos na <b>compra de óleo de cozinha usado e gordura vegetal usada</b> em {g['cidade']} e região.</p>
-<p>Sabemos que empresas como a <b>{lead['empresa']}</b> ({lead['segmento']}) geram óleo de fritura e gordura vegetal saturados com frequência — e o descarte correto é <b>obrigação legal</b> (PNRS, Lei 12.305/2010), além de uma questão ambiental importante.</p>
-<p>E aqui vai a boa notícia: <b>nós compramos esse material</b>. Gostaria de apresentar o que fazemos:</p>
+<p>Olá, {lead['nome']}.</p>
+<p>Sou da <b>{g['nome']}</b>, de {g['cidade']}, e estou entrando em contato porque a <b>{lead['empresa']}</b> atua no segmento de {lead['segmento'].lower()} — setor que gera <b>óleo de cozinha usado e gordura vegetal</b> com frequência.</p>
+<p>A <b>{g['nome']}</b> <b>compra esse material</b> com coleta programada e certificado de destinação em toda retirada. Na prática, o que oferecemos à sua empresa:</p>
 <ul>
-  <li><b>Pagamos pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade</li>
+  <li><b>Pagamento pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade</li>
+  <li><b>Certificado de destinação</b> em cada coleta (comprovação da PNRS, Lei 12.305/2010)</li>
   <li><b>Coleta programada</b> — semanal, quinzenal ou sob demanda, conforme o seu volume</li>
-  <li><b>Certificado de destinação</b> emitido em <b>toda coleta</b> (comprovação legal)</li>
   <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
 </ul>
-<p>Atendemos em {g['cidade']} e região. Gostaria de saber qual a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> que a {lead['empresa']} gera? Com isso, alinho a melhor proposta de compra sem compromisso.</p>
-<p>Se preferir, estou disponível pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> — resposta rápida em horário comercial.</p>
-<p>Atenciosamente,<br><b>{g['nome']}</b><br>Compra de óleo de cozinha usado · {g['cidade']}<br>WhatsApp: {g['telefone_whatsapp']}</p>
+<p>Se fizer sentido, me responda com a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> (óleo de fritura, gordura vegetal etc.) — com isso, alinho uma proposta de compra sem compromisso em até 24h.</p>
+<p>Também estou à disposição pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> (atendimento em horário comercial).</p>
+<p>Atenciosamente,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {g['cidade']}<br>{g['telefone_whatsapp']} · {g.get('site','https://masteroleo.eco.br')}</p>
 </div>"""}
 
 def prospecao(args):

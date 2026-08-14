@@ -138,6 +138,7 @@ def main():
                           "volume": "", "fonte": "prospeccao-lote", "status": "novo",
                           "criado_em": now_iso(), "boas_vindas_em": "",
                           "follow1_em": "", "follow2_em": "", "follow3_em": "",
+                          "apresentacao_em": now_iso(), "fp1_em": "", "fp2_em": "", "fp3_em": "",
                           "ultima_resposta": "", "respondido_em": "", "respondido_por": ""})
             contatados.add(p["email"].strip().lower())
             enviados += 1

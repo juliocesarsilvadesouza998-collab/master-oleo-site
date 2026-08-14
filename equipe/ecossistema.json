@@ -1,5 +1,6 @@
 {
   "criado_em": "2026-08-13",
+  "atualizado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -7,13 +8,27 @@
     "taxa_bounce_maxima": 0.15,
     "alvo_respostas_pct": 0.03
   },
-  "aprendizados": [],
-  "historico": [],
+  "fluxo_fechamento": {
+    "apresentacao_dia": 0,
+    "fp1_dia": 3,
+    "fp2_dia": 6,
+    "fp3_dia": 10,
+    "script_apresentacao": "bot/enviar_lote.py --max 15",
+    "script_followups": "bot/prospecao_followup.py",
+    "mensagem_chave": "Master Óleo COMPRA óleo e gordura vegetal usados; valor negociado por quantidade; NUNCA 'obrigado pelo seu interesse' em outbound"
+  },
+  "aprendizados": [
+    "2026-08-13: leads de prospecção NÃO devem receber boas-vindas do guia (send_sequence pula fonte prospeccao*) — mensagem 'obrigado pelo seu interesse' passava ar de inbound quando éramos outbound",
+    "2026-08-13: template de apresentação reescrito: profissional, deixa claro que NÓS contatamos, foca em compra + certificado + logística"
+  ],
+  "historico": [
+    "2026-08-13: lista ampliada para 31 empresas grandes (Campinas, Indaiatuba, Itu, Sorocaba, Jundiai, Louveira, Valinhos, Piracicaba); 15 emails enviados em lote"
+  ],
   "fila_prospeccao": {
     "total_empresas_listadas": 31,
-    "pendentes": 22,
-    "contatados": 9,
-    "bounces": 1,
+    "pendentes": 16,
+    "contatados": 15,
+    "bounces": 5,
     "ultima_atualizacao": "2026-08-13"
   }
 }

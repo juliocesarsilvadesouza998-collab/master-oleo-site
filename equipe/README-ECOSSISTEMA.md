@@ -38,6 +38,22 @@ usado e gordura vegetal usada — Salto/SP e região).
 - Regra de reputação: **máx 15 emails/dia** (não queimar o Gmail)
 - Prospecção semanal contínua para manter a fila ≥ 30 pendentes
 
+## 💼 Fluxo de fechamento (outbound — NÓS contatamos)
+
+1. **Apresentação** (dia 0): email profissional deixa claro que a Master Óleo
+   está contatando a empresa para COMPRAR o óleo/gordura usados — nunca
+   "obrigado pelo seu interesse" (isso é para quem nos procurou).
+2. **Follow-up 1** (dia 3): reforça a proposta de compra, pede litros/kg por
+   mês + tipo de material.
+3. **Follow-up 2** (dia 6): destaca que para >500L/mês a logística é 100% por
+   nossa conta, pede conversa rápida no WhatsApp.
+4. **Follow-up 3** (dia 10): último contato, porta aberta, encerra o ciclo.
+5. **Resposta do lead** → Atendente IA assume a conversa (negociação de valor
+   conforme quantidade/qualidade) e fecha pelo WhatsApp.
+
+Scripts: `bot/enviar_lote.py` (apresentação) + `bot/prospecao_followup.py`
+(follow-ups FP1/FP2/FP3). O Atendente roda ambos em cada tick.
+
 ## ⚙️ Regras de ouro (todos os membros)
 
 1. NUNCA reenviar para email com bounce (consultar `bounces.json`)
