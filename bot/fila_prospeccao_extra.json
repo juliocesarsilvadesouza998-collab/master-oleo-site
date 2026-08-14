@@ -1,0 +1,114 @@
+[
+  {
+    "nome": "Unigra Brasil",
+    "empresa": "Unigra Brasil Industria e Comercio de Produtos Alimenticios LTDA",
+    "email": "sac.br@mastermartini.com",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de oleos, gorduras e margarinas"
+  },
+  {
+    "nome": "AAK do Brasil",
+    "empresa": "AAK do Brasil Industria e Comercio de Oleos Vegetais LTDA",
+    "email": "marketing.sola@aak.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de oleos e gorduras especiais"
+  },
+  {
+    "nome": "Perfetti Van Melle Brasil",
+    "empresa": "Perfetti Van Melle Brasil LTDA",
+    "email": "contato@perfettivanmelle.com.br",
+    "cidade": "Vinhedo/SP",
+    "segmento": "Industria de balas e guloseimas"
+  },
+  {
+    "nome": "Bakels Brasil",
+    "empresa": "Bakels Brasil Ingredientes para Panificacao LTDA",
+    "email": "brazil@bakels.com.br",
+    "cidade": "Vinhedo/SP",
+    "segmento": "Industria de ingredientes para panificacao"
+  },
+  {
+    "nome": "Kemin do Brasil",
+    "empresa": "Kemin Industria e Comercio LTDA",
+    "email": "marketing.foodlatam@kemin.com",
+    "cidade": "Valinhos/SP",
+    "segmento": "Industria de ingredientes alimenticios"
+  },
+  {
+    "nome": "Marquespan",
+    "empresa": "Marquespan Industria de Alimentos LTDA",
+    "email": "sac@marquespan.com.br",
+    "cidade": "Tatui/SP",
+    "segmento": "Industria de panificacao (paes congelados)"
+  },
+  {
+    "nome": "Theoto S/A",
+    "empresa": "Theoto S/A Industria e Comercio",
+    "email": "sac@theoto.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de produtos alimenticios"
+  },
+  {
+    "nome": "Delta Supermercados",
+    "empresa": "Supermercado Delta Max LTDA",
+    "email": "admgeral@deltasuper.com.br",
+    "cidade": "Piracicaba/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Boa Supermercados",
+    "empresa": "Irmaos Boa LTDA",
+    "email": "atendimento@smboa.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Supermercado Irmaos Barrera",
+    "empresa": "Irmaos Barrera LTDA",
+    "email": "social@irmaosbarrera.com.br",
+    "cidade": "Elias Fausto/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "Supermercados Real",
+    "empresa": "Real Distribuidora de Alimentos LTDA",
+    "email": "contato@supermercadosreal.com.br",
+    "cidade": "Tatui/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Beira Rio Supermercados",
+    "empresa": "Beira Rio Comercio, Exportacao e Importacao de Produtos Alimenticios LTDA",
+    "email": "contato@beirariosm.com.br",
+    "cidade": "Piracicaba/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Supermercado Infanger",
+    "empresa": "Infanger & Cia LTDA",
+    "email": "contato@infanger.com.br",
+    "cidade": "Vinhedo/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "GoodBom Supermercados",
+    "empresa": "Good Bom Supermercados LTDA",
+    "email": "contato@goodbom.com.br",
+    "cidade": "Tatui/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Covabra Supermercados",
+    "empresa": "Covabra Supermercados LTDA",
+    "email": "sac@covabra.com.br",
+    "cidade": "Limeira/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Atacado Diniz",
+    "empresa": "Diniz Comercio Atacadista de Produtos Alimenticios LTDA",
+    "email": "sac@atacadodiniz.com.br",
+    "cidade": "Louveira/SP",
+    "segmento": "Atacado e distribuicao de alimentos"
+  }
+]
