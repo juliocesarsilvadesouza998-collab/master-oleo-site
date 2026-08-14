@@ -1,0 +1,82 @@
+{
+  "Palacios": {
+    "dominio": "palaciosbrasil.com.br",
+    "mx": true,
+    "servidores": [
+      "palaciosbrasil-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Crista": {
+    "dominio": "cristamargarina.com.br",
+    "mx": true,
+    "servidores": [
+      "mx.b.locaweb.com.br",
+      "mx.core.locaweb.com.br"
+    ]
+  },
+  "Sumerbol": {
+    "dominio": "sumerbol.com.br",
+    "mx": true,
+    "servidores": [
+      "sumerbol-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Alimentare Campinas": {
+    "dominio": "redealimentare.com.br",
+    "mx": true,
+    "servidores": [
+      "mx1.hostinger.com.br",
+      "mx2.hostinger.com.br"
+    ]
+  },
+  "Kelco": {
+    "dominio": "kelcopetcare.com.br",
+    "mx": true,
+    "servidores": [
+      "kelcopetcare-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Sorocaba Refrescos": {
+    "dominio": "sorocabarefrescos.com.br",
+    "mx": true,
+    "servidores": [
+      "sorocabarefrescos-com-br.mail.eo.outlook.com"
+    ]
+  },
+  "Supermercado UNE": {
+    "dominio": "superune.com.br",
+    "mx": true,
+    "servidores": [
+      "superune-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Shinoda": {
+    "dominio": "shinoda.com.br",
+    "mx": true,
+    "servidores": [
+      "shinoda-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Rosaves": {
+    "dominio": "rosaves.com.br",
+    "mx": true,
+    "servidores": [
+      "mail.rosaves.com.br"
+    ]
+  },
+  "Higa": {
+    "dominio": "higa.com.br",
+    "mx": true,
+    "servidores": [
+      "aspmx.l.google.com",
+      "alt1.aspmx.l.google.com"
+    ]
+  },
+  "Alimentare Salto (recheck)": {
+    "dominio": "alimentare.com.br",
+    "mx": true,
+    "servidores": [
+      "mail.servidorinterno.com.br"
+    ]
+  }
+}

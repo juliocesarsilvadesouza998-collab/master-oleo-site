@@ -1,0 +1,19 @@
+{
+  "criado_em": "2026-08-13",
+  "metas": {
+    "enviar_50_emails_a_partir_de": "2026-08-14",
+    "limite_diario_prospeccao": 15,
+    "foco_cidades": ["Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai", "Louveira", "Valinhos", "Piracicaba"],
+    "taxa_bounce_maxima": 0.15,
+    "alvo_respostas_pct": 0.03
+  },
+  "aprendizados": [],
+  "historico": [],
+  "fila_prospeccao": {
+    "total_empresas_listadas": 31,
+    "pendentes": 22,
+    "contatados": 9,
+    "bounces": 1,
+    "ultima_atualizacao": "2026-08-13"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "Castelo": {
+    "dominio": "casteloalimentos.com.br",
+    "mx": true,
+    "servidores": [
+      "casteloalimentos-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Food Brands/Kisabor": {
+    "dominio": "kisabor.ind.br",
+    "mx": true,
+    "servidores": [
+      "aspmx.l.google.com",
+      "alt1.aspmx.l.google.com"
+    ]
+  },
+  "Prime Cater": {
+    "dominio": "pmct.com.br",
+    "mx": true,
+    "servidores": [
+      "pmct-com-br.mail.protection.outlook.com"
+    ]
+  },
+  "Fini": {
+    "dominio": "finicompany.com",
+    "mx": true,
+    "servidores": [
+      "finicompany-com.mail.protection.outlook.com"
+    ]
+  },
+  "Fini (agencia)": {
+    "dominio": "rpmacomunicacao.com.br",
+    "mx": true,
+    "servidores": [
+      "aspmx.l.google.com",
+      "alt1.aspmx.l.google.com"
+    ]
+  },
+  "PGR/Premium": {
+    "dominio": "somospremium.com.br",
+    "mx": true,
+    "servidores": [
+      "mx.core.locaweb.com.br",
+      "mx.a.locaweb.com.br"
+    ]
+  },
+  "UNE (recheck)": {
+    "dominio": "superune.com.br",
+    "mx": true,
+    "servidores": [
+      "superune-com-br.mail.protection.outlook.com"
+    ]
+  }
+}

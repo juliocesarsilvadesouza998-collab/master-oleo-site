@@ -1,0 +1,56 @@
+{
+  "SorocabaRefrescos": {
+    "emails": [
+      "last@sorocabarefrescos.com.br"
+    ],
+    "urls": [
+      "https://www.sorocabarefrescos.com.br/",
+      "https://www.coca-cola.com/br/pt/about-us/contact-us",
+      "https://sorocabarefrescos.zendesk.com/hc/pt-br/articles/18066733140891-Fale-com-a-Sorocaba-Refrescos"
+    ]
+  },
+  "UNE": {
+    "emails": [
+      "rh@superune.com.br"
+    ],
+    "urls": [
+      "https://www.econodata.com.br/consulta-empresa/14140399000110-supermercado-une-ltda",
+      "https://www.instagram.com/redebomlugar.une/?hl=en",
+      "https://cnpj.biz/14140399000463"
+    ]
+  },
+  "Shinoda": {
+    "emails": [
+      "comercial.granja@shinoda.com.br",
+      "contato@maxxiovos.com.br"
+    ],
+    "urls": [
+      "https://shinoda.com.br/contato/",
+      "https://www.linkedin.com/company/shinoda-alimentos",
+      "https://cnpj.biz/58451386000138"
+    ]
+  },
+  "Rosaves": {
+    "emails": [
+      "avesidealadm@rosaves.com.brMais.",
+      "avesidealrh@rosaves.com.",
+      "avesidealrh@rosaves.com.br.",
+      "contato@rosaves.com.br"
+    ],
+    "urls": [
+      "https://rosaves.com.br/",
+      "https://www.instagram.com/p/DI6zj7kSctR/",
+      "https://www.facebook.com/FrangoRosaves/"
+    ]
+  },
+  "HNK2": {
+    "emails": [
+      "d@heineken.com.br."
+    ],
+    "urls": [
+      "https://panjiva.com/Hnk-Br-Industria-De-Bebidas-Ltda/46019212",
+      "https://www.heinekenbrasil.com.br/informacoes-legais/politica-de-cookies/",
+      "https://www.bloomberg.com/profile/company/845928Z:BZ"
+    ]
+  }
+}

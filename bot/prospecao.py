@@ -25,16 +25,48 @@ FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
           "ultima_resposta","respondido_em","respondido_por"]
 
 # Empresas com MX válido + email (corrigido onde houve bounce)
+# Fontes: econodata rankings 2026 (Campinas, Indaiatuba, Itu, Sorocaba) + sites oficiais
 EMPRESAS = [
+    # --- Salto/região (base) ---
     {"nome": "Alimentare Servicos", "empresa": "Alimentare Servicos de Alimentacao LTDA", "email": "contato@alimentare.com.br", "cidade": "Salto/SP", "segmento": "Restaurantes e refeicoes coletivas"},
     {"nome": "Casa Alianca Gourmet", "empresa": "Casa Alianca - Padaria Gourmet", "email": "contato@padariaalianca.com.br", "cidade": "Salto/SP", "segmento": "Padaria e confeitaria"},
     {"nome": "Restaurante Scallet", "empresa": "Restaurante e Pizzaria Scallet", "email": "pedidos@scallet.com.br", "cidade": "Salto/SP", "segmento": "Restaurante"},
     {"nome": "Supermercados Dias", "empresa": "Supermercados Dias", "email": "contato@jvmsupermarket.com.br", "cidade": "Salto/SP", "segmento": "Supermercado"},
+    {"nome": "Massima Alimentacao", "empresa": "Massima Alimentacao", "email": "contato@massimaalimentacao.com.br", "cidade": "Regiao", "segmento": "Refeicoes coletivas"},
+    # --- Campinas (grandes) ---
     {"nome": "Sapore S.A.", "empresa": "Sapore S.A.", "email": "contato@sapore.com.br", "cidade": "Campinas/SP", "segmento": "Restaurantes (rede nacional)"},
     {"nome": "Kerry do Brasil", "empresa": "Kerry do Brasil LTDA", "email": "dpo.kerry@lbca.com.br", "cidade": "Campinas/SP", "segmento": "Industria de ingredientes"},
     {"nome": "Bagley do Brasil", "empresa": "Bagley do Brasil Alimentos LTDA", "email": "aquiarcor@arcor.com", "cidade": "Campinas/SP", "segmento": "Industria de alimentos (snacks)"},
-    {"nome": "Massima Alimentacao", "empresa": "Massima Alimentacao", "email": "contato@massimaalimentacao.com.br", "cidade": "Regiao", "segmento": "Refeicoes coletivas"},
+    {"nome": "Alimentare Nutricao", "empresa": "Alimentare Nutricao e Servicos LTDA", "email": "contato@redealimentare.com.br", "cidade": "Campinas/SP", "segmento": "Refeicoes coletivas (1 mi refeicoes/mes)"},
+    {"nome": "Higa Atacado", "empresa": "Higa Produtos Alimenticios LTDA", "email": "contato@higa.com.br", "cidade": "Campinas/SP", "segmento": "Atacado e varejo de alimentos"},
+    # --- Indaiatuba (grandes) ---
+    {"nome": "Kelco Pet Care", "empresa": "Kelco Industrial Produtos Animais LTDA", "email": "info@kelcopetcare.com.br", "cidade": "Indaiatuba/SP", "segmento": "Industria de alimentos pet"},
+    {"nome": "Palacios Brasil", "empresa": "Palacios Brasil Comercializacao de Alimentos LTDA", "email": "palacios@palaciosbrasil.com.br", "cidade": "Indaiatuba/SP", "segmento": "Industria de embutidos e frios"},
+    {"nome": "Crista Margarina", "empresa": "Crista Industria e Comercio LTDA", "email": "faleconosco@cristamargarina.com.br", "cidade": "Indaiatuba/SP", "segmento": "Industria de gorduras e margarinas"},
+    {"nome": "Sumerbol Supermercados", "empresa": "Sumerbol Supermercados LTDA", "email": "atendimento@sumerbol.com.br", "cidade": "Indaiatuba/SP", "segmento": "Supermercados (rede)"},
+    # --- Itu (grandes) ---
     {"nome": "Monin Brasil", "empresa": "Monin Brasil Industria", "email": "faleconosco@monin.com", "cidade": "Itu/SP", "segmento": "Industria de xaropes e sabores"},
+    # --- Sorocaba (grandes) ---
+    {"nome": "Sorocaba Refrescos", "empresa": "Sorocaba Refrescos S.A.", "email": "last@sorocabarefrescos.com.br", "cidade": "Sorocaba/SP", "segmento": "Engarrafadora Coca-Cola"},
+    {"nome": "Supermercado UNE", "empresa": "Supermercado UNE LTDA", "email": "rh@superune.com.br", "cidade": "Sorocaba/SP", "segmento": "Supermercados (rede)"},
+    {"nome": "Shinoda Alimentos", "empresa": "Shinoda Alimentos LTDA", "email": "comercial.granja@shinoda.com.br", "cidade": "Sorocaba/SP", "segmento": "Industria de ovos e alimentos"},
+    {"nome": "Rosaves Aves", "empresa": "Abatedouro de Aves Ideal LTDA (Rosaves)", "email": "contato@rosaves.com.br", "cidade": "Sorocaba/SP", "segmento": "Abatedouro e frigorifico de aves"},
+    # --- Jundiaí (grandes) ---
+    {"nome": "Fini Company Brasil", "empresa": "Sanchez Cano LTDA (Fini)", "email": "fini@rpmacomunicacao.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de balas e guloseimas"},
+    {"nome": "Food Brands Kisabor", "empresa": "Food Brands Industria de Produtos Alimenticios S/A", "email": "sac@kisabor.ind.br", "cidade": "Jundiai/SP", "segmento": "Industria de condimentos e alimentos"},
+    {"nome": "Castelo Alimentos", "empresa": "Castelo Alimentos S/A", "email": "sacc@casteloalimentos.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de biscoitos e massas"},
+    {"nome": "CRS Brands", "empresa": "CRS Brands Industria e Comercio S/A", "email": "contato@crsbrands.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de bebidas e alimentos"},
+    # --- Louveira (grandes) ---
+    {"nome": "Prime Cater", "empresa": "Prime Cater Comercial de Produtos Alimenticios S/A", "email": "contato@pmct.com.br", "cidade": "Louveira/SP", "segmento": "Refeicoes coletivas e catering"},
+    {"nome": "PGR Sao Paulo Refeicoes", "empresa": "P.G.R. Sao Paulo Refeicoes LTDA", "email": "marcia.mendes@somospremium.com.br", "cidade": "Louveira/SP", "segmento": "Restaurantes e refeicoes"},
+    # --- Piracicaba (grandes) ---
+    {"nome": "Bom Peixe", "empresa": "Bom Peixe Industria e Comercio LTDA", "email": "sac@bompeixe.com.br", "cidade": "Piracicaba/SP", "segmento": "Industria de pescados e conservas"},
+    {"nome": "Laticinios Noiva da Colina", "empresa": "Laticinios Noiva da Colina LTDA", "email": "contato@vimilk.com.br", "cidade": "Piracicaba/SP", "segmento": "Industria de laticinios"},
+    # --- Valinhos (grandes) ---
+    {"nome": "Zarelli Supermercados", "empresa": "Zarelli Supermercados LTDA", "email": "contato@supermercadoszarelli.com.br", "cidade": "Valinhos/SP", "segmento": "Supermercados (rede)"},
+    {"nome": "Chr Hansen Brasil", "empresa": "Chr Hansen Industria e Comercio LTDA", "email": "braco@chr-hansen.com", "cidade": "Valinhos/SP", "segmento": "Industria de culturas e ingredientes"},
+    {"nome": "Pronutrition", "empresa": "Pronutrition do Brasil Industria de Suplementos", "email": "compras@pronutrition.com.br", "cidade": "Valinhos/SP", "segmento": "Industria de suplementos alimentares"},
+    {"nome": "Ultrapan", "empresa": "Ultrapan Industria e Comercio LTDA", "email": "marketing@ultrapan.com.br", "cidade": "Valinhos/SP", "segmento": "Industria de produtos alimenticios"},
 ]
 
 def now_iso():

@@ -1,0 +1,72 @@
+{
+  "BomPeixe": {
+    "emails": [
+      "contato@emporiobompeixe.com.br",
+      "sac@bompeixe.com.br"
+    ],
+    "urls": [
+      "https://bompeixe.com.br/contato/",
+      "https://www.facebook.com/bompeixeoficial/?locale=pt_BR",
+      "https://do.linkedin.com/company/bompeixe"
+    ]
+  },
+  "NoivaDaColina": {
+    "emails": [
+      "contato@vimilk.com.br",
+      "noivadacolina@noivadacolinatransportes.com.br"
+    ],
+    "urls": [
+      "https://www.facebook.com/groups/634946413910112/posts/1859050148166393/",
+      "https://cnpj.biz/67857961000198",
+      "https://vimilk.com.br/en/contato/"
+    ]
+  },
+  "Caetano": {
+    "emails": [],
+    "urls": [
+      "https://www.facebook.com/jornaldevalinhos/posts/nos-supermercados-caetano-em-valinhos-voc%C3%AA-encontra-a-qualidade-e-variedade-em-p/1035854208541656/",
+      "https://www.instagram.com/reel/DA9q2pviTRo/",
+      "https://supermercadoscaetano.com.br/"
+    ]
+  },
+  "Zarelli": {
+    "emails": [],
+    "urls": [
+      "https://www.supermercadoszarelli.com.br/",
+      "https://www.facebook.com/supermercados.zarelli/",
+      "https://www.instagram.com/reel/DVgqz_YCqki/?hl=en"
+    ]
+  },
+  "ChrHansen": {
+    "emails": [
+      "anaco@novonesis.com",
+      "braco@chr-hansen.com."
+    ],
+    "urls": [
+      "https://www.emis.com/php/company-profile/BR/Chr_Hansen_Industria_e_Comercio_Ltda_en_3303135.html",
+      "https://www.importyeti.com/supplier/chr-hansen-indstria-e-comrcio",
+      "https://www.novonesis.com/en/about-us/subsidiaries/south-america"
+    ]
+  },
+  "Pronutrition": {
+    "emails": [
+      "compras@pronutrition.com.br."
+    ],
+    "urls": [
+      "https://www.instagram.com/pronutrition.oficial/?hl",
+      "https://pronutrition.com.br/contato/",
+      "https://br.linkedin.com/company/pronutrition-br"
+    ]
+  },
+  "Ultrapan": {
+    "emails": [
+      "co@abir.org.br",
+      "marketing@ultrapan.com.br"
+    ],
+    "urls": [
+      "https://abir.org.br/associado/ultrapan/",
+      "https://www.instagram.com/ultrapan/?hl=en",
+      "https://www.econodata.com.br/consulta-empresa/62548409000102-ultrapan-industria-e-comercio-ltda"
+    ]
+  }
+}
