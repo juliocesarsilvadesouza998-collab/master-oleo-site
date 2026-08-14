@@ -43,10 +43,15 @@ def read_leads():
         return list(csv.DictReader(f))
 
 def write_leads(leads):
-    with open(LEADS_PATH, "w", newline="", encoding="utf-8") as f:
+    normal = []
+    for r in leads:
+        normal.append({k: r.get(k, "") if r.get(k) is not None else "" for k in FIELDS})
+    tmp = LEADS_PATH + ".tmp"
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()
-        w.writerows(leads)
+        w.writerows(normal)
+    os.replace(tmp, LEADS_PATH)  # atômico: nunca deixa o arquivo truncado
 
 def smtp_send(cfg, e, to, subject, html, in_reply_to=None):
     ctx = ssl.create_default_context()

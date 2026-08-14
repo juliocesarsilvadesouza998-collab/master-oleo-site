@@ -19,6 +19,7 @@ CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
+          "apresentacao_em","fp1_em","fp2_em","fp3_em",
           "ultima_resposta","respondido_em","respondido_por"]
 FROM_FILTER = "noreply@formspree.io"
 SUBJECT_FILTER = "New submission"
@@ -53,10 +54,15 @@ def read_leads():
         return list(csv.DictReader(f))
 
 def write_leads(leads):
-    with open(LEADS_PATH, "w", newline="", encoding="utf-8") as f:
+    normal = []
+    for r in leads:
+        normal.append({k: r.get(k, "") if r.get(k) is not None else "" for k in FIELDS})
+    tmp = LEADS_PATH + ".tmp"
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()
-        w.writerows(leads)
+        w.writerows(normal)
+    os.replace(tmp, LEADS_PATH)  # atômico: nunca deixa o arquivo truncado
 
 def find_lead(leads, email_addr):
     for l in leads:
