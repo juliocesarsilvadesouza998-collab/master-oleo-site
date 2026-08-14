@@ -9,7 +9,7 @@ usado e gordura vegetal usada — Salto/SP e região).
 | Papel | Job | Quando | Responsabilidade |
 |---|---|---|---|
 | **Atendente** | `497505018e92` | seg–sáb 8h–19h (30/30min) | Envia sequência, responde leads, conversa livre |
-| **Prospector** | `prospector-masteroleo` | seg–sáb 07:15 | Busca novas empresas grandes na web, valida email (MX), adiciona à fila, envia lote |
+| **Prospector** | `prospector-masteroleo` | seg–sáb 09:00 | Busca novas empresas grandes na web, valida email (MX), adiciona à fila, envia lote |
 | **Analista de Qualidade** | `analista-masteroleo` | seg–sáb 19:30 | Revisa os envios do dia: bounces, respostas, erros; corrige leads.csv e bounces.json |
 | **Estrategista** | `estrategista-masteroleo` | domingo 08:00 | Lê tudo, pesquisa mercado, define metas da semana, sugere melhorias e corrige templates/persona |
 
@@ -52,7 +52,19 @@ usado e gordura vegetal usada — Salto/SP e região).
    conforme quantidade/qualidade) e fecha pelo WhatsApp.
 
 Scripts: `bot/enviar_lote.py` (apresentação) + `bot/prospecao_followup.py`
-(follow-ups FP1/FP2/FP3). O Atendente roda ambos em cada tick.
+(follow-ups FP1/FP2/FP3) + `bot/corrigir_emails.py` (auto-correção de
+bounces: busca email correto na web, atualiza lead e reenvia). O Atendente
+roda todos em cada tick.
+
+## 🔧 Auto-correção de emails com bounce
+
+Quando um email de prospecção dá bounce (`bot/corrigir_emails.py`):
+1. Identifica o lead com bounce
+2. Busca o email CORRETO da empresa (mapa manual validado + busca na web com filtro de artefatos)
+3. Valida MX do novo domínio
+4. Atualiza o lead no leads.csv (status volta a "novo")
+5. Reenvia a apresentação para o email correto
+6. Registra tudo em `bot/correcoes_emails.json` (histórico de correções)
 
 ## ⚙️ Regras de ouro (todos os membros)
 

@@ -1,0 +1,72 @@
+[
+  {
+    "email_antigo": "contato@alimentare.com.br",
+    "empresa": "Alimentare Servicos de Alimentacao LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:48-03:00"
+  },
+  {
+    "email_antigo": "contato@scallet.com.br",
+    "empresa": "Restaurante e Pizzaria Scallet",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:48-03:00"
+  },
+  {
+    "email_antigo": "contato@kerry.com",
+    "empresa": "Kerry do Brasil LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:49-03:00"
+  },
+  {
+    "email_antigo": "contato@arcor.com",
+    "empresa": "Bagley do Brasil Alimentos LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:50-03:00"
+  },
+  {
+    "email_antigo": "last@sorocabarefrescos.com.br",
+    "empresa": "Sorocaba Refrescos S.A.",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:50-03:00"
+  },
+  {
+    "email_antigo": "contato@supermercadoszarelli.com.br",
+    "empresa": "Zarelli Supermercados LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:51-03:00"
+  },
+  {
+    "email_antigo": "marketing@ultrapan.com.br",
+    "empresa": "Ultrapan Industria e Comercio LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:52-03:00"
+  },
+  {
+    "email_antigo": "sac@marquespan.com.br",
+    "empresa": "Marquespan Industria de Alimentos LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:52-03:00"
+  },
+  {
+    "email_antigo": "sac@theoto.com.br",
+    "empresa": "Theoto S/A Industria e Comercio",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:53-03:00"
+  },
+  {
+    "email_antigo": "social@irmaosbarrera.com.br",
+    "empresa": "Irmaos Barrera LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-14T10:36:54-03:00"
+  }
+]

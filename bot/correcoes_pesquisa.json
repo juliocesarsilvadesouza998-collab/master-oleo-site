@@ -1,0 +1,90 @@
+{
+  "Alimentare": {
+    "emails": [],
+    "urls": [
+      "https://www.econodata.com.br/consulta-empresa/22391172000176-alimentare-servicos-de-alimentacao-ltda",
+      "https://www.instagram.com/p/C-2mUckN_-X/?hl=en",
+      "https://www.facebook.com/objetivaalimentacao.facilities/posts/a-objetiva-alimenta%C3%A7%C3%A3o-e-facilities-est%C3%A1-contratando-auxiliar-de-cozinha-para-at/830263069840433/"
+    ]
+  },
+  "Scallet": {
+    "emails": [],
+    "urls": [
+      "https://scallet.com.br/",
+      "https://www.instagram.com/p/DNx2hQx2NmQ/",
+      "https://www.facebook.com/photo.php?fbid=1026183362879327&set=a.573296098168058&id=100064630184826"
+    ]
+  },
+  "Kerry": {
+    "emails": [],
+    "urls": [
+      "https://www.kerry.com/br-pt/privacy",
+      "https://br.linkedin.com/company/kerry",
+      "https://cnpj.biz/02332686000143"
+    ]
+  },
+  "Arcor": {
+    "emails": [
+      "aquiarcor@arcor.com"
+    ],
+    "urls": [
+      "https://www.arcor.com.br/contato/",
+      "https://br.linkedin.com/company/arcor-do-brasil",
+      "https://arcor.gupy.io/"
+    ]
+  },
+  "Kelco": {
+    "emails": [
+      "comercial@kelcopetcare.com.br."
+    ],
+    "urls": [
+      "https://www.kelcopetcare.com.br/fale-conosco/",
+      "https://www.reclameaqui.com.br/empresa/kelco-pet-care/sobre/",
+      "https://www.instagram.com/p/DFa_Cc9PByR/"
+    ]
+  },
+  "SorocabaRefrescos": {
+    "emails": [
+      "cobranca@kof.com"
+    ],
+    "urls": [
+      "https://www.coca-cola.com/br/pt/about-us/contact-us",
+      "https://sorocabarefrescos.zendesk.com/hc/pt-br/articles/18066733140891-Fale-com-a-Sorocaba-Refrescos",
+      "https://coca-cola-femsa.com.br/fale-conosco/"
+    ]
+  },
+  "Rosaves": {
+    "emails": [
+      "avesideal@rosaves.com.br",
+      "avesideal@rosaves.com.br.",
+      "avesidealrh@rosaves.com.br",
+      "contato@hcfoods.com.br",
+      "contato@rosaves.com.br",
+      "h@rosaves.com"
+    ],
+    "urls": [
+      "https://www.instagram.com/p/C9cbjuCN7B7/",
+      "https://rosaves.com.br/",
+      "https://www.facebook.com/FrangoRosaves/posts/se-voc%C3%AA-mora-em-pereiras-conchas-tatu%C3%AD-ces%C3%A1rio-lange-e-porangaba-venha-fazer-par/995961285867814/"
+    ]
+  },
+  "Zarelli": {
+    "emails": [],
+    "urls": [
+      "https://www.supermercadoszarelli.com.br/",
+      "https://www.facebook.com/supermercados.zarelli/",
+      "https://www.instagram.com/reel/DVgqz_YCqki/?hl=en"
+    ]
+  },
+  "Ultrapan": {
+    "emails": [
+      "co@abir.org.br",
+      "marketing@ultrapan.com.br"
+    ],
+    "urls": [
+      "https://abir.org.br/associado/ultrapan/",
+      "https://www.instagram.com/ultrapan/?hl=en",
+      "https://sg.linkedin.com/company/ultrapan-industria-e-com-rcio-ltda"
+    ]
+  }
+}

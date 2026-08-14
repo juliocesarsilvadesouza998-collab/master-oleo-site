@@ -1,0 +1,55 @@
+{
+  "Marquespan": {
+    "emails": [],
+    "urls": [
+      "https://www.marquespan.com.br/fale-conosco/",
+      "https://www.marquespan.com.br/trabalhe-conosco/"
+    ]
+  },
+  "Theoto": {
+    "emails": [
+      "sac@theoto.com.br",
+      "sac@theoto.com.br."
+    ],
+    "urls": [
+      "https://theoto.ind.br/fale-conosco/",
+      "https://www.linkedin.com/company/theoto-s-a-ind-e-com-"
+    ]
+  },
+  "Barrera": {
+    "emails": [
+      "social@irmaosbarrera.com.br"
+    ],
+    "urls": [
+      "https://www.instagram.com/supermercadoirmaosbarrera/p/Db8MC7Bu6eP/",
+      "https://www.facebook.com/IrmaosBarreraSupermercado/"
+    ]
+  },
+  "Real": {
+    "emails": [
+      "paulo@realdist.com.br"
+    ],
+    "urls": [
+      "https://www.zoominfo.com/c/real-distribuidora/466238270",
+      "https://www.instagram.com/p/DUarPDmDnnR/"
+    ]
+  },
+  "BeiraRio": {
+    "emails": [
+      "faleconosco@beirariosm.com.br"
+    ],
+    "urls": [
+      "https://www.beirariosm.com.br/contato.html",
+      "https://www.instagram.com/p/DUsxaKLmohj/?hl=en"
+    ]
+  },
+  "Infanger": {
+    "emails": [
+      "supermercado@infanger.com.br"
+    ],
+    "urls": [
+      "https://www.facebook.com/supermercado.infanger/",
+      "https://www.instagram.com/p/CkGE1_Hu4eJ/"
+    ]
+  }
+}
