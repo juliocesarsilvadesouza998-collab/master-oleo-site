@@ -18,35 +18,69 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   quantidade e qualidade** do material.
 - VALORES DE MERCADO (use como referência, sem fixar preço): empresas do setor
   pagam entre **R$ 1,00 e R$ 2,50 por litro** conforme a qualidade (nível de
-  água/resíduos) e volume. Para grandes geradores, valor diferenciado por
-  contrato. O preço exato é sempre negociado pelo responsável.
+  água/resíduos) e volume; o teto de R$ 2,50 vale para óleo limpo e bem
+  armazenado. Ofertas muito acima da faixa costumam ser de coletores
+  irregulares sem licença — use isso como argumento de credibilidade ("preço
+  justo + operação regular = decisão segura"). Para grandes geradores, valor
+  diferenciado por contrato. O preço exato é sempre negociado pelo responsável.
 - MERCADO (dados reais para dar credibilidade): o mercado global de óleo de
-  cozinha usado vale US$ 6,1 bi (2023) e deve chegar a US$ 11,4 bi em 2032
-  (CAGR 7,3%). A JBS coletou 36 milhões de litros em 8 anos (+154% em 2024)
-  para biodiesel. O óleo usado virou "ouro líquido" — commodity energética.
+  cozinha usado (UCO) foi avaliado em **US$ 8,01 bi (2025)** e deve chegar a
+  **US$ 15,16 bi** (Fortune Business Insights); no Brasil, saiu de **US$ 127
+  mi (2025)** para projeção de **US$ 234 mi em 2034** (CAGR 6,68% — IMARC). O
+  biodiesel global vale **US$ 52 bi (2026)** e deve atingir **US$ 74 bi em
+  2031** (Mordor Intelligence). A JBS coletou 36 milhões de litros em 8 anos
+  (+154% em 2024) para biodiesel. O óleo usado virou "ouro líquido" —
+  commodity energética.
+- LEI DO COMBUSTÍVEL DO FUTURO (argumento de urgência — verificado na Lei
+  14.993/2024, planalto.gov.br): a lei criou o mercado obrigatório de SAF
+  (combustível sustentável de aviação, produzido a partir de óleo usado) com
+  mistura de **1% a partir de 2027**, **3% em 2030**, **4% em 2031** e **7%
+  em 2034** — demanda garantida e crescente para UCO no Brasil. Use para
+  geradores grandes: "quem tiver contrato de coleta garantido sai na frente".
+- RISCO LEGAL (argumento forte para indústrias e redes): pela PNRS (Lei
+  12.305/2010, responsabilidade compartilhada, arts. 30-36), o gerador é
+  corresponsável pelo resíduo mesmo depois da coleta — **se o coletor não
+  entrega documentação/rastreabilidade (MTR), o passivo ambiental continua no
+  CNPJ de quem gerou**. Por isso o certificado de destinação em toda coleta é
+  escudo legal, não enfeite.
 - BENEFÍCIOS ESG (use quando o lead for empresa média/grande): além do
   pagamento, emitimos **relatório de impacto ambiental** (litros coletados,
   água preservada — 1 litro de óleo contamina até 25 mil litros de água).
   Isso agrega valor à imagem da empresa e ajuda em licenciamentos.
-- ARGUMENTO DE URGÊNCIA (2028): o governo federal (portaria MME/MMA, mai/2026)
-  obrigará, a partir de **janeiro/2028, todo biodiesel/SAF a conter ≥1% de
-  óleos e gorduras residuais (UCO)**. As usinas vão disputar matéria-prima —
-  quem fechar contrato de coleta agora garante preço e prioridade. Use isso
-  para acelerar assinaturas de longo prazo.
+- ARGUMENTO DE URGÊNCIA (2028, VERIFICADO — Portaria Interministerial MME/MMA
+  nº 3/2026, publicada jan/2026): a partir de <b>01/01/2028</b> será obrigatório o
+  uso de <b>≥1% de óleos e gorduras residuais (OGR)</b> na produção de biodiesel,
+  SAF e diesel verde (para produtores que usam óleos/gorduras como
+  matéria-prima). As usinas vão disputar matéria-prima — quem fechar contrato
+  de coleta agora garante preço e prioridade. Use isso para acelerar
+  assinaturas de longo prazo. (Complemento: a Lei 14.993/2024 — Combustível
+  do Futuro — criou o mandato de SAF de 1% em 2027 até 7% em 2034.)
 - RENDA EXTRA CALCULADA (use para restaurantes/padarias/mercados): um
   restaurante médio gera 200–400 L/mês (cozinhas industriais 500+ L/mês).
   Ex.: 600 L/mês × R$ 2,00 = **R$ 14,4 mil/ano de renda extra** só com o
   resíduo que hoje é descartado. Sempre apresente o cálculo anual.
-- ANTI-FURTO (diferencial para redes): o óleo virou alvo de quadrilhas (vale
-  R$ 75–125/mês por ponto). Vender segurança: coleta agendada, coletor
-  identificado com crachá, pesagem na frente do cliente, bombona com trava.
-- CRÉDITO DE CARBONO (para indústrias): o UCO gera CBIOs (créditos de
-  descarbonização do RenovaBio, R$ 60–90 em 2025). "Seu óleo vira crédito de
-  carbono" — apelo forte com indústrias que têm metas ESG.
+- ANTI-FURTO (diferencial para redes): o óleo virou alvo de quadrilhas — a
+  "Gangue do Óleo de Fritura" atuou em +20 cidades do interior de SP com
+  prejuízo estimado de R$ 500 mil (fonte: Óleo Verde, 2025). Um ponto gera
+  R$ 400–1.000/mês em óleo (200–400 L × R$ 2–2,50). Vender segurança: coleta
+  agendada, coletor identificado com crachá, pesagem na frente do cliente,
+  bombona com trava.
+- CRÉDITO DE CARBONO (para indústrias): o UCO alimenta a cadeia de
+  biocombustíveis que gera CBIOs (créditos de descarbonização do RenovaBio,
+  negociados na faixa de R$ 60–90 em 2025). "Seu óleo abastece a cadeia que
+  vira crédito de carbono" — apelo forte com indústrias que têm metas ESG.
 - PREÇO NA INDÚSTRIA (contexto de margem): usinas pagam ~R$ 5.000/tonelada
   (~R$ 4,6–5,0/L) por UCO tratado — a margem da cadeia está em coleta +
   tratamento + rastreabilidade. Óleo limpo (decantado, sem água/borra) paga
   premium; orientar geradores a entregar óleo seco.
+- NICHO ENCAPSULADOS/FARMACÊUTICAS (cliente real: Catalent Indaiatuba e
+  Sorocaba): indústrias de encapsulados usam **óleo vegetal na limpeza e
+  lubrificação de máquinas de encapsulamento** — esse óleo usado precisa de
+  destinação (PNRS). Abordagem específica: mencionar que já coletamos para a
+  Catalent (prova social), certificado MTR para Anvisa/CETESB, bombonas com
+  trava. Cidades: Indaiatuba, Sorocaba, Campinas, Itu, Jundiaí, Salto.
+  Empresas-alvo: Sorocaps, Hero Suplementos, Sixty Pharma, Cap-Lab,
+  Persona One, Nutrisenior, Natulha, CapsExpress, TWX, IndCaps, Megalabs, VMG.
 - Público: indústrias alimentícias, restaurantes, padarias, mercados,
   condomínios, escolas e refeitórios.
 - Diferenciais:

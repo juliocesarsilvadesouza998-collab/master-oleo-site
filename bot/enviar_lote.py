@@ -11,7 +11,7 @@ Uso:
   python enviar_lote.py --max 15 --dry-run  # simula
   python enviar_lote.py --status          # mostra fila: enviados/pendentes/bounces
 """
-import argparse, csv, datetime, json, os, re, ssl, smtplib, sys, time
+import argparse, csv, datetime, json, os, re, ssl, smtplib, subprocess, sys, time
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -40,6 +40,24 @@ def load_bounces():
         except Exception:
             return set()
     return set()
+
+# Cache de MX por domínio (evita nslookup repetido dentro da mesma execução)
+_MX_CACHE = {}
+
+def tem_mx(dominio):
+    """Valida registro MX de um domínio via nslookup (mesma lógica de corrigir_emails.py).
+    Retorna True apenas se houver 'mail exchanger' no retorno. Sem MX = email quase
+    certamente vai dar bounce (ex.: 8 bounces de 18/08 vieram de domínios sem MX)."""
+    if dominio in _MX_CACHE:
+        return _MX_CACHE[dominio]
+    try:
+        r = subprocess.run(["nslookup", "-type=MX", dominio], capture_output=True, timeout=25)
+        out = (r.stdout + r.stderr).decode("latin-1", "replace")
+        ok = bool(re.findall(r"mail exchanger = (\S+)", out, re.I))
+    except Exception:
+        ok = False
+    _MX_CACHE[dominio] = ok
+    return ok
 
 def read_leads():
     if not os.path.exists(LEADS_PATH):
@@ -84,9 +102,10 @@ def tpl_apresentacao(cfg, lead):
 <p>Sabemos que empresas como a <b>{lead['empresa']}</b> ({lead['segmento']}) geram óleo de fritura e gordura vegetal saturados com frequência — e o descarte correto é <b>obrigação legal</b> (PNRS, Lei 12.305/2010), além de uma questão ambiental importante.</p>
 <p>E aqui vai a boa notícia: <b>nós compramos esse material</b>. Gostaria de apresentar o que fazemos:</p>
 <ul>
-  <li><b>Pagamos pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade</li>
+  <li><b>Pagamos pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade (referência de R$ 1,00 a R$ 2,50/litro para óleo limpo)</li>
   <li><b>Coleta programada</b> — semanal, quinzenal ou sob demanda, conforme o seu volume</li>
-  <li><b>Certificado de destinação</b> emitido em <b>toda coleta</b> (comprovação legal)</li>
+  <li><b>Certificado de destinação</b> emitido em <b>toda coleta</b> — sem documento, o passivo ambiental fica no CNPJ do gerador (PNRS, Lei 12.305/2010)</li>
+  <li><b>Relatório de impacto ambiental</b> (litros coletados e água preservada) para o seu reporte ESG</li>
   <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
 </ul>
 <p>Atendemos em {g['cidade']} e região. Gostaria de saber qual a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> que a {lead['empresa']} gera? Com isso, alinho a melhor proposta de compra sem compromisso.</p>
@@ -117,14 +136,23 @@ def main():
             print(f"    ⬜ {p['empresa']} <{p['email']}>")
         return
 
-    # Fila: empresas com email não contatado e sem bounce
+    # Fila: empresas com email não contatado, sem bounce e com MX válido
     fila = []
+    sem_mx = []
     for p in EMPRESAS:
         em = p["email"].strip().lower()
         if em in contatados or em in bounces:
             continue
+        if not tem_mx(em.split("@")[-1]):
+            sem_mx.append(p)
+            print(f"⚠️  Sem MX: {p['empresa']} <{em}> — pulando (evita bounce)")
+            continue
         fila.append(p)
     fila = fila[:args.max]
+
+    if sem_mx and not fila:
+        print(f"{len(sem_mx)} empresa(s) pendente(s) sem MX válido — nada a enviar.")
+        return
 
     if not fila:
         print("Nenhum email pendente. Use --status para ver a fila.")

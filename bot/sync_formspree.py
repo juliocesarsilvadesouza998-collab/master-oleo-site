@@ -120,7 +120,12 @@ def process_notifications(args):
                 continue
             body = msg_data[0][1].decode("utf-8","replace")
             for em in re.findall(r"[\w.+-]+@[\w-]+\.[\w.]+", body):
-                el = em.lower()
+                el = em.lower().strip()
+                # Normaliza lixo de parsing: remove ponto final/espacos capturados
+                # pelo regex (ex.: 'contato@x.com.br.' vira 'contato@x.com.br')
+                while el.endswith("."):
+                    el = el[:-1]
+                el = el.strip()
                 if "masteroleo" not in el and "gmail.com" not in el and "@" in el:
                     bounces.add(el)
         if bounces:

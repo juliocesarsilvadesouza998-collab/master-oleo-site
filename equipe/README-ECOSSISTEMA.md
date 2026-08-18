@@ -32,11 +32,17 @@ usado e gordura vegetal usada — Salto/SP e região).
 
 ## 🎯 Metas atuais
 
-- Enviar **50 emails de prospecção** a partir de 2026-08-14
+- Meta 50 emails de prospecção (iniciada 2026-08-14): **atingida** (74 envios)
+- Meta da semana (18–24/08): esgotar os **13 pendentes** da fila (84 empresas,
+  foco Jundiaí: ingredientes/panificação) e manter fila ≥ 30 com reposição
+  contínua pelo Prospector
 - Foco: empresas grandes (porte Arcor) em Campinas, Indaiatuba, Itu, Sorocaba,
-  Jundiaí, Louveira, Valinhos, Piracicaba e Salto/SP
+  Jundiaí, Louveira, Valinhos, Piracicaba e Salto/SP; novos segmentos:
+  ingredientes/aditivos (Jundiaí), refeições coletivas (Salto), suplementos
 - Regra de reputação: **máx 15 emails/dia** (não queimar o Gmail)
-- Prospecção semanal contínua para manter a fila ≥ 30 pendentes
+- Validação de MX ativa no envio em lote (domínios sem MX são pulados)
+- Ação prioritária: fechar lead **Boa Supermercados** (respondido) e fazer
+  follow-up humano (telefone/LinkedIn) nos bounces sem email alternativo
 
 ## 💼 Fluxo de fechamento (outbound — NÓS contatamos)
 

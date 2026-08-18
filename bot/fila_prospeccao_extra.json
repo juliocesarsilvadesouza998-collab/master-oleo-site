@@ -278,5 +278,96 @@
     "email": "contato@nutraway.com.br",
     "cidade": "Hortolândia",
     "segmento": "indústria de alimentos (suplementos)"
+  },
+  {
+    "nome": "Adimix",
+    "empresa": "Adimix Indústria e Comércio de Aditivos para Panificação Ltda",
+    "email": "sac@adimix.com.br",
+    "cidade": "Jundiaí/SP",
+    "segmento": "indústria de aditivos para panificação (pré-misturas, gorduras)"
+  },
+  {
+    "nome": "Walsywa",
+    "empresa": "Walsywa Indústria e Comércio de Produtos Alimentícios Ltda",
+    "email": "vendas@walsywa.com.br",
+    "cidade": "Jundiaí/SP",
+    "segmento": "indústria de biscoitos e panificação"
+  },
+  {
+    "nome": "Sensient Technologies",
+    "empresa": "Sensient Technologies Ingredientes do Brasil Ltda",
+    "email": "atendimento@sensient.com",
+    "cidade": "Jundiaí/SP",
+    "segmento": "indústria de ingredientes alimentícios (corantes e aromas)"
+  },
+  {
+    "nome": "MasterSense",
+    "empresa": "MasterSense Ingredientes Alimentícios Ltda",
+    "email": "vendas@mastersense.com",
+    "cidade": "Jundiaí/SP",
+    "segmento": "indústria de ingredientes e inovação alimentícia"
+  },
+  {
+    "nome": "De Marchi",
+    "empresa": "De Marchi Indústria e Comércio de Frutas Ltda",
+    "email": "demarchi@demarchi.com.br",
+    "cidade": "Jundiaí/SP",
+    "segmento": "indústria de frutas congeladas, salgados e pão de queijo"
+  },
+  {
+    "nome": "Nha Benta",
+    "empresa": "Nha Benta Indústria de Alimentos Ltda",
+    "email": "mario@nhabenta.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "indústria de alimentos (panificação e café)"
+  },
+  {
+    "nome": "Emulzint",
+    "empresa": "Emulzint Aditivos Alimentícios Indústria e Comércio Ltda",
+    "email": "fernanda.pavarin@emulzint.com.br",
+    "cidade": "Jundiaí/SP",
+    "segmento": "indústria de aditivos e emulsificantes alimentícios"
+  },
+  {
+    "nome": "Sorocaps",
+    "empresa": "Sorocaps Industria Farmaceutica LTDA",
+    "email": "comercial@sorocaps.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria farmaceutica (encapsulados)"
+  },
+  {
+    "nome": "Hero",
+    "empresa": "Hero Suplementos",
+    "email": "contato@herosuplementos.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Suplementos e encapsulados"
+  },
+  {
+    "nome": "Sixty",
+    "empresa": "Sixty Pharma",
+    "email": "contato@sixtypharma.com.br",
+    "cidade": "Itu/SP",
+    "segmento": "Industria farmaceutica"
+  },
+  {
+    "nome": "Cap-Lab",
+    "empresa": "Cap-Lab",
+    "email": "marketing@cap-lab.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "Laboratorio de encapsulados"
+  },
+  {
+    "nome": "Persona",
+    "empresa": "Persona One Terceirizacao de Suplementos",
+    "email": "contato@personaone.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Terceirizacao de encapsulados"
+  },
+  {
+    "nome": "Nutrisenior",
+    "empresa": "Nutrisenior",
+    "email": "vendas@nutrisenior.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Produtos nutricionais"
   }
 ]

@@ -1,0 +1,120 @@
+{
+  "Sorocaps": {
+    "emails": [
+      "comercial@sorocaps.com.br",
+      "comercial@sorocaps.com.br.",
+      "sorocaps@sorocaps.com.br",
+      "vagas@sorocaps.com.br"
+    ],
+    "urls": [
+      "https://sorocaps.com.br/",
+      "https://www.instagram.com/sorocaps.oficial/?hl=de"
+    ]
+  },
+  "Hero": {
+    "emails": [
+      "contato@herosuplementos.com.br.",
+      "support@herolifecare.com"
+    ],
+    "urls": [
+      "https://www.herosuplementos.com.br/empresa/",
+      "https://www.instagram.com/p/C74pmURvGRJ/"
+    ]
+  },
+  "Ekobe": {
+    "emails": [],
+    "urls": [
+      "https://ekobe-indaiatuba.netlify.app/",
+      "https://ekobe.ind.br/"
+    ]
+  },
+  "Megalabs": {
+    "emails": [
+      "flopez@megalabs.global"
+    ],
+    "urls": [
+      "https://www.megalabsbrasil.com.br/",
+      "https://www.zoominfo.com/pic/megalabs-brasil-filial/482955129"
+    ]
+  },
+  "VMG": {
+    "emails": [
+      "info@vmgmedical.com.au",
+      "jebb@vmghealthcare.com.",
+      "medical@vmghealthcare.com",
+      "recrutamento@vmgfarmaceutica.com.br"
+    ],
+    "urls": [
+      "https://vmgfarmaceutica.com.br/trabalhe-conosco/",
+      "https://vmgfarmaceutica.com.br/"
+    ]
+  },
+  "SixtyPharma": {
+    "emails": [
+      "contact@3sixtypharma.com",
+      "contact@3sixtypharma.com.",
+      "contato@sixtypharma.com.br",
+      "dpo@kompass.com."
+    ],
+    "urls": [
+      "https://www.sixtypharma.com.br/",
+      "https://3sixtypharma.com/contact-us/"
+    ]
+  },
+  "CapsExpress": {
+    "emails": [],
+    "urls": [
+      "https://www.instagram.com/capsexpressbra/?hl=en",
+      "https://www.facebook.com/CapsExpressBRA/"
+    ]
+  },
+  "CapLab": {
+    "emails": [
+      "cap@cgikk.com.",
+      "cap@shalan-medical.com",
+      "contato@analiticinsumos.com.br",
+      "info@shalan-medical.com",
+      "marketing@cap-lab.com.br."
+    ],
+    "urls": [
+      "https://www.cap.org/laboratory-quality-solutions/laboratories-outside-the-usa/contact-information-by-location/",
+      "https://cap-lab.com.br/politica-de-privacidade/"
+    ]
+  },
+  "TWX": {
+    "emails": [],
+    "urls": [
+      "https://twx.com.br/terceirizacao-de-encapsulados/",
+      "https://capsexpress.com.br/blog/o-que-e-terceirizacao-encapsulados/"
+    ]
+  },
+  "IndCaps": {
+    "emails": [
+      "comercial@blisfarma.com.br"
+    ],
+    "urls": [
+      "https://www.instagram.com/p/DW344HiDTef/",
+      "https://indcaps.com.br/terceirizacao-de-suplementos/"
+    ]
+  },
+  "PersonaOne": {
+    "emails": [
+      "contato@personaone.com.br",
+      "vendas1@personaone.com.br"
+    ],
+    "urls": [
+      "https://personaone.com.br/",
+      "https://empresas.serasaexperian.com.br/consulta-gratis/PERSONA-ONE-TERCEIRIZACAO-DE-SUPLEMENTOS-E-COSMETICOS-LTDA-57296471000106"
+    ]
+  },
+  "Nutrisenior": {
+    "emails": [
+      "vendas@nutrisenior.com.br",
+      "vendas@nutrisenior.com.br."
+    ],
+    "urls": [
+      "https://www.nutrisenior.com.br/",
+      "https://br.linkedin.com/company/nutrisenior-ind-com-imp-exp-de-produtos-nutricionais-ltda-me"
+    ]
+  }
+}
