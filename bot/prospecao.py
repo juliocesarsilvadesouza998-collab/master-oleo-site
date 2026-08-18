@@ -226,6 +226,7 @@ def prospecao(args):
                         "fonte": "prospeccao", "status": "novo",
                         "criado_em": now_iso(), "boas_vindas_em": "",
                         "follow1_em": "", "follow2_em": "", "follow3_em": "",
+                        "apresentacao_msgid": msg["Message-ID"],
                         "ultima_resposta": "", "respondido_em": "", "respondido_por": ""}
             leads.append(new_lead)
             existing.add(email_addr)

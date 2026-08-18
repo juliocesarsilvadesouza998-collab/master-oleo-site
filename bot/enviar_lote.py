@@ -17,13 +17,16 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.utils import formataddr, make_msgid
 
+# Reutiliza o template otimizado do prospecao.py (fonte única de verdade)
+from prospecao import tpl_apresentacao as tpl_apresentacao_novo, _plain_from_html
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 BOUNCE_CACHE = os.path.join(BASE, "bounces.json")
 FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
-          "apresentacao_em","fp1_em","fp2_em","fp3_em",
+          "apresentacao_em","fp1_em","fp2_em","fp3_em","apresentacao_msgid",
           "ultima_resposta","respondido_em","respondido_por"]
 
 def now_iso():
@@ -134,32 +137,15 @@ def smtp_send(cfg, e, to_addr, subject, html):
     msg["To"] = to_addr
     msg["Subject"] = Header(subject, "utf-8")
     msg["Message-ID"] = make_msgid()
-    msg.attach(MIMEText(re.sub(r"<[^>]+>", "", html).strip(), "plain", "utf-8"))
+    msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
     smtp.sendmail(e["usuario"], [to_addr], msg.as_string())
     smtp.quit()
+    return msg["Message-ID"]
 
 def tpl_apresentacao(cfg, lead):
-    g = cfg["empresa"]
-    return {
-        "subject": f"Compramos óleo usado em {lead['cidade']} — Master Óleo",
-        "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, <b>{lead['nome']}</b>!</p>
-<p>Meu nome é <b>{g['nome']}</b> e atuamos na <b>compra de óleo de cozinha usado e gordura vegetal usada</b> em {g['cidade']} e região.</p>
-<p>Sabemos que empresas como a <b>{lead['empresa']}</b> ({lead['segmento']}) geram óleo de fritura e gordura vegetal saturados com frequência — e o descarte correto é <b>obrigação legal</b> (PNRS, Lei 12.305/2010), além de uma questão ambiental importante.</p>
-<p>E aqui vai a boa notícia: <b>nós compramos esse material</b>. Gostaria de apresentar o que fazemos:</p>
-<ul>
-  <li><b>Pagamos pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade (referência de R$ 1,00 a R$ 2,50/litro para óleo limpo)</li>
-  <li><b>Coleta programada</b> — semanal, quinzenal ou sob demanda, conforme o seu volume</li>
-  <li><b>Certificado de destinação</b> emitido em <b>toda coleta</b> — sem documento, o passivo ambiental fica no CNPJ do gerador (PNRS, Lei 12.305/2010)</li>
-  <li><b>Relatório de impacto ambiental</b> (litros coletados e água preservada) para o seu reporte ESG</li>
-  <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
-</ul>
-<p>E um detalhe de timing: a <b>Portaria Interministerial MME/MMA nº 3/2026</b> obriga, a partir de <b>janeiro/2028</b>, que o biodiesel e o SAF usem <b>≥1% de óleos e gorduras residuais</b> — quem fechar coleta antes disso sai na frente.</p>
-<p>Atendemos em {g['cidade']} e região. Gostaria de saber qual a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> que a {lead['empresa']} gera? Com isso, alinho a melhor proposta de compra sem compromisso.</p>
-<p>Se preferir, estou disponível pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> — resposta rápida em horário comercial.</p>
-<p>Atenciosamente,<br><b>{g['nome']}</b><br>Compra de óleo de cozinha usado · {g['cidade']}<br>WhatsApp: {g['telefone_whatsapp']}</p>
-</div>"""}
+    """Template de apresentação — delega ao otimizado do prospecao.py (fonte única)."""
+    return tpl_apresentacao_novo(cfg, lead)
 
 def main():
     ap = argparse.ArgumentParser(description="Envio de prospecção em lote")
@@ -216,13 +202,14 @@ def main():
     for p in fila:
         try:
             tpl = tpl_apresentacao(cfg, p)
-            smtp_send(cfg, e, p["email"], tpl["subject"], tpl["html"])
+            mid = smtp_send(cfg, e, p["email"], tpl["subject"], tpl["html"])
             leads.append({"id": str(len(leads)+1), "nome": p["nome"], "empresa": p["empresa"],
                           "email": p["email"], "tipo": "industria" if "industria" in p["segmento"].lower() else "outro",
                           "volume": "", "fonte": "prospeccao-lote", "status": "novo",
                           "criado_em": now_iso(), "boas_vindas_em": "",
                           "follow1_em": "", "follow2_em": "", "follow3_em": "",
                           "apresentacao_em": now_iso(), "fp1_em": "", "fp2_em": "", "fp3_em": "",
+                          "apresentacao_msgid": mid,
                           "ultima_resposta": "", "respondido_em": "", "respondido_por": ""})
             contatados.add(p["email"].strip().lower())
             enviados += 1

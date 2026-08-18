@@ -29,7 +29,7 @@ BOUNCE_CACHE = os.path.join(BASE, "bounces.json")
 CORRIGIDOS_LOG = os.path.join(BASE, "correcoes_emails.json")
 FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
-          "apresentacao_em","fp1_em","fp2_em","fp3_em",
+          "apresentacao_em","fp1_em","fp2_em","fp3_em","apresentacao_msgid",
           "ultima_resposta","respondido_em","respondido_por"]
 
 def now_iso():

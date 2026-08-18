@@ -23,7 +23,7 @@ CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
-          "apresentacao_em","fp1_em","fp2_em","fp3_em",
+          "apresentacao_em","fp1_em","fp2_em","fp3_em","apresentacao_msgid",
           "ultima_resposta","respondido_em","respondido_por"]
 
 # Dias para cada follow-up após a apresentação
@@ -62,6 +62,7 @@ def smtp_send(cfg, e, to, subject, html, in_reply_to=None):
     msg["Message-ID"] = make_msgid()
     if in_reply_to:
         msg["In-Reply-To"] = in_reply_to
+        msg["References"] = in_reply_to
     msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
     with smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30) as s:
@@ -150,9 +151,10 @@ def main():
                     print(f"[DRY-RUN] FP{i} → {l['email']} ({l.get('empresa','')})")
                 else:
                     try:
-                        mid = smtp_send(cfg, e, l["email"], tpl["subject"], tpl["html"])
+                        mid = smtp_send(cfg, e, l["email"], tpl["subject"], tpl["html"],
+                                        in_reply_to=l.get("apresentacao_msgid") or None)
                         l[campo] = now_iso()
-                        print(f"✅ FP{i} → {l['email']} ({l.get('empresa','')})")
+                        print(f"✅ FP{i} → {l['email']} ({l.get('empresa','')})" + (" [thread]" if l.get("apresentacao_msgid") else ""))
                     except Exception as ex:
                         print(f"❌ FP{i} → {l['email']} — {str(ex)[:100]}")
                 enviados += 1
