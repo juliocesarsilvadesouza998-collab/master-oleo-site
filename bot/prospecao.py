@@ -20,7 +20,7 @@ from email.utils import formataddr, make_msgid
 BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
-FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
+FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
           "apresentacao_em","fp1_em","fp2_em","fp3_em",
           "ultima_resposta","respondido_em","respondido_por"]
@@ -98,17 +98,20 @@ def find_lead(leads, email_addr):
 def tpl_apresentacao(cfg, lead):
     """Template de email de apresentação B2B (prospecção fria — NÓS contatamos)."""
     g = cfg["empresa"]
+    cidade = lead.get("cidade") or "região"
+    segmento = (lead.get("segmento") or "alimentação").lower()
     return {
-        "subject": f"Compra de óleo usado — Master Óleo ({lead['cidade']})",
+        "subject": f"Compra de óleo usado — Master Óleo ({cidade})",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, {lead['nome']}.</p>
-<p>Sou da <b>{g['nome']}</b>, de {g['cidade']}, e estou entrando em contato porque a <b>{lead['empresa']}</b> atua no segmento de {lead['segmento'].lower()} — setor que gera <b>óleo de cozinha usado e gordura vegetal</b> com frequência.</p>
-<p>A <b>{g['nome']}</b> <b>compra esse material</b> com coleta programada e certificado de destinação em toda retirada. Na prática, o que oferecemos à sua empresa:</p>
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Sou da <b>{g['nome']}</b>, de {g['cidade']}, e estou entrando em contato porque a <b>{lead.get('empresa','')}</b> atua no segmento de {segmento} — setor que gera <b>óleo de cozinha usado e gordura vegetal</b> com frequência.</p>
+<p>O mercado mudou: o óleo usado virou <b>"ouro líquido"</b>. O setor global de reciclagem de óleo de cozinha vale <b>US$ 11 bilhões</b> e cresce ~7% ao ano — a demanda por biodiesel e combustível de aviação disparou. E a <b>{g['nome']}</b> <b>compra esse material</b>, com coleta programada e certificado em toda retirada:</p>
 <ul>
-  <li><b>Pagamento pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade</li>
+  <li><b>Pagamento pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade (referência de mercado: R$ 1,00 a R$ 2,50/litro)</li>
   <li><b>Certificado de destinação</b> em cada coleta (comprovação da PNRS, Lei 12.305/2010)</li>
   <li><b>Coleta programada</b> — semanal, quinzenal ou sob demanda, conforme o seu volume</li>
   <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
+  <li><b>Relatório de impacto ambiental</b> — ideal para metas ESG e licenciamentos</li>
 </ul>
 <p>Se fizer sentido, me responda com a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> (óleo de fritura, gordura vegetal etc.) — com isso, alinho uma proposta de compra sem compromisso em até 24h.</p>
 <p>Também estou à disposição pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> (atendimento em horário comercial).</p>
@@ -168,7 +171,9 @@ def prospecao(args):
             new_lead = {"id": str(len(leads)+1), "nome": lead_info["nome"],
                         "empresa": lead_info["empresa"], "email": email_addr,
                         "tipo": "industria" if "industria" in lead_info["segmento"].lower() else "outro",
-                        "volume": "", "fonte": "prospeccao", "status": "novo",
+                        "volume": "", "segmento": lead_info.get("segmento",""),
+                        "cidade": lead_info.get("cidade",""),
+                        "fonte": "prospeccao", "status": "novo",
                         "criado_em": now_iso(), "boas_vindas_em": "",
                         "follow1_em": "", "follow2_em": "", "follow3_em": "",
                         "ultima_resposta": "", "respondido_em": "", "respondido_por": ""}

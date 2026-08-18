@@ -21,7 +21,7 @@ from email.utils import formataddr, make_msgid
 BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
-FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
+FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
           "apresentacao_em","fp1_em","fp2_em","fp3_em",
           "ultima_resposta","respondido_em","respondido_por"]
@@ -77,7 +77,7 @@ def tpl_fp(cfg, lead, n):
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
 <p>Semana passada apresentei a <b>{g['nome']}</b> para a {lead['empresa']} — a proposta de <b>compra do óleo de cozinha usado e da gordura vegetal</b> gerados na operação de vocês.</p>
-<p>Sei que a rotina de uma empresa do segmento de {lead['segmento'].lower()} é corrida, então deixo aqui o resumo do que isso significa na prática:</p>
+<p>Sei que a rotina de uma empresa do segmento de {(lead.get('segmento') or 'alimentação').lower()} é corrida, então deixo aqui o resumo do que isso significa na prática:</p>
 <ul>
   <li><b>Renda com um resíduo</b>: o óleo usado passa a gerar receita, com valor negociado por quantidade</li>
   <li><b>Conformidade</b>: certificado de destinação em cada coleta (PNRS, Lei 12.305/2010)</li>
@@ -91,7 +91,8 @@ def tpl_fp(cfg, lead, n):
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
 <p>Entendo que o momento pode não ser o ideal, mas reforço que a proposta segue disponível: <b>compramos o óleo e a gordura vegetal usados</b> da {lead['empresa']} com coleta programada e certificado em toda retirada.</p>
-<p>Para empresas que geram <b>mais de 500 litros por mês</b>, além do pagamento pelo material, a coleta e a logística são totalmente por nossa conta — a sua equipe não precisa se preocupar com nada.</p>
+<p>E o momento é bom para quem gera esse resíduo: o mercado de reciclagem de óleo de cozinha está em alta (setor global de <b>US$ 11 bilhões</b>, crescendo ~7% ao ano com a demanda por biodiesel) — referência de mercado de <b>R$ 1,00 a R$ 2,50 por litro</b> conforme a qualidade.</p>
+<p>Para empresas que geram <b>mais de 500 litros por mês</b>, além do pagamento pelo material, a coleta e a logística são totalmente por nossa conta — e ainda emitimos <b>relatório de impacto ambiental</b> para as suas metas ESG. A sua equipe não precisa se preocupar com nada.</p>
 <p>Vale uma conversa rápida? Posso te passar uma estimativa de valor em poucos minutos se você me disser a quantidade mensal aproximada. WhatsApp: {g['telefone_whatsapp']}.</p>
 <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""

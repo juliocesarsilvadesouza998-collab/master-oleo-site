@@ -17,7 +17,7 @@ import argparse, csv, datetime, imaplib, json, os, re, ssl, sys, email
 BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
-FIELDS = ["id","nome","empresa","email","tipo","volume","fonte","status",
+FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
           "apresentacao_em","fp1_em","fp2_em","fp3_em",
           "ultima_resposta","respondido_em","respondido_por"]
