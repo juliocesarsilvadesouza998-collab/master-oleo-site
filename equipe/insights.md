@@ -55,3 +55,32 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 1. **Follow-up humano nos 8 bounces de hoje:** são empresas relevantes (Oba, Bom Peixe, Delta Max, Cowpig, Penina, SupraFoods, Nutraway, Delta Terceirizações) e a correção por web deu `nao_encontrado`. Vale telefone/LinkedIn. **Atenção:** Oba e Bom Peixe têm leads duplicados com email alternativo válido — id 57 `ouvidoria@redeoba.com.br` e id 32 `sac@bompeixe.com.br` já estão na fila (FP1 enviado hoje); confirmar que o contato alternativo será usado em vez de abandonar a empresa.
 2. **Validar MX antes do envio em lote** (enviar_lote.py já filtra o cache; adicionar checagem MX/DNS) — reduziria os 8 bounces de hoje, todos de domínios que devolvem erro rapidamente.
 3. **Normalizar emails no parse do sync** (remover "." final e espaços antes de gravar no bounces.json) para parar de acumular lixo no cache e evitar falso-negativo em futuras checagens.
+
+### Auditoria final do dia (sync + revisão noturna)
+
+> Números consolidados pós-rodadas de prospecção do fim do dia — **atualizam** os do início da seção (77 → 89 leads).
+
+#### Números finais do dia
+- **Sync Formspree (rodado na auditoria):** 28 emails em bounce cache; **0** notificações novas do Formspree (nenhum lead novo via site hoje).
+- **Leads totais:** 89 (87 reais + 2 de teste: id 2 e id 3).
+  - `novo`: 61
+  - `sequencia`: 9
+  - `respondido`: 3 (id 2 teste; id 46 Boa Supermercados; **id 89 ICT Farmacêutica — novo hoje**)
+  - `bounce`: 16
+  - `encerrado`: 0
+- **Criados hoje:** 27 leads (nicho encapsulados/farmacêuticas + Oba, Cowpig, Penina, Nutraway etc.).
+- **Apresentações enviadas hoje:** 28 timestamps em `apresentacao_em` (18:59–19:29).
+- **Bounces.json:** 28 emails — 16 correspondem a leads atuais `bounce`; 12 são emails antigos de leads corrigidos hoje (Penina, Nutraway, Cowpig, Kelco, Infanger, Selmi, Real, Oba, Delta Terc, Beira Rio, Rosaves, SupraFoods) — correto: ficam no cache para nunca reenviar.
+- **Respostas pendentes:** **1** em `replies_pending.json` — ICT Farmacêutica (`suporte@ictfarmaceutica.com.br`) respondeu com protocolo Nº 1057 (auto-resposta de central de atendimento às 19:31). O Atendente responde no próximo tick.
+
+#### Problemas encontrados e correções
+1. **Lead id 1 (Ana Souza, `ana@alimentossalto.com.br`) — `bounce` com `boas_vindas_em` preenchido** (13/08 11:31). **Registrado apenas** (conforme regra). Recorrente dos registros de 14/08 e início de hoje; lead de teste fictício, sem correção real.
+2. **Números da entrada anterior desatualizados** (77 leads / 21 bounces): após as auto-correções (7 bounces corrigidos com email real dos sites + reenvio) e a nova leva do nicho encapsulados, o estado real é 89 leads / 16 bounces. **Corrigido neste registro.**
+3. **Lixo de parsing no bounces.json — RESOLVIDO:** os 3 emails com ponto final (`contato@beirariosm.com.br.` etc.) não estão mais no cache (28 entradas limpas, nenhuma com `.` final). Verificar se a normalização entrou no sync ou foi limpeza manual.
+4. **Consistência OK (auditoria a):** todos os 16 leads `bounce` têm o email atual no bounces.json; nenhum lead não-bounce tem email atual no cache. Nada a corrigir no leads.csv.
+5. **Duplicidade de empresa:** 4 empresas com 2 leads (Scallet, Kerry, Bagley, Delta Max) — na maioria, 1 email com bounce + 1 alternativo válido em sequência/novo (ex.: Delta Max id 70 bounce / id 45 `admgeral@deltasuper.com.br` novo). Funciona como fallback, mas polui a base — considerar mesclagem futura.
+
+#### Sugestões para o Estrategista (fim do dia)
+1. **ICT Farmacêutica respondeu (protocolo Nº 1057) — priorizar follow-up humano:** é auto-resposta de central, mas a empresa registrou a solicitação. Um contato telefônico rápido pode converter; não deixar só com o tick do Atendente.
+2. **Validar MX/DNS antes do envio em lote:** os bounces de hoje (Oba, Bom Peixe, Delta Max, Cowpig, Penina, Nutraway, Delta Terc, SupraFoods) vieram minutos após o envio. Checagem MX prévia reduziria a taxa de bounce (~18% dos leads reais hoje).
+3. **Mesclar leads duplicados por empresa** (Scallet, Kerry, Bagley, Delta Max) para o pipeline contar 1 lead por empresa e não reenviar para a mesma empresa por 2 caminhos.

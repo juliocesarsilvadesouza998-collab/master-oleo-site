@@ -236,6 +236,27 @@
   </div>
 </section>
 
+<!-- PROVA SOCIAL -->
+<section style="background:var(--cream);border-bottom:1px solid var(--line)">
+  <div class="wrap" style="display:flex;gap:26px;align-items:center;flex-wrap:wrap;justify-content:center;padding-top:18px;padding-bottom:18px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font-size:26px">🏭</span>
+      <div>
+        <b style="font-size:14.5px;color:var(--green)">Atendemos indústrias do porte da Catalent</b>
+        <div style="font-size:12.5px;color:var(--muted)">Coleta de óleo vegetal usado em máquinas de encapsulamento — Indaiatuba e Sorocaba</div>
+      </div>
+    </div>
+    <span style="width:1px;height:36px;background:var(--line);display:block"></span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font-size:26px">📜</span>
+      <div>
+        <b style="font-size:14.5px;color:var(--green)">Certificado de destinação em toda coleta</b>
+        <div style="font-size:12.5px;color:var(--muted)">PNRS (Lei 12.305/2010) + MTR para auditorias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- QUEM ATENDEMOS -->
 <section id="quem" class="alt">
   <div class="wrap">
@@ -325,6 +346,48 @@
 </section>
 
 <!-- CONTATO -->
+<section id="calculadora" class="alt" style="background:#f0f7f1">
+  <div class="wrap">
+    <span class="kicker">Quanto vale o seu resíduo?</span>
+    <h2>Calculadora de valor do óleo usado</h2>
+    <p class="sec-sub">Descubra em segundos quanto a sua empresa pode <b>receber</b> pelo óleo e pela gordura vegetal usados. Referência de mercado: R$ 1,00 a R$ 2,50 por litro, conforme qualidade e volume.</p>
+    <div class="contato" style="grid-template-columns:1fr 1fr">
+      <div style="padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)">
+        <label for="calc_litros"><b>Volume aproximado por mês (litros)</b></label>
+        <input type="number" id="calc_litros" min="10" step="10" value="200" style="width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;font-size:18px;margin:8px 0 18px">
+        <label for="calc_qualidade"><b>Qualidade do material</b></label>
+        <select id="calc_qualidade" style="width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;font-size:16px;margin:8px 0 18px">
+          <option value="2.20">Óleo limpo (filtrado, sem água/borra) — R$ 2,20/L</option>
+          <option value="1.70" selected>Óleo normal (fritura com resíduos leves) — R$ 1,70/L</option>
+          <option value="1.20">Óleo com mais resíduos/água — R$ 1,20/L</option>
+        </select>
+        <div style="background:var(--cream);border-radius:12px;padding:20px;text-align:center">
+          <div style="font-size:13px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px">Renda estimada por mês</div>
+          <div id="calc_resultado" style="font-size:42px;font-weight:800;color:var(--green);margin:4px 0">R$ 340,00</div>
+          <div style="font-size:13px;color:var(--muted)" id="calc_anual">≈ R$ 4.080,00 por ano</div>
+        </div>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:12px">* Estimativa com base na referência de mercado. O valor exato é negociado após avaliação do material. Litros de óleo contaminam até 25 mil litros de água — descartar certo também é responsabilidade.</p>
+      </div>
+      <div style="padding:26px;background:#fff;border:1px solid var(--line);border-radius:var(--radius)">
+        <h3 style="color:var(--green);margin-bottom:8px">Receba uma proposta personalizada</h3>
+        <p style="font-size:14.5px;color:var(--muted);margin-bottom:16px">Preencha e nossa equipe envia o <b>valor exato em até 24h</b>, com certificado de destinação e coleta programada.</p>
+        <form id="calcform">
+          <label for="calc_nome">Seu nome *</label>
+          <input type="text" id="calc_nome" name="nome" required>
+          <label for="calc_email">Seu e-mail *</label>
+          <input type="email" id="calc_email" name="email" required>
+          <label for="calc_empresa">Empresa</label>
+          <input type="text" id="calc_empresa" name="empresa">
+          <input type="hidden" id="calc_volume" name="volume">
+          <button class="submit" type="submit" style="margin-top:14px">Receber proposta de compra</button>
+          <small>Seus dados ficam protegidos. Usamos apenas para falar com você.</small>
+          <div class="ok-msg" id="calc_ok">✅ Recebemos! Em breve enviamos sua proposta.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contato" class="alt">
   <div class="wrap">
     <span class="kicker">Contato</span>
@@ -396,6 +459,34 @@
   // Captura de leads: envia para o endpoint do bot (Formspree ou API do bot)
   // CONFIG: troque pelo seu endpoint Formspree em https://formspree.io (plano grátis)
   var LEAD_ENDPOINT = "https://formspree.io/f/xppalazn";
+
+  // ---- Calculadora de valor do óleo usado ----
+  function calcAtualizar(){
+    var litros = parseFloat(document.getElementById('calc_litros').value) || 0;
+    var preco  = parseFloat(document.getElementById('calc_qualidade').value) || 0;
+    var mensal = litros * preco;
+    document.getElementById('calc_resultado').textContent = 'R$ ' + mensal.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+    document.getElementById('calc_anual').textContent = '≈ R$ ' + (mensal*12).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' por ano';
+    document.getElementById('calc_volume').value = litros + ' L/mês';
+  }
+  document.getElementById('calc_litros').addEventListener('input', calcAtualizar);
+  document.getElementById('calc_qualidade').addEventListener('change', calcAtualizar);
+  calcAtualizar();
+
+  // Envio da calculadora (lead qualificado com volume)
+  document.getElementById('calcform').addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(e.target);
+    fd.append('tipo', 'calculadora');
+    var btn = e.target.querySelector('.submit');
+    btn.disabled = true; btn.textContent = 'Enviando...';
+    fetch(LEAD_ENDPOINT, { method:'POST', body:fd, headers:{'Accept':'application/json'} })
+      .then(function(r){ if(!r.ok) throw new Error('falha'); return r.json(); })
+      .then(function(){ document.getElementById('calc_ok').style.display='block'; e.target.reset(); calcAtualizar(); })
+      .catch(function(){ window.location.href = 'https://wa.me/5511967859631?text=' + encodeURIComponent('Olá! Usei a calculadora de valor do óleo usado. Volume: ' + (document.getElementById('calc_volume').value||'') + ' - Empresa: ' + (document.getElementById('calc_empresa').value||'')); })
+      .finally(function(){ btn.disabled=false; btn.textContent='Receber proposta de compra'; });
+  });
+
   document.getElementById('leadform').addEventListener('submit', function(e){
     e.preventDefault();
     var fd = new FormData(e.target);
