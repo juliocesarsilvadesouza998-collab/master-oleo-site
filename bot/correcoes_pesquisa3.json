@@ -1,0 +1,48 @@
+{
+  "Selmi": {
+    "emails": [
+      "info@selmi-group.it",
+      "info@selmi-group.it.",
+      "technicalservice@selmi-group.it",
+      "televendas@selmi.com.br."
+    ],
+    "urls": [
+      "https://www.zoominfo.com/c/pastifi%CC%81cio-selmi-sa/425333459",
+      "https://en.selmi.com.br/press-relations"
+    ]
+  },
+  "Selmi-site": {
+    "emails": [
+      "sac@selmi.com.br",
+      "televendas@selmi.com.br",
+      "televendas@selmi.com.br."
+    ],
+    "urls": [
+      "https://en.selmi.com.br/press-relations",
+      "https://en.selmi.com.br/products/renata"
+    ]
+  },
+  "Sorocaba": {
+    "emails": [],
+    "urls": [
+      "https://sorocabarefrescos.zendesk.com/hc/pt-br/articles/18066733140891-Fale-com-a-Sorocaba-Refrescos",
+      "https://www.sorocabarefrescos.com.br/"
+    ]
+  },
+  "Marquespan": {
+    "emails": [],
+    "urls": [
+      "https://www.marquespan.com.br/fale-conosco/",
+      "https://www.marquespan.com.br/trabalhe-conosco/"
+    ]
+  },
+  "Theoto": {
+    "emails": [
+      "sac@theoto.com.br."
+    ],
+    "urls": [
+      "https://theoto.ind.br/fale-conosco/",
+      "https://fontedata.com/cnpj/50938745000174-theoto-s-a-industria-e-comercio"
+    ]
+  }
+}

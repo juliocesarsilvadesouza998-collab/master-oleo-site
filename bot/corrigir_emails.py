@@ -141,6 +141,8 @@ def buscar_email_web(empresa, cidade):
         "Beira Rio Comercio, Exportacao e Importacao de Produtos Alimenticios LTDA": "faleconosco@beirariosm.com.br",
         "Infanger & Cia LTDA": "supermercado@infanger.com.br",
         "Real Distribuidora de Alimentos LTDA": "paulo@realdist.com.br",
+        "Pastificio Selmi S/A": "sac@selmi.com.br",
+        "Industria Moageira Nova Odessa LTDA": "contato@moinhopotenza.com.br",
     }
     for nome_emp, email_certo in MANUAIS.items():
         if nome_emp.lower() in empresa.lower():

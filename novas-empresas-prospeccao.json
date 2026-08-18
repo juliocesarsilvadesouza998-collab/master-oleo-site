@@ -1,0 +1,18 @@
+[
+  {"nome": "Oba Hortifruti", "empresa": "Oba Hortifrutigranjeiros S/A", "email": "sac@oba.com.br", "cidade": "Sumaré", "segmento": "supermercado (hortifrúti)"},
+  {"nome": "Pastifício Selmi (Adria)", "empresa": "Pastifício Selmi S/A", "email": "sac@selmi.com.br", "cidade": "Sumaré", "segmento": "indústria de alimentos (massas)"},
+  {"nome": "Delta Terceirizações", "empresa": "Delta Terceirizações Ltda", "email": "contato@deltaterceirizacoes.com.br", "cidade": "Sumaré", "segmento": "refeições coletivas / terceirização de serviços"},
+  {"nome": "Umity", "empresa": "Umity Indústria de Alimentos Ltda", "email": "contato@umity.com.br", "cidade": "Americana", "segmento": "indústria de alimentos (pet food)"},
+  {"nome": "SupraFoods", "empresa": "SupraFoods Indústria de Alimentos Ltda", "email": "comercial@suprafoods.com.br", "cidade": "Americana", "segmento": "indústria de alimentos (ingredientes proteicos)"},
+  {"nome": "New Max Industrial", "empresa": "New Max Industrial Ltda (Grupo Solina)", "email": "contato@newmaxindustrial.com.br", "cidade": "Americana", "segmento": "indústria de alimentos (ingredientes)"},
+  {"nome": "Eixo Restaurantes (Vivo Sabor)", "empresa": "Eixo Restaurantes Ltda", "email": "contato@eixorestaurantes.com.br", "cidade": "Americana", "segmento": "restaurantes / refeições coletivas"},
+  {"nome": "Bom Peixe", "empresa": "Bom Peixe Indústria e Comércio de Pescados", "email": "contato@bompeixe.com.br", "cidade": "Piracicaba", "segmento": "indústria de alimentos (pescados e frutos do mar)"},
+  {"nome": "Supermercado Delta Max", "empresa": "Supermercado Delta Max Ltda", "email": "contato@deltamax.com.br", "cidade": "Piracicaba", "segmento": "supermercado"},
+  {"nome": "Frigorífico Cowpig", "empresa": "Frigorífico Cowpig Ltda", "email": "contato@cowpig.com.br", "cidade": "Boituva", "segmento": "frigorífico (cortes nobres de carne)"},
+  {"nome": "Penina Alimentos", "empresa": "Penina Alimentos Ltda", "email": "contato@penina.com.br", "cidade": "Boituva", "segmento": "indústria de alimentos (temperos e especiarias)"},
+  {"nome": "L'Apétisse", "empresa": "L'Apétisse Indústria de Alimentos Ltda", "email": "contato@lapetisse.com.br", "cidade": "Boituva", "segmento": "indústria de alimentos (antepastos)"},
+  {"nome": "Only Fruit", "empresa": "Only Fruit Indústria de Alimentos Ltda", "email": "contato@onlyfruit.com.br", "cidade": "Nova Odessa", "segmento": "indústria de alimentos (frutas)"},
+  {"nome": "Monte Mor Purezza", "empresa": "Fonte de Água Mineral Monte Mor (Saltão Pereira)", "email": "contato@aguamontemor.com.br", "cidade": "Monte Mor", "segmento": "indústria de bebidas (água mineral)"},
+  {"nome": "Sabor Dubom", "empresa": "Dubom Indústria de Alimentos Ltda", "email": "contato@sabordubom.com.br", "cidade": "Hortolândia", "segmento": "indústria de alimentos (molhos e conservas)"},
+  {"nome": "Nutraway", "empresa": "Nutraway Suplementos Alimentares Ltda", "email": "contato@nutraway.com.br", "cidade": "Hortolândia", "segmento": "indústria de alimentos (suplementos)"}
+]

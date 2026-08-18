@@ -4,83 +4,96 @@
     "empresa": "Alimentare Servicos de Alimentacao LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:48-03:00"
+    "quando": "2026-08-18T18:58:37-03:00"
   },
   {
     "email_antigo": "contato@scallet.com.br",
     "empresa": "Restaurante e Pizzaria Scallet",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:48-03:00"
+    "quando": "2026-08-18T18:58:42-03:00"
   },
   {
     "email_antigo": "contato@kerry.com",
     "empresa": "Kerry do Brasil LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:49-03:00"
+    "quando": "2026-08-18T18:58:46-03:00"
   },
   {
     "email_antigo": "contato@arcor.com",
     "empresa": "Bagley do Brasil Alimentos LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:50-03:00"
+    "quando": "2026-08-18T18:58:50-03:00"
   },
   {
     "email_antigo": "last@sorocabarefrescos.com.br",
     "empresa": "Sorocaba Refrescos S.A.",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:50-03:00"
-  },
-  {
-    "email_antigo": "contato@supermercadoszarelli.com.br",
-    "empresa": "Zarelli Supermercados LTDA",
-    "novo_email": null,
-    "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:51-03:00"
-  },
-  {
-    "email_antigo": "marketing@ultrapan.com.br",
-    "empresa": "Ultrapan Industria e Comercio LTDA",
-    "novo_email": null,
-    "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:52-03:00"
-  },
-  {
-    "email_antigo": "sac@marquespan.com.br",
-    "empresa": "Marquespan Industria de Alimentos LTDA",
-    "novo_email": null,
-    "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:52-03:00"
-  },
-  {
-    "email_antigo": "sac@theoto.com.br",
-    "empresa": "Theoto S/A Industria e Comercio",
-    "novo_email": null,
-    "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:53-03:00"
-  },
-  {
-    "email_antigo": "social@irmaosbarrera.com.br",
-    "empresa": "Irmaos Barrera LTDA",
-    "novo_email": null,
-    "status": "nao_encontrado",
-    "quando": "2026-08-14T10:36:54-03:00"
+    "quando": "2026-08-18T18:58:55-03:00"
   },
   {
     "email_antigo": "avesideal@rosaves.com.br",
     "empresa": "Abatedouro de Aves Ideal LTDA (Rosaves)",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T18:30:28-03:00"
+    "quando": "2026-08-18T18:58:55-03:00"
+  },
+  {
+    "email_antigo": "contato@supermercadoszarelli.com.br",
+    "empresa": "Zarelli Supermercados LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T18:58:59-03:00"
+  },
+  {
+    "email_antigo": "marketing@ultrapan.com.br",
+    "empresa": "Ultrapan Industria e Comercio LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T18:59:04-03:00"
+  },
+  {
+    "email_antigo": "sac@marquespan.com.br",
+    "empresa": "Marquespan Industria de Alimentos LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T18:59:08-03:00"
+  },
+  {
+    "email_antigo": "sac@theoto.com.br",
+    "empresa": "Theoto S/A Industria e Comercio",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T18:59:12-03:00"
+  },
+  {
+    "email_antigo": "social@irmaosbarrera.com.br",
+    "empresa": "Irmaos Barrera LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T18:59:17-03:00"
   },
   {
     "email_antigo": "faleconosco@beirariosm.com.br",
     "empresa": "Beira Rio Comercio, Exportacao e Importacao de Produtos Alimenticios LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-14T18:30:28-03:00"
+    "quando": "2026-08-18T18:59:17-03:00"
+  },
+  {
+    "email_antigo": "contato@selmi.com.br",
+    "empresa": "Pastificio Selmi S/A",
+    "novo_email": "sac@selmi.com.br",
+    "status": "corrigido_e_enviado",
+    "quando": "2026-08-18T18:59:22-03:00"
+  },
+  {
+    "email_antigo": "ana@alimentossalto.com.br",
+    "status": "nao_encontrado",
+    "motivo": "lead de teste fictício (Alimentos Salto Ltda) — sem correção real",
+    "quando": "2026-08-18T19:04:00-03:00"
   }
 ]
