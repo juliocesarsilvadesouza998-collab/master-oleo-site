@@ -4,96 +4,145 @@
     "empresa": "Alimentare Servicos de Alimentacao LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:37-03:00"
+    "quando": "2026-08-18T19:12:06-03:00"
   },
   {
     "email_antigo": "contato@scallet.com.br",
     "empresa": "Restaurante e Pizzaria Scallet",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:42-03:00"
+    "quando": "2026-08-18T19:12:10-03:00"
   },
   {
     "email_antigo": "contato@kerry.com",
     "empresa": "Kerry do Brasil LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:46-03:00"
+    "quando": "2026-08-18T19:12:15-03:00"
   },
   {
     "email_antigo": "contato@arcor.com",
     "empresa": "Bagley do Brasil Alimentos LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:50-03:00"
+    "quando": "2026-08-18T19:12:19-03:00"
   },
   {
     "email_antigo": "last@sorocabarefrescos.com.br",
     "empresa": "Sorocaba Refrescos S.A.",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:55-03:00"
+    "quando": "2026-08-18T19:12:23-03:00"
   },
   {
     "email_antigo": "avesideal@rosaves.com.br",
     "empresa": "Abatedouro de Aves Ideal LTDA (Rosaves)",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:55-03:00"
+    "quando": "2026-08-18T19:12:23-03:00"
   },
   {
     "email_antigo": "contato@supermercadoszarelli.com.br",
     "empresa": "Zarelli Supermercados LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:58:59-03:00"
+    "quando": "2026-08-18T19:12:28-03:00"
   },
   {
     "email_antigo": "marketing@ultrapan.com.br",
     "empresa": "Ultrapan Industria e Comercio LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:59:04-03:00"
+    "quando": "2026-08-18T19:12:32-03:00"
   },
   {
     "email_antigo": "sac@marquespan.com.br",
     "empresa": "Marquespan Industria de Alimentos LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:59:08-03:00"
+    "quando": "2026-08-18T19:12:36-03:00"
   },
   {
     "email_antigo": "sac@theoto.com.br",
     "empresa": "Theoto S/A Industria e Comercio",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:59:12-03:00"
+    "quando": "2026-08-18T19:12:41-03:00"
   },
   {
     "email_antigo": "social@irmaosbarrera.com.br",
     "empresa": "Irmaos Barrera LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:59:17-03:00"
+    "quando": "2026-08-18T19:12:45-03:00"
   },
   {
     "email_antigo": "faleconosco@beirariosm.com.br",
     "empresa": "Beira Rio Comercio, Exportacao e Importacao de Produtos Alimenticios LTDA",
     "novo_email": null,
     "status": "nao_encontrado",
-    "quando": "2026-08-18T18:59:17-03:00"
+    "quando": "2026-08-18T19:12:45-03:00"
   },
   {
-    "email_antigo": "contato@selmi.com.br",
-    "empresa": "Pastificio Selmi S/A",
-    "novo_email": "sac@selmi.com.br",
+    "email_antigo": "sac@oba.com.br",
+    "empresa": "Oba Hortifrutigranjeiros S/A",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T19:12:50-03:00"
+  },
+  {
+    "email_antigo": "contato@deltaterceirizacoes.com.br",
+    "empresa": "Delta Terceirizações Ltda",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T19:12:54-03:00"
+  },
+  {
+    "email_antigo": "comercial@suprafoods.com.br",
+    "empresa": "SupraFoods Indústria de Alimentos Ltda",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T19:12:58-03:00"
+  },
+  {
+    "email_antigo": "contato@bompeixe.com.br",
+    "empresa": "Bom Peixe Indústria e Comércio de Pescados",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T19:13:03-03:00"
+  },
+  {
+    "email_antigo": "contato@deltamax.com.br",
+    "empresa": "Supermercado Delta Max Ltda",
+    "novo_email": "admgeral@deltasuper.com.br",
+    "status": "ja_existia",
+    "quando": "2026-08-18T19:13:04-03:00"
+  },
+  {
+    "email_antigo": "contato@cowpig.com.br",
+    "empresa": "Frigorífico Cowpig Ltda",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-18T19:13:08-03:00"
+  },
+  {
+    "email_antigo": "contato@penina.com.br",
+    "empresa": "Penina Alimentos Ltda",
+    "novo_email": "info@penina.com.br",
     "status": "corrigido_e_enviado",
-    "quando": "2026-08-18T18:59:22-03:00"
+    "quando": "2026-08-18T19:13:13-03:00"
+  },
+  {
+    "email_antigo": "contato@nutraway.com.br",
+    "empresa": "Nutraway Suplementos Alimentares Ltda",
+    "novo_email": "nutraway@nutraway.com.br",
+    "status": "corrigido_e_enviado",
+    "quando": "2026-08-18T19:13:22-03:00"
   },
   {
     "email_antigo": "ana@alimentossalto.com.br",
     "status": "nao_encontrado",
-    "motivo": "lead de teste fictício (Alimentos Salto Ltda) — sem correção real",
-    "quando": "2026-08-18T19:04:00-03:00"
+    "motivo": "lead de teste fictício — sem correção real",
+    "quando": "2026-08-18T19:15:00-03:00"
   }
 ]

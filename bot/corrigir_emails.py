@@ -142,7 +142,14 @@ def buscar_email_web(empresa, cidade):
         "Infanger & Cia LTDA": "supermercado@infanger.com.br",
         "Real Distribuidora de Alimentos LTDA": "paulo@realdist.com.br",
         "Pastificio Selmi S/A": "sac@selmi.com.br",
-        "Industria Moageira Nova Odessa LTDA": "contato@moinhopotenza.com.br",
+        "Industria Moageira Nova Odessa LTDA": "contato@moinhopotenza.com.br",        "Grupo Fartura de Hortifruti S/A (Oba)": "sac@redeoba.com.br",
+        "Bom Peixe Industria e Comercio de Pescados": "sac@bompeixe.com.br",
+        "Supermercado Delta Max LTDA": "admgeral@deltasuper.com.br",
+        "Frigorifico Cowpig LTDA": "atendimento@cowpig.com.br",
+        "Penina Alimentos LTDA": "info@penina.com.br",
+        "Nutraway Suplementos Alimentares LTDA": "nutraway@nutraway.com.br",
+        "Delta Terceirizacoes LTDA": "adm@deltaterceirizacoes.com.br",
+
     }
     for nome_emp, email_certo in MANUAIS.items():
         if nome_emp.lower() in empresa.lower():
