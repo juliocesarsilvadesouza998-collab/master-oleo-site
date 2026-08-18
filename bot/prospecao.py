@@ -95,27 +95,32 @@ def find_lead(leads, email_addr):
             return l
     return None
 
+def _plain_from_html(html):
+    """Converte HTML em texto puro com quebras de linha preservadas."""
+    import re
+    t = re.sub(r"<br\s*/?>", "\n", html)
+    t = re.sub(r"</p>", "\n\n", t)
+    t = re.sub(r"<[^>]+>", "", t)
+    return t.strip()
+
 def tpl_apresentacao(cfg, lead):
-    """Template de email de apresentação B2B (prospecção fria — NÓS contatamos)."""
+    """Template de apresentação B2B otimizado: <130 palavras, 1 CTA, abertura no prospecto."""
     g = cfg["empresa"]
     cidade = lead.get("cidade") or "região"
-    segmento = (lead.get("segmento") or "alimentação").lower()
     return {
-        "subject": f"Compra de óleo usado — Master Óleo ({cidade})",
+        "subject": f"O óleo de fritura da {lead.get('empresa','')} vale dinheiro",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
-<p>Sou da <b>{g['nome']}</b>, de {g['cidade']}, e estou entrando em contato porque a <b>{lead.get('empresa','')}</b> atua no segmento de {segmento} — setor que gera <b>óleo de cozinha usado e gordura vegetal</b> com frequência.</p>
-<p>O mercado mudou: o óleo usado virou <b>"ouro líquido"</b>. O setor global de reciclagem de óleo de cozinha vale <b>US$ 11 bilhões</b> e cresce ~7% ao ano — a demanda por biodiesel e combustível de aviação disparou. E a <b>{g['nome']}</b> <b>compra esse material</b>, com coleta programada e certificado em toda retirada:</p>
+<p>Toda fritura gera um resíduo — e o da <b>{lead.get('empresa','')}</b> hoje sai de graça. No mercado, isso mudou: o óleo de cozinha usado virou <b>commodity energética</b>, um setor global de <b>US$ 11 bilhões</b> que cresce ~7% ao ano (biodiesel e combustível de aviação).</p>
+<p>A <b>{g['nome']}</b>, de {g['cidade']}, compra esse material. Na prática, para vocês:</p>
 <ul>
-  <li><b>Pagamento pelo óleo e gordura vegetal usados</b> — valor negociado conforme a quantidade e a qualidade (referência de mercado: R$ 1,00 a R$ 2,50/litro)</li>
-  <li><b>Certificado de destinação</b> em cada coleta (comprovação da PNRS, Lei 12.305/2010)</li>
-  <li><b>Coleta programada</b> — semanal, quinzenal ou sob demanda, conforme o seu volume</li>
-  <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
-  <li><b>Relatório de impacto ambiental</b> — ideal para metas ESG e licenciamentos</li>
+  <li><b>Pagamento pelo óleo e pela gordura vegetal usados</b> — referência de R$ 1,00 a R$ 2,50/litro, conforme qualidade e volume;</li>
+  <li><b>Certificado de destinação em toda coleta</b> — comprovação da PNRS (Lei 12.305/2010);</li>
+  <li><b>Coleta programada e bombonas fornecidas</b> — custo logístico zero para a sua equipe.</li>
 </ul>
-<p>Se fizer sentido, me responda com a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> (óleo de fritura, gordura vegetal etc.) — com isso, alinho uma proposta de compra sem compromisso em até 24h.</p>
-<p>Também estou à disposição pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> (atendimento em horário comercial).</p>
-<p>Atenciosamente,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {g['cidade']}<br>{g['telefone_whatsapp']} · {g.get('site','https://masteroleo.eco.br')}</p>
+<p>Para eu te enviar uma estimativa de valor em até 24h: <b>qual o volume aproximado que vocês geram por mês (litros ou kg)?</b></p>
+<p>Se preferir, me chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {g['cidade']}</p>
 </div>"""}
 
 def prospecao(args):
@@ -160,7 +165,7 @@ def prospecao(args):
         msg["To"] = email_addr
         msg["Subject"] = Header(tpl["subject"], "utf-8")
         msg["Message-ID"] = make_msgid()
-        msg.attach(MIMEText(re.sub(r"<[^>]+>", "", tpl["html"]).strip(), "plain", "utf-8"))
+        msg.attach(MIMEText(_plain_from_html(tpl["html"]).strip(), "plain", "utf-8"))
         msg.attach(MIMEText(tpl["html"], "html", "utf-8"))
         
         try:

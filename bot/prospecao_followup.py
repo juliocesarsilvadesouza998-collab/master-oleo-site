@@ -62,29 +62,33 @@ def smtp_send(cfg, e, to, subject, html, in_reply_to=None):
     msg["Message-ID"] = make_msgid()
     if in_reply_to:
         msg["In-Reply-To"] = in_reply_to
-    msg.attach(MIMEText(re.sub(r"<[^>]+>", "", html).strip(), "plain", "utf-8"))
+    msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
     with smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30) as s:
         s.login(e["usuario"], e["senha_app"].replace(" ",""))
         s.sendmail(e["usuario"], [to], msg.as_string())
     return msg["Message-ID"]
 
+def _plain_from_html(html):
+    """Converte HTML em texto puro com quebras de linha preservadas."""
+    import re
+    t = re.sub(r"<br\s*/?>", "\n", html)
+    t = re.sub(r"</p>", "\n\n", t)
+    t = re.sub(r"<[^>]+>", "", t)
+    return t.strip()
+
 def tpl_fp(cfg, lead, n):
     """Templates de follow-up de prospecção (n=1,2,3). Todos reforçam a compra."""
     g = cfg["empresa"]
     if n == 1:
-        subj = f"Master Óleo — proposta de compra do óleo da {lead['empresa']}"
+        subj = f"Re: O óleo de fritura da {lead['empresa']} vale dinheiro"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Semana passada apresentei a <b>{g['nome']}</b> para a {lead['empresa']} — a proposta de <b>compra do óleo de cozinha usado e da gordura vegetal</b> gerados na operação de vocês.</p>
-<p>Sei que a rotina de uma empresa do segmento de {(lead.get('segmento') or 'alimentação').lower()} é corrida, então deixo aqui o resumo do que isso significa na prática:</p>
-<ul>
-  <li><b>Renda com um resíduo</b>: o óleo usado passa a gerar receita, com valor negociado por quantidade</li>
-  <li><b>Conformidade</b>: certificado de destinação em cada coleta (PNRS, Lei 12.305/2010)</li>
-  <li><b>Zero preocupação logística</b>: coleta programada + bombonas fornecidas</li>
-</ul>
-<p>Para alinharmos o valor, só preciso de duas informações: <b>quantos litros (ou kg) por mês</b> e o <b>tipo de material</b>. Me responde por aqui ou no WhatsApp {g['telefone_whatsapp']}?</p>
-<p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+<p>Te escrevi há poucos dias sobre a <b>compra do óleo usado da {lead['empresa']}</b> — como sei que a caixa de entrada enche, deixo aqui o essencial:</p>
+<p>A Lei 12.305/2010 (PNRS) exige <b>destinação comprovada</b> dos resíduos. Com a {g['nome']} isso deixa de ser preocupação e vira <b>receita</b>: pagamos de R$ 1,00 a R$ 2,50/litro, com certificado em toda coleta e bombonas fornecidas.</p>
+<p>Para eu te passar o valor exato da sua operação: <b>quanto vocês geram por mês (litros ou kg)?</b> Me responde esse número que eu te mando a estimativa ainda esta semana.</p>
+<p>Alternativa rápida: WhatsApp {g['telefone_whatsapp']}.</p>
+<p>Abraço,<br><b>{g['nome']}</b></p>
 </div>"""
     elif n == 2:
         subj = f"Re: compra de óleo usado — {lead['empresa']} × Master Óleo"

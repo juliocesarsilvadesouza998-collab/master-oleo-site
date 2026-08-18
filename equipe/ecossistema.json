@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-14",
+  "atualizado_em": "2026-08-18",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -20,17 +20,19 @@
   "aprendizados": [
     "2026-08-13: leads de prospecção NÃO devem receber boas-vindas do guia (send_sequence pula fonte prospeccao*) — mensagem 'obrigado pelo seu interesse' passava ar de inbound quando éramos outbound",
     "2026-08-13: template de apresentação reescrito: profissional, deixa claro que NÓS contatamos, foca em compra + certificado + logística",
-    "2026-08-14: fila extra (fila_prospeccao_extra.json) criada pelo Prospector: 16 empresas descobertas via econodata/empresaqui + sites oficiais; emails reais coletados dos sites oficiais (ex.: sac.br@mastermartini.com da Unigrà, brazil@bakels.com.br, marketing.sola@aak.com) e MX validado com nslookup antes de incluir"
+    "2026-08-14: fila extra (fila_prospeccao_extra.json) criada pelo Prospector: 16 empresas descobertas via econodata/empresaqui + sites oficiais; emails reais coletados dos sites oficiais (ex.: sac.br@mastermartini.com da Unigrà, brazil@bakels.com.br, marketing.sola@aak.com) e MX validado com nslookup antes de incluir",
+    "2026-08-18: Prospector rodou com fila ZERADA (0 pendentes). Buscas em Americana/SBO não retornaram emails comerciais publicados (sites usam formulários: SempreVale, Galli, Level, Döhler); candidatos com MX válido porém só email de RH/DPO público (Pavan contatorh@superpavan.com.br, Caetano vagas@smcaetano.com.br) — não incluídos por fugirem dos padrões contato/sac/comercial. Fila depende do Estrategista dominical ampliar a lista."
   ],
   "historico": [
     "2026-08-13: lista ampliada para 31 empresas grandes (Campinas, Indaiatuba, Itu, Sorocaba, Jundiai, Louveira, Valinhos, Piracicaba); 15 emails enviados em lote",
-    "2026-08-14: Prospector descobriu +16 empresas (Tatui, Elias Fausto, Vinhedo, Limeira, Louveira, Jundiai, Piracicaba) e criou fila_prospeccao_extra.json com MX validado; lote de 15 emails enviado sem falhas (meta 50 iniciada)"
+    "2026-08-14: Prospector descobriu +16 empresas (Tatui, Elias Fausto, Vinhedo, Limeira, Louveira, Jundiai, Piracicaba) e criou fila_prospeccao_extra.json com MX validado; lote de 15 emails enviado sem falhas (meta 50 iniciada)",
+    "2026-08-18: fila esgotada (56 empresas, 51 contatados, 13 bounces, 0 pendentes); nenhum email novo válido encontrado — lote não enviado; aguardando Estrategista ampliar lista"
   ],
   "fila_prospeccao": {
-    "total_empresas_listadas": 47,
-    "pendentes": 1,
-    "contatados": 46,
-    "bounces": 6,
-    "ultima_atualizacao": "2026-08-14"
+    "total_empresas_listadas": 56,
+    "pendentes": 0,
+    "contatados": 51,
+    "bounces": 13,
+    "ultima_atualizacao": "2026-08-18"
   }
 }
