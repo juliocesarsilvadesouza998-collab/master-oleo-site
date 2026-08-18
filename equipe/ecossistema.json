@@ -31,18 +31,19 @@
     "2026-08-18 (Estrategista): ranking oficial 'Maiores Empresas de Jundiaí 2025' (prefeitura) revelou 7 indústrias de alimentos novas com email público: Adimix (sac@adimix.com.br), Walsywa (vendas@walsywa.com.br), Sensient (atendimento@sensient.com), MasterSense (vendas@mastersense.com), De Marchi (demarchi@demarchi.com.br), Emulzint (fernanda.pavarin@emulzint.com.br, diretório Mercosul), Nha Benta (mario@nhabenta.com.br, Sorocaba — diretório CNPJ). Todas com MX validado. Omega/Nutriplus (Salto, refeições coletivas) NÃO têm email público — só telefone/WhatsApp: follow-up humano.",
     "2026-08-18 (Estrategista): melhoria aplicada em bot/enviar_lote.py — checagem de MX (nslookup, com cache por domínio) antes de cada envio em lote; domínios sem MX são pulados (endereça a sugestão do Analista que apontou 8 bounces de domínios mortos no mesmo dia).",
     "2026-08-18 (Estrategista): melhoria aplicada em bot/sync_formspree.py — normalização de emails no parse de bounces (remove ponto final/espacos capturados pelo regex); cache bounces.json limpo de 30 → 27 entradas (3 duplicatas com ponto final).",
-    "2026-08-18 (Estrategista): templates atualizados — prospecao.py e enviar_lote.py agora citam US$ 8 bi (2025) → US$ 15 bi de mercado UCO, gancho legal 'passivo ambiental fica no CNPJ do gerador sem certificado' e a Portaria MME/MMA 3/2026; enviar_lote.py ganhou bullet de relatório ESG. persona.md atualizada com dados verificados + seções do Prospector revisadas (portaria 3/2026 confirmada, anti-furto com fonte, CBIO refraseado)."
+    "2026-08-18 (Estrategista): templates atualizados — prospecao.py e enviar_lote.py agora citam US$ 8 bi (2025) → US$ 15 bi de mercado UCO, gancho legal 'passivo ambiental fica no CNPJ do gerador sem certificado' e a Portaria MME/MMA 3/2026; enviar_lote.py ganhou bullet de relatório ESG. persona.md atualizada com dados verificados + seções do Prospector revisadas (portaria 3/2026 confirmada, anti-furto com fonte, CBIO refraseado).",
+    "2026-08-18 (Estrategista): CORREÇÃO DE INTEGRIDADE — leads.csv perdeu 5 linhas (ids 79,81,83,85,87 ausentes) por escrita concorrente entre agentes (Prospector 19:21 + outros): ambos leram o CSV, gravaram e o último sobrescreveu. Implementado lock de arquivo (O_EXCL, timeout 20s) + merge por email com re-sequência de ids em bot/enviar_lote.py e bot/prospecao.py (merge_write_leads). Teste automatizado OK. ATENÇÃO: bot_oleo.py (Atendente) ainda escreve sem lock — vigiar e aplicar o mesmo padrão se repetir."
   ],
   "historico": [
     "2026-08-13: lista ampliada para 31 empresas grandes (Campinas, Indaiatuba, Itu, Sorocaba, Jundiai, Louveira, Valinhos, Piracicaba); 15 emails enviados em lote",
     "2026-08-14: Prospector descobriu +16 empresas (Tatui, Elias Fausto, Vinhedo, Limeira, Louveira, Jundiai, Piracicaba) e criou fila_prospeccao_extra.json com MX validado; lote de 15 emails enviado sem falhas (meta 50 iniciada)",
     "2026-08-18: Prospector encontrou fila vazia; Estrategista ampliou fila para 71 empresas (40 no JSON extra) com 15 novas; lote de 15 emails enviado sem falhas; fila novamente em 0 pendentes — requer reposição contínua",
-    "2026-08-18 (Estrategista, domingo): fila reposta para 84 empresas (53 no JSON extra: +7 de Jundiaí/Sorocaba por mim, +6 de suplementos pelo Prospector) com 13 pendentes; MX check implementado no enviar_lote.py; bounces.json normalizado (30→27); templates e persona atualizados com dados de mercado verificados (US$ 8→15 bi UCO, Portaria MME/MMA 3/2026, passivo no CNPJ, relatório ESG); py_compile OK em todos os scripts"
+    "2026-08-18 (Estrategista, domingo): fila reposta para 84 empresas (53 no JSON extra: +7 de Jundiaí/Sorocaba por mim, +6 de suplementos pelo Prospector); MX check implementado no enviar_lote.py; bounces.json normalizado (30→27); templates e persona atualizados com dados de mercado verificados (US$ 8→15 bi UCO, Portaria MME/MMA 3/2026, passivo no CNPJ, relatório ESG); CORREÇÃO de perda de linhas por escrita concorrente (lock+merge em enviar_lote.py e prospecao.py); py_compile OK em todos os scripts; lote do Prospector enviou os 6 de suplementos — restam 7 pendentes"
   ],
   "fila_prospeccao": {
     "total_empresas_listadas": 84,
-    "pendentes": 13,
-    "contatados": 60,
+    "pendentes": 7,
+    "contatados": 66,
     "bounces": 21,
     "ultima_atualizacao": "2026-08-18"
   }

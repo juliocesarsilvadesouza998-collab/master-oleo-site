@@ -1,0 +1,38 @@
+{
+  "ICT": {
+    "emails": [
+      "suporte@ictfarmaceutica.com.br"
+    ],
+    "urls": [
+      "https://www.instagram.com/ictfarmaceutica/?hl=en",
+      "https://ictfarmaceutica.com.br/fale-conosco/"
+    ]
+  },
+  "BESINS": {
+    "emails": [],
+    "urls": [
+      "https://www.besins-healthcare.com/contact-us",
+      "https://www.instagram.com/reel/DVG-R6NCVrb/"
+    ]
+  },
+  "NutraJundiai": {
+    "emails": [
+      "Contato.industrial@ashland.com",
+      "Contato.nutrition@ashland.com",
+      "info@vidara.com"
+    ],
+    "urls": [
+      "https://www.nouryon.com/company/locations/Jundiai",
+      "https://www.ashland.com/ashland-brazil/contatos"
+    ]
+  },
+  "Sanofi": {
+    "emails": [
+      "sac.brasil@sanofi.com"
+    ],
+    "urls": [
+      "https://www.sanofi.com.br/pt/fale-conosco",
+      "https://www.medley.com.br/fale-conosco"
+    ]
+  }
+}

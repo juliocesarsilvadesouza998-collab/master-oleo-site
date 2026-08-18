@@ -89,6 +89,50 @@ def write_leads(leads):
         w.writeheader()
         w.writerows(leads)
 
+# --- Lock de arquivo + merge: evita perder linhas em escrita concorrente ---
+# (Prospector/Atendente/Estrategista rodam em paralelo; sem lock, o último
+#  que grava sobrescreve as linhas dos outros — 5 leads já foram perdidos)
+def _acquire_lock(path, timeout=20):
+    deadline = time.time() + timeout
+    while True:
+        try:
+            fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.close(fd)
+            return True
+        except FileExistsError:
+            if time.time() > deadline:
+                return False
+            time.sleep(0.3)
+        except OSError:
+            return False
+
+def _release_lock(path):
+    try:
+        os.remove(path)
+    except OSError:
+        pass
+
+def merge_write_leads(novos_em_memoria):
+    """Grava leads.csv com lock, mesclando com o que estiver em disco.
+    Deduplica por email e renumera ids sequencialmente."""
+    lock = LEADS_PATH + ".lock"
+    if _acquire_lock(lock):
+        try:
+            atuais = read_leads()
+            existentes = {l.get("email", "").strip().lower() for l in atuais}
+            a_adicionar = [l for l in novos_em_memoria
+                           if l.get("email", "").strip().lower() not in existentes]
+            base_id = max((int(l.get("id") or 0) for l in atuais), default=0)
+            for i, l in enumerate(a_adicionar, start=base_id + 1):
+                l["id"] = str(i)
+            write_leads(atuais + a_adicionar)
+            return len(a_adicionar)
+        finally:
+            _release_lock(lock)
+    # Falha ao obter lock: grava direto mesmo assim (melhor que perder o lote)
+    write_leads(novos_em_memoria)
+    return len(novos_em_memoria)
+
 def find_lead(leads, email_addr):
     for l in leads:
         if l.get("email","").strip().lower() == email_addr.strip().lower():
@@ -191,8 +235,8 @@ def prospecao(args):
             print(f"❌ Falha: {lead_info['empresa']} <{email_addr}> — {str(ex)[:120]}")
     
     if not args.dry_run and not args.list and enviados > 0:
-        write_leads(leads)
-        print(f"\n{enviados} email(s) enviado(s) e registrado(s) no leads.csv.")
+        gravados = merge_write_leads(leads)
+        print(f"\n{enviados} email(s) enviado(s); {gravados} registrado(s) no leads.csv (merge com lock).")
     elif args.dry_run:
         print(f"\nDRY-RUN — {enviados} envio(s) simulado(s) (nada foi enviado).")
     

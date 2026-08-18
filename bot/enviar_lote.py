@@ -78,6 +78,53 @@ def write_leads(leads):
         w.writerows(normal)
     os.replace(tmp, LEADS_PATH)  # atômico: nunca deixa o arquivo truncado
 
+# --- Lock de arquivo: evita perder linhas em escrita concorrente de leads.csv ---
+# (Prospector, Atendente e Estrategista rodam em paralelo; sem lock, o último
+#  que grava sobrescreve as linhas dos outros — 5 leads já foram perdidos assim)
+def _acquire_lock(path, timeout=20):
+    deadline = time.time() + timeout
+    while True:
+        try:
+            fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.close(fd)
+            return True
+        except FileExistsError:
+            if time.time() > deadline:
+                return False
+            time.sleep(0.3)
+        except OSError:
+            return False
+
+def _release_lock(path):
+    try:
+        os.remove(path)
+    except OSError:
+        pass
+
+def merge_write_leads(novos_em_memoria):
+    """Grava leads.csv com lock, mesclando com o que estiver em disco.
+    Deduplica por email e renumera ids sequencialmente. `novos_em_memoria`
+    é a lista completa (snapshot antigo + novos) que o agente montou."""
+    lock = LEADS_PATH + ".lock"
+    if _acquire_lock(lock):
+        try:
+            atuais = read_leads()
+            existentes = {l.get("email", "").strip().lower() for l in atuais}
+            a_adicionar = []
+            for l in novos_em_memoria:
+                if l.get("email", "").strip().lower() not in existentes:
+                    a_adicionar.append(l)
+            base_id = max((int(l.get("id") or 0) for l in atuais), default=0)
+            for i, l in enumerate(a_adicionar, start=base_id + 1):
+                l["id"] = str(i)
+            write_leads(atuais + a_adicionar)
+            return len(a_adicionar)
+        finally:
+            _release_lock(lock)
+    # Falha ao obter lock: grava direto mesmo assim (melhor que perder o lote)
+    write_leads(novos_em_memoria)
+    return len(novos_em_memoria) - 0
+
 def smtp_send(cfg, e, to_addr, subject, html):
     ctx = ssl.create_default_context()
     smtp = smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30)
@@ -108,6 +155,7 @@ def tpl_apresentacao(cfg, lead):
   <li><b>Relatório de impacto ambiental</b> (litros coletados e água preservada) para o seu reporte ESG</li>
   <li><b>Bombonas e tambores</b> fornecidos, com troca cheia/vazia</li>
 </ul>
+<p>E um detalhe de timing: a <b>Portaria Interministerial MME/MMA nº 3/2026</b> obriga, a partir de <b>janeiro/2028</b>, que o biodiesel e o SAF usem <b>≥1% de óleos e gorduras residuais</b> — quem fechar coleta antes disso sai na frente.</p>
 <p>Atendemos em {g['cidade']} e região. Gostaria de saber qual a <b>quantidade aproximada</b> (litros ou kg por mês) e o <b>tipo de material</b> que a {lead['empresa']} gera? Com isso, alinho a melhor proposta de compra sem compromisso.</p>
 <p>Se preferir, estou disponível pelo WhatsApp: <b>{g['telefone_whatsapp']}</b> — resposta rápida em horário comercial.</p>
 <p>Atenciosamente,<br><b>{g['nome']}</b><br>Compra de óleo de cozinha usado · {g['cidade']}<br>WhatsApp: {g['telefone_whatsapp']}</p>
@@ -182,8 +230,8 @@ def main():
             time.sleep(6)
         except Exception as ex:
             print(f"❌ {p['empresa']} — {str(ex)[:100]}")
-    write_leads(leads)
-    print(f"\n{enviados} email(s) enviados neste lote. Próximo lote: novos pendentes.")
+    gravados = merge_write_leads(leads) if enviados > 0 else 0
+    print(f"\n{enviados} email(s) enviados; {gravados} registrado(s) no leads.csv (merge com lock). Próximo lote: novos pendentes.")
 
 # Lista compartilhada com prospecao.py (mantida em prospecao.py)
 from prospecao import EMPRESAS

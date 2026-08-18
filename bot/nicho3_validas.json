@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "Natulha",
+    "empresa": "Natulha",
+    "email": "atendimento@natulha.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Terceirizacao de encapsulados e suplementos"
+  },
+  {
+    "nome": "CapsExpress",
+    "empresa": "CapsExpress",
+    "email": "contato@capsexpress.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "Laboratorio de encapsulados"
+  },
+  {
+    "nome": "Megalabs Brasil",
+    "empresa": "Megalabs Brasil",
+    "email": "sac@megalabsbrasil.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria farmaceutica e nutraceuticos"
+  }
+]

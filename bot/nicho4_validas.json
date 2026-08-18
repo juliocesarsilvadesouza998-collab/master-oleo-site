@@ -1,0 +1,23 @@
+[
+  {
+    "nome": "ICT Farmaceutica",
+    "empresa": "ICT Farmaceutica",
+    "email": "suporte@ictfarmaceutica.com.br",
+    "cidade": "Votorantim/SP",
+    "segmento": "Industria farmaceutica"
+  },
+  {
+    "nome": "Ashland Brasil",
+    "empresa": "Ashland Brasil",
+    "email": "Contato.nutrition@ashland.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de ingredientes e aditivos"
+  },
+  {
+    "nome": "Sanofi Medley",
+    "empresa": "Sanofi Medley",
+    "email": "sac.brasil@sanofi.com",
+    "cidade": "Hortolandia/SP",
+    "segmento": "Industria farmaceutica (gigante)"
+  }
+]
