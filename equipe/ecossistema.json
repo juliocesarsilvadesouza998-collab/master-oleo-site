@@ -3,48 +3,30 @@
   "atualizado_em": "2026-08-18",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
-    "meta_semana_2026-08-18": "Esgotar os 13 pendentes da fila (foco Jundiaí: indústrias de ingredientes/panificação) + follow-up humano (telefone/LinkedIn) nos 8 bounces de 18/08 e Rosaves/Beira Rio",
     "limite_diario_prospeccao": 15,
-    "foco_cidades": ["Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai", "Louveira", "Valinhos", "Piracicaba"],
-    "foco_segmentos_novos": ["industrias de ingredientes e aditivos (Jundiai)", "refeicoes coletivas e hospitais (Salto)", "suplementos alimentares (Indaiatuba/Itu/Campinas)"],
-    "taxa_bounce_maxima": 0.15,
-    "alvo_respostas_pct": 0.03,
-    "acao_prioritaria": "Fechar lead Boa Supermercados (respondido id 46) via WhatsApp e monitorar respostas do lote FP1 de 18/08 (45 emails)"
+    "foco_cidades": ["Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai", "Louveira", "Valinhos", "Piracicaba", "Vinhedo", "Monte Mor", "Hortolandia", "Sumare", "Limeira", "Nova Odessa", "Cabreuva", "Tatui", "Porto Feliz", "Boituva", "Americana", "Votorantim"],
+    "nicho_prioritario": "encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
   },
-  "fluxo_fechamento": {
-    "apresentacao_dia": 0,
-    "fp1_dia": 3,
-    "fp2_dia": 6,
-    "fp3_dia": 10,
-    "script_apresentacao": "bot/enviar_lote.py --max 15",
-    "script_followups": "bot/prospecao_followup.py",
-    "mensagem_chave": "Master Óleo COMPRA óleo e gordura vegetal usados; valor negociado por quantidade; NUNCA 'obrigado pelo seu interesse' em outbound"
+  "estado_2026_08_18": {
+    "leads_total": 89,
+    "leads_ativos": 71,
+    "apresentacoes_enviadas": 86,
+    "entregues_sem_bounce": 71,
+    "bounces": 15,
+    "taxa_bounce": "17%",
+    "respostas_reais": 1,
+    "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br)",
+    "leads_nicho_encapsulados": 12,
+    "inbound_formspree": 3,
+    "watchdog": "saudavel",
+    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build esgotados, versao anterior no ar)",
+    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora)"
   },
   "aprendizados": [
-    "2026-08-13: leads de prospecção NÃO devem receber boas-vindas do guia (send_sequence pula fonte prospeccao*) — mensagem 'obrigado pelo seu interesse' passava ar de inbound quando éramos outbound",
-    "2026-08-13: template de apresentação reescrito: profissional, deixa claro que NÓS contatamos, foca em compra + certificado + logística",
-    "2026-08-14: fila extra (fila_prospeccao_extra.json) criada pelo Prospector: 16 empresas descobertas via econodata/empresaqui + sites oficiais; emails reais coletados dos sites oficiais (ex.: sac.br@mastermartini.com da Unigrà, brazil@bakels.com.br, marketing.sola@aak.com) e MX validado com nslookup antes de incluir",
-    "2026-08-18: Prospector rodou com fila ZERADA (0 pendentes) e usou as 3 buscas em Americana/SBO; sites locais usam formulários em vez de emails publicados (SempreVale, Galli, Level, Döhler); candidatos com MX válido porém só email de RH/DPO público (Pavan contatorh@superpavan.com.br, Caetano vagas@smcaetano.com.br) — não incluídos por fugirem dos padrões contato/sac/comercial. O Estrategista ampliou a fila +15 empresas no mesmo dia (40 no JSON extra); lote de 15 enviado com sucesso.",
-    "2026-08-18 (Estrategista): VERIFICADO — Portaria Interministerial MME/MMA nº 3/2026 (jan/2026) obriga ≥1% de óleos e gorduras residuais (OGR) em biodiesel/SAF/diesel verde a partir de 01/01/2028 (fontes: gov.br, eixos.com.br, trenchrossi.com). Melhor argumento de urgência para fechar contratos agora. Complemento: Lei 14.993/2024 (Combustível do Futuro) criou mandato de SAF 1% (2027) → 7% (2034).",
-    "2026-08-18 (Estrategista): preço de mercado verificado — até R$ 2,50/L para óleo limpo e bem armazenado; ofertas muito acima da faixa sinalizam coletor irregular sem licença (guia Óleo Verde, 2026). Usar como argumento de credibilidade, não só de valor.",
-    "2026-08-18 (Estrategista): furto de óleo usado é real no interior de SP ('Gangue do Óleo de Fritura', +20 cidades, prejuízo ~R$ 500 mil — Óleo Verde 2025). Diferencial anti-furto (coletor identificado, pesagem na frente, bombona com trava) entra na persona para redes.",
-    "2026-08-18 (Estrategista): ranking oficial 'Maiores Empresas de Jundiaí 2025' (prefeitura) revelou 7 indústrias de alimentos novas com email público: Adimix (sac@adimix.com.br), Walsywa (vendas@walsywa.com.br), Sensient (atendimento@sensient.com), MasterSense (vendas@mastersense.com), De Marchi (demarchi@demarchi.com.br), Emulzint (fernanda.pavarin@emulzint.com.br, diretório Mercosul), Nha Benta (mario@nhabenta.com.br, Sorocaba — diretório CNPJ). Todas com MX validado. Omega/Nutriplus (Salto, refeições coletivas) NÃO têm email público — só telefone/WhatsApp: follow-up humano.",
-    "2026-08-18 (Estrategista): melhoria aplicada em bot/enviar_lote.py — checagem de MX (nslookup, com cache por domínio) antes de cada envio em lote; domínios sem MX são pulados (endereça a sugestão do Analista que apontou 8 bounces de domínios mortos no mesmo dia).",
-    "2026-08-18 (Estrategista): melhoria aplicada em bot/sync_formspree.py — normalização de emails no parse de bounces (remove ponto final/espacos capturados pelo regex); cache bounces.json limpo de 30 → 27 entradas (3 duplicatas com ponto final).",
-    "2026-08-18 (Estrategista): templates atualizados — prospecao.py e enviar_lote.py agora citam US$ 8 bi (2025) → US$ 15 bi de mercado UCO, gancho legal 'passivo ambiental fica no CNPJ do gerador sem certificado' e a Portaria MME/MMA 3/2026; enviar_lote.py ganhou bullet de relatório ESG. persona.md atualizada com dados verificados + seções do Prospector revisadas (portaria 3/2026 confirmada, anti-furto com fonte, CBIO refraseado).",
-    "2026-08-18 (Estrategista): CORREÇÃO DE INTEGRIDADE — leads.csv perdeu 5 linhas (ids 79,81,83,85,87 ausentes) por escrita concorrente entre agentes (Prospector 19:21 + outros): ambos leram o CSV, gravaram e o último sobrescreveu. Implementado lock de arquivo (O_EXCL, timeout 20s) + merge por email com re-sequência de ids em bot/enviar_lote.py e bot/prospecao.py (merge_write_leads). Teste automatizado OK. ATENÇÃO: bot_oleo.py (Atendente) ainda escreve sem lock — vigiar e aplicar o mesmo padrão se repetir."
-  ],
-  "historico": [
-    "2026-08-13: lista ampliada para 31 empresas grandes (Campinas, Indaiatuba, Itu, Sorocaba, Jundiai, Louveira, Valinhos, Piracicaba); 15 emails enviados em lote",
-    "2026-08-14: Prospector descobriu +16 empresas (Tatui, Elias Fausto, Vinhedo, Limeira, Louveira, Jundiai, Piracicaba) e criou fila_prospeccao_extra.json com MX validado; lote de 15 emails enviado sem falhas (meta 50 iniciada)",
-    "2026-08-18: Prospector encontrou fila vazia; Estrategista ampliou fila para 71 empresas (40 no JSON extra) com 15 novas; lote de 15 emails enviado sem falhas; fila novamente em 0 pendentes — requer reposição contínua",
-    "2026-08-18 (Estrategista, domingo): fila reposta para 84 empresas (53 no JSON extra: +7 de Jundiaí/Sorocaba por mim, +6 de suplementos pelo Prospector); MX check implementado no enviar_lote.py; bounces.json normalizado (30→27); templates e persona atualizados com dados de mercado verificados (US$ 8→15 bi UCO, Portaria MME/MMA 3/2026, passivo no CNPJ, relatório ESG); CORREÇÃO de perda de linhas por escrita concorrente (lock+merge em enviar_lote.py e prospecao.py); py_compile OK em todos os scripts; lote do Prospector enviou os 6 de suplementos — restam 7 pendentes"
-  ],
-  "fila_prospeccao": {
-    "total_empresas_listadas": 84,
-    "pendentes": 7,
-    "contatados": 66,
-    "bounces": 21,
-    "ultima_atualizacao": "2026-08-18"
-  }
+    "Emails padrao contato@dominio falham ~25% das vezes - sempre buscar email real do site antes de enviar",
+    "Case Catalent (Indaiatuba/Sorocaba) e prova social forte para o nicho de encapsulados",
+    "Mercado UCO vale US$11bi e lei 2028 obriga usinas a usar oleo residual - argumento de urgencia",
+    "Netlify gratuito esgota creditos de build (300min/mes) - GitHub Pages como backup automatico",
+    "Watchdog evita follow-ups atrasados e bounces nao corrigidos"
+  ]
 }
