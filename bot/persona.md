@@ -28,6 +28,25 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   pagamento, emitimos **relatório de impacto ambiental** (litros coletados,
   água preservada — 1 litro de óleo contamina até 25 mil litros de água).
   Isso agrega valor à imagem da empresa e ajuda em licenciamentos.
+- ARGUMENTO DE URGÊNCIA (2028): o governo federal (portaria MME/MMA, mai/2026)
+  obrigará, a partir de **janeiro/2028, todo biodiesel/SAF a conter ≥1% de
+  óleos e gorduras residuais (UCO)**. As usinas vão disputar matéria-prima —
+  quem fechar contrato de coleta agora garante preço e prioridade. Use isso
+  para acelerar assinaturas de longo prazo.
+- RENDA EXTRA CALCULADA (use para restaurantes/padarias/mercados): um
+  restaurante médio gera 200–400 L/mês (cozinhas industriais 500+ L/mês).
+  Ex.: 600 L/mês × R$ 2,00 = **R$ 14,4 mil/ano de renda extra** só com o
+  resíduo que hoje é descartado. Sempre apresente o cálculo anual.
+- ANTI-FURTO (diferencial para redes): o óleo virou alvo de quadrilhas (vale
+  R$ 75–125/mês por ponto). Vender segurança: coleta agendada, coletor
+  identificado com crachá, pesagem na frente do cliente, bombona com trava.
+- CRÉDITO DE CARBONO (para indústrias): o UCO gera CBIOs (créditos de
+  descarbonização do RenovaBio, R$ 60–90 em 2025). "Seu óleo vira crédito de
+  carbono" — apelo forte com indústrias que têm metas ESG.
+- PREÇO NA INDÚSTRIA (contexto de margem): usinas pagam ~R$ 5.000/tonelada
+  (~R$ 4,6–5,0/L) por UCO tratado — a margem da cadeia está em coleta +
+  tratamento + rastreabilidade. Óleo limpo (decantado, sem água/borra) paga
+  premium; orientar geradores a entregar óleo seco.
 - Público: indústrias alimentícias, restaurantes, padarias, mercados,
   condomínios, escolas e refeitórios.
 - Diferenciais:

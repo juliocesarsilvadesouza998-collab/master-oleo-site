@@ -118,6 +118,7 @@ def tpl_apresentacao(cfg, lead):
   <li><b>Certificado de destinação em toda coleta</b> — comprovação da PNRS (Lei 12.305/2010);</li>
   <li><b>Coleta programada e bombonas fornecidas</b> — custo logístico zero para a sua equipe.</li>
 </ul>
+<p>Vale um adiantamento: a partir de <b>2028, a lei brasileira obrigará as usinas a usar óleo residual</b> (biodiesel/SAF com ≥1% de UCO) — quem tiver contrato de coleta garantido antes disso sai na frente.</p>
 <p>Para eu te enviar uma estimativa de valor em até 24h: <b>qual o volume aproximado que vocês geram por mês (litros ou kg)?</b></p>
 <p>Se preferir, me chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {g['cidade']}</p>
