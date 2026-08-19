@@ -1,0 +1,46 @@
+[
+  {
+    "data": "2026-08-19T18:53:45.351469-03:00",
+    "site": "https://masteroleo.eco.br",
+    "palavras_chave": {
+      "coleta de óleo usado salto sp": "AUSENTE",
+      "coleta de óleo de cozinha usado salto": "AUSENTE",
+      "compra de óleo usado": "presente",
+      "descaracterização de alimentos vencidos": "presente",
+      "margarina vencida": "presente",
+      "manteiga vencida": "presente",
+      "maionese vencida": "presente",
+      "compra de gordura vegetal usada": "AUSENTE",
+      "óleo usado biodiesel": "AUSENTE",
+      "descarte de óleo de cozinha salto": "AUSENTE"
+    },
+    "tecnicos": [
+      "index.html: sem Schema.org (JSON-LD) — relevante para rich snippets"
+    ],
+    "ok": false,
+    "site_no_ar": true,
+    "status_http": 200,
+    "sitemap": "ausente"
+  },
+  {
+    "data": "2026-08-19T18:54:40.201485-03:00",
+    "site": "https://masteroleo.eco.br",
+    "palavras_chave": {
+      "coleta de óleo usado salto sp": "presente",
+      "coleta de óleo de cozinha usado salto": "presente",
+      "compra de óleo usado": "presente",
+      "descaracterização de alimentos vencidos": "presente",
+      "margarina vencida": "presente",
+      "manteiga vencida": "presente",
+      "maionese vencida": "presente",
+      "compra de gordura vegetal usada": "presente",
+      "óleo usado biodiesel": "presente",
+      "descarte de óleo de cozinha salto": "presente"
+    },
+    "tecnicos": [],
+    "ok": true,
+    "site_no_ar": true,
+    "status_http": 200,
+    "sitemap": "presente"
+  }
+]
