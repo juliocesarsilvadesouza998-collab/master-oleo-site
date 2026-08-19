@@ -17,19 +17,30 @@
   },
   "estado_2026_08_19": {
     "leads_total": 100,
-    "leads_ativos": 81,
+    "leads_ativos": 80,
     "apresentacoes_enviadas": 100,
     "entregues_sem_bounce": 83,
     "bounces": 17,
     "taxa_bounce": "17%",
     "respostas_reais": 2,
     "taxa_resposta": "2% (meta >3%) — ponto mais fraco; template V2 encurtado em 19/08 para atacar isso, monitorar próximos 3-5 dias",
-    "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno) + Hile (nicho encapsulados, 1a leva template V2)",
+    "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno) + Oba Hortifrutigranjeiros (SAC automatico respondeu em 19/08 10:16 — resposta NAO humana; esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Hile (nicho encapsulados, 1a leva template V2)",
     "leads_nicho_encapsulados": 25,
     "inbound_formspree": 3,
-    "watchdog": "saudavel (19/08 09:45, exit 0)",
+    "watchdog": "saudavel (19/08 10:32, exit 0)",
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
     "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "tick_atendente_10_32": {
+    "rodadas_no_dia": 6,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (22 entradas no historico: 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+    "watchdog": "exit 0, saudavel — 100 leads, 80 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "evento_entre_ticks": "Tick anterior (10:16) processou 3 emails automaticos do SAC/Salesforce da Oba (atendimento@redeoba.com.br), enviou 1 esclarecimento comercial + WhatsApp e marcou lead 63 como 'respondido' — mas gravou o relatorio em bot/equipe/ (local errado). Consolidado em equipe/ e bot/equipe/ removido.",
+    "nota": "Operacao estavel, nada parado. Unica acao relevante entre ticks: resposta automatica da Oba (SAC), sem interesse humano confirmado."
   },
   "tick_atendente_09_45": {
     "rodadas_no_dia": 4,

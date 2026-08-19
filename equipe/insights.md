@@ -207,3 +207,46 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 2. Pendências estruturais seguem: renumeração ids 84/86/88 (2º dia), validação MX pré-envio, renovação de créditos Netlify.
 
 
+---
+
+## 2026-08-19 (quarta) — 5ª rodada: ATENDENTE (tick 10:32)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 29 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 16 bounces atuais já têm tentativa registrada (histórico: 22 entradas — 19 `nao_encontrado`, 2 `corrigido_e_enviado`, 1 `ja_existia`). Nada novo a corrigir.
+- **Leads totais:** 100 (98 reais + 2 teste: id 2 e id 3).
+  - `novo`: 71
+  - `sequencia`: 9
+  - `respondido`: 3 (id 2 teste; id 46 Boa Supermercados — ticket #23915; **id 63 Oba Hortifrutigranjeiros — SAC automático**)
+  - `bounce`: 17
+  - `encerrado`: 0
+  - **Ativos (novo+sequencia): 80** (caiu de 81: Oba saiu de 'novo' → 'respondido')
+- **Cobertura:** 100% dos leads com apresentação/boas-vindas enviada — nenhum lead parado.
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce` (interseção perfeita); 12 são históricos/alternativos de leads corrigidos.
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio — Atendente sem fila).
+- **Watchdog:** ✅ saudável (exit 0, 10:32) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (nenhum envio novo pendente — cobertura já 100%).
+- **check-replies:** 0 respostas aguardando atendimento.
+
+### Evento entre ticks (consolidado)
+- **Oba Hortifrutigranjeiros S/A (id 63, `atendimento@redeoba.com.br`) respondeu às 10:16** — mas as 3 mensagens eram **notificações automáticas do SAC/Salesforce** ("recebemos sua mensagem", "Atendimento Finalizado", pedido de CPF/nome completo — tratou proposta B2B como chamado de consumidor), **não resposta humana**. O tick das 10:16 respondeu UMA vez esclarecendo o caráter comercial e direcionando para WhatsApp (11) 96785-9631, e marcou o lead como `respondido` (correto: SAC fechou o chamado, não há o que responder de novo).
+- **Problema de processo detectado e corrigido:** o tick das 10:16 gravou seu relatório em **`bot/equipe/`** (pasta errada, não rastreada) em vez de `equipe/`. Conteúdo consolidado neste arquivo e no `ecossistema.json`; a pasta `bot/equipe/` foi removida para evitar relatórios duplicados/órfãos.
+
+### Problemas encontrados e correções
+1. **`bot/equipe/` criado por engano pelo tick 10:16** — consolidado em `equipe/` e removido. (Causa provável: execução com working directory diferente; atenção dos próximos ticks ao caminho.)
+2. Nenhum outro problema novo. Pendências já registradas e mantidas: lead id 1 (teste, bounce); ids duplicados 84/86/88; WBM sem email alternativo (sugestão de follow-up humano mantida); Netlify sem créditos de build.
+
+### Leads quentes (para ação humana — destaque)
+1. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+2. **Oba Hortifrutigranjeiros (id 63)** — rede varejista grande; o SAC engoliu a proposta comercial. Esclarecimento enviado hoje + WhatsApp. **Follow-up humano recomendado via `ouvidoria@redeoba.com.br` (lead 57) ou WhatsApp (11) 96785-9631** — cadeia de hortifruti gera volume relevante de óleo de fritura.
+3. **ICT Farmacêutica (id 89)** — protocolos 1057/1058 (18/08), "em breve entraremos em contato". Aguardar retorno + FP1 no dia 3; contato telefônico pode acelerar.
+4. **Hile Industria de Alimentos (id 101)** — nicho encapsulados (Jundiaí), apresentação V2 enviada 09:30. **Monitorar resposta — primeira leva com template novo.**
+
+### Sugestões para o Estrategista
+1. **Lições da Oba:** para redes varejistas grandes, priorizar canais comerciais/ouvidoria/comprador direto em vez de e-mail de atendimento genérico (SAC corporativo responde automático e fecha chamado). `ouvidoria@redeoba.com.br` é caminho melhor para futuras prospecções de redes.
+2. Follow-up humano nos caminhos quentes (Rede Boa, Oba, ICT, Hile) — telefone/WhatsApp converte antes do próximo tick.
+3. Pendências estruturais seguem: renumeração ids 84/86/88 (2º dia), validação MX pré-envio, renovação de créditos Netlify.
+
+
+
