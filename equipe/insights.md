@@ -172,3 +172,38 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 3. **Validação MX/DNS antes do envio em lote:** bounces de hoje (WBM) voltaram em minutos; checagem MX prévia reduziria desperdício e daria chance de correção antes de marcar como bounce.
 4. **Netlify sem créditos segue bloqueando deploy da versão nova** (calculadora + Catalent) — GitHub Pages é o único no ar com a versão nova.
 
+---
+
+## 2026-08-19 (quarta) — 4ª rodada: ATENDENTE (tick 09:45)
+
+### Números do dia (estado real pós-tick — sem mudanças vs. tick 09:42)
+- **Sync Formspree:** 29 emails no cache de bounce; **0** notificações novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total).
+- **corrigir_emails:** 0 bounces processados — todos os 17 bounces atuais já têm tentativa registrada em `correcoes_emails.json` (22 entradas). Nada novo a corrigir.
+- **Leads totais:** 100 (98 reais + 2 teste: id 2 e id 3).
+  - `novo`: 72
+  - `sequencia`: 9
+  - `respondido`: 2 (id 2 teste; id 46 Boa Supermercados — ticket #23915)
+  - `bounce`: 17
+  - `encerrado`: 0
+- **Cobertura:** 100% dos leads com apresentação/boas-vindas enviada — nenhum lead parado.
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce` (interseção perfeita, consistência OK); 12 são históricos/alternativos de leads corrigidos.
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio — Atendente sem fila).
+- **Watchdog:** ✅ saudável (exit 0, 09:45) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (nenhum envio novo pendente — cobertura já 100%).
+- **check-replies:** 0 respostas aguardando atendimento.
+
+### Problemas encontrados e correções
+1. **Nenhum problema novo neste tick.** Operação estável: tick 09:45 idêntico ao 09:42 (rodada em sequência do mesmo cron).
+2. Pendências já registradas e mantidas: lead id 1 (teste, bounce com boas-vindas); ids duplicados 84/86/88 (Natulha, CapsExpress, Megalabs); WBM sem email alternativo; Netlify sem créditos de build.
+
+### Leads quentes (para ação humana — destaque)
+1. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+2. **ICT Farmacêutica (id 89)** — respondeu com protocolos 1057/1058 (central de atendimento) em 18/08, "em breve entraremos em contato". Aguardar retorno + FP1 no dia 3; contato telefônico pode acelerar.
+3. **Hile Industria de Alimentos (id 101)** — nicho encapsulados (Jundiaí), apresentação V2 enviada 09:30. **Monitorar resposta nos próximos dias — primeira leva com template novo.**
+
+### Sugestões para o Estrategista
+1. **Follow-up humano nos 3 caminhos quentes** (Rede Boa, ICT Farmacêutica, Hile) — telefone converte antes do próximo tick.
+2. Pendências estruturais seguem: renumeração ids 84/86/88 (2º dia), validação MX pré-envio, renovação de créditos Netlify.
+
+
