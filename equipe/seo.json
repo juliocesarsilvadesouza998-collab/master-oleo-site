@@ -105,5 +105,26 @@
     "site_no_ar": true,
     "status_http": 200,
     "sitemap": "presente"
+  },
+  {
+    "data": "2026-08-19T18:56:55.858426-03:00",
+    "site": "https://masteroleo.eco.br",
+    "palavras_chave": {
+      "coleta de óleo usado salto sp": "presente",
+      "coleta de óleo de cozinha usado salto": "presente",
+      "compra de óleo usado": "presente",
+      "descaracterização de alimentos vencidos": "presente",
+      "margarina vencida": "presente",
+      "manteiga vencida": "presente",
+      "maionese vencida": "presente",
+      "compra de gordura vegetal usada": "presente",
+      "óleo usado biodiesel": "presente",
+      "descarte de óleo de cozinha salto": "presente"
+    },
+    "tecnicos": [],
+    "ok": true,
+    "site_no_ar": true,
+    "status_http": 200,
+    "sitemap": "presente"
   }
 ]
