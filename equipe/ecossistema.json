@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-19T11:32",
+  "atualizado_em": "2026-08-19T14:05",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -27,9 +27,61 @@
     "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Hile (nicho encapsulados, 1a leva template V2)",
     "leads_nicho_encapsulados": 25,
     "inbound_formspree": 3,
-    "watchdog": "saudavel (19/08 11:03, exit 0)",
+    "watchdog": "saudavel (19/08 14:05, exit 0)",
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
     "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "tick_atendente_14_05": {
+    "rodadas_no_dia": 13,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+    "watchdog": "1a rodada: exit 1 com 4 follow-ups ATRASADOS (FP2 de Casa Alianca, Supermercados Dias, Sapore S.A., Massima Alimentacao — apresentacao ha 6d). APOS prospecao_followup.py: exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache",
+    "prospecao_followup": "4 FP2 ENVIADOS (14:04): Casa Alianca - Padaria Gourmet, Supermercados Dias, Sapore S.A., Massima Alimentacao — resolveu o problema apontado pelo watchdog",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen)",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "leads_quentes": ["GoodBom Supermercados (respondido 19/08 11:07)", "Rede Boa (ticket #23915)", "Oba Hortifruti (SAC)", "ICT Farmaceutica (protocolo 1057/1058)", "Hile (nicho encapsulados, V2)"],
+    "nota": "Operacao estavel apos correcao: watchdog pegou 4 FP2 atrasados e o prospecao_followup.py resolveu no mesmo tick (exit 0 na re-verificacao). Nada parado."
+  },
+  "tick_atendente_13_05": {
+    "rodadas_no_dia": 11,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 17 bounces permanentes todos com tentativa registrada",
+    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "leads_quentes": ["GoodBom Supermercados (Good Bom Supermercados LTDA) — respondeu; atendido 19/08 11:07", "Oba Hortifruti (Grupo Fartura) — respondeu via email corrigido; atendido 19/08 10:16"],
+    "nota": "Operacao estavel, nada parado. OBS: relatorio deste tick foi gravado por engano em bot/equipe/ (local errado) — consolidado em equipe/ e bot/equipe/ removido no tick 13:31."
+  },
+  "tick_atendente_13_31": {
+    "rodadas_no_dia": 12,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 17 bounces permanentes todos com tentativa registrada em correcoes_emails.json (16 'ja tentado' neste tick)",
+    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real executado: `send-sequence` (hifen)",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "nota": "Operacao estavel, nada parado. Tick 13:31 identico ao 12:32: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
+  },
+  "tick_atendente_12_32": {
+    "rodadas_no_dia": 10,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen) — instrucao do cron com `send_sequence` retorna invalid choice (4a ocorrencia registrada)",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "nota": "Operacao estavel, nada parado. Tick 12:32 identico ao 12:06: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
+  },
+  "tick_atendente_12_06": {
+    "rodadas_no_dia": 9,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen)",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "nota": "Operacao estavel, nada parado. Tick 12:06 identico ao 11:32: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
   },
   "tick_atendente_11_32": {
     "rodadas_no_dia": 8,
