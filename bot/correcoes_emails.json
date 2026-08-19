@@ -144,5 +144,12 @@
     "status": "nao_encontrado",
     "motivo": "lead de teste fictício — sem correção real",
     "quando": "2026-08-18T19:15:00-03:00"
+  },
+  {
+    "email_antigo": "contato@wbm.com.br",
+    "empresa": "WBM Industria de Suplementos",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-19T09:42:04-03:00"
   }
 ]

@@ -134,3 +134,41 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 2. **Acompanhar o efeito do template V2** nas respostas dos próximos 3-5 dias (lote de hoje é a primeira leva com o novo texto).
 3. Seguem pendências já registradas: renumeração de ids duplicados 84/86/88; follow-up humano em Rede Boa + ICT Farmacêutica; validação MX prévia ao envio.
 
+---
+
+## 2026-08-19 (quarta) — 3ª rodada: ATENDENTE (tick 09:42)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 29 emails no cache de bounce; **0** notificações novas do Formspree (nenhum lead novo via site hoje — 3 inbound acumulados no total).
+- **corrigir_emails:** 0 bounces novos corrigidos. Todos os 17 bounces atuais já têm tentativa registrada em `correcoes_emails.json` (22 entradas). Hoje foi tentado **WBM** (`contato@wbm.com.br`, adicionada às 09:30) → `nao_encontrado` — empresa do nicho encapsulados sem email alternativo válido na web.
+- **Leads totais:** 100 (98 reais + 2 teste: id 2 e id 3).
+  - `novo`: 72
+  - `sequencia`: 9
+  - `respondido`: 2 (id 2 teste; id 46 Boa Supermercados — ticket #23915)
+  - `bounce`: 17
+  - `encerrado`: 0
+- **Cobertura:** 100% dos leads com apresentação ou boas-vindas enviada (`apresentacao_em`/`boas_vindas_em` preenchidos) — nenhum lead parado.
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce` (interseção perfeita, consistência OK); 12 são históricos/alternativos de leads corrigidos.
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio — Atendente sem fila).
+- **Watchdog:** ✅ saudável (exit 0) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (nenhum envio novo pendente — cobertura já 100%).
+- **check-replies:** 0 respostas aguardando atendimento.
+
+### Problemas encontrados e correções
+1. **WBM Industria de Suplementos (id 102) — bounce logo no envio (09:30) e sem correção possível:** `contato@wbm.com.br` voltou inválido minutos após o envio; busca por email alternativo na web deu `nao_encontrado` (registrado em `correcoes_emails.json` às 09:42). Lead marcado como `bounce` com nota "EMAIL INVÁLIDO — não reenviar". **Sugestão:** follow-up humano (telefone/LinkedIn) — é fabricante de suplementos de Jundiaí, nicho prioritário.
+2. **Lead id 1 (Ana Souza, `ana@alimentossalto.com.br`) — `bounce` com `boas_vindas_em` preenchido** (13/08 11:31). **Registrado apenas** (conforme regra); lead de teste fictício. Recorrente dos registros anteriores.
+3. **Consistência OK (auditoria):** todos os 17 leads `bounce` têm o email atual no bounces.json; nenhum lead não-bounce tem email atual no cache. Nada a ajustar no leads.csv.
+4. **IDs duplicados 84/86/88** (Natulha, CapsExpress, Megalabs) — pendência já registrada, mantida.
+
+### Leads quentes (para ação humana)
+1. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+2. **ICT Farmacêutica (id 89)** — respondeu com protocolos 1057/1058 (central de atendimento) em 18/08, "em breve entraremos em contato". **Aguardar + FP1 no dia 3** (sem envio hoje); contato telefônico pode acelerar.
+3. **Hile Industria de Alimentos (id 101)** — novo lead do nicho encapsulados (Jundiaí, `contato@hile.com.br`), apresentação enviada hoje 09:30. **Primeira leva com template V2 — monitorar resposta.**
+
+### Sugestões para o Estrategista
+1. **Follow-up humano em WBM** (nicho prioritário, email morto, sem alternativa na web) — telefone/LinkedIn antes de abandonar.
+2. **Renumeração dos ids duplicados 84/86/88** segue pendente (2º dia consecutivo registrado).
+3. **Validação MX/DNS antes do envio em lote:** bounces de hoje (WBM) voltaram em minutos; checagem MX prévia reduziria desperdício e daria chance de correção antes de marcar como bounce.
+4. **Netlify sem créditos segue bloqueando deploy da versão nova** (calculadora + Catalent) — GitHub Pages é o único no ar com a versão nova.
+
