@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-19T14:10",
+  "atualizado_em": "2026-08-19T14:30",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -27,7 +27,7 @@
     "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Hile (nicho encapsulados, 1a leva template V2)",
     "leads_nicho_encapsulados": 25,
     "inbound_formspree": 3,
-    "watchdog": "saudavel (19/08 14:05, exit 0)",
+    "watchdog": "saudavel (19/08 14:30, exit 0)",
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
     "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
   },
@@ -41,6 +41,17 @@
     "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
     "leads_quentes": ["GoodBom Supermercados (respondido 19/08 11:07)", "Rede Boa (ticket #23915)", "Oba Hortifruti (SAC)", "ICT Farmaceutica (protocolo 1057/1058)", "Hile (nicho encapsulados, V2)"],
     "nota": "Operacao estavel apos correcao: watchdog pegou 4 FP2 atrasados e o prospecao_followup.py resolveu no mesmo tick (exit 0 na re-verificacao). Nada parado."
+  },
+  "tick_atendente_14_30": {
+    "rodadas_no_dia": 14,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) funcionou, correcao do Melhorador em vigor",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "leads_quentes": ["GoodBom Supermercados (respondido 19/08 11:07)", "Rede Boa (ticket #23915)", "Oba Hortifruti (SAC)", "ICT Farmaceutica (protocolo 1057/1058)", "Hile (nicho encapsulados, V2)"],
+    "nota": "Operacao estavel, nada parado. Tick 14:30 identico ao 14:05: nenhum evento novo entre ticks. 3 respostas reais no dia (Boa, GoodBom, Oba)."
   },
   "tick_atendente_13_05": {
     "rodadas_no_dia": 11,
