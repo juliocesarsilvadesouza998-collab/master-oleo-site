@@ -678,3 +678,76 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 2. Follow-up humano nos demais caminhos quentes (Rede Boa, Oba, Hile).
 3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, renovação de créditos Netlify.
 4. Nada novo desde o tick 16:04 — se o dia de trabalho da equipe está encerrando, o resumo consolidado do dia (18 rodadas + esta) já está completo nos relatórios.
+
+---
+
+## 2026-08-19 (quarta) — 20ª rodada do dia: ATENDENTE IA (tick 17:02)
+
+### Números do dia (consolidado)
+- **Leads totais:** 100 (98 reais + 2 teste: id 2 e id 3).
+  - `novo`: 69 | `sequencia`: 9 | `respondido`: 4 (id 2 teste; id 46 Boa Supermercados — ticket #23915; id 51 GoodBom Supermercados — resposta humana 11:07; id 63 Oba Hortifrutigranjeiros — SAC automático) | `bounce`: 17 | `encerrado`: 1 (id 89 ICT Farmacêutica — desde o tick 16:04)
+  - **Ativos (novo+sequencia): 78** | Respostas reais: 3 (~3,1%, meta >3% batida)
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce`; 12 são históricos/alternativos.
+- **Inbound Formspree:** 3 (nenhum lead novo via site neste tick — 0 notificações novas).
+- **Watchdog:** ✅ saudável (exit 0, 17:02) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+
+### O que foi feito neste tick
+- **sync_formspree.py:** 29 emails em bounce cache; 0 notificações novas processadas.
+- **corrigir_emails.py:** 0 bounces processados — 16 "Já tentado" (todos os 17 bounces permanentes com tentativa registrada em `correcoes_emails.json`). Nada novo a corrigir.
+- **watchdog.py:** exit 0 na primeira execução — operação saudável, sem problemas para resolver.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send_sequence:** sequência processada, sem envios novos pendentes (cobertura 100%). Alias `send_sequence` (underscore) segue funcionando.
+- **check-replies:** 0 respostas aguardando atendimento (`replies_pending.json` vazio) — Atendente sem fila de respostas.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo neste tick.** Tick 17:02 idêntico ao 16:31: nenhum evento novo entre os ticks (sem novos leads, sem novas respostas, sem bounces novos).
+2. **Pendências estruturais mantidas (não resolvíveis por este papel):** renumeração ids duplicados 84/86/88 (Natulha, CapsExpress, Megalabs); validação MX pré-envio em lote; Netlify sem créditos de build (site principal com versão antiga; GitHub Pages com a nova).
+
+### Leads quentes (para ação humana — destaque)
+1. **GoodBom Supermercados (id 51)** — resposta humana positiva-cortês (19/08 10:36, Laura), proposta com o departamento responsável. **Telefone (19) 3828-9798 vale a pena** — rede de Sumaré, perto da base.
+2. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+3. **Oba Hortifrutigranjeiros (id 63)** — SAC engoliu a proposta; esclarecimento + WhatsApp enviados. **Follow-up humano via `ouvidoria@redeoba.com.br` (lead 57)** recomendado.
+4. **Hile Industria de Alimentos (id 101)** — nicho encapsulados (Jundiaí), apresentação V2 enviada 09:30. **Monitorar resposta — primeira leva com template novo.**
+
+### Sugestões para o Estrategista
+1. **Telefonar para GoodBom (19) 3828-9798** — segue como o lead mais quente do dia; acompanhamento pode destravar a análise comercial.
+2. Follow-up humano nos demais caminhos quentes (Rede Boa, Oba, Hile).
+3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, renovação de créditos Netlify.
+4. Nada novo desde o tick 16:31 — dia segue estável; resumo consolidado do dia (20 rodadas) completo nos relatórios.
+
+---
+
+## 2026-08-19 (quarta) — 21ª rodada do dia: ATENDENTE IA (tick 17:30)
+
+### Números do dia (consolidado)
+- **Leads totais:** 100 (98 reais + 2 teste: id 2 e id 3).
+  - `novo`: 69 | `sequencia`: 9 | `respondido`: 4 (id 2 teste; id 46 Boa Supermercados — ticket #23915; id 51 GoodBom Supermercados — resposta humana 11:07; id 63 Oba Hortifrutigranjeiros — SAC automático) | `bounce`: 17 | `encerrado`: 1 (id 89 ICT Farmacêutica — desde o tick 16:04)
+  - **Ativos (novo+sequencia): 78** | Respostas reais: 3 (~3,1%, meta >3% batida)
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce`; 12 são históricos/alternativos.
+- **Inbound Formspree:** 3 (nenhum lead novo via site neste tick — 0 notificações novas).
+- **Fila de prospecção (enviar_lote --status):** 91 empresas — 77 contatados, 22 bounces, **3 pendentes** (Ekobe/nutracêuticos Capela do Alto, Zuhan/refeições Campinas, Lollos/Sorocaba — MX validado, agendados para o Prospector de 20/08 09:00).
+- **Watchdog:** ✅ saudável (exit 0, 17:30) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+
+### O que foi feito neste tick
+- **sync_formspree.py:** 29 emails em bounce cache; 0 notificações novas processadas.
+- **corrigir_emails.py:** 0 bounces processados — 16 "Já tentado" (todos os 17 bounces permanentes com tentativa registrada em `correcoes_emails.json`). Nada novo a corrigir.
+- **watchdog.py:** exit 0 na primeira execução — operação saudável, sem problemas para resolver.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send_sequence:** sequência processada, sem envios novos pendentes (cobertura 100%). Alias `send_sequence` (underscore) segue funcionando.
+- **check-replies:** 0 respostas aguardando atendimento (`replies_pending.json` vazio) — Atendente sem fila de respostas.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo neste tick.** Tick 17:30 idêntico ao 17:02: nenhum evento novo entre os ticks (sem novos leads, sem novas respostas, sem bounces novos).
+2. **Pendências estruturais mantidas (não resolvíveis por este papel):** renumeração ids duplicados 84/86/88 (Natulha, CapsExpress, Megalabs); validação MX pré-envio em lote; Netlify sem créditos de build (site principal com versão antiga; GitHub Pages com a nova).
+
+### Leads quentes (para ação humana — destaque)
+1. **GoodBom Supermercados (id 51)** — resposta humana positiva-cortês (19/08 10:36, Laura), proposta com o departamento responsável. **Telefone (19) 3828-9798 vale a pena** — rede de Sumaré, perto da base.
+2. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+3. **Oba Hortifrutigranjeiros (id 63)** — SAC engoliu a proposta; esclarecimento + WhatsApp enviados. **Follow-up humano via `ouvidoria@redeoba.com.br` (lead 57)** recomendado.
+4. **Hile Industria de Alimentos (id 101)** — nicho encapsulados (Jundiaí), apresentação V2 enviada 09:30. **Monitorar resposta — primeira leva com template novo.**
+
+### Sugestões para o Estrategista
+1. **Telefonar para GoodBom (19) 3828-9798** — segue como o lead mais quente do dia; acompanhamento pode destravar a análise comercial.
+2. Follow-up humano nos demais caminhos quentes (Rede Boa, Oba, Hile).
+3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, renovação de créditos Netlify.
+4. Fila de prospecção com 3 pendentes abastecida (Ekobe/Zuhan/Lollos) — nada a fazer hoje; o Prospector de 20/08 09:00 consome. Dia fechou estável: 21 rodadas, zero eventos novos desde 16:04.
