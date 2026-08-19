@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-19",
+  "atualizado_em": "2026-08-19T11:32",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -30,6 +30,16 @@
     "watchdog": "saudavel (19/08 11:03, exit 0)",
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
     "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "tick_atendente_11_32": {
+    "rodadas_no_dia": 8,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). OBS: comando real e `send-sequence` (hifen) — `send_sequence` (underscore) retorna invalid choice; instrucao do cron deve ser corrigida",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "nota": "Operacao estavel, nada parado. Tick 11:32 identico ao 11:07: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
   },
   "tick_atendente_11_07": {
     "rodadas_no_dia": 7,
