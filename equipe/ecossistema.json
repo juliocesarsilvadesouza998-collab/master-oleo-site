@@ -17,19 +17,29 @@
   },
   "estado_2026_08_19": {
     "leads_total": 100,
-    "leads_ativos": 80,
+    "leads_ativos": 79,
     "apresentacoes_enviadas": 100,
     "entregues_sem_bounce": 83,
     "bounces": 17,
     "taxa_bounce": "17%",
-    "respostas_reais": 2,
-    "taxa_resposta": "2% (meta >3%) — ponto mais fraco; template V2 encurtado em 19/08 para atacar isso, monitorar próximos 3-5 dias",
-    "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno) + Oba Hortifrutigranjeiros (SAC automatico respondeu em 19/08 10:16 — resposta NAO humana; esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Hile (nicho encapsulados, 1a leva template V2)",
+    "respostas_reais": 3,
+    "taxa_resposta": "3% (meta >3%) — Boa + GoodBom (humanas) + Oba (SAC automatico); template V2 em monitoramento (1a leva 19/08)",
+    "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Hile (nicho encapsulados, 1a leva template V2)",
     "leads_nicho_encapsulados": 25,
     "inbound_formspree": 3,
-    "watchdog": "saudavel (19/08 10:32, exit 0)",
+    "watchdog": "saudavel (19/08 11:03, exit 0)",
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
     "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "tick_atendente_11_07": {
+    "rodadas_no_dia": 7,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+    "watchdog": "exit 0, saudavel — 100 leads, 80 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+    "check_replies": "1 resposta nova: GoodBom Supermercados (contato@goodbom.com.br, 19/08 10:36 BRT) — resposta humana cortes (Laura): 'proposta encaminhada ao departamento responsavel para analise'. NAO e interesse confirmado, mas tambem nao e negativa. Respondido pelo atendente_ia as 11:07 com disponibilidade + pedido de volume (L/kg por mes) e tipo de material + oferta de WhatsApp. Lead 51 marcado 'respondido'; replies_pending.json zerado (sem risco de resposta dupla)",
+    "nota": "Operacao estavel, nada parado. Evento do tick: 1a resposta humana nova desde Rede Boa — GoodBom Supermercados (rede de Sumare) manteve a porta aberta. Vale acompanhamento humano."
   },
   "tick_atendente_10_32": {
     "rodadas_no_dia": 6,
@@ -79,6 +89,7 @@
     "Netlify gratuito esgota creditos de build (300min/mes) - GitHub Pages como backup automatico",
     "Watchdog evita follow-ups atrasados e bounces nao corrigidos",
     "Cold email longo derruba resposta: template V1 (~160 palavras) rendeu 1% de resposta; V2 encurtado para ~131 palavras com 4 paragrafos escaneaveis (19/08) - monitorar",
-    "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up"
+    "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up",
+    "Resposta cortes 'encaminhamos ao departamento responsavel' (GoodBom, 19/08) NAO e negativa - e porta aberta: responder agradecendo, mantendo disponibilidade e pedindo volume mantem o lead vivo sem insistir"
   ]
 }
