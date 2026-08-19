@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-19T14:05",
+  "atualizado_em": "2026-08-19T14:10",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -9,11 +9,11 @@
   },
   "fila_prospeccao": {
     "atualizado_em": "2026-08-19",
-    "total": 88,
-    "pendentes": 0,
+    "total": 60,
+    "pendentes": 3,
     "contatados": 77,
     "bounces": 21,
-    "nota": "19/08 (cron prospector): 2 novas empresas do nicho encapsulados/nutraceuticos descobertas e enviadas - Hile (Jundiai, contato@hile.com.br) e WBM (Jundiai, contato@wbm.com.br). Pronutrition (Valinhos) NAO adicionada: email compras@pronutrition.com.br ja consta em leads.csv (contatada em 13/08). Fila esgotada de novo: proxima rodada precisa de novas descobertas (buscas: focar em Jundiai/Campinas/Sorocaba farma)."
+    "nota": "19/08 (melhorador continuo 14:07): 3 empresas NOVAS adicionadas com MX valido - Ekobe (Capela do Alto, contato@ekobe.ind.br, NICHO PRIORITARIO nutraceuticos/gomas, investiu R$20mi), Zuhan Refeicoes (Campinas, contato@zuhan.com.br, cozinha industrial alto volume), Lollos (Sorocaba, sac@lollos.com.br, refeicoes transportadas). Emails confirmados nos sites oficiais + nslookup MX. Fila reabastecida para o Prospector de 20/08 09:00."
   },
   "estado_2026_08_19": {
     "leads_total": 100,
@@ -127,7 +127,9 @@
   "melhorias_2026_08_19": {
     "template_apresentacao_v2": "prospecao.py: de ~160 para ~131 palavras, 4 paragrafos escaneaveis, assunto direto 'Oleo usado da {empresa} vale dinheiro'. py_compile OK",
     "fp1_renda_anual": "prospecao_followup.py: FP1 agora cita 600 L/mes = R$ 14 mil/ano. py_compile OK",
-    "deploy_netlify": "BLOQUEADO: API retorna 403 'Account credit usage exceeded'. GitHub Pages ja tem a versao nova"
+    "deploy_netlify": "BLOQUEADO: API retorna 403 'Account credit usage exceeded'. GitHub Pages ja tem a versao nova",
+    "fila_extra_3_novas": "fila_prospeccao_extra.json: +3 empresas (Ekobe nutraceuticos Capela do Alto, Zuhan refeicoes Campinas, Lollos Sorocaba) - emails dos sites oficiais + MX validado via nslookup. JSON ok (60 entradas unicas)",
+    "alias_send_sequence": "bot_oleo.py: adicionado alias 'send_sequence' (underscore) ao argparse - resolve bug de processo registrado 6x hoje; py_compile OK + send_sequence --help exit 0"
   },
   "estado_2026_08_18": {
     "leads_total": 89,
@@ -152,6 +154,8 @@
     "Watchdog evita follow-ups atrasados e bounces nao corrigidos",
     "Cold email longo derruba resposta: template V1 (~160 palavras) rendeu 1% de resposta; V2 encurtado para ~131 palavras com 4 paragrafos escaneaveis (19/08) - monitorar",
     "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up",
-    "Resposta cortes 'encaminhamos ao departamento responsavel' (GoodBom, 19/08) NAO e negativa - e porta aberta: responder agradecendo, mantendo disponibilidade e pedindo volume mantem o lead vivo sem insistir"
+    "Resposta cortes 'encaminhamos ao departamento responsavel' (GoodBom, 19/08) NAO e negativa - e porta aberta: responder agradecendo, mantendo disponibilidade e pedindo volume mantem o lead vivo sem insistir",
+    "Fila de prospeccao esgota rapido (57+ empresas em 6 dias): o melhorador continuo deve repor 2-4 empresas/dia com MX validado para o Prospector nunca ficar parado",
+    "Alias no argparse evita falha de processo: 'send_sequence' (underscore) falhava 6x/dia porque o comando era 'send-sequence' - aceitar ambos elimina o retry manual"
   ]
 }

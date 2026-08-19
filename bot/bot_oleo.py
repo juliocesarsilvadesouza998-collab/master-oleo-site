@@ -320,6 +320,7 @@ def main():
     a.add_argument("--email", required=True); a.add_argument("--tipo", default=""); a.add_argument("--volume", default=""); a.add_argument("--fonte", default="site")
     a.set_defaults(func=add_lead)
     sub.add_parser("send-sequence").set_defaults(func=send_sequence)
+    sub.add_parser("send_sequence").set_defaults(func=send_sequence)  # alias p/ instrucoes de cron com underscore
     sub.add_parser("check-replies").set_defaults(func=check_replies)
     r = sub.add_parser("reply"); r.add_argument("--to", required=True); r.add_argument("--subject", required=True)
     r.add_argument("--body", required=True); r.add_argument("--in-reply-to", default=None)

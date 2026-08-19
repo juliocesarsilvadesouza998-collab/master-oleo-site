@@ -397,5 +397,26 @@
     "email": "contato@wbm.com.br",
     "cidade": "Jundiai/SP",
     "segmento": "Industria de suplementos e nutraceuticos (encapsulados)"
+  },
+  {
+    "nome": "Ekobe",
+    "empresa": "Ekobe Industria de Nutraceuticos e Cosmeticos LTDA",
+    "email": "contato@ekobe.ind.br",
+    "cidade": "Capela do Alto/SP",
+    "segmento": "Industria de nutraceuticos e cosmeticos (gomas, capsulas, terceirizacao) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Zuhan",
+    "empresa": "Zuhan Refeicoes Corporativas",
+    "email": "contato@zuhan.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Refeicoes coletivas e cozinhas industriais (Grande ABC e Campinas)"
+  },
+  {
+    "nome": "Lollos",
+    "empresa": "Lollos Refeicoes Empresariais",
+    "email": "sac@lollos.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Refeicoes empresariais e cozinha central (refeicoes transportadas)"
   }
 ]

@@ -510,3 +510,26 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 
 
 
+---
+
+## 2026-08-19 (quarta) — 15ª rodada: MELHORADOR CONTÍNUO (tick 14:07)
+
+### Diagnóstico do dia
+- **Ponto mais fraco: FILA DE PROSPECÇÃO ESGOTADA (0 pendentes)** — o Prospector de amanhã (09:00) não teria empresas para enviar. Operação em si saudável: watchdog exit 0, 100 leads (79 ativos), 16 bounces (16%), 3 respostas (3,1%, meta >3% batida), cobertura 100%.
+- **2ª fragilidade:** bug de processo `send_sequence` (underscore) vs `send-sequence` (hífen) — registrado 6× hoje nos ticks do Atendente; cada ocorrência gasta um retry manual no tick.
+
+### Melhorias implementadas (testadas)
+1. **`bot/fila_prospeccao_extra.json` — 3 empresas NOVAS adicionadas (fila: 57 → 60):**
+   - **Ekobé Indústria de Nutracêuticos e Cosméticos** (`contato@ekobe.ind.br`, Capela do Alto/SP) — **NICHO PRIORITÁRIO**: fábrica de gomas/cápsulas/nutracêuticos, investiu R$ 20 mi na maior estrutura de gomas da América Latina. MX Locaweb válido.
+   - **Zuhan Refeições Corporativas** (`contato@zuhan.com.br`, Campinas/SP) — cozinhas industriais/refeições coletivas (Grande ABC + Campinas): alto volume de óleo de fritura. MX Birdsnet válido.
+   - **Lollos Refeições Empresariais** (`sac@lollos.com.br`, Sorocaba/SP) — cozinha central + refeições transportadas: alto volume. MX com A record válido.
+   - Emails confirmados nos sites oficiais (não `contato@` adivinhado), MX validado via `nslookup`, sem duplicidade no leads.csv. Verificado: JSON válido, 60 entradas, 60 emails únicos.
+2. **`bot/bot_oleo.py` — bug `send_sequence` CORRIGIDO na raiz:** adicionado alias `send_sequence` (underscore) junto ao `send-sequence` no argparse (linha 323). Agora ambos os nomes funcionam — a instrução do cron com underscore não falha mais, independente de correção do cron. Verificado: `py_compile` OK + `python bot_oleo.py send_sequence --help` exit 0 (parser aceita).
+
+### Para o Estrategista (domingo)
+1. **Pendências estruturais mantidas:** renumeração ids duplicados 84/86/88 (3º dia); validação MX pré-envio em lote; renovação de créditos Netlify (domínio principal segue com versão antiga; GitHub Pages com a nova).
+2. **Follow-up humano nos caminhos quentes:** GoodBom (19) 3828-9798, Rede Boa, Oba (via ouvidoria@redeoba.com.br), ICT Farmacêutica, Hile.
+3. **WBM** (nicho prioritário, email morto sem alternativa) — telefone/LinkedIn antes de abandonar.
+
+
+
