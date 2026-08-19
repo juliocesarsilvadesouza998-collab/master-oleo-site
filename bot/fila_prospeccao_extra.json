@@ -369,5 +369,33 @@
     "email": "vendas@nutrisenior.com.br",
     "cidade": "Campinas/SP",
     "segmento": "Produtos nutricionais"
+  },
+  {
+    "nome": "Cellera Farma",
+    "empresa": "Cellera Farma Industria Farmaceutica",
+    "email": "sac@cellerafarma.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Industria farmaceutica (medicamentos e suplementos)"
+  },
+  {
+    "nome": "Farmoterapica",
+    "empresa": "Farmoterapica",
+    "email": "atendimento@farmoterapica.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Industria farmaceutica (solucoes estereis e nutricao parenteral)"
+  },
+  {
+    "nome": "Hile",
+    "empresa": "Hile Industria de Alimentos (fabrica de suplementos)",
+    "email": "contato@hile.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de suplementos e nutraceuticos (encapsulados, capsulas, gomas)"
+  },
+  {
+    "nome": "WBM",
+    "empresa": "WBM Industria de Suplementos",
+    "email": "contato@wbm.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de suplementos e nutraceuticos (encapsulados)"
   }
 ]

@@ -84,3 +84,53 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 1. **ICT Farmacêutica respondeu (protocolo Nº 1057) — priorizar follow-up humano:** é auto-resposta de central, mas a empresa registrou a solicitação. Um contato telefônico rápido pode converter; não deixar só com o tick do Atendente.
 2. **Validar MX/DNS antes do envio em lote:** os bounces de hoje (Oba, Bom Peixe, Delta Max, Cowpig, Penina, Nutraway, Delta Terc, SupraFoods) vieram minutos após o envio. Checagem MX prévia reduziria a taxa de bounce (~18% dos leads reais hoje).
 3. **Mesclar leads duplicados por empresa** (Scallet, Kerry, Bagley, Delta Max) para o pipeline contar 1 lead por empresa e não reenviar para a mesma empresa por 2 caminhos.
+
+---
+
+## 2026-08-19 (quarta)
+
+### Números do dia
+- **Sync Formspree:** 28 emails no cache de bounce; **0** notificações novas do Formspree (nenhum lead novo via site hoje).
+- **corrigir_emails:** 0 bounces processados — todos os 15 pendentes de dias anteriores já tiveram tentativa registrada em `correcoes_emails.json` (maioria `nao_encontrado` ou `corrigido_e_enviado`). Nada novo a corrigir.
+- **Leads totais:** 96
+  - `novo`: 69
+  - `sequencia`: 9
+  - `respondido`: 2 (id 2 teste; id 46 Boa Supermercados — ticket #23915)
+  - `bounce`: 16
+  - `encerrado`: 0
+- **Bounces.json:** 28 emails — 16 correspondem a leads atuais marcados como `bounce`; 12 são históricos/alternativos de leads corrigidos (correto: ficam no cache para nunca reenviar).
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio — Atendente sem fila).
+- **Watchdog:** ✅ saudável (exit 0) — nenhum follow-up atrasado, bounces corrigidos ou leads parados.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (sem envios novos pendentes nesta janela).
+- **check-replies:** 0 respostas aguardando atendimento.
+
+### Problemas encontrados e correções
+1. **Lead id 1 (Ana Souza, `ana@alimentossalto.com.br`) — `bounce` com `boas_vindas_em` preenchido** (13/08 11:31). **Registrado apenas** (conforme regra); lead de teste fictício, sem correção real. Recorrente dos registros anteriores.
+2. **IDs duplicados no leads.csv — DETECTADO hoje:** ids 84, 86 e 88 aparecem 2× cada (Cap-Lab/Persona One/Nutrisenior e Natulha/CapsExpress/Megalabs compartilham o mesmo id, com emails diferentes). São leads distintos válidos — o pipeline funciona (email é a chave real), mas a numeração ficou duplicada na leva de encapsulados de 18/08. **Sugestão:** renumeração (ex.: 84a/84b ou reindexar 78–98) para evitar confusão em relatórios futuros.
+3. **Consistência OK (auditoria):** todos os 16 leads `bounce` têm o email atual no bounces.json; nenhum lead não-bounce tem email atual no cache. Nada a ajustar.
+4. **ICT Farmacêutica (id 89):** resposta registrada ontem (protocolos 1057/1058 — central de atendimento, "em breve entraremos em contato") mantida como `novo` com nota no `ultima_resposta`. Ainda não há resposta real — **aguardar retorno + FP1 no dia 3** (sem envio hoje).
+
+### Sugestões para o Estrategista
+1. **Renumeração dos ids duplicados 84/86/88** (2ª ocorrência: Natulha, CapsExpress, Megalabs) para manter integridade do banco antes que o pipeline cresça mais.
+2. **Follow-up humano em paralelo:** Rede Boa (proposta enviada 18/08) e ICT Farmacêutica (protocolo registrado) são os 2 caminhos mais quentes — um contato telefônico pode converter antes do próximo tick.
+3. **Validar MX antes do envio em lote:** taxa de bounce estável em ~17% (16/96), mas a maioria dos bounces é de domínios que devolvem rápido — checagem MX prévia reduziria desperdício de envios.
+
+---
+
+## 2026-08-19 (quarta) — 2ª rodada: MELHORADOR CONTÍNUO
+
+### Diagnóstico do dia
+- **Ponto mais fraco: taxa de resposta de 1% (1 resposta real em 97 apresentações)** — meta é >3%. Watchdog saudável, bounces estáveis (16%), fila extra esgotada, site no ar.
+- **Causa raiz identificada:** template de apresentação longo demais (~160 palavras, 3 bullets + portaria). Em cold email B2B, corpo longo derruba resposta — o lead lê o assunto e abandona.
+
+### Melhorias implementadas (testadas e commitadas)
+1. **`bot/prospecao.py` — template de apresentação V2 encurtado:** de ~160 para ~131 palavras, estrutura escaneável de 4 parágrafos (mercado → oferta → urgência lei 2028 → CTA de volume). Assunto mais direto: "Óleo usado da {empresa} vale dinheiro". Mantidos os argumentos que convertem: US$ 8 bi, R$ 1,00–2,50/L, PNRS, Portaria MME/MMA 3/2026 (jan/2028), CTA "quanto vocês geram por mês?" + WhatsApp. Verificado: `py_compile` OK + renderização real do template via script (131 palavras, subject correto).
+2. **`bot/prospecao_followup.py` — FP1 reforçado com renda anual calculada:** adicionado "um estabelecimento que gera 600 L/mês recebe cerca de R$ 14 mil por ano" (argumento da persona que faltava no follow-up). Assunto alinhado ao novo template ("Re: óleo usado da..."). Verificado: `py_compile` OK + renderização do FP1.
+3. **Site principal (masteroleo.eco.br) — tentativa de atualizar, BLOQUEADA:** o Netlify está servindo a versão antiga (sem calculadora/Catalent); GitHub Pages já tem a versão nova (verificado: HTTP 200 + calculadora + Catalent no ar). Tentei deploy via API com token válido (site c0800dab = master-oleo) e o Netlify respondeu **403 "Account credit usage exceeded - new deploys are blocked until credits are added"** — créditos de build esgotados. Não é bug do pipeline; é limite do plano gratuito.
+
+### Para o Estrategista (domingo)
+1. **Renovar créditos/plano Netlify** (ou subir plano pago) para publicar a versão nova no domínio principal — hoje o backup (GitHub Pages) é o único com a calculadora. Alternativa: apontar o domínio masteroleo.eco.br para o GitHub Pages.
+2. **Acompanhar o efeito do template V2** nas respostas dos próximos 3-5 dias (lote de hoje é a primeira leva com o novo texto).
+3. Seguem pendências já registradas: renumeração de ids duplicados 84/86/88; follow-up humano em Rede Boa + ICT Farmacêutica; validação MX prévia ao envio.
+

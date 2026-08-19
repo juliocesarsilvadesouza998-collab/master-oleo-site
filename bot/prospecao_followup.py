@@ -82,11 +82,11 @@ def tpl_fp(cfg, lead, n):
     """Templates de follow-up de prospecção (n=1,2,3). Todos reforçam a compra."""
     g = cfg["empresa"]
     if n == 1:
-        subj = f"Re: O óleo de fritura da {lead['empresa']} vale dinheiro"
+        subj = f"Re: óleo usado da {lead['empresa']} vale dinheiro"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
 <p>Te escrevi há poucos dias sobre a <b>compra do óleo usado da {lead['empresa']}</b> — como sei que a caixa de entrada enche, deixo aqui o essencial:</p>
-<p>A Lei 12.305/2010 (PNRS) exige <b>destinação comprovada</b> dos resíduos. Com a {g['nome']} isso deixa de ser preocupação e vira <b>receita</b>: pagamos de R$ 1,00 a R$ 2,50/litro, com certificado em toda coleta e bombonas fornecidas.</p>
+<p>Pagamos de <b>R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em toda coleta e bombonas fornecidas. Para ter ideia: um estabelecimento que gera <b>600 L/mês</b> recebe cerca de <b>R$ 14 mil por ano</b> só com o resíduo que hoje é descartado — sem nenhum custo de logística.</p>
 <p>Para eu te passar o valor exato da sua operação: <b>quanto vocês geram por mês (litros ou kg)?</b> Me responde esse número que eu te mando a estimativa ainda esta semana.</p>
 <p>Alternativa rápida: WhatsApp {g['telefone_whatsapp']}.</p>
 <p>Abraço,<br><b>{g['nome']}</b></p>

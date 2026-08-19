@@ -148,24 +148,19 @@ def _plain_from_html(html):
     return t.strip()
 
 def tpl_apresentacao(cfg, lead):
-    """Template de apresentação B2B otimizado: <130 palavras, 1 CTA, abertura no prospecto."""
+    """Template de apresentação B2B otimizado: <80 palavras, 1 CTA, argumentos em 1 linha cada.
+    V2 (19/08): versão curta — cold email longo derruba resposta (1% no lote 1)."""
     g = cfg["empresa"]
     cidade = lead.get("cidade") or "região"
     return {
-        "subject": f"O óleo de fritura da {lead.get('empresa','')} vale dinheiro",
+        "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
-<p>Toda fritura gera um resíduo — e o da <b>{lead.get('empresa','')}</b> hoje sai de graça. No mercado, isso mudou: o óleo de cozinha usado virou <b>commodity energética</b>, um setor global de <b>US$ 8 bilhões</b> (2025) com projeção de <b>US$ 15 bilhões</b> (biodiesel e combustível de aviação).</p>
-<p>A <b>{g['nome']}</b>, de {g['cidade']}, compra esse material. Na prática, para vocês:</p>
-<ul>
-  <li><b>Pagamento pelo óleo e pela gordura vegetal usados</b> — referência de R$ 1,00 a R$ 2,50/litro, conforme qualidade e volume;</li>
-  <li><b>Certificado de destinação em toda coleta</b> — sem documento, o passivo ambiental fica no CNPJ do gerador (PNRS, Lei 12.305/2010);</li>
-  <li><b>Coleta programada e bombonas fornecidas</b> — custo logístico zero para a sua equipe.</li>
-</ul>
-<p>Vale um adiantamento: a <b>Portaria Interministerial MME/MMA nº 3/2026</b> obriga, a partir de <b>janeiro/2028</b>, que o biodiesel e o SAF contenham <b>≥1% de óleos e gorduras residuais</b> — demanda garantida e crescente para o óleo usado. Quem tiver contrato de coleta fechado antes disso sai na frente.</p>
-<p>Para eu te enviar uma estimativa de valor em até 24h: <b>qual o volume aproximado que vocês geram por mês (litros ou kg)?</b></p>
-<p>Se preferir, me chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {g['cidade']}</p>
+<p>O óleo de fritura da <b>{lead.get('empresa','')}</b> hoje sai de graça — mas virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8 bi</b> e deve dobrar com a demanda por biodiesel e combustível de aviação.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, compra esse material: <b>pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) e coleta programada.</p>
+<p>E há urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — demanda garantida para quem tiver contrato de coleta.</p>
+<p><b>Quanto vocês geram por mês (litros ou kg)?</b> Com esse número eu te mando a estimativa de valor em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
 </div>"""}
 
 def prospecao(args):

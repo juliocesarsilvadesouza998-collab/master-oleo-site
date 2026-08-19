@@ -1,11 +1,40 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-18",
+  "atualizado_em": "2026-08-19",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
     "foco_cidades": ["Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai", "Louveira", "Valinhos", "Piracicaba", "Vinhedo", "Monte Mor", "Hortolandia", "Sumare", "Limeira", "Nova Odessa", "Cabreuva", "Tatui", "Porto Feliz", "Boituva", "Americana", "Votorantim"],
     "nicho_prioritario": "encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
+  },
+  "fila_prospeccao": {
+    "atualizado_em": "2026-08-19",
+    "total": 88,
+    "pendentes": 0,
+    "contatados": 77,
+    "bounces": 21,
+    "nota": "19/08 (cron prospector): 2 novas empresas do nicho encapsulados/nutraceuticos descobertas e enviadas - Hile (Jundiai, contato@hile.com.br) e WBM (Jundiai, contato@wbm.com.br). Pronutrition (Valinhos) NAO adicionada: email compras@pronutrition.com.br ja consta em leads.csv (contatada em 13/08). Fila esgotada de novo: proxima rodada precisa de novas descobertas (buscas: focar em Jundiai/Campinas/Sorocaba farma)."
+  },
+  "estado_2026_08_19": {
+    "leads_total": 100,
+    "leads_ativos": 82,
+    "apresentacoes_enviadas": 97,
+    "entregues_sem_bounce": 82,
+    "bounces": 16,
+    "taxa_bounce": "16%",
+    "respostas_reais": 2,
+    "taxa_resposta": "1% (meta >3%) — ponto mais fraco; template V2 encurtado em 19/08 para atacar isso",
+    "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + ICT Farmaceutica (protocolo 1057/1058, aguardando retorno)",
+    "leads_nicho_encapsulados": 23,
+    "inbound_formspree": 3,
+    "watchdog": "saudavel",
+    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
+    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "melhorias_2026_08_19": {
+    "template_apresentacao_v2": "prospecao.py: de ~160 para ~131 palavras, 4 paragrafos escaneaveis, assunto direto 'Oleo usado da {empresa} vale dinheiro'. py_compile OK",
+    "fp1_renda_anual": "prospecao_followup.py: FP1 agora cita 600 L/mes = R$ 14 mil/ano. py_compile OK",
+    "deploy_netlify": "BLOQUEADO: API retorna 403 'Account credit usage exceeded'. GitHub Pages ja tem a versao nova"
   },
   "estado_2026_08_18": {
     "leads_total": 89,
@@ -27,6 +56,8 @@
     "Case Catalent (Indaiatuba/Sorocaba) e prova social forte para o nicho de encapsulados",
     "Mercado UCO vale US$11bi e lei 2028 obriga usinas a usar oleo residual - argumento de urgencia",
     "Netlify gratuito esgota creditos de build (300min/mes) - GitHub Pages como backup automatico",
-    "Watchdog evita follow-ups atrasados e bounces nao corrigidos"
+    "Watchdog evita follow-ups atrasados e bounces nao corrigidos",
+    "Cold email longo derruba resposta: template V1 (~160 palavras) rendeu 1% de resposta; V2 encurtado para ~131 palavras com 4 paragrafos escaneaveis (19/08) - monitorar",
+    "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up"
   ]
 }
