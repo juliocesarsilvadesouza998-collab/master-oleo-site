@@ -829,3 +829,114 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 3. Fila de prospecção pronta para 20/08 (3 pendentes com MX validado) — manter o Prospector com reposição diária de 2-4 empresas.
 4. Nada parado na operação: 5º tick consecutivo sem eventos novos — fluxo automatizado sustentando sozinho.
 
+
+---
+
+## 2026-08-19 (quarta) — 24ª rodada do dia: ATENDENTE IA (tick 19:06)
+
+### Números do dia (consolidado — atualização)
+- **Leads totais:** 104 (102 reais + 2 teste: id 2 e id 3).
+  - `novo`: 72 | `sequencia`: 9 | `respondido`: 5 (id 2 teste; id 46 Boa — ticket #23915; id 51 GoodBom — resposta humana 11:07; id 63 Oba — SAC; id 91 Sanofi — SAC protocolo) | `bounce`: 17 | `encerrado`: 1 (id 89 ICT).
+  - **Ativos (novo+sequencia): 81** | Respostas reais: 4 (~4%, meta >3%).
+- **Apresentações enviadas:** 101 (3 leads inbound/teste receberam boas-vindas do guia).
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce`; 12 históricos/alternativos.
+- **Inbound Formspree:** 3 acumulados; 0 notificações novas neste tick (nenhum lead novo via site).
+- **Watchdog:** ✅ saudável (exit 0, 19:04) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+
+### O que foi feito neste tick
+- **sync_formspree.py:** 29 emails em bounce cache; 0 notificações novas processadas.
+- **corrigir_emails.py:** 0 bounces processados — 16 "Já tentado" (todos os 17 bounces permanentes com tentativa registrada em `correcoes_emails.json`; 22 registros no histórico). Nada novo a corrigir.
+- **watchdog.py:** exit 0 na primeira execução — operação saudável, nada a resolver.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada, sem envios novos pendentes (cobertura 100%).
+- **check-replies:** 0 respostas aguardando atendimento (`replies_pending.json` vazio — Atendente sem fila).
+
+### Evento do tick (entre 18:33 e 19:06)
+- **4 leads NOVOS adicionados às 18:42** (rodada noturna do Prospector): **Vigor Alimentos** (id 101, `sac@vigor.com.br`), **Laticínios Frizzo** (id 103, `contato@laticiniosfrizzo.com.br`), **Reino Alimentos** (id 105, `contato@reinoalimentos.com.br`), **Goldy Alimentos** (id 107, `goldy@goldy.com.br`) — todos com apresentação já enviada (18:42). **Cobertura 100% mantida, nenhum lead parado.** Nenhum bounce entre eles até o momento.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo neste tick.** Operação estável: nada entre 18:33 e 19:06 além da entrada dos 4 novos leads (já com envio feito).
+2. **Pendências estruturais mantidas (não resolvíveis por este papel):** renumeração ids duplicados 84/86/88 (Natulha, CapsExpress, Megalabs) — **agora há também id 101 duplicado** (Hile vs. Vigor, leads distintos com emails diferentes); validação MX pré-envio em lote; Netlify sem créditos de build (site principal com versão antiga; GitHub Pages com a nova).
+
+### Leads quentes (para ação humana — destaque)
+1. **GoodBom Supermercados (id 51)** — resposta humana positiva-cortês (19/08 10:36, Laura); proposta com o departamento responsável. **Telefone (19) 3828-9798 vale a pena** — rede de Sumaré, perto da base.
+2. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+3. **Sanofi Medley (id 91)** — acuse automático do SAC (protocolo 02995121) "encaminhado ao departamento responsável"; resposta enviada 18:03 pedindo direcionamento a resíduos/meio ambiente/facilities + WhatsApp. **Contato direto humano na Sanofi vale acionar — SAC não decide.**
+4. **Oba Hortifrutigranjeiros (id 63)** — SAC engoliu a proposta; follow-up humano via `ouvidoria@redeoba.com.br` (lead 57) recomendado.
+5. **Hile Industria de Alimentos (id 101)** — nicho encapsulados (Jundiaí), apresentação V2 enviada 09:30. **Monitorar resposta — primeira leva com template novo.** (Vigor Alimentos — grande laticínio — também entrou na leva das 18:42: monitorar.)
+
+### Sugestões para o Estrategista
+1. **Telefonar para GoodBom (19) 3828-9798** — segue como o lead mais quente do dia.
+2. **Sanofi: tentar contato direto (facilities/meio ambiente/compras)** — maior empresa do pipeline de nicho; decisão está no departamento interno, não no SAC.
+3. **Renumeração de ids duplicados agora inclui 101** (Hile id 101 e Vigor id 101) — pendência cresce; vale reindexar antes de novos lotes.
+4. Fila de prospecção pronta para 20/08 (3 pendentes com MX validado: Ekobe, Zuhan, Lollos).
+5. Nada parado na operação: 6º tick consecutivo sem eventos problemáticos — fluxo automatizado sustentando sozinho.
+
+---
+
+## 2026-08-19 (quarta) — 25ª rodada do dia: ATENDENTE IA (tick 19:31)
+
+### Números do dia (consolidado — sem mudanças vs. tick 19:06)
+- **Leads totais:** 104 (102 reais + 2 teste: id 2 e id 3).
+  - `novo`: 72 | `sequencia`: 9 | `respondido`: 5 (id 2 teste; id 46 Boa — ticket #23915; id 51 GoodBom — resposta humana 11:07; id 63 Oba — SAC; id 91 Sanofi — SAC protocolo) | `bounce`: 17 | `encerrado`: 1 (id 89 ICT).
+  - **Ativos (novo+sequencia): 81** | Respostas reais: 4 (~4%, meta >3% batida).
+- **Apresentações enviadas:** 101 (3 leads inbound/teste receberam boas-vindas do guia). **Cobertura 100% — nenhum lead parado.**
+- **Bounces.json:** 29 emails — 17 correspondem a leads atuais `bounce` (interseção perfeita); 12 históricos/alternativos.
+- **Inbound Formspree:** 3 acumulados; 0 notificações novas neste tick (nenhum lead novo via site).
+- **Fila de prospecção:** 60 empresas na fila extra — 3 pendentes (Ekobe, Zuhan, Lollos, MX validado, agendados para 20/08 09:00).
+- **Watchdog:** ✅ saudável (exit 0, 19:31) — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+
+### O que foi feito neste tick
+- **sync_formspree.py:** 29 emails em bounce cache; 0 notificações novas processadas.
+- **corrigir_emails.py:** 0 bounces processados — 16 "Já tentado" (todos os 17 bounces permanentes com tentativa registrada em `correcoes_emails.json`; 22 registros no histórico). Nada novo a corrigir.
+- **watchdog.py:** exit 0 na primeira execução — operação saudável, nada a resolver.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send_sequence:** sequência processada, sem envios novos pendentes (cobertura 100%) — alias `send_sequence` (underscore) em vigor.
+- **check-replies:** 0 respostas aguardando atendimento (`replies_pending.json` vazio — Atendente sem fila).
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo neste tick.** Tick 19:31 idêntico ao 19:06: nenhum evento novo entre os ticks (sem leads novos, sem respostas, sem bounces).
+2. **Pendências estruturais mantidas (não resolvíveis por este papel):** renumeração ids duplicados 84/86/88 e 101 (Natulha, CapsExpress, Megalabs, Hile/Vigor); validação MX pré-envio em lote; Netlify sem créditos de build (site principal com versão antiga; GitHub Pages com a nova).
+
+### Leads quentes (para ação humana — destaque)
+1. **GoodBom Supermercados (id 51)** — resposta humana positiva-cortês (19/08 10:36, Laura); proposta com o departamento responsável. **Telefone (19) 3828-9798 vale a pena** — rede de Sumaré, perto da base.
+2. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915) em 18/08. Sem retorno ainda. **Telefone vale a pena.**
+3. **Sanofi Medley (id 91)** — acuse automático do SAC (protocolo 02995121) "encaminhado ao departamento responsável"; resposta enviada 18:03 pedindo direcionamento a resíduos/meio ambiente/facilities + WhatsApp. **Contato direto humano na Sanofi vale acionar — SAC não decide.**
+4. **Oba Hortifrutigranjeiros (id 63)** — SAC engoliu a proposta; follow-up humano via `ouvidoria@redeoba.com.br` (lead 57) recomendado.
+5. **Hile Industria de Alimentos (id 101)** — nicho encapsulados (Jundiaí), apresentação V2 enviada 09:30. **Monitorar resposta — primeira leva com template novo.** (Vigor Alimentos — grande laticínio — entrou na leva das 18:42: monitorar.)
+
+### Sugestões para o Estrategista
+1. **Telefonar para GoodBom (19) 3828-9798** — segue como o lead mais quente do dia.
+2. **Sanofi: tentar contato direto (facilities/meio ambiente/compras)** — maior empresa do pipeline de nicho; decisão está no departamento interno, não no SAC.
+3. **Renumeração de ids duplicados (84/86/88/101)** segue pendente — reindexar antes de novos lotes.
+4. Fila de prospecção pronta para 20/08 (3 pendentes com MX validado: Ekobe, Zuhan, Lollos).
+5. Nada parado na operação: 7º tick consecutivo sem eventos problemáticos — fluxo automatizado sustentando sozinho; dia encerra com 25 rodadas e todos os indicadores verdes.
+
+
+---
+
+## 2026-08-19 (quarta) — 26ª rodada do dia: ANALISTA DE QUALIDADE (tick ~19:35, revisão pós-sync)
+
+### Números do dia (auditoria independente)
+- **Leads totais:** 104 — `novo`: 72 | `sequencia`: 9 | `respondido`: 5 | `bounce`: 17 | `encerrado`: 1.
+- **Bounces.json:** 29 emails no cache — 17 correspondem a leads atuais marcados `bounce` (interseção perfeita); 12 são históricos/alternativos (sem lead correspondente hoje).
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio — Atendente sem fila).
+- **Envios registrados hoje (19/08):** fp2 às 14:04 para 4 leads em sequência (ids 5, 7, 8, 11); apresentações 09:18 (99, 100), 09:30 (101 Hile, 102 WBM), 18:42 (101 Vigor, 103, 105, 107). Respostas recebidas: GoodBom 10:36, Oba 10:16, ICT 16:04 (→ encerrado), Sanofi 18:03.
+- **sync_formspree.py:** 29 emails em bounce cache; 0 notificações novas do Formspree. Nada foi alterado nesta rodada.
+
+### Auditoria (PASSO 3) — resultados
+1. **bounces.json × leads.csv:** consistente. Todos os 17 emails de leads `bounce` estão no cache; nenhum lead com status diferente de `bounce` possui email no cache. Os 12 emails órfãos do cache são de correções históricas já resolvidas (ex.: `contato@penina.com.br`→`info@penina.com.br`, `contato@nutraway.com.br`→`nutraway@nutraway.com.br`, `contato@deltamax.com.br`→`admgeral@deltasuper.com.br`) ou contatos sem lead registrado (`nao_encontrado` em `correcoes_emails.json`). **Nada a corrigir.**
+2. **Lead `bounce` com `boas_vindas_em` preenchido:** 1 ocorrência — **id 1 (ana@alimentossalto.com.br)**, `boas_vindas_em=2026-08-13T11:31:14`. **Apenas registrado** (não corrigido): o correções histórico confirma que é lead de teste fictício; o boas-vindas foi enviado em 13/08 antes do bounce ser detectado. Sem impacto real — `send_sequence` pula bounces e nada mais foi enviado a ele.
+3. **Respostas pendentes:** `replies_pending.json` = `[]` — 0 respostas aguardando o Atendente.
+
+### Problemas encontrados e correções
+- **Nenhum problema operacional novo.** Fluxo estável: sync sem mudanças, cache consistente, fila de respostas vazia, watchdog saudável (ticks anteriores).
+- **Observações de qualidade (sem ação nesta rodada):**
+  - Lead id 1 (teste) mantém `boas_vindas_em` com status `bounce` — histórico aceitável, mas vale limpar quando o pipeline de testes for revisto.
+  - Pendências estruturais já conhecidas: ids duplicados 84/86/88/101; validação MX pré-envio em lote; Netlify sem créditos de build.
+  - Bounces do dia não cresceram: nenhum email novo entrou no cache nesta rodada.
+
+### Sugestões para o Estrategista
+1. **GoodBom (id 51) — telefonar (19) 3828-9798:** resposta humana positiva-cortês de hoje 10:36; segue o lead mais quente e com melhor custo-benefício de ação humana.
+2. **Sanofi (id 91):** resposta do SAC (protocolo 02995121) não decide nada — acionar contato direto (facilities/meio ambiente/compras) via LinkedIn/telefone.
+3. **Validação MX antes do próximo lote de prospecção (20/08):** os 3 pendentes (Ekobe, Zuhan, Lollos) já têm MX validado — manter a prática para todo lote novo; é a medida com maior ROI contra bounce futuro (17 bounces acumulados = 16% dos leads reais).

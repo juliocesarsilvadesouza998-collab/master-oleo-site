@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-19T18:33",
+  "atualizado_em": "2026-08-19T19:31",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -16,20 +16,44 @@
     "nota": "19/08 (melhorador continuo 14:07): 3 empresas NOVAS adicionadas com MX valido - Ekobe (Capela do Alto, contato@ekobe.ind.br, NICHO PRIORITARIO nutraceuticos/gomas, investiu R$20mi), Zuhan Refeicoes (Campinas, contato@zuhan.com.br, cozinha industrial alto volume), Lollos (Sorocaba, sac@lollos.com.br, refeicoes transportadas). Emails confirmados nos sites oficiais + nslookup MX. Fila reabastecida para o Prospector de 20/08 09:00."
   },
   "estado_2026_08_19": {
-    "leads_total": 100,
-    "leads_ativos": 77,
-    "apresentacoes_enviadas": 97,
-    "entregues_sem_bounce": 83,
+    "leads_total": 104,
+    "leads_ativos": 81,
+    "apresentacoes_enviadas": 101,
+    "entregues_sem_bounce": 87,
     "bounces": 17,
-    "taxa_bounce": "17%",
+    "taxa_bounce": "16%",
     "respostas_reais": 4,
     "taxa_resposta": "4% (meta >3%) — Boa + GoodBom (humanas) + Oba (SAC automatico) + Sanofi (SAC automatico protocolo); template V2 em monitoramento (1a leva 19/08)",
     "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Sanofi Medley (SAC automatico 19/08 20:49 GMT — protocolo 02995121 encaminhado ao depto responsavel; resposta enviada 18:03 pedindo direcionamento a residuos/meio ambiente/facilities + WhatsApp) + Hile (nicho encapsulados, 1a leva template V2). OBS 16:04: ICT Farmaceutica CANCELOU tickets 1057/1058 (agente Julia Leite 15:33) — lead encerrado, REMOVIDO dos quentes.",
     "leads_nicho_encapsulados": 25,
     "inbound_formspree": 3,
-    "watchdog": "saudavel (19/08 18:33, exit 0)",
+    "watchdog": "saudavel (19/08 19:31, exit 0)",
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
     "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "tick_atendente_19_31": {
+    "rodadas_no_dia": 25,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site — 3 inbound acumulados no total)",
+    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
+    "watchdog": "exit 0, saudavel — 104 leads, 81 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "fila_prospeccao": "60 empresas na fila extra: 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
+    "leads_quentes": ["GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)", "Rede Boa (ticket #23915)", "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)", "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)", "Hile (nicho encapsulados, V2)"],
+    "nota": "Operacao estavel, nada parado. Tick 19:31 identico ao 19:06: nenhum evento novo entre ticks (sem respostas, sem bounces, sem leads novos). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
+  },
+  "tick_atendente_19_06": {
+    "rodadas_no_dia": 24,
+    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site — 3 inbound acumulados no total)",
+    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
+    "watchdog": "exit 0, saudavel — 104 leads, 81 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+    "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
+    "leads_quentes": ["GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)", "Rede Boa (ticket #23915)", "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)", "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)", "Hile (nicho encapsulados, V2)"],
+    "nota": "Operacao estavel, nada parado. Tick 19:06: 4 leads NOVOS adicionados as 18:42 (Vigor Alimentos id 101, Laticinios Frizzo id 103, Reino Alimentos id 105, Goldy Alimentos id 107) com apresentacao ja enviada — cobertura 100% mantida. Nenhum evento novo entre ticks (sem respostas, sem bounces novos). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
   },
   "tick_atendente_18_33": {
     "rodadas_no_dia": 23,
