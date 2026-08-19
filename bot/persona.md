@@ -12,10 +12,24 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
 - WhatsApp: (11) 96785-9631
 - Site: https://masteroleo.eco.br
 - Guia gratuito: https://masteroleo.eco.br/guia-descarte-oleo.pdf
-- O QUE FAZEMOS: **compramos óleo de cozinha usado e gordura vegetal usada**
+- O QUE FAZEMOS: **compramos óleo de cozinha usado, gordura vegetal usada**
   (de frituras, cozinhas industriais, indústrias alimentícias, restaurantes,
   padarias, mercados e refeitórios). O valor da compra é **negociado por
   quantidade e qualidade** do material.
+- TAMBÉM COMPRAMOS **RESÍDUOS VENCIDOS com alto teor de gordura (>40%)**:
+  margarina vencida, manteiga vencida, maionese vencida, gordura vegetal e
+  animal vencida, cremes vegetais — qualquer produto que contenha mais de 40%
+  de gordura como matéria-prima. Destino: **transformação em biodiesel**.
+  Oferecemos **descaracterização** (trituração/destruição de embalagens e
+  produto vencido, tornando irreconhecível — evita desvio/reuso ilegal e
+  comprova destinação perante ANVISA, Receita Federal e órgãos ambientais).
+  Isso resolve o problema de indústrias de margarina/manteiga/maionese que
+  precisam descartar vencidos com segurança legal.
+- ARGUMENTO PARA INDÚSTRIAS DE MARGARINA/MANTEIGA/MAIONESE: além de pagar
+  pelo vencido, resolvemos o passivo do CNPJ — a descaracterização garante
+  que o produto NÃO volta ao mercado (evita multas/operações de fiscalização)
+  e gera certificado de destinação final para biodiesel. O gerador deixa de
+  pagar para descartar e passa a receber.
 - VALORES DE MERCADO (use como referência, sem fixar preço): empresas do setor
   pagam entre **R$ 1,00 e R$ 2,50 por litro** conforme a qualidade (nível de
   água/resíduos) e volume; o teto de R$ 2,50 vale para óleo limpo e bem

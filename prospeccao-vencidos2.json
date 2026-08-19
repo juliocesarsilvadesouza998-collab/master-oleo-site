@@ -1,0 +1,72 @@
+{
+  "Quatrelati": {
+    "emails": [],
+    "urls": [
+      "https://www.quatrelatimanteiga.com.br/",
+      "https://www.instagram.com/quatrelatisp/"
+    ]
+  },
+  "Vigor": {
+    "emails": [
+      "sac@vigor.com.br"
+    ],
+    "urls": [
+      "https://www.vigor.com.br/",
+      "https://www.vigor.com.br/fale-conosco"
+    ]
+  },
+  "Dama": {
+    "emails": [
+      "contato@damacafe.com.br",
+      "marketing@confeitariadama.com.br",
+      "recrutamento@confeitariadama.com.br",
+      "service@damafoods.com",
+      "service@damafoods.com."
+    ],
+    "urls": [
+      "http://www.damafoods.com/contact.php",
+      "https://empresas.serasaexperian.com.br/consulta-gratis/DAMA-ALIMENTOS-LTDA-EPP-62131399000105"
+    ]
+  },
+  "Frizzo": {
+    "emails": [
+      "contato@laticiniosfrizzo.com.br",
+      "contato@laticiniosfrizzo.com.br."
+    ],
+    "urls": [
+      "https://laticiniosfrizzo.com.br/contato/",
+      "https://www.facebook.com/LaticiniosFrizzo/"
+    ]
+  },
+  "Reino": {
+    "emails": [
+      "contato@reinoalimentos.com.br"
+    ],
+    "urls": [
+      "https://www.instagram.com/reel/DN3bh69UADV/?hl=en",
+      "https://www.instagram.com/p/C4gkwRts8qE/?hl=en"
+    ]
+  },
+  "Uniao": {
+    "emails": [
+      "gerentecomercial@laticiniosuniaodobrasil.com.br"
+    ],
+    "urls": [
+      "https://www.pdfmaranhao.com.br/laticinio-uniao",
+      "https://www.instagram.com/lat.uniaodobrasil/?hl=en"
+    ]
+  },
+  "Goldy": {
+    "emails": [
+      "administrativo@goldy.com.br",
+      "goldy@goldy.com.br",
+      "goldy@goldy.com.br.",
+      "marketing.gold@lideralimentos.com.br",
+      "operacional@goldy.com.br"
+    ],
+    "urls": [
+      "https://www.goldalimentos.com.br/contato/",
+      "https://goldy.com.br/contact/"
+    ]
+  }
+}

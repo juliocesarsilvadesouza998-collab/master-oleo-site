@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "Vigor Alimentos",
+    "empresa": "Vigor Alimentos",
+    "email": "sac@vigor.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Laticinios e manteiga (grande)"
+  },
+  {
+    "nome": "Laticinios Frizzo",
+    "empresa": "Laticinios Frizzo",
+    "email": "contato@laticiniosfrizzo.com.br",
+    "cidade": "Tuiuti/SP",
+    "segmento": "Laticinios e manteiga"
+  },
+  {
+    "nome": "Reino Alimentos",
+    "empresa": "Reino Alimentos",
+    "email": "contato@reinoalimentos.com.br",
+    "cidade": "SP",
+    "segmento": "Maionese e molhos"
+  },
+  {
+    "nome": "Goldy Alimentos",
+    "empresa": "Goldy Alimentos",
+    "email": "goldy@goldy.com.br",
+    "cidade": "SP",
+    "segmento": "Alimentos (gordura vegetal)"
+  }
+]

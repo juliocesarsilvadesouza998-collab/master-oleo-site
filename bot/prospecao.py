@@ -149,9 +149,25 @@ def _plain_from_html(html):
 
 def tpl_apresentacao(cfg, lead):
     """Template de apresentação B2B otimizado: <80 palavras, 1 CTA, argumentos em 1 linha cada.
-    V2 (19/08): versão curta — cold email longo derruba resposta (1% no lote 1)."""
+    V2 (19/08): versão curta — cold email longo derruba resposta (1% no lote 1).
+    V3 (19/08): ângulo por segmento — indústrias de gorduras/laticínios usam discurso de vencidos."""
     g = cfg["empresa"]
     cidade = lead.get("cidade") or "região"
+    segmento = (lead.get("segmento") or "alimentação").lower()
+    # Ângulo específico: indústrias que geram vencidos com >40% de gordura
+    if any(k in segmento for k in ["margarina", "manteiga", "maionese", "gordura",
+                                    "laticinio", "creme vegetal", "oleos vegetais",
+                                    "laticínios", "gorduras"]):
+        return {
+            "subject": f"Produtos vencidos com gordura vale dinheiro — compramos ({cidade})",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Indústrias de {segmento} têm um problema caro: <b>produtos vencidos</b> que precisam de destinação segura — sem voltar ao mercado e sem passivo no CNPJ.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, <b>compra resíduos com &gt;40% de gordura</b> (manteiga, margarina, maionese, gordura vegetal vencidas) para <b>biodiesel</b>, com <b>descaracterização completa</b> e certificado de destinação (ANVISA/Receita).</p>
+<p><b>Você deixa de pagar para descartar e passa a receber.</b> Quanto geram de vencidos por mês (kg)? Com esse número eu te mando a proposta em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de resíduos com &gt;40% de gordura · {cidade}</p>
+</div>"""
+        }
     return {
         "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
