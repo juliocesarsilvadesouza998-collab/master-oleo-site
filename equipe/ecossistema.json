@@ -1,530 +1,650 @@
 {
-  "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-26T11:35",
-  "metas": {
-    "enviar_50_emails_a_partir_de": "2026-08-14",
-    "limite_diario_prospeccao": 15,
-    "foco_cidades": [
-      "Salto",
-      "Campinas",
-      "Indaiatuba",
-      "Itu",
-      "Sorocaba",
-      "Jundiai",
-      "Louveira",
-      "Valinhos",
-      "Piracicaba",
-      "Vinhedo",
-      "Monte Mor",
-      "Hortolandia",
-      "Sumare",
-      "Limeira",
-      "Nova Odessa",
-      "Cabreuva",
-      "Tatui",
-      "Porto Feliz",
-      "Boituva",
-      "Americana",
-      "Votorantim"
-    ],
-    "nicho_prioritario": "encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
-  },
-  "fila_prospeccao": {
-    "atualizado_em": "2026-08-19",
-    "total": 60,
-    "pendentes": 3,
-    "contatados": 77,
-    "bounces": 21,
-    "nota": "19/08 (melhorador continuo 14:07): 3 empresas NOVAS adicionadas com MX valido - Ekobe (Capela do Alto, contato@ekobe.ind.br, NICHO PRIORITARIO nutraceuticos/gomas, investiu R$20mi), Zuhan Refeicoes (Campinas, contato@zuhan.com.br, cozinha industrial alto volume), Lollos (Sorocaba, sac@lollos.com.br, refeicoes transportadas). Emails confirmados nos sites oficiais + nslookup MX. Fila reabastecida para o Prospector de 20/08 09:00."
-  },
-  "estado_2026_08_26": {
-    "leads_total": 114,
-    "leads_ativos": 86,
-    "apresentacoes_enviadas": 111,
-    "entregues_sem_bounce": 78,
-    "bounces": 32,
-    "taxa_bounce": "23% (cache de bounces acumulado — 32 enderecos; maioria dominios sem MX)",
-    "respostas_reais": 7,
-    "taxa_resposta": "~6,5% de leads contatados",
-    "lead_quente": "Sumerbol Supermercados (resposta 26/08 13:21 GMT — SAC/atendimento encaminhou a proposta ao setor responsavel e passou contatos diretos: manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume + tipo + coleta-teste + WhatsApp; lead id 21 marcado respondido) + Arcor/Bagley (auto-resposta SAC 26/08 12:17 GMT 'mensagem encaminhada a area responsavel' — resposta enviada 09:35 agradecendo, pedindo volume e oferecendo WhatsApp; sem retorno ainda) + Oba Hortifrutigranjeiros (SAC respondeu 26/08 09:40 'recebemos a sua mensagem!' e 09:46 'Atendimento Finalizado' = ticket FECHADO pelo SAC, sem interesse humano — porta fechada por ora, seguir via ouvidoria@redeoba.com.br se insistir). Continuam em aberto: GoodBom, Rede Boa, Sanofi, Hile, Arcor/Bagley.",
-    "leads_nicho_encapsulados": 25,
-    "inbound_formspree": 3,
-    "watchdog": "saudavel (26/08 09:50, exit 0 — 107 leads, 80 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
-    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
-  },
-  "tick_atendente_26_08_11_05": {
-    "rodadas_no_dia": 3,
-    "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
-    "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (8 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
-    "watchdog": "exit 0, saudavel — 107 leads, 80 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "enviar_lote": "status OK: fila de prospeccao com 0 pendentes — nada a enviar",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
-    "check_replies": "1 resposta NOVA: Sumerbol Supermercados (atendimento@sumerbol.com.br, 26/08 13:21 GMT, RE do ultimo contato) — atendimento/SAC informou que a proposta foi ENCAMINHADA ao setor responsavel e passou contatos diretos: manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br. NAO e negativa: porta aberta com contato humano direto. Lead id 21 (fonte prospeccao-lote, apresentacao 13/08 + follow-ups ate o ultimo contato 26/08 09:22)",
-    "respostas_enviadas": "1 resposta da persona de compra (11:05) para Sumerbol Supermercados: agradecimento + pedido de volume mensal (litros/kg) e tipo de material + oferta de coleta-teste sem compromisso + caminho WhatsApp (11) 96785-9631 e indicacao de seguir direto com Ivone/manutencao (contatos fornecidos pelo lead). Lead id 21 marcado 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado. Sem anexo ESG (cliente nao pediu relatorio)",
-    "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
-    "fila_prospeccao": "60 empresas na fila extra: 0 pendentes. Prospector precisa repor 5-8/dia com MX validado para nao parar",
-    "leads_quentes": [
-      "Sumerbol Supermercados (NOVO — resposta 26/08 13:21 GMT: proposta encaminhada ao setor responsavel + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta enviada pedindo volume; rede de supermercados = alto volume de fritura. PRIORIDADE: follow-up via contato direto Ivone)",
-      "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
-      "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Tick de rotina com 1 evento: Sumerbol Supermercados respondeu ao ultimo contato informando que a proposta foi encaminhada ao setor responsavel e forneceu contato humano direto (manutencao@sumerbol.com.br, Ivone) — diferente das auto-respostas de SAC (Oba/Arcor), aqui ha um caminho concreto de negociacao. Respondido na hora pela persona de compra pedindo volume + tipo + coleta-teste + WhatsApp. Nenhum problema operacional; watchdog exit 0. Quentes agora incluem Sumerbol como #1 (contato direto disponivel)."
-  },
-  "tick_atendente_26_08_11_35": {
-    "rodadas_no_dia": 4,
-    "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
-    "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
-    "watchdog": "exit 0, saudavel — 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "enviar_lote": "status OK: fila de prospeccao com 0 pendentes — nada a enviar",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% — 111 apresentacoes + 3 boas-vindas, 0 sem envio)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "respostas_enviadas": "0 respostas — nenhum reply novo desde o tick 11:05 (Sumerbol ja respondido). Sem anexo ESG (nenhum pedido de relatorio)",
-    "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
-    "leads_novos": "7 leads NOVOS adicionados as 11:01-11:02 (ids 111-117, fonte prospeccao-lote, apresentacao ja enviada na criacao): Pimenta Verde/Rede Frango Assado (Louveira, rotisserie), Vitoria Hotel Concept (Campinas/Indaiatuba/Paulinia), Royal Palm Plaza (Campinas), Hotel Nacional Inn Campinas, Hotel Dan Inn Sorocaba, Blue Tree Towers Valinhos, Supermercados Sao Vicente (Piracicaba) — os 7 que o Melhorador validou as 10:30 com MX. Segmento HOTEL estreia na base (5 hoteis)",
-    "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas (sem campo de rastreio individual; os 7 acima ja sairam dela ao virar lead). Prospector precisa repor com MX validado",
-    "leads_quentes": [
-      "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
-      "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
-      "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Tick de rotina, tudo verde: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado. Unico evento: 7 leads NOVOS de hotéis/rotisserie/supermercados adicionados as 11:01-11:02 (os que o Melhorador validou as 10:30) — apresentacao enviada na criacao, base subiu de 107 para 114 leads. Segmento de hotéis (5 redes) estreia na base: alto volume de fritura em restaurantes de hotel. Nada a corrigir; quentes inalterados."
-  },
-  "tick_atendente_26_08_09_50": {
-    "rodadas_no_dia": 2,
-    "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
-    "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (8 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
-    "watchdog": "exit 0, saudavel — 107 leads, 80 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado — backlog do tick 09:40 totalmente consumido)",
-    "enviar_lote": "status OK: fila de prospeccao com 0 pendentes (80 ja contatados, 24 bounces no total da fila) — nada a enviar",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
-    "check_replies": "2 emails NOVOS da Oba Hortifrutigranjeiros (atendimento@redeoba.com.br, Salesforce/sfdc.net): 12:40 GMT 'recebemos a sua mensagem!' (acuse automatico da resposta comercial enviada 09:35) e 12:46 GMT 'Atendimento Finalizado' (ticket FECHADO pelo SAC). AMBOS AUTO-RESPOSTAS de helpdesk, NAO interesse humano",
-    "respostas_enviadas": "0 respostas enviadas — DECISAO: nao responder. 'Atendimento Finalizado' = ticket fechado pelo SAC (analogo ao aprendizado ICT Farmaceutica: responder reabriria o ticket e criaria loop de acuse automatico). A resposta comercial ja foi entregue no tick 09:35; bola com a Oba. Emails marcados como VISTOS (\\Seen) via IMAP para o check_replies nao re-listar; replies_pending.json zerado; lead 63 mantido 'respondido'",
-    "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
-    "fila_prospeccao": "60 empresas na fila extra: 0 pendentes (esvaziada no tick 09:40). Prospector precisa repor 2-4 empresas/dia com MX validado para nao parar",
-    "leads_quentes": [
-      "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
-      "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Tick de rotina: tudo verde. Unico evento: Oba respondeu 2x via SAC (acuse automatico + 'Atendimento Finalizado' = ticket fechado) — auto-respostas, nao interesse humano; corretamente NAO respondido (evita reabrir ticket/loop) e marcado como visto. Oba sai dos quentes por ora (porta fechada pelo SAC); quentes seguem: Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile. Nenhum lead humano novo."
-  },
-  "tick_atendente_26_08_09_40": {
-    "rodadas_no_dia": 1,
-    "sync_formspree": "31 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
-    "corrigir_emails": "0 bounces processados — 13 'ja tentado'; 0 novos processaveis (31 bounces todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "1a rodada: exit 1 com 79 follow-ups ATRASADOS (acumulado de dias sem rodada). APOS prospecao_followup.py (x2): exit 0, saudavel — 107 leads, 83 ativos, 31 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "79 + 75 = 154 follow-ups processados (1 por lead por execucao): 4x FP3, ~47x FP2, ~28x FP1 — pegou TODO o backlog acumulado desde 19/08 (FP1/FP2/FP3 vencidos). Nenhum erro de envio",
-    "enviar_lote": "3 emails de apresentacao enviados (fila esvaziada): Ekobe (contato@ekobe.ind.br, nutraceuticos), Zuhan (contato@zuhan.com.br, refeicoes Campinas), Lollos (sac@lollos.com.br, refeicoes Sorocaba) — registrados no leads.csv com lock. Fila extra: 60 empresas, 0 pendentes",
-    "send_sequence": "sequencia processada — 1 follow-up enviado (teste.formspree@gmail.com). Sem boas-vindas novas pendentes (sem inbound novo)",
-    "check_replies": "2 respostas aguardando: Oba Hortifruti (atendimento@redeoba.com.br 12:15 GMT 'recebemos a sua mensagem!') e Arcor/Bagley (aquiarcor@arcor.com 12:17 GMT 'RE: compra de oleo usado') — ambas AUTO-RESPOSTAS de SAC, nao interesse humano confirmado",
-    "respostas_enviadas": "2 respostas da persona de compra: Oba (agradecimento, pedido de litros/kg por mes, WhatsApp) e Arcor/Bagley (agradecimento, oferta mantida, volume por mes, relatorio ESG, WhatsApp). Leads 63 (Oba) e 14 (Bagley) marcados 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado",
-    "fila_prospeccao": "60 empresas na fila extra: 3 enviadas neste tick (Ekobe, Zuhan, Lollos) — 0 pendentes restantes. Prospector precisa repor 2-4 empresas/dia para nao parar",
-    "leads_quentes": [
-      "Oba Hortifruti (SAC automatico 26/08, resposta enviada pedindo volume — porta aberta, aguardar depto)",
-      "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada, aguardar analise)",
-      "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Backlog grande resolvido: 154 follow-ups atrasados de 19/08 foram enviados (watchdog foi de exit 1 para exit 0) e a fila de prospeccao esvaziou (3 ultimos enviados). 2 auto-respostas de SAC respondidas com a persona. Nenhum lead humano novo neste tick — quentes seguem: Oba, Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile."
-  },
-  "estado_2026_08_19": {
-    "leads_total": 104,
-    "leads_ativos": 81,
-    "apresentacoes_enviadas": 101,
-    "entregues_sem_bounce": 87,
-    "bounces": 17,
-    "taxa_bounce": "16%",
-    "respostas_reais": 4,
-    "taxa_resposta": "4% (meta >3%) — Boa + GoodBom (humanas) + Oba (SAC automatico) + Sanofi (SAC automatico protocolo); template V2 em monitoramento (1a leva 19/08)",
-    "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Sanofi Medley (SAC automatico 19/08 20:49 GMT — protocolo 02995121 encaminhado ao depto responsavel; resposta enviada 18:03 pedindo direcionamento a residuos/meio ambiente/facilities + WhatsApp) + Hile (nicho encapsulados, 1a leva template V2). OBS 16:04: ICT Farmaceutica CANCELOU tickets 1057/1058 (agente Julia Leite 15:33) — lead encerrado, REMOVIDO dos quentes.",
-    "leads_nicho_encapsulados": 25,
-    "inbound_formspree": 3,
-    "watchdog": "saudavel (19/08 19:31, exit 0)",
-    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
-  },
-  "tick_atendente_19_31": {
-    "rodadas_no_dia": 25,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site — 3 inbound acumulados no total)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
-    "watchdog": "exit 0, saudavel — 104 leads, 81 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "fila_prospeccao": "60 empresas na fila extra: 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 19:31 identico ao 19:06: nenhum evento novo entre ticks (sem respostas, sem bounces, sem leads novos). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
-  },
-  "tick_atendente_19_06": {
-    "rodadas_no_dia": 24,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site — 3 inbound acumulados no total)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
-    "watchdog": "exit 0, saudavel — 104 leads, 81 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 19:06: 4 leads NOVOS adicionados as 18:42 (Vigor Alimentos id 101, Laticinios Frizzo id 103, Reino Alimentos id 105, Goldy Alimentos id 107) com apresentacao ja enviada — cobertura 100% mantida. Nenhum evento novo entre ticks (sem respostas, sem bounces novos). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
-  },
-  "tick_atendente_18_33": {
-    "rodadas_no_dia": 23,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
-    "watchdog": "exit 0, saudavel — 100 leads, 77 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 18:33 identico ao 18:03: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
-  },
-  "tick_atendente_17_30": {
-    "rodadas_no_dia": 21,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 17:30 identico ao 17:02: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Hile."
-  },
-  "tick_atendente_18_03": {
-    "rodadas_no_dia": 22,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "1 resposta NOVA: Sanofi Medley (sac.brasil@sanofi.com, 19/08 20:49 GMT, 'Re: Protocolo: 02995121') — acuse AUTOMATICO do SAC (Deborah): 'solicitacao encaminhada ao departamento responsavel e, caso haja interesse, entrarao em contato'. NAO e interesse confirmado nem negativa — e resposta generica de helpdesk. Respondido 18:03 pela persona de compra: agradecimento, oferta mantida (compra de oleo vegetal usado, MTR/certificado, bombonas, coleta programada), pedido de direcionamento ao setor de residuos/meio ambiente/facilities + WhatsApp (11) 96785-9631. Lead id 91 marcado 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Evento do tick: 1a resposta desde as 16:04 — Sanofi Medley (grande farmaceutica, Hortolandia) respondeu com acuse automatico do SAC (protocolo 02995121 encaminhado). Porta aberta: resposta enviada pedindo direcionamento ao setor certo. Diferente do caso ICT (cancelamento de ticket = desinteresse), acuse de protocolo sem negativa merece resposta leve mantendo o canal vivo."
-  },
-  "tick_atendente_16_04": {
-    "rodadas_no_dia": 18,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "2 notificacoes = CANCELAMENTO de tickets Movidesk da ICT Farmaceutica (1057/1058, agente Julia Leite 15:33 BRT). NAO eram leads: nao respondido (reabriria ticket), lead id 89 marcado 'encerrado', replies_pending.json zerado",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Evento do tick: ICT Farmaceutica cancelou os tickets criados pelos nossos emails — sinal de desinteresse; lead encerrado sem resposta (respeitar cancelamento). Lição: nem toda resposta do check-replies e lead — notificacoes de helpdesk (Movidesk/Zendesk/Salesforce) devem ser identificadas pelo corpo antes de responder."
-  },
-  "tick_atendente_17_02": {
-    "rodadas_no_dia": 20,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 17:02 identico ao 16:31: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Hile."
-  },
-  "tick_atendente_16_31": {
-    "rodadas_no_dia": 19,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 16:31 identico ao 16:04: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Hile."
-  },
-  "tick_atendente_14_05": {
-    "rodadas_no_dia": 13,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "1a rodada: exit 1 com 4 follow-ups ATRASADOS (FP2 de Casa Alianca, Supermercados Dias, Sapore S.A., Massima Alimentacao — apresentacao ha 6d). APOS prospecao_followup.py: exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache",
-    "prospecao_followup": "4 FP2 ENVIADOS (14:04): Casa Alianca - Padaria Gourmet, Supermercados Dias, Sapore S.A., Massima Alimentacao — resolveu o problema apontado pelo watchdog",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC)",
-      "ICT Farmaceutica (protocolo 1057/1058)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel apos correcao: watchdog pegou 4 FP2 atrasados e o prospecao_followup.py resolveu no mesmo tick (exit 0 na re-verificacao). Nada parado."
-  },
-  "tick_atendente_14_30": {
-    "rodadas_no_dia": 14,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) funcionou, correcao do Melhorador em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC)",
-      "ICT Farmaceutica (protocolo 1057/1058)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 14:30 identico ao 14:05: nenhum evento novo entre ticks. 3 respostas reais no dia (Boa, GoodBom, Oba)."
-  },
-  "tick_atendente_15_31": {
-    "rodadas_no_dia": 15,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) funcionou, correcao do Melhorador em vigor",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "leads_quentes": [
-      "GoodBom Supermercados (respondido 19/08 11:07)",
-      "Rede Boa (ticket #23915)",
-      "Oba Hortifruti (SAC)",
-      "ICT Farmaceutica (protocolo 1057/1058)",
-      "Hile (nicho encapsulados, V2)"
-    ],
-    "nota": "Operacao estavel, nada parado. Tick 15:31 identico ao 14:30: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces)."
-  },
-  "tick_atendente_13_05": {
-    "rodadas_no_dia": 11,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 17 bounces permanentes todos com tentativa registrada",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "leads_quentes": [
-      "GoodBom Supermercados (Good Bom Supermercados LTDA) — respondeu; atendido 19/08 11:07",
-      "Oba Hortifruti (Grupo Fartura) — respondeu via email corrigido; atendido 19/08 10:16"
-    ],
-    "nota": "Operacao estavel, nada parado. OBS: relatorio deste tick foi gravado por engano em bot/equipe/ (local errado) — consolidado em equipe/ e bot/equipe/ removido no tick 13:31."
-  },
-  "tick_atendente_13_31": {
-    "rodadas_no_dia": 12,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 17 bounces permanentes todos com tentativa registrada em correcoes_emails.json (16 'ja tentado' neste tick)",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real executado: `send-sequence` (hifen)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "nota": "Operacao estavel, nada parado. Tick 13:31 identico ao 12:32: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
-  },
-  "tick_atendente_12_32": {
-    "rodadas_no_dia": 10,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen) — instrucao do cron com `send_sequence` retorna invalid choice (4a ocorrencia registrada)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "nota": "Operacao estavel, nada parado. Tick 12:32 identico ao 12:06: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
-  },
-  "tick_atendente_12_06": {
-    "rodadas_no_dia": 9,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "nota": "Operacao estavel, nada parado. Tick 12:06 identico ao 11:32: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
-  },
-  "tick_atendente_11_32": {
-    "rodadas_no_dia": 8,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
-    "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). OBS: comando real e `send-sequence` (hifen) — `send_sequence` (underscore) retorna invalid choice; instrucao do cron deve ser corrigida",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "nota": "Operacao estavel, nada parado. Tick 11:32 identico ao 11:07: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
-  },
-  "tick_atendente_11_07": {
-    "rodadas_no_dia": 7,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
-    "watchdog": "exit 0, saudavel — 100 leads, 80 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
-    "check_replies": "1 resposta nova: GoodBom Supermercados (contato@goodbom.com.br, 19/08 10:36 BRT) — resposta humana cortes (Laura): 'proposta encaminhada ao departamento responsavel para analise'. NAO e interesse confirmado, mas tambem nao e negativa. Respondido pelo atendente_ia as 11:07 com disponibilidade + pedido de volume (L/kg por mes) e tipo de material + oferta de WhatsApp. Lead 51 marcado 'respondido'; replies_pending.json zerado (sem risco de resposta dupla)",
-    "nota": "Operacao estavel, nada parado. Evento do tick: 1a resposta humana nova desde Rede Boa — GoodBom Supermercados (rede de Sumare) manteve a porta aberta. Vale acompanhamento humano."
-  },
-  "tick_atendente_10_32": {
-    "rodadas_no_dia": 6,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (22 entradas no historico: 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
-    "watchdog": "exit 0, saudavel — 100 leads, 80 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
-    "prospecao_followup": "0 follow-ups processados (nada atrasado)",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "evento_entre_ticks": "Tick anterior (10:16) processou 3 emails automaticos do SAC/Salesforce da Oba (atendimento@redeoba.com.br), enviou 1 esclarecimento comercial + WhatsApp e marcou lead 63 como 'respondido' — mas gravou o relatorio em bot/equipe/ (local errado). Consolidado em equipe/ e bot/equipe/ removido.",
-    "nota": "Operacao estavel, nada parado. Unica acao relevante entre ticks: resposta automatica da Oba (SAC), sem interesse humano confirmado."
-  },
-  "tick_atendente_09_45": {
-    "rodadas_no_dia": 4,
-    "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
-    "corrigir_emails": "0 bounces processados — todos os 17 atuais ja com tentativa registrada em correcoes_emails.json",
-    "watchdog": "exit 0, saudavel — nenhum follow-up atrasado, bounce sem correcao ou lead parado",
-    "prospecao_followup": "0 follow-ups processados",
-    "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
-    "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
-    "nota": "Tick 09:45 sem mudancas em relacao ao tick 09:42 — operacao estavel, nada parado."
-  },
-  "melhorias_2026_08_19": {
-    "template_apresentacao_v2": "prospecao.py: de ~160 para ~131 palavras, 4 paragrafos escaneaveis, assunto direto 'Oleo usado da {empresa} vale dinheiro'. py_compile OK",
-    "fp1_renda_anual": "prospecao_followup.py: FP1 agora cita 600 L/mes = R$ 14 mil/ano. py_compile OK",
-    "deploy_netlify": "BLOQUEADO: API retorna 403 'Account credit usage exceeded'. GitHub Pages ja tem a versao nova",
-    "fila_extra_3_novas": "fila_prospeccao_extra.json: +3 empresas (Ekobe nutraceuticos Capela do Alto, Zuhan refeicoes Campinas, Lollos Sorocaba) - emails dos sites oficiais + MX validado via nslookup. JSON ok (60 entradas unicas)",
-    "alias_send_sequence": "bot_oleo.py: adicionado alias 'send_sequence' (underscore) ao argparse - resolve bug de processo registrado 6x hoje; py_compile OK + send_sequence --help exit 0"
-  },
-  "estado_2026_08_18": {
-    "leads_total": 89,
-    "leads_ativos": 71,
-    "apresentacoes_enviadas": 86,
-    "entregues_sem_bounce": 71,
-    "bounces": 15,
-    "taxa_bounce": "17%",
-    "respostas_reais": 1,
-    "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br)",
-    "leads_nicho_encapsulados": 12,
-    "inbound_formspree": 3,
-    "watchdog": "saudavel",
-    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build esgotados, versao anterior no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora)"
-  },
-  "aprendizados": [
-    "Emails padrao contato@dominio falham ~25% das vezes - sempre buscar email real do site antes de enviar",
-    "Case Catalent (Indaiatuba/Sorocaba) e prova social forte para o nicho de encapsulados",
-    "Mercado UCO vale US$11bi e lei 2028 obriga usinas a usar oleo residual - argumento de urgencia",
-    "Netlify gratuito esgota creditos de build (300min/mes) - GitHub Pages como backup automatico",
-    "Watchdog evita follow-ups atrasados e bounces nao corrigidos",
-    "Cold email longo derruba resposta: template V1 (~160 palavras) rendeu 1% de resposta; V2 encurtado para ~131 palavras com 4 paragrafos escaneaveis (19/08) - monitorar",
-    "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up",
-    "Resposta cortes 'encaminhamos ao departamento responsavel' (GoodBom, 19/08) NAO e negativa - e porta aberta: responder agradecendo, mantendo disponibilidade e pedindo volume mantem o lead vivo sem insistir",
-    "Fila de prospeccao esgota rapido (57+ empresas em 6 dias): o melhorador continuo deve repor 2-4 empresas/dia com MX validado para o Prospector nunca ficar parado",
-    "Alias no argparse evita falha de processo: 'send_sequence' (underscore) falhava 6x/dia porque o comando era 'send-sequence' - aceitar ambos elimina o retry manual",
-    "Nem toda resposta do check-replies e lead: helpdesks (Movidesk/Zendesk/Salesforce) respondem com notificacoes automaticas de protocolo/CANCELAMENTO. Notificacao de cancelamento = sinal de desinteresse: NAO responder (reabriria o ticket), encerrar o lead e registrar (ICT Farmaceutica, 19/08 - tickets 1057/1058 cancelados pela agente)",
-    "Acuse automatico de SAC/protocolo SEM negativa (Sanofi Medley, 19/08 - protocolo 02995121 'encaminhado ao departamento responsavel') e porta aberta, nao lixo: responder leve agradecendo, mantendo a oferta e pedindo direcionamento ao setor de residuos/meio ambiente/facilities + WhatsApp mantem o lead vivo sem insistir. Distinguir de CANCELAMENTO de ticket (desinteresse). Grandes farmaceuticas respondem so via SAC - o caminho e o departamento interno, nao o atendente"
+ "criado_em": "2026-08-13",
+ "atualizado_em": "2026-08-26T14:02",
+ "metas": {
+  "enviar_50_emails_a_partir_de": "2026-08-14",
+  "limite_diario_prospeccao": 15,
+  "foco_cidades": [
+   "Salto",
+   "Campinas",
+   "Indaiatuba",
+   "Itu",
+   "Sorocaba",
+   "Jundiai",
+   "Louveira",
+   "Valinhos",
+   "Piracicaba",
+   "Vinhedo",
+   "Monte Mor",
+   "Hortolandia",
+   "Sumare",
+   "Limeira",
+   "Nova Odessa",
+   "Cabreuva",
+   "Tatui",
+   "Porto Feliz",
+   "Boituva",
+   "Americana",
+   "Votorantim"
   ],
-  "tick_melhorador_26_08_10_30": {
-    "diagnostico": "Fila de prospeccao com 0 pendentes era o ponto MAIS FRACO (Atendente esvaziou 09:40; Prospector 09:00 nao repoe o suficiente). Watchdog exit 0 (107 leads, 80 ativos, 32 bounces). Dashboard: 5 respostas (4,8%) acima da meta 3%.",
-    "melhoria_fila": "Fila extra reposta de 0 -> 7 empresas REAIS novas (MX validado via nslookup + dry-run enviar_lote): Rede Frango Assado/Louveira (rotisserie), Vitoria Hoteis, Royal Palm Plaza, Nacional Inn Campinas, Dan Inn Sorocaba, Blue Tree Towers Valinhos (SEGMENTO HOTEL novo - 5 hoteis), Supermercados Sao Vicente/Piracicaba. Caminho: bot/fila_prospeccao_extra.json (67 empresas, 7 pendentes)",
-    "netlify": "Tentativa de deploy da versao nova (com calculadora) em masteroleo.eco.br -> JSONHTTPError: Forbidden (creditos de build esgotados). Persiste dependente de acao humana. Versao nova segue no GitHub Pages.",
-    "gitignore": "bot/_prospector/ e bot/_seo_tmp/ adicionados ao .gitignore (scratch de runtime dos agentes).",
-    "para_estrategista": [
-      "Ritmo de reposicao da fila: Prospector deve repor 5-8/dia ou rodar em 2 horarios (09:00+15:00) - senao a fila vive zerada apos o Atendente 09:40",
-      "Netlify 403: comprar credito de build ou trocar DNS para GitHub Pages",
-      "Acoes humanas quentes: telefone Arcor/Bagley, GoodBom (19) 3828-9798, Rede Boa (#23915)"
-    ]
+  "nicho_prioritario": "encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
+ },
+ "fila_prospeccao": {
+  "atualizado_em": "2026-08-19",
+  "total": 60,
+  "pendentes": 3,
+  "contatados": 77,
+  "bounces": 21,
+  "nota": "19/08 (melhorador continuo 14:07): 3 empresas NOVAS adicionadas com MX valido - Ekobe (Capela do Alto, contato@ekobe.ind.br, NICHO PRIORITARIO nutraceuticos/gomas, investiu R$20mi), Zuhan Refeicoes (Campinas, contato@zuhan.com.br, cozinha industrial alto volume), Lollos (Sorocaba, sac@lollos.com.br, refeicoes transportadas). Emails confirmados nos sites oficiais + nslookup MX. Fila reabastecida para o Prospector de 20/08 09:00."
+ },
+ "estado_2026_08_26": {
+  "leads_total": 114,
+  "leads_ativos": 86,
+  "apresentacoes_enviadas": 111,
+  "entregues_sem_bounce": 78,
+  "bounces": 32,
+  "taxa_bounce": "23% (cache de bounces acumulado — 32 enderecos; maioria dominios sem MX)",
+  "respostas_reais": 7,
+  "taxa_resposta": "~6,5% de leads contatados",
+  "lead_quente": "Sumerbol Supermercados (resposta 26/08 13:21 GMT — SAC/atendimento encaminhou a proposta ao setor responsavel e passou contatos diretos: manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume + tipo + coleta-teste + WhatsApp; lead id 21 marcado respondido) + Arcor/Bagley (auto-resposta SAC 26/08 12:17 GMT 'mensagem encaminhada a area responsavel' — resposta enviada 09:35 agradecendo, pedindo volume e oferecendo WhatsApp; sem retorno ainda) + Oba Hortifrutigranjeiros (SAC respondeu 26/08 09:40 'recebemos a sua mensagem!' e 09:46 'Atendimento Finalizado' = ticket FECHADO pelo SAC, sem interesse humano — porta fechada por ora, seguir via ouvidoria@redeoba.com.br se insistir). Continuam em aberto: GoodBom, Rede Boa, Sanofi, Hile, Arcor/Bagley.",
+  "leads_nicho_encapsulados": 25,
+  "inbound_formspree": 3,
+  "watchdog": "saudavel (26/08 14:01, exit 0 - 114 leads, 86 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
+  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
+  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+ },
+ "tick_atendente_26_08_11_05": {
+  "rodadas_no_dia": 3,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (8 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 107 leads, 80 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes — nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "1 resposta NOVA: Sumerbol Supermercados (atendimento@sumerbol.com.br, 26/08 13:21 GMT, RE do ultimo contato) — atendimento/SAC informou que a proposta foi ENCAMINHADA ao setor responsavel e passou contatos diretos: manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br. NAO e negativa: porta aberta com contato humano direto. Lead id 21 (fonte prospeccao-lote, apresentacao 13/08 + follow-ups ate o ultimo contato 26/08 09:22)",
+  "respostas_enviadas": "1 resposta da persona de compra (11:05) para Sumerbol Supermercados: agradecimento + pedido de volume mensal (litros/kg) e tipo de material + oferta de coleta-teste sem compromisso + caminho WhatsApp (11) 96785-9631 e indicacao de seguir direto com Ivone/manutencao (contatos fornecidos pelo lead). Lead id 21 marcado 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado. Sem anexo ESG (cliente nao pediu relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "fila_prospeccao": "60 empresas na fila extra: 0 pendentes. Prospector precisa repor 5-8/dia com MX validado para nao parar",
+  "leads_quentes": [
+   "Sumerbol Supermercados (NOVO — resposta 26/08 13:21 GMT: proposta encaminhada ao setor responsavel + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta enviada pedindo volume; rede de supermercados = alto volume de fritura. PRIORIDADE: follow-up via contato direto Ivone)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina com 1 evento: Sumerbol Supermercados respondeu ao ultimo contato informando que a proposta foi encaminhada ao setor responsavel e forneceu contato humano direto (manutencao@sumerbol.com.br, Ivone) — diferente das auto-respostas de SAC (Oba/Arcor), aqui ha um caminho concreto de negociacao. Respondido na hora pela persona de compra pedindo volume + tipo + coleta-teste + WhatsApp. Nenhum problema operacional; watchdog exit 0. Quentes agora incluem Sumerbol como #1 (contato direto disponivel)."
+ },
+ "tick_atendente_26_08_11_35": {
+  "rodadas_no_dia": 4,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes — nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% — 111 apresentacoes + 3 boas-vindas, 0 sem envio)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde o tick 11:05 (Sumerbol ja respondido). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_novos": "7 leads NOVOS adicionados as 11:01-11:02 (ids 111-117, fonte prospeccao-lote, apresentacao ja enviada na criacao): Pimenta Verde/Rede Frango Assado (Louveira, rotisserie), Vitoria Hotel Concept (Campinas/Indaiatuba/Paulinia), Royal Palm Plaza (Campinas), Hotel Nacional Inn Campinas, Hotel Dan Inn Sorocaba, Blue Tree Towers Valinhos, Supermercados Sao Vicente (Piracicaba) — os 7 que o Melhorador validou as 10:30 com MX. Segmento HOTEL estreia na base (5 hoteis)",
+  "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas (sem campo de rastreio individual; os 7 acima ja sairam dela ao virar lead). Prospector precisa repor com MX validado",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado. Unico evento: 7 leads NOVOS de hotéis/rotisserie/supermercados adicionados as 11:01-11:02 (os que o Melhorador validou as 10:30) — apresentacao enviada na criacao, base subiu de 107 para 114 leads. Segmento de hotéis (5 redes) estreia na base: alto volume de fritura em restaurantes de hotel. Nada a corrigir; quentes inalterados."
+ },
+ "tick_atendente_26_08_09_50": {
+  "rodadas_no_dia": 2,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (8 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 107 leads, 80 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado — backlog do tick 09:40 totalmente consumido)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes (80 ja contatados, 24 bounces no total da fila) — nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "2 emails NOVOS da Oba Hortifrutigranjeiros (atendimento@redeoba.com.br, Salesforce/sfdc.net): 12:40 GMT 'recebemos a sua mensagem!' (acuse automatico da resposta comercial enviada 09:35) e 12:46 GMT 'Atendimento Finalizado' (ticket FECHADO pelo SAC). AMBOS AUTO-RESPOSTAS de helpdesk, NAO interesse humano",
+  "respostas_enviadas": "0 respostas enviadas — DECISAO: nao responder. 'Atendimento Finalizado' = ticket fechado pelo SAC (analogo ao aprendizado ICT Farmaceutica: responder reabriria o ticket e criaria loop de acuse automatico). A resposta comercial ja foi entregue no tick 09:35; bola com a Oba. Emails marcados como VISTOS (\\Seen) via IMAP para o check_replies nao re-listar; replies_pending.json zerado; lead 63 mantido 'respondido'",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "fila_prospeccao": "60 empresas na fila extra: 0 pendentes (esvaziada no tick 09:40). Prospector precisa repor 2-4 empresas/dia com MX validado para nao parar",
+  "leads_quentes": [
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina: tudo verde. Unico evento: Oba respondeu 2x via SAC (acuse automatico + 'Atendimento Finalizado' = ticket fechado) — auto-respostas, nao interesse humano; corretamente NAO respondido (evita reabrir ticket/loop) e marcado como visto. Oba sai dos quentes por ora (porta fechada pelo SAC); quentes seguem: Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile. Nenhum lead humano novo."
+ },
+ "tick_atendente_26_08_09_40": {
+  "rodadas_no_dia": 1,
+  "sync_formspree": "31 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — 13 'ja tentado'; 0 novos processaveis (31 bounces todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "1a rodada: exit 1 com 79 follow-ups ATRASADOS (acumulado de dias sem rodada). APOS prospecao_followup.py (x2): exit 0, saudavel — 107 leads, 83 ativos, 31 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "79 + 75 = 154 follow-ups processados (1 por lead por execucao): 4x FP3, ~47x FP2, ~28x FP1 — pegou TODO o backlog acumulado desde 19/08 (FP1/FP2/FP3 vencidos). Nenhum erro de envio",
+  "enviar_lote": "3 emails de apresentacao enviados (fila esvaziada): Ekobe (contato@ekobe.ind.br, nutraceuticos), Zuhan (contato@zuhan.com.br, refeicoes Campinas), Lollos (sac@lollos.com.br, refeicoes Sorocaba) — registrados no leads.csv com lock. Fila extra: 60 empresas, 0 pendentes",
+  "send_sequence": "sequencia processada — 1 follow-up enviado (teste.formspree@gmail.com). Sem boas-vindas novas pendentes (sem inbound novo)",
+  "check_replies": "2 respostas aguardando: Oba Hortifruti (atendimento@redeoba.com.br 12:15 GMT 'recebemos a sua mensagem!') e Arcor/Bagley (aquiarcor@arcor.com 12:17 GMT 'RE: compra de oleo usado') — ambas AUTO-RESPOSTAS de SAC, nao interesse humano confirmado",
+  "respostas_enviadas": "2 respostas da persona de compra: Oba (agradecimento, pedido de litros/kg por mes, WhatsApp) e Arcor/Bagley (agradecimento, oferta mantida, volume por mes, relatorio ESG, WhatsApp). Leads 63 (Oba) e 14 (Bagley) marcados 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado",
+  "fila_prospeccao": "60 empresas na fila extra: 3 enviadas neste tick (Ekobe, Zuhan, Lollos) — 0 pendentes restantes. Prospector precisa repor 2-4 empresas/dia para nao parar",
+  "leads_quentes": [
+   "Oba Hortifruti (SAC automatico 26/08, resposta enviada pedindo volume — porta aberta, aguardar depto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Backlog grande resolvido: 154 follow-ups atrasados de 19/08 foram enviados (watchdog foi de exit 1 para exit 0) e a fila de prospeccao esvaziou (3 ultimos enviados). 2 auto-respostas de SAC respondidas com a persona. Nenhum lead humano novo neste tick — quentes seguem: Oba, Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile."
+ },
+ "estado_2026_08_19": {
+  "leads_total": 104,
+  "leads_ativos": 81,
+  "apresentacoes_enviadas": 101,
+  "entregues_sem_bounce": 87,
+  "bounces": 17,
+  "taxa_bounce": "16%",
+  "respostas_reais": 4,
+  "taxa_resposta": "4% (meta >3%) — Boa + GoodBom (humanas) + Oba (SAC automatico) + Sanofi (SAC automatico protocolo); template V2 em monitoramento (1a leva 19/08)",
+  "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Sanofi Medley (SAC automatico 19/08 20:49 GMT — protocolo 02995121 encaminhado ao depto responsavel; resposta enviada 18:03 pedindo direcionamento a residuos/meio ambiente/facilities + WhatsApp) + Hile (nicho encapsulados, 1a leva template V2). OBS 16:04: ICT Farmaceutica CANCELOU tickets 1057/1058 (agente Julia Leite 15:33) — lead encerrado, REMOVIDO dos quentes.",
+  "leads_nicho_encapsulados": 25,
+  "inbound_formspree": 3,
+  "watchdog": "saudavel (19/08 19:31, exit 0)",
+  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
+  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+ },
+ "tick_atendente_19_31": {
+  "rodadas_no_dia": 25,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
+  "watchdog": "exit 0, saudavel — 104 leads, 81 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "fila_prospeccao": "60 empresas na fila extra: 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 19:31 identico ao 19:06: nenhum evento novo entre ticks (sem respostas, sem bounces, sem leads novos). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
+ },
+ "tick_atendente_19_06": {
+  "rodadas_no_dia": 24,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
+  "watchdog": "exit 0, saudavel — 104 leads, 81 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 19:06: 4 leads NOVOS adicionados as 18:42 (Vigor Alimentos id 101, Laticinios Frizzo id 103, Reino Alimentos id 105, Goldy Alimentos id 107) com apresentacao ja enviada — cobertura 100% mantida. Nenhum evento novo entre ticks (sem respostas, sem bounces novos). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
+ },
+ "tick_atendente_18_33": {
+  "rodadas_no_dia": 23,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json; 22 registros no historico)",
+  "watchdog": "exit 0, saudavel — 100 leads, 77 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 18:33 identico ao 18:03: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Sanofi, Hile."
+ },
+ "tick_atendente_17_30": {
+  "rodadas_no_dia": 21,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "fila_prospeccao": "91 empresas: 77 contatados, 22 bounces, 3 pendentes (Ekobe, Zuhan, Lollos — MX validado, agendados para 20/08 09:00)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 17:30 identico ao 17:02: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Hile."
+ },
+ "tick_atendente_18_03": {
+  "rodadas_no_dia": 22,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "1 resposta NOVA: Sanofi Medley (sac.brasil@sanofi.com, 19/08 20:49 GMT, 'Re: Protocolo: 02995121') — acuse AUTOMATICO do SAC (Deborah): 'solicitacao encaminhada ao departamento responsavel e, caso haja interesse, entrarao em contato'. NAO e interesse confirmado nem negativa — e resposta generica de helpdesk. Respondido 18:03 pela persona de compra: agradecimento, oferta mantida (compra de oleo vegetal usado, MTR/certificado, bombonas, coleta programada), pedido de direcionamento ao setor de residuos/meio ambiente/facilities + WhatsApp (11) 96785-9631. Lead id 91 marcado 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Evento do tick: 1a resposta desde as 16:04 — Sanofi Medley (grande farmaceutica, Hortolandia) respondeu com acuse automatico do SAC (protocolo 02995121 encaminhado). Porta aberta: resposta enviada pedindo direcionamento ao setor certo. Diferente do caso ICT (cancelamento de ticket = desinteresse), acuse de protocolo sem negativa merece resposta leve mantendo o canal vivo."
+ },
+ "tick_atendente_16_04": {
+  "rodadas_no_dia": 18,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "2 notificacoes = CANCELAMENTO de tickets Movidesk da ICT Farmaceutica (1057/1058, agente Julia Leite 15:33 BRT). NAO eram leads: nao respondido (reabriria ticket), lead id 89 marcado 'encerrado', replies_pending.json zerado",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Evento do tick: ICT Farmaceutica cancelou os tickets criados pelos nossos emails — sinal de desinteresse; lead encerrado sem resposta (respeitar cancelamento). Lição: nem toda resposta do check-replies e lead — notificacoes de helpdesk (Movidesk/Zendesk/Salesforce) devem ser identificadas pelo corpo antes de responder."
+ },
+ "tick_atendente_17_02": {
+  "rodadas_no_dia": 20,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 17:02 identico ao 16:31: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Hile."
+ },
+ "tick_atendente_16_31": {
+  "rodadas_no_dia": 19,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 78 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC, via ouvidoria@redeoba.com.br)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 16:31 identico ao 16:04: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces). Quentes seguem: GoodBom, Rede Boa, Oba, Hile."
+ },
+ "tick_atendente_14_05": {
+  "rodadas_no_dia": 13,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "1a rodada: exit 1 com 4 follow-ups ATRASADOS (FP2 de Casa Alianca, Supermercados Dias, Sapore S.A., Massima Alimentacao — apresentacao ha 6d). APOS prospecao_followup.py: exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache",
+  "prospecao_followup": "4 FP2 ENVIADOS (14:04): Casa Alianca - Padaria Gourmet, Supermercados Dias, Sapore S.A., Massima Alimentacao — resolveu o problema apontado pelo watchdog",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC)",
+   "ICT Farmaceutica (protocolo 1057/1058)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel apos correcao: watchdog pegou 4 FP2 atrasados e o prospecao_followup.py resolveu no mesmo tick (exit 0 na re-verificacao). Nada parado."
+ },
+ "tick_atendente_14_30": {
+  "rodadas_no_dia": 14,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) funcionou, correcao do Melhorador em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC)",
+   "ICT Farmaceutica (protocolo 1057/1058)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 14:30 identico ao 14:05: nenhum evento novo entre ticks. 3 respostas reais no dia (Boa, GoodBom, Oba)."
+ },
+ "tick_atendente_15_31": {
+  "rodadas_no_dia": 15,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 'ja tentado' (17 bounces permanentes todos com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%) — alias send_sequence (underscore) funcionou, correcao do Melhorador em vigor",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "leads_quentes": [
+   "GoodBom Supermercados (respondido 19/08 11:07)",
+   "Rede Boa (ticket #23915)",
+   "Oba Hortifruti (SAC)",
+   "ICT Farmaceutica (protocolo 1057/1058)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Operacao estavel, nada parado. Tick 15:31 identico ao 14:30: nenhum evento novo entre ticks (sem novos leads, sem respostas, sem bounces)."
+ },
+ "tick_atendente_13_05": {
+  "rodadas_no_dia": 11,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 17 bounces permanentes todos com tentativa registrada",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "leads_quentes": [
+   "GoodBom Supermercados (Good Bom Supermercados LTDA) — respondeu; atendido 19/08 11:07",
+   "Oba Hortifruti (Grupo Fartura) — respondeu via email corrigido; atendido 19/08 10:16"
+  ],
+  "nota": "Operacao estavel, nada parado. OBS: relatorio deste tick foi gravado por engano em bot/equipe/ (local errado) — consolidado em equipe/ e bot/equipe/ removido no tick 13:31."
+ },
+ "tick_atendente_13_31": {
+  "rodadas_no_dia": 12,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 17 bounces permanentes todos com tentativa registrada em correcoes_emails.json (16 'ja tentado' neste tick)",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real executado: `send-sequence` (hifen)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "nota": "Operacao estavel, nada parado. Tick 13:31 identico ao 12:32: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
+ },
+ "tick_atendente_12_32": {
+  "rodadas_no_dia": 10,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen) — instrucao do cron com `send_sequence` retorna invalid choice (4a ocorrencia registrada)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "nota": "Operacao estavel, nada parado. Tick 12:32 identico ao 12:06: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
+ },
+ "tick_atendente_12_06": {
+  "rodadas_no_dia": 9,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). Comando real: `send-sequence` (hifen)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "nota": "Operacao estavel, nada parado. Tick 12:06 identico ao 11:32: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
+ },
+ "tick_atendente_11_32": {
+  "rodadas_no_dia": 8,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+  "watchdog": "exit 0, saudavel — 100 leads, 79 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%). OBS: comando real e `send-sequence` (hifen) — `send_sequence` (underscore) retorna invalid choice; instrucao do cron deve ser corrigida",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "nota": "Operacao estavel, nada parado. Tick 11:32 identico ao 11:07: nenhum evento novo entre ticks. Leads quentes seguem: GoodBom, Rede Boa, Oba, ICT Farmaceutica, Hile."
+ },
+ "tick_atendente_11_07": {
+  "rodadas_no_dia": 7,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (historico: 22 entradas — 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+  "watchdog": "exit 0, saudavel — 100 leads, 80 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "1 resposta nova: GoodBom Supermercados (contato@goodbom.com.br, 19/08 10:36 BRT) — resposta humana cortes (Laura): 'proposta encaminhada ao departamento responsavel para analise'. NAO e interesse confirmado, mas tambem nao e negativa. Respondido pelo atendente_ia as 11:07 com disponibilidade + pedido de volume (L/kg por mes) e tipo de material + oferta de WhatsApp. Lead 51 marcado 'respondido'; replies_pending.json zerado (sem risco de resposta dupla)",
+  "nota": "Operacao estavel, nada parado. Evento do tick: 1a resposta humana nova desde Rede Boa — GoodBom Supermercados (rede de Sumare) manteve a porta aberta. Vale acompanhamento humano."
+ },
+ "tick_atendente_10_32": {
+  "rodadas_no_dia": 6,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 16 bounces atuais com tentativa registrada (22 entradas no historico: 19 nao_encontrado, 2 corrigido_e_enviado, 1 ja_existia)",
+  "watchdog": "exit 0, saudavel — 100 leads, 80 ativos, 29 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "evento_entre_ticks": "Tick anterior (10:16) processou 3 emails automaticos do SAC/Salesforce da Oba (atendimento@redeoba.com.br), enviou 1 esclarecimento comercial + WhatsApp e marcou lead 63 como 'respondido' — mas gravou o relatorio em bot/equipe/ (local errado). Consolidado em equipe/ e bot/equipe/ removido.",
+  "nota": "Operacao estavel, nada parado. Unica acao relevante entre ticks: resposta automatica da Oba (SAC), sem interesse humano confirmado."
+ },
+ "tick_atendente_09_45": {
+  "rodadas_no_dia": 4,
+  "sync_formspree": "29 emails em bounce cache; 0 notificacoes novas (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os 17 atuais ja com tentativa registrada em correcoes_emails.json",
+  "watchdog": "exit 0, saudavel — nenhum follow-up atrasado, bounce sem correcao ou lead parado",
+  "prospecao_followup": "0 follow-ups processados",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "nota": "Tick 09:45 sem mudancas em relacao ao tick 09:42 — operacao estavel, nada parado."
+ },
+ "melhorias_2026_08_19": {
+  "template_apresentacao_v2": "prospecao.py: de ~160 para ~131 palavras, 4 paragrafos escaneaveis, assunto direto 'Oleo usado da {empresa} vale dinheiro'. py_compile OK",
+  "fp1_renda_anual": "prospecao_followup.py: FP1 agora cita 600 L/mes = R$ 14 mil/ano. py_compile OK",
+  "deploy_netlify": "BLOQUEADO: API retorna 403 'Account credit usage exceeded'. GitHub Pages ja tem a versao nova",
+  "fila_extra_3_novas": "fila_prospeccao_extra.json: +3 empresas (Ekobe nutraceuticos Capela do Alto, Zuhan refeicoes Campinas, Lollos Sorocaba) - emails dos sites oficiais + MX validado via nslookup. JSON ok (60 entradas unicas)",
+  "alias_send_sequence": "bot_oleo.py: adicionado alias 'send_sequence' (underscore) ao argparse - resolve bug de processo registrado 6x hoje; py_compile OK + send_sequence --help exit 0"
+ },
+ "estado_2026_08_18": {
+  "leads_total": 89,
+  "leads_ativos": 71,
+  "apresentacoes_enviadas": 86,
+  "entregues_sem_bounce": 71,
+  "bounces": 15,
+  "taxa_bounce": "17%",
+  "respostas_reais": 1,
+  "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br)",
+  "leads_nicho_encapsulados": 12,
+  "inbound_formspree": 3,
+  "watchdog": "saudavel",
+  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build esgotados, versao anterior no ar)",
+  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora)"
+ },
+ "aprendizados": [
+  "Emails padrao contato@dominio falham ~25% das vezes - sempre buscar email real do site antes de enviar",
+  "Case Catalent (Indaiatuba/Sorocaba) e prova social forte para o nicho de encapsulados",
+  "Mercado UCO vale US$11bi e lei 2028 obriga usinas a usar oleo residual - argumento de urgencia",
+  "Netlify gratuito esgota creditos de build (300min/mes) - GitHub Pages como backup automatico",
+  "Watchdog evita follow-ups atrasados e bounces nao corrigidos",
+  "Cold email longo derruba resposta: template V1 (~160 palavras) rendeu 1% de resposta; V2 encurtado para ~131 palavras com 4 paragrafos escaneaveis (19/08) - monitorar",
+  "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up",
+  "Resposta cortes 'encaminhamos ao departamento responsavel' (GoodBom, 19/08) NAO e negativa - e porta aberta: responder agradecendo, mantendo disponibilidade e pedindo volume mantem o lead vivo sem insistir",
+  "Fila de prospeccao esgota rapido (57+ empresas em 6 dias): o melhorador continuo deve repor 2-4 empresas/dia com MX validado para o Prospector nunca ficar parado",
+  "Alias no argparse evita falha de processo: 'send_sequence' (underscore) falhava 6x/dia porque o comando era 'send-sequence' - aceitar ambos elimina o retry manual",
+  "Nem toda resposta do check-replies e lead: helpdesks (Movidesk/Zendesk/Salesforce) respondem com notificacoes automaticas de protocolo/CANCELAMENTO. Notificacao de cancelamento = sinal de desinteresse: NAO responder (reabriria o ticket), encerrar o lead e registrar (ICT Farmaceutica, 19/08 - tickets 1057/1058 cancelados pela agente)",
+  "Acuse automatico de SAC/protocolo SEM negativa (Sanofi Medley, 19/08 - protocolo 02995121 'encaminhado ao departamento responsavel') e porta aberta, nao lixo: responder leve agradecendo, mantendo a oferta e pedindo direcionamento ao setor de residuos/meio ambiente/facilities + WhatsApp mantem o lead vivo sem insistir. Distinguir de CANCELAMENTO de ticket (desinteresse). Grandes farmaceuticas respondem so via SAC - o caminho e o departamento interno, nao o atendente"
+ ],
+ "tick_melhorador_26_08_10_30": {
+  "diagnostico": "Fila de prospeccao com 0 pendentes era o ponto MAIS FRACO (Atendente esvaziou 09:40; Prospector 09:00 nao repoe o suficiente). Watchdog exit 0 (107 leads, 80 ativos, 32 bounces). Dashboard: 5 respostas (4,8%) acima da meta 3%.",
+  "melhoria_fila": "Fila extra reposta de 0 -> 7 empresas REAIS novas (MX validado via nslookup + dry-run enviar_lote): Rede Frango Assado/Louveira (rotisserie), Vitoria Hoteis, Royal Palm Plaza, Nacional Inn Campinas, Dan Inn Sorocaba, Blue Tree Towers Valinhos (SEGMENTO HOTEL novo - 5 hoteis), Supermercados Sao Vicente/Piracicaba. Caminho: bot/fila_prospeccao_extra.json (67 empresas, 7 pendentes)",
+  "netlify": "Tentativa de deploy da versao nova (com calculadora) em masteroleo.eco.br -> JSONHTTPError: Forbidden (creditos de build esgotados). Persiste dependente de acao humana. Versao nova segue no GitHub Pages.",
+  "gitignore": "bot/_prospector/ e bot/_seo_tmp/ adicionados ao .gitignore (scratch de runtime dos agentes).",
+  "para_estrategista": [
+   "Ritmo de reposicao da fila: Prospector deve repor 5-8/dia ou rodar em 2 horarios (09:00+15:00) - senao a fila vive zerada apos o Atendente 09:40",
+   "Netlify 403: comprar credito de build ou trocar DNS para GitHub Pages",
+   "Acoes humanas quentes: telefone Arcor/Bagley, GoodBom (19) 3828-9798, Rede Boa (#23915)"
+  ]
+ },
+ "estrategista_2026_08_26": {
+  "diagnostico_semana": {
+   "leads_total": 107,
+   "leads_ativos": 80,
+   "apresentacoes_enviadas": 104,
+   "bounces_leads": 19,
+   "bounces_cache": 32,
+   "taxa_bounce": "18% dos leads (cache inclui 13 historicos/alternativos)",
+   "taxa_resposta": "4,8% dos contatados (meta >3% BATIDA - tendencia: 1% no lote V1 -> 4,8% no V2)",
+   "respostas_humanas": "2 (Rede Boa + GoodBom) | SAC automaticas: 3 (Arcor/Bagley, Oba, Sanofi)",
+   "inbound_formspree": "0 novos na semana (3 acumulados, todos de teste) - SITE NAO GERA LEAD",
+   "watchdog": "saudavel (exit 0) - backlog de 154 follow-ups do gap 19-26/08 limpo no tick 09:40",
+   "fila_prospeccao": "7 pendentes (5 hoteis + Frango Assado + Sao Vicente, MX validado pelo Melhorador 26/08 10:25) - nao esta zerada, mas exige reposicao continua",
+   "ponto_mais_fraco": "FECHAMENTO: 5 leads quentes em aberto ha dias/semanas e NENHUM contrato ou coleta-teste; conversao depende de acao humana (telefone/WhatsApp/LinkedIn) que nao aconteceu"
   },
-  "estrategista_2026_08_26": {
-    "diagnostico_semana": {
-      "leads_total": 107,
-      "leads_ativos": 80,
-      "apresentacoes_enviadas": 104,
-      "bounces_leads": 19,
-      "bounces_cache": 32,
-      "taxa_bounce": "18% dos leads (cache inclui 13 historicos/alternativos)",
-      "taxa_resposta": "4,8% dos contatados (meta >3% BATIDA - tendencia: 1% no lote V1 -> 4,8% no V2)",
-      "respostas_humanas": "2 (Rede Boa + GoodBom) | SAC automaticas: 3 (Arcor/Bagley, Oba, Sanofi)",
-      "inbound_formspree": "0 novos na semana (3 acumulados, todos de teste) - SITE NAO GERA LEAD",
-      "watchdog": "saudavel (exit 0) - backlog de 154 follow-ups do gap 19-26/08 limpo no tick 09:40",
-      "fila_prospeccao": "7 pendentes (5 hoteis + Frango Assado + Sao Vicente, MX validado pelo Melhorador 26/08 10:25) - nao esta zerada, mas exige reposicao continua",
-      "ponto_mais_fraco": "FECHAMENTO: 5 leads quentes em aberto ha dias/semanas e NENHUM contrato ou coleta-teste; conversao depende de acao humana (telefone/WhatsApp/LinkedIn) que nao aconteceu"
-    },
-    "mudancas_aplicadas": {
-      "fp2_reforcado_fechamento": "prospecao_followup.py FP2: adicionados Portaria MME/MMA 3/2026 (1% OGR jan/2028) + PNRS/CNPJ + contrato de coleta com volume minimo + relatorio ESG mensal + pagamento a vista (PIX) na coleta + CTA coleta-teste. py_compile OK, render 189 palavras",
-      "persona_playbook_fechamento": "persona.md: nova secao 'Playbook de Fechamento' - roteiro do Atendente para converter lead quente em coleta/contrato (pedir volume, coleta-teste, WhatsApp, argumentos legais/ESG/anti-furto, cronograma 24h-3d, contrato para >500L/mes)",
-      "fila_nao_alterada": "NAO adicionei empresas a fila_prospeccao_extra.json - sem email novo confirmado em site oficial (regra da equipe); 7 pendentes validos ja existem. Prospector deve repor com MX validado"
-    },
-    "metas_semana_26_08_a_01_09_foco_fechamento": [
-      "FECHAR >=1 contrato/coleta-teste: acao humana OBRIGATORIA nos 5 quentes - telefonar GoodBom (19) 3828-9798, Arcor/Bagley (compras/facilities/qualidade), Rede Boa (#23915), Sanofi (departamento interno de residuos/facilities), Hile",
-      "Atendente: usar o Playbook de Fechamento em TODA resposta de lead quente; nao parar em 'encaminhei ao departamento' - pedir volume + propor coleta-teste",
-      "Manter taxa de resposta >=4% e subir para >=5% com V2 + FP2 novo (monitorar respostas da leva 26/08)",
-      "Fila: Prospector repor 5-8 empresas/dia (ou 2 rodadas 09:00+15:00) com MX validado; alvo >=10 pendentes no fim da semana",
-      "Bounce: manter <15% (validador MX ja ativo no enviar_lote); nao marcar lead como bounce quando so o email ALTERNATIVO falhou (13 orfaos do cache)",
-      "Inbound: 1 lead real via site na semana - destravar Netlify (creditos) ou HTTPS do GitHub Pages p/ masteroleo.eco.br e cadastrar no Google Search Console",
-      "Novos segmentos em curso: hoteis (5), rotisserie (Frango Assado), supermercados (Sao Vicente), refeicoes coletivas - monitorar resposta"
-    ],
-    "aprendizados_novos": [
-      "Portaria MME/MMA 3/2026 CONFIRMADA (biodieselbr 13/05/2026, eixos, trenchrossi, megawhat): 1% OGR obrigatorio no biodiesel/SAF/diesel verde a partir de jan/2028 - argumento de urgencia legitimo, usar em FP2/FP3 e propostas",
-      "Concorrentes pagam via PIX imediato na coleta (ex.: BiOeste 'pagamento imediato via PIX') - pagamento a vista vira diferencial de fechamento; adicionado ao FP2 e ao playbook",
-      "Obrigacao legal de destincao (bomgourmet: 'por lei, estabelecimentos sao obrigados a destinar corretamente contratando empresa de reciclagem') - reforca o angulo PNRS/CNPJ",
-      "Backlog de follow-ups acumula quando o cron fica dias sem rodar (154 atrasados em 26/08) - manter cadencia diaria do Atendente; o catch-up funciona mas entrega FP2/FP3 no mesmo dia de um FP1",
-      "Fila vive zerada porque Atendente consome de manha e Prospector repoe pouco - reposicao de 5-8/dia ou 2 rodadas resolve (gargalo nº1 de crescimento)"
-    ],
-    "para_equipe": [
-      "ATENDENTE: aplicar Playbook de Fechamento (persona.md) em toda resposta; nao responder auto-respostas de SAC de ticket FECHADO (Oba) - marcar visto",
-      "PROSPECTOR: repor 5-8 empresas/dia com MX valido; priorizar hoteis/restaurantes/refeicoes coletivas/rotisserie (alto volume de fritura, base pouco explorada)",
-      "ANALISTA: monitorar resposta dos 7 novos (hoteis) + efeito do FP2 novo; nao marcar lead bounce por email alternativo falho",
-      "HUMANO: telefonar GoodBom (19) 3828-9798, Arcor/Bagley, Rede Boa (#23915) - email ja fez a parte dele"
-    ]
+  "mudancas_aplicadas": {
+   "fp2_reforcado_fechamento": "prospecao_followup.py FP2: adicionados Portaria MME/MMA 3/2026 (1% OGR jan/2028) + PNRS/CNPJ + contrato de coleta com volume minimo + relatorio ESG mensal + pagamento a vista (PIX) na coleta + CTA coleta-teste. py_compile OK, render 189 palavras",
+   "persona_playbook_fechamento": "persona.md: nova secao 'Playbook de Fechamento' - roteiro do Atendente para converter lead quente em coleta/contrato (pedir volume, coleta-teste, WhatsApp, argumentos legais/ESG/anti-furto, cronograma 24h-3d, contrato para >500L/mes)",
+   "fila_nao_alterada": "NAO adicionei empresas a fila_prospeccao_extra.json - sem email novo confirmado em site oficial (regra da equipe); 7 pendentes validos ja existem. Prospector deve repor com MX validado"
   },
-  "tick_melhorador_26_08_10_51": {
-    "diagnostico": "Sistema saudavel (watchdog exit 0, 107 leads, 80 ativos, 32 bounces no cache; dashboard 4,8% resposta — acima da meta 3%). Fila de prospeccao com 7 pendentes (hoteis/rotisserie/supermercado adicionados as 10:30, MX validado) — NAO zerada. Ponto MAIS FRACO: FP3 (ultimo follow-up, dia 10) continuava generico ('porta continua aberta') — sem argumentos de fechamento, apos o Estrategista reforcar FP1/FP2.",
-    "melhoria_fp3": "bot/prospecao_followup.py: FP3 reescrito com argumentos que convertem: (1) valor R$ 1,00-2,50/L a vista com PIX na coleta + renda calculada (600 L/mes = R$ 14 mil/ano), (2) urgencia Portaria MME/MMA 3/2026 (jan/2028 obrigatorio) + CTA de coleta-teste + saida sem pressao ('se nao interessa, e so ignorar'). py_compile OK; render 151 palavras, subject mantido 'Ultimo contato sobre a compra do oleo'. 35 leads elegiveis receberao este FP3 nos proximos 3-4 dias (apresentacao ~6-7d hoje; vence no dia 10).",
-    "para_estrategista": [
-      "35 leads com FP2 enviado entram em FP3 ate 30/08 — monitorar resposta do FP3 novo (1a leva com argumentos de fechamento)",
-      "Persistem: acao humana telefonica nos 5 quentes (GoodBom, Arcor/Bagley, Rede Boa, Sanofi, Hile) — email ja fez a parte dele",
-      "Netlify segue sem creditos de build (403) — versao nova so no GitHub Pages"
-    ]
-  }
+  "metas_semana_26_08_a_01_09_foco_fechamento": [
+   "FECHAR >=1 contrato/coleta-teste: acao humana OBRIGATORIA nos 5 quentes - telefonar GoodBom (19) 3828-9798, Arcor/Bagley (compras/facilities/qualidade), Rede Boa (#23915), Sanofi (departamento interno de residuos/facilities), Hile",
+   "Atendente: usar o Playbook de Fechamento em TODA resposta de lead quente; nao parar em 'encaminhei ao departamento' - pedir volume + propor coleta-teste",
+   "Manter taxa de resposta >=4% e subir para >=5% com V2 + FP2 novo (monitorar respostas da leva 26/08)",
+   "Fila: Prospector repor 5-8 empresas/dia (ou 2 rodadas 09:00+15:00) com MX validado; alvo >=10 pendentes no fim da semana",
+   "Bounce: manter <15% (validador MX ja ativo no enviar_lote); nao marcar lead como bounce quando so o email ALTERNATIVO falhou (13 orfaos do cache)",
+   "Inbound: 1 lead real via site na semana - destravar Netlify (creditos) ou HTTPS do GitHub Pages p/ masteroleo.eco.br e cadastrar no Google Search Console",
+   "Novos segmentos em curso: hoteis (5), rotisserie (Frango Assado), supermercados (Sao Vicente), refeicoes coletivas - monitorar resposta"
+  ],
+  "aprendizados_novos": [
+   "Portaria MME/MMA 3/2026 CONFIRMADA (biodieselbr 13/05/2026, eixos, trenchrossi, megawhat): 1% OGR obrigatorio no biodiesel/SAF/diesel verde a partir de jan/2028 - argumento de urgencia legitimo, usar em FP2/FP3 e propostas",
+   "Concorrentes pagam via PIX imediato na coleta (ex.: BiOeste 'pagamento imediato via PIX') - pagamento a vista vira diferencial de fechamento; adicionado ao FP2 e ao playbook",
+   "Obrigacao legal de destincao (bomgourmet: 'por lei, estabelecimentos sao obrigados a destinar corretamente contratando empresa de reciclagem') - reforca o angulo PNRS/CNPJ",
+   "Backlog de follow-ups acumula quando o cron fica dias sem rodar (154 atrasados em 26/08) - manter cadencia diaria do Atendente; o catch-up funciona mas entrega FP2/FP3 no mesmo dia de um FP1",
+   "Fila vive zerada porque Atendente consome de manha e Prospector repoe pouco - reposicao de 5-8/dia ou 2 rodadas resolve (gargalo nº1 de crescimento)"
+  ],
+  "para_equipe": [
+   "ATENDENTE: aplicar Playbook de Fechamento (persona.md) em toda resposta; nao responder auto-respostas de SAC de ticket FECHADO (Oba) - marcar visto",
+   "PROSPECTOR: repor 5-8 empresas/dia com MX valido; priorizar hoteis/restaurantes/refeicoes coletivas/rotisserie (alto volume de fritura, base pouco explorada)",
+   "ANALISTA: monitorar resposta dos 7 novos (hoteis) + efeito do FP2 novo; nao marcar lead bounce por email alternativo falho",
+   "HUMANO: telefonar GoodBom (19) 3828-9798, Arcor/Bagley, Rede Boa (#23915) - email ja fez a parte dele"
+  ]
+ },
+ "tick_melhorador_26_08_10_51": {
+  "diagnostico": "Sistema saudavel (watchdog exit 0, 107 leads, 80 ativos, 32 bounces no cache; dashboard 4,8% resposta — acima da meta 3%). Fila de prospeccao com 7 pendentes (hoteis/rotisserie/supermercado adicionados as 10:30, MX validado) — NAO zerada. Ponto MAIS FRACO: FP3 (ultimo follow-up, dia 10) continuava generico ('porta continua aberta') — sem argumentos de fechamento, apos o Estrategista reforcar FP1/FP2.",
+  "melhoria_fp3": "bot/prospecao_followup.py: FP3 reescrito com argumentos que convertem: (1) valor R$ 1,00-2,50/L a vista com PIX na coleta + renda calculada (600 L/mes = R$ 14 mil/ano), (2) urgencia Portaria MME/MMA 3/2026 (jan/2028 obrigatorio) + CTA de coleta-teste + saida sem pressao ('se nao interessa, e so ignorar'). py_compile OK; render 151 palavras, subject mantido 'Ultimo contato sobre a compra do oleo'. 35 leads elegiveis receberao este FP3 nos proximos 3-4 dias (apresentacao ~6-7d hoje; vence no dia 10).",
+  "para_estrategista": [
+   "35 leads com FP2 enviado entram em FP3 ate 30/08 — monitorar resposta do FP3 novo (1a leva com argumentos de fechamento)",
+   "Persistem: acao humana telefonica nos 5 quentes (GoodBom, Arcor/Bagley, Rede Boa, Sanofi, Hile) — email ja fez a parte dele",
+   "Netlify segue sem creditos de build (403) — versao nova so no GitHub Pages"
+  ]
+ },
+ "tick_atendente_26_08_12_05": {
+  "rodadas_no_dia": 5,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site - 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados - todos os 32 ja com tentativa registrada em correcoes_emails.json (18 \"ja tentado\" neste tick). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel - 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes - nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% - 111 apresentacoes + boas-vindas, 0 sem envio)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "respostas_enviadas": "0 respostas - nenhum reply novo desde o tick 11:35 (Sumerbol ja respondido). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick - sem geracao de PDF",
+  "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas com MX; 0 pendentes na fila ativa. Prospector precisa repor com MX validado",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' - resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 - porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, sync sem bounces novos. Base mantida em 114 leads / 86 ativos / 32 bounces (cache). Fila extra com 67 empresas aguardando o Prospector validar MX. Nenhum lead quente novo desde o tick 11:35; Sumerbol segue #1 aguardando retorno da Ivone/manutencao."
+ },
+ "tick_atendente_26_08_12_31": {
+  "rodadas_no_dia": 5,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site - 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados - todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel - 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes - nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% - 111 apresentacoes + 3 boas-vindas, 0 sem envio)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "respostas_enviadas": "0 respostas - nenhum reply novo desde o tick 12:05 (Sumerbol ja respondido as 11:05). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick - sem geracao de PDF",
+  "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas (MX validado) aguardando o Prospector repor 5-8/dia na fila ativa",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta IA enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' - resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 - porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao tick 12:05: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce a corrigir, fila de prospeccao com 0 pendentes ativos. Base estavel em 114 leads (86 ativos, 32 bounces). Quentes inalterados - Sumerbol segue como #1 aguardando contato direto com a Ivone."
+ },
+ "tick_atendente_26_08_13_02": {
+  "rodadas_no_dia": 7,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site - 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados - todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel - 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes - nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% - 111 apresentacoes + 3 boas-vindas, 0 sem envio)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "respostas_enviadas": "0 respostas - nenhum reply novo desde o tick 12:31 (Sumerbol ja respondido as 11:05). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick - sem geracao de PDF",
+  "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas (MX validado) aguardando o Prospector repor 5-8/dia na fila ativa",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta IA enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' - resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 - porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao tick 13:02: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce a corrigir, fila de prospeccao com 0 pendentes ativos. Base estavel em 114 leads (86 ativos, 32 bounces). Quentes inalterados - Sumerbol segue como #1 aguardando contato direto com a Ivone."
+ },
+ "tick_atendente_26_08_13_33": {
+  "rodadas_no_dia": 8,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site - 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados - todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick, incl. Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel - 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes - nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% - 111 apresentacoes + 3 boas-vindas, 0 sem envio)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio - confirmado [] neste tick)",
+  "respostas_enviadas": "0 respostas - nenhum reply novo desde o tick 13:02 (Sumerbol ja respondido as 11:05). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick - sem geracao de PDF",
+  "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas (MX validado) aguardando o Prospector repor 5-8/dia na fila ativa",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta IA enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' - resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 - porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao tick 13:02: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce a corrigir, fila de prospeccao com 0 pendentes ativos. Base estavel em 114 leads (86 ativos, 32 bounces). Quentes inalterados - Sumerbol segue como #1 aguardando contato direto com a Ivone."
+ },
+ "tick_atendente_26_08_14_02": {
+  "rodadas_no_dia": 9,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site - 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados - todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick, incl. Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel - 114 leads, 86 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes (98 empresas: 87 contatados, 24 bounce) - nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% - 111 apresentacoes + 3 boas-vindas, 0 sem envio)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio - confirmado [])",
+  "respostas_enviadas": "0 respostas - nenhum reply novo desde o tick 13:33 (Sumerbol ja respondido as 11:05). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick - sem geracao de PDF",
+  "fila_prospeccao": "fila_prospeccao_extra.json: 67 empresas (MX validado) aguardando o Prospector repor 5-8/dia na fila ativa",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta IA enviada 11:05 pedindo volume; aguardando retorno da Ivone. PRIORIDADE: follow-up via contato direto)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' - resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 - porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao tick 13:33: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce a corrigir, fila de prospeccao com 0 pendentes ativos. Base estavel em 114 leads (86 ativos, 32 bounces). Quentes inalterados - Sumerbol segue como #1 aguardando contato direto com a Ivone."
+ },
+ "tick_melhorador_26_08_14_15": {
+  "diagnostico": "Sistema saudavel (watchdog exit 0, 114 leads, 86 ativos, 32 bounces cache; dashboard 5,4% resposta/6 respostas - acima da meta 3%). Fila de prospeccao ativa em 0 pendentes (Atendente consumiu; Prospector 09:00 nao repoe o suficiente) - gargalo recorrente de crescimento. FECHAMENTO: Sumerbol (lead #1) deu contatos diretos (ivone.franca@sumerbol.com.br) via SAC 26/08 13:21 GMT, mas o ciclo de respostas do Atendente nao emite email proativo ao contato direto - fechamento dependia de acao nao automatizada.",
+  "melhoria_fechamento_sumerbol": "1 email pontual de FECHAMENTO enviado (14:10) para ivone.franca@sumerbol.com.br (contato direto fornecido pelo SAC da propria Sumerbol): referencia o encaminhamento da proposta, reforca valor R$ 1,00-2,50/L + certificado PNRS + pagamento a vista (PIX) na coleta, oferece coleta-teste sem compromisso, pede volume mensal (litros/kg) e indica WhatsApp (11) 96785-9631. Message-ID <178776400471.3432.17605087092737523952@Juquinha>. Nao e massa (1 email, lead mais quente); Atendente nao reenviara (lead ja respondido, replies_pending vazio).",
+  "melhoria_fila": "fila_prospeccao_extra.json reposta 67 -> 70 com 3 empresas NOVAS reais (email de fonte oficial + MX valido via nslookup): Savegnago Supermercados (atendimento@savegnago.com.br, rede do interior paulista - padaria/rotisserie/fritura), GRSA/Grupo GR (contato@grsa.com.br, refeicoes coletivas 1M+ refeicoes/dia - cozinha industrial), Premium Hotel Campinas (contato@hotelpremiumcampinas.com.br, hotel com restaurante). Verificado: enviar_lote --status mostra 3 pendentes com MX valido - Atendente enviara a apresentacao no proximo tick. Obs: Covabra (sac@covabra.com.br, lojas em Indaiatuba/Jundiai/Sumare/Vinhedo) ja estava na base - Prospector acertou, nao duplicado.",
+  "para_estrategista": [
+   "Sumerbol: email direto enviado a Ivone - proximo passo e telefonar/WhatsApp (11) 96785-9631 para o mesmo contato em 2-3 dias se sem retorno (acao humana de fechamento)",
+   "Fila segue com poucos pendentes: cadencia do Prospector (09:00) repoe pouco vs. consumo do Atendente (30/30min) - 2 rodadas/dia segue valendo",
+   "Netlify sem creditos (403) - versao nova da calculadora so no GitHub Pages; priorizar DNS/creditos para destravar inbound"
+  ]
+ }
 }

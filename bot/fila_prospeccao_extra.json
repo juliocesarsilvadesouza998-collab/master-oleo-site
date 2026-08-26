@@ -467,5 +467,26 @@
     "email": "atendimento@svicente.com.br",
     "cidade": "Piracicaba/SP e região",
     "segmento": "supermercados (rede, frituras e açougue)"
+  },
+  {
+    "nome": "",
+    "empresa": "Savegnago Supermercados",
+    "email": "atendimento@savegnago.com.br",
+    "cidade": "Interior de SP (rede; unidades na regiao)",
+    "segmento": "supermercados - padaria/rotisserie/fritura alto volume"
+  },
+  {
+    "nome": "",
+    "empresa": "GRSA - Grupo GR (Alimentacao Corporativa)",
+    "email": "contato@grsa.com.br",
+    "cidade": "SP/Campinas (operacao nacional, 1M+ refeicoes/dia)",
+    "segmento": "refeicoes coletivas / cozinha industrial"
+  },
+  {
+    "nome": "",
+    "empresa": "Premium Hotel Campinas",
+    "email": "contato@hotelpremiumcampinas.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "hotel com restaurante - fritura de cozinha"
   }
 ]
