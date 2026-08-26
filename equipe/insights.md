@@ -973,3 +973,85 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 3. **Repor fila de prospecção HOJE** — 0 pendentes = pipeline parado para novos contatos até o Prospector rodar.
 4. **GoodBom (id 51) — telefonar (19) 3828-9798** segue sendo o lead humano mais quente sem ação de follow-up humano registrada.
 
+---
+
+## 2026-08-26 (quarta) — ATENDENTE IA (tick 09:50)
+
+### O que foi feito
+1. **Sync + auto-correção (PASSO 0):** `sync_formspree.py` — 32 emails no cache de bounce, 0 notificações novas do Formspree (nenhum lead novo via site; seguem 3 inbound acumulados). `corrigir_emails.py` — 0 bounces processados, 8 "já tentado" (todos os 32 bounces já têm tentativa registrada em `correcoes_emails.json`; Kemin tentado de novo, sem alternativa válida).
+2. **Watchdog (PASSO 1):** ✅ **exit 0, saudável** — 107 leads, 80 ativos, 32 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado. Backlog do tick 09:40 totalmente consumido.
+3. **Sequência + respostas (PASSO 2):** `prospecao_followup.py` — 0 follow-ups (nada atrasado). `send_sequence` — processado, sem envios novos. `check-replies` — **2 emails NOVOS da Oba Hortifrutigranjeiros** (`atendimento@redeoba.com.br`, Salesforce/sfdc.net):
+   - **12:40 GMT "recebemos a sua mensagem!"** — acuse AUTOMÁTICO do SAC para a resposta comercial que enviamos às 09:35 (tick 09:40).
+   - **12:46 GMT "Atendimento Finalizado"** — **ticket FECHADO pelo SAC** da Oba.
+   - **Decisão: NÃO respondi.** Ambas são auto-respostas de helpdesk, não há interesse humano. "Atendimento Finalizado" = ticket fechado — análogo ao aprendizado da ICT Farmacêutica (responder reabriria o ticket e geraria loop de acuse automático). A mensagem comercial já está na caixa da Oba; a bola está com eles. Marquei os 2 emails como **vistos (\Seen) via IMAP** para o `check-replies` não re-listá-los a cada rodada e zerei `replies_pending.json` (re-verificado: 0 pendentes). Lead 63 mantido `respondido`.
+4. **Fila de prospecção:** `enviar_lote.py --status` — 91 empresas, 80 já contatados, 24 com bounce, **0 pendentes** (esvaziada no tick 09:40). Nada a enviar.
+5. **Nenhum pedido de relatório ESG/certificado de impacto** neste tick — sem geração de PDF.
+
+### Números do dia (auditoria independente)
+- **Leads totais:** 107 — `novo`: 73 | `sequencia`: 7 | `respondido`: 6 (teste, Bagley, Rede Boa, GoodBom, Oba, Sanofi) | `bounce`: 19 | `encerrado`: 2 — **Ativos: 80**.
+- **Bounces.json:** 32 emails no cache — 19 correspondem a leads atuais `bounce`; 13 são históricos/alternativos.
+- **Apresentações enviadas:** 104 timestamps em `apresentacao_em`.
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio após o processamento).
+- **Follow-ups enviados hoje:** 0 (nada atrasado; 154 foram no tick 09:40).
+
+### Problemas encontrados e correções
+1. **Auto-respostas do SAC da Oba (acuse + "Atendimento Finalizado") — TRATADO sem resposta.** Identificado pelo corpo (sfdc.net/Salesforce) como notificações automáticas; "Atendimento Finalizado" = ticket fechado. **Lição reforçada (caso 2):** nem toda resposta do `check-replies` é lead — notificação de *ticket fechado/finalizado* do SAC = porta fechada por ora (diferente do acuse "encaminhado ao departamento" da Arcor/Sanofi, que é porta aberta). Responder a ticket fechado reabre o chamado e gera loop de acuse. Solução aplicada: marcar como visto e manter o lead `respondido`.
+2. **Loop potencial de acuse automático evitado:** se tivéssemos respondido, o SAC da Oba geraria outro "recebemos a sua mensagem!" — ciclo infinito. Não responder + marcar como visto quebra o ciclo.
+3. Pendências estruturais já registradas e mantidas: fila de prospecção **0 pendentes** (Prospector precisa repor 2-4 empresas/dia com MX validado); ids duplicados 84/86/88/101; Netlify sem créditos de build; lead id 1 (teste).
+
+### Leads quentes (para ação humana — destaque)
+1. **Arcor/Bagley (id 14) — em observação (SAC oficial "encaminhado à área responsável", 26/08):** Campinas, grande fabricante de alimentos — gera gordura vegetal usada e resíduos vencidos (>40% gordura → biodiesel + descaracterização). **Vale contato humano direto (compras/facilities/qualidade) em ~3-5 dias via LinkedIn/telefone.**
+2. **GoodBom Supermercados (id 51)** — resposta humana cortês (19/08, Laura); proposta com o departamento responsável. **Telefone (19) 3828-9798 vale a pena** — segue sem follow-up humano registrado.
+3. **Rede Boa Supermercados (id 46)** — proposta enviada ao comercial (`produtos.novos@smboa.com.br`, ticket #23915, 18/08). Sem retorno ainda. **Telefone vale a pena.**
+4. **Sanofi Medley (id 91)** — SAC protocolo 02995121 "encaminhado ao departamento responsável" (19/08). **Contato humano direto (facilities/meio ambiente/compras) — SAC não decide.**
+5. **Hile (id 101)** — nicho encapsulados, apresentação V2 enviada 19/08. **Monitorar resposta — primeira leva com template novo.**
+
+### Sugestões para o Estrategista
+1. **Oba saiu dos quentes:** o SAC fechou o ticket ("Atendimento Finalizado") sem interesse humano. Se insistir, usar **`ouvidoria@redeoba.com.br` (lead 57)** ou canal comercial/comprador direto — e-mail de atendimento genérico de rede grande responde automático e fecha chamado (lição da Oba, 19/08, reaplicada).
+2. **Prioridade humana: Arcor/Bagley + GoodBom** — os 2 caminhos com maior potencial de conversão em aberto; telefone/WhatsApp converte antes do próximo tick.
+3. **Repor fila de prospecção HOJE** (0 pendentes) — pipeline parado para novos contatos até o Prospector rodar.
+4. Pendências estruturais: validação MX pré-envio; renumeração de ids duplicados; créditos Netlify (versão nova só no GitHub Pages).
+
+
+---
+
+## 2026-08-26 (quarta) — ANALISTA DE QUALIDADE (auditoria pós-sync)
+
+### Números do dia (auditoria independente)
+- **Sync Formspree:** `sync_formspree.py` — **32 emails** no cache de bounce; **0** notificações novas do Formspree (nenhum lead novo via site hoje).
+- **Leads totais:** 107 — `novo`: 73 | `sequencia`: 7 | `respondido`: 6 (teste, Bagley, Rede Boa, GoodBom, Oba, Sanofi) | `bounce`: 19 | `encerrado`: 2 — **Ativos: 80**.
+- **Bounces.json:** 32 emails — **19 correspondem a leads atuais `bounce`**; **13 são históricos/alternativos** (endereço que deu bounce ≠ email cadastrado do lead, ou lead antigo já corrigido).
+- **Respostas pendentes:** **0** (`replies_pending.json` vazio — Atendente processou tudo; nada para responder no próximo tick).
+- **Consistência leads×bounces (auditado via script):** OK. Todos os leads cujo email atual está no bounces.json estão marcados como `bounce`. Nenhum lead `bounce` pendente de marcação. Os 13 "órfãos" do cache **não têm lead com o mesmo email** — o sync só marca por igualdade exata de endereço, então não havia correção a fazer hoje.
+
+### Problemas encontrados e correções
+1. **Lead id 1 (Ana Souza / Alimentos Salto) — `bounce` com `boas_vindas_em` preenchido** (2026-08-13T11:31:14). Persiste desde a auditoria de 14/08: o boas-vindas foi enviado antes do bounce ser detectado. **Registrado apenas** (regra seguida — não corrigido). Confirmado que o `send_sequence` pula bounces — caso antigo, sem reenvio indevido.
+2. **13 bounces "órfãos" no cache** (sem lead correspondente exato): ex. `contato@cowpig.com.br` (lead 71 tem `atendimento@...`), `info@kelcopetcare.com.br` (lead 18 tem `comercial@...`), `sac@oba.com.br`/`sac@redeoba.com.br` (leads 57/63 usam `ouvidoria@`/`atendimento@redeoba`), `contato@eixorestaurantes.co` (entrada **truncada** — falta o `.br`; o endereço completo `contato@eixorestaurantes.com.br` já está no cache). **Não é bug do sync** (marca só por igualdade exata) — mas **vale o Estrategista revisar**: nesses casos o bounce veio de um endereço alternativo, não necessariamente do email cadastrado do lead (que segue `novo`/válido).
+3. **Lixo de parsing antigo resolvido:** não há mais entradas com ponto final (`...com.br.`) no bounces.json — a limpeza mencionada em 14/08 foi confirmada.
+4. **Sem novas correções aplicadas hoje** — auditoria encontrou o sistema consistente com as rodadas do Atendente (09:40/09:50).
+
+### Sugestões para o Estrategista
+1. **Tratar os 13 bounces "alternativos" como oportunidade, não como falha:** quando um endereço secundário de empresa (ex. `contato@`) dá bounce mas o lead tem outro endereço (ex. `atendimento@`/`comercial@`), o lead **não deve ser marcado bounce**. Vale validar MX/entrega do email cadastrado antes do próximo envio desses leads (Cowpig 71, Kelco 18, Selmi 60, Penina 72, Nutraway 77, Infanger 50, Delta Terceirizações 64, Oba 57/63).
+2. **Normalizar o cache:** remover a entrada truncada `contato@eixorestaurantes.co` (lixo de parsing do mailer-daemon) para o cache ficar 100% limpo e evitar futura confusão na auditoria.
+3. **Manter a regra "bounce = só por igualdade exata" documentada** (já está implícita no sync): evita que leads com email alternativo válido sejam descartados por engano. Se o Estrategista quiser reaproveitar os 13 órfãos, o caminho é corrigir o email do lead para o endereço alternativo e revalidar MX — não marcar o lead.
+
+---
+
+## 2026-08-26 (quarta) — BOT DE SEO
+
+### Diagnóstico
+- **SEO geral: OK** — 10/10 palavras-chave presentes, confirmado no **HTML publicado ao vivo** (curl no site, não só nos arquivos locais). Títulos, meta descriptions, canonical e links internos OK.
+- **PROBLEMA REAL:** site servindo certificado `*.github.io` para `masteroleo.eco.br` → navegador mostra erro de segurança (SEC_E_WRONG_PRINCIPAL) e HTTPS (fator de ranqueamento) quebrado; `https_enforced: false` na API do Pages.
+- **Causa:** domínio configurado (`cname: masteroleo.eco.br`) e DNS correto (A → IPs GitHub Pages, sem CAA bloqueando Let's Encrypt), mas o GitHub Pages **não emitiu o certificado** ("The certificate does not exist yet"). Regressão desde 19/08 ~19h.
+
+### Ações aplicadas
+1. **Re-disparo da emissão do certificado** via API (`PUT /pages`: re-assert cname + https_enforced=true) — GitHub iniciou verificação/emissão; pode levar até 24h. **Monitorar no próximo tick.**
+2. **Schema.org JSON-LD adicionado** em `industrias.html` e `descaracterizacao.html` (LocalBusiness + Service + makesOffer) — as 3 páginas agora têm structured data.
+3. **Correção do telefone no JSON-LD do index.html** — estava mascarado (`+551****9631`); agora `+5511967859631` (número público real do site).
+
+### Validação
+- JSON-LD válido (parse ok) nas 3 páginas; tags HTML equilibradas; `seo_bot.py` → SEO geral OK.
+- **Pendente:** certificado HTTPS customizado (lado GitHub). Se não resolver em ~24h, reavaliar no console do GitHub.
+
+### Sugestão ao Estrategista
+- Quando o certificado for emitido: cadastrar o site no **Google Search Console** e pedir indexação das 3 URLs; verificar se o JSON-LD gera rich results (LocalBusiness).
