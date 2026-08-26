@@ -23,6 +23,10 @@ Thumbs.db
 # Credenciais reais do bot (NUNCA subir)
 bot/config.json
 
+# Scratch de runtime dos agentes (Prospector/SEO)
+bot/_prospector/
+bot/_seo_tmp/
+
 # Local Netlify folder
 .netlify
 bot/bounces.json

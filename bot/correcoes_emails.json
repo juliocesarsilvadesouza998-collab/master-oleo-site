@@ -158,5 +158,12 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-08-26T09:06:15-03:00"
+  },
+  {
+    "email_antigo": "marketing.foodlatam@kemin.com",
+    "empresa": "Kemin Industria e Comercio LTDA",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-08-26T09:50:23-03:00"
   }
 ]

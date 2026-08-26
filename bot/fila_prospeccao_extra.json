@@ -418,5 +418,54 @@
     "email": "sac@lollos.com.br",
     "cidade": "Sorocaba/SP",
     "segmento": "Refeicoes empresariais e cozinha central (refeicoes transportadas)"
+  },
+  {
+    "nome": "Rede Frango Assado",
+    "empresa": "Pimenta Verde Alimentos Ltda (Rede Frango Assado)",
+    "email": "sac@redefrangoassado.com.br",
+    "cidade": "Louveira/SP (sede, Rod. Anhanguera km 72)",
+    "segmento": "rede de restaurantes rotisserie (fritura alto volume)"
+  },
+  {
+    "nome": "Vitória Hotéis",
+    "empresa": "Vitória Hotel Concept (Campinas/Indaiatuba/Paulínia)",
+    "email": "reservas@vitoriahoteis.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "hotéis (cozinha industrial própria)"
+  },
+  {
+    "nome": "Royal Palm Plaza",
+    "empresa": "Royal Palm Plaza Resort",
+    "email": "reservas@royalpalm.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "resort e hotel (alta gastronomia, cozinha alto volume)"
+  },
+  {
+    "nome": "Nacional Inn Campinas",
+    "empresa": "Hotel Nacional Inn Campinas Trevo",
+    "email": "reservas@nacionalinncampinas.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "hotel (cozinha industrial própria)"
+  },
+  {
+    "nome": "Dan Inn Sorocaba",
+    "empresa": "Hotel Dan Inn Sorocaba (by Nacional Inn)",
+    "email": "reservas@daninnsorocaba.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "hotel (cozinha industrial própria)"
+  },
+  {
+    "nome": "Blue Tree Valinhos",
+    "empresa": "Blue Tree Towers Valinhos",
+    "email": "reservas.valinhos@bluetree.com.br",
+    "cidade": "Valinhos/SP",
+    "segmento": "hotel (cozinha industrial própria)"
+  },
+  {
+    "nome": "Supermercados São Vicente",
+    "empresa": "Supermercados São Vicente (rede)",
+    "email": "atendimento@svicente.com.br",
+    "cidade": "Piracicaba/SP e região",
+    "segmento": "supermercados (rede, frituras e açougue)"
   }
 ]

@@ -1055,3 +1055,35 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 
 ### Sugestão ao Estrategista
 - Quando o certificado for emitido: cadastrar o site no **Google Search Console** e pedir indexação das 3 URLs; verificar se o JSON-LD gera rich results (LocalBusiness).
+
+---
+
+## 2026-08-26 (quarta) — MELHORADOR CONTÍNUO (10:25)
+
+### Números do dia
+- **Watchdog:** exit 0, saudável — 107 leads, 80 ativos, 32 bounces no cache, nenhum follow-up atrasado.
+- **Dashboard:** 104 apresentações, 86 entregues, 18 bounces (17%), **5 respostas (4,8%)** — acima da meta (>3%). Quentes: Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile.
+- **Ponto MAIS FRACO do sistema hoje: FILA DE PROSPECÇÃO COM 0 PENDENTES.** O Atendente esvaziou a fila na rodada 09:40 (enviou os últimos 3: Ekobe/Zuhan/Lollos) e o Prospector (09:00) não repôs o suficiente — pipeline zerado para novos contatos.
+
+### Correção aplicada (fila reposta: 0 → 7)
+Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com email confirmado em site/Instagram oficiais + **MX validado via nslookup** (e confirmado no dry-run do enviar_lote):
+1. **Rede Frango Assado** (`sac@redefrangoassado.com.br`) — sede Pimenta Verde Alimentos, **Louveira/SP** (Rod. Anhanguera km 72) — rotisserie em rodovias = fritura de altíssimo volume.
+2. **Vitória Hotéis** (`reservas@vitoriahoteis.com.br`) — Campinas/Indaiatuba/Paulínia — cozinha industrial própria.
+3. **Royal Palm Plaza Resort** (`reservas@royalpalm.com.br`) — Campinas — alta gastronomia, cozinha alto volume.
+4. **Nacional Inn Campinas** (`reservas@nacionalinncampinas.com.br`) — hotel com cozinha própria.
+5. **Dan Inn Sorocaba** (`reservas@daninnsorocaba.com.br`) — hotel com cozinha própria.
+6. **Blue Tree Towers Valinhos** (`reservas.valinhos@bluetree.com.br`) — hotel com cozinha própria.
+7. **Supermercados São Vicente** (`atendimento@svicente.com.br`) — Piracicaba e região — frituras/açougue, rede maior que as já contatadas.
+
+**Segmento NOVO coberto: HOTÉIS (5 candidatas).** Hotéis geram óleo de cozinha usado em volume constante (café da manhã + restaurante) e têm contrato único de coleta — até então NENHUMA hotel da região estava na base. Também entrou o 1º restaurante rotisserie (Frango Assado).
+
+### Lições
+1. **Gap sistêmico de reposição:** o Prospector (09:00) repõe 2-4/dia, mas o Atendente (09:40, 30/30min) consome a fila inteira na mesma manhã — a fila fica 0 pendentes o resto do dia. **Sugestão p/ Estrategista:** ou o Prospector passa a repor 5-8/dia, ou roda em 2 horários (ex. 09:00 + 15:00). Sem isso, o pipeline de NOVOS contatos vive parado.
+2. **Fontes de email confiáveis para novos leads:** sites oficiais (página de contato), `conheca.campinas.sp.gov.br` (diretório de POIs da prefeitura de Campinas com emails de hotéis) e Reclame Aqui (SAC oficial). Preferir `reservas@`/`atendimento@`/`sac@` (caixas monitoradas) a emails pessoais.
+3. **Netlify segue 403 (créditos de build esgotados)** — tentei `netlify deploy --prod --dir=.` hoje e retornou `JSONHTTPError: Forbidden`. masteroleo.eco.br segue na versão antiga; a nova (com calculadora) está só no GitHub Pages. **Depende de ação humana** (comprar crédito de build ou trocar o DNS). Registrar como pendência estrutural de conversão.
+4. **Templates de follow-up (FP1/FP2/FP3) já estão fortes** (renda calculada, US$11bi, ESG, encerramento limpo) — não mexi para não quebrar o que está convertendo 4,8%.
+
+### Para o Estrategista (domingo)
+1. **Decidir o ritmo de reposição da fila** (lição 1) — é o gargalo nº1 de crescimento do pipeline.
+2. **Netlify 403** (lição 3) — a versão com calculadora está invisível no domínio principal.
+3. **Ações humanas quentes:** telefone Arcor/Bagley, GoodBom (19) 3828-9798 e Rede Boa (#23915) — a IA já fez a parte de e-mail; conversão depende de contato humano.
