@@ -1151,3 +1151,86 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 1. Monitorar resposta da 1ª leva de FP3 novo (35 leads até 30/08) — é o último funil antes do encerramento.
 2. Persiste o gargalo de FECHAMENTO: ação humana telefônica nos 5 quentes (GoodBom, Arcor/Bagley, Rede Boa, Sanofi, Hile) — o e-mail já fez a parte dele.
 3. Netlify segue sem créditos de build (403); versão nova da calculadora só no GitHub Pages.
+
+---
+
+## 2026-08-26 (quarta) — ATENDENTE (tick 11:05)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 32 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site — 3 inbound acumulados no total).
+- **corrigir_emails:** 0 bounces processados — todos os 32 já com tentativa registrada (8 "já tentado" neste tick, incl. Kemin sem alternativa válida). Nada novo a corrigir.
+- **Watchdog:** ✅ saudável (exit 0, 11:00) — 107 leads, 80 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correção/lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **enviar_lote:** status OK — fila com 0 pendentes, nada a enviar.
+- **send_sequence:** sequência processada, sem envios novos pendentes (cobertura 100%).
+- **check-replies:** **1 resposta NOVA aguardando** — Sumerbol Supermercados (`atendimento@sumerbol.com.br`).
+- **Leads totais:** 107 (ativos 80, bounces 32 no cache) — sem mudança de contagem neste tick.
+
+### Evento do tick (destaque — lead quente NOVO)
+- **Sumerbol Supermercados LTDA (id 21, `atendimento@sumerbol.com.br`)** respondeu às **13:21 GMT (10:21 BRT)** ao e-mail "Último contato sobre a compra do óleo — Master Óleo" (enviado hoje 09:27):
+  > *"Seu e-mail foi encaminhado para o setor responsável, qualquer dúvida entrar em contato pelo e-mail: **manutencao@sumerbol.com.br** ou **ivone.franca@sumerbol.com.br**."*
+- **Natureza da resposta:** é uma resposta do atendimento/SAC da rede, MAS diferente das auto-respostas de helpdesk (Oba/Arcor/Sanofi): o lead **forneceu contato humano direto** (Ivone França / Manutenção) — caminho concreto de negociação, não apenas protocolo.
+- **Ação do atendente_ia (11:05):** respondeu no thread agradecendo o encaminhamento e aplicando o **Playbook de Fechamento**: pediu as 2 informações-chave (volume aproximado L/kg por mês + tipo de material), propôs **coleta-teste sem compromisso essa semana**, ofereceu seguir direto com a Ivone pelo e-mail dela ou pelo **WhatsApp (11) 96785-9631** e perguntou o melhor contato/horário. Lead id 21 marcado `respondido` (respondido_por=atendente_ia); `replies_pending.json` zerado.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional neste tick.** Sync, watchdog, correções, sequência e fila 100% verdes.
+2. Pendências já registradas e mantidas: lead id 1 (teste, bounce com boas-vindas); ids duplicados 84/86/88; WBM sem email alternativo; Netlify sem créditos de build (403); fila de prospecção zerada (exige reposição 5–8/dia).
+
+### Leads quentes (para ação humana — destaque)
+1. **Sumerbol Supermercados (id 21) — NOVO e #1:** resposta 26/08 com **contato humano direto** (`manutencao@sumerbol.com.br`, Ivone França). Rede de supermercados = alto volume de óleo de fritura. **Ação recomendada: contato direto com a Ivone (e-mail/telefone) para destravar — o e-mail da IA já pediu volume, um toque humano agora converte em coleta-teste.**
+2. **Arcor/Bagley (id 14)** — SAC automático 26/08 "encaminhado à área responsável"; resposta enviada 09:35 pedindo volume. Aguardar análise; telefonar (compras/facilities/qualidade).
+3. **GoodBom Supermercados (id 51)** — resposta humana (Laura, 19/08); **telefonar (19) 3828-9798**.
+4. **Rede Boa (id 46)** — ticket #23915, proposta no comercial; telefonar.
+5. **Sanofi Medley (id 91)** — SAC protocolo 02995121, porta aberta; aguardar depto interno de resíduos/facilities.
+6. **Hile (id 101)** — nicho encapsulados, 1ª leva template V2; monitorar.
+
+### Sugestões para o Estrategista
+1. **Fechar Sumerbol via contato direto Ivone França** — é o lead com caminho mais concreto hoje (contato humano explícito, rede de supermercados com volume de fritura). Prioridade máxima da semana.
+2. **Contato humano nos demais quentes** segue pendente (Arcor/Bagley, GoodBom, Rede Boa, Sanofi) — o e-mail já fez a parte dele; telefone converte.
+3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, reposição da fila (5–8/dia), renovação de créditos Netlify.
+4. **Taxa de resposta subiu para ~6,5% (7 respostas reais)** com a resposta da Sumerbol — acima da meta de 4–5%; monitorar se o FP3 novo sustenta.
+
+---
+
+## 2026-08-26 (quarta) — ATENDENTE (tick 11:35)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 32 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site — 3 inbound acumulados no total).
+- **corrigir_emails:** 0 bounces processados — todos os 32 já com tentativa registrada (18 "já tentado" neste tick, incl. Kemin sem alternativa válida). Nada novo a corrigir.
+- **Watchdog:** ✅ saudável (exit 0, 11:31) — **114 leads, 86 ativos**, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correção/lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **enviar_lote:** status OK — fila com 0 pendentes, nada a enviar.
+- **send_sequence:** sequência processada, sem envios novos pendentes (**cobertura 100%**: 111 apresentações + 3 boas-vindas, 0 leads sem envio).
+- **check-replies:** 0 respostas aguardando atendimento (`replies_pending.json` vazio).
+- **respostas_enviadas:** 0 — nenhum reply novo desde o tick 11:05 (Sumerbol já respondido). Nenhum pedido de relatório ESG → sem geração de PDF.
+- **Leads totais:** 114 (ativos 86) — **+7 leads desde o último tick registrado (11:05)**.
+
+### Evento do tick (destaque — 7 leads NOVOS no pipeline)
+- **7 empresas adicionadas às 11:01–11:02** (ids 111–117, fonte `prospeccao-lote`, apresentação já enviada na criação) — exatamente as que o **Melhorador validou às 10:30** (MX checado via nslookup) e que estavam marcadas como "7 pendentes" na fila extra:
+  1. **Pimenta Verde Alimentos / Rede Frango Assado** (Louveira) — rotisserie;
+  2. **Vitória Hotel Concept** (Campinas/Indaiatuba/Paulínia) — hotel;
+  3. **Royal Palm Plaza Resort** (Campinas) — hotel;
+  4. **Hotel Nacional Inn Campinas Trevo** — hotel;
+  5. **Hotel Dan Inn Sorocaba** — hotel;
+  6. **Blue Tree Towers Valinhos** — hotel;
+  7. **Supermercados São Vicente** (Piracicaba) — rede.
+- **Segmento HOTEL estreia na base (5 redes)** — restaurantes de hotel têm cozinha industrial com alto volume de fritura; argumento de renda extra (600 L/mês ≈ R$ 14 mil/ano) aplica bem.
+- Fila extra (`fila_prospeccao_extra.json`): 67 empresas restantes (sem campo de rastreio individual — os 7 acima já saíram dela ao virar lead).
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional neste tick.** Sync, watchdog, correções, sequência, fila e base 100% verdes.
+2. Pendências já registradas e mantidas: lead id 1 (teste, bounce com boas-vindas); ids duplicados 84/86/88; WBM sem email alternativo; Netlify sem créditos de build (403); fila de prospecção exige reposição 5–8/dia.
+
+### Leads quentes (para ação humana — destaque)
+1. **Sumerbol Supermercados (id 21) — #1:** resposta 26/08 com **contato humano direto** (`manutencao@sumerbol.com.br`, Ivone França). Resposta da IA enviada (11:05) pedindo volume + propondo coleta-teste. **Ação recomendada: contato direto com a Ivone — é o caminho mais concreto para fechar.** (aguardando retorno)
+2. **Arcor/Bagley (id 14)** — SAC automático 26/08 "encaminhado à área responsável"; resposta enviada 09:35. Aguardar análise; telefonar (compras/facilities/qualidade).
+3. **GoodBom Supermercados (id 51)** — resposta humana (Laura, 19/08); **telefonar (19) 3828-9798**.
+4. **Rede Boa (id 46)** — ticket #23915, proposta no comercial; telefonar.
+5. **Sanofi Medley (id 91)** — SAC protocolo 02995121, porta aberta; aguardar depto interno.
+6. **Hile (id 101)** — nicho encapsulados, 1ª leva template V2; monitorar.
+
+### Sugestões para o Estrategista
+1. **Fechar Sumerbol via contato direto Ivone França** — prioridade máxima da semana; caminho mais concreto hoje.
+2. **Monitorar resposta dos 7 novos (5 hotéis)** — novo segmento com potencial de volume; ver se o template V2 converte em resposta.
+3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, reposição da fila (5–8/dia), renovação de créditos Netlify.
+4. Nenhuma mudança de métrica relevante neste tick (respostas reais seguem em 7; ~6,5% dos contatados).
