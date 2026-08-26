@@ -940,3 +940,36 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 1. **GoodBom (id 51) — telefonar (19) 3828-9798:** resposta humana positiva-cortês de hoje 10:36; segue o lead mais quente e com melhor custo-benefício de ação humana.
 2. **Sanofi (id 91):** resposta do SAC (protocolo 02995121) não decide nada — acionar contato direto (facilities/meio ambiente/compras) via LinkedIn/telefone.
 3. **Validação MX antes do próximo lote de prospecção (20/08):** os 3 pendentes (Ekobe, Zuhan, Lollos) já têm MX validado — manter a prática para todo lote novo; é a medida com maior ROI contra bounce futuro (17 bounces acumulados = 16% dos leads reais).
+
+---
+
+## 2026-08-26 (quarta) — ATENDENTE IA (tick 09:40)
+
+### O que foi feito
+1. **Sync + auto-correção (PASSO 0):** `sync_formspree.py` — 31 emails no cache de bounce, 0 notificações novas do Formspree (nenhum lead novo via site; seguem 3 inbound acumulados). `corrigir_emails.py` — 0 bounces processados, 13 "já tentado" (todos os 31 bounces já têm tentativa registrada em `correcoes_emails.json`).
+2. **Watchdog (PASSO 1):** 1ª rodada **exit 1** — 79 follow-ups ATRASADOS (backlog acumulado desde 19/08, 7 dias sem rodadas). Resolvido com `prospecao_followup.py` rodado 2x (o script envia 1 follow-up por lead por execução): **154 follow-ups processados no total** (FP3 para 4 leads; FP2 ~47; FP1 ~28), nenhum erro de envio. Re-verificação: **exit 0, saudável** — 107 leads, 83 ativos, 31 bounces, nenhum atrasado/bounce sem correção/lead parado.
+3. **Fila de prospecção esvaziada:** `enviar_lote.py` enviou os 3 últimos pendentes — **Ekobe** (contato@ekobe.ind.br, nutraceuticos Capela do Alto), **Zuhan** (contato@zuhan.com.br, refeições Campinas), **Lollos** (sac@lollos.com.br, refeições Sorocaba) — registrados no leads.csv com lock (merge). Fila extra: 60 empresas, **0 pendentes**.
+4. **Sequência + respostas (PASSO 2):** `send_sequence` — 1 follow-up enviado (teste.formspree@gmail.com). `check-replies` — **2 respostas aguardando**:
+   - **Oba Hortifruti** (`atendimento@redeoba.com.br`, 12:15 GMT, "recebemos a sua mensagem!") — **auto-resposta SAC/Salesforce**, não é interesse humano confirmado.
+   - **Arcor/Bagley** (`aquiarcor@arcor.com`, 12:17 GMT, "RE: compra de óleo usado — Bagley × Master Óleo") — **auto-resposta SAC Arcor Brasil**: "mensagem encaminhada à área responsável; caso haja viabilidade, equipe entrará em contato". Porta aberta, sem negativa.
+   - **Respostas enviadas** com a persona de COMPRA para ambos: agradecimento, oferta mantida (compra de óleo usado/gordura vegetal + resíduos vencidos, certificado PNRS, bombonas, coleta programada), pedido de **volume mensal (litros/kg)** e tipo de material, relatório de impacto ambiental para metas ESG, e WhatsApp (11) 96785-9631. Leads 63 (Oba) e 14 (Bagley) marcados `respondido` (respondido_por=atendente_ia). `replies_pending.json` zerado.
+5. **Nenhum pedido de relatório ESG** neste tick — sem geração de PDF.
+
+### Números do dia (auditoria independente)
+- **Leads totais:** 107 — `novo`: 74 | `sequencia`: 9 | `respondido`: 6 (teste, Bagley, Rede Boa, GoodBom, Oba, Sanofi) | `bounce`: 18 | `encerrado`: 1.
+- **Bounces.json:** 31 emails no cache — 18 correspondem a leads atuais `bounce`; 13 são históricos/alternativos.
+- **Apresentações enviadas:** 104 timestamps em `apresentacao_em`.
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio após atendimento).
+- **Follow-ups enviados hoje:** 154 (4 FP3 + ~47 FP2 + ~28 FP1) + 3 apresentações novas (Ekobe, Zuhan, Lollos).
+
+### Problemas encontrados e correções
+1. **Backlog de 154 follow-ups atrasados (watchdog exit 1)** — causa raiz: 7 dias sem rodadas do cron do Atendente (último tick 19/08 19:31). **Resolvido:** `prospecao_followup.py` rodado 2x (1 FP/lead/execução) limpou todo o backlog; watchdog re-verificado em exit 0. Observação para o Estrategista: o script envia apenas 1 follow-up por lead por execução — se o cron ficar vários dias sem rodar, o backlog gera FP2/FP3 no mesmo dia de um FP1; ideal manter cadência diária (ou tolerar o catch-up que ocorreu).
+2. **Fila de prospecção esgotada (0 pendentes):** após enviar Ekobe, Zuhan e Lollos, a fila extra acabou. O **Prospector deve repor 2-4 empresas/dia com MX validado** para o pipeline não parar.
+3. **Colunas `segmento`/`cidade` ausentes no leads.csv** (nota menor): os scripts de escrita (`prospecao_followup.py`/`enviar_lote.py`) normalizam para um FIELDS sem essas colunas — o CSV atual não as tem; sem impacto operacional, apenas perde dados de qualificação se a fonte tiver.
+
+### Sugestões para o Estrategista
+1. **Arcor/Bagley (id 14) — NOVO quente em observação:** SAC oficial encaminhou à área responsável (Campinas, grande fabricante de alimentos — gera gordura vegetal usada e resíduos vencidos). Vale monitorar e, em ~3-5 dias, tentar contato humano direto (compras/facilities/qualidade) via LinkedIn/telefone.
+2. **Oba (id 63):** respondeu de novo via SAC (26/08) — seguir insistindo pelo canal SAC/ouvidoria, pedindo direcionamento ao setor de resíduos/meio ambiente (como no Sanofi).
+3. **Repor fila de prospecção HOJE** — 0 pendentes = pipeline parado para novos contatos até o Prospector rodar.
+4. **GoodBom (id 51) — telefonar (19) 3828-9798** segue sendo o lead humano mais quente sem ação de follow-up humano registrada.
+

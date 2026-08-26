@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-19T19:31",
+  "atualizado_em": "2026-08-26T09:40",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -14,6 +14,36 @@
     "contatados": 77,
     "bounces": 21,
     "nota": "19/08 (melhorador continuo 14:07): 3 empresas NOVAS adicionadas com MX valido - Ekobe (Capela do Alto, contato@ekobe.ind.br, NICHO PRIORITARIO nutraceuticos/gomas, investiu R$20mi), Zuhan Refeicoes (Campinas, contato@zuhan.com.br, cozinha industrial alto volume), Lollos (Sorocaba, sac@lollos.com.br, refeicoes transportadas). Emails confirmados nos sites oficiais + nslookup MX. Fila reabastecida para o Prospector de 20/08 09:00."
+  },
+  "estado_2026_08_26": {
+    "leads_total": 107,
+    "leads_ativos": 81,
+    "apresentacoes_enviadas": 104,
+    "entregues_sem_bounce": 76,
+    "bounces": 31,
+    "taxa_bounce": "23% (cache de bounces acumulado — 31 enderecos; maioria dominios sem MX)",
+    "respostas_reais": 6,
+    "taxa_resposta": "~6% de leads contatados",
+    "lead_quente": "Oba Hortifrutigranjeiros (auto-resposta SAC 26/08 12:15 GMT 'recebemos a sua mensagem!' — resposta comercial enviada 09:35 pedindo volume + WhatsApp) + Arcor/Bagley (auto-resposta SAC 26/08 12:17 GMT 'mensagem encaminhada a area responsavel' — resposta enviada 09:35 agradecendo, pedindo volume e oferecendo WhatsApp). Nenhuma resposta humana nova confirmada neste tick; continuam em aberto GoodBom, Rede Boa, Sanofi, Hile.",
+    "leads_nicho_encapsulados": 25,
+    "inbound_formspree": 3,
+    "watchdog": "saudavel (26/08 09:29, exit 0 — apos 2x prospecao_followup.py no tick)",
+    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
+    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  },
+  "tick_atendente_26_08_09_40": {
+    "rodadas_no_dia": 1,
+    "sync_formspree": "31 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+    "corrigir_emails": "0 bounces processados — 13 'ja tentado'; 0 novos processaveis (31 bounces todos com tentativa registrada em correcoes_emails.json)",
+    "watchdog": "1a rodada: exit 1 com 79 follow-ups ATRASADOS (acumulado de dias sem rodada). APOS prospecao_followup.py (x2): exit 0, saudavel — 107 leads, 83 ativos, 31 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+    "prospecao_followup": "79 + 75 = 154 follow-ups processados (1 por lead por execucao): 4x FP3, ~47x FP2, ~28x FP1 — pegou TODO o backlog acumulado desde 19/08 (FP1/FP2/FP3 vencidos). Nenhum erro de envio",
+    "enviar_lote": "3 emails de apresentacao enviados (fila esvaziada): Ekobe (contato@ekobe.ind.br, nutraceuticos), Zuhan (contato@zuhan.com.br, refeicoes Campinas), Lollos (sac@lollos.com.br, refeicoes Sorocaba) — registrados no leads.csv com lock. Fila extra: 60 empresas, 0 pendentes",
+    "send_sequence": "sequencia processada — 1 follow-up enviado (teste.formspree@gmail.com). Sem boas-vindas novas pendentes (sem inbound novo)",
+    "check_replies": "2 respostas aguardando: Oba Hortifruti (atendimento@redeoba.com.br 12:15 GMT 'recebemos a sua mensagem!') e Arcor/Bagley (aquiarcor@arcor.com 12:17 GMT 'RE: compra de oleo usado') — ambas AUTO-RESPOSTAS de SAC, nao interesse humano confirmado",
+    "respostas_enviadas": "2 respostas da persona de compra: Oba (agradecimento, pedido de litros/kg por mes, WhatsApp) e Arcor/Bagley (agradecimento, oferta mantida, volume por mes, relatorio ESG, WhatsApp). Leads 63 (Oba) e 14 (Bagley) marcados 'respondido' (respondido_por=atendente_ia); replies_pending.json zerado",
+    "fila_prospeccao": "60 empresas na fila extra: 3 enviadas neste tick (Ekobe, Zuhan, Lollos) — 0 pendentes restantes. Prospector precisa repor 2-4 empresas/dia para nao parar",
+    "leads_quentes": ["Oba Hortifruti (SAC automatico 26/08, resposta enviada pedindo volume — porta aberta, aguardar depto)", "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada, aguardar analise)", "GoodBom Supermercados (humana, telefonar (19) 3828-9798)", "Rede Boa (ticket #23915)", "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)", "Hile (nicho encapsulados, V2)"],
+    "nota": "Backlog grande resolvido: 154 follow-ups atrasados de 19/08 foram enviados (watchdog foi de exit 1 para exit 0) e a fila de prospeccao esvaziou (3 ultimos enviados). 2 auto-respostas de SAC respondidas com a persona. Nenhum lead humano novo neste tick — quentes seguem: Oba, Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile."
   },
   "estado_2026_08_19": {
     "leads_total": 104,
