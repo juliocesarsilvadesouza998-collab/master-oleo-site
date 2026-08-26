@@ -1,6 +1,6 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-08-26T14:02",
+ "atualizado_em": "2026-08-26T16:01",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
   "limite_diario_prospeccao": 15,
@@ -40,20 +40,41 @@
  "estado_2026_08_26": {
    "leads_total": 117,
    "leads_ativos": 89,
-   "apresentacoes_enviadas": 114,
-  "entregues_sem_bounce": 78,
-  "bounces": 32,
-  "taxa_bounce": "23% (cache de bounces acumulado — 32 enderecos; maioria dominios sem MX)",
-  "respostas_reais": 7,
-  "taxa_resposta": "~6,5% de leads contatados",
+   "apresentacoes_enviadas": 117,
+   "entregues_sem_bounce": 78,
+   "bounces": 32,
+   "taxa_bounce": "23% (cache de bounces acumulado — 32 enderecos; maioria dominios sem MX)",
+   "respostas_reais": 7,
+   "taxa_resposta": "~6,5% de leads contatados",
   "lead_quente": "Sumerbol Supermercados (resposta 26/08 13:21 GMT — SAC/atendimento encaminhou a proposta ao setor responsavel e passou contatos diretos: manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume + tipo + coleta-teste + WhatsApp; lead id 21 marcado respondido) + Arcor/Bagley (auto-resposta SAC 26/08 12:17 GMT 'mensagem encaminhada a area responsavel' — resposta enviada 09:35 agradecendo, pedindo volume e oferecendo WhatsApp; sem retorno ainda) + Oba Hortifrutigranjeiros (SAC respondeu 26/08 09:40 'recebemos a sua mensagem!' e 09:46 'Atendimento Finalizado' = ticket FECHADO pelo SAC, sem interesse humano — porta fechada por ora, seguir via ouvidoria@redeoba.com.br se insistir). Continuam em aberto: GoodBom, Rede Boa, Sanofi, Hile, Arcor/Bagley.",
   "leads_nicho_encapsulados": 25,
   "inbound_formspree": 3,
-  "watchdog": "saudavel (26/08 15:01, exit 0 - 117 leads, 89 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
+  "watchdog": "saudavel (26/08 16:01, exit 0 - 117 leads, 89 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
   "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
   "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
  },
- "tick_atendente_26_08_11_05": {
+"tick_atendente_26_08_16_01": {
+  "rodadas_no_dia": 6,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 117 leads, 89 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes (101 empresas: 90 contatados, 24 bounces) — nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% — 117/117 leads com apresentacao/boas-vindas)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde o tick 15:32 (Sumerbol ja respondido 11:05). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada ao setor responsavel + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta IA 11:05 + email de fechamento do Melhorador para Ivone 14:10. PRIORIDADE: telefonar/WhatsApp (11) 96785-9631 para Ivone em 2-3 dias se sem retorno)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 15:32: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospeccao com 0 pendentes. Base estavel em 117 leads / 89 ativos / 7 respondidos / 19 bounces de leads / 32 no cache; cobertura 100% (117/117). Nenhum pedido de relatorio ESG. Quentes inalterados — Sumerbol segue #1 aguardando retorno da Ivone (email de fechamento 14:10)."
+},
+"tick_atendente_26_08_11_05": {
   "rodadas_no_dia": 3,
   "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
   "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (8 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
@@ -74,7 +95,28 @@
    "Hile (nicho encapsulados, V2)"
   ],
   "nota": "Tick de rotina com 1 evento: Sumerbol Supermercados respondeu ao ultimo contato informando que a proposta foi encaminhada ao setor responsavel e forneceu contato humano direto (manutencao@sumerbol.com.br, Ivone) — diferente das auto-respostas de SAC (Oba/Arcor), aqui ha um caminho concreto de negociacao. Respondido na hora pela persona de compra pedindo volume + tipo + coleta-teste + WhatsApp. Nenhum problema operacional; watchdog exit 0. Quentes agora incluem Sumerbol como #1 (contato direto disponivel)."
- },
+},
+"tick_atendente_26_08_15_32": {
+  "rodadas_no_dia": 5,
+  "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — todos os 32 ja com tentativa registrada em correcoes_emails.json (18 'ja tentado' neste tick, incluindo Kemin sem alternativa valida). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 117 leads, 89 ativos, 32 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila de prospeccao com 0 pendentes (101 empresas: 90 contatados, 24 bounces) — nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% — 117/117 leads com apresentacao/boas-vindas)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio)",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde o tick 11:05 (Sumerbol ja respondido). Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada ao setor responsavel + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br; resposta IA 11:05 + email de fechamento do Melhorador para Ivone 14:10. PRIORIDADE: telefonar/WhatsApp (11) 96785-9631 para Ivone em 2-3 dias se sem retorno)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — resposta enviada 09:35, aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 15:01: watchdog exit 0, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospeccao com 0 pendentes. Base estavel em 117 leads / 89 ativos / 7 respondidos / 19 bounces / 32 no cache; cobertura 100% (117/117). Nenhum pedido de relatorio ESG. Quentes inalterados — Sumerbol segue #1 aguardando retorno da Ivone."
+},
  "tick_atendente_26_08_11_35": {
   "rodadas_no_dia": 4,
   "sync_formspree": "32 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total)",
