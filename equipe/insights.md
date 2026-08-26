@@ -1087,3 +1087,67 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 1. **Decidir o ritmo de reposição da fila** (lição 1) — é o gargalo nº1 de crescimento do pipeline.
 2. **Netlify 403** (lição 3) — a versão com calculadora está invisível no domínio principal.
 3. **Ações humanas quentes:** telefone Arcor/Bagley, GoodBom (19) 3828-9798 e Rede Boa (#23915) — a IA já fez a parte de e-mail; conversão depende de contato humano.
+
+---
+
+## 2026-08-26 (quarta) — ESTRATEGISTA (planejamento da semana)
+
+### Diagnóstico da semana (números reais verificados)
+- **107 leads** (80 ativos | 19 bounce | 6 respondidos | 2 encerrados) · **104 apresentações** enviadas · **32 emails no cache de bounce** (13 históricos/alternativos).
+- **Respostas reais: 5 (4,8% dos contatados)** — acima da meta (>3%). Das 5: **2 humanas** (Rede Boa 18/08, GoodBom 19/08) e **3 SAC automáticas** (Arcor/Bagley 26/08, Oba 19–26/08, Sanofi 19/08). Tendência de template: lote V1 ~1% → V2 ~4,8% (confirma encurtamento).
+- **Bounce:** 18% dos leads (19/107) — dominado, mas com 13 "órfãos" no cache que NÃO são falha do email cadastrado do lead.
+- **Watchdog:** saudável. **Backlog de 154 follow-ups** do gap 19→26/08 (7 dias sem cron do Atendente) foi limpo no tick 09:40 — cadência diária é obrigatória.
+- **Fila de prospecção:** 7 pendentes com MX validado (5 hotéis + Frango Assado + São Vicente) — NÃO está zerada, mas é o gargalo nº1 (Atendente consome de manhã, Prospector repõe pouco).
+- **Inbound:** 0 leads novos via site na semana (3 acumulados, todos de teste) — o site não está gerando demanda.
+
+### Ponto mais fraco identificado
+**FECHAMENTO.** São 5 leads quentes em aberto há dias/semanas (Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile) e **nenhum contrato ou coleta-teste fechado**. O e-mail faz a parte dele (porta aberta); a conversão em coleta/contrato depende de ação humana (telefone/WhatsApp/LinkedIn) que ainda não aconteceu.
+
+### Pesquisa de mercado (26/08) — com fontes
+- **Portaria MME/MMA nº 3/2026 CONFIRMADA:** mandato de **≥1% de óleos e gorduras residuais (OGR)** no biodiesel/SAF/diesel verde **obrigatório a partir de jan/2028** (publicada 13/05/2026 no DOU). Fontes: biodieselbr.com/noticias/materia-prima/ogr/usinas-terao-que-usar-1-de-oleos-e-gorduras-residuais-130526 · eixos.com.br · megawhat.uol.com.br · trenchrossi.com/alertas-legais. → Valida 100% o argumento de urgência já usado no template.
+- **Obrigação legal do gerador:** "por lei, estabelecimentos são obrigados a dar destino correto ao óleo contratando empresa de reciclagem" (bomgourmet.com/o-que-fazer-com-o-oleo-de-cozinha-veja-como-restaurantes-reciclam) — reforça o ângulo PNRS/CNPJ no FP2.
+- **Concorrentes pagam na hora:** "Pagamento imediato via PIX" (BiOeste, instagram) — **pagamento à vista na coleta vira diferencial de fechamento**; Óleo Verde confirma que preço depende de qualidade/volume e que coletor clandestino é risco (oleoverderesiduos.com.br/2026/02/25).
+
+### Mudanças aplicadas (1–3)
+1. **FP2 reforçado p/ fechamento** (`bot/prospecao_followup.py`): Portaria 3/2026 (urgência 2028) + PNRS/passivo no CNPJ + **contrato de coleta programada com volume mínimo** + **relatório ESG mensal** + **pagamento à vista (PIX) na coleta** + CTA **coleta-teste**. `py_compile` OK; render 189 palavras (escaneável, 4 parágrafos).
+2. **Playbook de Fechamento** (`bot/persona.md`): nova seção guiando o Atendente a transformar resposta quente em coleta/contrato — pedir volume, propor coleta-teste, fechar via WhatsApp, argumentos legais/ESG/anti-furto, cronograma 24h–3d, contrato para >500 L/mês.
+3. **Memória/plano** (`equipe/ecossistema.json` → `estrategista_2026_08_26`): diagnóstico, metas da semana com foco em fechamento e instruções por membro.
+   - **Fila NÃO alterada:** não havia email novo confirmado em site oficial (regra da equipe) — 7 pendentes válidos já existem; adicionar empresa à fila só com email real + MX via nslookup.
+
+### Metas da semana (26/08 → 01/09) — foco em FECHAMENTO
+1. **Fechar ≥1 contrato/coleta-teste** — ação humana obrigatória nos 5 quentes: telefonar **GoodBom (19) 3828-9798**, **Arcor/Bagley** (compras/facilities/qualidade), **Rede Boa (#23915)**, **Sanofi** (departamento interno de resíduos/facilities — SAC não decide), **Hile**.
+2. **Atendente** aplica o Playbook de Fechamento em toda resposta quente (pedir volume + coleta-teste, não parar em "encaminhei").
+3. Manter taxa de resposta ≥4% e tentar ≥5% (V2 + FP2 novo em monitoramento).
+4. **Fila:** Prospector repor 5–8 empresas/dia com MX validado (ou 2 rodadas 09:00+15:00); alvo ≥10 pendentes.
+5. **Bounce <15%**; não marcar lead bounce quando só o email ALTERNATIVO falhou.
+6. **Inbound:** 1 lead real via site — destravar Netlify (créditos) ou HTTPS do GitHub Pages e cadastrar no Google Search Console.
+7. Monitorar resposta dos novos segmentos: hotéis (5), rotisserie, supermercados, refeições coletivas.
+
+### Lições registradas para a equipe
+- Cadência diária do Atendente é obrigatória (7 dias sem rodar = 154 follow-ups atrasados de uma vez).
+- Fila vive zerada por descompasso Atendente(09:40) × Prospector(09:00) — reposição de 5–8/dia ou 2ª rodada resolve.
+- Auto-resposta de SAC com "ticket FECHADO" (Oba) = porta fechada; responder só reabre o chamado. "Encaminhado ao departamento" (Arcor/Sanofi) = porta aberta: insistir no canal interno.
+
+---
+
+## 2026-08-26 (quarta) — MELHORADOR CONTÍNUO (tick 10:51)
+
+### Diagnóstico do dia
+- **Sistema saudável:** watchdog exit 0 (107 leads, 80 ativos, 32 bounces no cache); dashboard com 5 respostas (4,8% — acima da meta 3%); fila de prospecção com 7 pendentes (MX validado) — NÃO zerada.
+- **Ponto mais fraco:** o **FP3 (último follow-up, dia 10)** continuava genérico ("porta continua aberta", sem valor nem urgência) — enquanto o Estrategista já havia reforçado FP1 e FP2 com argumentos de fechamento. O último e-mail da sequência é a última chance de converter antes do lead esfriar — era o elo quebrado.
+
+### Melhoria implementada (testada)
+1. **`bot/prospecao_followup.py` — FP3 reescrito com argumentos de fechamento:**
+   - Valor concreto: R$ 1,00–2,50/L **à vista (PIX na coleta)** + renda calculada (600 L/mês ≈ **R$ 14 mil/ano**);
+   - Urgência: **Portaria MME/MMA nº 3/2026** (≥1% de óleo residual no biodiesel obrigatório em **jan/2028**) — "quem fecha contrato agora garante preço e prioridade";
+   - CTA de **coleta-teste** essa semana + resposta da quantidade mensal = valor em 24h;
+   - Saída sem pressão ("sem interesse? é só ignorar") — mantém a cordialidade do último contato.
+   - Verificado: `py_compile` OK + renderização real (151 palavras, subject mantido, thread com `apresentacao_msgid`).
+
+### Impacto
+- **35 leads** com FP2 enviado entram em FP3 nos **próximos 3–4 dias** (apresentação em ~6–7d hoje; vence no dia 10) — primeira leva a receber o FP3 com argumentos de fechamento. Monitorar resposta.
+
+### Para o Estrategista (domingo)
+1. Monitorar resposta da 1ª leva de FP3 novo (35 leads até 30/08) — é o último funil antes do encerramento.
+2. Persiste o gargalo de FECHAMENTO: ação humana telefônica nos 5 quentes (GoodBom, Arcor/Bagley, Rede Boa, Sanofi, Hile) — o e-mail já fez a parte dele.
+3. Netlify segue sem créditos de build (403); versão nova da calculadora só no GitHub Pages.

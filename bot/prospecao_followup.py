@@ -95,19 +95,21 @@ def tpl_fp(cfg, lead, n):
         subj = f"Re: compra de óleo usado — {lead['empresa']} × Master Óleo"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Entendo que o momento pode não ser o ideal, mas reforço que a proposta segue disponível: <b>compramos o óleo e a gordura vegetal usados</b> da {lead['empresa']} com coleta programada e certificado em toda retirada.</p>
-<p>E o momento é bom para quem gera esse resíduo: o mercado de reciclagem de óleo de cozinha está em alta (setor global de <b>US$ 11 bilhões</b>, crescendo ~7% ao ano com a demanda por biodiesel) — referência de mercado de <b>R$ 1,00 a R$ 2,50 por litro</b> conforme a qualidade.</p>
-<p>Para empresas que geram <b>mais de 500 litros por mês</b>, além do pagamento pelo material, a coleta e a logística são totalmente por nossa conta — e ainda emitimos <b>relatório de impacto ambiental</b> para as suas metas ESG. A sua equipe não precisa se preocupar com nada.</p>
-<p>Vale uma conversa rápida? Posso te passar uma estimativa de valor em poucos minutos se você me disser a quantidade mensal aproximada. WhatsApp: {g['telefone_whatsapp']}.</p>
+<p>Entendo que o momento pode não ser o ideal, mas a proposta segue de pé: <b>compramos o óleo e a gordura vegetal usados</b> da {lead['empresa']} com coleta programada, bombonas fornecidas e certificado de destinação em toda retirada.</p>
+<p>Dois fatos recentes que mudam o jogo para quem gera esse resíduo: (1) a <b>Portaria MME/MMA nº 3/2026</b> torna <b>obrigatório ≥1% de óleo residual no biodiesel a partir de jan/2028</b> — o que hoje é descarte vai virar commodity disputada, e quem fecha contrato agora garante preço e prioridade; (2) pela <b>PNRS (Lei 12.305/2010)</b>, a destinação correta é obrigação do gerador — se o coletor não emitir MTR/certificado, o passivo ambiental fica no CNPJ de vocês.</p>
+<p>Para quem gera <b>mais de 500 L/mês</b>: contrato de <b>coleta programada com volume mínimo</b>, logística 100% por nossa conta, <b>relatório ESG mensal</b> (litros, água preservada, CO₂) para suas metas, e <b>pagamento à vista (PIX) na coleta</b>.</p>
+<p>Vamos agendar uma <b>coleta-teste</b>? Me diz quantos litros (ou kg) vocês geram por mês que eu te passo o valor e o certificado em até 24h. WhatsApp: {g['telefone_whatsapp']}.</p>
 <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
         subj = f"Último contato sobre a compra do óleo — {g['nome']}"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Este é nosso último e-mail sobre a proposta de <b>compra do óleo usado</b> da {lead['empresa']} — não quero ocupar sua caixa de entrada sem necessidade.</p>
-<p>Se o tema for relevante em algum momento, a porta continua aberta: <b>pagamos pelo óleo e gordura vegetal usados</b>, com certificado de destinação e coleta programada. Basta chamar no WhatsApp {g['telefone_whatsapp']} ou responder este e-mail.</p>
-<p>Obrigado pela atenção.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+<p>Última mensagem sobre a <b>compra do óleo usado</b> da {lead['empresa']} — só 2 motivos para valer 2 minutos de atenção:</p>
+<p>1) O óleo que hoje sai de graça <b>paga de R$ 1,00 a R$ 2,50/litro</b>, à vista (<b>PIX na coleta</b>), com certificado de destinação e coleta programada — logística 100% por nossa conta. Um ponto que gera 600 L/mês recebe cerca de <b>R$ 14 mil/ano</b> só com esse resíduo.</p>
+<p>2) A partir de <b>jan/2028</b>, o biodiesel é obrigado a usar óleo residual (<b>Portaria MME/MMA nº 3/2026</b>) — quem fechar contrato agora garante preço e prioridade antes da disputa pela matéria-prima.</p>
+<p>Se fizer sentido, agendamos uma <b>coleta-teste</b> essa semana, sem compromisso: me responde a quantidade mensal (litros ou kg) que eu te passo o valor e o certificado em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Sem interesse? Sem problema — é só ignorar. Obrigado pela atenção.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     return {"subject": subj, "html": html}
 

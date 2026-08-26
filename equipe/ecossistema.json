@@ -1,6 +1,6 @@
 {
   "criado_em": "2026-08-13",
-  "atualizado_em": "2026-08-26T10:30",
+  "atualizado_em": "2026-08-26T10:51",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -428,6 +428,58 @@
       "Ritmo de reposicao da fila: Prospector deve repor 5-8/dia ou rodar em 2 horarios (09:00+15:00) - senao a fila vive zerada apos o Atendente 09:40",
       "Netlify 403: comprar credito de build ou trocar DNS para GitHub Pages",
       "Acoes humanas quentes: telefone Arcor/Bagley, GoodBom (19) 3828-9798, Rede Boa (#23915)"
+    ]
+  },
+  "estrategista_2026_08_26": {
+    "diagnostico_semana": {
+      "leads_total": 107,
+      "leads_ativos": 80,
+      "apresentacoes_enviadas": 104,
+      "bounces_leads": 19,
+      "bounces_cache": 32,
+      "taxa_bounce": "18% dos leads (cache inclui 13 historicos/alternativos)",
+      "taxa_resposta": "4,8% dos contatados (meta >3% BATIDA - tendencia: 1% no lote V1 -> 4,8% no V2)",
+      "respostas_humanas": "2 (Rede Boa + GoodBom) | SAC automaticas: 3 (Arcor/Bagley, Oba, Sanofi)",
+      "inbound_formspree": "0 novos na semana (3 acumulados, todos de teste) - SITE NAO GERA LEAD",
+      "watchdog": "saudavel (exit 0) - backlog de 154 follow-ups do gap 19-26/08 limpo no tick 09:40",
+      "fila_prospeccao": "7 pendentes (5 hoteis + Frango Assado + Sao Vicente, MX validado pelo Melhorador 26/08 10:25) - nao esta zerada, mas exige reposicao continua",
+      "ponto_mais_fraco": "FECHAMENTO: 5 leads quentes em aberto ha dias/semanas e NENHUM contrato ou coleta-teste; conversao depende de acao humana (telefone/WhatsApp/LinkedIn) que nao aconteceu"
+    },
+    "mudancas_aplicadas": {
+      "fp2_reforcado_fechamento": "prospecao_followup.py FP2: adicionados Portaria MME/MMA 3/2026 (1% OGR jan/2028) + PNRS/CNPJ + contrato de coleta com volume minimo + relatorio ESG mensal + pagamento a vista (PIX) na coleta + CTA coleta-teste. py_compile OK, render 189 palavras",
+      "persona_playbook_fechamento": "persona.md: nova secao 'Playbook de Fechamento' - roteiro do Atendente para converter lead quente em coleta/contrato (pedir volume, coleta-teste, WhatsApp, argumentos legais/ESG/anti-furto, cronograma 24h-3d, contrato para >500L/mes)",
+      "fila_nao_alterada": "NAO adicionei empresas a fila_prospeccao_extra.json - sem email novo confirmado em site oficial (regra da equipe); 7 pendentes validos ja existem. Prospector deve repor com MX validado"
+    },
+    "metas_semana_26_08_a_01_09_foco_fechamento": [
+      "FECHAR >=1 contrato/coleta-teste: acao humana OBRIGATORIA nos 5 quentes - telefonar GoodBom (19) 3828-9798, Arcor/Bagley (compras/facilities/qualidade), Rede Boa (#23915), Sanofi (departamento interno de residuos/facilities), Hile",
+      "Atendente: usar o Playbook de Fechamento em TODA resposta de lead quente; nao parar em 'encaminhei ao departamento' - pedir volume + propor coleta-teste",
+      "Manter taxa de resposta >=4% e subir para >=5% com V2 + FP2 novo (monitorar respostas da leva 26/08)",
+      "Fila: Prospector repor 5-8 empresas/dia (ou 2 rodadas 09:00+15:00) com MX validado; alvo >=10 pendentes no fim da semana",
+      "Bounce: manter <15% (validador MX ja ativo no enviar_lote); nao marcar lead como bounce quando so o email ALTERNATIVO falhou (13 orfaos do cache)",
+      "Inbound: 1 lead real via site na semana - destravar Netlify (creditos) ou HTTPS do GitHub Pages p/ masteroleo.eco.br e cadastrar no Google Search Console",
+      "Novos segmentos em curso: hoteis (5), rotisserie (Frango Assado), supermercados (Sao Vicente), refeicoes coletivas - monitorar resposta"
+    ],
+    "aprendizados_novos": [
+      "Portaria MME/MMA 3/2026 CONFIRMADA (biodieselbr 13/05/2026, eixos, trenchrossi, megawhat): 1% OGR obrigatorio no biodiesel/SAF/diesel verde a partir de jan/2028 - argumento de urgencia legitimo, usar em FP2/FP3 e propostas",
+      "Concorrentes pagam via PIX imediato na coleta (ex.: BiOeste 'pagamento imediato via PIX') - pagamento a vista vira diferencial de fechamento; adicionado ao FP2 e ao playbook",
+      "Obrigacao legal de destincao (bomgourmet: 'por lei, estabelecimentos sao obrigados a destinar corretamente contratando empresa de reciclagem') - reforca o angulo PNRS/CNPJ",
+      "Backlog de follow-ups acumula quando o cron fica dias sem rodar (154 atrasados em 26/08) - manter cadencia diaria do Atendente; o catch-up funciona mas entrega FP2/FP3 no mesmo dia de um FP1",
+      "Fila vive zerada porque Atendente consome de manha e Prospector repoe pouco - reposicao de 5-8/dia ou 2 rodadas resolve (gargalo nº1 de crescimento)"
+    ],
+    "para_equipe": [
+      "ATENDENTE: aplicar Playbook de Fechamento (persona.md) em toda resposta; nao responder auto-respostas de SAC de ticket FECHADO (Oba) - marcar visto",
+      "PROSPECTOR: repor 5-8 empresas/dia com MX valido; priorizar hoteis/restaurantes/refeicoes coletivas/rotisserie (alto volume de fritura, base pouco explorada)",
+      "ANALISTA: monitorar resposta dos 7 novos (hoteis) + efeito do FP2 novo; nao marcar lead bounce por email alternativo falho",
+      "HUMANO: telefonar GoodBom (19) 3828-9798, Arcor/Bagley, Rede Boa (#23915) - email ja fez a parte dele"
+    ]
+  },
+  "tick_melhorador_26_08_10_51": {
+    "diagnostico": "Sistema saudavel (watchdog exit 0, 107 leads, 80 ativos, 32 bounces no cache; dashboard 4,8% resposta — acima da meta 3%). Fila de prospeccao com 7 pendentes (hoteis/rotisserie/supermercado adicionados as 10:30, MX validado) — NAO zerada. Ponto MAIS FRACO: FP3 (ultimo follow-up, dia 10) continuava generico ('porta continua aberta') — sem argumentos de fechamento, apos o Estrategista reforcar FP1/FP2.",
+    "melhoria_fp3": "bot/prospecao_followup.py: FP3 reescrito com argumentos que convertem: (1) valor R$ 1,00-2,50/L a vista com PIX na coleta + renda calculada (600 L/mes = R$ 14 mil/ano), (2) urgencia Portaria MME/MMA 3/2026 (jan/2028 obrigatorio) + CTA de coleta-teste + saida sem pressao ('se nao interessa, e so ignorar'). py_compile OK; render 151 palavras, subject mantido 'Ultimo contato sobre a compra do oleo'. 35 leads elegiveis receberao este FP3 nos proximos 3-4 dias (apresentacao ~6-7d hoje; vence no dia 10).",
+    "para_estrategista": [
+      "35 leads com FP2 enviado entram em FP3 ate 30/08 — monitorar resposta do FP3 novo (1a leva com argumentos de fechamento)",
+      "Persistem: acao humana telefonica nos 5 quentes (GoodBom, Arcor/Bagley, Rede Boa, Sanofi, Hile) — email ja fez a parte dele",
+      "Netlify segue sem creditos de build (403) — versao nova so no GitHub Pages"
     ]
   }
 }
