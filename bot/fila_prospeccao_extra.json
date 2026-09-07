@@ -488,5 +488,33 @@
     "email": "contato@hotelpremiumcampinas.com.br",
     "cidade": "Campinas/SP",
     "segmento": "hotel com restaurante - fritura de cozinha"
+  },
+  {
+    "nome": "Mareia (Conrail Alimentos)",
+    "empresa": "Conrail Industria e Comercio de Produtos Alimenticios Ltda",
+    "email": "sac@mareia.com.br",
+    "cidade": "Campo Limpo Paulista/SP",
+    "segmento": "industria de maioneses, catchups e mostardas (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Nutylac",
+    "empresa": "Nutylac Industria de Alimentos",
+    "email": "contato@nutylac.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "industria de alimentos formulados em po e bebidas lacteas - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Gomah Alimentos",
+    "empresa": "Gomah Comercio e Industria de Sementes Ltda",
+    "email": "comercial@gomah.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "industria de alimentos (sementes naturais)"
+  },
+  {
+    "nome": "Laticinios Argenzio",
+    "empresa": "Argenzio Industria de Laticinios",
+    "email": "sac@argenzio.com.br",
+    "cidade": "Sao Paulo/SP (sede; fabrica em Buritama/SP)",
+    "segmento": "laticinios (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura)"
   }
 ]

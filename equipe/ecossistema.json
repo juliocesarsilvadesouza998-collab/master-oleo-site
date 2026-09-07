@@ -1,6 +1,6 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-07T09:36",
+ "atualizado_em": "2026-09-07T10:15",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
   "limite_diario_prospeccao": 15,
@@ -31,11 +31,11 @@
  },
  "fila_prospeccao": {
   "atualizado_em": "2026-09-07",
-  "total": 101,
+  "total": 105,
   "pendentes": 0,
-  "contatados": 90,
+  "contatados": 94,
   "bounces": 24,
-  "nota": "07/09 (enviar_lote --status): fila com 101 empresas — 90 contatados, 24 bounces, 0 pendentes. Fila ativa zerada; reposicao 5-8/dia pelo Prospector segue sendo o gargalo de crescimento."
+  "nota": "07/09 10:15 (Atendente): fila com 105 empresas — 94 contatados, 24 bounces, 0 pendentes (enviar_lote --status confirmado). Fila extra com 74 empresas aguardando reposicao — gargalo segue no Prospector (5-8/dia)."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -855,5 +855,51 @@
   "watchdog": "saudavel (07/09 09:40, exit 0 apos correcao de 13 follow-ups atrasados — 117 leads, 89 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
   "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
   "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+ },
+ "tick_atendente_07_09_10_09": {
+  "rodadas_no_dia": 2,
+  "sync_formspree": "33 emails em bounce cache (inclui rh@realgastronomia.com.br, novo bounce do site); 0 notificacoes novas do Formspree processadas — Real Gastronomia ja estava cadastrada (11 leads criados hoje no total: 7 site/inbound + 4 prospeccao-lote)",
+  "corrigir_emails": "0 processados (18 ja tentados). CORRECAO MANUAL deste tick: Real Gastronomia (rh@realgastronomia.com.br deu bounce) -> vendas@realgastronomia.com.br (site oficial realgastronomia.com.br confirmado — Fornecimento de alimentos/self-service — MX valido mx.uhserver.com). Lead atualizado no leads.csv + registrado em correcoes_emails.json",
+  "watchdog": "exit 1 na 1a rodada: 1 bounce sem tentativa de correcao (rh@realgastronomia.com.br, lead da Formspree com fonte vazia que o corrigir_emails.py nao processa) — RESOLVIDO com correcao manual; depois exit 1 com 1 lead parado (Real Gastronomia corrigida aguardando boas-vindas) — RESOLVIDO pelo send_sequence. Final: exit 0, saudavel — 128 leads, 100 ativos, 33 bounces no cache, 0 parados",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila com 105 empresas — 94 contatados, 24 bounces, 0 pendentes. Nada a enviar",
+  "send_sequence": "7 boas-vindas enviadas: Novotel Itu (Accor), Metha Alimentos, Rede Top, Real Gastronomia (email corrigido!), Mirassol Refeicoes, FS Alimentos, Rest Industrial (Belvit). Cobertura 100% (128/128 com apresentacao/boas-vindas)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde 26/08 17:31. Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Real Gastronomia (NOVO — inbound do site recuperado: rh@realgastronomia.com.br deu bounce e foi corrigido para vendas@realgastronomia.com.br; empresa de fornecimento de alimentos/self-service, perfil ideal de gerador de oleo de fritura. Boas-vindas enviada 10:09. Acompanhar resposta: se responder, pedir volume mensal + tipo e levar ao WhatsApp (11) 96785-9631)",
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada ao setor responsavel + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br. PRIORIDADE: telefonar/WhatsApp (11) 96785-9631 para Ivone — prazo dos 2-3 dias JA venceu, urgente)",
+   "Savegnago Supermercados + GRSA (Grupo GR) — completaram a sequencia FP2/FP3 sem resposta; alvos grandes, valem follow-up humano por telefone",
+   "Arcor/Bagley (SAC automatico 26/08 encaminhado a area responsavel — aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina com 1 correcao importante: bounce do lead inbound Real Gastronomia resolvido manualmente (email oficial vendas@realgastronomia.com.br encontrado no site da empresa) — lead recuperado e boas-vindas enviada. 7 boas-vindas no total (inbound acumulado da manha). 11 leads criados hoje (7 site + 4 prospeccao-lote com MX validado: Mareia/Conrail, Nutylac, Argenzio, Gomah). Watchdog final exit 0: 128 leads / 100 ativos / 7 respondidos / 19 bounces de leads / 33 no cache; cobertura 100% (128/128). Nenhum pedido de relatorio ESG. Nenhum reply pendente."
+ },
+ "tick_atendente_07_09_10_15": {
+  "rodadas_no_dia": 3,
+  "sync_formspree": "33 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site desde o tick 10:09 — 3 inbound acumulados no total)",
+  "corrigir_emails": "0 bounces processados — todos os 33 ja com tentativa registrada em correcoes_emails.json (18 \"ja tentado\" neste tick). Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 128 leads, 100 ativos, 33 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "status OK: fila com 105 empresas — 94 contatados, 24 bounces, 0 pendentes. Nada a enviar",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% — 128/128 leads com apresentacao/boas-vindas)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde 26/08 17:31. Sem anexo ESG (nenhum pedido de relatorio)",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Real Gastronomia (inbound do site recuperado de bounce no tick 10:09: rh@realgastronomia.com.br -> vendas@realgastronomia.com.br; fornecimento de alimentos/self-service, perfil ideal de gerador de oleo de fritura. Boas-vindas enviada 10:09. Acompanhar resposta: pedir volume mensal + tipo e levar ao WhatsApp (11) 96785-9631)",
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada ao setor responsavel + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br. PRIORIDADE: telefonar/WhatsApp (11) 96785-9631 para Ivone — prazo dos 2-3 dias vencido, urgente)",
+   "Savegnago Supermercados + GRSA (Grupo GR) — sequencia FP2/FP3 completa sem resposta; alvos grandes, valem follow-up humano por telefone",
+   "Arcor/Bagley (SAC automatico 26/08 encaminhado a area responsavel — aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 10:09: watchdog exit 0 na 1a rodada, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospeccao com 0 pendentes (105 empresas: 94 contatados, 24 bounces). Base estavel em 128 leads / 100 ativos / 7 respondidos / 19 bounces de leads / 33 no cache; cobertura 100% (128/128). Nenhum pedido de relatorio ESG. Quentes inalterados — Real Gastronomia (inbound recuperado) + Sumerbol (prazo vencido) no topo."
  }
 }

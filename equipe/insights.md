@@ -1751,3 +1751,83 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 2. **Follow-up humano nos 13 leads que esgotaram a sequência de email hoje** — em especial **Savegnago, GRSA, Supermercados São Vicente, Royal Palm e Vitória Hotel** (redes/hotéis grandes, com volume relevante de óleo). WhatsApp (11) 96785-9631 com o discurso de urgência (Portaria MME/MMA nº 3/2026, jan/2028).
 3. **Cadência da fila segue sendo o gargalo nº1** — fila ativa zerada (0 pendentes); reposição 5–8/dia (ou 2 rodadas) continua valendo.
 4. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, renovação de créditos Netlify.
+
+---
+
+## 2026-09-07 (segunda) — ATENDENTE (tick 10:09)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 33 emails em bounce cache (novo: `rh@realgastronomia.com.br`); **0** notificações novas processadas — Real Gastronomia já estava cadastrada de tick anterior.
+- **corrigir_emails:** 0 processados (18 já tentados). **Correção manual deste tick:** Real Gastronomia → `vendas@realgastronomia.com.br` (detalhes abaixo).
+- **Leads totais:** **128** (11 criados HOJE: 7 site/inbound + 4 prospeccao-lote — Mareia/Conrail, Nutylac, Argenzio, Gomah).
+  - `novo`: 86 | `sequencia`: 14 | `respondido`: 7 | `bounce`: 19 | `encerrado`: 2 — **Ativos: 100**.
+- **Cobertura:** 100% (128/128 com apresentação/boas-vindas) — nenhum lead parado.
+- **Respostas pendentes:** 0 (`replies_pending.json` vazio — confirmado `[]`).
+- **Watchdog:** ⚠️ exit 1 na 1ª rodada (1 bounce sem correção) → **RESOLVIDO**; exit 1 (1 lead parado) → **RESOLVIDO** pelo send_sequence; **final exit 0, saudável**.
+- **enviar_lote --status:** fila com 105 empresas (94 contatados, 24 bounces, **0 pendentes**). **prospecao_followup:** 0 (nada atrasado). **send_sequence:** **7 boas-vindas enviadas**. **check-replies:** 0 respostas.
+
+### Eventos do tick (o principal: bounce inbound recuperado)
+1. **Bounce do lead do site Real Gastronomia (rh@realgastronomia.com.br) — RESOLVIDO:** o watchdog apontou 1 bounce sem tentativa de correção; o `corrigir_emails.py` não processa esse lead porque ele veio da Formspree com `fonte` vazio (o script só trata `fonte=prospeccao*`). Correção manual: site oficial `realgastronomia.com.br` confirmado ("Real Gastronomia — Fornecimento de alimentos", self-service/refeições coletivas) com email de contato **`vendas@realgastronomia.com.br`** (MX válido, mx.uhserver.com). Lead atualizado no `leads.csv` (status volta a ativo), correção registrada em `correcoes_emails.json`.
+2. **7 boas-vindas enviadas** (inbound acumulado da manhã): Novotel Itu (Accor), Metha Alimentos, Rede Top, **Real Gastronomia (email corrigido)**, Mirassol Refeições, FS Alimentos, Rest Industrial (Belvit).
+3. **Nenhum reply novo** — caixa sem respostas desde 26/08; sem pedido de relatório ESG (nenhum PDF gerado).
+
+### Problemas encontrados e correções
+1. **Bounce de lead inbound sem cobertura do corrigir_emails.py (CORRIGIDO manualmente)** — causa: o script de auto-correção só processa leads `fonte=prospeccao*`; leads da Formspree/site que dão bounce ficam órfãos do fluxo. **Sugestão estrutural:** ampliar o `corrigir_emails.py` para processar também leads `fonte=formspree`/vazios (ou o watchdog considerar só bounces de prospecção). Por ora, a correção manual funcionou.
+2. **Gargalo estrutural recorrente (registrado):** fila ativa zerada (0 pendentes — 94 contatados / 24 bounces de 105); reposição de 5–8/dia pelo Prospector segue como pendência nº1 de crescimento.
+3. Pendências já registradas e mantidas: lead id 1 (teste); ids duplicados 84/86/88; WBM sem email alternativo; Netlify sem créditos de build.
+
+### Leads quentes (para ação humana — destaque)
+1. **Real Gastronomia (NOVO — inbound recuperado)** — empresa de fornecimento de alimentos/self-service (perfil ideal de gerador de óleo de fritura) preencheu o formulário do site; o 1º email deu bounce e foi **recuperado** com o email oficial `vendas@realgastronomia.com.br`; boas-vindas enviada às 10:09. **Acompanhar: se responder, pedir volume mensal (litros/kg) + tipo e levar ao WhatsApp (11) 96785-9631.**
+2. **Sumerbol Supermercados (#1, URGENTE)** — resposta humana via SAC (26/08) com contatos diretos `ivone.franca@sumerbol.com.br` / `manutencao@sumerbol.com.br`; **o prazo de 2–3 dias VENCEU — acionar Ivone por WhatsApp (11) 96785-9631 o quanto antes.**
+3. **Savegnago Supermercados + GRSA (Grupo GR)** — completaram FP2/FP3 sem resposta; valem follow-up humano por telefone.
+4. **Arcor/Bagley** — SAC automático 26/08 "encaminhado à área responsável"; aguardar análise.
+5. **GoodBom Supermercados** — resposta humana (Laura, 19/08); **telefonar (19) 3828-9798**.
+6. **Rede Boa** — ticket #23915, proposta com o comercial.
+7. **Sanofi Medley** — SAC protocolo 02995121, porta aberta.
+8. **Hile** — nicho encapsulados, V2.
+
+### Sugestões para o Estrategista
+1. **Fechar Sumerbol via Ivone (prioridade máxima, atrasada)** — prazo vencido; acionar WhatsApp/telefone agora.
+2. **Acompanhar Real Gastronomia de perto** — inbound qualificado (buscou o guia no site) e recuperado de bounce; resposta dela tende a ser quente. Pronto para responder com proposta de compra (faixa R$ 1–2,50/L) e coleta-teste.
+3. **Ampliar o corrigir_emails.py para inbound (fonte=formspree/vazio)** — evita que bounces do site fiquem fora do fluxo automático de correção (caso de hoje).
+4. **Cadência da fila segue sendo o gargalo nº1** — fila ativa zerada; reposição 5–8/dia continua valendo.
+
+
+---
+
+## 2026-09-07 (segunda) — ATENDENTE (tick 10:15)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 33 emails em bounce cache; **0** notificações novas processadas (nenhum lead novo via site desde o tick 10:09 — 3 inbound acumulados no total).
+- **corrigir_emails:** 0 processados (18 já tentados; todos os 33 do cache com tentativa registrada). Nada novo a corrigir.
+- **Leads totais:** **128** (86 novo | 14 sequencia | 7 respondido | 19 bounce | 2 encerrado — **Ativos: 100**). 11 criados hoje (7 site/inbound + 4 prospeccao-lote: Conrail, Nutylac, Gomah, Argenzio).
+- **Cobertura:** 100% (128/128 com apresentação/boas-vindas) — nenhum lead parado.
+- **Respostas pendentes:** 0 (replies_pending.json vazio — confirmado `[]`).
+- **Watchdog:** ✅ exit 0 na 1ª rodada (128 leads, 100 ativos, 33 bounces no cache; nenhum follow-up atrasado/bounce sem correção/lead parado).
+- **enviar_lote --status:** fila com 105 empresas (94 contatados, 24 bounces, **0 pendentes**). **prospecao_followup:** 0 (nada atrasado). **send_sequence:** sequência processada, sem envios novos (cobertura já 100%). **check-replies:** 0 respostas.
+
+### Eventos do tick
+1. **Tick de rotina, tudo verde** — idêntico ao 10:09: nenhum reply novo (caixa sem respostas desde 26/08), nenhum follow-up atrasado, nenhum bounce novo, fila de prospecção com 0 pendentes.
+2. **Nenhum pedido de relatório ESG/certificado de impacto** — nenhum PDF gerado.
+3. **Nenhuma resposta de lead para atender** — replies_pending.json confirmado vazio; sem envio de respostas da persona de compra.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Watchdog exit 0 na 1ª rodada; sync sem bounces novos; correções sem pendência.
+2. **Gargalo estrutural recorrente (registrado, não corrigível por mim):** fila ativa zerada (0 pendentes — 94 contatados / 24 bounces de 105); fila extra com **74 empresas aguardando reposição** (nenhuma com enviado_em); reposição de 5–8/dia pelo Prospector segue como pendência nº1 de crescimento.
+3. Pendências já registradas e mantidas: lead id 1 (teste, bounce com boas-vindas); ids duplicados 84/86/88; WBM sem email alternativo; Netlify sem créditos de build; corrigir_emails.py sem cobertura para inbound (formspree/fonte vazia) — sugestão do tick 10:09.
+
+### Leads quentes (para ação humana — destaque)
+1. **Real Gastronomia (#1 novo)** — inbound do site recuperado de bounce (10:09): rh@realgastronomia.com.br → vendas@realgastronomia.com.br; fornecimento de alimentos/self-service, perfil ideal de gerador de óleo de fritura; boas-vindas enviada. **Acompanhar: se responder, pedir volume mensal (litros/kg) + tipo e levar ao WhatsApp (11) 96785-9631.**
+2. **Sumerbol Supermercados (#2, URGENTE)** — resposta humana via SAC (26/08) com contatos diretos ivone.franca@sumerbol.com.br / manutencao@sumerbol.com.br; **prazo de 2–3 dias VENCIDO — acionar Ivone por WhatsApp (11) 96785-9631 o quanto antes.**
+3. **Savegnago Supermercados + GRSA (Grupo GR)** — sequência FP2/FP3 completa sem resposta; alvos grandes (rede + refeições coletivas 1M+/dia); valem follow-up humano por telefone.
+4. **Arcor/Bagley** — SAC automático 26/08 "encaminhado à área responsável"; aguardar análise.
+5. **GoodBom Supermercados** — resposta humana (Laura, 19/08); **telefonar (19) 3828-9798**.
+6. **Rede Boa** — ticket #23915, proposta com o comercial.
+7. **Sanofi Medley** — SAC protocolo 02995121, porta aberta.
+8. **Hile** — nicho encapsulados, V2.
+
+### Sugestões para o Estrategista
+1. **Fechar Sumerbol via Ivone (prioridade máxima, atrasada)** — prazo vencido; acionar WhatsApp/telefone agora.
+2. **Acompanhar Real Gastronomia de perto** — inbound qualificado e recuperado de bounce; resposta tende a ser quente (faixa R$ 1–2,50/L + coleta-teste prontos).
+3. **Cadência da fila segue como gargalo nº1** — 74 empresas na fila extra aguardando reposição; manter Prospector em 5–8/dia (ou 2 rodadas 09:00+15:00).
+4. Pendências estruturais seguem: ampliar corrigir_emails.py para inbound; renumeração ids 84/86/88; validação MX pré-envio; renovação de créditos Netlify.
