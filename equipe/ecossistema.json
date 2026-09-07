@@ -1,6 +1,6 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-07T14:10",
+ "atualizado_em": "2026-09-07T16:01-03:00",
  "melhorador_2026_09_07_14_10": {
   "diagnostico": "FILA DE PROSPECCAO VAZIA (0 pendentes) - gargalo nº1 confirmado pelo Estrategista 12:00; pipeline de novos contatos parado apesar de taxa de resposta 8,1% (10 respostas/124 enviados). Watchdog saudavel (135 leads, 100 ativos, 37 bounces cache).",
   "melhorias_aplicadas": [
@@ -49,11 +49,11 @@
  },
  "fila_prospeccao": {
   "atualizado_em": "2026-09-07",
-  "total": 110,
+  "total": 115,
   "pendentes": 0,
-  "contatados": 99,
-  "bounces": 24,
-  "nota": "07/09 11:32 (Atendente): fila com 110 empresas — 99 contatados, 24 bounces, 0 pendentes (enviar_lote --status confirmado apos envio). 3 apresentacoes ENVIADAS neste tick: Rede Bom Lugar Supermercados (contato@redebomlugar.com.br, 50 lojas/13 cidades RM Sorocaba com loja em Aluminio), Tenda Atacado (dpo@tendaatacado.com.br, atacarejo) e Roldao Atacadista (comercial@roldao.com.br, 39 lojas, canal comercial direto) — adicionados pelo Estrategista ~11:19 com MX validado (nslookup); leads ids 132, 133 e 134 cadastrados no leads.csv. Fila esvaziada; gargalo segue no Prospector (5-8 novos/dia com MX validado)."
+  "contatados": 104,
+  "bounces": 27,
+  "nota": "07/09 16:01 (Atendente): fila com 115 empresas — 104 contatados, 27 bounce, 0 pendentes (enviar_lote --status confirmado). 5 apresentacoes enviadas as 14:33-14:34 (ids 147-151: Andorinha Hiper Center c/ loja em Salto, Dalben, Paulistao Atacadista/Grupo Savegnago, Alvorada Sorocaba — bounce, Amigao). Fila esvaziada; gargalo segue no Prospector (5-8 novos/dia com MX validado)."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -1150,5 +1150,122 @@
    "Sanofi Medley (SAC protocolo 02995121 — porta aberta)"
   ],
   "nota": "Tick 100% verde: watchdog exit 0 (135 leads, 100 ativos, 37 bounces), caixa limpa confirmada DUPLAMENTE (check-replies + scan_inbox de contingencia = 0 pendentes/nao lidas), fila de prospeccao com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo. Nenhum email enviado neste tick — dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC, prazo de toque 10/09). Pipeline inalterado desde 13:00. Nenhum pedido de relatorio ESG."
+ },
+ "tick_atendente_07_09_14_31": {
+  "rodadas_no_dia": 10,
+  "sync_formspree": "37 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os bounces do cache ja com tentativa registrada em correcoes_emails.json. Nada novo a corrigir",
+  "watchdog": "exit 0 saudavel (14:31 e pos-envio 14:34) — 135->140 leads, 100->105 ativos, 37 bounces no cache; nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "scan_inbox_contingencia": "0 mensagens nao lidas/recentes na INBOX (janela 7 dias); 28 msgids enviados indexados; aviso benigno de SELECT na pasta Sent",
+  "enviar_lote": "5 apresentacoes ENVIADAS (14:33-14:34) da fila deixada pelo Melhorador 14:10 — Andorinha Hiper Center (loja em SALTO e Itu; id 147), Supermercados Dalben (Campinas/Valinhos; id 148), Paulistao Atacadista do Grupo Savegnago (id 149; ATENCAO: avaliar pausa se comercial@savegnago responder), Supermercados Alvorada Sorocaba (id 150), Amigao Supermercados Campinas (id 151). Todos com MX validado pelo Melhorador. Fila agora: 115 empresas, 99 contatados, 26 bounces, 0 pendentes",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_totais": 140,
+  "status_leads": {
+   "novo": 91,
+   "sequencia": 14,
+   "respondido": 11,
+   "bounce": 22,
+   "encerrado": 2,
+   "ativos": 105
+  },
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — #1: porta comercial oficial ABERTA (apresentacao enviada 10:32 ao comercial@savegnago.com.br; matriz (16) 3946-2088). PRAZO: sem retorno ate 10/09 -> toque leve no WhatsApp (11) 96785-9631. Rede ~100 lojas.",
+   "Grupo IMC / Frango Assado (id 135) — #2: canal comercial ABERTO via SAC (Thamela indicou felix.costa@grupoimc.com.br; apresentacao enviada 12:11). Grupo food service gigante (Frango Assado, Viena, Pizza Hut BR). PRAZO: sem retorno ate 10/09 -> toque no WhatsApp.",
+   "Andorinha Hiper Center (id 147, NOVO) — loja na propria SALTO + Itu; lead de maior potencial geografico; se responder priorizar coleta-teste na unidade de Salto.",
+   "Paulistao Atacadista (id 149, NOVO) — bandeira atacarejo do Grupo Savegnago; se comercial@savegnago responder, pausar para nao parecer insistencia duplicada.",
+   "Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldao Atacadista (id 134) — apresentacoes enviadas 11:32, aguardando retorno.",
+   "Sumerbol (id 21) — Ivone Franca, acionar WhatsApp. GoodBom (id 51) — Laura, (19) 3828-9798. Rede Boa (id 46) — ticket #23915. Arcor/Bagley (id 14) e Sanofi (id 91) — SAC aguardando area responsavel."
+  ],
+  "nota": "Tick 100% verde: watchdog exit 0 (pre e pos-envio), caixa limpa confirmada em dobro (check-replies + scan_inbox = 0 pendentes), 0 follow-ups atrasados, 0 bounces novos. Acao principal: fila esvaziada com 5 redes de supermercado (todas com MX validado), incluindo Andorinha com loja em SALTO. Nenhum email de resposta enviado — dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC). Proximo marco: 10/09 (toque no WhatsApp para Savegnago e Grupo IMC se silencio)."
+ },
+ "tick_atendente_07_09_15_01": {
+  "rodadas_no_dia": 11,
+  "sync_formspree": "38 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados; Alvorada (sac@alvoradasorocaba.com.br) sem email alternativo valido — lead 150 mantido como bounce",
+  "watchdog": "exit 0 saudavel — 140 leads, 104 ativos, 38 bounces no cache; nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes",
+  "check_replies": "1 pendente detectado = FALSO POSITIVO (mailer-daemon: Delivery Status Notification Failure para sac@alvoradasorocaba.com.br — SPFBL 550 conta inexistente; bounce ja registrado no cache e lead 150 ja bounce no CSV). FIX APLICADO: filtro de DSN/bounce (mailer-daemon, postmaster, delivery status notification, mensagem bloqueada) adicionado ao check_replies; revalidado com 0 pendentes. replies_pending.json limpo",
+  "scan_inbox_contingencia": "nao executado neste tick (check_replies filtrado validou caixa; sem respostas perdidas)",
+  "enviar_lote": "fila: 115 empresas / 104 ja contatados / 27 bounce / 0 pendentes — nada a enviar neste tick",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_totais": 140,
+  "status_leads": {
+   "novo": 90,
+   "sequencia": 14,
+   "respondido": 11,
+   "bounce": 23,
+   "encerrado": 2,
+   "ativos": 104
+  },
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — #1: porta comercial oficial ABERTA (apresentacao enviada 10:32 ao comercial@savegnago.com.br; matriz (16) 3946-2088). PRAZO: sem retorno ate 10/09 -> toque leve no WhatsApp (11) 96785-9631. Rede ~100 lojas.",
+   "Grupo IMC / Frango Assado (id 135) — #2: canal comercial ABERTO via SAC (Thamela indicou felix.costa@grupoimc.com.br; apresentacao enviada 12:11). Grupo food service gigante (Frango Assado, Viena, Pizza Hut BR). PRAZO: sem retorno ate 10/09 -> toque no WhatsApp.",
+   "Andorinha Hiper Center (id 147) — loja na propria SALTO + Itu; lead de maior potencial geografico; se responder priorizar coleta-teste na unidade de Salto.",
+   "Paulistao Atacadista (id 149) — bandeira atacarejo do Grupo Savegnago; se comercial@savegnago responder, pausar para nao parecer insistencia duplicada.",
+   "Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldao Atacadista (id 134) — apresentacoes enviadas 11:31; aguardando retorno."
+  ],
+  "observacoes": "Tick tranquilo: +5 leads de prospeccao-lote desde 14:01 (4 novo + 1 bounce/Alvorada). Bounce Alvorada confirmado por notificacao mailer-daemon — ja tratado. Nenhuma resposta real nova; aguardando Savegnago e Grupo IMC (prazo toque 10/09)."
+ },
+ "tick_atendente_07_09_15_31": {
+  "rodadas_no_dia": 12,
+  "sync_formspree": "38 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os 38 bounces do cache ja com tentativa registrada em correcoes_emails.json (22 'ja tentado' neste tick). Nada novo a corrigir",
+  "watchdog": "exit 0 saudavel — 140 leads, 104 ativos, 38 bounces no cache; nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "scan_inbox_contingencia": "0 mensagens nao lidas/recentes na INBOX (janela 7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent — caixa verificada em dobro",
+  "enviar_lote": "fila: 115 empresas / 104 ja contatados / 27 bounce / 0 pendentes — nada a enviar neste tick",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_totais": 140,
+  "status_leads": {
+   "novo": 90,
+   "sequencia": 14,
+   "respondido": 11,
+   "bounce": 23,
+   "encerrado": 2,
+   "ativos": 104
+  },
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — #1: porta comercial oficial ABERTA (apresentacao enviada 10:32 ao comercial@savegnago.com.br; matriz (16) 3946-2088). PRAZO: sem retorno ate 10/09 -> toque leve no WhatsApp (11) 96785-9631. Rede ~100 lojas.",
+   "Grupo IMC / Frango Assado (id 135) — #2: canal comercial ABERTO via SAC (Thamela indicou felix.costa@grupoimc.com.br; apresentacao enviada 12:11). Grupo food service gigante (Frango Assado, Viena, Pizza Hut BR). PRAZO: sem retorno ate 10/09 -> toque no WhatsApp.",
+   "Andorinha Hiper Center (id 147) — loja na propria SALTO + Itu; lead de maior potencial geografico; se responder priorizar coleta-teste na unidade de Salto.",
+   "Paulistao Atacadista (id 149) — bandeira atacarejo do Grupo Savegnago; se comercial@savegnago responder, pausar para nao parecer insistencia duplicada.",
+   "Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldao Atacadista (id 134) — apresentacoes enviadas 11:31; aguardando retorno."
+  ],
+  "nota": "Tick 100% verde de rotina: watchdog exit 0 (140 leads, 104 ativos, 38 bounces), 0 follow-ups atrasados, 0 bounces novos a corrigir, fila de prospeccao com 0 pendentes (gargalo do Prospector segue — manter 5-8/dia com MX validado), caixa limpa confirmada em dobro (check-replies + scan_inbox). Nenhuma resposta nova de lead; nenhum email de resposta enviado; nenhum pedido de relatorio ESG. Sem eventos desde o tick 15:01 (bounce Alvorada ja tratado). Proximo marco: 10/09 (toque no WhatsApp para Savegnago e Grupo IMC se silencio)."
+ },
+ "tick_atendente_07_09_16_01": {
+  "rodadas_no_dia": 13,
+  "sync_formspree": "38 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os 38 bounces do cache ja com tentativa registrada em correcoes_emails.json (22 'ja tentado' neste tick). Nada novo a corrigir",
+  "watchdog": "exit 0 saudavel — 140 leads, 104 ativos, 38 bounces no cache; nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100%)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "scan_inbox_contingencia": "0 mensagens nao lidas/recentes na INBOX (janela 7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent — caixa verificada em dobro",
+  "enviar_lote": "fila: 115 empresas / 104 ja contatados / 27 bounce / 0 pendentes — nada a enviar neste tick",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_totais": 140,
+  "status_leads": {
+   "novo": 90,
+   "sequencia": 14,
+   "respondido": 11,
+   "bounce": 23,
+   "encerrado": 2,
+   "ativos": 104
+  },
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — #1: porta comercial oficial ABERTA (apresentacao enviada 10:32 ao comercial@savegnago.com.br; matriz (16) 3946-2088). PRAZO: sem retorno ate 10/09 -> toque leve no WhatsApp (11) 96785-9631. Rede ~100 lojas.",
+   "Grupo IMC / Frango Assado (id 135) — #2: canal comercial ABERTO via SAC (Thamela indicou felix.costa@grupoimc.com.br; apresentacao enviada 12:11). Grupo food service gigante (Frango Assado, Viena, Pizza Hut BR). PRAZO: sem retorno ate 10/09 -> toque no WhatsApp.",
+   "Andorinha Hiper Center (id 147) — loja na propria SALTO + Itu; lead de maior potencial geografico; se responder priorizar coleta-teste na unidade de Salto.",
+   "Paulistao Atacadista (id 149) — bandeira atacarejo do Grupo Savegnago; se comercial@savegnago responder, pausar para nao parecer insistencia duplicada.",
+   "Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldao Atacadista (id 134) — apresentacoes enviadas 11:31; aguardando retorno."
+  ],
+  "nota": "Tick 16:01 100% verde de rotina, pipeline inalterado desde 15:31: watchdog exit 0 (140 leads, 104 ativos, 38 bounces), 0 follow-ups atrasados, 0 bounces novos, fila de prospeccao 0 pendentes (gargalo Prospector segue), caixa limpa confirmada em dobro (check-replies 0 + scan_inbox 0 nao lidas). Nenhuma resposta nova de lead, nenhum email enviado, nenhum pedido de relatorio ESG. Dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC). Proximo marco: 10/09 (toque no WhatsApp (11) 96785-9631 se silencio); monitorar replies de Andorinha, Dalben, Paulistao, Amigao, Sao Roque e Confianca."
  }
 }

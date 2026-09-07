@@ -1,19 +1,19 @@
 {
-  "atualizado_em": "2026-09-07T14:01:00-03:00",
+  "atualizado_em": "2026-09-07T16:01:00-03:00",
   "resumo": {
-    "total_leads": 135,
-    "leads_ativos": 100,
-    "bounces": 37,
+    "total_leads": 140,
+    "leads_ativos": 104,
+    "bounces": 38,
     "pipeline": {
-      "novo": 86,
+      "novo": 90,
       "sequencia": 14,
       "respondido": 11,
-      "bounce": 22,
+      "bounce": 23,
       "encerrado": 2
     }
   },
   "fontes_leads": {
-    "prospeccao-lote": 95,
+    "prospeccao-lote": 100,
     "prospeccao": 12,
     "prospeccao-nicho": 12,
     "prospeccao-vencidos": 4,
@@ -21,7 +21,31 @@
     "prospeccao-grupoimc": 1,
     "site": 1,
     "formspree": 1,
-    "teste-cron": 1
+    "teste-cron": 1,
+    "sem-fonte": 7
+  },
+  "atividade_tick_16h01_07_09": {
+    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados",
+    "prospecao_followup": "0 follow-ups atrasados",
+    "send_sequence": "sequência processada (nada novo a enviar)",
+    "check_replies": "0 pendentes (replies_pending.json vazio)",
+    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent",
+    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+    "observacao": "Tick tranquilo: pipeline inalterado desde 15:31 (140 leads, 104 ativos, 38 bounces); aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  },
+  "atividade_tick_15h01_07_09": {
+    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+    "corrigir_emails": "0 novas correções; Alvorada (sac@alvoradasorocaba.com.br) sem email alternativo válido — lead mantido como bounce",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados",
+    "prospecao_followup": "0 follow-ups atrasados",
+    "send_sequence": "sequência processada (nada novo a enviar)",
+    "check_replies": "1 pendente detectado = FALSO POSITIVO (mailer-daemon: Delivery Status Notification Failure para sac@alvoradasorocaba.com.br — SPFBL 550 conta inexistente). Lead 150 (Supermercados Alvorada) já estava marcado como bounce no CSV ('EMAIL INVÁLIDO — não reenviar') e sac@alvoradasorocaba.com.br já constava no bounces.json. FIX APLICADO: filtro de DSN/bounce (mailer-daemon, postmaster, 'delivery status notification', 'mensagem bloqueada') adicionado ao check_replies — revalidado: 0 pendentes após o filtro. replies_pending.json limpo.",
+    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+    "observacao": "Tick tranquilo: +5 leads via prospecao-lote desde o tick 14:01 (4 novo + 1 bounce/Alvorada). Nenhuma resposta real nova na caixa; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
   },
   "atividade_tick_14h01_07_09": {
     "sync_formspree": "0 novas notificações; 37 bounces em cache",
@@ -42,7 +66,7 @@
     "prospecao_followup": "0 follow-ups atrasados",
     "send_sequence": "sequência processada (nada novo a enviar)",
     "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 28 msgids enviados indexados p/ correlação de thread; aviso benigno de SELECT na pasta Sent no scan (check-replies usa a pasta Enviados correta via atributo \\Sent)",
+    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 28 msgids enviados indexados p/ correlação de thread; aviso benigno de SELECT na pasta Sent no scan (check-replies usa a pasta Enviados correta via atributo \\\\Sent)",
     "enviar_lote_status": "fila: 110 empresas / 99 já contatados / 26 bounce / 0 pendentes",
     "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
     "observacao": "Tick tranquilo: pipeline inalterado desde 13:00; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
@@ -64,10 +88,12 @@
     "prospecao_followup": "0 follow-ups atrasados",
     "send_sequence": "sequência processada (nada novo a enviar)",
     "check_replies": "0 pendentes; varredura manual da caixa (scan_inbox.py) confirmou que TODAS as respostas de hoje já foram atendidas no tick anterior: Savegnago (10:23 → apresentação 10:35) e Grupo IMC via BuzzMonitor (10:56 → apresentação a felix.costa@grupoimc.com.br ~12:05)",
-    "fix_check_replies": "IMPLEMENTADO E VALIDADO (verificação ad-hoc 6/6) — check-replies agora correlaciona respostas de plataforma (BuzzMonitor/Zendesk/Movidesk) por References/In-Reply-To contra msgids da pasta Enviados (524 msgids indexados); pasta Enviados localizada por atributo \\Sent ([Gmail]/E-mails enviados, conta pt-BR); reply aceita --lead-id para marcar o lead certo em respostas de plataforma; BUG ADICIONAL CORRIGIDO durante a verificação: cabeçalhos com acento/não-ASCII viravam objeto Header (email lib) e quebravam o json.dump do check-replies — agora tudo é coagido com str() na extração (fetch_thread_messages e collect_sent_msgids)",
+    "fix_check_replies": "IMPLEMENTADO E VALIDADO (verificação ad-hoc 6/6) — check-replies agora correlaciona respostas de plataforma (BuzzMonitor/Zendesk/Movidesk) por References/In-Reply-To contra msgids da pasta Enviados (524 msgids indexados); pasta Enviados localizada por atributo \\\\Sent ([Gmail]/E-mails enviados, conta pt-BR); reply aceita --lead-id para marcar o lead certo em respostas de plataforma; BUG ADICIONAL CORRIGIDO durante a verificação: cabeçalhos com acento/não-ASCII viravam objeto Header (email lib) e quebravam o json.dump do check-replies — agora tudo é coagido com str() na extração (fetch_thread_messages e collect_sent_msgids)",
     "emails_enviados_hoje": "~99 (lote FP3 + apresentação Savegnago + apresentação Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick"
   },
-  "bounces_novos_hoje": [],
+  "bounces_novos_hoje": [
+    "sac@alvoradasorocaba.com.br (Supermercados Alvorada — conta inexistente/SPFBL 550; sem email alternativo válido; lead 150 marcado como bounce)"
+  ],
   "leads_quentes": [
     {
       "empresa": "Savegnago Supermercados (~100 lojas)",
@@ -79,7 +105,7 @@
     {
       "empresa": "Frango Assado / Grupo IMC (International Meal Company)",
       "canal": "felix.costa@grupoimc.com.br (indicado pelo SAC — Thamela)",
-      "status": "CANAL COMERCIAL ABERTO — SAC pediu apresentação (msg via BuzzMonitor NÃO capturada pelo filtro antigo; agora o check-replies corrigido captura esse tipo de resposta); apresentação enviada 07/09 ~12:05 ao Felix Costa + resposta à Thamela na thread",
+      "status": "CANAL COMERCIAL ABERTO — SAC pediu apresentação; apresentação enviada 07/09 ~12:05 ao Felix Costa + resposta à Thamela na thread",
       "proximo_passo": "aguardar retorno do Felix Costa; se responder, pedir volume mensal (litros/kg) e oferecer coleta-teste; sem resposta em 3 dias, toque no WhatsApp",
       "prioridade": "ALTA"
     },
@@ -114,6 +140,7 @@
   ],
   "alertas_operacionais": [
     "RESOLVIDO (07/09 ~12:40): check-replies não capturava respostas via plataformas (BuzzMonitor/Zendesk/Movidesk). Correção implementada e validada com teste sintético: correlação por References/In-Reply-To contra msgids enviados (pasta Enviados indexada em lote único, 524 msgids) + match de domínio de plataforma + assunto. Novo script scan_inbox.py para varredura manual de contingência.",
-    "Monitorar: resposta do comercial da Savegnago (prazo 10/09) e do Felix Costa (Grupo IMC, prazo 10/09)."
+    "Monitorar: resposta do comercial da Savegnago (prazo 10/09) e do Felix Costa (Grupo IMC, prazo 10/09).",
+    "INFO (tick 15:01): bounce de Supermercados Alvorada (sac@alvoradasorocaba.com.br) confirmado por notificação mailer-daemon; lead já estava com status bounce no CSV — sem ação pendente."
   ]
 }

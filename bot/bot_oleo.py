@@ -322,6 +322,13 @@ def check_replies(args):
         frm = msg["from"].lower()
         if e["usuario"].lower() in frm:
             continue  # é o próprio bot
+        # filtra falso positivo: notificações de entrega/bounce (mailer-daemon, postmaster)
+        subj = (msg.get("subject") or "").lower()
+        if ("mailer-daemon" in frm or "postmaster" in frm
+                or "delivery status notification" in subj
+                or "undelivered mail" in subj or "failed delivery" in subj
+                or "mensagem bloqueada" in subj or "notificação de falha" in subj):
+            continue  # bounce/DSN não é resposta de lead
         # extrai email do remetente
         rem = re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", msg["from"])
         if not rem:

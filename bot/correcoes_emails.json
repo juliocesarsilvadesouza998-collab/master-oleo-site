@@ -194,5 +194,12 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-07T12:11:58-03:00"
+  },
+  {
+    "email_antigo": "sac@alvoradasorocaba.com.br",
+    "empresa": "Supermercados Alvorada (Rede)",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-07T15:01:19-03:00"
   }
 ]
