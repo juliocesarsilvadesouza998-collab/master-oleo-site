@@ -1,10 +1,10 @@
-# Insights — Master Óleo · 07/09/2026 (tick 16:01)
+# Insights — Master Óleo · 07/09/2026 (tick 16:31)
 
-## Resumo do tick (16:01)
-- **Pipeline**: 140 leads (104 ativos, 38 bounces) · 11 respondidos · 14 em sequência · 90 novos — **inalterado desde o tick 15:31**.
+## Resumo do tick (16:31)
+- **Pipeline**: 140 leads (104 ativos, 38 bounces) · 11 respondidos · 14 em sequência · 90 novos — **inalterado desde o tick 16:01**.
 - **Caixa**: `check-replies` = 0 pendentes (`replies_pending.json` = `[]`); `scan_inbox` (contingência) = 0 mensagens não lidas/recentes na INBOX (janela 7 dias); 33 msgids enviados indexados. **Caixa limpa confirmada em dobro.**
 - **Watchdog**: saudável (exit 0) — 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados.
-- **Follow-ups**: 0 atrasados. **Sequência**: processada, nada a enviar. **Sync Formspree**: 0 novas notificações. **Correção de emails**: 0 novas (38 bounces do cache já todos tentados).
+- **Follow-ups**: 0 atrasados. **Sequência**: processada, nada a enviar. **Sync Formspree**: 0 novas notificações. **Correção de emails**: 0 novas (38 bounces do cache já todos tentados — 22 "já tentado").
 - **Fila de prospecção** (`enviar_lote.py --status`): 115 empresas / 104 já contatados / 27 bounce / **0 pendentes**.
 - **Nenhum email enviado neste tick** — dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC).
 
@@ -18,7 +18,7 @@
 ## Padrão que se confirma
 - SAC corporativo responde com **ack automático e fecha ticket**; canal **comercial/indicado** é onde nasce negociação — Savegnago (Central de Relacionamento indicou comercial@) e Grupo IMC (SAC indicou Felix Costa).
 - Respostas de rede grande seguem o roteiro: **"envie a apresentação para X"** → enviar apresentação + perguntar **volume mensal (litros/kg)** + oferecer **coleta-teste** + WhatsApp.
-- Tick 100% rotina, sem eventos novos desde 15:31 — o filtro de DSN/bounce no check_replies (implementado no tick 15:01) segue funcionando: 0 falsos positivos.
+- Tick 100% rotina, sem eventos novos desde 16:01 — o filtro de DSN/bounce no check_replies (implementado no tick 15:01) segue funcionando: 0 falsos positivos.
 
 ## Próximos passos recomendados
 1. **10/09**: toque leve no WhatsApp (11) 96785-9631 para Savegnago e Grupo IMC se não houver retorno (cronograma de fechamento da persona).
