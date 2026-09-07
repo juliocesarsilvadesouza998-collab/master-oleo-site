@@ -54,6 +54,41 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 - **Lições registradas:** (1) foco do Prospector em indústrias de gordura saturou — migrar parte das buscas para varejo supermercadista regional; (2) o e-commerce de redes (supersaoroque.com.br) e o rodapé do site (sac@, dpo@) expõem emails públicos que o "fale conosco" com formulário esconde; (3) sempre `nslookup -type=MX` antes de cadastrar (regra já do enviar_lote, mas evita bounce na origem).
 - **Não enviado por mim:** os 2 emails saem no próximo tick do Atendente (limite de segurança respeitado).
 
+### Tick do Atendente (11:06) — fila esvaziada com 2 redes de supermercado
+- **Sync Formspree:** 33 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — 18 "já tentado"; nada novo a corrigir.
+- **Leads totais:** **131** (129 reais + 2 teste) — **+2 leads novos neste tick** (id 130 Supermercados São Roque, id 131 Rede Confiança).
+  - `novo`: 87 | `sequencia`: 14 | `respondido`: 9 | `bounce`: 19 | `encerrado`: 2 — **Ativos: 101**
+- **Watchdog:** ✅ saudável (exit 0, 11:06) — 131 leads, 101 ativos, 33 bounces; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (sem envios novos pendentes).
+- **check-replies:** 0 respostas aguardando (replies_pending.json vazio) — Savegnago segue aguardando retorno do canal comercial.
+- **Ação do tick — enviar_lote (11:05):** enviou as **2 apresentações pendentes** que o Melhorador validou às 10:54 (MX OK) e deixou para o próximo tick:
+  1. **Supermercados São Roque LTDA** (`sac@smsr.com.br`) — 26 lojas, sendo **2 em SALTO** (cidade-sede da Master Óleo), 2 em Sorocaba, 2 em Tatuí, 2 em Boituva. Lead id 130.
+  2. **Rede Confiança Supermercados** (`sac@confianca.com.br`) — **2 lojas em Sorocaba** (Av. São Paulo, maior da rede) + ~13 em Bauru/Marília/Jaú/Botucatu. Lead id 131.
+  - Fila de prospecção agora: **107 empresas, 96 contatados, 24 bounces, 0 pendentes**.
+- **Nenhum pedido de relatório ESG/certificado de impacto** neste tick — sem geração de PDF.
+- **Respostas enviadas:** 0 (nenhum reply novo desde o atendimento da Savegnago às 10:32–10:33).
+
+### Problemas encontrados e correções (tick 11:06)
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups e sequência 100% verdes.
+2. Fila de prospecção esvaziada (0 pendentes) — gargalo do Prospector segue: precisa de novas cidades/nichos/fontes para manter 5–8 novos/dia com MX validado.
+
+### Leads quentes (para ação humana — destaque)
+1. **Savegnago Supermercados (id 118/129) — #1:** porta comercial oficial aberta (pediram apresentação e passaram telefone da matriz). **PRIORIDADE: aguardar retorno do comercial@savegnago.com.br; se sem resposta em 3–5 dias, follow-up humano na matriz (16) 3946-2088.** Rede ~100 lojas = contrato de alto volume.
+2. **Sumerbol Supermercados (id 21)** — contato direto com Ivone Franca (ivone.franca@sumerbol.com.br); telefonar/WhatsApp (11) 96785-9631 se sem retorno.
+3. **Arcor/Bagley (id 14)** — SAC "encaminhado à área responsável" (26/08); aguardar análise.
+4. **GoodBom Supermercados (id 51)** — humana Laura (19/08); telefonar (19) 3828-9798.
+5. **Rede Boa (id 46)** — ticket #23915 no comercial.
+6. **Sanofi Medley (id 91)** — SAC protocolo 02995121, porta aberta.
+7. **Hile (id 101)** — nicho encapsulados, template V2 em monitoramento.
+8. **Novos enviados hoje (aguardando resposta):** São Roque (id 130) e Confiança (id 131) — apresentação às 11:05; monitorar replies nos próximos ticks.
+
+### Sugestões para o Estrategista (tick 11:06)
+1. **São Roque Supermercados é prioridade regional:** 2 lojas na própria Salto (cidade-sede) — se responder, é coleta local de baixo custo logístico e alto valor simbólico (primeira grande rede de Salto). Rede Confiança idem para Sorocaba.
+2. **Savegnago segue no topo:** próximo passo é o retorno do comercial; preparar proposta de CONTRATO de coleta programada + relatório ESG mensal para quando confirmar.
+3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, renovação de créditos Netlify.
+
 ---
 
 ## 2026-08-14 (sexta)
