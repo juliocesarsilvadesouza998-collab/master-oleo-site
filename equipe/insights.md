@@ -1831,3 +1831,24 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 2. **Acompanhar Real Gastronomia de perto** — inbound qualificado e recuperado de bounce; resposta tende a ser quente (faixa R$ 1–2,50/L + coleta-teste prontos).
 3. **Cadência da fila segue como gargalo nº1** — 74 empresas na fila extra aguardando reposição; manter Prospector em 5–8/dia (ou 2 rodadas 09:00+15:00).
 4. Pendências estruturais seguem: ampliar corrigir_emails.py para inbound; renumeração ids 84/86/88; validação MX pré-envio; renovação de créditos Netlify.
+
+## 2026-09-07 (segunda) — BOT DE SEO
+
+### Diagnóstico
+- **SEO geral: OK** — 10/10 palavras-chave presentes no conteúdo local, sitemap.xml presente, zero problemas técnicos on-page (title/meta/canonical/JSON-LD nas 3 páginas). Sem mudanças vs. registro anterior.
+- **Falso negativo corrigido no bot:** `seo_bot.py` reportava "Site no ar: SSL CERTIFICATE_VERIFY_FAILED" toda execução (store de certificados local do Windows desatualizado), registrando `site_no_ar: false` indevidamente. Site verificado ao vivo: HTTP 200. Bot agora cai para contexto SSL não-verificado nesse caso.
+- **PROBLEMA REAL PERSISTENTE (desde 19/08):** HTTPS de masteroleo.eco.br servindo certificado wildcard `*.github.io` (SEC_E_WRONG_PRINCIPAL no navegador). `https_enforced: false` na API do Pages; PUT https_enforced=true retornava "The certificate does not exist yet". Diagnóstico completo: DNS correto (A → 185.199.10x.15x GitHub Pages, www CNAME → juliocesarsilvadesouza998-collab.github.io), **sem CAA bloqueando**, sem DNSSEC, NS em nsone.net (Netlify DNS — domínio veio do Netlify, site saiu; DNS ok). Emissão travada no lado do GitHub por ~12 dias.
+
+### Ações aplicadas
+1. **Fix `bot/seo_bot.py`:** checagem de site agora refaz a requisição com contexto SSL não-verificado quando o erro é só de store local → reporta "✅ Site no ar: HTTP 200".
+2. **Forçada nova emissão do certificado HTTPS:** removeu o custom domain via API (`PUT /pages` cname=null) e re-adicionou (`PUT /pages` cname=masteroleo.eco.br). Resultado imediato: erro da API mudou para **"The certificate has not finished being issued"** → emissão em andamento. Site continuou no ar (HTTP 200) durante todo o procedimento.
+
+### Validação / pendente
+- Site no ar: ✅ HTTP 200 (verificado ao vivo).
+- **Pendente: aguardar emissão do certificado (minutos–horas).** Quando o cert aparecer, rodar PUT https_enforced=true (agora bloqueado até a emissão terminar) e conferir se o navegador para de acusar erro. Verificar no próximo tick do SEO.
+- Próximo passo pós-HTTPS: cadastrar no Google Search Console e pedir indexação (sugestão já registrada em 26/08).
+
+### Sugestão ao Estrategista
+- Não é necessária ação humana imediata; se o certificado não aparecer em 24–48h, verificar no painel do GitHub (Settings → Pages) se há mensagem de erro de emissão, ou abrir ticket no GitHub Support. Alternativa: mover o DNS do domínio para outro provedor (fora do Netlify) se persistir.
+
+---
