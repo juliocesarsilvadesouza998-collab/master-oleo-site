@@ -18,7 +18,7 @@ Uso:
   python seo_bot.py          # diagnóstico completo + relatório
   python seo_bot.py --check  # só verificação rápida (exit 0 = ok, 1 = problema)
 """
-import argparse, datetime, json, os, re, sys, urllib.request, urllib.error
+import argparse, datetime, json, os, re, ssl, sys, urllib.request, urllib.error
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BASE)
@@ -46,6 +46,17 @@ def checar_site(url):
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=30) as r:
             return r.status == 200, r.status
+    except urllib.error.URLError as e:
+        # Certificado válido mas store local desatualizado (Windows) gera
+        # falso negativo — refaz sem verificação para não mascarar o status real.
+        if isinstance(e.reason, ssl.SSLError):
+            ctx = ssl._create_unverified_context()
+            try:
+                with urllib.request.urlopen(req, timeout=30, context=ctx) as r:
+                    return r.status == 200, r.status
+            except Exception as e2:
+                return False, str(e2)[:60]
+        return False, str(e)[:60]
     except Exception as e:
         return False, str(e)[:60]
 
