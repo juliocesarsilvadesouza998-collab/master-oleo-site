@@ -1843,10 +1843,12 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 1. **Fix `bot/seo_bot.py`:** checagem de site agora refaz a requisição com contexto SSL não-verificado quando o erro é só de store local → reporta "✅ Site no ar: HTTP 200".
 2. **Forçada nova emissão do certificado HTTPS:** removeu o custom domain via API (`PUT /pages` cname=null) e re-adicionou (`PUT /pages` cname=masteroleo.eco.br). Resultado imediato: erro da API mudou para **"The certificate has not finished being issued"** → emissão em andamento. Site continuou no ar (HTTP 200) durante todo o procedimento.
 
-### Validação / pendente
-- Site no ar: ✅ HTTP 200 (verificado ao vivo).
-- **Pendente: aguardar emissão do certificado (minutos–horas).** Quando o cert aparecer, rodar PUT https_enforced=true (agora bloqueado até a emissão terminar) e conferir se o navegador para de acusar erro. Verificar no próximo tick do SEO.
-- Próximo passo pós-HTTPS: cadastrar no Google Search Console e pedir indexação (sugestão já registrada em 26/08).
+### Validação / RESOLVIDO ✅
+- Certificado Let's Encrypt **emitido em ~5 min** após o remove/re-add (`subject=CN=masteroleo.eco.br`).
+- `https_enforced=true` aplicado com sucesso via API — **HTTPS forçado ativo**.
+- Verificação ao vivo: `curl https://masteroleo.eco.br` → **200 com ssl_verify=0** (cadeia válida); `http://` → 301/redirect para `https://`. Navegador não acusa mais erro de segurança (fim do SEC_E_WRONG_PRINCIPAL).
+- `seo_bot.py` → **SEO geral: OK** (10/10 palavras-chave, site no ar HTTP 200, sitemap ok).
+- **Próximo passo pós-HTTPS:** cadastrar o site no Google Search Console e pedir indexação das 3 URLs (sugestão registrada em 26/08).
 
 ### Sugestão ao Estrategista
 - Não é necessária ação humana imediata; se o certificado não aparecer em 24–48h, verificar no painel do GitHub (Settings → Pages) se há mensagem de erro de emissão, ou abrir ticket no GitHub Support. Alternativa: mover o DNS do domínio para outro provedor (fora do Netlify) se persistir.
