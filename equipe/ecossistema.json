@@ -1,6 +1,6 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-07T12:00",
+ "atualizado_em": "2026-09-07T13:31",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
   "limite_diario_prospeccao": 15,
@@ -40,11 +40,11 @@
  },
  "fila_prospeccao": {
   "atualizado_em": "2026-09-07",
-  "total": 107,
+  "total": 110,
   "pendentes": 0,
-  "contatados": 96,
+  "contatados": 99,
   "bounces": 24,
-  "nota": "07/09 11:06 (Atendente): fila com 107 empresas — 96 contatados, 24 bounces, 0 pendentes (enviar_lote --status confirmado). 2 apresentacoes ENVIADAS neste tick: Supermercados Sao Roque LTDA (sac@smsr.com.br, 26 lojas sendo 2 em SALTO) e Rede Confianca Supermercados (sac@confianca.com.br, 2 lojas em Sorocaba) — adicionados pelo Melhorador as 10:54 com MX validado; leads ids 130 e 131 cadastrados no leads.csv. Fila esvaziada novamente; gargalo segue no Prospector (precisa de novas cidades/nichos ou fontes alternativas)."
+  "nota": "07/09 11:32 (Atendente): fila com 110 empresas — 99 contatados, 24 bounces, 0 pendentes (enviar_lote --status confirmado apos envio). 3 apresentacoes ENVIADAS neste tick: Rede Bom Lugar Supermercados (contato@redebomlugar.com.br, 50 lojas/13 cidades RM Sorocaba com loja em Aluminio), Tenda Atacado (dpo@tendaatacado.com.br, atacarejo) e Roldao Atacadista (comercial@roldao.com.br, 39 lojas, canal comercial direto) — adicionados pelo Estrategista ~11:19 com MX validado (nslookup); leads ids 132, 133 e 134 cadastrados no leads.csv. Fila esvaziada; gargalo segue no Prospector (5-8 novos/dia com MX validado)."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -1090,5 +1090,56 @@
   "verificacao": "python enviar_lote.py --status -> pendentes: 2 (Sao Roque + Confianca), prontos para o tick do Atendente",
   "nao_enviado_por_mim": "envio automatico no proximo tick do Atendente (regra: max 5 se necessario — nao necessario)",
   "licao_para_prospector": "foco em industrias de gordura saturou; migrar parte das buscas para varejo supermercadista regional (nicho que ja rendeu Savegnago/Sumerbol/GoodBom/Rede Boa); e-commerce das redes expoe emails publicos (sac@, dpo@) que o formulario esconde"
+ },
+ "tick_atendente_07_09_11_31": {
+  "rodadas_no_dia": 7,
+  "sync_formspree": "33 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 18 'ja tentado'; todos os 33 bounces do cache ja com tentativa registrada em correcoes_emails.json. Nada novo a corrigir",
+  "watchdog": "exit 0 na 1a rodada, saudavel — 131 leads, 101 ativos, 33 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "3 apresentacoes ENVIADAS (11:32): Rede Bom Lugar Supermercados (contato@redebomlugar.com.br), Tenda Atacado (dpo@tendaatacado.com.br) e Roldao Atacadista (comercial@roldao.com.br) — pendentes deixados pelo Estrategista (~11:19) com MX validado; leads ids 132, 133 e 134 criados. Fila apos: 110 empresas, 99 contatados, 24 bounces, 0 pendentes",
+  "send_sequence": "sequencia processada, sem envios novos pendentes",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde o atendimento da Savegnago (10:32-10:33). Sem anexo ESG",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — Nº1: porta comercial oficial ABERTA (apresentacao enviada ao comercial@savegnago.com.br em 10:32; lead id 129 cadastrado p/ captura). Rede ~100 lojas interior de SP = alto volume. PRIORIDADE: aguardar retorno do comercial; silencio em 3-5 dias -> follow-up humano na matriz (16) 3946-2088",
+   "Sumerbol Supermercados (id 21) — contato direto Ivone Franca (ivone.franca@sumerbol.com.br); prazo vencido — acionar por WhatsApp (11) 96785-9631",
+   "Rede Bom Lugar Supermercados (id 132, NOVO) — 50 lojas em 13 cidades da RM Sorocaba com loja em Aluminio (vizinha de Salto); apresentacao enviada 11:32. Se responder: pedir volume + tipo e levar ao WhatsApp",
+   "Tenda Atacado (id 133, NOVO) — atacarejo; apresentacao enviada 11:32",
+   "Roldao Atacadista (id 134, NOVO) — 39 lojas, canal comercial direto (comercial@roldao.com.br); apresentacao enviada 11:32",
+   "Arcor/Bagley (SAC automatico 26/08 encaminhado a area responsavel — aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina + acao de pipeline: watchdog exit 0 na 1a rodada (131 leads), nenhum reply novo (replies_pending vazio — ultima resposta atendida: Savegnago 10:28), nenhum follow-up atrasado, nenhum bounce novo a corrigir. ACAO: esvaziada a fila de prospeccao enviando os 3 pendentes deixados pelo Estrategista (Rede Bom Lugar, Tenda Atacado, Roldao — MX validado via nslookup, canais publicos oficiais), leads ids 132-134 cadastrados. Base agora: 134 leads / 104 ativos / 33 bounces cache; cobertura 100% (134/134). Nenhum pedido de relatorio ESG. Quentes inalterados — Savegnago no topo (aguardando retorno do comercial)."
+ },
+ "tick_atendente_07_09_13_31": {
+  "rodadas_no_dia": 8,
+  "sync_formspree": "0 novas notificacoes; 37 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os bounces do cache ja com tentativa registrada em correcoes_emails.json. Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 135 leads, 100 ativos, 37 bounces, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "scan_inbox": "contingencia rodada (7 dias): 0 mensagens nao lidas/recentes na INBOX; 28 msgids enviados indexados p/ correlacao de thread; aviso benigno de SELECT na pasta Sent no scan (check-replies usa a pasta Enviados correta via atributo \\Sent)",
+  "enviar_lote": "fila: 110 empresas, 99 contatados, 26 bounces, 0 pendentes (nada novo a enviar)",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde o atendimento da Savegnago (10:32-10:33) e Grupo IMC (~12:05). Sem anexo ESG",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — Nº1: porta comercial oficial ABERTA (apresentacao enviada ao comercial@savegnago.com.br em 10:32; lead id 129 cadastrado p/ captura). Rede ~100 lojas interior de SP = alto volume. PRIORIDADE: aguardar retorno do comercial; sem resposta ate 10/09 -> toque leve no WhatsApp (11) 96785-9631",
+   "Frango Assado / Grupo IMC (NOVO Nº2) — canal comercial ABERTO via SAC: apresentacao enviada ~12:05 a felix.costa@grupoimc.com.br (indicado pela Thamela do SAC) + resposta na thread. Grupo IMC = food service gigante (Frango Assado, Viena, Pizza Hut BR). Prazo: sem resposta ate 10/09 -> toque no WhatsApp",
+   "Rede Bom Lugar Supermercados (id 132) — 50 lojas em 13 cidades da RM Sorocaba com loja em Aluminio; apresentacao enviada 11:32. Se responder: pedir volume + tipo e levar ao WhatsApp",
+   "Tenda Atacado (id 133) — atacarejo; apresentacao enviada 11:32",
+   "Roldao Atacadista (id 134) — 39 lojas, canal comercial direto (comercial@roldao.com.br); apresentacao enviada 11:32",
+   "Sumerbol Supermercados (id 21) — contato direto Ivone Franca (ivone.franca@sumerbol.com.br); acionar por WhatsApp (11) 96785-9631",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Arcor/Bagley (SAC automatico 26/08 encaminhado a area responsavel — aguardar analise)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta)"
+  ],
+  "nota": "Tick 100% verde: watchdog exit 0 (135 leads, 100 ativos, 37 bounces), caixa limpa confirmada DUPLAMENTE (check-replies + scan_inbox de contingencia = 0 pendentes/nao lidas), fila de prospeccao com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo. Nenhum email enviado neste tick — dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC, prazo de toque 10/09). Pipeline inalterado desde 13:00. Nenhum pedido de relatorio ESG."
  }
 }
