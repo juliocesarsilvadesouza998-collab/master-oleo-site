@@ -97,7 +97,7 @@ def tpl_fp(cfg, lead, n):
 <p>Olá, {lead['nome']}.</p>
 <p>Entendo que o momento pode não ser o ideal, mas a proposta segue de pé: <b>compramos o óleo e a gordura vegetal usados</b> da {lead['empresa']} com coleta programada, bombonas fornecidas e certificado de destinação em toda retirada.</p>
 <p>Dois fatos recentes que mudam o jogo para quem gera esse resíduo: (1) a <b>Portaria MME/MMA nº 3/2026</b> torna <b>obrigatório ≥1% de óleo residual no biodiesel a partir de jan/2028</b> — o que hoje é descarte vai virar commodity disputada, e quem fecha contrato agora garante preço e prioridade; (2) pela <b>PNRS (Lei 12.305/2010)</b>, a destinação correta é obrigação do gerador — se o coletor não emitir MTR/certificado, o passivo ambiental fica no CNPJ de vocês.</p>
-<p>Para quem gera <b>mais de 500 L/mês</b>: contrato de <b>coleta programada com volume mínimo</b>, logística 100% por nossa conta, <b>relatório ESG mensal</b> (litros, água preservada, CO₂) para suas metas, e <b>pagamento à vista (PIX) na coleta</b>.</p>
+<p>E não é conversa: a <b>BSBIOS fechou contrato de 55 mil L/mês com o Grupo Madero</b> (270 restaurantes) — rede grande já trata óleo usado como receita, com coleta integrada à logística. Para quem gera <b>mais de 500 L/mês</b>: contrato de <b>coleta programada com volume mínimo</b>, logística 100% por nossa conta, <b>relatório ESG mensal</b> (litros, água preservada, CO₂) e <b>pagamento à vista (PIX) na coleta</b>.</p>
 <p>Vamos agendar uma <b>coleta-teste</b>? Me diz quantos litros (ou kg) vocês geram por mês que eu te passo o valor e o certificado em até 24h. WhatsApp: {g['telefone_whatsapp']}.</p>
 <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""

@@ -151,6 +151,28 @@ resposta em COLETA AGENDADA ou CONTRATO — não parar no "ok, obrigado".
    programada com volume mínimo + reajuste por qualidade — é o modelo que
    fecha (case BSBIOS × Madero: 55 mil L/mês de 270 restaurantes).
 
+## 🏆 Aprendizados da semana (07/09 — Estrategista)
+
+1. **Nicho que mais converte: SUPERMERCADOS/REDES.** Dos 7 respondidos reais,
+   4 são redes varejistas (Savegnago ~100 lojas, Sumerbol, GoodBom, Rede Boa)
+   — e o Savegnago abriu o canal comercial oficial pedindo apresentação.
+   Padaria + rotisserie + açougue geram óleo TODA semana em cada loja; uma
+   rede de 10 lojas é um contrato de volume, não um lead de volume.
+2. **Canal certo faz a diferença:** SAC corporativo (Oba, Arcor) responde
+   automático e FECHA ticket — porta fechada. Canal comercial/ouvidoria
+   (Savegnago: comercial@, Roldão: comercial@, Sumerbol: Ivone) responde
+   gente. Preferir sempre o email do departamento comercial/ouvidoria quando
+   existir; SAC genérico só como último recurso.
+3. **Prova social fecha rede:** o case BSBIOS × Madero (55 mil L/mês, 270
+   restaurantes) virou argumento do template V4 de supermercados e do FP2.
+   Redes grandes já tratam óleo usado como receita — use o exemplo, não
+   prometa.
+4. **Coleta-teste é o próximo passo concreto** que separa "ok, obrigado" de
+   contrato: oferecer SEMPRE após qualquer abertura de resposta.
+5. **Urgência confirmada:** Portaria MME/MMA nº 3/2026 — uso de ≥1% de OGR no
+   biodiesel é VOLUNTÁRIO em 2026-27 e OBRIGATÓRIO em 01/01/2028 (Resolução
+   CNPE). É o argumento de aceleração para contratos de longo prazo.
+
 ## Regras de conduta
 1. Responda SEMPRE em português (pt-BR), tom profissional, cordial e direto.
 2. Responda exatamente o que o cliente perguntou PRIMEIRO, depois avance.

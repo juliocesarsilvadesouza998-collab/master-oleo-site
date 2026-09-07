@@ -150,10 +150,26 @@ def _plain_from_html(html):
 def tpl_apresentacao(cfg, lead):
     """Template de apresentação B2B otimizado: <80 palavras, 1 CTA, argumentos em 1 linha cada.
     V2 (19/08): versão curta — cold email longo derruba resposta (1% no lote 1).
-    V3 (19/08): ângulo por segmento — indústrias de gorduras/laticínios usam discurso de vencidos."""
+    V3 (19/08): ângulo por segmento — indústrias de gorduras/laticínios usam discurso de vencidos.
+    V4 (07/09): ângulo SUPERMERCADOS/ATACAREJO — nicho que mais converteu (Savegnago, Sumerbol,
+    GoodBom, Rede Boa = 4 dos 7 respondidos reais). Contrato de rede + prova social Madero."""
     g = cfg["empresa"]
     cidade = lead.get("cidade") or "região"
     segmento = (lead.get("segmento") or "alimentação").lower()
+    # Ângulo específico: supermercados/atacarejo — padaria+rotisserie+açougue = óleo toda semana
+    if any(k in segmento for k in ["supermercado", "supermercados", "atacarejo",
+                                    "atacado", "varejo"]):
+        return {
+            "subject": f"Óleo de fritura da {lead.get('empresa','')} vira renda — coleta na rede toda",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Cada loja com padaria, rotisserie e açougue gera <b>óleo de fritura toda semana</b> — e o que sai de graça virou commodity: o mercado global de óleo usado vale <b>US$ 8,6 bi</b> e deve dobrar com a demanda por biodiesel (Fortune Business Insights).</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, compra de redes inteiras: <b>R$ 1,00 a R$ 2,50/litro</b>, coleta programada por loja (semana fixa), bombonas fornecidas, certificado de destinação (PNRS) e <b>relatório ESG mensal</b> para a rede. Redes já tratam isso como receita — o Grupo Madero fechou contrato de <b>55 mil L/mês</b> (270 restaurantes) com coletora.</p>
+<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante preço e prioridade.</p>
+<p><b>Quanto a rede gera por mês (litros)?</b> Com esse número eu mando a estimativa em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
+</div>"""
+        }
     # Ângulo específico: indústrias que geram vencidos com >40% de gordura
     if any(k in segmento for k in ["margarina", "manteiga", "maionese", "gordura",
                                     "laticinio", "creme vegetal", "oleos vegetais",

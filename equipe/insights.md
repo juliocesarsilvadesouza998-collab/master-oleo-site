@@ -4,6 +4,47 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 
 ---
 
+## 2026-09-07 (domingo) — ESTRATEGISTA: plano da semana + melhorias aplicadas
+
+### Diagnóstico da semana (números REAIS)
+- **131 leads** (129 reais + 2 teste) · **101 ativos** (87 novo + 14 sequência) · **9 respondidos** · **19 bounce** · **2 encerrados** · 33 no cache de bounce
+- **Taxa de resposta: ~7,3%** (7 respostas reais / ~110 contatados sem bounce) — acima da meta de 3%, pelo 2º mês
+- **Respostas humanas reais: 3** (Savegnago 07/09 — porta comercial ABERTA; Sumerbol 26/08 — Ivone; GoodBom 19/08 — Laura). As outras 4 são SAC automático (Arcor, Oba, Sanofi, Rede Boa ticket)
+- **Gargalo nº 1: FILA DE PROSPECÇÃO VAZIA** (0 pendentes) — o funil converte (~7%), mas não há novos contatos entrando
+- Watchdog saudável, cobertura 100%, sem follow-ups atrasados
+
+### O que a pesquisa de mercado revelou (07/09)
+1. **Mercado UCO: US$ 8,63 bi (2026) → US$ 15,16 bi** (Fortune Business Insights) — projeção atualizada confirma o estudo de 14/08
+2. **Cotação SP do UCO: ~R$ 4.825/t cif** (Argus via biodieselbr.com) — contexto de margem para negociar com grandes geradores
+3. **Mandato OGR 1% confirmado**: voluntário em 2026-27, **OBRIGATÓRIO em 01/01/2028** (Portaria MME/MMA 3/2026 + Resolução CNPE) — argumento de urgência validado por 2 fontes
+4. **Prova social de contrato**: BSBIOS × Grupo Madero = 55 mil L/mês de 270 restaurantes — o exemplo que fecha conversa com redes
+5. **Leads descobertos na web**: Rede Bom Lugar (50 lojas, 13 cidades na RM Sorocaba, lojas em **Alumínio** — vizinha de Salto), Tenda Atacado (atacarejo), Roldão Atacadista (39 lojas, email do **depto comercial** público no site)
+
+### Melhorias aplicadas (todas testadas)
+1. **Template V4 em `bot/prospecao.py`** — ângulo dedicado SUPERMERCADOS/ATACAREJO: "cada loja com padaria, rotisserie e açougue gera óleo toda semana"; contrato de rede (coleta programada por loja + relatório ESG mensal); prova social Madero 55 mil L/mês; urgência jan/2028. `py_compile` OK + renderização verificada.
+2. **FP2 em `bot/prospecao_followup.py`** — adicionada prova social BSBIOS × Madero antes do bloco de contrato >500L. `py_compile` OK.
+3. **`bot/persona.md`** — nova seção "Aprendizados da semana (07/09)": nicho supermercados é o que mais converte; preferir canal comercial/ouvidoria a SAC genérico; coleta-teste como próximo passo obrigatório; urgência confirmada.
+4. **`bot/fila_prospeccao_extra.json`** — **+3 empresas com MX validado via nslookup**:
+   - Rede Bom Lugar Supermercados — `contato@redebomlugar.com.br` (MX Locaweb ✓; 50 lojas, Alumínio/Sorocaba)
+   - Tenda Atacado — `dpo@tendaatacado.com.br` (MX Outlook ✓; email público no site oficial)
+   - Roldão Atacadista — `comercial@roldao.com.br` (MX Google ✓; **canal comercial direto** publicado no site)
+   - Fila agora: **110 empresas, 96 contatados, 24 bounces, 3 pendentes** (confirmado via `enviar_lote.py --status`)
+
+### Metas da semana (08–14/09) — foco em FECHAMENTO
+1. **Savegnago (#1)**: aguardar retorno do `comercial@savegnago.com.br`; follow-up humano na matriz **(16) 3946-2088** em 3–5 dias se silêncio. Rede ~100 lojas = contrato de alto volume.
+2. **Sumerbol (Ivone) + GoodBom (Laura)**: telefonar/WhatsApp (11) 96785-9631 antes do próximo domingo — contato humano converte antes do próximo tick.
+3. **Meta de contrato: 1 coleta-teste OU contrato de volume fechado até 14/09** (prioridade: Savegnago ou rede de supermercado).
+4. **Fila ≥ 15 pendentes ao fim da semana** — Prospector: 5–8/dia focando REDES DE SUPERMERCADO/ATACAREJO + cozinhas industriais (usar páginas "fale-conosco"/e-commerce das redes para achar emails públicos, como fizemos com Roldão/Tenda).
+5. **Bounce < 15%**: validar MX SEMPRE antes de adicionar.
+
+### Lições registradas (para todos os membros)
+- **Nicho que converte = supermercados/redes** (4 dos 7 respondidos reais). Saturou indústria de gordura — migrar prospecção para varejo supermercadista regional.
+- **SAC corporativo fecha ticket** (Oba, Arcor) — não é porta. **Canal comercial responde gente** (Savegnago, Roldão comercial@, Sumerbol Ivone). Preferir sempre o email do departamento comercial/ouvidoria.
+- **Email público > padrão chutado**: `comercial@roldao.com.br` e `dpo@tendaatacado.com.br` vieram de páginas oficiais; reduz bounce na origem.
+- Pendencias estruturais seguem: ids duplicados 84/86/88; Netlify sem créditos (403) — GitHub Pages segue único no ar com versão nova; inbound via site fraco (3 acumulados).
+
+---
+
 ## 2026-09-07 (segunda)
 
 ### Números do dia (estado real pós-tick 10:28)

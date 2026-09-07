@@ -1,9 +1,17 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-07T11:06",
+ "atualizado_em": "2026-09-07T12:00",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
   "limite_diario_prospeccao": 15,
+  "meta_semana_08_14_09": {
+   "foco_fechamento": "Savegnago (#1 - aguardar retorno comercial@savegnago.com.br; follow-up humano na matriz (16) 3946-2088 em 3-5 dias se silencio) + Sumerbol (Ivone - telefonar/WhatsApp) + GoodBom (Laura - (19) 3828-9798)",
+   "meta_contratos": "1 coleta-teste OU contrato de volume fechado ate 14/09 (prioridade: Savegnago ou rede de supermercado)",
+   "meta_fila": "manter fila prospeccao >= 15 pendentes (Estrategista repoe 3 em 07/09; Prospector: 5-8/dia, prioridade REDES DE SUPERMERCADO/ATACAREJO com MX validado)",
+   "nicho_prioritario": "SUPERMERCADOS/REDES/ATACAREJO (4 dos 7 respondidos reais; Savegnago/Sumerbol/GoodBom/Rede Boa) + encapsulados/farmaceuticas (Catalent)",
+   "regra_canal": "preferir email do depto COMERCIAL/ouvidoria em vez de SAC generico (lição Oba/Arcor: SAC fecha ticket; comercial responde gente)",
+   "pendencia_humana": "telefonar GoodBom (19) 3828-9798 e Sumerbol (Ivone) antes do proximo domingo"
+  },
   "foco_cidades": [
    "Salto",
    "Campinas",
@@ -25,9 +33,10 @@
    "Porto Feliz",
    "Boituva",
    "Americana",
-   "Votorantim"
+   "Votorantim",
+   "Aluminio"
   ],
-  "nicho_prioritario": "encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
+  "nicho_prioritario": "supermercados/redes/atacarejo (nicho que mais converte) + encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
  },
  "fila_prospeccao": {
   "atualizado_em": "2026-09-07",
@@ -127,6 +136,47 @@
    "NOVOS ENVIADOS HOJE (aguardando resposta): Supermercados Sao Roque (2 lojas em SALTO — cidade-sede!) e Rede Confianca (2 lojas em Sorocaba) — apresentacao enviada 11:05, monitorar replies nos proximos ticks"
   ],
   "nota": "Tick de rotina, tudo verde. Unica acao: esvaziou a fila de prospeccao com os 2 emails que o Melhorador validou as 10:54 (Sao Roque Supermercados — 2 lojas na propria Salto — e Rede Confianca — 2 lojas em Sorocaba), cadastrando os leads 130 e 131. Watchdog exit 0 (131 leads, 101 ativos), nenhum reply novo, nenhum follow-up atrasado, nenhum bounce novo a corrigir. Savegnago segue #1 aguardando retorno do canal comercial."
+ },
+ "estrategista_2026_09_07_12_00": {
+  "diagnostico_semana": {
+   "leads_total": 131,
+   "leads_ativos": 101,
+   "respondidos": 9,
+   "respostas_reais": 7,
+   "taxa_resposta": "~7,3% (meta >3%) - acima da meta pelo 2o mes",
+   "bounces_cache": 33,
+   "gargalo_1": "FILA DE PROSPECCAO VAZIA (0 pendentes em 07/09 11:06) - pipeline de novos contatos parado; Prospector saturou industrias de gordura",
+   "gargalo_2": "respostas humanas avancando devagar: 7 respondidos, mas so 3 com canal humano real (Savegnago, Sumerbol, GoodBom); 4 sao SAC automatico (Arcor, Oba, Sanofi, Rede Boa ticket)",
+   "gargalo_3": "inbound via site zerado (3 acumulados; Netlify sem creditos serve versao antiga sem calculadora - GitHub Pages unico no ar)"
+  },
+  "pesquisa_mercado_07_09": [
+   "Mercado global UCO: US$ 8,63 bi (2026) -> US$ 15,16 bi (Fortune Business Insights) - confirma projecao do estudo",
+   "Cotacao SP: ~R$ 4.825/t cif para UCO (Argus via biodieselbr.com) - contexto de margem para negociacao",
+   "Mandato OGR 1%: VOLUNTARIO em 2026-27, OBRIGATORIO em 01/01/2028 (Portaria MME/MMA 3/2026 + Resolucao CNPE, megawhat.uol.com.br/eixos.com.br) - urgência confirmada",
+   "Prova social de contrato: BSBIOS x Grupo Madero 55 mil L/mes (270 restaurantes) - usado no template V4 e FP2",
+   "Leads descobertos: Rede Bom Lugar (50 lojas, RM Sorocaba, lojas em Aluminio vizinha de Salto), Tenda Atacado, Roldao Atacadista (comercial@ publico)"
+  ],
+  "melhorias_aplicadas": [
+   "TEMPLATE V4 em prospecao.py: angulo dedicado SUPERMERCADOS/ATACAREJO (padaria+rotisserie+acougue = oleo toda semana; contrato de rede; prova social Madero 55 mil L/mes; R$ 1,00-2,50/L; urgencia jan/2028) - py_compile OK, renderizacao OK",
+   "FP2 em prospecao_followup.py: prova social BSBIOS x Madero adicionada ('rede grande ja trata oleo usado como receita') - py_compile OK",
+   "persona.md: secao 'Aprendizados da semana 07/09' - nicho supermercados e o que converte; preferir canal comercial/ouvidoria a SAC; coleta-teste como proximo passo obrigatorio",
+   "fila_prospeccao_extra.json: +3 empresas com MX validado via nslookup (Rede Bom Lugar contato@redebomlugar.com.br MX Locaweb; Tenda Atacado dpo@tendaatacado.com.br MX Outlook; Roldao comercial@roldao.com.br MX Google) - fila: 110 empresas, 96 contatados, 24 bounces, 3 PENDENTES"
+  ],
+  "metas_semana_08_14_09": {
+   "fechamento": "Savegnago (#1): aguardar retorno comercial@savegnago.com.br; follow-up humano matriz (16) 3946-2088 em 3-5 dias se silencio",
+   "fechamento_2": "Sumerbol (Ivone Franca) + GoodBom (Laura) - telefonar/WhatsApp (11) 96785-9631 antes do proximo domingo",
+   "meta_contrato": "1 coleta-teste OU contrato de volume fechado ate 14/09 (prioridade Savegnago ou rede de supermercado)",
+   "meta_fila": "fila >= 15 pendentes ao fim da semana (Prospector: 5-8/dia focando REDES DE SUPERMERCADO/ATACAREJO + cozinhas industriais; usar pagina 'fale-conosco' e e-commerce das redes para achar emails publicos)",
+   "meta_bounce": "manter taxa de bounce < 15% (validar MX SEMPRE antes de adicionar)",
+   "canal": "preferir depto comercial/ouvidoria; SAC generico so como ultimo recurso"
+  },
+  "aprendizados": [
+   "Supermercados/redes = nicho que mais converte (4 dos 7 respondidos reais: Savegnago, Sumerbol, GoodBom, Rede Boa) - redirecionar prospeccao",
+   "SAC corporativo (Oba, Arcor) responde automatico e FECHA ticket - nao e porta; canal comercial (Savegnago comercial@, Roldao comercial@, Sumerbol Ivone) responde gente",
+   "Emails publicos achados em paginas 'fale-conosco/central de atendimento' (ex.: comercial@roldao.com.br, dpo@tendaatacado.com.br) - melhor que chutar padrao",
+   "Prova social de contrato (BSBIOS x Madero) entra no discurso de redes - usar exemplo real, nao prometer",
+   "Pendencias estruturais seguem: ids duplicados 84/86/88, Netlify sem creditos (403), inbound fraco"
+  ]
  },
  "tick_atendente_26_08_18_01": {
   "rodadas_no_dia": 7,
