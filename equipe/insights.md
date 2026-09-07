@@ -4,6 +4,74 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 
 ---
 
+## 2026-09-07 (segunda) — ATENDENTE (tick 18:01)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 38 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 38 do cache já com tentativa registrada em correcoes_emails.json (22 "já tentado" neste tick). Nada novo a corrigir.
+- **Leads totais:** **140** — `novo`: 90 | `sequencia`: 14 | `respondido`: 11 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 104**.
+- **Watchdog:** ✅ saudável (exit 0) — 140 leads, 104 ativos, 38 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (sem envios novos pendentes — cobertura 100%).
+- **check-replies:** 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **scan_inbox.py (contingência):** 0 mensagens não lidas/recentes na INBOX (janela 7 dias); 33 msgids enviados indexados. Caixa verificada em dobro.
+- **enviar_lote --status:** fila com 115 empresas / 104 contatados / 27 bounce / **0 pendentes** — nada a enviar.
+
+### Ação do tick
+Tick 100% de rotina: nenhuma resposta nova de lead, nenhum email de resposta enviado, nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospecção vazia. Pipeline inalterado desde o tick 16:31. Caixa limpa confirmada em dobro (check-replies + scan_inbox). Nenhum pedido de relatório ESG — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups, sequência e caixa 100% verdes.
+2. Fila de prospecção **0 pendentes** novamente — gargalo do Prospector segue: manter 5–8 novos/dia com MX validado para o funil (~8% de resposta) não parar.
+3. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar com versão nova; inbound via site fraco (3 acumulados).
+
+### Leads quentes (para ação humana — destaque)
+1. **Savegnago Supermercados (id 118/129) — #1:** porta comercial oficial ABERTA (apresentação enviada ao comercial@savegnago.com.br 10:32; matriz (16) 3946-2088). **PRAZO: sem retorno até 10/09 → toque leve no WhatsApp (11) 96785-9631.** Rede ~100 lojas = contrato de alto volume.
+2. **Frango Assado / Grupo IMC (id 135) — #2:** canal comercial ABERTO via SAC — apresentação enviada a felix.costa@grupoimc.com.br (indicado pela Thamela do SAC) + resposta na thread. Grupo IMC = food service gigante (Frango Assado, Viena, Pizza Hut BR). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Andorinha Hiper Center (id 147)** — loja na própria **Salto**; se responder: pedir volume mensal + tipo e priorizar coleta-teste na unidade de Salto.
+4. **Paulistão Atacadista (id 149)** — bandeira do Grupo Savegnago; **se comercial@savegnago responder, pausar envio ao Paulistão** para não parecer insistência duplicada no mesmo grupo.
+5. **Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldão Atacadista (id 134)** — apresentações enviadas 11:31, aguardando retorno. Dalben (id 148) e Amigão (151) — monitorar. São Roque e Confiança (enviados 11:06) — monitorar.
+6. **Sumerbol (id 21)** — Ivone Franca; acionar por WhatsApp. **GoodBom (id 51)** — Laura (19/08), telefonar (19) 3828-9798. **Rede Boa (id 46)** — ticket #23915. **Arcor/Bagley (id 14)** e **Sanofi Medley (id 91)** — SAC encaminhado à área responsável.
+
+### Nota
+Tick de rotina, tudo verde: watchdog exit 0, caixa limpa confirmada em dobro (check-replies + scan_inbox), 0 follow-ups atrasados, 0 bounces novos, fila com 0 pendentes. Nenhum pedido de relatório ESG — sem geração de PDF. Nenhuma resposta nova desde o tick 16:31 — dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC). **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio); monitorar replies dos novos (Andorinha, Dalben, Paulistão, Amigão, São Roque, Confiança) nos próximos ticks.
+
+---
+
+## 2026-09-07 (segunda) — ATENDENTE (tick 17:01)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 38 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 38 do cache já com tentativa registrada em correcoes_emails.json (22 "já tentado" neste tick). Nada novo a corrigir.
+- **Leads totais:** **140** — `novo`: 90 | `sequencia`: 14 | `respondido`: 11 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 104**.
+- **Watchdog:** ✅ saudável (exit 0) — 140 leads, 104 ativos, 38 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (sem envios novos pendentes — cobertura 100%).
+- **check-replies:** 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **scan_inbox.py (contingência):** 0 mensagens não lidas/recentes na INBOX (janela 7 dias); 33 msgids enviados indexados. Caixa verificada em dobro.
+- **enviar_lote --status:** fila com 115 empresas / 104 contatados / 27 bounce / **0 pendentes** — nada a enviar.
+
+### Ação do tick
+Tick 100% de rotina: nenhuma resposta nova de lead, nenhum email de resposta enviado, nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospecção vazia. Pipeline inalterado desde o tick 16:31. Sem eventos desde o tick 15:01 (bounce da Alvorada já tratado naquele tick).
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups, sequência e caixa 100% verdes.
+2. Fila de prospecção **0 pendentes** novamente — gargalo do Prospector segue: manter 5–8 novos/dia com MX validado para o funil (~8% de resposta) não parar.
+3. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar com versão nova; inbound via site fraco (3 acumulados).
+
+### Leads quentes (para ação humana — destaque)
+1. **Savegnago Supermercados (id 118/129) — #1:** porta comercial oficial ABERTA (apresentação enviada ao comercial@savegnago.com.br 10:32; matriz (16) 3946-2088). **PRAZO: sem retorno até 10/09 → toque leve no WhatsApp (11) 96785-9631.** Rede ~100 lojas = contrato de alto volume.
+2. **Frango Assado / Grupo IMC (id 135) — #2:** canal comercial ABERTO via SAC — apresentação enviada a felix.costa@grupoimc.com.br (indicado pela Thamela do SAC) + resposta na thread. Grupo IMC = food service gigante (Frango Assado, Viena, Pizza Hut BR). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Andorinha Hiper Center (id 147)** — loja na própria **Salto**; se responder: pedir volume mensal + tipo e priorizar coleta-teste na unidade de Salto.
+4. **Paulistão Atacadista (id 149)** — bandeira do Grupo Savegnago; **se comercial@savegnago responder, pausar envio ao Paulistão** para não parecer insistência duplicada no mesmo grupo.
+5. **Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldão Atacadista (id 134)** — apresentações enviadas 11:31, aguardando retorno. Dalben (id 148) e Amigão (151) — monitorar. São Roque e Confiança (enviados 11:06) — monitorar.
+6. **Sumerbol (id 21)** — Ivone Franca; acionar por WhatsApp. **GoodBom (id 51)** — Laura (19/08), telefonar (19) 3828-9798. **Rede Boa (id 46)** — ticket #23915. **Arcor/Bagley (id 14)** e **Sanofi Medley (id 91)** — SAC encaminhado à área responsável.
+
+### Nota
+Tick de rotina, tudo verde: watchdog exit 0, caixa limpa confirmada em dobro (check-replies + scan_inbox), 0 follow-ups atrasados, 0 bounces novos, fila com 0 pendentes. Nenhum pedido de relatório ESG — sem geração de PDF. Nenhuma resposta nova desde o tick 16:31 — dia de aguardar retornos dos canais comerciais abertos (Savegnago e Grupo IMC). **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio); monitorar replies dos novos (Andorinha, Dalben, Paulistão, Amigão, São Roque, Confiança) nos próximos ticks.
+
+---
+
 ## 2026-09-07 (segunda) — ATENDENTE (tick 16:31)
 
 ### Números do dia (estado real pós-tick)

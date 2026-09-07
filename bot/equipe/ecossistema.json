@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-07T16:31:00-03:00",
+  "atualizado_em": "2026-09-07T18:01:00-03:00",
   "resumo": {
     "total_leads": 140,
     "leads_ativos": 104,
@@ -23,6 +23,18 @@
     "formspree": 1,
     "teste-cron": 1,
     "sem-fonte": 7
+  },
+  "atividade_tick_18h01_07_09": {
+    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+    "prospecao_followup": "0 follow-ups atrasados",
+    "send_sequence": "sequência processada (nada novo a enviar)",
+    "check_replies": "0 pendentes (replies_pending.json vazio)",
+    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+    "observacao": "Tick tranquilo: pipeline inalterado desde 16:31 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
   },
   "atividade_tick_16h31_07_09": {
     "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
