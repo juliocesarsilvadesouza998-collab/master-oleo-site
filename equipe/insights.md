@@ -1979,3 +1979,30 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 3. **Acompanhar Real Gastronomia** — inbound qualificado e recuperado de bounce; resposta tende a ser quente (faixa R$ 1–2,50/L + coleta-teste prontos).
 4. **Cadência da fila segue como gargalo nº1** — 74 empresas na fila extra aguardando reposição; manter Prospector em 5–8/dia (ou 2 rodadas 09:00+15:00).
 5. Pendências estruturais seguem: ampliar corrigir_emails.py para inbound; renumeração ids 84/86/88; validação MX pré-envio; renovação de créditos Netlify; cadastrar site no Google Search Console (pós-HTTPS).
+
+---
+
+## 2026-09-07 (segunda) — QUALIDADE (auditoria 11:10)
+
+### Números do dia (estado pós-sync 11:09)
+- **Sync Formspree:** 33 emails em bounce cache; **0** notificações novas processadas.
+- **Leads totais:** **131** (`novo`: 87 | `sequencia`: 14 | `respondido`: 9 | `bounce`: 19 | `encerrado`: 2). +2 vs tick 10:36: São Roque (id 130) e Confiança (id 131), prospecção 11:05.
+- **Envios hoje:** **93** (lote fp3 09:11–09:14; recuperação fp2+fp3 09:14–09:34; apresentação 09:58–11:05; boas-vindas 10:09).
+- **Bounces novos hoje:** 0 (cache inalterado pelo sync).
+- **Respostas hoje:** 2 (Savegnago comercial id 129 + atendimento id 118, 10:30, atendente_ia) — já atendidas.
+- **Respostas pendentes:** 0 (`replies_pending.json` = `[]`).
+
+### Auditoria
+a) **Consistência bounce cache ↔ leads.csv: OK, nada a corrigir.** Todos os 19 leads `bounce` têm o email em `bounces.json`; todo email do cache que existe no CSV está marcado `bounce` (nenhum `novo`/`sequencia` com email no cache). Obs.: 14 emails do cache NÃO existem no CSV — são variantes de empresas cujos leads usam outro endereço e que receberam envios hoje (ex.: `contato@penina.com.br` no cache vs `info@penina.com.br` id 72; `contato@nutraway.com.br` vs `nutraway@nutraway.com.br` id 77; `contato@selmi.com.br` vs `sac@selmi.com.br` id 60; `contato@cowpig.com.br` vs `atendimento@cowpig.com.br` id 71; `contato@deltaterceirizacoes.com.br` vs `adm@deltaterceirizacoes.com.br` id 64; `rh@realgastronomia.com.br` vs `vendas@realgastronomia.com.br`; `info@kelcopetcare.com.br` vs `comercial@kelcopetcare.com.br` id 18). O cache é por endereço, não por empresa — risco de bounce no mesmo domínio.
+b) **Bounce com `boas_vindas_em` preenchido: 1 (registrado, não corrigido).** Lead id 1 (Ana Souza, Alimentos Salto Ltda, ana@alimentossalto.com.br): boas_vindas 13/08 11:31, bounce detectado depois do envio (fluxo normal — sem evidência de envio a bounce já conhecido). Demais bounces só têm `apresentacao_em` (mesma explicação).
+c) **Respostas pendentes:** 0 — fila vazia, Atendente sem trabalho no próximo tick.
+
+### Problemas encontrados e correções
+1. Nenhum erro de status para corrigir — sync consistente (correções automáticas já operaram em ticks anteriores).
+2. **Qualidade de dados (registrado):** IDs duplicados (84, 86, 88, 101 — pendência antiga) **+ 7 leads com id vazio** (Novotel Itu, Metha, Rede Top, Real Gastronomia, Mirassol, FS, Rest Industrial — adicionados pelo Prospector sem id). Recomendo renumeração única.
+3. **Cadência em rajada (observação):** pico de ~35 emails em 3 min (09:11–09:14) e fp1+fp2+fp3 no mesmo lead em ~20 min (09:14–09:34 — recuperação de atrasados já registrada pelo Atendente 09:40). Risco de deliverability.
+
+### Sugestões para o Estrategista
+1. **Sibling addresses pós-bounce:** quando um email da empresa der bounce, validar o endereço alternativo do mesmo lead antes de continuar enviando (ex.: Penina/Nutraway/Selmi/Cowpig receberam fp3 hoje com variante do domínio já no cache) — risco alto de bounce no mesmo domínio; reforça a pendência de validação MX pré-envio.
+2. **Renumeração única dos IDs** (84/86/88/101 duplicados + 7 vazios) para evitar chaveamento errado por id em dashboards e follow-ups.
+3. **Suavizar cadência:** rate-limit por hora (ex.: máx. 10–15/h) e espaçar fp2/fp3 (mín. 24 h entre follow-ups) para proteger a reputação do domínio — hoje houve 3 emails ao mesmo lead em 20 min na recuperação.
