@@ -1,6 +1,6 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-07T10:15",
+ "atualizado_em": "2026-09-07T10:58",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
   "limite_diario_prospeccao": 15,
@@ -35,7 +35,7 @@
   "pendentes": 0,
   "contatados": 94,
   "bounces": 24,
-  "nota": "07/09 10:15 (Atendente): fila com 105 empresas — 94 contatados, 24 bounces, 0 pendentes (enviar_lote --status confirmado). Fila extra com 74 empresas aguardando reposicao — gargalo segue no Prospector (5-8/dia)."
+  "nota": "07/09 10:52 (Prospector): fila com 105 empresas — 94 contatados, 24 bounces, 0 pendentes (enviar_lote --status confirmado). Rodada de prospeccao: 4 buscas web usadas (limite) focadas em gorduras/laticinios (margarina/manteiga/maionese) e encapsulados; unicos achados na regiao (Crista Margarina/Indaiatuba e KiSabor/Jundiai) JA estavam na base e contatados; demais candidatos fora do raio (Itapolis, Orlandia, PR, MG, GO, BH) ou sem email publico (Catupiry, Hikari, Max Atacadista, Itambe). 0 empresas novas adicionadas — fila segue com 0 pendentes; gargalo no Prospector (precisa de novas cidades/nichos ou fontes alternativas)."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -52,6 +52,43 @@
   "watchdog": "saudavel (26/08 18:01, exit 0 - 117 leads, 89 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
   "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
   "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+ },
+ "estado_2026_09_07": {
+  "leads_total": 129,
+  "leads_ativos": 99,
+  "novo": 85,
+  "sequencia": 14,
+  "respondidos": 9,
+  "encerrados": 2,
+  "bounces_leads": 19,
+  "bounces_cache": 33,
+  "taxa_resposta": "~7,3% (8 respostas reais, excl. teste / ~110 contatados sem bounce)",
+  "lead_quente": "Savegnago Supermercados (RESPOSTA HUMANA 07/09 13:23 GMT — Central de Relacionamento (Gabriele) pediu apresentacao da empresa para comercial@savegnago.com.br; apresentacao completa enviada ao comercial + confirmacao ao atendimento; rede de ~100 lojas no interior de SP = alto volume de fritura. Lead id 118 marcado respondido + novo lead id 129 (comercial) cadastrado e respondido). Em aberto: Sumerbol (Ivone), Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile.",
+  "watchdog": "saudavel (07/09 10:36, exit 0 - 129 leads, 99 ativos, 33 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
+  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
+  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+ },
+ "tick_atendente_07_09_10_28": {
+  "rodadas_no_dia": 1,
+  "sync_formspree": "33 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — 18 'ja tentado'; todos os 33 bounces do cache ja com tentativa registrada em correcoes_emails.json. Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 128 leads, 100 ativos, 33 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes",
+  "check_replies": "1 resposta NOVA: Savegnago Supermercados (atendimento@savegnago.com.br, 07/09 13:23 GMT) — Central de Relacionamento (Gabriele): 'por gentileza encaminhar um e-mail com a apresentacao de vossa empresa para comercial@savegnago.com.br'. NAO e negativa: porta comercial ABERTA com direcionamento explicito ao canal de compras",
+  "respostas_enviadas": "2 respostas da persona de compra (10:32-10:33): (1) apresentacao COMPLETA da Master Oleo enviada para comercial@savegnago.com.br — o que compramos (oleo usado, gordura vegetal, vencidos >40% com descaracterizacao), faixa R$ 1,00-2,50/L com valor diferenciado por contrato, certificado MTR/PNRS, coleta programada, relatorio ESG, pagamento via PIX, urgencia Portaria MME/MMA 3/2026 (jan/2028) + CTA de volume mensal + WhatsApp (11) 96785-9631; (2) confirmacao cortesia para atendimento@savegnago.com.br (Gabriele) com In-Reply-To, informando o envio ao comercial. Lead id 118 marcado 'respondido' (respondido_por=atendente_ia); lead id 129 (comercial@savegnago.com.br) CADASTRADO e marcado 'respondido' para o bot capturar respostas futuras do canal comercial; replies_pending.json zerado",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "fila_prospeccao": "105 empresas na fila extra: 0 pendentes (94 contatados, 24 bounces) — gargalo segue no Prospector (5-8/dia)",
+  "leads_quentes": [
+   "Savegnago Supermercados (NOVO #1 — resposta humana 07/09 13:23 GMT: Central de Relacionamento direcionou ao canal comercial comercial@savegnago.com.br; apresentacao enviada. Rede de ~100 lojas no interior de SP (Ribeirao Preto, Franca, Sao Carlos, Araraquara, Bauru, Piracicaba, Sorocaba, Campinas, Jundiai, Salto/Itu) = volume alto de fritura + grande gerador. PRIORIDADE: aguardar retorno do comercial; follow-up humano via matriz (16) 3946-2088 em 3-5 dias se sem resposta)",
+   "Sumerbol Supermercados (resposta 26/08: proposta encaminhada ao setor responsavel + contato direto Ivone Franca (ivone.franca@sumerbol.com.br); aguardando retorno — telefonar/WhatsApp (11) 96785-9631)",
+   "Arcor/Bagley (SAC automatico 26/08 'encaminhado a area responsavel' — aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta, aguardar depto)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "EVENTO GRANDE do tick: Savegnago Supermercados — uma das maiores redes supermercadistas do interior de SP (~100 lojas, Grupo Savegnago com matriz em Ribeirao Preto) — respondeu ao contato com direcionamento EXPLICITO ao canal comercial (comercial@savegnago.com.br) e telefone da matriz. Diferente das auto-respostas de SAC (Oba/Arcor), aqui houve pedido concreto de apresentacao da empresa: porta comercial oficial aberta. Respondido na hora pela persona de compra (apresentacao completa ao comercial + cortesia ao atendimento). Este e o lead mais quente desde Sumerbol. Restante da operacao 100% verde: watchdog exit 0, sem follow-ups atrasados, sem bounces novos, fila com 0 pendentes."
  },
  "tick_atendente_26_08_18_01": {
   "rodadas_no_dia": 7,
@@ -840,7 +877,7 @@
   ],
   "nota": "Tick apos 12 dias de pausa (ultimo registro 26/08 17:31). Watchdog pegou 13 leads com follow-up ATRASADO na 1a rodada (exit 1): eram leads que ja estavam no estagio FP2/FP3 ha 11-12 dias. RESOLVIDO com 2 execucoes de prospecao_followup.py (1 follow-up por lead por execucao): 13x FP2 + 13x FP3 — os 13 completaram a sequencia completa de follow-ups. Watchdog final exit 0. Sem replies novos, sem bounces novos, fila 0 pendentes, cobertura 100%. Leads quentes inalterados; Sumerbol segue #1 e o prazo de retorno via Ivone (2-3 dias apos 26/08) ja venceu — prioridade humana."
  },
- "estado_2026_09_07": {
+ "estado_2026_09_07_09_40": {
   "leads_total": 117,
   "leads_ativos": 89,
   "apresentacoes_enviadas": 117,
@@ -901,5 +938,69 @@
    "Hile (nicho encapsulados, V2)"
   ],
   "nota": "Tick de rotina, tudo verde e identico ao 10:09: watchdog exit 0 na 1a rodada, nenhum reply novo, nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospeccao com 0 pendentes (105 empresas: 94 contatados, 24 bounces). Base estavel em 128 leads / 100 ativos / 7 respondidos / 19 bounces de leads / 33 no cache; cobertura 100% (128/128). Nenhum pedido de relatorio ESG. Quentes inalterados — Real Gastronomia (inbound recuperado) + Sumerbol (prazo vencido) no topo."
+ },
+ "tick_atendente_07_09_10_36": {
+  "rodadas_no_dia": 4,
+  "sync_formspree": "33 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total do dia)",
+  "corrigir_emails": "0 bounces processados — 18 'ja tentado' neste tick; todos os 33 do cache ja com tentativa registrada em correcoes_emails.json. Nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 129 leads, 99 ativos, 33 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "enviar_lote": "nao executado neste tick (watchdog saudavel e fila sem pendentes desde 10:15: 105 empresas — 94 contatados, 24 bounces, 0 pendentes)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (cobertura 100% — 129/129 leads com apresentacao/boas-vindas)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas — nenhum reply novo desde o atendimento da Savegnago (tick 10:28). Sem anexo ESG",
+  "relatorio_esg": "nenhum pedido de relatorio ESG/certificado de impacto neste tick — sem geracao de PDF",
+  "leads_quentes": [
+   "Savegnago Supermercados (id 118/129) — Nº1: porta comercial oficial ABERTA (Central de Relacionamento pediu apresentacao -> enviada ao comercial@savegnago.com.br em 10:32; lead id 129 cadastrado p/ captura de resposta). Rede ~100 lojas interior de SP = alto volume. PRIORIDADE: aguardar retorno do comercial; silencio em 3-5 dias -> follow-up humano na matriz (16) 3946-2088",
+   "Real Gastronomia (inbound do site recuperado de bounce no tick 10:09: rh@realgastronomia.com.br -> vendas@realgastronomia.com.br; self-service/fornecimento de alimentos, perfil ideal de gerador. Boas-vindas enviada. Se responder: pedir volume mensal + tipo e levar ao WhatsApp (11) 96785-9631)",
+   "Sumerbol Supermercados (resposta 26/08 13:21 GMT: proposta encaminhada ao setor + contatos diretos manutencao@sumerbol.com.br / ivone.franca@sumerbol.com.br. PRIORIDADE: prazo dos 2-3 dias VENCIDO — acionar Ivone por WhatsApp (11) 96785-9631)",
+   "Arcor/Bagley (SAC automatico 26/08 encaminhado a area responsavel — aguardar analise)",
+   "GoodBom Supermercados (humana Laura 19/08, telefonar (19) 3828-9798)",
+   "Rede Boa (ticket #23915)",
+   "Sanofi Medley (SAC protocolo 02995121 — porta aberta)",
+   "Hile (nicho encapsulados, V2)"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 10:15/10:28: watchdog exit 0 na 1a rodada (129 leads, 99 ativos, 33 bounces), nenhum reply novo (ultima resposta atendida: Savegnago 10:28), nenhum follow-up atrasado, nenhum bounce novo a corrigir, fila de prospeccao com 0 pendentes (105 empresas: 94 contatados, 24 bounces) + 74 na fila extra. Cobertura 100% (129/129). Nenhum pedido de relatorio ESG. Quentes inalterados — Savegnago no topo (aguardando retorno do comercial), Sumerbol (prazo vencido) urgente."
+ },
+ "tick_prospector_07_09_10_52": {
+  "diagnostico": "enviar_lote --status: 105 empresas — 94 contatados, 24 bounces, 0 pendentes (< 10, acionou PASSO 2)",
+  "buscas_web": 4,
+  "buscas_executadas": [
+   "fabrica margarina Campinas contato email (achados: Crista Margarina/Indaiatuba — JA NA BASE + contatado; Pregiata/Itapolis — fora do raio; Agro Foods/Orlandia-Pirapozinho — fora do raio)",
+   "laticinios Jundiai fale conosco email (achados: KiSabor/Jundiai — JA NA BASE + contatado; Quata Alimentos — email LGPD e fabrica fora do raio; Carolina/PR, Tirolez/MG, Itambe/BH — fora do raio)",
+   "industria maionese Sorocaba contato (achados: Italfood/PR — fora do raio e sem email publico; Venturim — sem site/email)",
+   "industria farmaceutica encapsulados Indaiatuba contato (achados: Catalent — cliente real; Cellera — ja contatado; MP Pharma/Pharmapele — manipulacao, nao industria; IFBrasil/PB — fora do raio)"
+  ],
+  "verificacoes_extra": "web_extract em ~20 sites (Catupiry, Hikari, Max Atacadista, Itambe, Galena, Greenpharma, Jussara, Predilecta, Latvida, Frisabor, Casa Suica, Pague Menos, Pastorinho, Casa Mathias, Amigao, Serve Bem, Scala, Quata, Tirolez, Carolina, Italfood, Pregiata, Agro Foods): nenhum email publico novo valido dentro do raio (maioria so formulario, site fora do ar, ou empresa fora da regiao)",
+  "empresas_novas_adicionadas": 0,
+  "emails_enviados": 0,
+  "falhas": "nenhuma (script: 'Nenhum email pendente. Use --status para ver a fila.')",
+  "destaques_gorduras_laticinios": "Crista Margarina (Indaiatuba) e KiSabor/Food Brands (Jundiai, maioneses) confirmados como candidatos ideais de vencidos >40% + descaracterizacao, porem JA contatados (leads id 20 e 27 em leads.csv) — nao duplicados",
+  "destaques_encapsulados": "nenhum novo — Catalent (Indaiatuba/Sorocaba) ja e cliente real; Cellera Farma e Sorocaps ja contatados",
+  "nota": "Rodada sem reposicao: todas as 4 buscas (limite anti-loop) consumidas; os 2 unicos alvos de alto valor na regiao (Crista, KiSabor) ja constavam na base e foram contatados. Fila permanece 0 pendentes. RECOMENDACAO p/ proximas rodadas: (1) usar cidades ainda nao exploradas da lista foco (Porto Feliz, Cabreuva, Louveira, Votorantim, Boituva, Tatui) com termos de gorduras/laticinios; (2) explorar frigorificos/gordura animal da regiao; (3) capturar emails de paginas 'fale-conosco' de industrias locais via outros mecanismos alem de busca generica (ex.: diretorios setoriais ABIA/SINDALIMENTOS)."
+ },
+ "tick_melhorador_07_09_10_54": {
+  "diagnostico": "Fila de prospeccao com 0 pendentes (Prospector 09:00 sem achados novos no raio) — pipeline de novos contatos travado; taxa de resposta ~7% mostra funil saudavel quando ha fila",
+  "melhoria": "Fonte alternativa de leads: redes de supermercado com loja em Salto/cidades do raio via site institucional/e-commerce (SAC/Fale Conosco), MX validado via nslookup",
+  "leads_adicionados": [
+   {
+    "nome": "Sao Roque Supermercados",
+    "email": "sac@smsr.com.br",
+    "mx": "valido (smsr.com.br)",
+    "cidade": "Salto/SP (2 lojas) + Sorocaba/Tatui/Boituva/Ibiuna/Aluminio/Avare — 26 lojas",
+    "por_que": "rede com 2 lojas na propria Salto; gerador gigante de oleo de fritura"
+   },
+   {
+    "nome": "Rede Confianca Supermercados",
+    "email": "sac@confianca.com.br",
+    "mx": "valido (Outlook)",
+    "cidade": "Sorocaba/SP (2 lojas, 1 com 27 mil m2) + Bauru/Marilia/Jau/Botucatu/Pederneiras",
+    "por_que": "rede ~15 lojas com 2 em Sorocaba (raio de coleta)"
+   }
+  ],
+  "fila_apos": "107 empresas (94 contatados, 24 bounces, 2 pendentes)",
+  "verificacao": "python enviar_lote.py --status -> pendentes: 2 (Sao Roque + Confianca), prontos para o tick do Atendente",
+  "nao_enviado_por_mim": "envio automatico no proximo tick do Atendente (regra: max 5 se necessario — nao necessario)",
+  "licao_para_prospector": "foco em industrias de gordura saturou; migrar parte das buscas para varejo supermercadista regional (nicho que ja rendeu Savegnago/Sumerbol/GoodBom/Rede Boa); e-commerce das redes expoe emails publicos (sac@, dpo@) que o formulario esconde"
  }
 }

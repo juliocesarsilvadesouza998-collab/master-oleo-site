@@ -4,6 +4,58 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 
 ---
 
+## 2026-09-07 (segunda)
+
+### Números do dia (estado real pós-tick 10:28)
+- **Sync Formspree:** 33 emails no cache de bounce; **0** notificações novas do Formspree (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — 18 "já tentado"; todos os 33 bounces do cache já com tentativa registrada em `correcoes_emails.json`. Nada novo a corrigir.
+- **Leads totais:** 129 (127 reais + 2 teste) — **+1 lead novo neste tick** (id 129, comercial@savegnago.com.br).
+  - `novo`: 85 | `sequencia`: 14 | `respondido`: 9 | `bounce`: 19 | `encerrado`: 2 — **Ativos: 99**
+- **Respondidos:** 9 (id 2 teste; id 14 Bagley/Arcor; id 21 Sumerbol; id 46 Rede Boa; id 51 GoodBom; id 63 Oba; id 91 Sanofi; **id 118 Savegnago atendimento — novo hoje**; **id 129 Savegnago comercial — novo hoje**).
+- **Watchdog:** ✅ saudável (exit 0, 10:36) — 129 leads, 99 ativos, 33 bounces; nenhum follow-up atrasado, bounce sem correção ou lead parado (rodada das 10:36 também 100% verde).
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (sem envios novos pendentes).
+- **check-replies:** 1 resposta encontrada e ATENDIDA no tick 10:28 (fila zerada). **Tick 10:36: 0 respostas novas** — caixa sem replies pendentes desde o atendimento da Savegnago.
+
+### Evento do tick (DESTAQUE — lead quente nº 1)
+- **Savegnago Supermercados (id 118, atendimento@savegnago.com.br) respondeu às 13:23 GMT** — resposta HUMANA da Central de Relacionamento (Gabriele): *"Por gentileza encaminhar um e-mail com a apresentação de vossa empresa, para: comercial@savegnago.com.br"* + telefone da matriz (16) 3946-2088. **Pedido concreto de apresentação = porta comercial oficial aberta.** O Grupo Savegnago é uma das maiores redes supermercadistas do interior de SP (~100 lojas: Ribeirão Preto, Franca, São Carlos, Araraquara, Bauru, Piracicaba, Sorocaba, Campinas, Jundiaí, Salto/Itu) — grande gerador de óleo de fritura.
+- **Ações do atendente_ia (10:32–10:33):**
+  1. **Apresentação completa da Master Óleo enviada para comercial@savegnago.com.br** (o que compramos: óleo usado, gordura vegetal, vencidos >40% com descaracterização; faixa R$ 1,00–2,50/L com valor diferenciado por contrato; certificado MTR/PNRS; coleta programada; relatório ESG; pagamento via PIX; urgência Portaria MME/MMA 3/2026 jan/2028; CTA de volume mensal + WhatsApp).
+  2. **Confirmação cortesia para atendimento@savegnago.com.br (Gabriele)** com In-Reply-To.
+  3. **Lead id 129 (comercial@savegnago.com.br) CADASTRADO** — essencial para o `check-replies` capturar respostas futuras do canal comercial (o bot só conversa com leads cadastrados). Marcado `respondido` (respondido_por=atendente_ia).
+  4. `replies_pending.json` zerado; mensagens já lidas no IMAP (sem risco de resposta dupla).
+- **Nenhum pedido de relatório ESG/certificado de impacto** neste tick — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups e sequência 100% verdes.
+2. Pendências já registradas e mantidas: lead id 1 (teste, bounce com boas-vindas); ids duplicados 84/86/88; WBM sem email alternativo (follow-up humano sugerido); Netlify sem créditos de build (403) — GitHub Pages segue como único no ar com a versão nova.
+
+### Leads quentes (para ação humana — destaque)
+1. **Savegnago Supermercados (id 118/129) — NOVO #1:** porta comercial oficial aberta (pediram apresentação e passaram telefone da matriz). **PRIORIDADE: aguardar retorno do comercial@savegnago.com.br; se sem resposta em 3–5 dias, follow-up humano na matriz (16) 3946-2088.** Rede ~100 lojas = contrato de alto volume.
+2. **Sumerbol Supermercados (id 21)** — contato direto com Ivone Franca (ivone.franca@sumerbol.com.br); telefonar/WhatsApp (11) 96785-9631 se sem retorno.
+3. **Arcor/Bagley (id 14)** — SAC "encaminhado à área responsável" (26/08); aguardar análise.
+4. **GoodBom Supermercados (id 51)** — humana Laura (19/08); telefonar (19) 3828-9798.
+5. **Rede Boa (id 46)** — ticket #23915 no comercial.
+6. **Sanofi Medley (id 91)** — SAC protocolo 02995121, porta aberta.
+7. **Hile (id 101)** — nicho encapsulados, template V2 em monitoramento.
+
+### Sugestões para o Estrategista
+1. **Prioridade da semana: Savegnago.** Acompanhar comercial@savegnago.com.br de perto (próximos ticks do Atendente já capturam resposta automaticamente). Se confirmar interesse, preparar proposta de CONTRATO de coleta programada para rede (modelo de grande gerador: volume mínimo + reajuste por qualidade) e relatório ESG mensal — argumentos que fecham com redes.
+2. **Follow-up humano em paralelo:** Sumerbol (Ivone) e GoodBom (Laura) seguem com contato direto pendente — telefone converte antes do próximo tick.
+3. Pendências estruturais seguem: renumeração ids 84/86/88, validação MX pré-envio, renovação de créditos Netlify.
+
+### Tick do Melhorador Contínuo (10:54) — gargalo da fila atacado
+- **Diagnóstico:** fila de prospecção com **0 pendentes** (Prospector de 09:00 usou 4 buscas focadas em gorduras/laticínios/encapsulados e não achou nada novo no raio). Pipeline de novos contatos travado; taxa de resposta ~7% prova que o funil converte quando há fila.
+- **Melhoria implementada (fonte alternativa de leads que o Prospector não usou):** buscas por **REDES DE SUPERMERCADO com loja em Salto/cidades do raio** (nicho que já rendeu Savegnago, Sumerbol, GoodBom, Rede Boa) via site institucional/e-commerce (páginas SAC/Fale Conosco), com **validação de MX via nslookup antes de entrar na fila**.
+- **2 leads de alto valor adicionados a `bot/fila_prospeccao_extra.json`** (76 → 107 empresas na fila consolidada; pendentes: 0 → 2):
+  1. **São Roque Supermercados** — `sac@smsr.com.br` (público no e-commerce supersaoroque.com.br; MX smsr.com.br válido). **26 lojas, sendo 2 em SALTO, 2 em Sorocaba, 2 em Tatuí, 2 em Boituva** — gerador gigante de óleo de fritura na própria cidade-sede da Master Óleo.
+  2. **Rede Confiança Supermercados** — `sac@confianca.com.br` (público no site; MX Outlook válido). **2 lojas em Sorocaba** (Av. São Paulo, 27 mil m², maior da rede) + ~13 lojas em Bauru/Marília/Jaú/Botucatu/Pederneiras.
+- **Verificação:** `python enviar_lote.py --status` → 107 empresas, 94 contatados, 24 bounces, **2 pendentes** (exatamente os 2 novos). Próximo tick do Atendente (30/30min) envia automaticamente.
+- **Lições registradas:** (1) foco do Prospector em indústrias de gordura saturou — migrar parte das buscas para varejo supermercadista regional; (2) o e-commerce de redes (supersaoroque.com.br) e o rodapé do site (sac@, dpo@) expõem emails públicos que o "fale conosco" com formulário esconde; (3) sempre `nslookup -type=MX` antes de cadastrar (regra já do enviar_lote, mas evita bounce na origem).
+- **Não enviado por mim:** os 2 emails saem no próximo tick do Atendente (limite de segurança respeitado).
+
+---
+
 ## 2026-08-14 (sexta)
 
 ### Números do dia
@@ -1854,3 +1906,41 @@ Adicionadas **7 empresas REAIS novas** em `bot/fila_prospeccao_extra.json`, com 
 - Não é necessária ação humana imediata; se o certificado não aparecer em 24–48h, verificar no painel do GitHub (Settings → Pages) se há mensagem de erro de emissão, ou abrir ticket no GitHub Support. Alternativa: mover o DNS do domínio para outro provedor (fora do Netlify) se persistir.
 
 ---
+
+## 2026-09-07 (segunda) — ATENDENTE (tick 10:36)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 33 emails em bounce cache; **0** notificações novas do Formspree (nenhum lead novo via site — 3 inbound acumulados no total do dia).
+- **corrigir_emails:** 0 bounces processados — 18 "já tentado" neste tick; todos os 33 do cache já com tentativa registrada em `correcoes_emails.json`. Nada novo a corrigir.
+- **Leads totais:** **129** (`novo`: 85 | `sequencia`: 14 | `respondido`: 9 | `bounce`: 19 | `encerrado`: 2 — **Ativos: 99**). Sem leads novos neste tick.
+- **Cobertura:** 100% (129/129 com apresentação/boas-vindas) — nenhum lead parado.
+- **Respostas pendentes:** 0 (replies_pending.json vazio — confirmado `[]`).
+- **Watchdog:** ✅ exit 0 na 1ª rodada (129 leads, 99 ativos, 33 bounces no cache; nenhum follow-up atrasado/bounce sem correção/lead parado).
+- **prospecao_followup:** 0 (nada atrasado). **send_sequence:** sequência processada, sem envios novos (cobertura já 100%). **check-replies:** 0 respostas aguardando.
+
+### Eventos do tick
+1. **Tick de rotina, tudo verde** — estado idêntico ao 10:15/10:28: nenhum reply novo (última resposta atendida: Savegnago, às 10:28), nenhum follow-up atrasado, nenhum bounce novo, fila de prospecção com 0 pendentes.
+2. **Nenhum pedido de relatório ESG/certificado de impacto** — nenhum PDF gerado (sem pedido de "relatório de impacto ambiental" na caixa).
+3. **Nenhuma resposta de lead para atender** — `replies_pending.json` confirmado vazio; sem envio de respostas da persona de compra neste tick.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Watchdog exit 0 na 1ª rodada; sync sem bounces novos; correções sem pendência; follow-ups em dia.
+2. **Gargalo estrutural recorrente (registrado, não corrigível por mim):** fila ativa zerada (0 pendentes — 94 contatados / 24 bounces de 105); fila extra com **74 empresas aguardando reposição**; reposição de 5–8/dia pelo Prospector segue como pendência nº1 de crescimento.
+3. Pendências já registradas e mantidas: lead id 1 (teste, bounce com boas-vindas); ids duplicados 84/86/88; WBM sem email alternativo; Netlify sem créditos de build (GitHub Pages segue no ar com HTTPS novo); ampliar corrigir_emails.py para inbound.
+
+### Leads quentes (para ação humana — destaque)
+1. **Savegnago Supermercados (id 118/129) — Nº1 do dia:** porta comercial oficial ABERTA (Central de Relacionamento pediu apresentação → enviada para comercial@savegnago.com.br às 10:32, lead id 129 cadastrado para captura de resposta). Rede ~100 lojas no interior de SP = contrato de alto volume. **PRIORIDADE: aguardar retorno do comercial; se silêncio em 3–5 dias, follow-up humano na matriz (16) 3946-2088.**
+2. **Real Gastronomia (#2)** — inbound do site recuperado de bounce (10:09): boas-vindas enviada; perfil ideal (self-service/fornecimento de alimentos). Se responder, pedir volume mensal + tipo e levar ao WhatsApp (11) 96785-9631.
+3. **Sumerbol Supermercados (#3, URGENTE)** — resposta humana via SAC (26/08) com contatos diretos ivone.franca@sumerbol.com.br / manutencao@sumerbol.com.br; **prazo de 2–3 dias VENCIDO — acionar Ivone por WhatsApp (11) 96785-9631 o quanto antes.**
+4. **Arcor/Bagley** — SAC automático 26/08 "encaminhado à área responsável"; aguardar análise.
+5. **GoodBom Supermercados** — resposta humana (Laura, 19/08); **telefonar (19) 3828-9798**.
+6. **Rede Boa** — ticket #23915, proposta com o comercial.
+7. **Sanofi Medley** — SAC protocolo 02995121, porta aberta.
+8. **Hile** — nicho encapsulados, V2.
+
+### Sugestões para o Estrategista
+1. **Fechar Sumerbol via Ivone (prioridade máxima, atrasada)** — prazo vencido; acionar WhatsApp/telefone agora.
+2. **Acompanhar Savegnago comercial de perto** — próximo tick do Atendente já captura resposta automaticamente (lead id 129 cadastrado); preparar proposta de CONTRATO de coleta programada para rede (modelo grande gerador) + relatório ESG mensal.
+3. **Acompanhar Real Gastronomia** — inbound qualificado e recuperado de bounce; resposta tende a ser quente (faixa R$ 1–2,50/L + coleta-teste prontos).
+4. **Cadência da fila segue como gargalo nº1** — 74 empresas na fila extra aguardando reposição; manter Prospector em 5–8/dia (ou 2 rodadas 09:00+15:00).
+5. Pendências estruturais seguem: ampliar corrigir_emails.py para inbound; renumeração ids 84/86/88; validação MX pré-envio; renovação de créditos Netlify; cadastrar site no Google Search Console (pós-HTTPS).
