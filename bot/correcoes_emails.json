@@ -173,5 +173,26 @@
     "status": "corrigido",
     "quando": "2026-09-07T10:08:58-03:00",
     "fonte": "formspree/site"
+  },
+  {
+    "email_antigo": "contato@redebomlugar.com.br",
+    "empresa": "Rede Bom Lugar Supermercados",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-07T12:01:07-03:00"
+  },
+  {
+    "email_antigo": "comercial@roldao.com.br",
+    "empresa": "Roldao Atacadista",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-07T12:01:12-03:00"
+  },
+  {
+    "email_antigo": "nutraway@nutraway.com.br",
+    "empresa": "Nutraway Suplementos Alimentares Ltda",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-07T12:11:58-03:00"
   }
 ]

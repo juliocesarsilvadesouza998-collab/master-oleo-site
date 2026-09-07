@@ -551,5 +551,40 @@
   "email": "comercial@roldao.com.br",
   "cidade": "SP (39 lojas no estado, inclui regiao de Sorocaba/Campinas; email PUBLICO do depto comercial no site oficial)",
   "segmento": "Atacarejo (39 lojas; padaria/acougue/rotisserie - canal comercial direto)"
+ },
+ {
+  "nome": "Andorinha Hiper Center",
+  "empresa": "Andorinha Hiper Center Supermercados LTDA",
+  "email": "sugestoes@andorinhahiper.com.br",
+  "cidade": "Salto/Itu/Campinas-SP",
+  "segmento": "Supermercados/hipermercados (rede)"
+ },
+ {
+  "nome": "Supermercados Dalben",
+  "empresa": "Supermercados Dalben LTDA",
+  "email": "escutadalben@supermercadosdalben.com.br",
+  "cidade": "Campinas/Valinhos-SP",
+  "segmento": "Supermercados (rede)"
+ },
+ {
+  "nome": "Paulistao Atacadista",
+  "empresa": "Paulistao Atacadista (Grupo Savegnago)",
+  "email": "atendimento@paulistaoatacadista.com.br",
+  "cidade": "Interior SP - grupo Savegnago",
+  "segmento": "Atacarejo (rede)"
+ },
+ {
+  "nome": "Rede Alvorada Sorocaba",
+  "empresa": "Supermercados Alvorada (Rede)",
+  "email": "sac@alvoradasorocaba.com.br",
+  "cidade": "Sorocaba/SP",
+  "segmento": "Supermercados (rede)"
+ },
+ {
+  "nome": "Amigao Supermercados",
+  "empresa": "Amigao Supermercados (Grupo Amigao)",
+  "email": "sac@grupoamigao.com",
+  "cidade": "Campinas/SP",
+  "segmento": "Supermercados (rede)"
  }
 ]

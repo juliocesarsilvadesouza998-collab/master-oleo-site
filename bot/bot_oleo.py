@@ -13,7 +13,7 @@ Uso:
   python bot_oleo.py leads                    # lista leads
   python bot_oleo.py test-email               # testa SMTP/IMAP com as credenciais
 """
-import argparse, csv, datetime, email, imaplib, json, os, smtplib, ssl, sys
+import argparse, csv, datetime, email, imaplib, json, os, re, smtplib, ssl, sys
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -102,10 +102,11 @@ def fetch_thread_messages(m, msg_ids):
             continue
         raw = data[0][1]
         msg = email.message_from_bytes(raw)
-        mid = msg.get("Message-ID","").strip()
-        frm = msg.get("From","")
-        subj = msg.get("Subject","")
-        date = msg.get("Date","")
+        # str() decodifica cabeçalhos RFC2047/não-ASCII (Header) — evita Header não serializável
+        mid = str(msg.get("Message-ID") or "").strip()
+        frm = str(msg.get("From") or "")
+        subj = str(msg.get("Subject") or "")
+        date = str(msg.get("Date") or "")
         body = ""
         if msg.is_multipart():
             for part in msg.walk():
@@ -123,7 +124,9 @@ def fetch_thread_messages(m, msg_ids):
             try: body = msg.get_payload(decode=True).decode(msg.get_content_charset() or "utf-8", "replace")
             except Exception: body = msg.get_payload() or ""
         out.append({"id": i.decode(), "message_id": mid, "from": frm, "subject": subj,
-                    "date": date, "body": body[:4000]})
+                    "date": date, "body": body[:4000],
+                    "references": str(msg.get("References") or "").strip(),
+                    "in_reply_to": str(msg.get("In-Reply-To") or "").strip()})
     return out
 
 def add_lead(args):
@@ -240,12 +243,73 @@ def send_sequence(args):
     print("Sequência processada.")
 
 # ---------- RESPOSTAS ----------
+PLATFORM_DOMAINS = ("buzzmonitor.com.br", "zendesk.com", "movidesk.com",
+                    "freshdesk.com", "tawk.to", "zendesk.com.br", "desk.ms",
+                    "salesforce.com", "zoho.com", "atendimento", "sac")
+
+def find_sent_folder(m):
+    """Localiza a pasta de enviados (nomes variam por idioma da conta Gmail).
+    Prioriza a pasta marcada com o atributo \\Sent; fallback por nome."""
+    try:
+        typ, folders = m.list()
+        for f in (folders or []):
+            fl = f.decode("utf-8", "replace")
+            if "\\sent" in fl.lower():
+                return fl.split(' "/" ')[-1].strip('"')
+        for f in (folders or []):
+            fl = f.decode("utf-8", "replace").lower()
+            for cand in ('"sent mail"', '"enviados"', '"e-mails enviados"',
+                         '"e-mail enviado"', '"/sent"', '"/enviados"'):
+                if cand in fl:
+                    return f.decode("utf-8", "replace").split(' "/" ')[-1].strip('"')
+    except Exception:
+        pass
+    return None
+
+def collect_sent_msgids(m, since="01-Jan-2026"):
+    """Varre a pasta Enviados e devolve (msgid→to_email, set(msgids)).
+    Permite correlacionar respostas de plataforma pelo cabeçalho References/In-Reply-To.
+    Busca apenas cabeçalhos (Message-ID/To) em lote único por performance."""
+    sent_folder = find_sent_folder(m)
+    if not sent_folder:
+        return {}, set()
+    msgid_to_to, all_ids = {}, set()
+    try:
+        # imaplib precisa do nome da pasta já entre aspas quando contém caracteres especiais ([Gmail]/...)
+        m.select('"' + sent_folder.replace("\\", "\\\\").replace('"', '\\"') + '"')
+        typ, data = m.search(None, f'(SINCE "{since}")')
+        ids = data[0].split() if typ == "OK" and data[0] else []
+        if not ids:
+            return {}, set()
+        # fetch em lote único, só cabeçalhos Message-ID e To
+        typ2, chunks = m.fetch(b",".join(ids), "(BODY.PEEK[HEADER.FIELDS (MESSAGE-ID TO)])")
+        if typ2 != "OK" or not chunks:
+            return {}, set()
+        for chunk in chunks:
+            if not isinstance(chunk, tuple) or len(chunk) < 2:
+                continue
+            raw = chunk[1]
+            msg = email.message_from_bytes(raw)
+            mid = str(msg.get("Message-ID") or "").strip().lower()
+            if not mid:
+                continue
+            all_ids.add(mid)
+            to_hdr = str(msg.get("To") or "")
+            rem = re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", to_hdr)
+            if rem:
+                msgid_to_to[mid] = rem.group(0).lower()
+    except Exception as exc:
+        print(f"(aviso: não foi possível varrer Enviados: {exc})")
+    return msgid_to_to, all_ids
+
 def check_replies(args):
     cfg = load_config()
     e = cfg_email(cfg)
     leads = read_leads()
+    leads_by_email = {l["email"].strip().lower(): l for l in leads}
     m = imap_connect(e)
     try:
+        msgid_to_to, sent_msgids = collect_sent_msgids(m)
         m.select("INBOX")
         # Busca respostas para nossos emails (qualquer email enviado por leads p/ nossa caixa, não spam, recente)
         typ, data = m.search(None, '(UNSEEN SINCE "1-Jan-2026")')
@@ -259,31 +323,66 @@ def check_replies(args):
         if e["usuario"].lower() in frm:
             continue  # é o próprio bot
         # extrai email do remetente
-        import re
         rem = re.search(r"[\w.+-]+@[\w-]+\.[\w.]+", msg["from"])
         if not rem:
             continue
         rem_email = rem.group(0)
-        lead = find_lead(leads, rem_email)
+        lead = leads_by_email.get(rem_email.strip().lower())
+        via = "direto"
+        if not lead:
+            # 1) correlação por thread (References/In-Reply-To com mensagens enviadas)
+            refs = (msg.get("references", "") + " " + msg.get("in_reply_to", "")).lower()
+            hit_to = None
+            for mid in sent_msgids:
+                if mid and mid in refs:
+                    hit_to = msgid_to_to.get(mid)
+                    if hit_to:
+                        break
+            if hit_to:
+                lead = leads_by_email.get(hit_to)
+                via = "thread"
+            # 2) plataforma de SAC conhecida → tenta achar o lead pelo assunto/thread
+            if not lead and any(d in rem_email for d in PLATFORM_DOMAINS):
+                via = "plataforma"
+                # tenta achar lead pelo To original da thread (primeiro msgid referenciado)
+                for mid in refs.split():
+                    mm = mid.strip("<>").lower()
+                    if mm in msgid_to_to:
+                        lead = leads_by_email.get(msgid_to_to[mm])
+                        if lead:
+                            break
+                if not lead:
+                    # tenta por nome da empresa no assunto
+                    for l in leads:
+                        emp = (l.get("empresa") or "")
+                        if emp and emp.lower() in msg["subject"].lower():
+                            lead = l
+                            break
         if not lead:
             continue  # só conversamos com leads cadastrados
         pendentes.append({"to_email": rem_email, "lead_nome": lead["nome"], "lead_empresa": lead["empresa"],
+                          "lead_id": lead["id"], "via": via,
                           "message_id": msg["message_id"], "subject": msg["subject"],
                           "date": msg["date"], "body": msg["body"]})
     with open(REPLIES_PATH, "w", encoding="utf-8") as f:
         json.dump(pendentes, f, ensure_ascii=False, indent=2)
     print(f"{len(pendentes)} resposta(s) de lead(s) aguardando atendimento (ver replies_pending.json)")
     for p in pendentes:
-        print(f"  - {p['to_email']} | {p['subject']} | {p['date']}")
+        print(f"  - {p['to_email']} | {p['subject']} | {p['date']} | via: {p['via']}")
 
 def reply(args):
     cfg = load_config()
     e = cfg_email(cfg)
     mid = smtp_send(cfg, e, args.to, args.subject, args.body.replace("\n", "<br>"),
                     in_reply_to=args.in_reply_to)
-    # marca lead como respondido
+    # marca lead como respondido (por email OU pelo --lead-id para respostas de plataforma)
     leads = read_leads()
     lead = find_lead(leads, args.to)
+    if not lead and args.lead_id:
+        for l in leads:
+            if l.get("id", "") == args.lead_id:
+                lead = l
+                break
     if lead:
         lead["status"] = "respondido"
         lead["respondido_em"] = now_iso()
@@ -324,6 +423,7 @@ def main():
     sub.add_parser("check-replies").set_defaults(func=check_replies)
     r = sub.add_parser("reply"); r.add_argument("--to", required=True); r.add_argument("--subject", required=True)
     r.add_argument("--body", required=True); r.add_argument("--in-reply-to", default=None)
+    r.add_argument("--lead-id", default=None)
     r.set_defaults(func=reply)
     sub.add_parser("test-email").set_defaults(func=test_email)
     sub.add_parser("leads").set_defaults(func=list_leads)

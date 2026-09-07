@@ -4,6 +4,32 @@ Registro diário do Analista de Qualidade: números, problemas encontrados e sug
 
 ---
 
+## 2026-09-07 — MELHORADOR CONTÍNUO (14:10): fila reposta + pendência estrutural corrigida
+
+### Diagnóstico do tick
+- **Fila de prospecção: 0 pendentes** — gargalo nº 1 da semana confirmado pelo Estrategista 12:00. Pipeline de novos contatos parado, apesar de o funil converter (taxa de resposta **8,1%** — 10 respostas / 124 enviados).
+- Watchdog saudável: 135 leads, 100 ativos, 37 bounces no cache; nenhum follow-up atrasado.
+
+### Melhorias implementadas (testadas e verificadas)
+1. **Fila reposta com +5 redes de supermercado/atacarejo** em `bot/fila_prospeccao_extra.json` — **todas com MX validado via nslookup**:
+   | Rede | Email | MX | Por que é forte |
+   |---|---|---|---|
+   | **Andorinha Hiper Center** | `sugestoes@andorinhahiper.com.br` | Outlook ✓ | **Tem loja em SALTO e Itu** (cidade-sede!) + Campinas/SP |
+   | Supermercados Dalben | `escutadalben@supermercadosdalben.com.br` | ✓ | 3 lojas Campinas + 1 Valinhos |
+   | **Paulistão Atacadista** | `atendimento@paulistaoatacadista.com.br` | Outlook ✓ | Atacarejo do **Grupo Savegnago** — canal comercial próprio |
+   | Rede Alvorada Sorocaba | `sac@alvoradasorocaba.com.br` | ✓ | 5+ lojas em Sorocaba |
+   | Amigão Supermercados | `sac@grupoamigao.com` | Outlook ✓ | Campinas |
+   - Covabra **descartado** (já contatado em 14/08 — lead 52; evitaria bounce/recontato).
+   - **Verificação:** `python enviar_lote.py --status` → **115 empresas, 99 contatados, 26 bounces, 5 pendentes** (exatamente os 5 novos). O Atendente envia no próximo tick automático.
+2. **Pendência estrutural CORRIGIDA** (registrada desde 19/08): ids duplicados 84/86/88/101 e 7 linhas sem id no `leads.csv` renumerados — Natulha 84→136, CapsExpress 86→137, Megalabs 88→138, Vigor 101→139, e vazios→140–146 (Novotel Itu, Metha Alimentos, Rede Top, Real Gastronomia, Mirassol, FS Alimentos, Rest Industrial). Backup em `leads.csv.bak-20260907`. **Validação:** 0 duplicados, 0 vazios, `bot_oleo.py leads` OK, `watchdog.py` exit 0.
+
+### Para o Estrategista dominical
+- **Paulistão Atacadista é do Grupo Savegnago** (bandeira atacarejo): se o `comercial@savegnago.com.br` responder, avaliar pausar o envio ao Paulistão para não parecer insistência duplicada no mesmo grupo.
+- **Andorinha = lead de maior potencial geográfico do tick** (loja na própria Salto) — se responder, priorizar coleta-teste na unidade de Salto.
+- Fila em 5 pendentes: Prospector deve manter 5–8/dia para alcançar a meta de ≥15 pendentes no domingo.
+
+---
+
 ## 2026-09-07 (domingo) — ESTRATEGISTA: plano da semana + melhorias aplicadas
 
 ### Diagnóstico da semana (números REAIS)

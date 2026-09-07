@@ -1,6 +1,15 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-07T13:31",
+ "atualizado_em": "2026-09-07T14:10",
+ "melhorador_2026_09_07_14_10": {
+  "diagnostico": "FILA DE PROSPECCAO VAZIA (0 pendentes) - gargalo nº1 confirmado pelo Estrategista 12:00; pipeline de novos contatos parado apesar de taxa de resposta 8,1% (10 respostas/124 enviados). Watchdog saudavel (135 leads, 100 ativos, 37 bounces cache).",
+  "melhorias_aplicadas": [
+   "+5 empresas adicionadas a fila_prospeccao_extra.json (115 empresas, 99 contatados, 26 bounces, 5 PENDENTES) com MX validado via nslookup: Andorinha Hiper Center (sugestoes@andorinhahiper.com.br, MX Outlook - LOJAS EM SALTO e Itu, cidade-sede!), Supermercados Dalben (escutadalben@supermercadosdalben.com.br, MX - Campinas/Valinhos), Paulistao Atacadista (atendimento@paulistaoatacadista.com.br, MX Outlook - atacarejo Grupo Savegnago, canal comercial proprio), Rede Alvorada Sorocaba (sac@alvoradasorocaba.com.br, MX - 5 lojas Sorocaba), Amigao Supermercados (sac@grupoamigao.com, MX Outlook - Campinas). Covabra DESCARTADO (ja contatado 14/08, lead 52). Confirmado via enviar_lote.py --status.",
+   "PENDENCIA ESTRUTURAL CORRIGIDA: ids duplicados 84/86/88/101 e 7 linhas sem id no leads.csv renumerados (84->136 Natulha, 86->137 CapsExpress, 88->138 Megalabs, 101->139 Vigor; vazios->140-146: Novotel Itu, Metha Alimentos, Rede Top, Real Gastronomia, Mirassol Refeicoes, FS Alimentos, Rest Industrial). Backup leads.csv.bak-20260907. Validado: 0 duplicados, 0 vazios, bot_oleo.py leads OK, watchdog exit 0."
+  ],
+  "verificacao": "python enviar_lote.py --status -> 115 empresas, 99 contatados, 26 bounces, 5 pendentes (exatamente os 5 novos). python watchdog.py -> exit 0 saudavel. Validacao CSV: duplicados {}, vazios 0.",
+  "para_estrategista": "5 emails pendentes serao enviados pelo Atendente no proximo tick. Paulistao Atacadista e do Grupo Savegnago (bandeira de atacarejo) - se Savegnago comercial responder, evitar enviar para Paulistao para nao parecer insistencia duplicada (decidir no proximo domingo). Andorinha com loja em SALTO e o lead de maior potencial geografico do tick."
+ },
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
   "limite_diario_prospeccao": 15,
