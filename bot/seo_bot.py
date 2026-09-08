@@ -109,6 +109,43 @@ def gerar_schema_jsonld():
         "sameAs": []
     }
 
+def _normalizar(s):
+    """Remove acentos, separa por não-alfanumérico (Salto/SP → 'salto sp') e minúsculas."""
+    import unicodedata, re as _re
+    s = s.lower()
+    s = "".join(c for c in unicodedata.normalize("NFD", s) if unicodedata.category(c) != "Mn")
+    s = _re.sub(r"[^a-z0-9]+", " ", s)
+    return s
+
+def _kw_presente(kw, textos):
+    """Busca flexível: todos os tokens da keyword aparecem em ordem, numa janela curta
+    (até 3 palavras extras entre o primeiro e o último) no texto normalizado.
+    Aceita variações ('de', 'em', plural, Salto/SP) sem exigir substring exata."""
+    alvo = _normalizar(kw)
+    tokens = alvo.split()
+    if not tokens:
+        return False
+    if len(tokens) == 1:
+        return any(alvo in _normalizar(h) for h in textos.values())
+    for html in textos.values():
+        norm = _normalizar(html).split()
+        for i in range(len(norm) - len(tokens) + 1):
+            janela = norm[i:i + len(tokens) + 3]
+            pos = []
+            j = 0
+            ok = True
+            for t in tokens:
+                try:
+                    k = janela.index(t, j)
+                except ValueError:
+                    ok = False
+                    break
+                pos.append(k)
+                j = k + 1
+            if ok and pos == sorted(pos):
+                return True
+    return False
+
 def main():
     ap = argparse.ArgumentParser(description="Bot de SEO Master Óleo")
     ap.add_argument("--check", action="store_true", help="só verificação rápida")
@@ -126,7 +163,7 @@ def main():
     # 2) Conteúdo: palavras-chave presentes?
     textos = ler_arquivos_site()
     for kw in PALAVRAS_CHAVE:
-        presente = any(kw in html for html in textos.values())
+        presente = _kw_presente(kw, textos)
         relatorio["palavras_chave"][kw] = "presente" if presente else "AUSENTE"
         if not presente:
             relatorio["ok"] = False
