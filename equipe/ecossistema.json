@@ -1,6 +1,45 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-08T10:31-03:00",
+ "atualizado_em": "2026-09-08T11:31-03:00",
+ "tick_atendente_08_09_11_15": {
+  "rodadas_no_dia": 2,
+  "sync_formspree": "40 emails em bounce cache (+2 vs tick 10:31); 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados (nada novo com fonte=prospeccao) — porem 2 bounces NOVOS de leads do nicho maquinas (fonte vazia, criados 10:58 pelo Prospector: Arese Farmaceutica e HRT Cosmeticos) estavam FORA do filtro do script e foram tratados MANUALMENTE (corrigir_nicho_manual.py)",
+  "watchdog": "1a rodada exit 1 (2 bounces sem tentativa de correcao: contato@arese.com.br e contato@hrtcosmeticos.com.br). APOS correcao manual: exit 0 — 157 leads, 119 ativos, 40 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "13 boas-vindas ENVIADAS (11:07): Frigorifico Verdi, Frigorifico 3R, Frisa, Frigorifico do Sul, Intercity Hoteis (5 do tick 10:36) + 8 do nicho maquinas enviadas hoje 10:58-10:59 (sac@arese.com.br — APOS correcao de bounce, Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas de persona — nenhum reply novo de lead desde a Selmi (10:08). Sem anexo ESG (nenhum pedido de relatorio)",
+  "enviar_lote": "status OK: fila com 118 empresas / 107 contatados / 27 bounce / 0 pendentes — nada a enviar",
+  "correcao_nicho_manual": "Criado bot/corrigir_nicho_manual.py para tratar bounces de leads com fonte vazia (fora do filtro do corrigir_emails.py): (1) Arese Farmaceutica — contato@arese.com.br deu bounce; site oficial lista sac@arese.com.br (mesmo dominio arese.com.br, MX Outlook valido via nslookup); lead CORRIGIDO para sac@arese.com.br, status novo, apresentacao do nicho (template Catalent/MTR/Anvisa) REENVIADA + boas-vindas via send_sequence; registrado em correcoes_emails.json (corrigido_e_enviado). (2) HRT Cosmeticos — contato@hrtcosmeticos.com.br deu bounce; site oficial (hrtcosmeticos.com.br e hrt.com.br) so lista esse email, sem alternativa valida; registrado como nao_encontrado em correcoes_emails.json (watchdog limpo, sem reenvio)",
+  "leads_quentes": [
+   "Pastificio Selmi S/A (#1 — canal comercial ABERTO via SAC: compras@selmi.com.br, proposta 08/09 10:08; PRAZO sem retorno ate 11/09 → toque leve no WhatsApp (11) 96785-9631)",
+   "Savegnago Supermercados (#2 — porta comercial oficial ABERTA: comercial@savegnago.com.br, apresentacao 07/09; rede ~100 lojas; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Frango Assado / Grupo IMC (#3 — canal comercial ABERTO: felix.costa@grupoimc.com.br, apresentacao 07/09; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Nicho maquinas/encapsulados (NOVOS hoje, aguardando resposta): Arese Farmaceutica (corrigido p/ sac@arese.com.br), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmaceuticas/cosmeticos/nutraceuticos que usam oleo vegetal na limpeza de maquinas (nicho Catalent); se responderem: pedir volume + tipo + coleta-teste",
+   "Andorinha Hiper Center (id 147, loja em Salto) + Paulistao Atacadista (id 149, Grupo Savegnago) + Dalben (148) + Amigao (151) + Sao Roque (130) + Confianca (131) — apresentacoes enviadas, monitorar replies"
+  ],
+  "nota": "Tick com 1 correcao estrutural: o watchdog apontou exit 1 por 2 bounces NOVOS de leads do nicho maquinas (Arese e HRT, adicionados pelo Prospector 10:58 com fonte vazia — fora do filtro fonte=prospeccao do corrigir_emails.py). Resolvido com script dedicado (corrigir_nicho_manual.py): Arese corrigida para sac@arese.com.br (email alternativo do proprio site oficial, MX Outlook confirmado) com apresentacao do nicho reenviada + boas-vindas; HRT registrada como nao_encontrado (sem alternativa publica). Apos a correcao, watchdog exit 0 (157 leads / 119 ativos / 40 bounces) e 13 boas-vindas enviadas (5 do tick 10:36 + 8 do nicho maquinas, incluindo a Arese corrigida). Nenhuma resposta de lead pendente; fila de prospeccao com 0 pendentes. Proximos marcos: 10/09 (toque WhatsApp Savegnago + Grupo IMC) e 11/09 (Selmi)."
+ },
+ "tick_atendente_08_09_11_31": {
+  "rodadas_no_dia": 3,
+  "sync_formspree": "40 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os 40 do cache ja com tentativa registrada (22 'ja tentado' neste tick); nada novo",
+  "watchdog": "exit 0, saudavel — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correcao ou lead parado (correcao dos 2 bounces do nicho maquinas do tick 11:15 segue valida)",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (13 boas-vindas das 11:07 ja enviadas no tick 11:15)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas de persona — nenhum reply novo de lead desde a Selmi (10:08). Sem pedido de relatorio ESG/certificado — sem geracao de PDF",
+  "enviar_lote": "status OK: fila com 118 empresas / 107 contatados / 27 bounce / 0 pendentes — nada a enviar",
+  "leads_quentes": [
+   "Pastificio Selmi S/A (#1 — canal comercial ABERTO via SAC: compras@selmi.com.br, proposta 08/09 10:08; PRAZO sem retorno ate 11/09 → toque leve no WhatsApp (11) 96785-9631)",
+   "Savegnago Supermercados (#2 — porta comercial oficial ABERTA: comercial@savegnago.com.br, apresentacao 07/09; rede ~100 lojas; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Frango Assado / Grupo IMC (#3 — canal comercial ABERTO: felix.costa@grupoimc.com.br, apresentacao 07/09; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Nicho maquinas/encapsulados (NOVOS 08/09, aguardando resposta): Arese Farmaceutica (corrigida p/ sac@arese.com.br), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmaceuticas/cosmeticos/nutraceuticos com oleo vegetal de limpeza de maquinas (nicho Catalent); se responderem: pedir volume + tipo + coleta-teste",
+   "Andorinha Hiper Center (id 147, loja em Salto) + Paulistao Atacadista (id 149, Grupo Savegnago) + Dalben (148) + Amigao (151) + Sao Roque (130) + Confianca (131) — apresentacoes enviadas, monitorar replies"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 11:15: watchdog exit 0 (157 leads / 119 ativos / 40 bounces), caixa limpa (0 respostas pendentes), fila de prospeccao com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo. Nenhum email enviado neste tick. Proximos marcos: 10/09 (toque WhatsApp Savegnago + Grupo IMC) e 11/09 (Selmi)."
+ },
  "melhorador_2026_09_07_14_10": {
   "diagnostico": "FILA DE PROSPECCAO VAZIA (0 pendentes) - gargalo nº1 confirmado pelo Estrategista 12:00; pipeline de novos contatos parado apesar de taxa de resposta 8,1% (10 respostas/124 enviados). Watchdog saudavel (135 leads, 100 ativos, 37 bounces cache).",
   "melhorias_aplicadas": [
@@ -1492,5 +1531,5 @@
    "Sorocaba Frios + Megasabor (NOVOS 08/09): apresentacoes enviadas 10:20; monitorar reply",
    "PÓS-SNAPSHOT (10:36-10:37): +5 leads anexados por processo externo (Frigoríficos Verdi/3R/Frisa/do Sul + Intercity Hotéis), todos com apresentação enviada, sem id/fonte no CSV; frigoríficos = potencial de gordura animal/resíduos >40%; estado atual: 148 leads / 111 ativos"
   ]
-}
+ }
 }

@@ -201,5 +201,19 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-07T15:01:19-03:00"
+  },
+  {
+    "email_antigo": "contato@arese.com.br",
+    "empresa": "Arese Farmaceutica",
+    "novo_email": "sac@arese.com.br",
+    "status": "corrigido_e_enviado",
+    "quando": "2026-09-08T11:07:35-03:00"
+  },
+  {
+    "email_antigo": "contato@hrtcosmeticos.com.br",
+    "empresa": "HRT Cosmeticos",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-08T11:07:35-03:00"
   }
 ]

@@ -1,3 +1,73 @@
+## 2026-09-08 (terça) — ATENDENTE (tick 11:31)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** **40** emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 40 do cache já com tentativa registrada (22 "já tentado" neste tick); nada novo.
+- **Leads totais:** **157** — `novo`: 92 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 24 | `encerrado`: 2 — **Ativos: 119**.
+- **Watchdog:** ✅ saudável (**exit 0**) — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado (a correção dos 2 bounces do nicho máquinas do tick 11:15 segue válida).
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada, sem envios novos pendentes (as 13 boas-vindas das 11:07 já foram enviadas no tick 11:15).
+- **check-replies:** **0 pendentes** (`replies_pending.json` vazio — confirmado `[]`) — nenhuma resposta nova desde a Selmi (10:08).
+- **enviar_lote --status:** fila com **118 empresas / 107 contatados / 27 bounce / 0 pendentes**.
+- **Emails enviados neste tick:** **0** — tick de rotina, nada pendente.
+
+### Ações do tick
+- Nenhum email enviado neste tick — dia de aguardar retornos dos canais comerciais abertos (Selmi, Savegnago e Grupo IMC).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups, sequência e caixa 100% verdes — pipeline idêntico ao tick 11:15.
+2. Correção estrutural do tick 11:15 segue em vigor: `corrigir_nicho_manual.py` (bounces de leads com fonte vazia — Arese corrigida p/ `sac@arese.com.br`, HRT registrada `nao_encontrado`).
+3. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar; inbound via site fraco; fila de prospecção com **0 pendentes** (gargalo do Prospector).
+
+### Leads quentes (para ação humana — destaque)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO via SAC (proposta a **compras@selmi.com.br** 08/09 10:08). **PRAZO: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** porta comercial oficial ABERTA (comercial@savegnago.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+4. **Nicho máquinas/encapsulados (NOVOS 08/09, aguardando resposta):** Arese Farmaceutica (corrigida p/ `sac@arese.com.br`), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmacêuticas/cosméticos/nutracêuticos com óleo vegetal de limpeza de máquinas (nicho Catalent). Se responderem: pedir volume + tipo + coleta-teste.
+5. **Andorinha Hiper Center (id 147, loja em Salto)** + **Paulistão Atacadista (id 149, Grupo Savegnago)** + Dalben (148), Amigão (151), São Roque (130), Confiança (131) — apresentações enviadas, monitorar replies.
+
+### Nota
+Tick 100% verde e idêntico ao 11:15: watchdog exit 0 (157 leads / 119 ativos / 40 bounces), caixa limpa (0 respostas pendentes), fila de prospecção com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo, nenhum email enviado. **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (Selmi).
+
+---
+
+## 2026-09-08 (terça) — ATENDENTE (tick 11:15)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** **40** emails no cache de bounce (+2 vs tick 10:31); **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados (nada novo com `fonte=prospeccao`) — **mas 2 bounces NOVOS** de leads do nicho máquinas (fonte vazia, criados 10:58 pelo Prospector) estavam **fora do filtro** do script e foram tratados manualmente via novo `corrigir_nicho_manual.py`.
+- **Leads totais:** **157** — `novo`: 92 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 24 | `encerrado`: 2 — **Ativos: 119**.
+- **Watchdog:** 1ª rodada **exit 1** (2 bounces sem tentativa de correção) → após correção manual: ✅ **exit 0** — 157 leads, 119 ativos, 40 bounces; nenhum follow-up atrasado/bounce sem correção/lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** **13 boas-vindas ENVIADAS (11:07)** — 5 do tick 10:36 (Verdi, 3R, Frisa, do Sul, Intercity) + 8 do nicho máquinas (Arese corrigida, Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA).
+- **check-replies:** **0 pendentes** (`replies_pending.json` vazio) — nenhuma resposta nova desde a Selmi (10:08).
+- **enviar_lote --status:** fila com **118 empresas / 107 contatados / 27 bounce / 0 pendentes**.
+- **Emails enviados neste tick:** **14** (1 apresentação de correção da Arese + 13 boas-vindas).
+
+### Ação do tick — correção estrutural de 2 bounces do nicho máquinas 🛠️
+O watchdog apontou **exit 1**: `contato@arese.com.br` e `contato@hrtcosmeticos.com.br` (leads de farmacêutica/cosméticos adicionados 10:58 pelo Prospector, **fonte vazia**) estavam como bounce **sem tentativa de correção** — e o `corrigir_emails.py` só processa `fonte=prospeccao*`, então nunca os pegaria. Criado **`bot/corrigir_nicho_manual.py`** para esse caso (reutiliza as funções de `corrigir_emails.py` + template de nicho de `prospecao.py`):
+1. **Arese Farmaceutica** — site oficial lista **`sac@arese.com.br`** (mesmo domínio arese.com.br, **MX Outlook confirmado via nslookup**). Lead corrigido para o novo email, status `novo`, apresentação do nicho (template Catalent/MTR/Anvisa) **reenviada** + boas-vindas via send_sequence. Registrado em `correcoes_emails.json` (`corrigido_e_enviado`).
+2. **HRT Cosmeticos** — site oficial (hrtcosmeticos.com.br e hrt.com.br) só publica o email que bounceou; **sem alternativa válida**. Registrado como `nao_encontrado` em `correcoes_emails.json` (watchdog limpo, sem reenvio).
+- **Relatório ESG:** nenhum pedido neste tick — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **Bounces de leads com fonte vazia não eram cobertos pelo corrigir_emails.py** (filtro `fonte=prospeccao*`) — resolvido com `corrigir_nicho_manual.py` (reutilizável para futuros bounces do nicho máquinas/encapsulados).
+2. Nenhum outro problema: sync, watchdog (pós-correção), follow-ups, sequência e caixa 100% verdes.
+3. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar; inbound via site fraco; fila de prospecção com **0 pendentes** (gargalo do Prospector).
+
+### Leads quentes (para ação humana — destaque)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO via SAC (proposta a **compras@selmi.com.br** 08/09 10:08). **PRAZO: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** porta comercial oficial ABERTA (comercial@savegnago.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+4. **Nicho máquinas/encapsulados (NOVOS hoje, aguardando resposta):** Arese Farmaceutica (corrigida p/ `sac@arese.com.br`), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmacêuticas/cosméticos/nutracêuticos com óleo vegetal de limpeza de máquinas (nicho Catalent). Se responderem: pedir volume + tipo + coleta-teste.
+5. **Andorinha Hiper Center (id 147, loja em Salto)** + **Paulistão Atacadista (id 149, Grupo Savegnago)** + Dalben (148), Amigão (151), São Roque (130), Confiança (131) — apresentações enviadas, monitorar replies.
+
+### Nota
+Tick com **1 correção estrutural**: watchdog pegou 2 bounces novos do nicho máquinas que o fluxo padrão não cobria (fonte vazia) — resolvido com script dedicado: Arese corrigida para `sac@arese.com.br` (alternativa do site oficial, MX Outlook confirmado) com apresentação reenviada, HRT registrada como `nao_encontrado`. Pós-correção: watchdog ✅ exit 0 (**157 leads / 119 ativos / 40 bounces**), **13 boas-vindas** enviadas (incluindo a Arese corrigida), caixa sem respostas pendentes, fila com 0 pendentes. **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (Selmi).
+
+---
+
 ## 2026-09-08 (terça) — ATENDENTE (tick 10:31)
 
 ### Números do dia (estado real pós-tick)
