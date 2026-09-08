@@ -1,22 +1,23 @@
-# Insights — Master Óleo · 08/09/2026 (tick 15:31)
+# Insights — Master Óleo · 08/09/2026 (tick 19:01)
 
-## Resumo do tick (15:31)
-- **Pipeline (snapshot 15:31)**: 160 leads · **12 respondidos** · 27 em sequência · **95 novos** · 24 bounce · 2 encerrados · **ativos: 122**. Estável desde o tick 14:34 (nenhum lead novo).
+## Resumo do tick (19:01)
+- **Pipeline (snapshot 19:01)**: 160 leads · **12 respondidos** · 27 em sequência · **95 novos** · 24 bounce · 2 encerrados · **ativos: 122**. Inalterado desde o tick 14:34 (confirmado por contagem direta no leads.csv — nenhum lead novo desde os supermercados das 14:33).
 - **Ação do tick**: rotina — nenhuma resposta pendente para atender, nenhum follow-up atrasado, nenhum bounce novo, fila de prospecção sem pendentes. Nenhum email enviado.
-- **Caixa**: `check-replies` → **0 pendentes** (`replies_pending.json` vazio). Confirmação extra via `scan_inbox.py` (contingência): **0 não lidas/recentes** (aviso benigno de SELECT no Sent Mail). Nenhuma resposta nova desde a Selmi (atendida 10:08).
+- **Caixa**: `check-replies` → **0 pendentes** (`replies_pending.json` vazio) + `scan_inbox` de contingência → 0 não lidas/recentes. Caixa confirmada em dobro; nada novo desde a Selmi (atendida 10:08).
 - **Watchdog**: ✅ saudável (exit 0) — 160 leads / 122 ativos / 40 bounces; sem follow-ups atrasados, bounces sem correção ou leads parados.
-- **Follow-ups**: 0 atrasados. **Sequência**: processada, nada a enviar. **Correção de emails**: 0 novas (todos os 40 bounces já tentados). **Relatório ESG**: nenhum pedido — sem geração de PDF. **Emails enviados neste tick**: 0 (total do dia ~33).
+- **Follow-ups**: 0 atrasados. **Sequência**: processada, nada a enviar. **Correção de emails**: 0 novas (todos os 40 bounces já tentados). **Relatório ESG**: nenhum pedido — sem geração de PDF. **Emails enviados neste tick**: 0 (total do dia ~33). **Fila**: 121 empresas / 110 contatados / 27 bounce / 0 pendentes.
+- **5º tick consecutivo 100% verde e estável** (16:01 → 19:01): rotina sem intercorrências; dia segue no aguardo dos retornos dos canais comerciais abertos.
 
 ## 🏆 Leads quentes (destaque!)
 1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO — SAC (Cristina, Zendesk #88925) indicou **compras@selmi.com.br**; proposta completa enviada 08/09 10:08. **Prazo: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
 2. **Savegnago Supermercados (~100 lojas)** — canal comercial oficial ABERTO (comercial@savegnago.com.br, apresentação 07/09). **Prazo: toque no WhatsApp em 10/09 se não houver retorno.**
 3. **Frango Assado / Grupo IMC** — canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09 ~12:05). **Prazo: toque no WhatsApp em 10/09.**
-4. **Tauste Supermercados (3 lojas Sorocaba + Campinas + Jundiaí)** — apresentação enviada 14:33 (tick anterior); Sorocaba perto de Salto = logística curta.
-5. **Enxuto Supermercados (Campinas/Cosmópolis)** — apresentação enviada 14:33; rede varejista = nicho nº 1 de conversão.
-6. **Chimar Supermercados (Mairinque + Sorocaba + São Roque)** — apresentação enviada 14:33; região de atuação.
+4. **Tauste Supermercados (id 156, 3 lojas Sorocaba + Campinas + Jundiaí)** — apresentação enviada 14:33 para custo@tauste.com.br (COMPRAS do CD Valinhos); se responder, tratar como #1 ao lado de Savegnago.
+5. **Enxuto Supermercados (id 155, Campinas/Cosmópolis)** — apresentação enviada 14:33; rede varejista = nicho nº 1 de conversão.
+6. **Chimar Supermercados (id 157, Mairinque + Sorocaba + São Roque)** — apresentação enviada 14:33; matriz a ~20 km de Salto.
 7. **Grupo Lanchero Alimentos** — indústria de maioneses/molhos: encaixe direto com **resíduos vencidos >40% gordura + descaracterização**. Se responder: pedir volume + tipo e oferecer coleta-teste.
 8. **Andorinha Hiper Center (id 147)** — loja na própria **Salto**; priorizar coleta-teste na unidade de Salto. **Paulistão Atacadista (id 149)** — bandeira do Grupo Savegnago.
-9. **Arese Farmacêutica (NOVA, email corrigido)** — farmacêutica = nicho de óleo de limpeza de máquinas (case Catalent); apresentação reenviada 11:07. **Frigoríficos (Verdi, 3R, Frisa, do Sul)** — potencial de gordura animal/vencidos >40%.
+9. **Arese Farmacêutica (email corrigido)** — farmacêutica = nicho de óleo de limpeza de máquinas (case Catalent); apresentação reenviada 11:07. **Frigoríficos (Verdi, 3R, Frisa, do Sul)** — potencial de gordura animal/vencidos >40%.
 10. **Rede Boa / GoodBom / Sumerbol / Bagley(Arcor)** — propostas em análise (média prioridade).
 
 ## Padrão que se confirma
