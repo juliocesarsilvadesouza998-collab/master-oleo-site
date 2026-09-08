@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-09-07T18:31:00-03:00",
+  "atualizado_em": "2026-09-08T10:10:00-03:00",
   "resumo": {
     "total_leads": 140,
     "leads_ativos": 104,
     "bounces": 38,
     "pipeline": {
-      "novo": 90,
+      "novo": 89,
       "sequencia": 14,
-      "respondido": 11,
+      "respondido": 12,
       "bounce": 23,
       "encerrado": 2
     }
@@ -23,6 +23,43 @@
     "formspree": 1,
     "teste-cron": 1,
     "sem-fonte": 7
+  },
+  "atividade_tick_10h08_08_09": {
+    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+    "prospecao_followup": "0 follow-ups atrasados",
+    "send_sequence": "sequência processada (nada novo a enviar)",
+    "check_replies": "1 pendente: Pastificio Selmi via Zendesk (support@selmisupport.zendesk.com) — Cristina Magalhães do SAC atualizou o ticket #88925 e INDICOU o canal comercial compras@selmi.com.br (padrão 'SAC fecha ticket e direciona': porta comercial ABERTA)",
+    "respostas_enviadas": "2 emails da persona de compra (10:07-10:08): (1) cortesia na thread Zendesk agradecendo a Cristina e confirmando o contato com compras@selmi.com.br (ticket encerrado de nossa parte); (2) proposta COMPLETA para compras@selmi.com.br com a indicação como referência — compra de óleo usado/gordura/resíduos >40% gordura, faixa R$ 1,00-2,50/L, PIX na coleta, certificado de destinação, CTA de volume mensal + tipo + WhatsApp (11) 96785-9631. Lead 60 (Pastificio Selmi S/A) marcado 'respondido' (respondido_em 2026-09-08T10:08:38-03:00)",
+    "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+    "emails_enviados_hoje": "2 (resposta Zendesk Selmi + proposta a compras@selmi.com.br)",
+    "observacao": "Tick com 1 resposta real: Selmi (indústria de massas) abriu o canal comercial via SAC — mesmo roteiro de Savegnago/Grupo IMC (SAC direciona, canal comercial negocia). Proposta enviada a compras@selmi.com.br aguardando retorno; pipeline: 140 leads, 104 ativos, 12 respondidos (+1 Selmi), 89 novos (-1), 38 bounces no cache. Próximo marco: 10/09 (toque WhatsApp em Savegnago e Grupo IMC se silêncio)."
+  },
+  "atividade_tick_19h31_07_09": {
+    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+    "prospecao_followup": "0 follow-ups atrasados",
+    "send_sequence": "sequência processada (nada novo a enviar)",
+    "check_replies": "0 pendentes (replies_pending.json vazio)",
+    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+    "observacao": "Tick tranquilo: pipeline inalterado desde 19:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  },
+  "atividade_tick_19h01_07_09": {
+    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+    "prospecao_followup": "0 follow-ups atrasados",
+    "send_sequence": "sequência processada (nada novo a enviar)",
+    "check_replies": "0 pendentes (replies_pending.json vazio)",
+    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+    "observacao": "Tick tranquilo: pipeline inalterado desde 18:31 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
   },
   "atividade_tick_18h31_07_09": {
     "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
@@ -120,6 +157,13 @@
   ],
   "leads_quentes": [
     {
+      "empresa": "Pastificio Selmi S/A (indústria de massas)",
+      "canal": "compras@selmi.com.br (indicado pelo SAC — Cristina Magalhães, ticket Zendesk #88925)",
+      "status": "CANAL COMERCIAL ABERTO 08/09 10:08 — SAC direcionou ao setor de compras; proposta completa enviada a compras@selmi.com.br com a indicação como referência; resposta de cortesia na thread Zendesk",
+      "proximo_passo": "aguardar retorno do compras@; se responder, pedir volume mensal (litros/kg) + tipo de material (óleo de fritura / resíduos >40% gordura) e oferecer coleta-teste; sem resposta em 3 dias, toque leve no WhatsApp (11) 96785-9631",
+      "prioridade": "ALTA"
+    },
+    {
       "empresa": "Savegnago Supermercados (~100 lojas)",
       "canal": "comercial@savegnago.com.br",
       "status": "CANAL COMERCIAL OFICIAL ABERTO — Central de Relacionamento pediu apresentação e ela foi enviada 07/09 10:35 para comercial@savegnago.com.br",
@@ -184,8 +228,9 @@
     }
   ],
   "alertas_operacionais": [
+    "NOVO (08/09 10:08): Selmi abriu canal comercial — SAC (Zendesk #88925) indicou compras@selmi.com.br; proposta enviada. Monitorar retorno (prazo de toque: 11/09 via WhatsApp).",
     "RESOLVIDO (07/09 ~12:40): check-replies não capturava respostas via plataformas (BuzzMonitor/Zendesk/Movidesk). Correção implementada e validada com teste sintético: correlação por References/In-Reply-To contra msgids enviados (pasta Enviados indexada em lote único, 524 msgids) + match de domínio de plataforma + assunto. Novo script scan_inbox.py para varredura manual de contingência.",
-    "Monitorar: resposta do comercial da Savegnago (prazo 10/09) e do Felix Costa (Grupo IMC, prazo 10/09).",
+    "Monitorar: resposta do comercial da Savegnago (prazo 10/09), do Felix Costa (Grupo IMC, prazo 10/09) e do compras@ da Selmi (prazo 11/09).",
     "INFO (tick 15:01): bounce de Supermercados Alvorada (sac@alvoradasorocaba.com.br) confirmado por notificação mailer-daemon; lead já estava com status bounce no CSV — sem ação pendente."
   ]
 }
