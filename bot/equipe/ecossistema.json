@@ -1,16 +1,35 @@
 {
- "atualizado_em": "2026-09-08T14:02:00-03:00",
+ "atualizado_em": "2026-09-08T15:33:17-0300",
  "resumo": {
-  "total_leads": 157,
-  "leads_ativos": 119,
+  "total_leads": 160,
+  "leads_ativos": 122,
   "bounces": 40,
   "pipeline": {
-   "novo": 92,
+   "novo": 95,
    "sequencia": 27,
    "respondido": 12,
    "bounce": 24,
    "encerrado": 2
   }
+ },
+ "atividade_tick_14h34_08_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 160 leads / 122 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde a Selmi (10:08)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "3 neste tick (apresentações para Enxuto, Tauste e Chimar — redes de supermercado do nicho nº 1); total do dia: ~33",
+  "enviar_lote_status": "fila: 121 empresas / 110 já contatados / 27 bounce / 0 pendentes (3 pendentes do tick anterior ENVIADOS neste tick)",
+  "leads_novos": [
+   "id 158 — Enxuto Supermercados (Campinas/Cosmópolis) <faleconosco@enxuto.com.br> — apresentação enviada 14:33",
+   "id 159 — Tauste Supermercados (3 lojas Sorocaba + Campinas + Jundiaí) <custo@tauste.com.br> — apresentação enviada 14:33",
+   "id 160 — Chimar Supermercados (matriz Mairinque + Sorocaba + São Roque) <chimar.mkmatriz@gmail.com> — apresentação enviada 14:33"
+  ],
+  "pipeline_snapshot_14h34": "160 leads / 95 novo / 27 sequencia / 12 respondido / 24 bounce / 2 encerrado / 122 ativos — +3 leads (redes de supermercado) e -3 pendentes na fila desde o tick 14:02",
+  "observacao": "Tick verde com ação: fila de prospecção tinha 3 pendentes (Enxuto, Tauste, Chimar — TODAS redes de supermercado, nicho que mais converte segundo aprendizado da semana) e foram enviadas as apresentações. Caixa limpa (0 respostas pendentes), watchdog saudável, 0 follow-ups atrasados. Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC; 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
  },
  "fontes_leads": {
   "prospeccao-lote": 103,
@@ -291,6 +310,27 @@
    "status": "NOVO (08/09 10:20) — apresentação enviada",
    "proximo_passo": "monitorar replies; se responder, pedir volume + tipo",
    "prioridade": "MEDIA"
+  },
+  {
+   "empresa": "Enxuto Supermercados (Campinas/Cosmópolis) — NOVO 14:33",
+   "canal": "faleconosco@enxuto.com.br",
+   "status": "apresentação enviada 08/09 14:33 — rede varejista = nicho que mais converte",
+   "proximo_passo": "monitorar replies nos próximos ticks; se responder, pedir volume mensal (litros/kg) + tipo e oferecer coleta-teste",
+   "prioridade": "ALTA"
+  },
+  {
+   "empresa": "Tauste Supermercados (3 lojas Sorocaba + Campinas + Jundiaí) — NOVO 14:33",
+   "canal": "custo@tauste.com.br",
+   "status": "apresentação enviada 08/09 14:33 — presença forte em Sorocaba (perto de Salto) = logística curta",
+   "proximo_passo": "monitorar replies; se responder, pedir volume mensal + tipo e oferecer coleta-teste",
+   "prioridade": "ALTA"
+  },
+  {
+   "empresa": "Chimar Supermercados (matriz Mairinque + Sorocaba + São Roque) — NOVO 14:33",
+   "canal": "chimar.mkmatriz@gmail.com",
+   "status": "apresentação enviada 08/09 14:33 — Mairinque/Sorocaba na região de atuação",
+   "proximo_passo": "monitorar replies; se responder, pedir volume mensal + tipo e oferecer coleta-teste",
+   "prioridade": "ALTA"
   }
  ],
  "alertas_operacionais": [
@@ -317,5 +357,20 @@
   ],
   "enviar_lote_status": "fila: 118 empresas / 107 já contatados / 27 bounce / 0 pendentes",
   "observacao": "Tick tranquilo: +3 leads do Prospector (10:20, todos já com apresentação), 0 respostas novas no caixa (Selmi segue como última, 10:08), watchdog 100% verde. Pipeline no snapshot 10:31: 143 leads / 106 ativos / 92 novo / 14 sequência / 12 respondido / 23 bounce / 2 encerrado. ATUALIZAÇÃO PÓS-SNAPSHOT (10:36-10:37): +5 leads anexados por processo externo (4 frigoríficos — Verdi, 3R, Frisa, do Sul — + Intercity Hotéis), todos 'novo' com apresentação enviada e sem id/fonte no CSV; estado atual: 148 leads / 111 ativos / 97 novo. Frigoríficos = potencial de gordura animal/resíduos >40%. Marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC; 11/09 Selmi (compras@selmi.com.br)."
+ },
+ "atividade_tick_15h31_08_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 160 leads / 122 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde a Selmi (10:08)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (tick de rotina, nada pendente)",
+  "enviar_lote_status": "fila: 121 empresas / 110 já contatados / 27 bounce / 0 pendentes",
+  "leads_novos": [],
+  "pipeline_snapshot_15h31": "160 leads / 95 novo / 27 sequencia / 12 respondido / 24 bounce / 2 encerrado / 122 ativos — estável desde o tick 14:34",
+  "observacao": "Tick 100% verde de rotina: watchdog exit 0, caixa limpa confirmada em dobro (check-replies vazio + scan_inbox 0 não lidas/recentes), fila de prospecção 0 pendentes, 0 follow-ups atrasados, 0 bounces novos, 0 emails enviados. Dia de aguardar retornos dos canais comerciais abertos (Selmi, Savegnago, Grupo IMC). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC; 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
  }
 }
