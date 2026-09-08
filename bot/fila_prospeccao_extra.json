@@ -586,5 +586,26 @@
   "email": "sac@grupoamigao.com",
   "cidade": "Campinas/SP",
   "segmento": "Supermercados (rede)"
+ },
+ {
+  "nome": "Sorocaba Frios",
+  "empresa": "Sorocaba Frios Distribuidora de Frios e Laticinios",
+  "email": "contato@sorocabafrios.com.br",
+  "cidade": "Sorocaba/SP",
+  "segmento": "distribuidora de frios e laticinios (queijos, cremes e derivados alto teor de gordura) - NICHO PRIORITARIO (vencidos >40% gordura)"
+ },
+ {
+  "nome": "Megasabor",
+  "empresa": "Mega Ingredientes Alimenticios Ltda",
+  "email": "contato@megasabor.com.br",
+  "cidade": "Indaiatuba/SP",
+  "segmento": "industria de ingredientes alimenticios (emulsificantes, confeitaria, sorvetes) - usa gorduras e oleos vegetais"
+ },
+ {
+  "nome": "Lanchero Alimentos",
+  "empresa": "Grupo Lanchero Alimentos (Lanchero, D'mais, Bona)",
+  "email": "sac@lanchero.com.br",
+  "cidade": "Marilia/SP",
+  "segmento": "industria de maioneses, catchups, mostardas e molhos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"
  }
 ]
