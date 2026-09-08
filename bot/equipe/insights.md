@@ -1,7 +1,7 @@
 # Insights — Master Óleo · 08/09/2026 (tick 10:08)
 
 ## Resumo do tick (10:08)
-- **Pipeline**: 140 leads (104 ativos, 38 bounces) · **12 respondidos (+1)** · 14 em sequência · 89 novos · 23 bounce · 2 encerrados.
+- **Pipeline**: 140 leads · **12 respondidos (+1)** · 14 em sequência · 89 novos · 23 bounce · 2 encerrados · **ativos: 103** (104 no snapshot do watchdog às 10:06, antes de marcar a Selmi como respondida).
 - **Caixa**: `check-replies` encontrou **1 resposta NOVA** — Pastificio Selmi via Zendesk (ticket #88925, Cristina Magalhães/SAC): indicou **compras@selmi.com.br** como canal para tratar a compra do óleo. **Atendida no mesmo tick.**
 - **Watchdog**: saudável (exit 0) — sem follow-ups atrasados, bounces sem correção ou leads parados.
 - **Follow-ups**: 0 atrasados. **Sequência**: processada, nada a enviar. **Sync Formspree**: 0 novas notificações. **Correção de emails**: 0 novas (38 bounces do cache já todos tentados).

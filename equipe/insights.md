@@ -3,8 +3,8 @@
 ### Números do dia (estado real pós-tick)
 - **Sync Formspree:** 38 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
 - **corrigir_emails:** 0 bounces processados — todos os 38 do cache já com tentativa registrada (22 "já tentado"). Nada novo a corrigir.
-- **Leads totais:** **140** — `novo`: 89 | `sequencia`: 14 | `respondido`: 12 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 104**.
-- **Watchdog:** ✅ saudável (exit 0) — 140 leads, 104 ativos, 38 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **Leads totais:** **140** — `novo`: 89 | `sequencia`: 14 | `respondido`: 12 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 103** (104 no snapshot do watchdog às 10:06, antes de marcar a Selmi como respondida).
+- **Watchdog:** ✅ saudável (exit 0) — 140 leads, 104 ativos no snapshot 10:06 (103 pós-resposta), 38 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
 - **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
 - **send-sequence:** sequência processada (sem envios novos pendentes).
 - **check-replies:** **1 resposta NOVA atendida** — Pastificio Selmi via Zendesk (ticket #88925).
@@ -31,7 +31,7 @@
 6. **Rede Bom Lugar (132), Tenda Atacado (133), Roldão Atacadista (134), Dalben (148), Amigão (151)** — apresentações 07/09, monitorar replies. **Sumerbol (21)** — Ivone Franca, acionar por WhatsApp. **GoodBom (51)** — Laura, telefonar (19) 3828-9798. **Rede Boa (46)** — ticket #23915. **Arcor/Bagley (14)** e **Sanofi Medley (91)** — SAC encaminhado à área responsável.
 
 ### Nota
-Tick com **1 resposta real e positiva**: a Selmi repetiu o roteiro vencedor da semana (SAC direciona → canal comercial abre). Proposta no canal certo (compras@selmi.com.br), lead marcado como respondido, caixa zerada após o atendimento. Pipeline: 140 leads / 104 ativos / **12 respondidos** (+1). **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (toque para Selmi se necessário). Monitorar replies de Andorinha, Dalben, Paulistão, Amigão, São Roque e Confiança nos próximos ticks.
+Tick com **1 resposta real e positiva**: a Selmi repetiu o roteiro vencedor da semana (SAC direciona → canal comercial abre). Proposta no canal certo (compras@selmi.com.br), lead marcado como respondido, caixa zerada após o atendimento. Pipeline: 140 leads / 103 ativos (104 no snapshot 10:06 pré-resposta) / **12 respondidos** (+1). **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (toque para Selmi se necessário). Monitorar replies de Andorinha, Dalben, Paulistão, Amigão, São Roque e Confiança nos próximos ticks.
 
 ---
 

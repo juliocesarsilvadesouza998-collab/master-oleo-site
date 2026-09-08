@@ -1,8 +1,8 @@
 {
-  "atualizado_em": "2026-09-08T10:10:00-03:00",
+  "atualizado_em": "2026-09-08T10:12:00-03:00",
   "resumo": {
     "total_leads": 140,
-    "leads_ativos": 104,
+    "leads_ativos": 103,
     "bounces": 38,
     "pipeline": {
       "novo": 89,
@@ -27,7 +27,7 @@
   "atividade_tick_10h08_08_09": {
     "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
     "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces (snapshot 10:06, pré-resposta Selmi — novo era 90; pós-resposta: 103 ativos = 89 novo + 14 sequencia), sem follow-ups atrasados, bounces corrigidos ou leads parados",
     "prospecao_followup": "0 follow-ups atrasados",
     "send_sequence": "sequência processada (nada novo a enviar)",
     "check_replies": "1 pendente: Pastificio Selmi via Zendesk (support@selmisupport.zendesk.com) — Cristina Magalhães do SAC atualizou o ticket #88925 e INDICOU o canal comercial compras@selmi.com.br (padrão 'SAC fecha ticket e direciona': porta comercial ABERTA)",
@@ -35,7 +35,7 @@
     "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
     "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
     "emails_enviados_hoje": "2 (resposta Zendesk Selmi + proposta a compras@selmi.com.br)",
-    "observacao": "Tick com 1 resposta real: Selmi (indústria de massas) abriu o canal comercial via SAC — mesmo roteiro de Savegnago/Grupo IMC (SAC direciona, canal comercial negocia). Proposta enviada a compras@selmi.com.br aguardando retorno; pipeline: 140 leads, 104 ativos, 12 respondidos (+1 Selmi), 89 novos (-1), 38 bounces no cache. Próximo marco: 10/09 (toque WhatsApp em Savegnago e Grupo IMC se silêncio)."
+    "observacao": "Tick com 1 resposta real: Selmi (indústria de massas) abriu o canal comercial via SAC — mesmo roteiro de Savegnago/Grupo IMC (SAC direciona, canal comercial negocia). Proposta enviada a compras@selmi.com.br aguardando retorno; pipeline: 140 leads, 103 ativos, 12 respondidos (+1 Selmi), 89 novos (-1), 38 bounces no cache (104 ativos no snapshot do watchdog às 10:06, antes da resposta). Próximo marco: 10/09 (toque WhatsApp em Savegnago e Grupo IMC se silêncio)."
   },
   "atividade_tick_19h31_07_09": {
     "sync_formspree": "0 novas notificações; 38 emails em bounce cache",

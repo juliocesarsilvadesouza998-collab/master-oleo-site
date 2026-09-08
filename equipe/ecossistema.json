@@ -1417,7 +1417,7 @@
   "rodadas_no_dia": 1,
   "sync_formspree": "38 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
   "corrigir_emails": "0 bounces processados — todos os 38 do cache ja com tentativa registrada em correcoes_emails.json (22 'ja tentado'). Nada novo a corrigir",
-  "watchdog": "exit 0, saudavel — 140 leads, 104 ativos, 38 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
+  "watchdog": "exit 0, saudavel — 140 leads, 104 ativos (snapshot 10:06, pre-resposta Selmi; pos-resposta: 103 = 89 novo + 14 sequencia), 38 bounces no cache, nenhum follow-up atrasado/bounce sem correcao/lead parado",
   "prospecao_followup": "0 follow-ups processados (nada atrasado)",
   "send_sequence": "sequencia processada, sem envios novos pendentes",
   "check_replies": "1 resposta NOVA: Pastificio Selmi S/A via Zendesk (support@selmisupport.zendesk.com, ticket #88925, 08/09 09:18 BRT) — Cristina Magalhaes do SAC: 'sugerimos que entre em contato atraves do e-mail compras@selmi.com.br'. NAO e negativa: canal comercial ABERTO com direcionamento explicito ao setor de compras (mesmo roteiro de Savegnago/Grupo IMC)",
