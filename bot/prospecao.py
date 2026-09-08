@@ -184,6 +184,22 @@ def tpl_apresentacao(cfg, lead):
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de resíduos com &gt;40% de gordura · {cidade}</p>
 </div>"""
         }
+    # Ângulo específico: indústrias que lavam/lubrificam máquinas com óleo vegetal
+    # (encapsulados, farmacêuticas, nutracêuticos, suplementos, cosméticos, manipuladoras)
+    # — case real Catalent (Indaiatuba/Sorocaba) como prova social
+    if any(k in segmento for k in ["farmaceutica", "farmacêutica", "encapsulad", "nutraceutic",
+                                    "nutracêutic", "suplemento", "cosmetico", "cosmético",
+                                    "manipula", "farmaco", "pharma", "capsula"]):
+        return {
+            "subject": f"Óleo vegetal usado na limpeza das máquinas da {lead.get('empresa','')} — compramos",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Indústrias de {segmento} usam <b>óleo vegetal na limpeza e lubrificação das máquinas</b> de produção — e esse óleo, depois de usado, tem valor. Já coletamos para a <b>Catalent</b> (unidades de Indaiatuba e Sorocaba), uma das maiores fabricantes de cápsulas do mundo.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, <b>compra óleo vegetal usado de limpeza de máquinas</b> (pagamos por litro/kg), com coleta programada, bombonas fornecidas e <b>certificado de destinação + MTR</b> para a auditoria da Anvisa.</p>
+<p><b>Quanto de óleo vegetal a produção usa por mês?</b> Com esse número mando a estimativa em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo vegetal usado industrial · {cidade}</p>
+</div>"""
+        }
     return {
         "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">

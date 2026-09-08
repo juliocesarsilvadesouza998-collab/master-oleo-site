@@ -38,6 +38,11 @@ PALAVRAS_CHAVE = [
     "compra de gordura vegetal usada",
     "óleo usado biodiesel",
     "descarte de óleo de cozinha salto",
+    # Nicho industrial: limpeza de máquinas com óleo vegetal
+    "óleo vegetal limpeza de máquinas",
+    "óleo vegetal usado máquinas encapsulados",
+    "coleta de óleo vegetal industrial",
+    "óleo de limpeza de máquinas farmacêuticas",
 ]
 
 def checar_site(url):

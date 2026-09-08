@@ -3,7 +3,7 @@
 ### Números do dia (estado real pós-tick)
 - **Sync Formspree:** 38 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
 - **corrigir_emails:** 0 bounces processados — todos os 38 do cache já com tentativa registrada (22 "já tentado"). Nada novo a corrigir.
-- **Leads totais:** **143** — `novo`: 92 | `sequencia`: 14 | `respondido`: 12 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 106**. **(+3 leads do Prospector desde o tick 10:08.)**
+- **Leads totais:** **143** — `novo`: 92 | `sequencia`: 14 | `respondido`: 12 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 106**. **(+3 leads do Prospector desde o tick 10:08.)** ⚠️ **Pós-snapshot (10:36-10:37): +5 leads anexados por processo externo** (Frigoríficos Verdi, 3R, Frisa e do Sul + Intercity Hotéis — todos já com apresentação enviada, sem id/fonte no CSV) → **estado atual: 148 leads / 111 ativos / 97 novos**.
 - **Watchdog:** ✅ saudável (exit 0) — 143 leads, 106 ativos, 38 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
 - **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
 - **send-sequence:** sequência processada (sem envios novos pendentes).

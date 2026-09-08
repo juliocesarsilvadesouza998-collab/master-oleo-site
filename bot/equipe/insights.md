@@ -1,7 +1,7 @@
 # Insights — Master Óleo · 08/09/2026 (tick 10:31)
 
 ## Resumo do tick (10:31)
-- **Pipeline**: 143 leads · **12 respondidos** · 14 em sequência · 92 novos · 23 bounce · 2 encerrados · **ativos: 106** (novo + sequência, mesmo critério do watchdog).
+- **Pipeline (snapshot 10:31)**: 143 leads · **12 respondidos** · 14 em sequência · 92 novos · 23 bounce · 2 encerrados · **ativos: 106**. **⚠️ Pós-snapshot (10:36-10:37): +5 leads anexados por processo externo** (4 frigoríficos — Verdi, 3R, Frisa, do Sul — + Intercity Hotéis, todos já com apresentação enviada, sem id/fonte no CSV) → **estado atual: 148 leads / 111 ativos / 97 novos**.
 - **Caixa**: `check-replies` → **0 pendentes** (`replies_pending.json` vazio). Nenhuma resposta nova desde a Selmi (atendida 10:08). Sem emails enviados neste tick.
 - **Watchdog**: ✅ saudável (exit 0) — 143 leads / 106 ativos / 38 bounces no cache; sem follow-ups atrasados, bounces sem correção ou leads parados.
 - **Follow-ups**: 0 atrasados. **Sequência**: processada, nada a enviar. **Sync Formspree**: 0 novas notificações. **Correção de emails**: 0 novas (38 bounces do cache já todos tentados).
