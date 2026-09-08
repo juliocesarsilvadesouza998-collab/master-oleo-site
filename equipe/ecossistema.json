@@ -1,6 +1,34 @@
 {
  "criado_em": "2026-08-13",
- "atualizado_em": "2026-09-08T11:31-03:00",
+ "atualizado_em": "2026-09-08T14:10-03:00",
+ "melhorador_2026_09_08_14_10": {
+  "diagnostico": "Watchdog exit 0 saudavel (157 leads, 119 ativos, 40 bounces cache). Taxa de resposta 8,3% (11 respostas/132 apresentacoes) - ACIMA da meta, funil converte. Ponto MAIS FRACO: FILA DE PROSPECCAO VAZIA (0 pendentes / 118 empresas) - gargalo n1 do Estrategista persiste: pipeline de novos contatos parado. 2o gargalo: inbound via site fraco (site sem prova social Madero/US$ 8,6bi que converte nos emails).",
+  "melhorias_aplicadas": [
+   "FILA REABASTECIDA: +3 redes de SUPERMERCADO (nicho que mais converte - 4 dos 7 respondidos reais) com MX validado via nslookup: (1) Enxuto Supermercados faleconosco@enxuto.com.br (MX Outlook - Campinas/Cosmopolis, 60+ anos, varias lojas; email PUBLICO do Facebook oficial), (2) Tauste Supermercados custo@tauste.com.br (MX Google - email de CUSTOS/COMPRAS do CD de Valinhos; rede com 3 lojas em Sorocaba + Campinas + Jundiai + CD Valinhos = alto volume de fritura), (3) Chimar Supermercados chimar.mkmatriz@gmail.com (MX Gmail - matriz em Mairinque ~20km de Salto + lojas Sorocaba e Sao Roque). Fila: 121 empresas / 107 contatados / 27 bounce / 3 PENDENTES. Descartados por falta de email publico: Uniao (Braganca, so telefone), Pague Menos (formulario), Fort Atacadista (telefone/WhatsApp), Rede Correia (so WhatsApp), Rede Supermarket (RJ), Avenida (Assis), Crema (so xml@fiscal/RH).",
+   "SITE (deploy-vercel/index.html): nova secao 'prova-social' apos o trust-strip com os 3 argumentos que converteram nos emails (template V4): mercado UCO US$ 8,6 bi (Fortune Business Insights), prova social Grupo Madero 55 mil L/mes (270 restaurantes), urgencia Portaria MME/MMA 3/2026 obrigatoria jan/2028. HTML validado (0 erros, 0 tags nao fechadas). Ataca o gargalo de inbound: visitante do site agora ve os mesmos argumentos do cold email."
+  ],
+  "verificacao": "python enviar_lote.py --status -> 121 empresas, 107 contatados, 27 bounce, 3 pendentes (exatamente os 3 novos: Enxuto, Tauste, Chimar). Validador HTML: index.html 0 erros / 0 nao fechadas; 5 ocorrencias dos argumentos novos (prova-social, 55 mil, 8,6 bi, jan/2028). python watchdog.py -> exit 0 saudavel (157 leads, 119 ativos).",
+  "para_estrategista": "3 emails pendentes serao enviados pelo Atendente no proximo tick (Enxuto, Tauste, Chimar - todos template V4 supermercados). Tauste e o lead de maior potencial (3 lojas Sorocaba + Campinas + Jundiai; email de compras do CD) - se responder, tratar como lead #1 ao lado de Savegnago. Sugestao: manter Prospector adicionando 5-8/dia focando redes de supermercado com email publico em pagina 'fale-conosco/fornecedores' (lição deste tick: store locators de fornecedores tipo Wessel revelam emails de compras de redes grandes)."
+ },
+ "tick_atendente_08_09_12_00": {
+  "rodadas_no_dia": 4,
+  "sync_formspree": "40 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os 40 do cache ja com tentativa registrada (22 'ja tentado' neste tick); nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correcao ou lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes (13 boas-vindas das 11:07 ja enviadas nos ticks anteriores)",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "respostas_enviadas": "0 respostas de persona — nenhum reply novo de lead desde a Selmi (10:08). Sem pedido de relatorio ESG/certificado — sem geracao de PDF",
+  "enviar_lote": "status OK: fila com 118 empresas / 107 contatados / 27 bounce / 0 pendentes — nada a enviar",
+  "leads_quentes": [
+   "Pastificio Selmi S/A (#1 — canal comercial ABERTO via SAC: compras@selmi.com.br, proposta 08/09 10:08; PRAZO sem retorno ate 11/09 → toque leve no WhatsApp (11) 96785-9631)",
+   "Savegnago Supermercados (#2 — porta comercial oficial ABERTA: comercial@savegnago.com.br, apresentacao 07/09; rede ~100 lojas; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Frango Assado / Grupo IMC (#3 — canal comercial ABERTO: felix.costa@grupoimc.com.br, apresentacao 07/09; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Nicho maquinas/encapsulados (NOVOS 08/09, aguardando resposta): Arese Farmaceutica (corrigida p/ sac@arese.com.br), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmaceuticas/cosmeticos/nutraceuticos com oleo vegetal de limpeza de maquinas (nicho Catalent); se responderem: pedir volume + tipo + coleta-teste",
+   "Andorinha Hiper Center (id 147, loja em Salto) + Paulistao Atacadista (id 149, Grupo Savegnago) + Dalben (148) + Amigao (151) + Sao Roque (130) + Confianca (131) — apresentacoes enviadas, monitorar replies"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 11:31: watchdog exit 0 (157 leads / 119 ativos / 40 bounces), caixa limpa (0 respostas pendentes), fila de prospeccao com 0 pendentes (118 empresas / 107 contatados / 27 bounce), nenhum follow-up atrasado, nenhum bounce novo, nenhum email enviado. Dia de aguardar retornos dos canais comerciais abertos. Proximos marcos: 10/09 (toque WhatsApp Savegnago + Grupo IMC) e 11/09 (Selmi)."
+ },
  "tick_atendente_08_09_11_15": {
   "rodadas_no_dia": 2,
   "sync_formspree": "40 emails em bounce cache (+2 vs tick 10:31); 0 notificacoes novas do Formspree (nenhum lead novo via site)",
@@ -1531,5 +1559,25 @@
    "Sorocaba Frios + Megasabor (NOVOS 08/09): apresentacoes enviadas 10:20; monitorar reply",
    "PÓS-SNAPSHOT (10:36-10:37): +5 leads anexados por processo externo (Frigoríficos Verdi/3R/Frisa/do Sul + Intercity Hotéis), todos com apresentação enviada, sem id/fonte no CSV; frigoríficos = potencial de gordura animal/resíduos >40%; estado atual: 148 leads / 111 ativos"
   ]
+ },
+ "tick_atendente_08_09_13_02": {
+  "rodadas_no_dia": 5,
+  "sync_formspree": "40 emails em bounce cache; 0 notificacoes novas do Formspree (nenhum lead novo via site)",
+  "corrigir_emails": "0 bounces processados — todos os 40 do cache ja com tentativa registrada (22 'ja tentado' neste tick); nada novo a corrigir",
+  "watchdog": "exit 0, saudavel — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correcao ou lead parado",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequencia processada, sem envios novos pendentes",
+  "check_replies": "0 respostas aguardando atendimento (replies_pending.json vazio — confirmado [])",
+  "scan_inbox": "caixa com 0 nao lidas/recentes (aviso benigno de SELECT no Sent Mail); nada fora do fluxo",
+  "respostas_enviadas": "0 respostas de persona — nenhum reply novo de lead desde a Selmi (10:08). Sem pedido de relatorio ESG/certificado — sem geracao de PDF",
+  "enviar_lote": "status OK: fila com 118 empresas / 107 contatados / 27 bounce / 0 pendentes — nada a enviar",
+  "leads_quentes": [
+   "Pastificio Selmi S/A (#1 — canal comercial ABERTO via SAC: compras@selmi.com.br, proposta 08/09 10:08; PRAZO sem retorno ate 11/09 → toque leve no WhatsApp (11) 96785-9631)",
+   "Savegnago Supermercados (#2 — porta comercial oficial ABERTA: comercial@savegnago.com.br, apresentacao 07/09; rede ~100 lojas; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Frango Assado / Grupo IMC (#3 — canal comercial ABERTO: felix.costa@grupoimc.com.br, apresentacao 07/09; PRAZO sem retorno ate 10/09 → toque no WhatsApp)",
+   "Nicho maquinas/encapsulados (NOVOS 08/09, aguardando resposta): Arese Farmaceutica (corrigida p/ sac@arese.com.br), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmaceuticas/cosmeticos/nutraceuticos com oleo vegetal de limpeza de maquinas (nicho Catalent); se responderem: pedir volume + tipo + coleta-teste",
+   "Andorinha Hiper Center (id 147, loja em Salto) + Paulistao Atacadista (id 149, Grupo Savegnago) + Dalben (148) + Amigao (151) + Sao Roque (130) + Confianca (131) — apresentacoes enviadas, monitorar replies"
+  ],
+  "nota": "Tick de rotina, tudo verde e identico ao 12:00: watchdog exit 0 (157 leads / 119 ativos / 40 bounces), caixa limpa (scan_inbox 0 nao lidas + replies_pending.json vazio), fila de prospeccao com 0 pendentes (118 empresas / 107 contatados / 27 bounce), nenhum follow-up atrasado, nenhum bounce novo, nenhum email enviado. Dia de aguardar retornos dos canais comerciais abertos. Proximos marcos: 10/09 (toque WhatsApp Savegnago + Grupo IMC) e 11/09 (Selmi)."
  }
 }

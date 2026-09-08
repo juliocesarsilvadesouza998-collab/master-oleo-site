@@ -1,16 +1,16 @@
 {
- "atualizado_em": "2026-09-08T10:31:00-03:00",
+ "atualizado_em": "2026-09-08T14:02:00-03:00",
  "resumo": {
-   "total_leads": 148,
-   "leads_ativos": 111,
-   "bounces": 38,
-   "pipeline": {
-     "novo": 97,
-     "sequencia": 14,
-     "respondido": 12,
-     "bounce": 23,
-     "encerrado": 2
-   }
+  "total_leads": 157,
+  "leads_ativos": 119,
+  "bounces": 40,
+  "pipeline": {
+   "novo": 92,
+   "sequencia": 27,
+   "respondido": 12,
+   "bounce": 24,
+   "encerrado": 2
+  }
  },
  "fontes_leads": {
   "prospeccao-lote": 103,
@@ -23,6 +23,51 @@
   "formspree": 1,
   "teste-cron": 1,
   "sem-fonte": 7
+ },
+ "atividade_tick_14h02_08_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 157 leads / 119 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde a Selmi (10:08); scan_inbox de contingência: 0 mensagens não lidas/recentes (aviso benigno de SELECT na pasta Sent já documentado)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick",
+  "pipeline_snapshot_14h02": "157 leads / 92 novo / 27 sequencia / 12 respondido / 24 bounce / 2 encerrado / 119 ativos — pipeline INALTERADO desde o tick 12:31",
+  "enviar_lote_status": "fila: 118 empresas / 107 já contatados / 27 bounce / 0 pendentes (sem mudança desde 12:31)",
+  "observacao": "Tick 100% verde e estável: watchdog saudável, 0 respostas pendentes, 0 follow-ups atrasados, 0 leads novos desde 12:31. Nada a corrigir nem a responder. Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (comercial@savegnago.com.br e felix.costa@grupoimc.com.br sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
+ },
+ "atividade_tick_13h30_08_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 157 leads / 119 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde a Selmi (10:08)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick",
+  "pipeline_snapshot_13h30": "157 leads / 92 novo / 27 sequencia / 12 respondido / 24 bounce / 2 encerrado / 119 ativos — pipeline INALTERADO desde o tick 12:31",
+  "enviar_lote_status": "fila: 118 empresas / 107 já contatados / 27 bounce / 0 pendentes (sem mudança desde 12:31)",
+  "observacao": "Tick 100% verde e estável: watchdog saudável, 0 respostas pendentes, 0 follow-ups atrasados, 0 leads novos desde 12:31. Nada a corrigir nem a responder. Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (comercial@savegnago.com.br e felix.costa@grupoimc.com.br sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
+ },
+ "atividade_tick_12h31_08_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache",
+  "corrigir_emails": "0 novas correções neste tick (todas já tentadas — 22 \"já tentado\"; correções das 2 novas bounces de nicho já aplicadas por processo externo às 11:07: Arese contato@→sac@arese.com.br CORRIGIDO E ENVIADO; HRT Cosmeticos contato@hrtcosmeticos.com.br sem alternativa válida → lead marcado bounce)",
+  "watchdog": "saudável (exit 0): 157 leads / 119 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde a Selmi (10:08); scan_inbox de contingência: 0 mensagens não lidas/recentes (aviso benigno de SELECT na pasta Sent já documentado)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (apresentações dos leads de nicho enviadas pelo processo externo 10:58-11:08)",
+  "leads_novos": [
+   "+9 leads anexados por processo externo (10:58-11:08, todos nicho farmacêutica/nutracêuticos/cosméticos/manipulação/suplementos, todos com apresentação enviada e sem id no CSV): Arese Farmacêutica (sac@arese.com.br — corrigido de contato@ bounce), Infinity Pharma (farmaceutica@infinitypharma.com.br), Veridi Nutrition (contato@veridinutrition.com.br), HRT Cosméticos (contato@hrtcosmeticos.com.br — BOUNCE, sem alternativa), Larimar Cosméticos (contato@larimar.ind.br), Maila Cosméticos (marketing@mailacosmeticos.com), Farmaviva (contato@farmaviva.com.br), Audacci (contato@audacci.com), GDS USA (contato@gdsusa.com.br)",
+   "Com os 5 de 10:36-10:37 (frigoríficos Verdi/3R/Frisa/do Sul + Intercity Hotéis), total de 14 anexos externos sem id no CSV"
+  ],
+  "enviar_lote_status": "fila: 118 empresas / 107 já contatados / 27 bounce / 0 pendentes",
+  "observacao": "Tick 100% verde: watchdog saudável, 0 respostas pendentes (última resposta real segue sendo a Selmi às 10:08), 0 follow-ups atrasados. Crescimento de pipeline: +9 leads de nicho do prospector externo (farmacêuticas/cosméticos/suplementos — perfil do argumento de óleo de limpeza de máquinas, case Catalent) já com apresentação enviada; 1 nova bounce (HRT) sem email alternativo; 1 correção aplicada (Arese). Pipeline: 157 leads / 119 ativos / 92 novo / 27 sequência / 12 respondido / 24 bounce / 2 encerrado. Marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC; 11/09 Selmi (compras@selmi.com.br)."
  },
  "atividade_tick_10h08_08_09": {
   "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
@@ -265,10 +310,10 @@
   "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
   "emails_enviados_hoje": "0 neste tick (as 3 apresentações dos leads novos 152-154 foram enviadas pelo tick do Prospector 10:30)",
   "leads_novos": [
-      "id 152 — Sorocaba Frios Distribuidora de Frios e Laticínios (contato@sorocabafrios.com.br, Sorocaba) — apresentação enviada 10:20",
-      "id 153 — Mega Ingredientes Alimentícios / Megasabor (contato@megasabor.com.br, Indaiatuba) — apresentação enviada 10:20",
-      "id 154 — Grupo Lanchero Alimentos (sac@lanchero.com.br, Marília) — indústria de maioneses/molhos = NICHO PRIORITÁRIO resíduos vencidos >40% gordura — apresentação enviada 10:20",
-      "PÓS-SNAPSHOT (10:36-10:37, após o tick 10:31; sem id/fonte no CSV — anexados por processo externo, todos 'novo' com apresentação enviada): Frigorífico Verdi (atendimento@frigorificoverdi.com.br), Frigorífico 3R (contato@frigorifico3r.com.br), Frisa (frisaeco@frisa.com.br), Frigorífico do Sul (comercial@frigorificodosul.com.br), Intercity Hotéis (reservas@intercityhoteis.com.br)"
+   "id 152 — Sorocaba Frios Distribuidora de Frios e Laticínios (contato@sorocabafrios.com.br, Sorocaba) — apresentação enviada 10:20",
+   "id 153 — Mega Ingredientes Alimentícios / Megasabor (contato@megasabor.com.br, Indaiatuba) — apresentação enviada 10:20",
+   "id 154 — Grupo Lanchero Alimentos (sac@lanchero.com.br, Marília) — indústria de maioneses/molhos = NICHO PRIORITÁRIO resíduos vencidos >40% gordura — apresentação enviada 10:20",
+   "PÓS-SNAPSHOT (10:36-10:37, após o tick 10:31; sem id/fonte no CSV — anexados por processo externo, todos 'novo' com apresentação enviada): Frigorífico Verdi (atendimento@frigorificoverdi.com.br), Frigorífico 3R (contato@frigorifico3r.com.br), Frisa (frisaeco@frisa.com.br), Frigorífico do Sul (comercial@frigorificodosul.com.br), Intercity Hotéis (reservas@intercityhoteis.com.br)"
   ],
   "enviar_lote_status": "fila: 118 empresas / 107 já contatados / 27 bounce / 0 pendentes",
   "observacao": "Tick tranquilo: +3 leads do Prospector (10:20, todos já com apresentação), 0 respostas novas no caixa (Selmi segue como última, 10:08), watchdog 100% verde. Pipeline no snapshot 10:31: 143 leads / 106 ativos / 92 novo / 14 sequência / 12 respondido / 23 bounce / 2 encerrado. ATUALIZAÇÃO PÓS-SNAPSHOT (10:36-10:37): +5 leads anexados por processo externo (4 frigoríficos — Verdi, 3R, Frisa, do Sul — + Intercity Hotéis), todos 'novo' com apresentação enviada e sem id/fonte no CSV; estado atual: 148 leads / 111 ativos / 97 novo. Frigoríficos = potencial de gordura animal/resíduos >40%. Marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC; 11/09 Selmi (compras@selmi.com.br)."

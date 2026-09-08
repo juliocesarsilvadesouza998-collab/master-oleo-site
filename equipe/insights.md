@@ -1,3 +1,104 @@
+## 2026-09-08 (terça) — MELHORADOR CONTÍNUO (tick 14:10)
+
+### Diagnóstico do dia
+- **Watchdog:** ✅ exit 0 — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **Taxa de resposta:** **8,3%** (11 respostas / 132 apresentações) — **acima da meta (>3%)**, funil converte.
+- **Ponto mais fraco:** FILA DE PROSPECÇÃO **0 pendentes** (118 empresas / 107 contatados / 27 bounce) — gargalo nº1 do Estrategista segue: o pipeline de novos contatos está parado. 2º gargalo: inbound via site fraco.
+
+### Melhorias implementadas (reais, testadas)
+1. **Fila de prospecção reabastecida com +3 redes de SUPERMERCADO (nicho que mais converte)**, MX validado via nslookup:
+   - **Enxuto Supermercados** — `faleconosco@enxuto.com.br` (MX Outlook) — Campinas/Cosmópolis, 60+ anos, várias lojas. Email público achado no Facebook oficial.
+   - **Tauste Supermercados** — `custo@tauste.com.br` (MX Google) — **email de CUSTOS/COMPRAS do CD de Valinhos**; rede com 3 lojas em Sorocaba + Campinas + Jundiaí + CD Valinhos = alto volume de fritura. **Lead de maior potencial do tick.**
+   - **Chimar Supermercados** — `chimar.mkmatriz@gmail.com` (MX Gmail) — matriz em **Mairinque (~20 km de Salto)** + lojas em Sorocaba e São Roque.
+   - Fila agora: **121 empresas / 107 contatados / 27 bounce / 3 pendentes** (confirmado via `enviar_lote.py --status`).
+   - Descartados (sem email público ou fora da região): União (Bragança, só telefone), Pague Menos (formulário), Fort Atacadista (telefone/WhatsApp), Rede Correia (só WhatsApp), Rede Supermarket (RJ), Avenida (Assis), Crema (só xml@fiscal/RH).
+2. **Site (deploy-vercel/index.html): nova seção `prova-social`** após o trust-strip com os 3 argumentos que converteram nos emails (template V4): mercado UCO **US$ 8,6 bi**, prova social **Madero 55 mil L/mês (270 restaurantes)**, urgência **Portaria MME/MMA 3/2026 → jan/2028**. HTML validado: 0 erros, 0 tags não fechadas.
+
+### Verificação
+- `python enviar_lote.py --status` → 121 empresas, 3 pendentes (exatamente Enxuto, Tauste, Chimar).
+- Validador HTML: index.html 0 erros; 5 ocorrências dos novos argumentos.
+- `python watchdog.py` → exit 0.
+
+### Aprendizados do tick
+- **Store locators de fornecedores (ex.: Wessel) revelam emails de compras de redes grandes** — `custo@tauste.com.br` (CD Valinhos) veio de lá. Fonte de prospecção barata e precisa: procurar "store locator" de marcas que vendem para supermercados e catar os emails de CD/custos das redes.
+- Email público do Facebook oficial (Enxuto) funciona quando o site só tem formulário.
+
+### Para o Estrategista dominical
+- 3 emails pendentes serão enviados pelo Atendente no próximo tick (Enxuto, Tauste, Chimar — template V4 supermercados).
+- **Tauste**: se responder, tratar como lead #1 ao lado de Savegnago (rede grande com 3 lojas em Sorocaba + Campinas + Jundiaí; canal é o email de compras do CD).
+- Manter Prospector em 5-8/dia focando redes com email público (página fale-conosco/fornecedores).
+
+---
+
+## 2026-09-08 (terça) — ATENDENTE (tick 13:02)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** **40** emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 40 do cache já com tentativa registrada (22 "já tentado" neste tick); nada novo.
+- **Leads totais:** **157** — `novo`: 92 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 24 | `encerrado`: 2 — **Ativos: 119**.
+- **Watchdog:** ✅ saudável (**exit 0**) — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada, sem envios novos pendentes.
+- **check-replies:** **0 pendentes** (`replies_pending.json` vazio — confirmado `[]`) — nenhuma resposta nova desde a Selmi (10:08).
+- **scan_inbox (contingência):** caixa com **0 não lidas/recentes** (aviso benigno de SELECT no Sent Mail) — nada fora do fluxo.
+- **enviar_lote --status:** fila com **118 empresas / 107 contatados / 27 bounce / 0 pendentes**.
+- **Emails enviados neste tick:** **0** — tick de rotina, nada pendente.
+
+### Ações do tick
+- Nenhum email enviado neste tick — dia de aguardar retornos dos canais comerciais abertos (Selmi, Savegnago e Grupo IMC).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups, sequência e caixa 100% verdes — pipeline idêntico ao tick 12:00.
+2. Correção estrutural do tick 11:15 segue em vigor: `corrigir_nicho_manual.py` (bounces de leads com fonte vazia — Arese corrigida p/ `sac@arese.com.br`, HRT registrada `nao_encontrado`).
+3. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar; inbound via site fraco; fila de prospecção com **0 pendentes** (gargalo do Prospector).
+
+### Leads quentes (para ação humana — destaque)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO via SAC (proposta a **compras@selmi.com.br** 08/09 10:08). **PRAZO: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** porta comercial oficial ABERTA (comercial@savegnago.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+4. **Nicho máquinas/encapsulados (NOVOS 08/09, aguardando resposta):** Arese Farmaceutica (corrigida p/ `sac@arese.com.br`), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmacêuticas/cosméticos/nutracêuticos com óleo vegetal de limpeza de máquinas (nicho Catalent). Se responderem: pedir volume + tipo + coleta-teste.
+5. **Andorinha Hiper Center (id 147, loja em Salto)** + **Paulistão Atacadista (id 149, Grupo Savegnago)** + Dalben (148), Amigão (151), São Roque (130), Confiança (131) — apresentações enviadas, monitorar replies.
+
+### Nota
+Tick 100% verde e idêntico ao 12:00: watchdog exit 0 (157 leads / 119 ativos / 40 bounces), caixa limpa (scan_inbox 0 não lidas + replies_pending.json vazio), fila de prospecção com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo, nenhum email enviado. **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (Selmi).
+
+---
+
+## 2026-09-08 (terça) — ATENDENTE (tick 12:00)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** **40** emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 40 do cache já com tentativa registrada (22 "já tentado" neste tick); nada novo.
+- **Leads totais:** **157** — `novo`: 92 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 24 | `encerrado`: 2 — **Ativos: 119**.
+- **Watchdog:** ✅ saudável (**exit 0**) — 157 leads, 119 ativos, 40 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada, sem envios novos pendentes (as 13 boas-vindas das 11:07 já foram enviadas nos ticks anteriores).
+- **check-replies:** **0 pendentes** (`replies_pending.json` vazio — confirmado `[]`) — nenhuma resposta nova desde a Selmi (10:08).
+- **enviar_lote --status:** fila com **118 empresas / 107 contatados / 27 bounce / 0 pendentes**.
+- **Emails enviados neste tick:** **0** — tick de rotina, nada pendente.
+
+### Ações do tick
+- Nenhum email enviado neste tick — dia de aguardar retornos dos canais comerciais abertos (Selmi, Savegnago e Grupo IMC).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups, sequência e caixa 100% verdes — pipeline idêntico ao tick 11:31.
+2. Correção estrutural do tick 11:15 segue em vigor: `corrigir_nicho_manual.py` (bounces de leads com fonte vazia — Arese corrigida p/ `sac@arese.com.br`, HRT registrada `nao_encontrado`).
+3. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar; inbound via site fraco; fila de prospecção com **0 pendentes** (gargalo do Prospector).
+
+### Leads quentes (para ação humana — destaque)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO via SAC (proposta a **compras@selmi.com.br** 08/09 10:08). **PRAZO: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** porta comercial oficial ABERTA (comercial@savegnago.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+4. **Nicho máquinas/encapsulados (NOVOS 08/09, aguardando resposta):** Arese Farmaceutica (corrigida p/ `sac@arese.com.br`), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — farmacêuticas/cosméticos/nutracêuticos com óleo vegetal de limpeza de máquinas (nicho Catalent). Se responderem: pedir volume + tipo + coleta-teste.
+5. **Andorinha Hiper Center (id 147, loja em Salto)** + **Paulistão Atacadista (id 149, Grupo Savegnago)** + Dalben (148), Amigão (151), São Roque (130), Confiança (131) — apresentações enviadas, monitorar replies.
+
+### Nota
+Tick 100% verde e idêntico ao 11:31: watchdog exit 0 (157 leads / 119 ativos / 40 bounces), caixa limpa (0 respostas pendentes), fila de prospecção com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo, nenhum email enviado. **Próximo marco: 10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (Selmi).
+
+---
+
 ## 2026-09-08 (terça) — ATENDENTE (tick 11:31)
 
 ### Números do dia (estado real pós-tick)
