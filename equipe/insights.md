@@ -1,3 +1,39 @@
+## 2026-09-08 (terça) — ATENDENTE (tick 10:31)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** 38 emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 38 do cache já com tentativa registrada (22 "já tentado"). Nada novo a corrigir.
+- **Leads totais:** **143** — `novo`: 92 | `sequencia`: 14 | `respondido`: 12 | `bounce`: 23 | `encerrado`: 2 — **Ativos: 106**. **(+3 leads do Prospector desde o tick 10:08.)**
+- **Watchdog:** ✅ saudável (exit 0) — 143 leads, 106 ativos, 38 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send-sequence:** sequência processada (sem envios novos pendentes).
+- **check-replies:** **0 pendentes** (`replies_pending.json` vazio) — nenhuma resposta nova desde a Selmi (atendida 10:08).
+- **enviar_lote --status:** fila com **118 empresas / 107 contatados / 27 bounce / 0 pendentes**.
+- **Emails enviados neste tick:** **0** (as 3 apresentações dos leads novos foram do tick do Prospector 10:30).
+
+### Ações do tick
+- Nenhuma resposta pendente para atender — caixa limpa. Nenhum email enviado.
+- **Leads novos (+3, Prospector 10:20, todos com apresentação enviada):**
+  1. **Sorocaba Frios** (id 152) — distribuidora de frios/laticínios, Sorocaba (`contato@sorocabafrios.com.br`).
+  2. **Megasabor / Mega Ingredientes** (id 153) — ingredientes e emulsificantes, Indaiatuba (`contato@megasabor.com.br`).
+  3. **Grupo Lanchero Alimentos** (id 154) — indústria de **maioneses/molhos**, Marília (`sac@lanchero.com.br`). **Encaixe direto com o nicho de resíduos vencidos >40% gordura + descaracterização** (argumento de passivo do CNPJ e certificado de destinação para biodiesel).
+- **Relatório ESG:** nenhum pedido neste tick — sem geração de PDF.
+
+### Problemas encontrados e correções
+Nenhum — tick 100% verde (watchdog exit 0, caixa limpa, fila sem pendentes, nenhum follow-up atrasado, nenhum bounce novo).
+
+### Leads quentes (para ação humana — destaque)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO (SAC/Zendesk #88925 indicou **compras@selmi.com.br**; proposta enviada 08/09 10:08). **PRAZO: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** porta comercial oficial ABERTA (comercial@savegnago.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09 ~12:05). **PRAZO: sem retorno até 10/09 → toque no WhatsApp.**
+4. **Grupo Lanchero Alimentos (NOVO)** — indústria de maioneses/molhos: nicho vencidos >40% gordura com descaracterização; se responder, pedir volume + tipo e oferecer coleta-teste.
+5. **Andorinha Hiper Center (id 147)** — loja na própria Salto; priorizar coleta-teste na unidade de Salto. **Paulistão Atacadista (id 149)** — bandeira do Grupo Savegnago.
+6. **Sorocaba Frios + Megasabor (NOVOS)** — apresentações 10:20, aguardando retorno. **Rede Boa / GoodBom / Sumerbol / Bagley(Arcor)** — propostas em análise.
+
+### Nota
+Tick tranquilo: pipeline cresceu para **143 leads** (+3 do Prospector, todos já contatados), watchdog 100% verde, fila sem pendentes e caixa sem respostas novas. Nenhum email enviado pelo atendente — dia de aguardar retornos dos canais comerciais abertos. Próximo marco: **10/09** (toque no WhatsApp para Savegnago e Grupo IMC se silêncio) e **11/09** (Selmi).
+
+---
 ## 2026-09-08 (terça) — ATENDENTE (tick 10:08)
 
 ### Números do dia (estado real pós-tick)

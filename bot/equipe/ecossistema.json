@@ -1,236 +1,275 @@
 {
-  "atualizado_em": "2026-09-08T10:12:00-03:00",
-  "resumo": {
-    "total_leads": 140,
-    "leads_ativos": 103,
-    "bounces": 38,
-    "pipeline": {
-      "novo": 89,
-      "sequencia": 14,
-      "respondido": 12,
-      "bounce": 23,
-      "encerrado": 2
-    }
+ "atualizado_em": "2026-09-08T10:31:00-03:00",
+ "resumo": {
+  "total_leads": 143,
+  "leads_ativos": 106,
+  "bounces": 38,
+  "pipeline": {
+   "novo": 92,
+   "sequencia": 14,
+   "respondido": 12,
+   "bounce": 23,
+   "encerrado": 2
+  }
+ },
+ "fontes_leads": {
+  "prospeccao-lote": 103,
+  "prospeccao": 12,
+  "prospeccao-nicho": 12,
+  "prospeccao-vencidos": 4,
+  "prospeccao-savegnago": 1,
+  "prospeccao-grupoimc": 1,
+  "site": 1,
+  "formspree": 1,
+  "teste-cron": 1,
+  "sem-fonte": 7
+ },
+ "atividade_tick_10h08_08_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces (snapshot 10:06, pré-resposta Selmi — novo era 90; pós-resposta: 103 ativos = 89 novo + 14 sequencia), sem follow-ups atrasados, bounces corrigidos ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "1 pendente: Pastificio Selmi via Zendesk (support@selmisupport.zendesk.com) — Cristina Magalhães do SAC atualizou o ticket #88925 e INDICOU o canal comercial compras@selmi.com.br (padrão 'SAC fecha ticket e direciona': porta comercial ABERTA)",
+  "respostas_enviadas": "2 emails da persona de compra (10:07-10:08): (1) cortesia na thread Zendesk agradecendo a Cristina e confirmando o contato com compras@selmi.com.br (ticket encerrado de nossa parte); (2) proposta COMPLETA para compras@selmi.com.br com a indicação como referência — compra de óleo usado/gordura/resíduos >40% gordura, faixa R$ 1,00-2,50/L, PIX na coleta, certificado de destinação, CTA de volume mensal + tipo + WhatsApp (11) 96785-9631. Lead 60 (Pastificio Selmi S/A) marcado 'respondido' (respondido_em 2026-09-08T10:08:38-03:00)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "2 (resposta Zendesk Selmi + proposta a compras@selmi.com.br)",
+  "observacao": "Tick com 1 resposta real: Selmi (indústria de massas) abriu o canal comercial via SAC — mesmo roteiro de Savegnago/Grupo IMC (SAC direciona, canal comercial negocia). Proposta enviada a compras@selmi.com.br aguardando retorno; pipeline: 140 leads, 103 ativos, 12 respondidos (+1 Selmi), 89 novos (-1), 38 bounces no cache (104 ativos no snapshot do watchdog às 10:06, antes da resposta). Próximo marco: 10/09 (toque WhatsApp em Savegnago e Grupo IMC se silêncio)."
+ },
+ "atividade_tick_19h31_07_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 19:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_19h01_07_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 18:31 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_18h31_07_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 18:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_18h01_07_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 16:31 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_16h31_07_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 16:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_15h01_07_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
+  "corrigir_emails": "0 novas correções; Alvorada (sac@alvoradasorocaba.com.br) sem email alternativo válido — lead mantido como bounce",
+  "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "1 pendente detectado = FALSO POSITIVO (mailer-daemon: Delivery Status Notification Failure para sac@alvoradasorocaba.com.br — SPFBL 550 conta inexistente). Lead 150 (Supermercados Alvorada) já estava marcado como bounce no CSV ('EMAIL INVÁLIDO — não reenviar') e sac@alvoradasorocaba.com.br já constava no bounces.json. FIX APLICADO: filtro de DSN/bounce (mailer-daemon, postmaster, 'delivery status notification', 'mensagem bloqueada') adicionado ao check_replies — revalidado: 0 pendentes após o filtro. replies_pending.json limpo.",
+  "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: +5 leads via prospecao-lote desde o tick 14:01 (4 novo + 1 bounce/Alvorada). Nenhuma resposta real nova na caixa; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_14h01_07_09": {
+  "sync_formspree": "0 novas notificações; 37 bounces em cache",
+  "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
+  "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
+  "enviar_lote_status": "fila: 110 empresas / 99 já contatados / 26 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 13:31; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_13h31_07_09": {
+  "sync_formspree": "0 novas notificações; 37 bounces em cache",
+  "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
+  "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio)",
+  "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 28 msgids enviados indexados p/ correlação de thread; aviso benigno de SELECT na pasta Sent no scan (check-replies usa a pasta Enviados correta via atributo \\\\Sent)",
+  "enviar_lote_status": "fila: 110 empresas / 99 já contatados / 26 bounce / 0 pendentes",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 13:00; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_13h00_07_09": {
+  "sync_formspree": "0 novas notificações; 37 bounces em cache",
+  "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
+  "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde o tick 12:50",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
+  "observacao": "Tick tranquilo: pipeline inalterado desde 12:50; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+ },
+ "atividade_tick_12h50_07_09": {
+  "sync_formspree": "0 novas notificações; 37 bounces em cache",
+  "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
+  "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes; varredura manual da caixa (scan_inbox.py) confirmou que TODAS as respostas de hoje já foram atendidas no tick anterior: Savegnago (10:23 → apresentação 10:35) e Grupo IMC via BuzzMonitor (10:56 → apresentação a felix.costa@grupoimc.com.br ~12:05)",
+  "fix_check_replies": "IMPLEMENTADO E VALIDADO (verificação ad-hoc 6/6) — check-replies agora correlaciona respostas de plataforma (BuzzMonitor/Zendesk/Movidesk) por References/In-Reply-To contra msgids da pasta Enviados (524 msgids indexados); pasta Enviados localizada por atributo \\\\Sent ([Gmail]/E-mails enviados, conta pt-BR); reply aceita --lead-id para marcar o lead certo em respostas de plataforma; BUG ADICIONAL CORRIGIDO durante a verificação: cabeçalhos com acento/não-ASCII viravam objeto Header (email lib) e quebravam o json.dump do check-replies — agora tudo é coagido com str() na extração (fetch_thread_messages e collect_sent_msgids)",
+  "emails_enviados_hoje": "~99 (lote FP3 + apresentação Savegnago + apresentação Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick"
+ },
+ "bounces_novos_hoje": [
+  "sac@alvoradasorocaba.com.br (Supermercados Alvorada — conta inexistente/SPFBL 550; sem email alternativo válido; lead 150 marcado como bounce)"
+ ],
+ "leads_quentes": [
+  {
+   "empresa": "Pastificio Selmi S/A (indústria de massas)",
+   "canal": "compras@selmi.com.br (indicado pelo SAC — Cristina Magalhães, ticket Zendesk #88925)",
+   "status": "CANAL COMERCIAL ABERTO 08/09 10:08 — SAC direcionou ao setor de compras; proposta completa enviada a compras@selmi.com.br com a indicação como referência; resposta de cortesia na thread Zendesk",
+   "proximo_passo": "aguardar retorno do compras@; se responder, pedir volume mensal (litros/kg) + tipo de material (óleo de fritura / resíduos >40% gordura) e oferecer coleta-teste; sem resposta em 3 dias, toque leve no WhatsApp (11) 96785-9631",
+   "prioridade": "ALTA"
   },
-  "fontes_leads": {
-    "prospeccao-lote": 100,
-    "prospeccao": 12,
-    "prospeccao-nicho": 12,
-    "prospeccao-vencidos": 4,
-    "prospeccao-savegnago": 1,
-    "prospeccao-grupoimc": 1,
-    "site": 1,
-    "formspree": 1,
-    "teste-cron": 1,
-    "sem-fonte": 7
+  {
+   "empresa": "Savegnago Supermercados (~100 lojas)",
+   "canal": "comercial@savegnago.com.br",
+   "status": "CANAL COMERCIAL OFICIAL ABERTO — Central de Relacionamento pediu apresentação e ela foi enviada 07/09 10:35 para comercial@savegnago.com.br",
+   "proximo_passo": "aguardar retorno do comercial; sem resposta em 3 dias (até 10/09), toque leve no WhatsApp (11) 96785-9631",
+   "prioridade": "ALTA"
   },
-  "atividade_tick_10h08_08_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces (snapshot 10:06, pré-resposta Selmi — novo era 90; pós-resposta: 103 ativos = 89 novo + 14 sequencia), sem follow-ups atrasados, bounces corrigidos ou leads parados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "1 pendente: Pastificio Selmi via Zendesk (support@selmisupport.zendesk.com) — Cristina Magalhães do SAC atualizou o ticket #88925 e INDICOU o canal comercial compras@selmi.com.br (padrão 'SAC fecha ticket e direciona': porta comercial ABERTA)",
-    "respostas_enviadas": "2 emails da persona de compra (10:07-10:08): (1) cortesia na thread Zendesk agradecendo a Cristina e confirmando o contato com compras@selmi.com.br (ticket encerrado de nossa parte); (2) proposta COMPLETA para compras@selmi.com.br com a indicação como referência — compra de óleo usado/gordura/resíduos >40% gordura, faixa R$ 1,00-2,50/L, PIX na coleta, certificado de destinação, CTA de volume mensal + tipo + WhatsApp (11) 96785-9631. Lead 60 (Pastificio Selmi S/A) marcado 'respondido' (respondido_em 2026-09-08T10:08:38-03:00)",
-    "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "2 (resposta Zendesk Selmi + proposta a compras@selmi.com.br)",
-    "observacao": "Tick com 1 resposta real: Selmi (indústria de massas) abriu o canal comercial via SAC — mesmo roteiro de Savegnago/Grupo IMC (SAC direciona, canal comercial negocia). Proposta enviada a compras@selmi.com.br aguardando retorno; pipeline: 140 leads, 103 ativos, 12 respondidos (+1 Selmi), 89 novos (-1), 38 bounces no cache (104 ativos no snapshot do watchdog às 10:06, antes da resposta). Próximo marco: 10/09 (toque WhatsApp em Savegnago e Grupo IMC se silêncio)."
+  {
+   "empresa": "Frango Assado / Grupo IMC (International Meal Company)",
+   "canal": "felix.costa@grupoimc.com.br (indicado pelo SAC — Thamela)",
+   "status": "CANAL COMERCIAL ABERTO — SAC pediu apresentação; apresentação enviada 07/09 ~12:05 ao Felix Costa + resposta à Thamela na thread",
+   "proximo_passo": "aguardar retorno do Felix Costa; se responder, pedir volume mensal (litros/kg) e oferecer coleta-teste; sem resposta em 3 dias, toque no WhatsApp",
+   "prioridade": "ALTA"
   },
-  "atividade_tick_19h31_07_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 19:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Rede Boa (Irmaos Boa)",
+   "canal": "produtos.novos@smboa.com.br",
+   "status": "proposta enviada ao setor comercial (18/08)",
+   "proximo_passo": "follow-up comercial",
+   "prioridade": "MEDIA"
   },
-  "atividade_tick_19h01_07_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 18:31 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Good Bom Supermercados",
+   "canal": "contato@goodbom.com.br",
+   "status": "proposta encaminhada ao departamento de compras (19/08)",
+   "proximo_passo": "follow-up comercial",
+   "prioridade": "MEDIA"
   },
-  "atividade_tick_18h31_07_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 18:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Sumerbol Supermercados",
+   "canal": "atendimento@sumerbol.com.br",
+   "status": "respondeu 26/08 (Ivone)",
+   "proximo_passo": "verificar thread e avançar volume + coleta-teste",
+   "prioridade": "MEDIA"
   },
-  "atividade_tick_18h01_07_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados, bounces corrigidos ou leads parados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 16:31 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); nenhuma resposta nova para atender, nenhum pedido de relatório ESG; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Bagley do Brasil (Arcor)",
+   "canal": "aquiarcor@arcor.com",
+   "status": "respondeu 26/08",
+   "proximo_passo": "verificar thread",
+   "prioridade": "MEDIA"
   },
-  "atividade_tick_16h31_07_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções (todos os 38 bounces já tentados — 22 'já tentado' neste tick)",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 33 msgids enviados indexados; aviso benigno de SELECT na pasta Sent",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 16:01 (140 leads, 104 ativos, 38 bounces); caixa limpa confirmada em dobro (check-replies + scan_inbox); aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Andorinha Hiper Center (id 147)",
+   "canal": "sugestoes@andorinhahiper.com.br",
+   "status": "apresentação enviada 07/09 14:33 — loja na própria SALTO + Itu (lead de maior potencial geográfico do momento)",
+   "proximo_passo": "se responder: pedir volume mensal + tipo e priorizar coleta-teste na unidade de Salto",
+   "prioridade": "ALTA"
   },
-  "atividade_tick_15h01_07_09": {
-    "sync_formspree": "0 novas notificações; 38 emails em bounce cache",
-    "corrigir_emails": "0 novas correções; Alvorada (sac@alvoradasorocaba.com.br) sem email alternativo válido — lead mantido como bounce",
-    "watchdog": "saudável (exit 0): 140 leads / 104 ativos / 38 bounces, sem follow-ups atrasados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "1 pendente detectado = FALSO POSITIVO (mailer-daemon: Delivery Status Notification Failure para sac@alvoradasorocaba.com.br — SPFBL 550 conta inexistente). Lead 150 (Supermercados Alvorada) já estava marcado como bounce no CSV ('EMAIL INVÁLIDO — não reenviar') e sac@alvoradasorocaba.com.br já constava no bounces.json. FIX APLICADO: filtro de DSN/bounce (mailer-daemon, postmaster, 'delivery status notification', 'mensagem bloqueada') adicionado ao check_replies — revalidado: 0 pendentes após o filtro. replies_pending.json limpo.",
-    "enviar_lote_status": "fila: 115 empresas / 104 já contatados / 27 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: +5 leads via prospecao-lote desde o tick 14:01 (4 novo + 1 bounce/Alvorada). Nenhuma resposta real nova na caixa; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Paulistão Atacadista (id 149)",
+   "canal": "atendimento@paulistaoatacadista.com.br",
+   "status": "apresentação enviada 07/09 14:34 — bandeira atacarejo do Grupo Savegnago",
+   "proximo_passo": "se comercial@savegnago responder, pausar envio ao Paulistão (evitar insistência duplicada no mesmo grupo)",
+   "prioridade": "ALTA"
   },
-  "atividade_tick_14h01_07_09": {
-    "sync_formspree": "0 novas notificações; 37 bounces em cache",
-    "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
-    "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); aviso benigno de SELECT na pasta Sent (documentado em ticks anteriores)",
-    "enviar_lote_status": "fila: 110 empresas / 99 já contatados / 26 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 13:31; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Dalben (id 148) / Amigão (id 151) / Rede Bom Lugar (132) / Tenda Atacado (133) / Roldão Atacadista (134)",
+   "canal": "emails comerciais respectivos",
+   "status": "apresentações enviadas 07/09 (Dalben/Amigão 14:33-14:34; Bom Lugar/Tenda/Roldão 11:31) — aguardando retorno",
+   "proximo_passo": "monitorar replies nos próximos ticks",
+   "prioridade": "MEDIA"
   },
-  "atividade_tick_13h31_07_09": {
-    "sync_formspree": "0 novas notificações; 37 bounces em cache",
-    "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
-    "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio)",
-    "scan_inbox": "contingência: 0 mensagens não lidas/recentes na INBOX (7 dias); 28 msgids enviados indexados p/ correlação de thread; aviso benigno de SELECT na pasta Sent no scan (check-replies usa a pasta Enviados correta via atributo \\\\Sent)",
-    "enviar_lote_status": "fila: 110 empresas / 99 já contatados / 26 bounce / 0 pendentes",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 13:00; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Grupo Lanchero Alimentos (indústria de maioneses/molhos — Marília)",
+   "canal": "sac@lanchero.com.br",
+   "status": "NOVO (08/09 10:20) — apresentação enviada; indústria de maioneses/molhos = NICHO PRIORITÁRIO de resíduos vencidos >40% gordura com descaracterização (argumento de passivo do CNPJ)",
+   "proximo_passo": "se responder: pedir volume mensal (litros/kg) + tipo (óleo de fritura / vencidos >40% gordura), oferecer coleta-teste e relatório ESG; monitorar replies",
+   "prioridade": "ALTA"
   },
-  "atividade_tick_13h00_07_09": {
-    "sync_formspree": "0 novas notificações; 37 bounces em cache",
-    "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
-    "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde o tick 12:50",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentações Savegnago/Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick",
-    "observacao": "Tick tranquilo: pipeline inalterado desde 12:50; aguardando retornos de Savegnago e Grupo IMC (prazo de toque: 10/09)"
+  {
+   "empresa": "Sorocaba Frios (distribuidora de frios/laticínios — Sorocaba)",
+   "canal": "contato@sorocabafrios.com.br",
+   "status": "NOVO (08/09 10:20) — apresentação enviada; distribuidora com geração de gordura/vencidos",
+   "proximo_passo": "monitorar replies; se responder, pedir volume + tipo",
+   "prioridade": "MEDIA"
   },
-  "atividade_tick_12h50_07_09": {
-    "sync_formspree": "0 novas notificações; 37 bounces em cache",
-    "corrigir_emails": "0 novas correções (todos os bounces já tentados)",
-    "watchdog": "saudável (exit 0): 135 leads / 100 ativos / 37 bounces, sem follow-ups atrasados",
-    "prospecao_followup": "0 follow-ups atrasados",
-    "send_sequence": "sequência processada (nada novo a enviar)",
-    "check_replies": "0 pendentes; varredura manual da caixa (scan_inbox.py) confirmou que TODAS as respostas de hoje já foram atendidas no tick anterior: Savegnago (10:23 → apresentação 10:35) e Grupo IMC via BuzzMonitor (10:56 → apresentação a felix.costa@grupoimc.com.br ~12:05)",
-    "fix_check_replies": "IMPLEMENTADO E VALIDADO (verificação ad-hoc 6/6) — check-replies agora correlaciona respostas de plataforma (BuzzMonitor/Zendesk/Movidesk) por References/In-Reply-To contra msgids da pasta Enviados (524 msgids indexados); pasta Enviados localizada por atributo \\\\Sent ([Gmail]/E-mails enviados, conta pt-BR); reply aceita --lead-id para marcar o lead certo em respostas de plataforma; BUG ADICIONAL CORRIGIDO durante a verificação: cabeçalhos com acento/não-ASCII viravam objeto Header (email lib) e quebravam o json.dump do check-replies — agora tudo é coagido com str() na extração (fetch_thread_messages e collect_sent_msgids)",
-    "emails_enviados_hoje": "~99 (lote FP3 + apresentação Savegnago + apresentação Grupo IMC + resposta SAC Frango Assado) — nenhum enviado neste tick"
-  },
-  "bounces_novos_hoje": [
-    "sac@alvoradasorocaba.com.br (Supermercados Alvorada — conta inexistente/SPFBL 550; sem email alternativo válido; lead 150 marcado como bounce)"
+  {
+   "empresa": "Mega Ingredientes / Megasabor (ingredientes e emulsificantes — Indaiatuba)",
+   "canal": "contato@megasabor.com.br",
+   "status": "NOVO (08/09 10:20) — apresentação enviada",
+   "proximo_passo": "monitorar replies; se responder, pedir volume + tipo",
+   "prioridade": "MEDIA"
+  }
+ ],
+ "alertas_operacionais": [
+  "08/09 10:31: tick verde — 0 respostas novas; +3 leads do Prospector (Sorocaba Frios, Megasabor, Lanchero) já com apresentação; Lanchero = nicho vencidos >40% gordura.",
+  "Monitorar: resposta do comercial da Savegnago (prazo 10/09), do Felix Costa (Grupo IMC, prazo 10/09) e do compras@ da Selmi (prazo 11/09).",
+  "RESOLVIDO (07/09 ~12:40): check-replies não capturava respostas via plataformas (BuzzMonitor/Zendesk/Movidesk). Correção implementada e validada com teste sintético: correlação por References/In-Reply-To contra msgids enviados (pasta Enviados indexada em lote único, 524 msgids) + match de domínio de plataforma + assunto. Novo script scan_inbox.py para varredura manual de contingência.",
+  "INFO (tick 15:01): bounce de Supermercados Alvorada (sac@alvoradasorocaba.com.br) confirmado por notificação mailer-daemon; lead já estava com status bounce no CSV — sem ação pendente."
+ ],
+ "atividade_tick_10h31_08_09": {
+  "sync_formspree": "0 novas notificações; 38 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções — todos os 38 bounces do cache já com tentativa registrada (22 'já tentado' neste tick)",
+  "watchdog": "saudável (exit 0): 143 leads / 106 ativos / 38 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) — nenhuma resposta nova na caixa desde a Selmi (10:08)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (as 3 apresentações dos leads novos 152-154 foram enviadas pelo tick do Prospector 10:30)",
+  "leads_novos": [
+   "id 152 — Sorocaba Frios Distribuidora de Frios e Laticínios (contato@sorocabafrios.com.br, Sorocaba) — apresentação enviada 10:20",
+   "id 153 — Mega Ingredientes Alimentícios / Megasabor (contato@megasabor.com.br, Indaiatuba) — apresentação enviada 10:20",
+   "id 154 — Grupo Lanchero Alimentos (sac@lanchero.com.br, Marília) — indústria de maioneses/molhos = NICHO PRIORITÁRIO resíduos vencidos >40% gordura — apresentação enviada 10:20"
   ],
-  "leads_quentes": [
-    {
-      "empresa": "Pastificio Selmi S/A (indústria de massas)",
-      "canal": "compras@selmi.com.br (indicado pelo SAC — Cristina Magalhães, ticket Zendesk #88925)",
-      "status": "CANAL COMERCIAL ABERTO 08/09 10:08 — SAC direcionou ao setor de compras; proposta completa enviada a compras@selmi.com.br com a indicação como referência; resposta de cortesia na thread Zendesk",
-      "proximo_passo": "aguardar retorno do compras@; se responder, pedir volume mensal (litros/kg) + tipo de material (óleo de fritura / resíduos >40% gordura) e oferecer coleta-teste; sem resposta em 3 dias, toque leve no WhatsApp (11) 96785-9631",
-      "prioridade": "ALTA"
-    },
-    {
-      "empresa": "Savegnago Supermercados (~100 lojas)",
-      "canal": "comercial@savegnago.com.br",
-      "status": "CANAL COMERCIAL OFICIAL ABERTO — Central de Relacionamento pediu apresentação e ela foi enviada 07/09 10:35 para comercial@savegnago.com.br",
-      "proximo_passo": "aguardar retorno do comercial; sem resposta em 3 dias (até 10/09), toque leve no WhatsApp (11) 96785-9631",
-      "prioridade": "ALTA"
-    },
-    {
-      "empresa": "Frango Assado / Grupo IMC (International Meal Company)",
-      "canal": "felix.costa@grupoimc.com.br (indicado pelo SAC — Thamela)",
-      "status": "CANAL COMERCIAL ABERTO — SAC pediu apresentação; apresentação enviada 07/09 ~12:05 ao Felix Costa + resposta à Thamela na thread",
-      "proximo_passo": "aguardar retorno do Felix Costa; se responder, pedir volume mensal (litros/kg) e oferecer coleta-teste; sem resposta em 3 dias, toque no WhatsApp",
-      "prioridade": "ALTA"
-    },
-    {
-      "empresa": "Rede Boa (Irmaos Boa)",
-      "canal": "produtos.novos@smboa.com.br",
-      "status": "proposta enviada ao setor comercial (18/08)",
-      "proximo_passo": "follow-up comercial",
-      "prioridade": "MEDIA"
-    },
-    {
-      "empresa": "Good Bom Supermercados",
-      "canal": "contato@goodbom.com.br",
-      "status": "proposta encaminhada ao departamento de compras (19/08)",
-      "proximo_passo": "follow-up comercial",
-      "prioridade": "MEDIA"
-    },
-    {
-      "empresa": "Sumerbol Supermercados",
-      "canal": "atendimento@sumerbol.com.br",
-      "status": "respondeu 26/08 (Ivone)",
-      "proximo_passo": "verificar thread e avançar volume + coleta-teste",
-      "prioridade": "MEDIA"
-    },
-    {
-      "empresa": "Bagley do Brasil (Arcor)",
-      "canal": "aquiarcor@arcor.com",
-      "status": "respondeu 26/08",
-      "proximo_passo": "verificar thread",
-      "prioridade": "MEDIA"
-    },
-    {
-      "empresa": "Andorinha Hiper Center (id 147)",
-      "canal": "sugestoes@andorinhahiper.com.br",
-      "status": "apresentação enviada 07/09 14:33 — loja na própria SALTO + Itu (lead de maior potencial geográfico do momento)",
-      "proximo_passo": "se responder: pedir volume mensal + tipo e priorizar coleta-teste na unidade de Salto",
-      "prioridade": "ALTA"
-    },
-    {
-      "empresa": "Paulistão Atacadista (id 149)",
-      "canal": "atendimento@paulistaoatacadista.com.br",
-      "status": "apresentação enviada 07/09 14:34 — bandeira atacarejo do Grupo Savegnago",
-      "proximo_passo": "se comercial@savegnago responder, pausar envio ao Paulistão (evitar insistência duplicada no mesmo grupo)",
-      "prioridade": "ALTA"
-    },
-    {
-      "empresa": "Dalben (id 148) / Amigão (id 151) / Rede Bom Lugar (132) / Tenda Atacado (133) / Roldão Atacadista (134)",
-      "canal": "emails comerciais respectivos",
-      "status": "apresentações enviadas 07/09 (Dalben/Amigão 14:33-14:34; Bom Lugar/Tenda/Roldão 11:31) — aguardando retorno",
-      "proximo_passo": "monitorar replies nos próximos ticks",
-      "prioridade": "MEDIA"
-    }
-  ],
-  "alertas_operacionais": [
-    "NOVO (08/09 10:08): Selmi abriu canal comercial — SAC (Zendesk #88925) indicou compras@selmi.com.br; proposta enviada. Monitorar retorno (prazo de toque: 11/09 via WhatsApp).",
-    "RESOLVIDO (07/09 ~12:40): check-replies não capturava respostas via plataformas (BuzzMonitor/Zendesk/Movidesk). Correção implementada e validada com teste sintético: correlação por References/In-Reply-To contra msgids enviados (pasta Enviados indexada em lote único, 524 msgids) + match de domínio de plataforma + assunto. Novo script scan_inbox.py para varredura manual de contingência.",
-    "Monitorar: resposta do comercial da Savegnago (prazo 10/09), do Felix Costa (Grupo IMC, prazo 10/09) e do compras@ da Selmi (prazo 11/09).",
-    "INFO (tick 15:01): bounce de Supermercados Alvorada (sac@alvoradasorocaba.com.br) confirmado por notificação mailer-daemon; lead já estava com status bounce no CSV — sem ação pendente."
-  ]
+  "enviar_lote_status": "fila: 118 empresas / 107 já contatados / 27 bounce / 0 pendentes",
+  "observacao": "Tick tranquilo: +3 leads do Prospector (10:20, todos já com apresentação), 0 respostas novas no caixa (Selmi segue como última, 10:08), watchdog 100% verde. Pipeline: 143 leads / 106 ativos / 92 novo / 14 sequência / 12 respondido / 23 bounce / 2 encerrado. Marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC; 11/09 Selmi (compras@selmi.com.br)."
+ }
 }
