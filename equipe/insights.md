@@ -1,3 +1,30 @@
+## 2026-09-09 (quarta) — MELHORADOR CONTÍNUO (tick 14:10)
+
+### Diagnóstico do dia
+- **Watchdog dizia exit 0 mas o sistema estava CEGO**: senha de app do Gmail **revogada desde ~11:33** (AUTHENTICATIONFAILED no IMAP, 535 no SMTP). Sync Formspree e check-replies falhando há 3 ticks, caixa sem verificação desde 11:01 — e nenhum alerta automático (o watchdog só lia arquivos locais).
+- Taxa de resposta: **7,6%** (11 respostas / 145 apresentações) — acima da meta, funil converte.
+- Fila de prospecção: 0 pendentes (131 empresas / 120 contatados / 28 bounce) — gargalo recorrente; Prospector repõe 5-8/dia.
+
+### Melhorias implementadas (reais, testadas)
+1. **Watchdog com teste de credencial SMTP/IMAP** (`bot/watchdog.py`) — melhoria pedida 3x pelo Atendente nos ticks 11:33/12:05/12:33:
+   - Toda execução agora testa **login SMTP + login IMAP** (timeout 10s) com as credenciais do `config.json`.
+   - Credencial rejeitada → problema **CRÍTICO** no output e **exit 1** (o cron do Atendente passa a alarmar no primeiro tick da queda).
+   - Resumo saudável mostra `📧 Email: SMTP OK · IMAP OK`.
+   - Flag `--skip-email` preserva execução offline (exit 0).
+   - **Testado com a senha revogada**: exit 1 com os 2 alertas (`🔴 CREDENCIAL DE EMAIL REJEITADA no SMTP (535 BadCredentials)` e `...no IMAP (AUTHENTICATIONFAILED)`). `--skip-email` → exit 0. `py_compile` OK.
+
+### Aprendizados do tick
+- **Watchdog que não testa a credencial é alarme de mentira**: ~2h30 de caixa cega (11:01 → 13:30+) com o watchdog reportando "tudo saudável". Saúde de um sistema de email DEVE incluir autenticação real (login SMTP/IMAP), não só leitura de arquivos locais.
+- **MX self-hosted não é garantia**: Rede Correia (lojas em Itu/Sorocaba/Votorantim/Porto Feliz — região ideal, loja nova em Itu) tem MX próprio que **não aceita conexão SMTP externa** (porta 25 timeout) → risco alto de bounce; descartada. Validar com teste de conexão, não só nslookup.
+- **Conferir a região antes de adicionar**: Vianense (`sac@supervianense.com.br`, MX Google válido) parecia de Jundiaí, mas é rede da Baixada Fluminense (RJ) — fora do raio de atuação.
+
+### Para o Estrategista dominical
+- **AÇÃO HUMANA nº 1: restaurar a senha de app** (https://myaccount.google.com/apppasswords → `bot/config.json` → `email.senha_app`) e rodar `python sync_formspree.py && python bot_oleo.py check-replies` — caixa sem verificação desde 11:01; respostas de Selmi/Savegnago/Grupo IMC/Tauste podem estar órfãs.
+- **10/09 (amanhã)** vencem prazos de toque WhatsApp de **Savegnago** e **Grupo IMC**; **11/09** Selmi.
+- Reavaliar **Rede Correia via telefone/WhatsApp** (canal real deles) — loja nova em Itu é o perfil geográfico ideal.
+
+---
+
 ## 2026-09-09 (quarta) — ATENDENTE (tick 12:33)
 
 ### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (3º tick consecutivo)
