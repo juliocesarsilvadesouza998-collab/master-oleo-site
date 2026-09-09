@@ -1,5 +1,20 @@
 {
- "atualizado_em": "2026-09-09T12:07:32-03:00",
+ "atualizado_em": "2026-09-09T12:34:09-03:00",
+ "atividade_tick_12h33_09_09": {
+  "sync_formspree": "FALHOU (3º tick consecutivo) — IMAP AUTHENTICATIONFAILED na senha de app do Gmail; senha segue revogada desde ~11:01-11:33 de 09/09 (testado de novo 12:32: IMAP e SMTP rejeitam). 0 notificações novas processadas; cache de bounces permanece 41",
+  "corrigir_emails": "OK offline — 0 novas correções; todos os 41 bounces do cache já com tentativa registrada (nada pendente)",
+  "watchdog": "saudável (exit 0): 170 leads / 131 ativos / 41 bounces; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados",
+  "prospecao_followup": "0 follow-ups processados (nada atrasado)",
+  "send_sequence": "sequência processada — nada a enviar",
+  "check_replies": "FALHOU (3º tick consecutivo) — IMAP AUTHENTICATIONFAILED; CAIXA NÃO VERIFICADA; replies_pending.json vazio (última checagem real: 11:01)",
+  "respostas_enviadas": "0 (caixa inacessível)",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (fluxo de envio bloqueado pela credencial)",
+  "enviar_lote_status": "fila: 131 empresas / 120 contatados / 28 bounce / 0 pendentes",
+  "leads_novos": [],
+  "pipeline_snapshot_12h33": "170 leads / 104 novo / 27 sequencia / 12 respondido / 25 bounce / 2 encerrado / 131 ativos — pipeline INALTERADO (contagem direta no leads.csv)",
+  "observacao": "ALERTA CRÍTICO MANTIDO (3º tick consecutivo): senha de app do Gmail REVOGADA (ver alertas_operacionais) — bloqueia sync_formspree, check-replies, scan_inbox e qualquer envio; requer ação humana (gerar nova senha de app em myaccount.google.com/apppasswords + atualizar bot/config.json -> email.senha_app)"
+ },
  "atividade_tick_11h01_09_09": {
   "sync_formspree": "0 novas notificações; 41 emails em bounce cache (nenhum lead novo via site)",
   "corrigir_emails": "0 novas correções neste tick (todos os 41 bounces já com tentativa registrada — 22 'já tentado')",
@@ -468,6 +483,7 @@
   }
  ],
  "alertas_operacionais": [
+  "09/09 12:33: 🚨 ALERTA CRÍTICO MANTIDO (3º tick consecutivo) — senha de app do Gmail masteroleo.eco@gmail.com REVOGADA (IMAP AUTHENTICATIONFAILED + SMTP 535 BadCredentials, reconfirmado 12:32). Caixa NÃO verificada desde 11:01 — respostas de Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar podem estar órfãs. AÇÃO HUMANA: nova senha de app em https://myaccount.google.com/apppasswords → bot/config.json → email.senha_app → rodar sync_formspree.py && bot_oleo.py check-replies.",
   "09/09 10:01: tick verde com ação de sequência — 7 Follow-up 1 enviados (Novotel Itu/Accor, Metha Alimentos, Rede Top, Real Gastronomia, Mirassol Refeições, FS Alimentos, Belvit); 0 respostas pendentes; pipeline estável em 170 leads / 131 ativos / 41 bounces.",
   "09/09 09:31: tick verde com crescimento — +10 leads de laticínios/queijarias (Usina Ipe, Queijos Itupeva, Laghi & Tosi, Betins, De Buffalas, Vale dos Anjos, Rima, Caprioles, Cabanha 53) com apresentação enviada 09:15-09:16; 1 bounce novo (Generoso Alimentos — sem email alternativo).",
   "08/09 10:31: tick verde — 0 respostas novas; +3 leads do Prospector (Sorocaba Frios, Megasabor, Lanchero) já com apresentação; Lanchero = nicho vencidos >40% gordura.",
