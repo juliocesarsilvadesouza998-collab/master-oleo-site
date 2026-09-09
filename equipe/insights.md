@@ -1,3 +1,29 @@
+## 2026-09-08 (terça) — QUALIDADE (auditoria 19:35)
+
+### Números do dia (estado pós-sync 19:34)
+- **Sync Formspree:** 40 emails em bounce cache; **0** notificações novas processadas (nenhum lead novo via site).
+- **Leads totais:** **160** (`novo`: 95 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 24 | `encerrado`: 2) — **Ativos: 122**. Pipeline inalterado desde o tick 14:34 (confirmado por contagem direta no leads.csv).
+- **Envios hoje:** ~33 (segundo registro do tick 19:31; nenhum envio neste tick de auditoria).
+- **Bounces novos hoje:** 0 (cache em 40, inalterado pelo sync).
+- **Respostas pendentes:** 0 (`replies_pending.json` = `[]`).
+
+### Auditoria
+a) **Consistência bounce cache ↔ leads.csv: OK, nada a corrigir.** Todos os 24 leads `bounce` têm o email em `bounces.json`; todo email do cache que existe no CSV está marcado `bounce` (0 com status `novo`/`sequencia`/`respondido` tendo email no cache). Obs.: 16 emails do cache NÃO existem no CSV — são variantes de empresas cujos leads usam outro endereço ou emails da fila de prospecção (ex.: `contato@selmi.com.br` vs `sac@selmi.com.br` id 60; `contato@penina.com.br` vs `info@penina.com.br` id 72; `contato@nutraway.com.br` vs `nutraway@nutraway.com.br` id 77; `contato@cowpig.com.br` vs `atendimento@cowpig.com.br` id 71; `contato@infanger.com.br` vs `supermercado@infanger.com.br` id 50; `contato@deltaterceirizacoes.com.br` vs `adm@deltaterceirizacoes.com.br` id 64; `rh@realgastronomia.com.br` vs `vendas@realgastronomia.com.br` id 143; `info@kelcopetcare.com.br` vs `comercial@kelcopetcare.com.br` id 18). O cache é por endereço, não por empresa — risco de bounce no mesmo domínio.
+b) **Bounce com `boas_vindas_em` preenchido: 1 (registrado, não corrigido).** Lead id 1 (Ana Souza, Alimentos Salto Ltda, ana@alimentossalto.com.br): boas_vindas enviada 13/08, bounce detectado depois do envio (fluxo normal — sem evidência de envio a bounce já conhecido). Mesma ocorrência da auditoria de 07/09, sem novos casos.
+c) **Respostas pendentes:** 0 — fila vazia, Atendente sem trabalho no próximo tick.
+
+### Problemas encontrados e correções
+1. Nenhum erro de status para corrigir — sync consistente (correções automáticas já operaram em ticks anteriores).
+2. **Qualidade de dados (pendência antiga mantida, re-registrada):** IDs duplicados (84, 86, 88, 101) + leads sem id na fila (Novotel Itu, Metha, Rede Top, Real Gastronomia, Mirassol, FS Alimentos, Rest Industrial, frigoríficos Verdi/3R/Frisa/do Sul, Intercity, Arese, Infinity, Veridi, HRT, Larimar, Maila, Farmaviva, Audacci, GDS USA). Recomendo renumeração única.
+3. **Fila de prospecção com 0 pendentes** (121 empresas / 110 contatados / 27 bounce) — gargalo do Prospector, não do sync.
+
+### Sugestões para o Estrategista
+1. **Sibling addresses pós-bounce:** quando um email da empresa der bounce, validar o endereço alternativo do mesmo lead antes de continuar enviando (ex.: Selmi id 60 é lead #1 quente e tem `contato@selmi.com.br` no cache — garantir que nenhum follow-up futuro use o endereço que já bounceou).
+2. **Renumeração única dos IDs** (84/86/88/101 duplicados + vazios) para evitar chaveamento errado por id em dashboards e follow-ups.
+3. **Manter ritmo de prospecção:** fila em 0 pendentes há vários ticks — repor 5-8 empresas/dia, priorizando redes de supermercado/atacarejo e indústrias de maionese/molho (resíduos vencidos >40%).
+
+---
+
 ## 2026-09-08 (terça) — ATENDENTE (tick 18:31)
 
 ### Números do dia (estado real pós-tick)

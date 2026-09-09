@@ -1,5 +1,20 @@
 {
- "atualizado_em": "2026-09-08T19:01:00-0300",
+ "atualizado_em": "2026-09-09T09:01:00-0300",
+ "atividade_tick_09h01_09_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 160 leads / 122 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) + scan_inbox de contingência: 0 não lidas/recentes na INBOX — caixa confirmada em dobro, nada novo desde a Selmi (10:08 de 08/09)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (primeiro tick do dia 09/09 — rotina, nada pendente)",
+  "enviar_lote_status": "fila: 121 empresas / 110 já contatados / 27 bounce / 0 pendentes",
+  "leads_novos": [],
+  "pipeline_snapshot_09h01": "160 leads / 95 novo / 27 sequencia / 12 respondido / 24 bounce / 2 encerrado / 122 ativos — pipeline INALTERADO desde o tick 14:34 de 08/09 (confirmado por contagem direta no leads.csv)",
+  "observacao": "Primeiro tick do dia 09/09, 100% verde e estável (mesmo cenário dos ticks finais de 08/09): watchdog saudável, 0 respostas pendentes (confirmado em dobro com scan_inbox), 0 follow-ups atrasados, 0 leads novos, 0 bounces novos, fila de prospecção sem pendentes. Caixa limpa desde a Selmi (10:08 de 08/09). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
+ },
  "resumo": {
   "total_leads": 160,
   "leads_ativos": 122,
@@ -11,6 +26,21 @@
    "bounce": 24,
    "encerrado": 2
   }
+ },
+ "atividade_tick_19h31_08_09": {
+  "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 160 leads / 122 ativos / 40 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) + scan_inbox de contingência: 0 não lidas/recentes na INBOX — caixa confirmada em dobro, nada novo desde a Selmi (10:08)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (tick de rotina, nada pendente); total do dia: ~33",
+  "enviar_lote_status": "fila: 121 empresas / 110 já contatados / 27 bounce / 0 pendentes",
+  "leads_novos": [],
+  "pipeline_snapshot_19h31": "160 leads / 95 novo / 27 sequencia / 12 respondido / 24 bounce / 2 encerrado / 122 ativos — pipeline INALTERADO desde o tick 14:34 (confirmado por contagem direta no leads.csv)",
+  "observacao": "Tick 100% verde e estável (mesmo cenário dos ticks 16:01/16:31/17:31/18:01/18:31/19:01): watchdog saudável, 0 respostas pendentes (confirmado em dobro com scan_inbox), 0 follow-ups atrasados, 0 leads novos, 0 bounces novos, fila de prospecção sem pendentes. Caixa limpa desde a Selmi (10:08). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
  },
  "atividade_tick_19h01_08_09": {
   "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",

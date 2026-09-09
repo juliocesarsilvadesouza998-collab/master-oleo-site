@@ -43,6 +43,15 @@ PALAVRAS_CHAVE = [
     "óleo vegetal usado máquinas encapsulados",
     "coleta de óleo vegetal industrial",
     "óleo de limpeza de máquinas farmacêuticas",
+    # Blog/artigos (long-tail)
+    "quanto vale o óleo de cozinha usado",
+    "preço do óleo usado por litro",
+    "quem compra margarina vencida",
+    "quem compra manteiga vencida",
+    "o que é descaracterização de alimentos",
+    "destruição de produtos vencidos",
+    "vender óleo de cozinha usado",
+    "óleo vegetal usado industrial",
 ]
 
 def checar_site(url):
