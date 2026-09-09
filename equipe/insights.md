@@ -1,3 +1,27 @@
+## 2026-09-09 (quarta) — QUALIDADE (Auditoria QA ~19:38)
+
+### Resumo do dia (visão do Analista de Qualidade)
+- **Leads totais: 170** — `novo`: 104 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 25 | `encerrado`: 2 — **Ativos: 131**.
+- **Sync Formspree:** ❌ **FALHOU de novo** — `[AUTHENTICATIONFAILED] Invalid credentials` no IMAP (login `masteroleo.eco@gmail.com`). **18º tick com a mesma falha** (senha de app revogada desde 11:01-11:33; caixa sem verificação há >8h30). NÃO é problema novo — é o alerta crítico já conhecido; exige ação humana (nova senha de app em myaccount.google.com/apppasswords → `bot/config.json` → `email.senha_app`).
+- **Emails enviados hoje:** 0 (envio bloqueado pela credencial desde ~11:01).
+- **Bounces:** cache em **41** (inalterado). **0 bounces novos** detectados (não foi possível verificar a caixa).
+- **Respostas pendentes:** `replies_pending.json` = **0** (porém a última checagem real da INBOX foi 11:01 — respostas de Selmi, Savegnago, Grupo IMC, Tauste etc. podem estar órfãs na caixa).
+
+### Auditoria (itens verificados)
+1. **bounces.json × leads.csv: CONSISTENTE** ✅ — 0 emails no cache com status ≠ bounce no CSV (a correção automática do sync está íntegra). Porém: **16 emails do cache NÃO existem no leads.csv** (ex.: `contato@selmi.com.br`, `sac@redeoba.com.br`, `contato@cowpig.com.br`) — são endereços alternativos/antigos que queimaram em envios fora do cadastro ou artefatos de parsing do mailer-daemon. **`contato@eixorestaurantes.co` está no cache com domínio truncado** (provável artefato do regex) junto do correto `contato@eixorestaurantes.com.br` — ruído inofensivo, mas indica que o filtro de bounces captura endereços que não são do lead.
+2. **Lead com status `bounce` e `boas_vindas_em` preenchido: 1** — ID 1 (Ana Souza, ana@alimentossalto.com.br), boas_vindas_em 2026-08-13. Caso legado (bounce detectado DEPOIS do envio de boas-vindas), não reincidente. **Apenas registrado, sem correção** (conforme procedimento).
+3. **Integridade do CSV:** 0 emails duplicados; nenhum bounce malformado além do `.co` citado. IDs 2 e 3 (leads de teste) sem `respondido_em` — irrelevante.
+
+### Problema estrutural encontrado (NOVO, não bloqueante)
+- **~104 leads com status `novo` já receberam a sequência completa de apresentação** (`apresentacao_em` + `fp1_em` + `fp2_em` + `fp3_em` preenchidos) — o lote de apresentação registra os envios mas **não avança o status**. O número "novo: 104" superestima leads sem primeiro contato. **Não corrigi em massa** (risco de o `send_sequence` disparar boas-vindas indevidas quando o email voltar). 
+- **7 leads em `sequencia` sem `boas_vindas_em`** (IDs 5, 7, 8, 11, 12, 13, 15 — lote de 13/08): estado legado divergente do restante do funil.
+
+### Sugestões para o Estrategista
+1. **URGENTE (bloqueia tudo):** regenerar a senha de app do Gmail e rodar `sync_formspree.py && bot_oleo.py check-replies` — há >8h30 de caixa não verificada com leads quentes aguardando (Selmi prazo 11/09; Savegnago e Grupo IMC prazo 10/09 via WhatsApp).
+2. **Definir máquina de estados do funil:** padronizar o que acontece com o status após o fp3 do lote de apresentação (ex.: `novo` → `sequencia` ou novo status `aguardando`) e fazer backfill dos 7 leads antigos (IDs 5,7,8,11,12,13,15) — senão "novo: 104" continuará enganando a leitura do funil.
+3. **Filtrar bounces por envio real:** considerar registrar apenas bounces cujo endereço conste no histórico de envios (leads.csv ou log do enviar_lote), reduzindo ruído como os 16 órfãos e o `contato@eixorestaurantes.co` truncado.
+
+---
 ## 2026-09-09 (quarta) — ATENDENTE (tick 19:01)
 
 ### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (16º tick consecutivo)
