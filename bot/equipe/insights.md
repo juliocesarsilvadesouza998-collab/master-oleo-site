@@ -1,13 +1,13 @@
-# Insights — Master Óleo · 09/09/2026 (tick 19:01)
+# Insights — Master Óleo · 09/09/2026 (tick 19:32)
 
-## 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (16º tick consecutivo)
-- **Estado**: credencial de `masteroleo.eco@gmail.com` (bot/config.json) **continua rejeitada** — `AUTHENTICATIONFAILED` IMAP / `535 BadCredentials` SMTP, reconfirmado neste tick (19:01, testado com e sem espaços). Revogada entre 11:01 e 11:33 de 09/09.
-- **Impacto**: `sync_formspree.py` e `check-replies` **FALHARAM** pelo 16º tick. **Caixa NÃO verificada desde 11:01** (>8h) — risco de leads sem atendimento (Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar em maturação).
+## 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (17º tick consecutivo)
+- **Estado**: credencial de `masteroleo.eco@gmail.com` (bot/config.json) **continua rejeitada** — `AUTHENTICATIONFAILED` IMAP / `535 BadCredentials` SMTP, reconfirmado neste tick (19:32, testado com e sem espaços). Revogada entre 11:01 e 11:33 de 09/09.
+- **Impacto**: `sync_formspree.py` e `check-replies` **FALHARAM** pelo 17º tick. **Caixa NÃO verificada desde 11:01** (>8h30) — risco de leads sem atendimento (Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar em maturação).
 - **AÇÃO (humana)**: nova senha de app em https://myaccount.google.com/apppasswords → `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies`.
 - **Offline verde**: fila 0 pendentes (131/120/28), watchdog `--skip-email` exit 0, 0 follow-ups atrasados, 0 bounces novos, correção de bounces nada pendente.
 
-## Resumo do tick (19:01)
-- **Pipeline (snapshot 19:01)**: 170 leads · **12 respondidos** · 27 sequência · **104 novos** · 25 bounce (CSV) / 41 cache · 2 encerrados · **ativos: 131** — inalterado (contagem direta; caixa sem verificação desde 11:01).
+## Resumo do tick (19:32)
+- **Pipeline (snapshot 19:32)**: 170 leads · **12 respondidos** · 27 sequência · **104 novos** · 25 bounce (CSV) / 41 cache · 2 encerrados · **ativos: 131** — inalterado (contagem direta; caixa sem verificação desde 11:01).
 - **Ação do tick**: rotina offline — nada a enviar (fluxo de email bloqueado pela credencial).
 - **Novos leads**: 0. **Bounces novos**: 0. **Correção**: 0 pendentes.
 - **Caixa**: **NÃO VERIFICADA** — `replies_pending.json` vazio (última checagem real: 11:01).
@@ -24,8 +24,8 @@
 - **SAC corporativo indica o canal comercial → é onde nasce a negociação** (Savegnago → comercial@, Grupo IMC → Felix Costa, Selmi → compras@).
 - **Redes de supermercado seguem como alvo de maior potencial** (padaria + rotisserie + açougue geram óleo toda semana).
 - **Vetor laticínios/queijarias** (+10 leads 09/09 09:15) — manteiga/creme/vencidos >40% gordura; monitorar replies.
-- **Vulnerabilidade exposta**: todo o pipeline de email depende de UMA senha de app — quando cai, sync + check-replies + envio caem juntos. Watchdog com teste SMTP/IMAP alarma no 1º tick da queda — funcionou (16 ticks consecutivos de alerta sem falha de detecção).
+- **Vulnerabilidade exposta**: todo o pipeline de email depende de UMA senha de app — quando cai, sync + check-replies + envio caem juntos. Watchdog com teste SMTP/IMAP alarma no 1º tick da queda — funcionou (17 ticks consecutivos de alerta sem falha de detecção).
 
 ## Próximos passos recomendados
-1. **URGENTE**: regenerar senha de app e atualizar `bot/config.json` → rodar sync + check-replies (há >8h de caixa não verificada desde 11:01).
+1. **URGENTE**: regenerar senha de app e atualizar `bot/config.json` → rodar sync + check-replies (há >8h30 de caixa não verificada desde 11:01).
 2. **AMANHÃ 10/09**: toque no WhatsApp de **Savegnago** e **Grupo IMC** (sem retorno desde 07/09) — ação humana independente da credencial. **11/09**: Selmi.
