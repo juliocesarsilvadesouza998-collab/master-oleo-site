@@ -1,13 +1,13 @@
-# Insights — Master Óleo · 09/09/2026 (tick 12:05)
+# Insights — Master Óleo · 09/09/2026 (tick 13:31)
 
-## 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (2º tick consecutivo)
-- **Estado**: credencial de `masteroleo.eco@gmail.com` (bot/config.json) **continua rejeitada** — `AUTHENTICATIONFAILED` IMAP / `535 BadCredentials` SMTP, reconfirmado neste tick (3 retries, com e sem espaços). Revogada entre 11:01 e 11:33 de 09/09.
-- **Impacto**: `sync_formspree.py` e `check-replies` **FALHARAM** pelo 2º tick. **Caixa NÃO verificada desde 11:01** — risco de leads sem atendimento (Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar em maturação).
+## 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (5º tick consecutivo)
+- **Estado**: credencial de `masteroleo.eco@gmail.com` (bot/config.json) **continua rejeitada** — `AUTHENTICATIONFAILED` IMAP / `535 BadCredentials` SMTP, reconfirmado neste tick (13:31, testado com e sem espaços). Revogada entre 11:01 e 11:33 de 09/09.
+- **Impacto**: `sync_formspree.py` e `check-replies` **FALHARAM** pelo 5º tick. **Caixa NÃO verificada desde 11:01** — risco de leads sem atendimento (Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar em maturação).
 - **AÇÃO (humana)**: nova senha de app em https://myaccount.google.com/apppasswords → `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies`.
 - **Offline verde**: watchdog exit 0 (170/131/41), fila 0 pendentes (131/120/28), 0 follow-ups atrasados, 0 bounces novos, correção de bounces nada pendente.
 
-## Resumo do tick (12:05)
-- **Pipeline (snapshot 12:05)**: 170 leads · **12 respondidos** · 27 sequência · **104 novos** · 25 bounce (CSV) / 41 cache · 2 encerrados · **ativos: 131** — inalterado (contagem direta).
+## Resumo do tick (13:31)
+- **Pipeline (snapshot 13:31)**: 170 leads · **12 respondidos** · 27 sequência · **104 novos** · 25 bounce (CSV) / 41 cache · 2 encerrados · **ativos: 131** — inalterado (contagem direta).
 - **Ação do tick**: rotina offline — nada a enviar (fluxo de email bloqueado pela credencial). Últimos envios reais: 10 apresentações Prospector (09:15-09:16) + 7 Follow-up 1 (10:01-10:02).
 - **Novos leads**: 0. **Bounces novos**: 0. **Correção**: 0 pendentes.
 - **Caixa**: **NÃO VERIFICADA** — `replies_pending.json` vazio (última checagem real: 11:01).
