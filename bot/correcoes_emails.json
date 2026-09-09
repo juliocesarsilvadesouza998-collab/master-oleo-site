@@ -215,5 +215,12 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-08T11:07:35-03:00"
+  },
+  {
+    "email_antigo": "contato@generosoalimentos.com.br",
+    "empresa": "Generoso Alimentos (Grupo DJL)",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-09T09:31:34-03:00"
   }
 ]

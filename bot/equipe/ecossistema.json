@@ -1,5 +1,46 @@
 {
- "atualizado_em": "2026-09-09T09:01:00-0300",
+ "atualizado_em": "2026-09-09T10:01:00-0300",
+ "atividade_tick_10h01_09_09": {
+  "sync_formspree": "0 novas notificações; 41 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 41 bounces já com tentativa registrada — 22 'já tentado')",
+  "watchdog": "saudável (exit 0): 170 leads / 131 ativos / 41 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "7 Follow-up 1 enviados (10:01): reservasnovotelitu@accor.com (Novotel Itu/Accor), comercial@methaalimentosoficial.com (Metha Alimentos), ecommerce704@redetop.com.br (Rede Top), vendas@realgastronomia.com.br (Real Gastronomia), mirassol@mirassolrefeicoes.com.br (Mirassol Refeições), contato@fsalimentos.com.br (FS Alimentos), belvit@restauranteindustrial.com.br (Belvit)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) + scan_inbox de contingência: 0 não lidas/recentes na INBOX — caixa confirmada em dobro, nada novo desde a Selmi (10:08 de 08/09)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "7 neste tick (Follow-up 1 da sequência para leads sem retorno desde a apresentação); +10 apresentações do Prospector às 09:15-09:16 (leads 158-167)",
+  "enviar_lote_status": "fila: 131 empresas / 120 já contatados / 28 bounce / 0 pendentes",
+  "leads_novos": [],
+  "pipeline_snapshot_10h01": "170 leads / 104 novo / 27 sequencia / 12 respondido / 25 bounce / 2 encerrado / 131 ativos — pipeline INALTERADO desde o tick 09:31 (os 7 follow-ups são da etapa sequência, não alteram status)",
+  "observacao": "Tick 100% verde com ação de sequência: 7 Follow-up 1 enviados para leads de hotéis/refeições industriais/alimentos (Novotel Itu, Metha Alimentos, Rede Top, Real Gastronomia, Mirassol Refeições, FS Alimentos, Belvit) — primeiro follow-up pós-apresentação. Watchdog saudável, 0 respostas pendentes (confirmado em dobro com scan_inbox), 0 follow-ups atrasados, 0 leads novos, 0 bounces novos, fila 0 pendentes. Caixa limpa desde a Selmi (10:08 de 08/09). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
+ },
+ "atividade_tick_09h31_09_09": {
+  "sync_formspree": "0 novas notificações; 41 emails em bounce cache (nenhum lead novo via site)",
+  "corrigir_emails": "0 novas correções neste tick (todos os 41 bounces já com tentativa registrada — 22 'já tentado'); Generoso Alimentos (Grupo DJL, contato@generosoalimentos.com.br) sem email alternativo válido — lead já marcado bounce pelo prospector às 09:15",
+  "watchdog": "saudável (exit 0): 170 leads / 131 ativos / 41 bounces, sem follow-ups atrasados, bounces sem correção ou leads parados",
+  "prospecao_followup": "0 follow-ups atrasados",
+  "send_sequence": "sequência processada (nada novo a enviar)",
+  "check_replies": "0 pendentes (replies_pending.json vazio) + scan_inbox de contingência: 0 não lidas/recentes na INBOX — caixa confirmada em dobro, nada novo desde a Selmi (10:08 de 08/09)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta pendente para atender)",
+  "relatorio_esg": "nenhum pedido de relatório ESG/certificado de impacto neste tick — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (as 10 apresentações dos leads novos 158-167 foram enviadas pelo Prospector às 09:15-09:16)",
+  "enviar_lote_status": "fila: 131 empresas / 120 já contatados / 28 bounce / 0 pendentes",
+  "leads_novos": [
+   "id 158 — Usina Ipe Campos Ltda (beneficiamento de leite) <ipecampos@uol.com.br> — apresentação enviada 09:15 (prospecao-lote)",
+   "id 159 — Generoso Alimentos / Grupo DJL <contato@generosoalimentos.com.br> — BOUNCE (sem email alternativo válido; lead marcado bounce)",
+   "id 160 — Queijos Itupeva <rafaelgalvao@queijositupeva.com.br> — apresentação enviada 09:15",
+   "id 161 — Queijaria Laghi & Tosi <adm@queijarialaghitosi.com.br> — apresentação enviada 09:15",
+   "id 162 — Betins Laticinios <betinslaticinios@gmail.com> — apresentação enviada 09:16",
+   "id 163 — De Buffalas (laticinio de bufala) <debuffalas@gmail.com> — apresentação enviada 09:16",
+   "id 164 — Queijaria Vale dos Anjos <fazendavaledosanjos@gmail.com> — apresentação enviada 09:16",
+   "id 165 — Queijaria Rima <queijariarima@gmail.com> — apresentação enviada 09:16",
+   "id 166 — Capril Caprioles <vendas.caprioles@gmail.com> — apresentação enviada 09:16",
+   "id 167 — Cabanha Campestre 53 <cabanhacampestre53@gmail.com> — apresentação enviada 09:16"
+  ],
+  "pipeline_snapshot_09h31": "170 leads / 104 novo / 27 sequencia / 12 respondido / 25 bounce / 2 encerrado / 131 ativos (novo+sequencia, convenção watchdog) — +10 leads de laticínios/queijarias (prospecao-lote 09:15-09:16, todos com apresentação) e +1 bounce (Generoso) desde o tick 09:01",
+  "observacao": "Tick verde com crescimento: +10 leads do Prospector (nicho laticínios/queijarias — potencial de gordura/vencidos >40%, todos já com apresentação enviada 09:15-09:16), 1 novo bounce (Generoso Alimentos, sem email alternativo). Watchdog saudável, 0 respostas pendentes (confirmado em dobro com scan_inbox), 0 follow-ups atrasados, fila 0 pendentes. Caixa limpa desde a Selmi (10:08 de 08/09). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
+ },
  "atividade_tick_09h01_09_09": {
   "sync_formspree": "0 novas notificações; 40 emails em bounce cache (nenhum lead novo via site)",
   "corrigir_emails": "0 novas correções neste tick (todos os 40 bounces já com tentativa registrada — 22 'já tentado')",
@@ -16,14 +57,14 @@
   "observacao": "Primeiro tick do dia 09/09, 100% verde e estável (mesmo cenário dos ticks finais de 08/09): watchdog saudável, 0 respostas pendentes (confirmado em dobro com scan_inbox), 0 follow-ups atrasados, 0 leads novos, 0 bounces novos, fila de prospecção sem pendentes. Caixa limpa desde a Selmi (10:08 de 08/09). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
  },
  "resumo": {
-  "total_leads": 160,
-  "leads_ativos": 122,
-  "bounces": 40,
+  "total_leads": 170,
+  "leads_ativos": 131,
+  "bounces": 41,
   "pipeline": {
-   "novo": 95,
+   "novo": 104,
    "sequencia": 27,
    "respondido": 12,
-   "bounce": 24,
+   "bounce": 25,
    "encerrado": 2
   }
  },
@@ -424,6 +465,8 @@
   }
  ],
  "alertas_operacionais": [
+  "09/09 10:01: tick verde com ação de sequência — 7 Follow-up 1 enviados (Novotel Itu/Accor, Metha Alimentos, Rede Top, Real Gastronomia, Mirassol Refeições, FS Alimentos, Belvit); 0 respostas pendentes; pipeline estável em 170 leads / 131 ativos / 41 bounces.",
+  "09/09 09:31: tick verde com crescimento — +10 leads de laticínios/queijarias (Usina Ipe, Queijos Itupeva, Laghi & Tosi, Betins, De Buffalas, Vale dos Anjos, Rima, Caprioles, Cabanha 53) com apresentação enviada 09:15-09:16; 1 bounce novo (Generoso Alimentos — sem email alternativo).",
   "08/09 10:31: tick verde — 0 respostas novas; +3 leads do Prospector (Sorocaba Frios, Megasabor, Lanchero) já com apresentação; Lanchero = nicho vencidos >40% gordura.",
   "Monitorar: resposta do comercial da Savegnago (prazo 10/09), do Felix Costa (Grupo IMC, prazo 10/09) e do compras@ da Selmi (prazo 11/09).",
   "RESOLVIDO (07/09 ~12:40): check-replies não capturava respostas via plataformas (BuzzMonitor/Zendesk/Movidesk). Correção implementada e validada com teste sintético: correlação por References/In-Reply-To contra msgids enviados (pasta Enviados indexada em lote único, 524 msgids) + match de domínio de plataforma + assunto. Novo script scan_inbox.py para varredura manual de contingência.",

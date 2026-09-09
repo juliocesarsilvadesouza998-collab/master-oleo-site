@@ -18,7 +18,7 @@ Uso:
   python seo_bot.py          # diagnóstico completo + relatório
   python seo_bot.py --check  # só verificação rápida (exit 0 = ok, 1 = problema)
 """
-import argparse, datetime, json, os, re, ssl, sys, urllib.request, urllib.error
+import argparse, datetime, json, os, re, ssl, sys, time, urllib.request, urllib.error
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BASE)
@@ -157,9 +157,29 @@ def _kw_presente(kw, textos):
                 return True
     return False
 
+def checar_posicao_bing(kw, timeout=20):
+    """Consulta o Bing e retorna a posição (1-based) de masteroleo.eco.br para a keyword.
+    Retorna None se não estiver no top 20; 'erro' se a consulta falhar."""
+    import urllib.parse as _up
+    url = f"https://www.bing.com/search?q={_up.quote(kw)}&count=20"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            html = resp.read().decode("utf-8", "replace")
+    except Exception:
+        return "erro"
+    # Bing lista resultados em <li class="b_algo">
+    blocos = re.split(r'class="b_algo"', html)
+    for i, bloco in enumerate(blocos[1:], 1):
+        if "masteroleo" in bloco or "masteroleo.eco.br" in bloco:
+            return i
+    return None
+
 def main():
     ap = argparse.ArgumentParser(description="Bot de SEO Master Óleo")
     ap.add_argument("--check", action="store_true", help="só verificação rápida")
+    ap.add_argument("--rank", action="store_true", help="verifica posição real no Bing para cada keyword")
+    ap.add_argument("--max-rank", type=int, default=20, help="máx. keywords checadas no --rank (default 20)")
     args = ap.parse_args()
 
     now = datetime.datetime.now().astimezone()
@@ -170,6 +190,23 @@ def main():
     relatorio["site_no_ar"] = ok_ar
     relatorio["status_http"] = status
     print(f"{'✅' if ok_ar else '❌'} Site no ar: HTTP {status}")
+
+    # 1.5) Posições reais no Bing (--rank)
+    if args.rank:
+        print("\n📊 POSIÇÃO REAL NO BING (top 20):")
+        relatorio["ranking_bing"] = {}
+        alvo = PALAVRAS_CHAVE[:args.max_rank]
+        for kw in alvo:
+            pos = checar_posicao_bing(kw)
+            relatorio["ranking_bing"][kw] = pos
+            if pos == "erro":
+                print(f"  ⚠️  '{kw}': erro na consulta")
+            elif pos is None:
+                print(f"  ⏳ '{kw}': fora do top 20 (ainda não indexado)")
+            else:
+                print(f"  🏆 '{kw}': POSIÇÃO {pos}")
+            time.sleep(1)
+        print()
 
     # 2) Conteúdo: palavras-chave presentes?
     textos = ler_arquivos_site()

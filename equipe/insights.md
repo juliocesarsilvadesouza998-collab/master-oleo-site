@@ -1,3 +1,40 @@
+## 2026-09-09 (quarta) — ATENDENTE (tick 10:31)
+
+### Números do dia (estado real pós-tick)
+- **Sync Formspree:** **41** emails no cache de bounce; **0** notificações novas (nenhum lead novo via site).
+- **corrigir_emails:** 0 bounces processados — todos os 41 do cache já com tentativa registrada (23 "já tentado"); nada novo.
+- **Leads totais:** **170** — `novo`: 104 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 25 | `encerrado`: 2 — **Ativos: 131** (+10 leads vs 08/09, adicionados e já enviados pelo Prospector hoje: laticínio industrial Usina Ipe + Generoso Alimentos + 8 laticínios artesanais via Rotas do Queijo).
+- **Watchdog:** ✅ saudável (**exit 0**) — 170 leads, 131 ativos, 41 bounces no cache; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup.py:** 0 follow-ups processados (nada atrasado).
+- **send_sequence:** sequência processada, sem envios novos (leads de prospecção têm fluxo próprio via enviar_lote).
+- **check-replies:** **0 pendentes** (`replies_pending.json` vazio — confirmado `[]`).
+- **enviar_lote --status:** fila com **131 empresas / 120 contatados / 28 bounce / 0 pendentes** — nada a enviar.
+- **Emails enviados neste tick:** **0** — tick de rotina, nada pendente.
+
+### Ações do tick
+- Nenhum email enviado/recebido — dia de aguardar retornos dos canais comerciais abertos (Selmi, Savegnago e Grupo IMC).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+- Caixa limpa (check-replies confirmou `[]`).
+
+### Problemas encontrados e correções
+1. **Nenhum problema operacional novo.** Sync, watchdog, correções, follow-ups, sequência e caixa 100% verdes.
+2. Pendências estruturais mantidas (não são deste tick): Netlify sem créditos (403); inbound via site fraco; fila de prospecção com **0 pendentes** — gargalo nº1 do Estrategista (Prospector repôs 10 hoje, mas todas já enviadas; manter ritmo 5-8/dia).
+
+### Leads quentes (para ação humana — destaque)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO via SAC (proposta a **compras@selmi.com.br** 08/09 10:08). **PRAZO: sem retorno até 11/09 → toque leve no WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** porta comercial oficial ABERTA (comercial@savegnago.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 (amanhã) → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** canal comercial ABERTO (felix.costa@grupoimc.com.br, apresentação 07/09). **PRAZO: sem retorno até 10/09 (amanhã) → toque no WhatsApp.**
+4. **Tauste Supermercados (id 156):** apresentação 08/09 14:33 para `custo@tauste.com.br` (email de COMPRAS do CD de Valinhos). Rede com 3 lojas em Sorocaba + Campinas + Jundiaí. **Se responder: tratar como lead #1 ao lado de Savegnago.**
+5. **Enxuto (155) + Chimar (157):** apresentações 08/09 14:33 (template V4 supermercados) — Chimar é a matriz de Mairinque, ~20 km de Salto.
+6. **Grupo Lanchero Alimentos:** indústria de maioneses/molhos — encaixe direto com **resíduos vencidos >40% gordura + descaracterização** (argumento de passivo do CNPJ). Enviado 08/09 10:20; se responder: pedir volume + tipo e oferecer coleta-teste + relatório ESG.
+7. **Nicho máquinas/encapsulados (aguardando resposta):** Arese Farmaceutica (sac@arese.com.br), Infinity Pharma, Veridi Nutrition, Larimar, Maila, Farmaviva, Audacci, GDS USA — se responderem: pedir volume + tipo + coleta-teste.
+
+### Para o Estrategista
+- Taxa de resposta segue **~8,3% (11 respostas / 132 apresentações)** — acima da meta, funil converte. O gargalo real é o pipeline: fila com **0 pendentes** de novo.
+- Foco da semana (meta 14/09: 1 coleta-teste/contrato): **Savegnago, Sumerbol, GoodBom, Selmi** + monitorar Tauste. **Amanhã (10/09) vencem os prazos de toque no WhatsApp de Savegnago e Grupo IMC — ação humana prioritária.**
+
+---
+
 ## 2026-09-08 (terça) — QUALIDADE (auditoria 19:35)
 
 ### Números do dia (estado pós-sync 19:34)

@@ -628,5 +628,75 @@
     "email": "chimar.mkmatriz@gmail.com",
     "cidade": "Mairinque/Sorocaba/Sao Roque-SP",
     "segmento": "supermercados (rede regional, padaria/rotisserie/acougue - NICHO PRIORITARIO)"
+  },
+  {
+    "nome": "Usina Ipe Campos",
+    "empresa": "Usina Ipe Campos Ltda (beneficiamento de leite)",
+    "email": "ipecampos@uol.com.br",
+    "cidade": "Ipeuna/SP",
+    "segmento": "laticinios industrial (20 mil L/dia: mussarela, minas frescal, ricota) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Generoso Alimentos",
+    "empresa": "Generoso Alimentos (Grupo DJL)",
+    "email": "contato@generosoalimentos.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "industria de alimentos (biscoitos, cafe, massas; food service) - oleo de fritura em volume"
+  },
+  {
+    "nome": "Queijos Itupeva",
+    "empresa": "Queijos Itupeva",
+    "email": "rafaelgalvao@queijositupeva.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "laticinios artesanal (minas frescal, meia cura, coalho, colonial) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Queijaria Laghi & Tosi",
+    "empresa": "Queijaria Laghi & Tosi",
+    "email": "adm@queijarialaghitosi.com.br",
+    "cidade": "Cabreuva/SP",
+    "segmento": "laticinios artesanal (queijos de ovelha: manchego, pecorino) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Betins Laticinios",
+    "empresa": "Betins Laticinios",
+    "email": "betinslaticinios@gmail.com",
+    "cidade": "Piracicaba/SP (Artemis)",
+    "segmento": "laticinios artesanal (queijos A2A2, iogurtes, doces) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "De Buffalas",
+    "empresa": "De Buffalas (laticinio de bufala)",
+    "email": "debuffalas@gmail.com",
+    "cidade": "Tatui/SP",
+    "segmento": "laticinios de bufala (mozarela, burrata, ricota) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Queijaria Vale dos Anjos",
+    "empresa": "Queijaria Vale dos Anjos",
+    "email": "fazendavaledosanjos@gmail.com",
+    "cidade": "Itu/SP (Portal do Eden)",
+    "segmento": "laticinios artesanal (queijos autorais Jersey) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Queijaria Rima",
+    "empresa": "Queijaria Rima",
+    "email": "queijariarima@gmail.com",
+    "cidade": "Porto Feliz/SP",
+    "segmento": "laticinios artesanal (queijos de ovelha) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Capril Caprioles",
+    "empresa": "Capril Caprioles",
+    "email": "vendas.caprioles@gmail.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "laticinios artesanal (queijos de cabra e vaca) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "Cabanha Campestre 53",
+    "empresa": "Cabanha Campestre 53",
+    "email": "cabanhacampestre53@gmail.com",
+    "cidade": "Campinas/SP (Joaquim Egidio)",
+    "segmento": "laticinios artesanal (queijos de ovelha) - NICHO PRIORITARIO (laticinios)"
   }
 ]
