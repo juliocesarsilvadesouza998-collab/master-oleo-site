@@ -1,3 +1,74 @@
+## 2026-09-09 (quarta) — ATENDENTE (tick 19:01)
+
+### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (16º tick consecutivo)
+- **Estado**: senha de app (`masteroleo.eco@gmail.com` em `bot/config.json`) **continua rejeitada** — `AUTHENTICATIONFAILED` no IMAP e `535 BadCredentials` no SMTP, reconfirmado às 19:01 neste tick (login direto IMAP, com e sem espaços). Revogada entre 11:01 e 11:33 de 09/09. **Caixa NÃO verificada desde 11:01** — mais de 8h de respostas potencialmente órfãs.
+- **Impacto**: `sync_formspree.py` e `bot_oleo.py check-replies` **FALHARAM pelo 16º tick seguido**. Nenhum envio é possível. Respostas de leads em maturação (Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar) podem estar na caixa sem atendimento.
+- **AÇÃO NECESSÁRIA (humana, urgente)**: gerar nova senha de app em https://myaccount.google.com/apppasswords → atualizar `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies`.
+- **Offline segue 100% verde**: fila ✅ (0 pendentes — 131/120/28), sequência ✅ (nada a enviar), follow-ups ✅ (0 atrasados), correção de bounces ✅ (nada pendente).
+
+### Números do estado real (pós-tick 19:01)
+- **Leads totais:** **170** — `novo`: 104 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 25 | `encerrado`: 2 — **Ativos: 131** (pipeline inalterado).
+- **Sync Formspree:** ❌ **FALHOU** (credencial) — cache de bounce permanece **41**; 0 notificações novas.
+- **corrigir_emails:** ✅ OK offline — 0 novas correções (todos os 41 bounces com tentativa registrada).
+- **Watchdog:** ❌ **exit 1** com os 2 alertas esperados (🔴 SMTP 535 + 🔴 IMAP AUTHENTICATIONFAILED). `--skip-email` → ✅ exit 0: nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** 0 processados (nada atrasado). **send_sequence:** nada a enviar (smtp_send não engole erro — sem risco de envio falso).
+- **check-replies:** ❌ **FALHOU** (credencial) — `replies_pending.json` vazio (`[]`; última checagem real: 11:01).
+- **enviar_lote --status:** 131 empresas / 120 contatados / 28 bounce / **0 pendentes**.
+- **Dashboard:** 145 apresentações / 122 entregues / 23 bounces (16%) / **11 respostas** / taxa **7,6%** (meta >3%).
+- **Emails enviados neste tick:** 0. **Relatório ESG:** nenhum pedido (caixa inacessível).
+
+### Problemas encontrados e correções
+1. **🚨 CRÍTICO (persistente, 16º tick) — senha de app revogada.** Único bloqueio real; correção 100% manual (nova senha de app no Google). O watchdog com teste SMTP/IMAP segue alarmando no primeiro tick da queda — funcionou como projetado.
+2. Nenhum problema novo além do bloqueio — todo o restante do pipeline saudável offline (0 atrasados, 0 pendentes, 0 bounces novos).
+
+### Leads quentes (destaque — prazos apertados!)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO (compras@selmi.com.br, proposta 08/09 10:08). **Prazo: 11/09 → toque leve no WhatsApp (11) 96785-9631 se silêncio.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** comercial@savegnago.com.br (apresentação 07/09). **Prazo: 10/09 (AMANHÃ) → toque no WhatsApp (11) 96785-9631.**
+3. **Frango Assado / Grupo IMC — #3:** felix.costa@grupoimc.com.br (apresentação 07/09). **Prazo: 10/09 (AMANHÃ) → toque no WhatsApp.**
+4. **Tauste (id 156)** — compras CD Valinhos (08/09 14:33); se responder = tratar como #1 ao lado de Savegnago. **Enxuto (155) + Chimar (157)** — aguardando.
+5. **Grupo Lanchero** (vencidos >40% + descaracterização), **nicho encapsulados/farmacêuticas** (Arese, Infinity Pharma, Veridi…), **Andorinha Salto (147)** — aguardando retorno.
+
+### Padrão que se confirma
+- **SAC corporativo indica o canal comercial → é onde nasce a negociação** (Savegnago → comercial@, Grupo IMC → Felix Costa, Selmi → compras@).
+- **Redes de supermercado seguem como alvo de maior potencial** (padaria + rotisserie + açougue geram óleo toda semana).
+- **Vetor laticínios/queijarias** (+10 leads 09/09 09:15) — manteiga/creme/vencidos >40% gordura; monitorar replies.
+- **Vulnerabilidade exposta**: todo o pipeline de email depende de UMA senha de app — quando cai, sync + check-replies + envio caem juntos. Watchdog com teste SMTP/IMAP alarma no 1º tick da queda — funcionou (16 ticks consecutivos de alerta sem falha de detecção).
+
+### Próximos passos recomendados
+1. **URGENTE**: regenerar senha de app e atualizar `bot/config.json` → rodar sync + check-replies (há >8h de caixa não verificada desde 11:01).
+2. **AMANHÃ 10/09**: toque no WhatsApp de **Savegnago** e **Grupo IMC** (sem retorno desde 07/09) — ação humana independente da credencial. **11/09**: Selmi.
+
+## 2026-09-09 (quarta) — ATENDENTE (tick 18:31)
+
+### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (15º tick consecutivo)
+- **Estado**: senha de app (`masteroleo.eco@gmail.com` em `bot/config.json`) **continua rejeitada** — `AUTHENTICATIONFAILED` no IMAP e `535 BadCredentials` no SMTP, reconfirmado às 18:31 neste tick (login direto IMAP, com e sem espaços). Revogada entre 11:01 e 11:33 de 09/09. **Caixa NÃO verificada desde 11:01** — mais de 7h30 de respostas potencialmente órfãs.
+- **Impacto**: `sync_formspree.py` e `bot_oleo.py check-replies` **FALHARAM pelo 15º tick seguido**. Nenhum envio é possível. Respostas de leads em maturação (Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar) podem estar na caixa sem atendimento.
+- **AÇÃO NECESSÁRIA (humana, urgente)**: gerar nova senha de app em https://myaccount.google.com/apppasswords → atualizar `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies`.
+- **Offline segue 100% verde**: fila ✅ (0 pendentes — 131/120/28), sequência ✅ (nada a enviar), follow-ups ✅ (0 atrasados), correção de bounces ✅ (nada pendente).
+
+### Números do estado real (pós-tick 18:31)
+- **Leads totais:** **170** — `novo`: 104 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 25 | `encerrado`: 2 — **Ativos: 131** (pipeline inalterado).
+- **Sync Formspree:** ❌ **FALHOU** (credencial) — cache de bounce permanece **41**; 0 notificações novas.
+- **corrigir_emails:** ✅ OK offline — 0 novas correções (todos os 41 bounces com tentativa registrada).
+- **Watchdog:** ❌ **exit 1** com os 2 alertas esperados (🔴 SMTP 535 + 🔴 IMAP AUTHENTICATIONFAILED). `--skip-email` → ✅ exit 0: nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** 0 processados (nada atrasado). **send_sequence:** nada a enviar (smtp_send não engole erro — sem risco de envio falso).
+- **check-replies:** ❌ **FALHOU** (credencial) — `replies_pending.json` vazio (`[]`; última checagem real: 11:01).
+- **enviar_lote --status:** 131 empresas / 120 contatados / 28 bounce / **0 pendentes**.
+- **Dashboard:** 145 apresentações / 122 entregues / 23 bounces (16%) / **11 respostas** / taxa **7,6%** (meta >3%).
+- **Emails enviados neste tick:** 0. **Relatório ESG:** nenhum pedido (caixa inacessível).
+
+### Problemas encontrados e correções
+1. **🚨 CRÍTICO (persistente, 15º tick) — senha de app revogada.** Único bloqueio real; correção 100% manual (nova senha de app no Google). O watchdog com teste SMTP/IMAP segue alarmando no primeiro tick da queda — funcionou como projetado.
+2. Nenhum problema novo além do bloqueio — todo o restante do pipeline saudável offline (0 atrasados, 0 pendentes, 0 bounces novos).
+
+### Leads quentes (destaque — prazos apertados!)
+1. **Pastificio Selmi S/A (id 60) — #1:** canal comercial ABERTO (compras@selmi.com.br, proposta 08/09 10:08). **PRAZO: sem retorno até 11/09 → WhatsApp (11) 96785-9631.**
+2. **Savegnago Supermercados (~100 lojas) — #2:** comercial@savegnago.com.br (07/09). **PRAZO: 10/09 (AMANHÃ) → toque no WhatsApp.**
+3. **Frango Assado / Grupo IMC — #3:** felix.costa@grupoimc.com.br (07/09). **PRAZO: 10/09 (AMANHÃ) → toque no WhatsApp.**
+4. **Tauste (156)** — compras CD Valinhos (08/09 14:33); se responder, tratar como #1. **Enxuto (155) + Chimar (157)** — aguardando.
+5. **Grupo Lanchero** (vencidos >40% + descaracterização), **nicho encapsulados/farmacêuticas** (Arese, Infinity Pharma, Veridi, Larimar, Maila, Farmaviva, Audacci, GDS USA), **Andorinha Salto (147)** — aguardando retorno (caixa sem verificação desde 11:01 — respostas podem estar órfãs na INBOX).
+
+---
 ## 2026-09-09 (quarta) — ATENDENTE (tick 18:01)
 
 ### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (14º tick consecutivo)
