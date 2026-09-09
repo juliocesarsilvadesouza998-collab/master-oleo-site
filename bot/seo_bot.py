@@ -75,17 +75,19 @@ def checar_site(url):
         return False, str(e)[:60]
 
 def ler_arquivos_site():
-    """Lê todos os HTML do site para análise de conteúdo."""
+    """Lê todos os HTML do site para análise de conteúdo (recursivo, inclui blog/)."""
     textos = {}
     if not os.path.isdir(SITE_DIR):
         return textos
-    for fn in os.listdir(SITE_DIR):
-        if fn.endswith(".html"):
-            try:
-                with open(os.path.join(SITE_DIR, fn), encoding="utf-8") as f:
-                    textos[fn] = f.read().lower()
-            except Exception:
-                pass
+    for root, _, files in os.walk(SITE_DIR):
+        for fn in files:
+            if fn.endswith(".html"):
+                rel = os.path.relpath(os.path.join(root, fn), SITE_DIR)
+                try:
+                    with open(os.path.join(root, fn), encoding="utf-8") as f:
+                        textos[rel] = f.read().lower()
+                except Exception:
+                    pass
     return textos
 
 def verificar_seo_tecnico(textos):
