@@ -1,3 +1,10 @@
+## 2026-09-10 (quinta) — SEO BOT TICK
+
+### SEO — rank check (seo_bot.py --rank, 10/09)
+- **SEO geral: OK** — site HTTP 200, sitemap.xml presente, todas as 22 keywords monitoradas indexadas ("presentes") no Bing.
+- **Posições reais: TODAS fora do top 20** — site indexado mas sem posição ainda. Normal para site em fase de maturação (precisa de semanas). Nenhum conteúdo novo criado neste tick (política anti-ruído: não forçar artigos sem base de ranking).
+- Histórico: equipe/seo.json (56 registros).
+
 ## 2026-09-09 (quarta) — QUALIDADE (Auditoria QA ~19:38)
 
 ### Resumo do dia (visão do Analista de Qualidade)
