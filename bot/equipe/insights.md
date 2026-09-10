@@ -1,12 +1,12 @@
-# Insights — Master Óleo · 10/09/2026 (tick 13:03)
+# Insights — Master Óleo · 10/09/2026 (tick 13:31)
 
-## 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (24º tick consecutivo)
+## 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (25º tick consecutivo)
 
-- **Estado**: credencial de `masteroleo.eco@gmail.com` (bot/config.json) **continua rejeitada** — `AUTHENTICATIONFAILED` IMAP / `535 BadCredentials` SMTP, reconfirmado neste tick (13:00 de 10/09, testado com e sem espaços — senha armazenada com espaços no formato de 16 chars do Gmail). Revogada entre 11:01 e 11:33 de 09/09.
+- **Estado**: credencial de `masteroleo.eco@gmail.com` (bot/config.json) **continua rejeitada** — `AUTHENTICATIONFAILED` IMAP / `535 BadCredentials` SMTP, reconfirmado neste tick (13:31 de 10/09, testado com e sem espaços — senha de 16 chars no formato do Gmail). Revogada entre 11:01 e 11:33 de 09/09.
 
-- **Impacto**: `sync_formspree.py`, `check-replies` e **qualquer envio** **FALHARAM** pelo 24º tick. **Caixa NÃO verificada desde 11:01 de 09/09 (~26h)** — respostas de Savegnago, Selmi, Grupo IMC, Tauste, Enxuto, Chimar podem estar órfãs na INBOX.
+- **Impacto**: `sync_formspree.py`, `check-replies` e **qualquer envio** **FALHARAM** pelo 25º tick. **Caixa NÃO verificada desde 11:01 de 09/09 (~26h30)** — respostas de Savegnago, Selmi, Grupo IMC, Tauste, Enxuto, Chimar podem estar órfãs na INBOX.
 
-- **AÇÃO (humana)**: nova senha de app em https://myaccount.google.com/apppasswords → `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies`. Reconfirmado neste tick: **não existe credencial alternativa** em projeto/git/env.
+- **AÇÃO (humana)**: nova senha de app em https://myaccount.google.com/apppasswords → `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies && python prospecao_followup.py`. Reconfirmado neste tick: **não existe credencial alternativa** em projeto/git/env.
 
 ## ⚠️ MANTIDO — 7 follow-ups FP1 ATRASADOS (bloqueados pela credencial, 3 dias)
 
@@ -16,17 +16,17 @@
 
 - ⏳ **Atenção**: se a senha não for regenerada, o **FP2 desses leads vence ~13/09 (dia 6)** — o atraso vai dobrar.
 
-## Resumo do tick (13:03)
+## Resumo do tick (13:31)
 
-- **Pipeline (snapshot 13:03)**: 170 leads · **12 respondidos** · 27 sequência · **104 novos** · 25 bounce (CSV) / 41 cache · 2 encerrados · **ativos: 131** — **inalterado** (contagem direta no leads.csv).
+- **Pipeline (snapshot 13:31)**: 170 leads · **12 respondidos** · 27 sequência · **104 novos** · 25 bounce (CSV) / 41 cache · 2 encerrados · **ativos: 131** — **inalterado** (contagem direta no leads.csv).
 
-- **Ação do tick**: rotina — sync ❌ (credencial, 24º), corrigir_emails ✅ offline (0 pendentes), watchdog ⚠️ exit 1 (credencial + 7 atrasados), followups ❌ 7×535, send_sequence ❌ (535, nada enviado, sem corromper estado), check-replies ❌ (caixa cega), enviar_lote --status ✅ (0 pendentes).
+- **Ação do tick**: rotina — sync ❌ (credencial, 25º), corrigir_emails ✅ offline (0 pendentes), watchdog ⚠️ exit 1 (credencial + 7 atrasados), followups ❌ 7×535, send_sequence ❌ (535, nada enviado, sem corromper estado), check-replies ❌ (caixa cega), enviar_lote --status ✅ (0 pendentes).
 
 - **Novos leads**: 0. **Bounces novos**: 0. **Correção**: 0 pendentes.
 
 - **Caixa**: **NÃO VERIFICADA** — `replies_pending.json` vazio (última checagem real: 11:01 de 09/09).
 
-- **Fila**: 131/120/28/0 pendentes. **Relatório ESG**: nenhum pedido. **Emails no tick**: 0. **Dashboard**: 145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6% / 111 aguardando / 24 inbound.
+- **Fila**: 131/120/28/0 pendentes. **Relatório ESG**: nenhum pedido detectável (caixa inacessível). **Emails no tick**: 0. **Dashboard**: 145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6%.
 
 ## 🏆 Leads quentes (destaque!)
 
@@ -41,7 +41,7 @@
 - **SAC corporativo indica o canal comercial → é onde nasce a negociação** (Savegnago → comercial@, Grupo IMC → Felix Costa, Selmi → compras@).
 - **Redes de supermercado seguem como alvo de maior potencial** (padaria + rotisserie + açougue geram óleo toda semana) — os 7 FP1 atrasados incluem 3 redes (São Roque, Rede Confiança, Tenda Atacado).
 - **Vetor laticínios/queijarias** (+10 leads 09/09 09:15) — manteiga/creme/vencidos >40% gordura; Conrail, Nutylac, Gomah e Argenzio (4 dos 7 FP1 atrasados) são desse vetor.
-- **Vulnerabilidade exposta (24 ticks)**: todo o pipeline depende de UMA senha de app — quando cai, sync + check-replies + envio caem juntos e os follow-ups acumulam atraso (7 FP1 com 3 dias; FP2 próximo). O watchdog com teste SMTP/IMAP alarma desde o 1º tick da queda — detecção funcionando, mas a dependência de ação humana segue sendo o gargalo.
+- **Vulnerabilidade exposta (25 ticks)**: todo o pipeline depende de UMA senha de app — quando cai, sync + check-replies + envio caem juntos e os follow-ups acumulam atraso (7 FP1 com 3 dias; FP2 próximo). O watchdog com teste SMTP/IMAP alarma desde o 1º tick da queda — detecção funcionando, mas a dependência de ação humana segue sendo o gargalo.
 
 ## Próximos passos recomendados
 
