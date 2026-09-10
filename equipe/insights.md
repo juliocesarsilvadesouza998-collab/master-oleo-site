@@ -1,3 +1,26 @@
+## 2026-09-10 (quinta) — MELHORADOR CONTÍNUO TICK
+
+### Diagnóstico do dia (watchdog + dashboard, 14:05)
+- **Credencial de email: segue REVOGADA** (SMTP 535 BadCredentials + IMAP AUTHENTICATIONFAILED) — bloqueia envios, check-replies e sync_formspree. Requer ação humana (nova senha de app em myaccount.google.com/apppasswords → bot/config.json → email.senha_app).
+- **Dashboard:** 145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / **taxa 7,6%** (meta >3%) — saudável quando o email funciona.
+- **7 follow-ups FP1 atrasados** (Conrail, Nutylac, Gomah, Argenzio, São Roque, Confiança, Tenda Atacado) — presos porque o SMTP rejeita; serão disparados automaticamente quando a credencial voltar (dry-run confirmou que o prospecao_followup.py os processa).
+- **Fila de prospecção: 0 pendentes** — gargalo real de alcance (todos os 131 já contatados ou bounce).
+
+### Melhorias implementadas
+1. **3 empresas grandes novas na fila** (bot/fila_prospeccao_extra.json, 100 → 103) — todas com email público confirmado no site/redes oficiais e **MX válido via nslookup**:
+   - Supermercados Mambo (sac@mambo.com.br — MX Outlook) — rede premium ~20 lojas, padaria/rotisseria em volume.
+   - BRF S.A. planta Itu/SP (sac@brf.com.br — MX mail.brf.com.br) — processados, óleo de fritura industrial.
+   - Piraquê fábrica Jundiaí (sac@piraque.com.br — MX Outlook) — biscoitos, óleo de fritura em escala.
+   - Validado: `python enviar_lote.py --status` → **134 empresas / 3 pendentes** (Mambo, BRF, Piraquê).
+   - Descartadas por falta de email público: Tauste (só formulário), Pague Menos Campinas (só formulário), Supermercados Duarte (sem contato).
+   - Covabra e Dalben já estavam na fila e contatadas — deduplicação por email confirmou.
+2. **Compilação de todos os scripts OK** (py_compile: enviar_lote, prospecao, prospecao_followup, bot_oleo, watchdog).
+
+### Lições do dia
+- Redes grandes confirmam email público no SAC/site institucional; formulário-only = pular (evita bounce e tempo gasto).
+- Deduplicar SEMPRE por email (não por nome) — Covabra/Dalben já existiam com nome ligeiramente diferente.
+- Seguir validando MX antes de inserir: 3/5 candidatas passaram (Mambo, BRF, Piraquê).
+
 ## 2026-09-10 (quinta) — SEO BOT TICK
 
 ### SEO — rank check (seo_bot.py --rank, 10/09)

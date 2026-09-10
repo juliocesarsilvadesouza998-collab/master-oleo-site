@@ -698,5 +698,26 @@
     "email": "cabanhacampestre53@gmail.com",
     "cidade": "Campinas/SP (Joaquim Egidio)",
     "segmento": "laticinios artesanal (queijos de ovelha) - NICHO PRIORITARIO (laticinios)"
+  },
+  {
+    "nome": "SAC Mambo",
+    "empresa": "Supermercados Mambo",
+    "email": "sac@mambo.com.br",
+    "cidade": "São Paulo/SP (lojas em Campinas, Jundiaí, Sorocaba)",
+    "segmento": "Supermercados (rede premium)"
+  },
+  {
+    "nome": "SAC BRF",
+    "empresa": "BRF S.A. (planta Itu/SP)",
+    "email": "sac@brf.com.br",
+    "cidade": "Itu/SP",
+    "segmento": "Indústria de alimentos (processados)"
+  },
+  {
+    "nome": "SAC Piraquê",
+    "empresa": "Piraquê (fábrica Jundiaí)",
+    "email": "sac@piraque.com.br",
+    "cidade": "Jundiaí/SP",
+    "segmento": "Indústria de biscoitos"
   }
 ]
