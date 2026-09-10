@@ -173,7 +173,8 @@ def tpl_apresentacao(cfg, lead):
     # Ângulo específico: indústrias que geram vencidos com >40% de gordura
     if any(k in segmento for k in ["margarina", "manteiga", "maionese", "gordura",
                                     "laticinio", "creme vegetal", "oleos vegetais",
-                                    "laticínios", "gorduras"]):
+                                    "laticínios", "gorduras", "queijo", "queijos",
+                                    "requeijao", "requeijão", "laticinios", "doce"]):
         return {
             "subject": f"Produtos vencidos com gordura vale dinheiro — compramos ({cidade})",
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
