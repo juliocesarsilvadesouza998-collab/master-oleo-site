@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-10T10:00:00-03:00",
+  "atualizado_em": "2026-09-10T10:41:42-03:00",
   "atividade_tick_10h00_10_09": {
     "rodadas_no_dia": 2,
     "sync_formspree": "FALHOU (19º tick consecutivo) — IMAP AUTHENTICATIONFAILED na senha de app do Gmail; senha segue REVOGADA desde ~11:01-11:33 de 09/09 (reconfirmado 09:54 de 10/09: IMAP e SMTP rejeitam, testado com e sem espaços; verificado também: nenhuma credencial alternativa no projeto, git ou variáveis de ambiente). 0 notificações novas processadas; cache de bounces permanece 41",
@@ -849,5 +849,22 @@
     "pipeline_snapshot_17h31": "170 leads / 104 novo / 27 sequencia / 12 respondido / 25 bounce / 2 encerrado / 131 ativos — pipeline INALTERADO (contagem direta no leads.csv; caixa sem verificação desde 11:01)",
     "dashboard": "145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6% (meta >3%)",
     "observacao": "ALERTA CRÍTICO MANTIDO (13º tick consecutivo): senha de app do Gmail REVOGADA (ver alertas_operacionais) — bloqueia sync_formspree, check-replies, scan_inbox e qualquer envio; requer ação humana (gerar nova senha de app em myaccount.google.com/apppasswords + atualizar bot/config.json -> email.senha_app). Tudo que é offline segue verde: fila 0 pendentes, 0 atrasados, 0 bounces novos. Próximos marcos: 10/09 (AMANHÃ) toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
+  },
+  "tick_atendente_10_09_10_38": {
+    "rodadas_no_dia": 2,
+    "sync_formspree": "FALHOU (20º tick consecutivo) — IMAP AUTHENTICATIONFAILED na senha de app do Gmail; senha segue REVOGADA desde ~11:01-11:33 de 09/09 (reconfirmado 10:38: IMAP e SMTP rejeitam, testado com e sem espaços). 0 notificações novas processadas; cache de bounces permanece 41",
+    "corrigir_emails": "OK offline — 0 pendentes; todos os 41 bounces do cache já com tentativa registrada; 0 processados",
+    "watchdog": "exit 1 — (1) CREDENCIAL REJEITADA (SMTP 535 BadCredentials + IMAP AUTHENTICATIONFAILED, senha de app revogada) e (2) NOVO: 4 follow-ups ATRASADOS (FP1 venceu, aguardando prospecao_followup): Conrail/sac@mareia.com.br, Nutylac/contato@nutylac.com.br, Gomah/comercial@gomah.com.br, Argenzio/sac@argenzio.com.br (IDs 121-124, prospeccao-lote 07/09 10:02-10:30). Offline demais métricas saudáveis: 170 leads / 131 ativos / 41 bounces; 0 bounces sem correção, 0 leads parados",
+    "prospecao_followup": "4 follow-ups FP1 tentados e FALHARAM no SMTP (535 BadCredentials — credencial bloqueada): Conrail, Nutylac, Gomah, Argenzio. NENHUM enviado e nenhum marcado (fp1_em vazio) — retry automático assim que a credencial voltar",
+    "send_sequence": "FALHOU (SMTPAuthenticationError 535 não tratado — traceback). Nada enviado; smtp_send propaga erro, sem risco de envio falso",
+    "check_replies": "FALHOU (20º tick consecutivo) — IMAP AUTHENTICATIONFAILED; CAIXA NÃO VERIFICADA desde 11:01 de 09/09 (>23h30); replies_pending.json vazio (última checagem real: 11:01)",
+    "respostas_enviadas": "0 (caixa inacessível; nenhum reply pendente no arquivo local)",
+    "relatorio_esg": "nenhum pedido — sem geração de PDF",
+    "emails_enviados_hoje": "0 neste tick (fluxo de envio bloqueado pela credencial)",
+    "enviar_lote_status": "fila: 131 empresas / 120 contatados / 28 bounce / 0 pendentes",
+    "leads_novos": [],
+    "pipeline_snapshot_10h38": "170 leads / 104 novo / 27 sequencia / 12 respondido / 25 bounce / 2 encerrado / 131 ativos — pipeline INALTERADO (contagem direta no leads.csv; caixa sem verificação desde 11:01 de 09/09)",
+    "dashboard": "145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6% (meta >3%)",
+    "observacao": "ALERTA CRÍTICO MANTIDO (20º tick consecutivo): senha de app do Gmail REVOGADA — bloqueia sync_formspree, check-replies, scan_inbox e qualquer envio; requer ação humana (nova senha de app em myaccount.google.com/apppasswords + atualizar bot/config.json -> email.senha_app). NOVO neste tick: 4 follow-ups FP1 atrasados (IDs 121-124 — Conrail, Nutylac, Gomah, Argenzio) ficaram bloqueados pela credencial; serão enviados automaticamente quando o email voltar. Prazos de ação humana: HOJE 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
   }
 }
