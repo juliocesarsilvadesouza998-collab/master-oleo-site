@@ -1,3 +1,38 @@
+## 2026-09-10 (quinta) — ATENDENTE (tick 16:03)
+
+### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (26º tick consecutivo)
+- **Estado**: senha de app (`masteroleo.eco@gmail.com` em `bot/config.json`) **continua rejeitada** — `AUTHENTICATIONFAILED` no IMAP e `535 BadCredentials` no SMTP, reconfirmado às 16:03 (login direto IMAP testado). Revogada desde 09/09 ~11:01. **Caixa NÃO verificada há >28h** — respostas de Selmi, Savegnago, Grupo IMC, Tauste, Enxuto, Chimar potencialmente órfãs.
+- **AÇÃO NECESSÁRIA (humana, urgente — 26 ticks seguidos sem ela)**: gerar nova senha de app em https://myaccount.google.com/apppasswords → atualizar `bot/config.json` → `email.senha_app` → rodar `python sync_formspree.py && python bot_oleo.py check-replies` (caixa órfã), depois `python prospecao_followup.py` (11 FP1) e `python bot_oleo.py send_sequence` (3 pendentes).
+
+### Números do estado real (pós-tick 16:03)
+- **Leads totais:** **170** — `novo`: 104 | `sequencia`: 27 | `respondido`: 12 | `bounce`: 25 | `encerrado`: 2 — **Ativos: 131** (pipeline inalterado).
+- **Sync Formspree:** ❌ **FALHOU** (credencial IMAP) — cache de bounce **41**; 0 notificações processadas.
+- **corrigir_emails:** ✅ OK offline — 0 novas correções (23 já tentados).
+- **Watchdog:** ❌ **exit 1** — 3 problemas: 🔴 SMTP 535 + 🔴 IMAP AUTHENTICATIONFAILED + 11 follow-ups FP1 ATRASADOS (novo vs. tick anterior).
+- **prospecao_followup:** ⚠️ tentou os **11 FP1 atrasados** (IDs 121-124, 130, 131, 133 + Mareia, Andorinha, Dalben, Paulistão, Amigão) — TODOS bloqueados pelo SMTP 535; leads **NÃO** marcados como enviados (retry automático quando a credencial voltar).
+- **send_sequence:** ❌ FALHOU no primeiro envio (SMTP 535) — sem risco de envio falso.
+- **check-replies:** ❌ **FALHOU** (credencial) — `replies_pending.json` vazio (`[]`; última checagem real: 09/09 11:01).
+- **enviar_lote --status:** 134 empresas / 120 contatados / 28 bounce / **3 PENDENTES** (Mambo, BRF Itu, Piraquê — aguardando credencial).
+- **Dashboard:** 145 apresentações / 122 entregues / 23 bounces (16%) / **11 respostas** / taxa **7,6%** (meta >3%).
+- **Emails enviados neste tick:** 0. **Relatório ESG:** nenhum pedido (caixa inacessível).
+
+### Problemas encontrados e correções
+1. **🚨 CRÍTICO (persistente, 26º tick) — senha de app revogada.** Único bloqueio real; correção 100% manual (nova senha de app no Google). Watchdog segue alarmando corretamente no primeiro tick da queda.
+2. **11 follow-ups FP1 atrasados** — consequência direta do bloqueio (não é problema novo do script: dry-run OK, tentativa real falhou no SMTP). Serão disparados automaticamente quando a credencial voltar.
+3. Nenhum problema novo além do bloqueio — todo o restante do pipeline saudável offline.
+
+### Leads quentes (destaque — prazos VENCIDOS hoje!)
+1. **Savegnago Supermercados (~100 lojas) — #1:** comercial@savegnago.com.br (apresentação 07/09). **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631 (ação humana independente da credencial).**
+2. **Frango Assado / Grupo IMC — #2:** felix.costa@grupoimc.com.br (apresentação 07/09). **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631.**
+3. **Pastificio Selmi S/A (id 60) — #3:** compras@selmi.com.br (proposta 08/09 10:08). **Prazo: 11/09 (AMANHÃ) → toque leve no WhatsApp se silêncio.**
+4. **Rede Bom Lugar (id 132)** — 50 lojas RM Sorocaba; **Tenda Atacado (id 133)**; **Roldão Atacadista (id 134)** — aguardando retorno.
+5. **Sumerbol (id 21)** — Ivone Franca; **GoodBom (id 51)** — Laura (19) 3828-9798; **Rede Boa (id 46)** — ticket #23915; **Arcor/Bagley (id 14)**; **Sanofi Medley (id 91)** — protocolo 02995121.
+
+### Nota
+26º tick consecutivo bloqueado pela MESMA causa: senha de app revogada desde 09/09 11:01. O funil está saudável (taxa 7,6%, fila com 3 pendentes prontos, 11 FP1 prontos) — TUDO esperando a troca da credencial. Sem ela, leads quentes com prazo vencido (Savegnago, Grupo IMC) dependem exclusivamente de ação humana via WhatsApp.
+
+---
+
 ## 2026-09-10 (quinta) — MELHORADOR CONTÍNUO TICK
 
 ### Diagnóstico do dia (watchdog + dashboard, 14:05)

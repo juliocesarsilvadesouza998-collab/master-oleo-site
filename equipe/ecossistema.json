@@ -347,6 +347,18 @@
     "destaques_encapsulados": "nenhum novo nesta rodada (buscas esgotadas no nicho gorduras; encapsulados ja bem cobertos: Catalent cliente real, Cellera/Sorocaps/Hile/WBM/Ekobe contatados)",
     "nota": "Rodada produtiva: fila saiu de 0 para 3 pendentes e os 3 foram enviados no mesmo tick (3/3 OK, sem bounce imediato). Fila agora 118 empresas: 107 contatados, 27 bounces, 0 pendentes — volta a precisar de reposicao na proxima rodada. Recomendacao: explorar Porto Feliz/Cabreuva/Louveira/Votorantim com termos de gorduras/laticinios, e frigorificos de gordura animal da regiao."
   },
+  "tick_atendente_2026_09_10_16_03": {
+    "watchdog": "exit 1 — CREDENCIAL REJEITADA (SMTP 535 + IMAP AUTHENTICATIONFAILED, 26º tick consecutivo); senha de app do Gmail segue REVOGADA desde 09/09 ~11:01; ENVIOS E CAIXA BLOQUEADOS (caixa sem verificacao ha >28h). Offline verde: 170 leads / 131 ativos / 41 bounces cache. 3 problemas: SMTP 535, IMAP AUTH, 11 follow-ups FP1 atrasados.",
+    "dashboard": "145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6% (meta >3%) — funil continua convertendo quando o email voltar",
+    "fila_prospeccao": "134 empresas / 120 contatados / 28 bounce / 3 PENDENTES (Mambo, BRF Itu, Piraquê — aguardando credencial para envio)",
+    "followups_atrasados": "11 FP1 (IDs 121-124, 130, 131, 133 + Mareia, Andorinha, Dalben, Paulistao, Amigao): prospecao_followup.py tentou HOJE e os 11 foram bloqueados pelo SMTP 535; retry automatico quando a credencial voltar (leads NAO marcados como enviados)",
+    "sync_formspree": "FALHOU no login IMAP (AUTHENTICATIONFAILED) — notificacoes de formulario do site nao processadas; sem leads inbound novos desde 09/09",
+    "check_replies": "BLOQUEADO (IMAP) — replies_pending.json vazio ([]); possiveis respostas de Savegnago/Grupo IMC/Selmi/Tauste orfas na caixa desde 09/09 11:01",
+    "corrigir_emails": "OK — 0 bounces processados (23 ja tentados; todos sem email alternativo valido)",
+    "acoes": "Sequencia completa executada mesmo offline (sync → corrigir → watchdog → followup → send → check-replies); tudo que depende de email falhou apenas pela credencial. Nenhum pedido de relatorio ESG/certificado recebido (caixa sem verificacao). Nenhum email enviado.",
+    "leads_quentes_aguardando": "Savegnago (comercial@, ~100 lojas — prazo de toque WhatsApp 10/09 VENCEU), Grupo IMC (felix.costa@grupoimc.com.br — prazo 10/09 VENCEU), Selmi (compras@selmi.com.br — prazo 11/09), Rede Bom Lugar, Tenda Atacado, Roldao Atacadista, Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)",
+    "pendencia_humana_CRITICA": "GERAR NOVA SENHA DE APP: myaccount.google.com/apppasswords → atualizar bot/config.json → email.senha_app. Bloqueia TODO o funil (envios, caixa, sync, respostas) desde 09/09 11:01 — 26 ticks consecutivos. Apos trocar: rodar sync_formspree.py && bot_oleo.py check-replies (caixa orfa) e prospecao_followup.py (11 FP1) e bot_oleo.py send_sequence (3 pendentes Mambo/BRF/Piraquê)."
+  },
   "tick_melhorador_09_10": {
     "watchdog": "exit 1 — único problema: CREDENCIAL REJEITADA (SMTP 535 + IMAP AUTHENTICATIONFAILED, 17º tick consecutivo); senha de app segue revogada desde 09/09 ~11:01; ENVIOS E CAIXA BLOQUEADOS. Offline verde: 170 leads / 131 ativos / 41 bounces; NOVO: 7 follow-ups FP1 atrasados (presos pela credencial, dry-run OK)",
     "dashboard": "145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6% (meta >3%)",
