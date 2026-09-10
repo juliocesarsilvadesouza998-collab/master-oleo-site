@@ -1,5 +1,22 @@
 {
-  "atualizado_em": "2026-09-10T13:32:00-03:00",
+  "atualizado_em": "2026-09-10T14:02:00-03:00",
+  "atividade_tick_14h02_10_09": {
+    "rodadas_no_dia": 6,
+    "sync_formspree": "FALHOU (26º tick consecutivo) — IMAP AUTHENTICATIONFAILED na senha de app do Gmail; senha segue REVOGADA desde ~11:01-11:33 de 09/09 (reconfirmado 14:02 de 10/09: IMAP e SMTP rejeitam; testado com e sem espaços; sem credencial alternativa em projeto/git/env). 0 notificações novas processadas; cache de bounces permanece 41",
+    "corrigir_emails": "OK offline — 0 pendentes; todos os 41 bounces do cache já com tentativa registrada ('já tentado'); 0 processados",
+    "watchdog": "exit 1 (CREDENCIAL REJEITADA no SMTP 535 BadCredentials + IMAP AUTHENTICATIONFAILED + 7 follow-ups FP1 ATRASADOS há 3d); demais métricas saudáveis: 170 leads / 131 ativos / 41 bounces; 0 bounces sem correção, 0 leads parados",
+    "prospecao_followup": "7 FP1 TENTADOS e BLOQUEADOS (535) — Conrail (sac@mareia), Nutylac, Gomah, Argenzio, Supermercados São Roque, Rede Confiança + Tenda Atacado (ids 121-124/130/131/133); nenhum marcado (fp1_em vazio confirmado no CSV) → retry automático assim que a credencial voltar",
+    "send_sequence": "FALHOU (535 no 1º envio devido) — smtp_send não engole erro, write_leads não executado, nenhum estado corrompido",
+    "check_replies": "FALHOU (26º tick consecutivo) — IMAP AUTHENTICATIONFAILED; CAIXA NÃO VERIFICADA desde 11:01 de 09/09 (~27h); replies_pending.json vazio (última checagem real: 11:01)",
+    "respostas_enviadas": "0 (caixa inacessível; nenhum reply pendente no arquivo local)",
+    "relatorio_esg": "nenhum pedido detectável (caixa inacessível) — sem geração de PDF",
+    "emails_enviados_hoje": "0 neste tick (fluxo de envio bloqueado pela credencial)",
+    "enviar_lote_status": "fila: 131 empresas / 120 contatados / 28 bounce / 0 pendentes",
+    "leads_novos": [],
+    "pipeline_snapshot_14h02": "170 leads / 104 novo / 27 sequencia / 12 respondido / 25 bounce / 2 encerrado / 131 ativos — pipeline INALTERADO (contagem direta no leads.csv; caixa sem verificação desde 11:01 de 09/09)",
+    "dashboard": "145 apresentações / 122 entregues / 23 bounces (16%) / 11 respostas / taxa 7,6%",
+    "observacao": "ALERTA CRÍTICO MANTIDO (26º tick consecutivo): senha de app do Gmail REVOGADA — bloqueia sync_formspree, check-replies, scan_inbox e qualquer envio; requer ação humana (gerar nova senha de app em myaccount.google.com/apppasswords + atualizar bot/config.json -> email.senha_app). HOJE 10/09 é o prazo do toque WhatsApp em Savegnago e Grupo IMC (sem retorno desde 07/09) — ação humana independente da credencial. AMANHÃ 11/09: Selmi (compras@selmi.com.br, aberto 08/09 10:08). Tudo que é offline segue verde: fila 0 pendentes, 0 bounces novos, 0 leads parados. Atenção: se a senha não voltar, o FP2 dos 7 atrasados vence ~13/09 (dia 6) — atraso vai dobrar."
+  },
   "atividade_tick_13h31_10_09": {
     "rodadas_no_dia": 5,
     "sync_formspree": "FALHOU (25º tick consecutivo) — IMAP AUTHENTICATIONFAILED na senha de app do Gmail; senha segue REVOGADA desde ~11:01-11:33 de 09/09 (reconfirmado 13:31 de 10/09: IMAP e SMTP rejeitam; senha 16 chars testada com e sem espaços; sem credencial alternativa em projeto/git/env). 0 notificações novas processadas; cache de bounces permanece 41",
