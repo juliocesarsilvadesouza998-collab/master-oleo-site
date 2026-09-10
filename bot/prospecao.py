@@ -179,8 +179,8 @@ def tpl_apresentacao(cfg, lead):
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
 <p>Indústrias de {segmento} têm um problema caro: <b>produtos vencidos</b> que precisam de destinação segura — sem voltar ao mercado e sem passivo no CNPJ.</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, <b>compra resíduos com &gt;40% de gordura</b> (manteiga, margarina, maionese, gordura vegetal vencidas) para <b>biodiesel</b>, com <b>descaracterização completa</b> e certificado de destinação (ANVISA/Receita).</p>
-<p><b>Você deixa de pagar para descartar e passa a receber.</b> Quanto geram de vencidos por mês (kg)? Com esse número eu te mando a proposta em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, <b>compra resíduos com &gt;40% de gordura</b> (manteiga, margarina, maionese, gordura vegetal vencidas) para <b>biodiesel</b>. A <b>descaracterização completa é cortesia nossa</b> — destruímos embalagens e produto, emitimos certificado de destinação (ANVISA/Receita) e você deixa de pagar para descartar.</p>
+<p>O valor varia conforme o material e a facilidade de separação do óleo — <b>mande uma relação do que você tem (tipo e kg/mês)</b> que enviamos a proposta em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de resíduos com &gt;40% de gordura · {cidade}</p>
 </div>"""
         }

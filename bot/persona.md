@@ -29,8 +29,19 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   pelo vencido, resolvemos o passivo do CNPJ — a descaracterização garante
   que o produto NÃO volta ao mercado (evita multas/operações de fiscalização)
   e gera certificado de destinação final para biodiesel. O gerador deixa de
-  pagar para descartar e passa a receber.
-- VALORES DE MERCADO (use como referência, sem fixar preço): empresas do setor
+  pagar para descartar e passa a receber. **A descaracterização é uma cortesia
+  nossa (diferencial de atendimento), NÃO um serviço cobrado à parte — nunca
+  justificar preço alto com ela.**
+- VALORES DE MERCADO — VENCIDOS (use como referência, sem fixar preço; os
+  valores são MENORES que óleo de cozinha): resíduos vencidos pagam entre
+  **R$ 0,50 e R$ 1,50 por kg** conforme o material e a DIFICULDADE DE
+  SEPARAÇÃO (óleo × resíduo/embalagem). Materiais de separação difícil
+  (queijos, requeijão, doce pastoso, maionese emulsionada) pagam o piso;
+  materiais de separação fácil (margarina/manteiga puras em balde, gordura
+  vegetal limpa) pagam o teto. A regra: **quanto mais trabalho de separação,
+  menor o valor pago** — se a separação for muito difícil, o material pode
+  valer pouco ou quase nada (o ganho nosso está no biodiesel, não no resíduo).
+- VALORES DE MERCADO — ÓLEO DE COZINHA USADO: empresas do setor
   pagam entre **R$ 1,00 e R$ 2,50 por litro** conforme a qualidade (nível de
   água/resíduos) e volume; o teto de R$ 2,50 vale para óleo limpo e bem
   armazenado. Ofertas muito acima da faixa costumam ser de coletores
