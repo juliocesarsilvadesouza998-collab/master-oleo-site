@@ -728,10 +728,24 @@
     "segmento": "industria de maionese, molhos e conservas"
   },
   {
-    "nome": "Grow Quimica e Farmaceutica",
-    "empresa": "Grow Quimica e Farmaceutica LTDA",
-    "email": "compliance@growqf.com.br",
-    "cidade": "Indaiatuba/SP",
-    "segmento": "industria farmaceutica e encapsulados (Indaiatuba)"
+   "nome": "Grow Quimica e Farmaceutica",
+   "empresa": "Grow Quimica e Farmaceutica LTDA",
+   "email": "compliance@growqf.com.br",
+   "cidade": "Indaiatuba/SP",
+   "segmento": "industria farmaceutica e encapsulados (Indaiatuba)"
+  },
+  {
+   "nome": "Lopes Supermercados",
+   "empresa": "Supermercados Lopes (Jundiaí/Guarulhos)",
+   "email": "comercial@superlopes.com.br",
+   "cidade": "Jundiai/SP e regiao",
+   "segmento": "Rede de supermercados - CANAL COMERCIAL explicito p/ fornecedores (FAQ oficial)"
+  },
+  {
+   "nome": "Max Atacadista (Grupo Muffato)",
+   "empresa": "Grupo Muffato / Max Atacadista",
+   "email": "diretoria@muffato.com.br",
+   "cidade": "Campinas/SP (Max) - grupo nacional",
+   "segmento": "Atacarejo (bandeira Max Atacadista do Grupo Muffato; canal institucional com aba Fornecedor)"
   }
-]
+  ]

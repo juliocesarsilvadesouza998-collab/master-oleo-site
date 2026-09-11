@@ -1,6 +1,28 @@
 {
- "atualizado_em": "2026-09-11 12:01",
+ "atualizado_em": "2026-09-11 14:10",
  "criado_em": "2026-08-13",
+ "melhorador_2026_09_11_14_10": {
+  "diagnostico": "Watchdog exit 0 (SMTP OK · IMAP OK, 11º tick verde). Dashboard: 150 apresentações / 126 entregues / 24 bounces (16%) / 13 respostas / taxa 8,7% (meta >3%) — funil converte acima da meta pelo 2º mês. Ponto MAIS FRACO do dia: FILA DE PROSPECÇÃO EM 0 PENDENTES (138 empresas / 125 contatados / 29 bounce) — gargalo nº1 recorrente: pipeline de novos contatos parado.",
+  "melhorias_aplicadas": [
+   "FILA REPOSTA +2 empresas com email público de site oficial + MX validado via nslookup: (1) Lopes Supermercados comercial@superlopes.com.br (MX Outlook; rede Jundiaí/Guarulhos; FAQ oficial instrui fornecedores a mandar apresentação comercial para ESTE email = canal comercial explícito, nicho que mais converte), (2) Max Atacadista/Grupo Muffato diretoria@muffato.com.br (MX Outlook; atacarejo com lojas em Campinas; site institucional com aba 'Fornecedor'). Fila: 138 empresas / 125 contatados / 29 bounce / 2 PENDENTES (enviar_lote --status confirmado).",
+   "DUPLICATAS EVITADAS: BelVit Refeições (belvit@restauranteindustrial.com.br) e Rede Alimentare (contato@redealimentare.com.br) foram AVALIADAS e REMOVIDAS da fila antes do commit — já existiam na base (leads.csv id 146 e id 16, criados 07/09 e 13/08). Lição registrada: conferir leads.csv + EMPRESAS do prospecao.py ANTES de adicionar qualquer candidato (2 duplicatas descobertas e corrigidas no mesmo tick).",
+   "DESCARTADOS com critério: Kentinha Refeições (Hortolândia, só formulário+WhatsApp), AD Food (email admin@adfood.com.br com MX válido mas cidade não confirmada — regra exige validar localização), Pague Menos Campinas (só formulário), GIGA Atacado (formulário Cencosud), União Supermercados (sem email público + Bragança fora do raio). Meta de bounce <15% preservada."
+  ],
+  "verificacao": "python -m py_compile enviar_lote.py prospecao.py prospecao_followup.py watchdog.py dashboard.py -> OK (5 scripts). python enviar_lote.py --status -> 138 empresas, 125 contatados, 29 bounce, 2 pendentes (exatamente Lopes e Max/Muffato). python watchdog.py -> exit 0 saudável. JSON da fila validado (json.load OK, 107 entradas).",
+  "para_estrategista": "2 emails pendentes serão enviados pelo Atendente no próximo tick (Lopes comercial@ e Max/Muffato diretoria@ — ambos template V4 supermercados/atacarejo). Lopes é lead de alto potencial: FAQ oficial pede explicitamente apresentação comercial de fornecedores — resposta mais provável que SAC. Persistem pendências humanas: WhatsApp Savegnago + Grupo IMC (prazo 10/09 vencido) e Selmi (prazo 11/09 hoje). Netlify segue sem créditos (403); GitHub Pages único no ar."
+ },
+ "tick_atendente_2026_09_11_13_01": {
+  "watchdog": "exit 0 — ✅ SMTP OK · IMAP OK (11º tick verde de credencial, restaurada 10/09 16:08). 176 leads / 133 ativos / 42 bounces cache. Nenhum follow-up atrasado, bounce sem correção ou lead parado.",
+  "dashboard": "150 apresentações / 126 entregues / 24 bounces (16%) / 13 respostas / taxa 8,7% (meta >3%) — funil acima da meta pelo 2º mês; sem envios novos neste tick (só verificação).",
+  "fila_prospeccao": "136 empresas / 125 contatados / 29 bounce / 0 PENDENTES (gargalo do Prospector: precisa repor 5-8/dia com MX validado)",
+  "sync_formspree": "OK — 0 notificações novas (cache de bounce 42)",
+  "corrigir_emails": "OK — 0 bounces processados (todos já tentados)",
+  "prospecao_followup": "OK — 0 follow-ups atrasados (backlog zerado desde tick 10:32)",
+  "send_sequence": "OK — sequência processada sem envios novos",
+  "check_replies": "OK — 0 respostas aguardando (replies_pending.json = [])",
+  "acoes": "Tick limpo: sem follow-ups atrasados, sem respostas pendentes, sem pedidos de relatório ESG/certificado (sem geração de PDF). Pipeline 100% verde — nada a corrigir.",
+  "leads_quentes": "Savegnago (#1, prazo WhatsApp 10/09 VENCIDO — ação humana URGENTE), Grupo IMC/Frango Assado (#2, prazo 10/09 VENCIDO), Selmi (PRAZO 11/09 HOJE — toque leve), Confiança Supermercados (aguardando setor social), Queijos Itupeva (aguardando volume), Rede Bom Lugar, Tenda Atacado, Roldão, Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)"
+ },
  "tick_atendente_2026_09_11_12_01": {
   "watchdog": "exit 0 — ✅ SMTP OK · IMAP OK (10º tick verde de credencial, restaurada 10/09 16:08). 176 leads / 133 ativos / 42 bounces cache. Nenhum follow-up atrasado, bounce sem correção ou lead parado.",
   "dashboard": "150 apresentações / 126 entregues / 24 bounces (16%) / 13 respostas / taxa 8,7% (meta >3%) — funil acima da meta pelo 2º mês; sem envios novos neste tick (só verificação).",

@@ -1,3 +1,63 @@
+## 2026-09-11 (sexta) — MELHORADOR CONTÍNUO (tick 14:10)
+
+### Diagnóstico do dia
+- **Watchdog exit 0** (SMTP OK · IMAP OK, 11º tick verde). **Dashboard:** 150 apresentações / 126 entregues / 24 bounces (16%) / 13 respostas / **taxa 8,7%** (meta >3%) — funil acima da meta pelo 2º mês.
+- **Ponto MAIS FRACO: fila de prospecção em 0 PENDENTES** (138 empresas / 125 contatados / 29 bounce) — gargalo nº1 recorrente, pipeline de novos contatos parado.
+
+### Melhorias implementadas
+- **Fila reposta +2 empresas** com email público de site oficial + **MX validado via nslookup**:
+  1. **Lopes Supermercados** — `comercial@superlopes.com.br` (MX Outlook). Rede Jundiaí/Guarulhos. **FAQ oficial do site instrui fornecedores a mandar apresentação comercial para ESTE email** → canal comercial explícito (lição: preferir depto comercial, não SAC), nicho supermercado = o que mais converte.
+  2. **Max Atacadista / Grupo Muffato** — `diretoria@muffato.com.br` (MX Outlook). Atacarejo com lojas em Campinas; site institucional tem aba "Fornecedor".
+- **Duplicatas evitadas (lição nova):** BelVit Refeições e Rede Alimentare foram avaliadas e **removidas** antes do commit — já existiam na base (leads.csv id 146 criado 07/09 e id 16 criado 13/08). **Sempre conferir leads.csv + `EMPRESAS` do prospecao.py ANTES de adicionar candidato à fila.**
+- **Descartados com critério:** Kentinha Refeições (só formulário+WhatsApp), AD Food (email com MX válido mas cidade não confirmada), Pague Menos Campinas (só formulário), GIGA Atacado (formulário Cencosud), União Supermercados (sem email público + Bragança fora do raio).
+
+### Verificação
+- `python -m py_compile` OK em 5 scripts (enviar_lote, prospecao, prospecao_followup, watchdog, dashboard).
+- `python enviar_lote.py --status` → **138 empresas / 125 contatados / 29 bounce / 2 pendentes** (Lopes + Max/Muffato).
+- JSON da fila validado (107 entradas, json.load OK). Watchdog exit 0.
+
+### Para o Estrategista dominical
+- 2 emails pendentes serão enviados pelo Atendente no próximo tick (Lopes e Max/Muffato — template V4 supermercados/atacarejo). **Lopes é lead de alto potencial: o próprio site pede apresentação comercial de fornecedores.**
+- Ação humana pendente (urge): WhatsApp Savegnago + Grupo IMC (prazo 10/09 vencido) e Selmi (prazo 11/09 hoje).
+- Netlify segue sem créditos (403); GitHub Pages é o único no ar.
+
+---
+
+## 2026-09-11 (sexta) — ATENDENTE (tick 13:01)
+
+### ✅ Tick limpo — pipeline 100% verde (11º tick seguido de credencial OK)
+- **Estado**: watchdog **exit 0** direto (`SMTP OK · IMAP OK` — 11º tick verde de credencial após restauração de 10/09 16:08). **Nada a corrigir neste tick.**
+- **Leads totais:** **176** — ativos: **133** (bounces cache: 42).
+
+### Números do estado real (pós-tick 13:01)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados; cache 42).
+- **Watchdog:** ✅ **exit 0** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados.
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **enviar_lote --status:** 136 empresas / 125 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **150 apresentações / 126 entregues / 24 bounces (16%) / 13 respostas / taxa 8,7%** (meta >3%) — funil acima da meta pelo 2º mês; sem envios novos neste tick (só verificação).
+
+### Ações do tick
+- Nenhum follow-up atrasado, nenhuma resposta pendente, nenhum pedido de relatório ESG/certificado — **nenhuma ação corretiva necessária** (tick 100% operacional).
+
+### Problemas encontrados e correções
+- **Nenhum problema neste tick.** Pendências estruturais mantidas: fila de prospecção em **0 pendentes** (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCEU → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+2. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCEU → toque no WhatsApp (11) 96785-9631.**
+3. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **PRAZO 11/09 (HOJE) → toque leve se silêncio** (canal comercial aberto desde 08/09).
+4. **Confiança Supermercados (id 171):** proposta enviada a **social@confianca.com.br** (SAC protocolo 234776, Larissa Arruda); rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+5. **Queijos Itupeva** — respondeu 10/09 16:13 (aguardando volume mensal + tipo), nicho vencidos >40% gordura.
+6. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto.
+
+### Nota
+Tick operacional sem intercorrências: watchdog verde (11º seguido), caixa limpa (0 pendentes), nenhum bounce novo, nenhuma resposta órfã. Funil segue saudável (8,7% de resposta). Ação humana pendente: **toque no WhatsApp para Savegnago e Grupo IMC (prazo de 10/09 vencido)** e **Selmi hoje (11/09)**.
+
+---
+
 ## 2026-09-11 (sexta) — ATENDENTE (tick 12:01)
 
 ### ✅ Tick limpo — pipeline 100% verde (10º tick seguido de credencial OK)
