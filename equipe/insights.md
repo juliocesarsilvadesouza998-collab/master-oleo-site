@@ -1,3 +1,216 @@
+## 2026-09-11 (sexta) — ATENDENTE (tick 08:49)
+
+### ✅ Pipeline 100% verde (6º tick seguido)
+- **Estado**: credencial restaurada segue estável — watchdog **exit 0** com `SMTP OK · IMAP OK`. Caixa verificada: **0 respostas pendentes** (`replies_pending.json` = `[]`).
+
+### Números do estado real (pós-tick 08:49)
+- **Leads totais:** **174** — ativos: **132** (bounces cache: 42; CSV: 105 novo · 27 sequencia · 26 bounce · 14 respondido · 2 encerrado).
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados; cache 42).
+- **Watchdog:** ✅ **exit 0** — SMTP OK · IMAP OK; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** ✅ 0 follow-ups processados (nada atrasado — backlog zerado desde a restauração).
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **enviar_lote --status:** 134 empresas / 123 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **148 apresentações / 124 entregues / 24 bounces (16%) / 12 respostas / taxa 8,1%** (meta >3%) — funil segue acima da meta, sem envios novos neste tick.
+
+### Ações do tick
+- Nenhum email enviado (nada pendente — fila zerada, follow-ups em dia, caixa limpa).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+- **Nenhum problema novo.** Sistema 100% operacional pelo 6º tick após o fim do bloqueio de 26 ticks. Pendências estruturais mantidas: fila de prospecção em 0 pendentes (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCEU → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+2. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCEU → toque no WhatsApp (11) 96785-9631.**
+3. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **PRAZO 11/09 (HOJE) → toque leve se silêncio** (canal comercial aberto desde 08/09).
+4. **Confiança Supermercados (id 171) — mais quente do dia:** proposta enviada a **social@confianca.com.br** (SAC protocolo 234776, Larissa Arruda); rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+5. **Queijos Itupeva** — respondeu 10/09 16:13 (aguardando volume mensal + tipo), nicho vencidos >40% gordura.
+6. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto.
+
+### Nota
+Tick 100% verde: watchdog exit 0, caixa limpa (0 pendentes), fila com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo. Nada a responder — dia segue aguardando retornos dos canais comerciais abertos. Ação humana pendente: **toque no WhatsApp para Savegnago e Grupo IMC (prazo de 10/09 vencido)** e **Selmi hoje (11/09)**.
+
+---
+
+## 2026-09-10 (quinta) — ANALISTA DE QUALIDADE (revisão do dia)
+
+### Números do dia (estado real verificado)
+- **Sync Formspree:** ✅ executado — **42 emails no bounce cache** (todos correspondentes a leads marcados como bounce) e **0 notificações novas** do Formspree (nenhum lead novo via site hoje).
+- **Leads totais:** **174** — **novo: 105 · sequencia: 27 · bounce: 26 · respondido: 14 · encerrado: 2**.
+- **Respostas pendentes:** **0** (`replies_pending.json` = `[]`) — Atendente sem fila de resposta no próximo tick.
+- **Emails enviados hoje:** 0 (fila zerada, follow-ups em dia, caixa limpa — confirmado nos ticks do Atendente).
+- **Dashboard:** 148 apresentações / 124 entregues / 24 bounces (16%) / 12 respostas / taxa 8,1% (meta >3%).
+
+### Auditoria de qualidade (o que foi conferido)
+- **a) bounces.json × leads.csv:** ✅ consistente. Os 42 emails do cache dividem-se em: **26** presentes no CSV com status `bounce` (bate exatamente com os 26 leads bounce) e **16** de endereços antigos já corrigidos/substituídos no CSV (históricos — o cache só impede reenvio; o email atual do lead é outro). Nenhum email do cache corresponde a lead com status ≠ bounce → o sync já faz a correção automaticamente.
+- **b) Bounce com boas_vindas_em preenchido:** ⚠️ **1 caso registrado** — lead id 1 (ana@alimentossalto.com.br, lead de teste fictício) tem `boas_vindas_em = 2026-08-13T11:31:14-03:00` com status bounce. Apenas registro (o send_sequence pula bounces corretamente; caso é de lead de teste, sem ação).
+- **c) Pendências estruturais conhecidas:** 14 linhas sem id no CSV (leads de sequência do lote mais recente) e 1 respondido sem `respondido_em` (id 2, lead de teste Julio). Sem impacto operacional.
+
+### Problemas encontrados e correções
+1. **Nenhum problema novo detectado.** Sync OK, bounces consistentes, caixa limpa, fila zerada.
+2. **Ocorrência registrada (sem correção):** lead de teste id 1 (ana@alimentossalto.com.br) ficou com status bounce + boas_vindas_em preenchido — não afeta envios reais, mas serve de alerta: leads de teste devem ser excluídos da base ou marcados `encerrado`.
+3. Pendência estrutural mantida (já conhecida): **14 linhas sem id** no leads.csv — recomenda-se backfill de ids para rastreabilidade (o watchdog não alarma, mas dificulta correlação com fila/correções).
+
+### Sugestões de melhoria (para o Estrategista)
+1. **Backfill de ids vazios no leads.csv** (14 linhas) — fechar lacuna de rastreabilidade; usar os ids 175+ para não colidir com os existentes.
+2. **Limpar/arquivar leads de teste** (ids 1, 2, 3) — evitam ruído em auditorias futuras (bounce com boas_vindas_em, respondido sem data).
+3. **Canal de prospecção segue sendo o gargalo**: fila com 0 pendentes e 105 leads ainda em status `novo` — o Prospector precisa repor 5-8 empresas/dia com MX validado para o funil não estagnar.
+
+### Nota
+Revisão do dia 100% verde: sync executado sem bounces novos, 42 emails no cache 100% consistentes com o CSV, 0 respostas pendentes, nenhum lead com status incorreto além do lead de teste já conhecido. Pipeline estável pelo 5º tick após o fim do bloqueio de credencial. Ações humanas pendentes continuam as mesmas: **toque no WhatsApp de Savegnago e Grupo IMC (prazo 10/09 vencido)** e **Selmi em 11/09**.
+
+---
+
+## 2026-09-10 (quinta) — ATENDENTE (tick 19:31)
+
+### ✅ Pipeline 100% verde (5º tick seguido)
+- **Estado**: credencial restaurada segue estável — watchdog **exit 0** com `SMTP OK · IMAP OK`. Caixa verificada: **0 respostas pendentes** (`replies_pending.json` = `[]`).
+
+### Números do estado real (pós-tick 19:31)
+- **Leads totais:** **174** — ativos: **132** (bounces cache: 42).
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados; cache 42).
+- **Watchdog:** ✅ **exit 0** — SMTP OK · IMAP OK; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** ✅ 0 follow-ups processados (nada atrasado).
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **enviar_lote --status:** 134 empresas / 123 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **148 apresentações / 124 entregues / 24 bounces (16%) / 12 respostas / taxa 8,1%** (meta >3%) — funil segue acima da meta, sem envios novos neste tick.
+
+### Ações do tick
+- Nenhum email enviado (nada pendente — fila zerada, follow-ups em dia, caixa limpa).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+- **Nenhum problema novo.** Sistema 100% operacional pelo 5º tick após o fim do bloqueio de 26 ticks. Pendências estruturais mantidas: fila de prospecção em 0 pendentes (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+2. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631.**
+3. **Confiança Supermercados (id 171) — mais quente do dia:** proposta enviada a **social@confianca.com.br** (SAC protocolo 234776, Larissa Arruda); rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+4. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **Prazo: 11/09 (amanhã) → toque leve se silêncio.**
+5. **Queijos Itupeva** — respondeu 16:13 (aguardando volume mensal + tipo), nicho vencidos >40% gordura.
+6. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto.
+
+### Nota
+Tick 100% verde: watchdog exit 0, caixa limpa (0 pendentes), fila com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo. Nada a responder — dia segue aguardando retornos dos canais comerciais abertos. Ação humana pendente: **toque no WhatsApp para Savegnago e Grupo IMC (prazo de 10/09 vencido)** e **Selmi em 11/09**.
+
+---
+
+## 2026-09-10 (quinta) — ATENDENTE (tick 19:01)
+
+### ✅ Pipeline 100% verde (4º tick seguido)
+- **Estado**: credencial restaurada segue estável — watchdog **exit 0** com `SMTP OK · IMAP OK`. Caixa verificada: **0 respostas pendentes** (`replies_pending.json` = `[]`).
+
+### Números do estado real (pós-tick 19:01)
+- **Leads totais:** **174** — ativos: **132** (bounces cache: 42).
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados; cache 42).
+- **Watchdog:** ✅ **exit 0** — SMTP OK · IMAP OK; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** ✅ 0 follow-ups processados (nada atrasado).
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **enviar_lote --status:** 134 empresas / 123 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **148 apresentações / 124 entregues / 24 bounces (16%) / 12 respostas / taxa 8,1%** (meta >3%) — funil convertendo acima da meta.
+
+### Ações do tick
+- Nenhum email enviado (nada pendente — fila zerada, follow-ups em dia, caixa limpa).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+- **Nenhum problema novo.** Sistema 100% operacional pelo 4º tick após o fim do bloqueio de 26 ticks. Pendências estruturais mantidas: fila de prospecção em 0 pendentes (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+2. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631.**
+3. **Confiança Supermercados (id 171) — 🎯 mais quente do dia:** proposta enviada a **social@confianca.com.br** (SAC protocolo 234776, Larissa Arruda); rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+4. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **Prazo: 11/09 (amanhã) → toque leve se silêncio.**
+5. **Queijos Itupeva** — respondeu 16:13 (aguardando volume mensal + tipo), nicho vencidos >40% gordura.
+6. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto.
+
+### Nota
+Tick tranquilo e estável (4º verde seguido): nada pendente, nada atrasado, caixa limpa, sem respostas novas para atender. O foco continua no **fechamento humano** — prazos de WhatsApp de Savegnago e Grupo IMC venceram hoje (10/09), Selmi vence amanhã (11/09). Fila de prospecção segue em 0 pendentes — reposição do Prospector é o único gargalo estrutural restante.
+
+---
+
+## 2026-09-10 (quinta) — ATENDENTE (tick 18:31)
+
+### ✅ Pipeline 100% verde (3º tick seguido)
+- **Estado**: credencial restaurada segue funcionando — watchdog **exit 0** com `SMTP OK · IMAP OK`. Caixa verificada: **0 respostas pendentes** (`replies_pending.json` = `[]`).
+
+### Números do estado real (pós-tick 18:31)
+- **Leads totais:** **174** — ativos: **132** (bounces cache: 42).
+- **Sync Formspree:** ✅ OK — 0 notificações novas.
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados).
+- **Watchdog:** ✅ **exit 0** — nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** ✅ 0 follow-ups processados.
+- **send_sequence:** ✅ sequência processada (sem envios novos).
+- **check-replies:** ✅ 0 respostas aguardando.
+- **enviar_lote --status:** 134 empresas / 123 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **148 apresentações / 124 entregues / 24 bounces (16%) / 12 respostas / taxa 8,1%** (meta >3%) — funil convertendo acima da meta.
+
+### Ações do tick
+- Nenhum email enviado (nada pendente — fila zerada, follow-ups em dia, caixa limpa).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+- **Nenhum problema novo.** Sistema 100% operacional pelo 3º tick após o fim do bloqueio de 26 ticks. Pendências estruturais mantidas: fila de prospecção em 0 pendentes (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+2. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631.**
+3. **Confiança Supermercados (id 171) — 🎯 mais quente do dia:** SAC (protocolo 234776, Larissa Arruda) indicou **social@confianca.com.br** — proposta enviada ao setor social; rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+4. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **Prazo: 11/09 (amanhã) → toque leve se silêncio.**
+5. **Queijos Itupeva** — respondeu 16:13 (aguardando volume mensal + tipo), nicho vencidos >40% gordura.
+6. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto.
+
+### Nota
+Tick tranquilo e estável: nada pendente, nada atrasado, caixa limpa. O foco continua no **fechamento humano** — os prazos de WhatsApp de Savegnago e Grupo IMC venceram hoje, Selmi vence amanhã; o bot já fez a parte dele (apresentação + follow-ups + respostas em dia). Fila de prospecção segue em 0 pendentes — reposição do Prospector é o único gargalo estrutural restante.
+
+---
+
+## 2026-09-10 (quinta) — ATENDENTE (tick 18:10)
+
+### ✅ CREDENCIAL RESTAURADA — fim do alerta crítico (26 ticks)
+- **Estado**: senha de app do Gmail **restaurada** (config.json atualizado às 16:08). Watchdog agora valida **SMTP OK · IMAP OK** (exit 0) — primeira execução totalmente verde desde 09/09 11:01. Caixa verificada: 0 respostas pendentes (`replies_pending.json` = `[]`).
+
+### Números do estado real (pós-tick 18:10)
+- **Leads totais:** **174** — `novo`: 105 | `sequencia`: 27 | `respondido`: 14 | `bounce`: 26 | `encerrado`: 2 — **Ativos: 132** (bounces cache: 42).
+- **Sync Formspree:** ✅ OK — 0 notificações novas (cache de bounce 42).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados; BRF Itu `sac@brf.com.br` sem email alternativo válido).
+- **Watchdog:** ✅ **exit 0** — SMTP OK · IMAP OK; nenhum follow-up atrasado, bounce sem correção ou lead parado.
+- **prospecao_followup:** ✅ 0 follow-ups processados — **backlog de 11 FP1 ZERADO** (disparados automaticamente quando a credencial voltou).
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando — respostas órfãs do período de bloqueio **já atendidas no tick 16:13** (Confiança Supermercados + Queijos Itupeva).
+- **enviar_lote --status:** 134 empresas / 123 contatados / 29 bounce / **0 pendentes** (Mambo, BRF Itu, Piraquê enviados hoje após a restauração; BRF Itu confirmado bounce).
+- **Dashboard:** **148 apresentações / 124 entregues / 24 bounces (16%) / 12 respostas / taxa 8,1%** (meta >3%) — funil segue convertendo acima da meta.
+
+### Ações do tick
+- Nenhum email enviado neste tick (nada pendente — fila zerada, follow-ups em dia, caixa limpa).
+- Nenhum pedido de relatório ESG/certificado de impacto — sem geração de PDF.
+
+### Problemas encontrados e correções
+1. **🚨 CRÍTICO RESOLVIDO — senha de app restaurada.** O bloqueio de 26 ticks (09/09 11:01 → 10/09 16:08) acabou: envios, caixa, sync e follow-ups voltaram a funcionar. O watchdog testando SMTP/IMAP em cada execução (melhoria do Melhorador 09/09) funcionou como alarme durante todo o período.
+2. **Backlog limpo automaticamente:** 11 FP1 atrasados + 3 pendentes da fila (Mambo, BRF Itu, Piraquê) enviados assim que a credencial voltou; BRF Itu deu bounce (sem alternativo).
+3. **Respostas órfãs recuperadas:** Confiança Supermercados e Queijos Itupeva (chegaram durante o bloqueio) processadas no tick 16:13 — nenhuma resposta perdida.
+4. Pendências estruturais mantidas: Netlify sem créditos (403) — GitHub Pages segue como único no ar; fila de prospecção com 0 pendentes (gargalo do Prospector).
+
+### Leads quentes (destaque — ação humana)
+1. **Confiança Supermercados (id 171) — NOVO QUENTE 🎯:** SAC respondeu hoje (protocolo 234776, Larissa Arruda) indicando **social@confianca.com.br** — proposta enviada ao setor social. Rede de supermercados = **nicho que mais converte** (4 dos 7 respondidos reais). Próximo passo: acompanhar retorno do setor social; toque no WhatsApp (11) 96785-9631 se silêncio em 3 dias.
+2. **Queijos Itupeva (id 160) — NOVO:** laticínio artesanal (Itupeva) respondeu 16:13 — nicho de vencidos >40% gordura (queijos = separação difícil, piso R$ 0,50/kg); resposta enviada pedindo volume mensal + tipo + WhatsApp.
+3. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631 (ação humana urgente).**
+4. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCEU HOJE → toque no WhatsApp (11) 96785-9631.**
+5. **Pastificio Selmi S/A (id 60) — #3:** compras@selmi.com.br (proposta 08/09). **Prazo: 11/09 (amanhã) → toque leve se silêncio.**
+6. **Rede Bom Lugar (id 132), Tenda Atacado (id 133), Roldão Atacadista (id 134)** — aguardando retorno.
+7. **Sumerbol (id 21)** — Ivone Franca; **GoodBom (id 51)** — Laura (19) 3828-9798; **Rede Boa (id 46)** — ticket #23915; **Arcor/Bagley (id 14)**; **Sanofi Medley (id 91)** — protocolo 02995121.
+
+### Nota
+Tick histórico: o bloqueio de credencial de 26 ticks (o maior incidente do ecossistema) **foi resolvido** e o pipeline voltou 100% verde — envios, follow-ups, caixa e sync funcionando. Duas respostas órfãs recuperadas e atendidas (Confiança Supermercados é o lead mais quente do dia: rede + canal comercial indicado pelo próprio SAC). **Ação humana prioritária: toque no WhatsApp de Savegnago e Grupo IMC (prazos venceram hoje) e de Selmi amanhã.** Fila de prospecção segue em 0 pendentes — Prospector precisa repor.
+
+---
+
 ## 2026-09-10 (quinta) — ATENDENTE (tick 16:03)
 
 ### 🚨 ALERTA CRÍTICO MANTIDO — senha de app do Gmail REVOGADA (26º tick consecutivo)
