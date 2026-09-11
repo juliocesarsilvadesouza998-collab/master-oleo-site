@@ -719,5 +719,19 @@
     "email": "sac@piraque.com.br",
     "cidade": "Jundiaí/SP",
     "segmento": "Indústria de biscoitos"
+  },
+  {
+    "nome": "Fugini Alimentos",
+    "empresa": "Fugini Alimentos LTDA",
+    "email": "suportevendas1@fugini.com.br",
+    "cidade": "Monte Alto/SP",
+    "segmento": "industria de maionese, molhos e conservas"
+  },
+  {
+    "nome": "Grow Quimica e Farmaceutica",
+    "empresa": "Grow Quimica e Farmaceutica LTDA",
+    "email": "compliance@growqf.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria farmaceutica e encapsulados (Indaiatuba)"
   }
 ]

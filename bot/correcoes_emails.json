@@ -222,5 +222,12 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-09T09:31:34-03:00"
+  },
+  {
+    "email_antigo": "sac@brf.com.br",
+    "empresa": "BRF S.A. (planta Itu/SP)",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-10T18:10:34-03:00"
   }
 ]

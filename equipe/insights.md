@@ -1,3 +1,21 @@
+## 2026-09-11 (sexta) — SEO BOT (tick 10:30)
+
+### 📊 Posição real no Bing (top 20)
+- **Todas as 10+ keywords: fora do top 20** — site indexado (site:masteroleo.eco.br OK), conteúdo 100% presente, mas sem posição. **Normal**: domínio em fase de indexação; precisa de semanas. 4º tick seguido sem ranking (histórico: 10/09 10:36, 14:01, 11/09 10:06 e agora).
+- SEO geral: **OK** (HTTP 200, todas as keywords no conteúdo, sitemap presente).
+
+### 🛠️ Ações do tick (3 mudanças)
+1. **Artigo novo** `deploy-vercel/blog/oleo-usado-biodiesel.html` — keyword alvo **"óleo usado biodiesel"** (sem página dedicada até agora): ~950 palavras, title otimizado, meta description, canonical, tabela de preços por perfil de vendedor, CTA WhatsApp (11) 96785-9631, links internos "Leia também" (quanto-vale, coleta-restaurantes, limpeza-máquinas, onde-descartar).
+2. **sitemap.xml** — URL `blog/oleo-usado-biodiesel.html` adicionada (14 URLs, pares OK).
+3. **index.html #blog** — card novo com link interno para o artigo (⛽ Óleo usado para biodiesel).
+- Validação HTML: pares de tags OK nos 2 arquivos alterados. IndexNow: HTTP 200 aceito (host masteroleo.eco.br, keyLocation OK).
+
+### 📈 Próximos passos
+- Aguardar reflexo do IndexNow (horas/dias) e do crawl do Bing (1–4 semanas para posição).
+- Gap restante de conteúdo: keyword "maionese vencida" e "manteiga vencida" ainda sem artigo 100% dedicado (cobertas no artigo de margarina) — candidatos para próximos ticks.
+
+---
+
 ## 2026-09-11 (sexta) — ATENDENTE (tick 08:49)
 
 ### ✅ Pipeline 100% verde (6º tick seguido)
