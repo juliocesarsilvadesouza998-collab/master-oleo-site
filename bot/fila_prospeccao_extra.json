@@ -728,24 +728,45 @@
     "segmento": "industria de maionese, molhos e conservas"
   },
   {
-   "nome": "Grow Quimica e Farmaceutica",
-   "empresa": "Grow Quimica e Farmaceutica LTDA",
-   "email": "compliance@growqf.com.br",
-   "cidade": "Indaiatuba/SP",
-   "segmento": "industria farmaceutica e encapsulados (Indaiatuba)"
+    "nome": "Grow Quimica e Farmaceutica",
+    "empresa": "Grow Quimica e Farmaceutica LTDA",
+    "email": "compliance@growqf.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria farmaceutica e encapsulados (Indaiatuba)"
   },
   {
-   "nome": "Lopes Supermercados",
-   "empresa": "Supermercados Lopes (Jundiaí/Guarulhos)",
-   "email": "comercial@superlopes.com.br",
-   "cidade": "Jundiai/SP e regiao",
-   "segmento": "Rede de supermercados - CANAL COMERCIAL explicito p/ fornecedores (FAQ oficial)"
+    "nome": "Lopes Supermercados",
+    "empresa": "Supermercados Lopes (Jundiaí/Guarulhos)",
+    "email": "comercial@superlopes.com.br",
+    "cidade": "Jundiai/SP e regiao",
+    "segmento": "Rede de supermercados - CANAL COMERCIAL explicito p/ fornecedores (FAQ oficial)"
   },
   {
-   "nome": "Max Atacadista (Grupo Muffato)",
-   "empresa": "Grupo Muffato / Max Atacadista",
-   "email": "diretoria@muffato.com.br",
-   "cidade": "Campinas/SP (Max) - grupo nacional",
-   "segmento": "Atacarejo (bandeira Max Atacadista do Grupo Muffato; canal institucional com aba Fornecedor)"
+    "nome": "Max Atacadista (Grupo Muffato)",
+    "empresa": "Grupo Muffato / Max Atacadista",
+    "email": "diretoria@muffato.com.br",
+    "cidade": "Campinas/SP (Max) - grupo nacional",
+    "segmento": "Atacarejo (bandeira Max Atacadista do Grupo Muffato; canal institucional com aba Fornecedor)"
+  },
+  {
+    "nome": "Laticinios Pelissari",
+    "empresa": "Laticinios Pelissari (Mogi Guacu/SP)",
+    "email": "contato@laticiniospelissari.com.br",
+    "cidade": "Mogi Guacu/SP",
+    "segmento": "laticinios (queijos, bebidas lacteas, MANTEIGAS) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 12/09"
+  },
+  {
+    "nome": "Quata Alimentos",
+    "empresa": "Quata Alimentos (Grupo Savencia)",
+    "email": "sac@quataalimentos.com.br",
+    "cidade": "Sao Paulo/SP (sede; fabrica em Quata/SP)",
+    "segmento": "laticinios (leites UHT, queijos, requeijao, cremes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 12/09"
+  },
+  {
+    "nome": "Produtos Marcy",
+    "empresa": "Produtos Marcy - Alimentos (Campinas)",
+    "email": "contato@produtosmarcy.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "industria de alimentos (molhos, farinaceos, especiarias, graos) - 200+ produtos, 2000 estabelecimentos RMC; MX valido 12/09"
   }
-  ]
+]
