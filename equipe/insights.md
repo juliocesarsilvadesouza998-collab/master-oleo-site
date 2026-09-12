@@ -1,3 +1,142 @@
+## 2026-09-12 (sábado) — MELHORADOR CONTÍNUO (tick 14:xx)
+
+### 🎯 Diagnóstico do dia
+- **Watchdog**: exit 0 — saudável (SMTP OK · IMAP OK), 181 leads / 136 ativos / 44 bounces cache, 0 atrasos.
+- **Dashboard**: 155 apresentações / 131 entregues / 24 bounces (15%) / **14 respostas / taxa 9,0%** (acima da meta >3%).
+- **PONTO MAIS FRACO: FILA ZERADA (0 pendentes)** — causa sistêmica conhecida: Atendente consome ~3/dia, Prospector repõe 2-4/dia → fila vive no zero.
+
+### ✅ Melhorias implementadas (12/09)
+1. **Fila reposta +5 hotéis/resorts com MX validado** (`bot/fila_prospeccao_extra.json`, 110 → 115):
+   - Fazenda Capoava (`reservas@fazendacapoava.com.br`, KingHost MX) — Itu/SP, hotel-fazenda pensão completa.
+   - Itu Garden SPA Resort (`reservas@itugardenspa.com.br`, Locaweb MX) — Itu/SP.
+   - Hotel Fazenda Brisa Itu (`reservas@hotelfazendabrisaitu.com.br`, Outlook MX) — Itu/SP.
+   - Thermas de São Pedro (`reservas@saopedrothermasresort.com.br`, Outlook MX) — São Pedro/SP.
+   - Hotel Fazenda Dona Carolina (`reservas@donacarolina.com.br`, Locaweb MX) — Itatiba/SP.
+   - Dedup contra 4 fontes (fila + leads.csv + bounces + EMPRESAS = 198 emails únicos) → todos OK. Verificação: `enviar_lote.py --status` → **pendentes: 5** (exatamente os novos) e `--dry-run` confirma os 5 passando pelo gate MX do script.
+   - **Descartados com critério**: San Raphael Country e Limoeiro da Concórdia (MX self-hosted, porta 25 timeout → bounce quase certo), União Supermercados uniaosm.com.br (SEM MX).
+   - **Nicho novo coberto: hotéis-fazenda de Itu** — cozinha industrial de pensão completa (café/almoço/jantar todos os dias = fritura constante o ano todo), contrato único de coleta, sensibilidade ESG do setor. Mesma lógica dos hotéis urbanos (Royal Palm etc.), agora no polo turístico de Itu.
+2. **Branch V6 de template para hotéis/resorts** (`bot/prospecao.py`): palavras-chave `hotel/resort/pousada/pensao/hospedagem/spa` disparam ângulo próprio — fritura diária da pensão completa + US$ 8,6 bi + PNRS + relatório ESG (argumento forte p/ hospitalidade) + urgência Portaria MME/MMA 3/2026 + CTA litros. `enviar_lote.py` delega ao prospecao (fonte única confirmada) → o próximo lote já usa o V6.
+3. **Testes**: `py_compile` OK + script de verificação cobre V6 hotel/resort + regressão V4 supermercados / V3 vencidos / V5 máquinas / V2 genérico — **todos passaram**.
+
+### 📌 Para o Estrategista dominical
+- Ritmo do Prospector segue insuficiente: repor 5-8/dia (ou 2 horários) em vez de 2-4 — fila vive zerada mesmo com os +5 de hoje.
+- Toques WhatsApp vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09) — ação humana.
+- Queijos Itupeva segue #1 (negociação ativa, aguardando relação + coleta-teste).
+
+---
+## 2026-09-12 (sábado) — ATENDENTE (tick 13:31)
+
+### ✅ Tick limpo — pipeline 100% verde (watchdog exit 0 de primeira)
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **181** — ativos: **136** (bounces cache: 44). 6º tick consecutivo saudável.
+
+### Números do estado real (pós-tick 13:31)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 44).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos os 44 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados.
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **enviar_lote --status:** 141 empresas / 130 contatados / 29 bounce / **0 pendentes** (fila zerada).
+- **Dashboard:** **155 apresentações / 131 entregues / 24 bounces (15%) / 14 respostas / taxa 9,0%** (meta >3%) — funil acima da meta pelo 2º mês; 3 apresentações no dia (12/09, 09:53: Pelissari, Quata, Marcy).
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** desde a Andorinha (12:02, recusa cordial — já atendida no tick 12:05). Caixa limpa, zero respostas órfãs, zero pendências.
+
+### Ações do tick
+- Rotina completa executada: sync → corrigir → watchdog → followup → sequência → check-replies. Tudo verde.
+- Nenhum pedido de relatório ESG/certificado de impacto — **sem geração de PDF** neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum problema neste tick.** Pendências estruturais mantidas: fila de prospecção em **0 pendentes** (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **🔥 QUEIJOS ITUPEVA (NEGOCIAÇÃO ATIVA desde 16:30 11/09):** Rafael Galvão pediu negociação no WhatsApp (11 940333759) → **AÇÃO HUMANA: chamar HOJE** (nicho vencidos >40% gordura; Frescal 200 kg/mês + manteiga/requeijão/doce 50–100 kg/mês; referência R$0,50–1,50/kg conforme dificuldade de separação — queijos = separação difícil, tender ao piso; **descaracterização é cortesia, não cobrada**).
+2. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCIDO → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+3. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCIDO → toque no WhatsApp (11) 96785-9631.**
+4. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **PRAZO 11/09 VENCIDO → toque leve se silêncio** (canal comercial aberto desde 08/09).
+5. **Confiança Supermercados — STAND BY (não insistir):** recontatar em ~2–3 meses citando protocolo 236485.
+6. **FP1 de supermercados aguardando resposta (nicho que mais converte):** Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar.
+7. **Andorinha Hiper Center (id 147) — recusa cordial 12/02:** já tem coletor contratado, guardou o contato para futuro — registrar para recontato no ciclo de renovação do coletor (loja em SALTO).
+
+### Nota
+Tick tranquilo (6º consecutivo 100% verde): caixa limpa, fila zerada, zero atrasos, zero respostas pendentes. Sem novidades desde a recusa cordial da Andorinha. Próximas ações humanas seguem em aberto: toques de WhatsApp vencidos (Savegnago 10/09, Grupo IMC 10/09, Selmi 11/09) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-12 (sábado) — ATENDENTE (tick 12:31)
+
+### ✅ Tick limpo — pipeline 100% verde (watchdog exit 0)
+- **Estado**: watchdog **exit 0** direto (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **181** — ativos: **136** (bounces cache: 44).
+
+### Números do estado real (pós-tick 12:31)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 44).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados).
+- **Watchdog:** ✅ **exit 0** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados.
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`).
+- **enviar_lote --status:** 141 empresas / 130 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **155 apresentações / 131 entregues / 24 bounces (15%) / 14 respostas / taxa 9,0%** (meta >3%) — funil acima da meta pelo 2º mês; 3 apresentações no dia (12/09, 09:53: Pelissari, Quata, Marcy).
+
+### 🆕 Resposta nova no funil (verificada via IMAP)
+- **Andorinha Hiper Center Supermercados** (sugestoes@andorinhahiper.com.br, id 147) respondeu às **11:46**: *"já temos uma empresa que recolhe o óleo e no momento não temos intenção de trocar... ficaremos com seu contato caso haja interesse futuro"* — resposta **negativa cordial** (não é lead quente). O bot já respondeu às **12:08** com encerramento elegante (agradeceu a transparência, reforçou coleta programada + certificado PNRS + pagamento PIX, deixou WhatsApp (11) 96785-9631 aberto para futuro). Lead marcado como `respondido` — consistente, sem resposta órfã.
+
+### Ações do tick
+- Verificação extra de integridade (IMAP) da resposta Andorinha: enviada às 12:08 na pasta Enviados, conteúdo alinhado à persona (regra 5: sem crítica a concorrente, porta aberta, CTA claro). Nenhuma ação corretiva necessária.
+- Nenhum pedido de relatório ESG/certificado de impacto — **sem geração de PDF** neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum problema neste tick.** Pendências estruturais mantidas: fila de prospecção em **0 pendentes** (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **🔥 QUEIJOS ITUPEVA (NEGOCIAÇÃO ATIVA desde 16:30 11/09):** Rafael Galvão pediu negociação no WhatsApp e passou o número **11 940333759** → **AÇÃO HUMANA: chamar HOJE no WhatsApp (11) 96785-9631** (nicho vencidos >40% gordura, laticínio; referência R$0,50–1,50/kg conforme dificuldade de separação — queijos = separação difícil, tender ao piso, negociar por volume/qualidade).
+2. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCIDO → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+3. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCIDO → toque no WhatsApp (11) 96785-9631.**
+4. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **PRAZO 11/09 VENCIDO → toque leve se silêncio** (canal comercial aberto desde 08/09).
+5. **Confiança Supermercados (id 171):** proposta enviada a **social@confianca.com.br** (SAC protocolo 236485); rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+6. **Lopes Supermercados:** canal comercial explícito (FAQ oficial pede apresentação de fornecedores) — potencial de resposta alto.
+7. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto. **Andorinha:** banco para reativação futura (não é lead quente).
+
+### Nota
+Tick 100% operacional: watchdog verde, caixa limpa confirmada (check-replies: 0 pendentes + verificação IMAP da resposta Andorinha), fila com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo. Funil segue saudável e **subiu para 9,0% de resposta** (14 respostas, +1 no dia: Andorinha — negativa cordial). Ação humana pendente: **chamar Rafael (Queijos Itupeva) hoje, toque no WhatsApp para Savegnago e Grupo IMC (prazo 10/09 vencido) e Selmi (prazo 11/09 vencido)**.
+
+---
+
+## 2026-09-12 (sábado) — ATENDENTE (tick 11:31)
+
+### ✅ Tick limpo — pipeline 100% verde (watchdog exit 0)
+- **Estado**: watchdog **exit 0** direto (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **181** — ativos: **137** (bounces cache: 44).
+
+### Números do estado real (pós-tick 11:31)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 44).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos já tentados).
+- **Watchdog:** ✅ **exit 0** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados.
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`) — caixa limpa confirmada.
+- **enviar_lote --status:** 141 empresas / 130 contatados / 29 bounce / **0 pendentes**.
+- **Dashboard:** **155 apresentações / 131 entregues / 24 bounces (15%) / 13 respostas / taxa 8,4%** (meta >3%) — funil acima da meta pelo 2º mês; 3 apresentações no dia (12/09, 09:53: Pelissari, Quata, Marcy).
+
+### Ações do tick
+- Nenhum follow-up atrasado, nenhuma resposta pendente, nenhum pedido de relatório ESG/certificado de impacto — **nenhuma ação corretiva necessária** (tick 100% operacional, sem geração de PDF).
+
+### Problemas encontrados e correções
+- **Nenhum problema neste tick.** Pendências estruturais mantidas: fila de prospecção em **0 pendentes** (gargalo do Prospector — precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages segue como único no ar).
+
+### Leads quentes (destaque — ação humana)
+1. **🔥 QUEIJOS ITUPEVA (NEGOCIAÇÃO ATIVA desde 16:30 11/09):** Rafael Galvão pediu negociação no WhatsApp e passou o número **11 940333759** → **AÇÃO HUMANA: chamar HOJE no WhatsApp (11) 96785-9631** (nicho vencidos >40% gordura, laticínio; referência R$0,50–1,50/kg conforme dificuldade de separação — queijos = separação difícil, tender ao piso, negociar por volume/qualidade).
+2. **Savegnago Supermercados (~100 lojas) — #1:** **PRAZO 10/09 VENCIDO → toque no WhatsApp (11) 96785-9631 (ação humana URGENTE, independente do bot).**
+3. **Frango Assado / Grupo IMC — #2:** **PRAZO 10/09 VENCIDO → toque no WhatsApp (11) 96785-9631.**
+4. **Pastificio Selmi S/A — #3:** compras@selmi.com.br. **PRAZO 11/09 VENCIDO → toque leve se silêncio** (canal comercial aberto desde 08/09).
+5. **Confiança Supermercados (id 171):** proposta enviada a **social@confianca.com.br** (SAC protocolo 236485); rede = nicho que mais converte. Acompanhar retorno; toque WhatsApp se silêncio em 3 dias.
+6. **Lopes Supermercados:** canal comercial explícito (FAQ oficial pede apresentação de fornecedores) — potencial de resposta alto.
+7. **Rede Bom Lugar, Tenda Atacado, Roldão** — aguardando; **Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi (02995121)** — em aberto.
+
+### Nota
+Tick 100% operacional: watchdog verde, caixa limpa confirmada (check-replies: 0 pendentes), fila com 0 pendentes, nenhum follow-up atrasado, nenhum bounce novo, nenhuma resposta órfã. Funil segue saudável (8,4% de resposta, acima da meta de 3%). Ação humana pendente: **chamar Rafael (Queijos Itupeva) hoje, toque no WhatsApp para Savegnago e Grupo IMC (prazo de 10/09 vencido) e Selmi (prazo 11/09 vencido)**.
+
+---
+
 ## 2026-09-12 (sábado) — ATENDENTE (tick 10:02)
 
 ### ✅ Tick limpo — pipeline 100% verde (watchdog exit 0)
@@ -4283,3 +4422,34 @@ Tick tranquilo: pipeline cresceu para 140 leads (+5 via prospecao-lote), watchdo
 - **Ranking real no Bing (top 20):** nenhuma keyword ranqueou — todas as 10 alvo "fora do top 20" (ainda não indexadas para ranking). Site 100% indexado (23 URLs/páginas "presentes" na verificação), HTTP 200. Estado normal de site em maturação — precisa de semanas.
 - **Melhorias aplicadas:** links internos novos no `deploy-vercel/index.html` (#blog) para `blog/coleta-oleo-restaurantes.html` e `blog/onde-descartar-oleo-salto.html` (agora 7/7 artigos linkados na home). IndexNow pingado para index.html (HTTP 200). Schema.org LocalBusiness + FAQPage confirmados no index.html.
 - **Decisão:** nenhum artigo novo criado — todas as keywords alvo já têm página dedicada (verificação de cobertura 100%).
+
+---
+
+## 2026-09-12 (sábado) — ATENDENTE (tick 11:04)
+
+### Resumo do tick
+
+- **Pipeline (snapshot 11:04)**: 181 leads · **15 respondidos** · 26 sequência · **111 novos** · 26 bounce (CSV) / **44 cache** · **3 encerrados** · **ativos: 137**. Funil acima da meta (taxa 8,4-8,6% > meta 3%) pelo 2º mês.
+- **Sync**: Formspree OK (0 notificações novas); corrigir_emails OK (0 pendentes de prospecção).
+- **Watchdog**: exit 1 no 1º run (1 bounce sem tentativa de correção) → **RESOLVIDO** → exit 0 no 2º run. SMTP OK · IMAP OK.
+- **Prospecção/follow-up**: 0 atrasados; sequência processada sem envios novos (os 7 FP2 já foram às 10:01).
+- **Caixa**: check-replies 0 pendentes + scan_inbox 0 não lidas — confirmada limpa em dobro. **0 respostas enviadas. Nenhum pedido de relatório ESG.**
+- **Fila de prospecção**: 141 empresas / 130 contatados / 29 bounce / **0 pendentes** (gargalo do Prospector).
+- **Emails enviados hoje (18)**: 8 FP1 laticínios/queijarias + 3 apresentações (Pelissari, Quata, Marcy) + 7 FP2 refeitórios/rest. industriais.
+
+### Problema encontrado e correção
+
+1. **Bounce da Rede Top (id 142, `ecommerce704@redetop.com.br`) — correção que não foi aplicada no tick anterior:** o tick 10:32 registrou no ecossistema que arquivou o lead como `encerrado`, mas o `leads.csv` **não foi alterado** (lead seguia `bounce`) — o watchdog voltou a acusar. **Corrigido neste tick**: status → `encerrado` no CSV + entrada em `correcoes_emails.json` (`nao_encontrado`, fonte vazia sem dados p/ email alternativo) + backup `leads.csv.bak-20260912-fix`. Watchdog re-rodado → exit 0. **Lição: conferir a persistência no CSV quando o log registrar uma correção.**
+
+### 🏆 Leads quentes (para ação humana — destaque)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** VOLUME REAL informado 11/09 (Frescal 200 kg/mês + manteiga/requeijão/doce 50–100 kg/mês) → proposta enviada com valores por faixa de separação + **descaracterização cortesia**. **Aguardando relação de volumes + coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE, ação humana).**
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **Confiança Supermercados — STAND BY** (recontato em 2-3 meses, protocolo 236485).
+6. **FP1 de supermercados aguardando resposta (nicho que mais converte):** Andorinha Hiper Center (SALTO), Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar.
+
+### Nota
+
+Rotina 100% verde após 1 correção real de persistência. Caixa limpa em dobro, fila zerada, zero atrasos. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.

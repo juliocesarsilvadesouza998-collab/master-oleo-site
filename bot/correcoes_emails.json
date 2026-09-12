@@ -229,5 +229,13 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-10T18:10:34-03:00"
+  },
+  {
+    "email_antigo": "ecommerce704@redetop.com.br",
+    "empresa": "Rede Top",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "motivo": "fonte vazia, sem empresa/cidade — arquivado como encerrado",
+    "quando": "2026-09-12T11:02:55-03:00"
   }
 ]

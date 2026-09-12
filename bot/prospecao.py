@@ -201,6 +201,23 @@ def tpl_apresentacao(cfg, lead):
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo vegetal usado industrial · {cidade}</p>
 </div>"""
         }
+    # Ângulo específico: HOTÉIS/RESORTS/POUSADAS — cozinha industrial de pensão completa
+    # (café da manhã + almoço + jantar todos os dias = fritura constante o ano todo)
+    # V6 (12/09): 5 hotéis-fazenda de Itu/região adicionados à fila — nicho sub-coberto,
+    # contrato único de coleta + sensibilidade ESG do setor hoteleiro.
+    if any(k in segmento for k in ["hotel", "resort", "pousada", "pensao", "pensão",
+                                    "hospedagem", "spa"]):
+        return {
+            "subject": f"Óleo de fritura do {lead.get('empresa','')} vira receita — coleta programada",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Cozinha de hotel com pensão completa é <b>fritura todos os dias</b> (café da manhã, almoço e jantar) — e o óleo usado, que hoje sai de graça, virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8,6 bi</b> e dobra com a demanda por biodiesel (Fortune Business Insights).</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, compra esse material de hotéis e restaurantes: <b>R$ 1,00 a R$ 2,50/litro</b>, coleta programada (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS)</b> e relatório ESG mensal — argumento forte para o setor de hospitalidade, que presta contas de sustentabilidade.</p>
+<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante preço e prioridade.</p>
+<p><b>Quanto a cozinha gera por mês (litros)?</b> Com esse número mando a estimativa em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
+</div>"""
+        }
     return {
         "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
