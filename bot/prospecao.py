@@ -164,25 +164,24 @@ def tpl_apresentacao(cfg, lead):
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
 <p>Cada loja com padaria, rotisserie e açougue gera <b>óleo de fritura toda semana</b> — e o que sai de graça virou commodity: o mercado global de óleo usado vale <b>US$ 8,6 bi</b> e deve dobrar com a demanda por biodiesel (Fortune Business Insights).</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, compra de redes inteiras: <b>R$ 1,00 a R$ 2,50/litro</b>, coleta programada por loja (semana fixa), bombonas fornecidas, certificado de destinação (PNRS) e <b>relatório ESG mensal</b> para a rede. Redes já tratam isso como receita — o Grupo Madero fechou contrato de <b>55 mil L/mês</b> (270 restaurantes) com coletora.</p>
-<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante preço e prioridade.</p>
-<p><b>Quanto a rede gera por mês (litros)?</b> Com esse número eu mando a estimativa em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta do óleo de fritura</b> de redes inteiras: coleta programada por loja (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS)</b> e <b>relatório ESG mensal</b> para a rede — a rede zera o passivo ambiental e ainda recebe pelo material. Redes já tratam isso como receita — o Grupo Madero fechou contrato de <b>55 mil L/mês</b> (270 restaurantes) com coletora.</p>
+<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante prioridade.</p>
+<p><b>Quanto a rede gera por mês (litros)?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
 </div>"""
         }
-    # Ângulo específico: indústrias que geram vencidos com >40% de gordura
+    # Ângulo específico: indústrias que geram vencidos com >40% de gordura (material oleoso)
     if any(k in segmento for k in ["margarina", "manteiga", "maionese", "gordura",
                                     "laticinio", "creme vegetal", "oleos vegetais",
-                                    "laticínios", "gorduras", "queijo", "queijos",
-                                    "requeijao", "requeijão", "laticinios", "doce"]):
+                                    "laticínios", "gorduras"]):
         return {
-            "subject": f"Produtos vencidos com gordura vale dinheiro — compramos ({cidade})",
+            "subject": f"Destinação de vencidos com gordura — resolvemos seu passivo ({cidade})",
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
-<p>Indústrias de {segmento} têm um problema caro: <b>produtos vencidos</b> que precisam de destinação segura — sem voltar ao mercado e sem passivo no CNPJ.</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, <b>compra resíduos com &gt;40% de gordura</b> (manteiga, margarina, maionese, gordura vegetal vencidas) para <b>biodiesel</b>. A <b>descaracterização completa é cortesia nossa</b> — destruímos embalagens e produto, emitimos certificado de destinação (ANVISA/Receita) e você deixa de pagar para descartar.</p>
-<p>O valor varia conforme o material e a facilidade de separação do óleo — <b>mande uma relação do que você tem (tipo e kg/mês)</b> que enviamos a proposta em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-<p>Abraço,<br><b>{g['nome']}</b> · Compra de resíduos com &gt;40% de gordura · {cidade}</p>
+<p>Indústrias de {segmento} têm um problema caro: <b>produtos vencidos</b> (margarina, manteiga, maionese, gordura vegetal) que precisam de destinação segura — sem voltar ao mercado e sem passivo no CNPJ.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta de resíduos com &gt;40% de gordura</b> para <b>biodiesel</b>, com <b>descaracterização completa (cortesia)</b> e <b>certificado de destinação</b> (ANVISA/Receita). Você zera o passivo e ainda recebe um valor pelo material.</p>
+<p><b>O que vocês têm disponível hoje?</b> Mande a relação do material (tipo e volume) que avaliamos e retornamos com a proposta. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Destinação de resíduos com &gt;40% de gordura · {cidade}</p>
 </div>"""
         }
     # Ângulo específico: indústrias que lavam/lubrificam máquinas com óleo vegetal
@@ -196,8 +195,8 @@ def tpl_apresentacao(cfg, lead):
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
 <p>Indústrias de {segmento} usam <b>óleo vegetal na limpeza e lubrificação das máquinas</b> de produção — e esse óleo, depois de usado, tem valor. Já coletamos para a <b>Catalent</b> (unidades de Indaiatuba e Sorocaba), uma das maiores fabricantes de cápsulas do mundo.</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, <b>compra óleo vegetal usado de limpeza de máquinas</b> (pagamos por litro/kg), com coleta programada, bombonas fornecidas e <b>certificado de destinação + MTR</b> para a auditoria da Anvisa.</p>
-<p><b>Quanto de óleo vegetal a produção usa por mês?</b> Com esse número mando a estimativa em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta do óleo vegetal usado de limpeza de máquinas</b>, com coleta programada, bombonas fornecidas e <b>certificado de destinação + MTR</b> para a auditoria da Anvisa. Já coletamos para a <b>Catalent</b> (Indaiatuba e Sorocaba), uma das maiores fabricantes de cápsulas do mundo.</p>
+<p><b>Quanto de óleo vegetal a produção usa por mês?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo vegetal usado industrial · {cidade}</p>
 </div>"""
         }
@@ -212,9 +211,9 @@ def tpl_apresentacao(cfg, lead):
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
 <p>Cozinha de hotel com pensão completa é <b>fritura todos os dias</b> (café da manhã, almoço e jantar) — e o óleo usado, que hoje sai de graça, virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8,6 bi</b> e dobra com a demanda por biodiesel (Fortune Business Insights).</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, compra esse material de hotéis e restaurantes: <b>R$ 1,00 a R$ 2,50/litro</b>, coleta programada (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS)</b> e relatório ESG mensal — argumento forte para o setor de hospitalidade, que presta contas de sustentabilidade.</p>
-<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante preço e prioridade.</p>
-<p><b>Quanto a cozinha gera por mês (litros)?</b> Com esse número mando a estimativa em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta</b> do óleo de fritura de hotéis: coleta programada (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS)</b> e relatório ESG mensal — argumento forte para o setor de hospitalidade, que presta contas de sustentabilidade. O hotel zera o passivo ambiental e ainda recebe pelo material.</p>
+<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante prioridade.</p>
+<p><b>Quanto a cozinha gera por mês (litros)?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
 </div>"""
         }
@@ -223,9 +222,9 @@ def tpl_apresentacao(cfg, lead):
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead.get('nome','')}.</p>
 <p>O óleo de fritura da <b>{lead.get('empresa','')}</b> hoje sai de graça — mas virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8 bi</b> e deve dobrar com a demanda por biodiesel e combustível de aviação.</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, compra esse material: <b>pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) e coleta programada.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta desse material</b> — coleta programada, bombonas fornecidas e <b>certificado de destinação (PNRS)</b>: você zera o passivo ambiental e ainda recebe pelo óleo.</p>
 <p>E há urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — demanda garantida para quem tiver contrato de coleta.</p>
-<p><b>Quanto vocês geram por mês (litros ou kg)?</b> Com esse número eu te mando a estimativa de valor em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p><b>Quanto vocês geram por mês (litros ou kg)?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
 </div>"""}
 

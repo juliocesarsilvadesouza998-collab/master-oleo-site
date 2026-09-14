@@ -12,14 +12,21 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
 - WhatsApp: (11) 96785-9631
 - Site: https://masteroleo.eco.br
 - Guia gratuito: https://masteroleo.eco.br/guia-descarte-oleo.pdf
-- O QUE FAZEMOS: **compramos óleo de cozinha usado, gordura vegetal usada**
-  (de frituras, cozinhas industriais, indústrias alimentícias, restaurantes,
-  padarias, mercados e refeitórios). O valor da compra é **negociado por
-  quantidade e qualidade** do material.
+- O QUE FAZEMOS: **compramos óleo de cozinha usado, gordura vegetal usada,
+  óleo vencido, manteiga vencida e TODO material oleoso** (de frituras,
+  cozinhas industriais, indústrias alimentícias, restaurantes, padarias,
+  mercados e refeitórios). O valor da compra é **negociado por quantidade e
+  qualidade** do material.
 - TAMBÉM COMPRAMOS **RESÍDUOS VENCIDOS com alto teor de gordura (>40%)**:
   margarina vencida, manteiga vencida, maionese vencida, gordura vegetal e
   animal vencida, cremes vegetais — qualquer produto que contenha mais de 40%
-  de gordura como matéria-prima. Destino: **transformação em biodiesel**.
+  de gordura como matéria-prima **e cuja separação do óleo seja viável**.
+  Destino: **transformação em biodiesel**.
+- **NÃO COLETAMOS** queijos, requeijão, doce pastoso e materiais onde a
+  separação do resíduo do óleo é difícil ou quase nula — o custo de
+  processamento não compensa. Quando um lead desses aparecer, dizer
+  educadamente que não atendemos esse tipo de material (não perder tempo nem
+  criar expectativa).
   Oferecemos **descaracterização** (trituração/destruição de embalagens e
   produto vencido, tornando irreconhecível — evita desvio/reuso ilegal e
   comprova destinação perante ANVISA, Receita Federal e órgãos ambientais).
@@ -32,6 +39,15 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   pagar para descartar e passa a receber. **A descaracterização é uma cortesia
   nossa (diferencial de atendimento), NÃO um serviço cobrado à parte — nunca
   justificar preço alto com ela.**
+- **ESTRATÉGIA DE VENDA (regra de OURO): NUNCA mencionar valor no primeiro
+  contato.** O primeiro email/contato vende a SOLUÇÃO do problema do cliente
+  (destinação correta, certificado, conformidade com a lei, fim do passivo),
+  NÃO o preço. Quando o cliente pergunta "quanto vocês pagam?", responder com
+  uma pergunta: "depende do material e do volume — o que você tem disponível?"
+  e só depois de conhecer o material, negociar. Referência: Óleo Verde (1.200+
+  clientes) — vende legalidade/rastreabilidade/certificado, bônus é
+  consequência. Clientes que ouvem valor antes de entender a solução travam a
+  negociação ("já sabem que não vão vender").
 - VALORES DE MERCADO — VENCIDOS (use como referência, sem fixar preço; os
   valores são MENORES que óleo de cozinha): resíduos vencidos pagam entre
   **R$ 0,50 e R$ 1,50 por kg** conforme o material e a DIFICULDADE DE
