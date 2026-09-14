@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-14T15:31-03:00",
+ "atualizado_em": "2026-09-14T16:04-03:00",
  "atividade_tick_12h35_14_09": {
   "rodadas_no_dia": 3,
   "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 47 (205 leads no CSV)",
@@ -1170,15 +1170,15 @@
   "observacao": "Tick 100% verde e estável (mesmo cenário dos ticks 16:01 e 16:31): watchdog saudável, 0 respostas pendentes (confirmado em dobro), 0 follow-ups atrasados, 0 leads novos, 0 bounces novos, fila de prospecção sem pendentes. Caixa limpa desde a Selmi (10:08). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
  },
  "resumo": {
- "total_leads": 215,
- "leads_ativos": 163,
- "bounces": 48,
- "pipeline": {
-  "novo": 129,
-  "sequencia": 34,
-  "respondido": 16,
-  "bounce": 30,
-  "encerrado": 6
+  "total_leads": 215,
+  "leads_ativos": 163,
+  "bounces": 48,
+  "pipeline": {
+   "novo": 129,
+   "sequencia": 34,
+   "respondido": 16,
+   "bounce": 30,
+   "encerrado": 6
   }
  },
  "atividade_tick_11h33_09_09": {
@@ -1561,5 +1561,23 @@
   "pipeline_snapshot_15h31": "215 leads / 129 novo / 34 sequencia / 16 respondido / 30 bounce (CSV) / 48 cache / 6 encerrado / 163 ativos (watchdog)",
   "dashboard": "gerado 15:34: 181 apresentações / 153 entregues / 28 bounces (15%) / 14 respostas / taxa 7,7% / 136 aguardando / 33 inbound",
   "observacao": "Tick 15:31 14/09 (segunda-feira) — rotina 100% verde (5º tick do dia, todos saudáveis). Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados), followups 0, send_sequence nada devido, check-replies 0 pendentes (replies_pending.json = []). Nenhuma resposta comercial pendente — nada a responder. Base CRESCEU: 213 → 215 leads (CSV: 129 novo / 34 sequencia / 16 respondido / 30 bounce / 6 encerrado; watchdog 215/163/48) — Prospector repôs a fila (+2 empresas, fila 167/156/33/0, bounce 32→33). Dashboard 15:34: 181/153/28 (15%)/14 respostas/7,7%/136 aguardando/33 inbound. Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp vencidos em aberto para ação humana: Selmi (11/09), Savegnago e Grupo IMC (10/09); Confiança e Andorinha em stand by (renovação ~2-3 meses); FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45, 5 hotéis e lote óleos aguardando resposta/entrada na sequência."
+ },
+ "atividade_tick_16h01_14_09": {
+  "rodadas_no_dia": 6,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 48 (215 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (48 bounces do cache já com tentativa registrada; todos já tentados)",
+  "watchdog": "exit 0 no 1º run — SAUDÁVEL: 215 leads / 163 ativos / 48 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados (20º tick verde consecutivo)",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "0 pendentes — caixa limpa (replies_pending.json = [])",
+  "scan_inbox": "não executado (check-replies confirmou caixa limpa)",
+  "respostas_enviadas": "0 neste tick — nenhuma resposta comercial pendente",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (sexto tick do dia)",
+  "enviar_lote_status": "fila: 167 empresas / 156 contatados / 33 bounce / 0 pendentes — FILA ZERADA",
+  "leads_novos": [],
+  "pipeline_snapshot_16h01": "215 leads / 129 novo / 34 sequencia / 16 respondido / 30 bounce (CSV) / 48 cache / 6 encerrado / 163 ativos (watchdog)",
+  "dashboard": "gerado 16:03: 181 apresentações / 153 entregues / 28 bounces (15%) / 14 respostas / taxa 7,7% / 136 aguardando / 33 inbound",
+  "observacao": "Tick 16:01 14/09 (segunda-feira) — rotina 100% verde (20º tick verde consecutivo). Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados), followups 0, send_sequence nada devido, check-replies 0 pendentes (caixa limpa). Funil segue acima da meta (7,7% > 3%) pelo 2º mês. Fila de prospecção zerada (167/156/33/0) — reposição do Prospector segue como gargalo. Nenhuma resposta comercial nova; sem pedidos de relatório ESG. Leads quentes mantidos para ação humana: Queijos Itupeva (coleta-teste), Savegnago, Grupo IMC e Selmi (toques WhatsApp vencidos)."
  }
 }

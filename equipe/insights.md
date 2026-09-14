@@ -5094,3 +5094,36 @@ Tick de rotina totalmente saudável: watchdog exit 0 de primeira, caixa limpa (0
 ### Nota
 
 Tick de rotina totalmente saudável: watchdog exit 0 de primeira, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), sem follow-ups atrasados, fila zerada (167/156/33/0). Única novidade: base cresceu 213→215 leads (reposição do Prospector) e o bounce da fila subiu 32→33. Nenhuma resposta comercial pendente. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda-feira) — ATENDENTE (tick 16:01)
+
+### Resumo do tick
+
+- **Pipeline (snapshot 16:01)**: **215 leads** (CSV: 129 novo / 34 sequencia / 16 respondido / 30 bounce / 6 encerrado) · **163 ativos** · **48 bounces (cache)**. Dashboard 16:03: **181 apresentações / 153 entregues / 28 bounces (15%) / 14 respostas / taxa 7,7%** (meta >3%) — funil acima da meta pelo 2º mês consecutivo (20º tick verde no watchdog).
+- **Sync**: Formspree OK (0 notificações novas); corrigir_emails OK (0 processados, todos já tentados).
+- **Watchdog**: exit 0 de primeira — SMTP OK · IMAP OK, nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.
+- **Sequência**: send_sequence processado (nenhum envio devido).
+- **Caixa**: check-replies **0 respostas pendentes** (replies_pending.json = []). **0 respostas enviadas. Nenhum pedido de relatório ESG** (nenhum PDF gerado).
+- **Fila de prospecção**: 167 empresas / 156 contatados / **33 bounce** / **0 pendentes** — FILA ZERADA (reposição do Prospector segue como gargalo).
+
+### Problemas encontrados e correções
+
+1. Nenhum problema neste tick (watchdog exit 0 de primeira — 6º tick do dia, todos verdes).
+2. Pendências estruturais mantidas: fila de prospecção zerada (cadência 5-8/dia do Prospector segue necessária); Netlify sem créditos (403) — GitHub Pages segue como único no ar; leads sem id no CSV aguardando backfill.
+3. Toques WhatsApp humanos vencidos (ação humana em aberto): Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).** Atenção para não duplicar insistência com o Paulistão Atacadista (bandeira do grupo, FP2 reenviado 14:36).
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **Monitorar respostas recém-enviadas:** Coocerqui (cooperativa de consumo, Cerquilho — V4) e Meqso (distribuidora, Jundiaí — óleo vencido), enviados 15:01 — primeiras respostas podem chegar nos próximos dias.
+6. **8 leads do segmento óleos/distribuição com boas-vindas no ar desde 14:01** (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista) — fit perfeito para óleo vegetal vencido e óleo de limpeza de máquinas.
+7. **Andorinha Hiper Center (SALTO)** — loja na cidade-base; recontato no ciclo de renovação do coletor (~2-3 meses).
+
+### Nota
+
+Tick de rotina totalmente saudável: watchdog exit 0 de primeira (20º verde consecutivo), caixa limpa (0 respostas pendentes, 0 pedidos de ESG), sem follow-ups atrasados, fila zerada (167/156/33/0). Nenhuma resposta comercial pendente — nada para negociar neste tick. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
