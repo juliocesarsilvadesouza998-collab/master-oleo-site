@@ -12,10 +12,14 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
 - WhatsApp: (11) 96785-9631
 - Site: https://masteroleo.eco.br
 - Guia gratuito: https://masteroleo.eco.br/guia-descarte-oleo.pdf
-- O QUE FAZEMOS: **compramos óleo de cozinha usado, gordura vegetal usada,
-  óleo vencido, manteiga vencida e TODO material oleoso** (de frituras,
-  cozinhas industriais, indústrias alimentícias, restaurantes, padarias,
-  mercados e refeitórios). O valor da compra é **negociado por quantidade e
+- O QUE FAZEMOS: **compramos ÓLEO VEGETAL VENCIDO** (garrafas/potes/tambores
+  de óleo de cozinha vencido, de indústrias, distribuidoras, supermercados e
+  atacadistas) **E ÓLEO DE FRITURA USADO** (de restaurantes, padarias,
+  mercados, cozinhas industriais e refeitórios), além de **gordura vegetal
+  usada, óleo vencido, manteiga vencida e TODO material oleoso**. **Os dois
+  produtos principais: (1) óleo vegetal vencido** — estoque parado que venceu
+  e virou passivo — **e (2) óleo de fritura usado** — geração contínua de
+  cozinhas comerciais. O valor da compra é **negociado por quantidade e
   qualidade** do material.
 - TAMBÉM COMPRAMOS **RESÍDUOS VENCIDOS com alto teor de gordura (>40%)**:
   margarina vencida, manteiga vencida, maionese vencida, gordura vegetal e

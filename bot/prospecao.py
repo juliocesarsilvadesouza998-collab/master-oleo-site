@@ -170,6 +170,20 @@ def tpl_apresentacao(cfg, lead):
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
 </div>"""
         }
+    # Ângulo específico: ÓLEO VEGETAL VENCIDO — produto carro-chefe (indústrias,
+    # distribuidoras, atacadistas, supermercados com estoque de óleo vencido)
+    if any(k in segmento for k in ["oleo", "óleo", "oleos", "óleos", "soja", "girassol",
+                                    "canola", "milho", "azeite", "refino", "esmagamento"]):
+        return {
+            "subject": f"Óleo vegetal vencido parado no estoque? Destinamos com certificado ({cidade})",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Estoque de <b>óleo vegetal vencido</b> (garrafas, potes, tambores) é passivo: ocupa espaço, vira prejuízo e precisa de destinação segura — sem risco de desvio e com comprovação legal.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta de óleo vegetal vencido</b> para <b>biodiesel</b>, com <b>descaracterização completa (cortesia)</b>, <b>certificado de destinação</b> (ANVISA/Receita) e coleta programada. Você zera o passivo e ainda recebe pelo material.</p>
+<p><b>Quanto de óleo vencido vocês têm parado hoje?</b> Mande o volume (litros) que avaliamos e retornamos com a proposta. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Destinação de óleo vegetal vencido · {cidade}</p>
+</div>"""
+        }
     # Ângulo específico: indústrias que geram vencidos com >40% de gordura (material oleoso)
     if any(k in segmento for k in ["margarina", "manteiga", "maionese", "gordura",
                                     "laticinio", "creme vegetal", "oleos vegetais",
