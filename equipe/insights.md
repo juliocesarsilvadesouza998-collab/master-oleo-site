@@ -1,3 +1,23 @@
+## 2026-09-14 (segunda) — BOT DE SEO (tick 10:07)
+
+### 📊 Posição real no Bing (--rank --max-rank 10)
+- **Site no ar (HTTP 200) e SEO geral: OK** — todas as 22 keywords monitoradas **"presente"** no conteúdo, sitemap.xml presente.
+- **Ranking: TODAS fora do top 20 do Bing** (10/10 consultadas: coleta de óleo usado salto sp, compra de óleo usado, descaracterização de alimentos vencidos, margarina/manteiga/maionese vencida, óleo usado biodiesel, óleo vegetal limpeza de máquinas, quanto vale o óleo de cozinha usado, quem compra margarina vencida...). **Estado honesto: site indexado mas sem posição — normal para site novo (~1 semana de artigos); precisa de semanas/meses de maturação. Nenhuma posição inventada.**
+- Histórico salvo em equipe/seo.json (61 registros).
+
+### 🔧 Melhorias aplicadas (máx 3 por tick)
+1. **Artigo novo**: `deploy-vercel/blog/quem-compra-gordura-vegetal-usada.html` — página dedicada à keyword alvo **"compra de gordura vegetal usada"** (antes só menção solta no index/industrias; agora com title otimizado, meta description, canonical, CTA WhatsApp (11) 96785-9631, links internos "Leia também", ~860 palavras, tabela de preços por kg 2026). HTML validado (pares de tags OK).
+2. **Sitemap atualizado**: `deploy-vercel/sitemap.xml` + URL do artigo novo (8 artigos de blog no total).
+3. **Link interno novo**: `deploy-vercel/index.html` (#blog) — card para o artigo de gordura vegetal usada (8/8 artigos linkados na home).
+
+### ⚡ Indexação rápida
+- **IndexNow enviado com HTTP 200 (aceito)**: URL nova + sitemap para api.indexnow.org (chave 52262f94…, keyLocation https://masteroleo.eco.br/indexnow-key.txt).
+
+### Nota
+Site tecnicamente completo (Schema.org LocalBusiness + FAQPage no index, canonical/meta em todas as páginas, 8 artigos, sitemap, robots, IndexNow). Agora é jogo de espera: Bing precisa de semanas para posicionar; próximo tick pode re-rodar --rank para acompanhar. Sem ação urgente.
+
+---
+
 ## 2026-09-14 (segunda) — ATENDENTE (tick 09:02)
 
 ### ✅ Tick limpo — pipeline 100% verde (watchdog exit 0 de primeira, 12º tick consecutivo)
