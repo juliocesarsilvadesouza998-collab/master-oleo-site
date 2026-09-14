@@ -131,9 +131,18 @@ def process_notifications(args):
         if bounces:
             save_bounces(bounces)
             # marca leads existentes com email que deu bounce
+            # ATENÇÃO (correção 13/09 — Estrategista): NUNCA rebaixar status
+            # terminais/de conversa viva. Lead `encerrado` (fechado por decisão)
+            # ou `respondido` (email COMPROVADAMENTE funcional — a pessoa
+            # respondeu!) não pode voltar a `bounce` só porque um endereço
+            # antigo/alternativo está no cache. Caso real: Rede Top (id 142)
+            # voltava a bounce a cada tick, inflando os bounces do CSV.
             mudou = False
             for l in leads:
-                if l.get("email","").strip().lower() in bounces and l.get("status") != "bounce":
+                st = l.get("status", "")
+                if st in ("encerrado", "respondido"):
+                    continue
+                if l.get("email","").strip().lower() in bounces and st != "bounce":
                     l["status"] = "bounce"
                     l["ultima_resposta"] = "EMAIL INVÁLIDO (bounce) — não reenviar"
                     mudou = True

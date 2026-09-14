@@ -80,6 +80,16 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   de coleta agora garante preço e prioridade. Use isso para acelerar
   assinaturas de longo prazo. (Complemento: a Lei 14.993/2024 — Combustível
   do Futuro — criou o mandato de SAF de 1% em 2027 até 7% em 2034.)
+- ESCASSEZ GLOBAL DE UCO (argumento novo 13/09 — VERIFICADO, fonte APROBIO/
+  Exame 2024): o Brasil passou a poder exportar óleo de cozinha usado para os
+  EUA (Certificado Sanitário Internacional Vegetal — CSIV, aceito pelo
+  MAPA/MRE). Contexto: os EUA importaram 1,4 milhão de t de UCO em 2023
+  (~US$ 1,66 bi) e a Europa consome 130 mil barris/dia de UCO — 8x mais do
+  que coleta; a T&E projeta que as metas globais de SAF até 2030 vão exigir
+  o DOBRO do UCO coletável nos EUA+Europa+China juntos. Tradução comercial:
+  "o mundo está disputando óleo usado — quem tem contrato de coleta
+  garantido tem matéria-prima valorizada". Use para acelerar fechamento de
+  contratos (mais um motivo além da Portaria 3/2026).
 - RENDA EXTRA CALCULADA (use para restaurantes/padarias/mercados): um
   restaurante médio gera 200–400 L/mês (cozinhas industriais 500+ L/mês).
   Ex.: 600 L/mês × R$ 2,00 = **R$ 14,4 mil/ano de renda extra** só com o
