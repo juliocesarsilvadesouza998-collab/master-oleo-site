@@ -244,5 +244,19 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-14T09:41:02-03:00"
+  },
+  {
+    "email_antigo": "eaparecida@manchesterartesanal.com",
+    "empresa": "Laticinios Manchester Ltda",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-14T10:00:55-03:00"
+  },
+  {
+    "email_antigo": "atendimento@thebestsalgados.com.br",
+    "empresa": "TBS Santos Industria e Comercio de Alimentos Ltda (The Best Salgados)",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-14T10:01:00-03:00"
   }
 ]

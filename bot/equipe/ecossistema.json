@@ -1,5 +1,41 @@
 {
- "atualizado_em": "2026-09-14T09:47-03:00",
+ "atualizado_em": "2026-09-14T12:35-03:00",
+ "atividade_tick_12h35_14_09": {
+  "rodadas_no_dia": 3,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 47 (205 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (27 bounces do cache já com tentativa registrada; 2 buscas sem alternativa válida: Laticinios Manchester e TBS Santos — manter contatos originais)",
+  "watchdog": "exit 0 no 1º run — SAUDÁVEL: 205 leads / 154 ativos / 47 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados (3º tick consecutivo verde após patch do timeout IMAP 45s)",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "1 pendente detectado — Mars Brasil (contact@br.mars.com, 14/09 15:31 UTC, via thread): AUTO-RESPOSTA de SAC corporativo (Salesforce/sfdc.net, corpo genérico 'encaminhamos ao departamento responsável, entraremos em contato oportunamente') — lead 189 JÁ arquivado como encerrado pelo arquivar_sac_auto.py no tick 09:47 (mesma classificação do caso Mars/Nestlé/Vitafor). CORREÇÃO APLICADA em bot_oleo.py: check_replies agora IGNORA leads com status 'encerrado' (evita re-flagar auto-respostas SAC já arquivadas a cada tick). Re-run → 0 pendentes; replies_pending.json vazio ([])",
+  "scan_inbox": "não executado neste tick (check-replies re-rodado após correção confirmou caixa limpa)",
+  "respostas_enviadas": "0 neste tick — NENHUMA resposta comercial: a única pendência (Mars Brasil) era auto-resposta SAC descartável (porta fechada, sem conteúdo comercial; responder seria inútil e queimaria reputação — Mars pede para não responder)",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (terceiro tick do dia)",
+  "enviar_lote_status": "fila: 165 empresas / 154 contatados / 32 bounce / 0 pendentes — FILA ZERADA",
+  "leads_novos": [],
+  "pipeline_snapshot_12h35": "205 leads / 128 novo / 26 sequencia / 16 respondido / 29 bounce (CSV) / 47 cache / 6 encerrado / 154 ativos (watchdog)",
+  "dashboard": "gerado 12:35: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% / 135 aguardando / 25 inbound",
+  "observacao": "Tick 12:35 14/09 (segunda-feira) — rotina 100% verde (3º tick do dia, todos saudáveis). Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados), followups 0, send_sequence nada devido. Único evento: check-replies flagou 1 pendente — Mars Brasil (contact@br.mars.com) com AUTO-RESPOSTA de SAC (Salesforce). Lead 189 já estava arquivado como encerrado (auto-resposta SAC) desde o tick 09:47 (arquivar_sac_auto.py). O check-replies voltou a listar porque não filtrava leads encerrados — CORREÇÃO APLICADA em bot_oleo.py (check_replies ignora status 'encerrado'), re-run confirmou 0 pendentes. Nenhuma resposta comercial enviada (correto: auto-resposta SAC é porta fechada). Fila de prospecção zerada (165/154/32/0). Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp vencidos em aberto para ação humana: Selmi (11/09), Savegnago e Grupo IMC (10/09); Confiança em stand by (protocolo 236485); Andorinha recontato no ciclo de renovação; FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45 (ids 196-205) e 5 hotéis do lote 12/09 14:32 aguardando resposta/entrada na sequência."
+ },
+ "atividade_tick_10h03_14_09": {
+  "rodadas_no_dia": 2,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 47 (205 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (25 leads com tentativa já registrada; 2 buscas sem alternativa válida: Laticinios Manchester e TBS Santos — manter contatos originais); 0 bounces processados",
+  "watchdog": "exit 1 no 1º run — IMAP inacessível (The read operation timed out, timeout=10s do watchdog) → CORRIGIDO: timeout do IMAP aumentado de 10s para 45s em watchdog.py (Gmail demora no handshake TLS; teste manual IMAP4_SSL timeout=45s confirmou login OK, 157 msgs na INBOX) → re-run exit 0 — SAUDÁVEL: 205 leads / 154 ativos / 47 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "OK (re-rodado após correção do IMAP) — 0 respostas pendentes; replies_pending.json vazio ([]) — nada a atender neste tick",
+  "scan_inbox": "não executado neste tick (check-replies duplo já confirmou caixa limpa)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta humana pendente; caixa limpa)",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (segundo tick do dia)",
+  "enviar_lote_status": "fila: 165 empresas / 154 contatados / 32 bounce / 0 pendentes — FILA ZERADA",
+  "leads_novos": [],
+  "pipeline_snapshot_10h03": "205 leads / 130 novo / 26 sequencia / 16 respondido / 27 bounce (CSV) / 47 cache / 6 encerrado / 154 ativos (watchdog)",
+  "dashboard": "ref. tick 09:47: 179 apresentações / 154 entregues / 25 bounces (14%) / 14 respostas / taxa 7,8% / 137 aguardando / 25 inbound",
+  "observacao": "Tick 10:03 14/09 (segunda-feira) — rotina verde após 1 correção real. Watchdog acusou IMAP inacessível (timeout de leitura) no 1º run: causa era o timeout fixo de 10s do próprio watchdog (Gmail às vezes excede no handshake TLS) — teste manual com timeout=45s logou e leu a INBOX (157 msgs) sem problema; patch em watchdog.py (timeout 10→45s, docstring atualizada) e re-run exit 0. Sync OK (0 notificações), corrigir_emails OK (0 processados; Manchester e TBS Santos sem email alternativo — manter originais), followups 0, send_sequence nada devido, check-replies re-rodado após correção → 0 pendentes (caixa limpa confirmada). Fila de prospecção zerada (165/154/32/0). Nenhuma resposta nova de lead (última: Andorinha 12/09 12:02, recusa cordial); nenhum lead novo desde o lote laticínios 09:44-45. Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp vencidos em aberto para ação humana: Selmi (11/09), Savegnago e Grupo IMC (10/09); Confiança em stand by (protocolo 236485); Andorinha recontato no ciclo de renovação; FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45 (ids 196-205) e 5 hotéis do lote 12/09 14:32 aguardando resposta/entrada na sequência."
+ },
  "atividade_tick_09h09_14_09": {
   "rodadas_no_dia": 1,
   "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 44 (186 leads no CSV)",
@@ -1072,7 +1108,8 @@
   "Monitorar: resposta do comercial da Savegnago (prazo 10/09), do Felix Costa (Grupo IMC, prazo 10/09) e do compras@ da Selmi (prazo 11/09).",
   "RESOLVIDO (07/09 ~12:40): check-replies não capturava respostas via plataformas (BuzzMonitor/Zendesk/Movidesk). Correção implementada e validada com teste sintético: correlação por References/In-Reply-To contra msgids enviados (pasta Enviados indexada em lote único, 524 msgids) + match de domínio de plataforma + assunto. Novo script scan_inbox.py para varredura manual de contingência.",
   "INFO (tick 15:01): bounce de Supermercados Alvorada (sac@alvoradasorocaba.com.br) confirmado por notificação mailer-daemon; lead já estava com status bounce no CSV — sem ação pendente.",
-  "INFO (tick 10:02): Confiança Supermercados (lead 171) respondeu STAND BY — óleo já comprometido com concorrente pagando acima de R$2,50/L. Não insistir; retorno agendado para meses à frente. Toque WhatsApp da Selmi é a ação humana de HOJE (11/09)."
+  "INFO (tick 10:02): Confiança Supermercados (lead 171) respondeu STAND BY — óleo já comprometido com concorrente pagando acima de R$2,50/L. Não insistir; retorno agendado para meses à frente. Toque WhatsApp da Selmi é a ação humana de HOJE (11/09).",
+  "14/09 11:31: tick verde — 0 respostas novas, 0 leads novos, 0 bounces; watchdog exit 0 no 1º run (patch IMAP 45s segurando); fila zerada (165/154/32/0). Ação humana segue em aberto: toques WhatsApp Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09); Queijos Itupeva aguarda coleta-teste."
  ],
  "atividade_tick_10h31_08_09": {
   "sync_formspree": "0 novas notificações; 38 emails em bounce cache (nenhum lead novo via site)",
@@ -1124,15 +1161,15 @@
   "observacao": "Tick 100% verde e estável (mesmo cenário dos ticks 16:01 e 16:31): watchdog saudável, 0 respostas pendentes (confirmado em dobro), 0 follow-ups atrasados, 0 leads novos, 0 bounces novos, fila de prospecção sem pendentes. Caixa limpa desde a Selmi (10:08). Próximos marcos: 10/09 toque WhatsApp Savegnago + Grupo IMC (sem retorno desde 07/09); 11/09 Selmi (compras@selmi.com.br, aberto 08/09 10:08)."
  },
  "resumo": {
-  "total_leads": 186,
-  "leads_ativos": 141,
-  "bounces": 44,
+  "total_leads": 205,
+  "leads_ativos": 154,
+  "bounces": 47,
   "pipeline": {
-   "novo": 115,
+   "novo": 128,
    "sequencia": 26,
    "respondido": 16,
-   "bounce": 27,
-   "encerrado": 2
+   "bounce": 29,
+   "encerrado": 6
   }
  },
  "atividade_tick_11h33_09_09": {
@@ -1452,5 +1489,23 @@
   "pipeline_snapshot_09h47": "205 leads / 130 novo / 26 sequencia / 16 respondido / 27 bounce (CSV) / 6 encerrado / 156 ativos (watchdog)",
   "dashboard": "gerado 09:47: 179 apresentações / 154 entregues / 25 bounces (14%) / 14 respostas / taxa 7,8% / 137 aguardando / 25 inbound",
   "observacao": "Tick 09:47 14/09 (segunda) — rotina saudável após 1 correção real: 2 follow-ups atrasados (FP1 Fugini + Grow Quimica) disparados pelo prospecao_followup. Novidade do tick: 3 auto-respostas de SAC (Mars, Nestlé, Vitafor) chegaram via lote de prospecção de hoje 09:38 — todas descartadas como não-comerciais e leads arquivados encerrado (precedente Sanofi + aprendizado 'SAC corporativo fecha ticket'). Destaque: Vitafor (suplementos) abriu ticket 510438 no Freshdesk — nicho encapsulados/suplementos é alvo (case Catalent); se responderem com gente, o check-replies detecta. 10 leads novos de laticínios (ids 196-205, vetor prioritário) entraram via prospector paralelo 09:44-45 com apresentação enviada. Leads quentes inalterados: Queijos Itupeva #1 (aguardando volumes + coleta-teste), Savegnago/Grupo IMC/Selmi com toques WhatsApp vencidos (ação humana), FP1 supermercados e queijarias aguardando."
+ },
+ "atividade_tick_11h31_14_09": {
+  "rodadas_no_dia": 3,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 47 (205 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (tentativas já registradas para os 27 bounces; Manchester e TBS Santos seguem sem email alternativo — manter contatos originais)",
+  "watchdog": "exit 0 no 1º run — SAUDÁVEL: 205 leads / 154 ativos / 47 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados (patch do timeout IMAP 45s de hoje funcionando — sem falso alarme)",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "OK — 0 respostas pendentes; replies_pending.json vazio ([]) — nada a atender neste tick",
+  "scan_inbox": "OK — 0 mensagens não lidas/recentes na INBOX (confirmação dupla de caixa limpa)",
+  "respostas_enviadas": "0 neste tick (nenhuma resposta humana pendente; caixa limpa)",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (terceiro tick do dia)",
+  "enviar_lote_status": "fila: 165 empresas / 154 contatados / 32 bounce / 0 pendentes — FILA ZERADA",
+  "leads_novos": [],
+  "pipeline_snapshot_11h31": "205 leads / 128 novo / 26 sequencia / 16 respondido / 29 bounce (CSV) / 47 cache / 6 encerrado / 154 ativos (watchdog)",
+  "dashboard": "ref. 11:32: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% / 135 aguardando / 25 inbound",
+  "observacao": "Tick 11:31 14/09 (segunda-feira) — rotina 100% verde, sem correções. Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (patch do timeout IMAP 10s→45s de hoje eliminou o falso alarme — 2º tick consecutivo saudável), followups 0, send_sequence nada devido, check-replies 0 pendentes e scan_inbox confirmou 0 não lidas (caixa limpa por 2 vias). Fila de prospecção zerada (165/154/32/0). Nenhuma resposta nova de lead (última: Andorinha 12/09 12:02, recusa cordial); nenhum lead novo desde o lote laticínios 09:44-45 (ids 196-205). Pipeline estável: 16 respondidos, 26 sequência, 128 novo, 29 bounce CSV. Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp vencidos em aberto para ação humana: Selmi (11/09), Savegnago e Grupo IMC (10/09); Confiança e Andorinha em stand by (renovação ~2-3 meses); FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45 e 5 hotéis aguardando resposta/entrada na sequência."
  }
 }

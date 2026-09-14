@@ -1,3 +1,127 @@
+# Insights — Master Óleo · 14/09/2026 (tick 12:35)
+
+## Resumo do tick (12:35)
+
+- **Pipeline (snapshot 12:35)**: **205 leads** (CSV) · **16 respondidos** · 26 sequência · **128 novos** · 29 bounce (CSV) / **47 cache** · **6 encerrados** · **ativos: 154** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — **3º tick consecutivo verde** após patch do timeout IMAP 45s; 0 atrasados), prospecao_followup ✅ (0), send_sequence ✅ (nada devido), check-replies ⚠️→✅ (**1 pendente tratado — ver correção abaixo**), enviar_lote --status ✅ (**fila zerada**: 165 / 154 contatados / 32 bounce / 0 pendentes).
+- **📩 Pendência do tick = auto-resposta SAC (NÃO respondida, correto)**: **Mars Brasil** (contact@br.mars.com, 14/09 15:31 UTC) respondeu com **auto-resposta genérica de SAC corporativo** (Salesforce/sfdc.net — "encaminhamos ao departamento responsável, entraremos em contato oportunamente"). Lead 189 **já estava arquivado como `encerrado`** pelo `arquivar_sac_auto.py` no tick 09:47 (caso Mars/Nestlé/Vitafor — porta fechada). **Nenhuma resposta comercial enviada** — responder auto-resposta SAC queima reputação.
+- **🔧 Correção real do tick**: o `check-replies` voltou a listar a mensagem da Mars porque **não filtrava leads com status `encerrado`** — a cada tick a mesma auto-resposta reapareceria como pendente. **Patch em bot_oleo.py: `check_replies` agora ignora leads `encerrado`** (linha após o match de lead). Re-run → **0 pendentes**, `replies_pending.json` = `[]`. Sem impacto em leads ativos.
+- **Respostas enviadas**: **0** — nenhuma resposta humana pendente. **Leads novos**: 0. **Bounces novos**: 0. **Emails no tick**: 0.
+- **📊 Dashboard (gerado 12:35)**: 179 apresentações / 152 entregues / 27 bounces (15%) / **14 respostas / taxa 7,8%** (acima da meta de 3%) / 135 aguardando / 25 inbound.
+- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** respondeu com **VOLUME REAL** (10/09): Frescal **200 kg/mês** + manteiga/requeijão/doce **50–100 kg/mês** → proposta ajustada enviada (manteiga R$0,80–1,20/kg; frescal/queijos R$0,50–0,80/kg; **descaracterização cortesia**). **Aguardando relação de volumes + coleta-teste — lead mais próximo de contrato hoje.** Vetor laticínios/vencidos >40% — nicho prioritário.
+2. **Savegnago (comercial@, ~100 lojas):** respondido desde 07/09. **Toque WhatsApp pendente** (sem retorno desde 07/09 — prazo 10/09 vencido, URGENTE — ação humana em aberto). Paulistão Atacadista (id 149) é do mesmo grupo.
+3. **Grupo IMC / Rede Frango Assado:** apresentação enviada 07/09 p/ felix.costa@grupoimc.com.br. **Toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+4. **Selmi (compras@selmi.com.br):** canal comercial indicado 08/09 (Cristina Magalhães). **Toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.** Não reutilizar contato@selmi.com.br (está no cache de bounces).
+5. **Confiança Supermercados — STAND BY (não insistir):** óleo vendido a concorrente por valor ACIMA de R$ 2,50/L → porta aberta para 2ª cotação na renovação; recontatar em ~2–3 meses citando protocolo 236485.
+6. **Andorinha Hiper Center (id 147) — respondeu 12/09 12:02:** **recusa educada** — já possuem coletor contratado, mas guardaram o contato para interesse futuro. Loja em SALTO — registrar recontato no ciclo de renovação do coletor atual.
+7. **FP1 de supermercados aguardando resposta (nicho que mais converte):** Dalben, Paulistão, Amigão (10/09), Enxuto, Tauste, Chimar (11/09) — monitorar nos próximos dias.
+8. **Queijarias (FP1 enviados 12/09, aguardando):** Usina Ipe, Laghi & Tosi, Betins, De Buffalas, Vale dos Anjos, Rima, Caprioles, Cabanha 53 — expansão do vetor laticínios/vencidos >40%.
+9. **Nicho hotelaria (lote 12/09 14:32):** Fazenda Capoava, Itu Garden SPA, Hotel Fazenda Brisa, Thermas de São Pedro, Dona Carolina — cozinhas de hotel geram óleo de fritura diariamente; seguem em 'novo' aguardando entrada na sequência.
+10. **Lote laticínios 09:44-45 (ids 196-205, apresentação enviada):** Goncalves Salles (Laticínios Aviacao), Sítio Piscke, Bom Rech, EmbaVi, Laticínios Manchester, Trani, TBS Santos, Homemade, Leiteria Prosperidade, Queijos Rosa — vetor vencidos >40% em expansão; monitorar respostas.
+
+## Padrão que se confirma
+
+- **Rotina estável, 3º tick consecutivo 100% verde:** watchdog exit 0 de primeira (patch do timeout IMAP 45s segurou), caixa limpa, fila zerada, zero atrasos, zero pendências.
+- **📩 Auto-resposta SAC corporativo NÃO é lead — e agora o bot não re-flagia mais:** 4º caso da semana (Oba, Arcor, Mars/Nestlé/Vitafor, e agora Mars de novo). O `arquivar_sac_auto.py` arquiva como `encerrado`; o `check-replies` agora ignora `encerrado` — **o fluxo inteiro fica consistente: arquivou, nunca mais aparece como pendente.** Mars pede explicitamente "NÃO A RESPONDA" — responder seria inútil e queimaria reputação de domínio.
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) seguem sem toque WhatsApp — três canais comerciais abertos parados há 6–7 dias; Queijos Itupeva aguarda cobrança de volumes + agendamento da coleta-teste (lead nº 1).
+- **Pipeline em ritmo, sem novidades negativas:** 16 respondidos / 26 sequência / 128 novo / 29 bounce CSV; nada entrou, nada saiu — os gatilhos seguem sendo as respostas aos FP1 de supermercados/queijarias/laticínios.
+
+## Próximos passos recomendados
+
+1. **AÇÃO HUMANA (em aberto)**: toque WhatsApp de **Selmi** (prazo 11/09 vencido), **Savegnago** e **Grupo IMC** (prazo 10/09 vencido) — nenhum retorno desde 07–08/09.
+2. **Queijos Itupeva**: cobrar relação de volumes (Frescal 200 kg + manteiga/requeijão/doce 50–100 kg/mês) e **agendar coleta-teste** — lead mais próximo de contrato.
+3. **Confiança e Andorinha**: **não insistir** — registrar ciclo de renovação dos coletores concorrentes e recontatar em ~2–3 meses (Confiança: protocolo 236485; Andorinha: citar o contato guardado).
+4. **Watch**: resposta aos FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45 e entrada dos 5 hotéis na sequência — o pipeline cobre automaticamente.
+5. **Manutenção**: nada pendente — watchdog validado (timeout IMAP 45s) e check-replies com filtro de leads encerrados aplicado neste tick.
+
+---
+
+# Insights — Master Óleo · 14/09/2026 (tick 11:31)
+
+## Resumo do tick (11:31)
+
+- **Pipeline (snapshot 11:31)**: **205 leads** (CSV) · **16 respondidos** · 26 sequência · **128 novos** · 29 bounce (CSV) / **47 cache** · **6 encerrados** · **ativos: 154** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — 27 bounces já com tentativa registrada), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — **2º tick consecutivo saudável após o patch do timeout IMAP 10s→45s**; 0 atrasados), prospecao_followup ✅ (0), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes — caixa limpa**), scan_inbox ✅ (0 não lidas/recentes — confirmação dupla), enviar_lote --status ✅ (**fila zerada**: 165 / 154 contatados / 32 bounce / 0 pendentes).
+- **Respostas enviadas**: **0** — nenhuma resposta humana pendente (`replies_pending.json` = `[]`). **Leads novos**: 0. **Bounces novos**: 0. **Emails no tick**: 0.
+- **📊 Dashboard (ref. 11:32)**: 179 apresentações / 152 entregues / 27 bounces (15%) / **14 respostas / taxa 7,8%** (acima da meta de 3%) / 135 aguardando / 25 inbound.
+- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** respondeu com **VOLUME REAL** (10/09): Frescal **200 kg/mês** + manteiga/requeijão/doce **50–100 kg/mês** → proposta ajustada enviada (manteiga R$0,80–1,20/kg; frescal/queijos R$0,50–0,80/kg; **descaracterização cortesia**). **Aguardando relação de volumes + coleta-teste — lead mais próximo de contrato hoje.** Vetor laticínios/vencidos >40% — nicho prioritário.
+2. **Savegnago (comercial@, ~100 lojas):** respondido desde 07/09. **Toque WhatsApp pendente** (sem retorno desde 07/09 — prazo 10/09 vencido, URGENTE — ação humana em aberto). Paulistão Atacadista (id 149) é do mesmo grupo.
+3. **Grupo IMC / Rede Frango Assado:** apresentação enviada 07/09 p/ felix.costa@grupoimc.com.br. **Toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+4. **Selmi (compras@selmi.com.br):** canal comercial indicado 08/09 (Cristina Magalhães). **Toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.** Não reutilizar contato@selmi.com.br (está no cache de bounces).
+5. **Confiança Supermercados — STAND BY (não insistir):** óleo vendido a concorrente por valor ACIMA de R$ 2,50/L → porta aberta para 2ª cotação na renovação; recontatar em ~2–3 meses citando protocolo 236485.
+6. **Andorinha Hiper Center (id 147) — respondeu 12/09 12:02:** **recusa educada** — já possuem coletor contratado, mas guardaram o contato para interesse futuro. Loja em SALTO — registrar recontato no ciclo de renovação do coletor atual.
+7. **FP1 de supermercados aguardando resposta (nicho que mais converte):** Dalben, Paulistão, Amigão (10/09), Enxuto, Tauste, Chimar (11/09) — monitorar nos próximos dias.
+8. **Queijarias (FP1 enviados 12/09, aguardando):** Usina Ipe, Laghi & Tosi, Betins, De Buffalas, Vale dos Anjos, Rima, Caprioles, Cabanha 53 — expansão do vetor laticínios/vencidos >40%.
+9. **Nicho hotelaria (lote 12/09 14:32):** Fazenda Capoava, Itu Garden SPA, Hotel Fazenda Brisa, Thermas de São Pedro, Dona Carolina — cozinhas de hotel geram óleo de fritura diariamente; seguem em 'novo' aguardando entrada na sequência.
+10. **Lote laticínios 09:44-45 (ids 196-205, apresentação enviada):** Goncalves Salles (Laticínios Aviacao), Sítio Piscke, Bom Rech, EmbaVi, Laticínios Manchester, Trani, TBS Santos, Homemade, Leiteria Prosperidade, Queijos Rosa — vetor vencidos >40% em expansão; monitorar respostas.
+
+## Padrão que se confirma
+
+- **Rotina estável, 2º tick consecutivo 100% verde:** o patch do watchdog (timeout IMAP 10s→45s, aplicado no tick 10:03) segurou — exit 0 no 1º run, sem falso alarme. Caixa limpa confirmada por 2 vias (check-replies + scan_inbox: 0 não lidas). Fila zerada, zero atrasos, zero pendências.
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) seguem sem toque WhatsApp — três canais comerciais abertos parados há 6–7 dias; Queijos Itupeva aguarda cobrança de volumes + agendamento da coleta-teste (lead nº 1).
+- **Pipeline em ritmo, sem novidades negativas:** 16 respondidos / 26 sequência / 128 novo / 29 bounce CSV; nada entrou, nada saiu — os gatilhos seguem sendo as respostas aos FP1 de supermercados/queijarias/laticínios.
+
+## Próximos passos recomendados
+
+1. **AÇÃO HUMANA (em aberto)**: toque WhatsApp de **Selmi** (prazo 11/09 vencido), **Savegnago** e **Grupo IMC** (prazo 10/09 vencido) — nenhum retorno desde 07–08/09.
+2. **Queijos Itupeva**: cobrar relação de volumes (Frescal 200 kg + manteiga/requeijão/doce 50–100 kg/mês) e **agendar coleta-teste** — lead mais próximo de contrato.
+3. **Confiança e Andorinha**: **não insistir** — registrar ciclo de renovação dos coletores concorrentes e recontatar em ~2–3 meses (Confiança: protocolo 236485; Andorinha: citar o contato guardado).
+4. **Watch**: resposta aos FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45 e entrada dos 5 hotéis na sequência — o pipeline cobre automaticamente.
+5. **Manutenção**: nada pendente — watchdog já corrigido (timeout IMAP 45s) e validado em 2 ticks.
+
+---
+
+---
+
+# Insights — Master Óleo · 14/09/2026 (tick 10:03)
+
+## Resumo do tick (10:03)
+
+- **Pipeline (snapshot 10:03)**: **205 leads** (CSV) · **16 respondidos** · 26 sequência · **130 novos** · 27 bounce (CSV) / **47 cache** · **6 encerrados** · **ativos: 154** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — 25 com tentativa já registrada; **Manchester e TBS Santos sem email alternativo**, manter originais), watchdog ⚠️→✅ (**exit 1 no 1º run: IMAP inacessível — timeout de leitura**) → **CORRIGIDO** (ver abaixo) → re-run **exit 0**, prospecao_followup ✅ (0), send_sequence ✅ (nada devido), check-replies ✅ re-rodado após correção (**0 pendentes — caixa limpa confirmada**), enviar_lote --status ✅ (**fila zerada**: 165 / 154 contatados / 32 bounce / 0 pendentes).
+- **🔧 Correção real do tick (falso alarme eliminado)**: watchdog acusou "IMAP inacessível: The read operation timed out". Diagnóstico: o **watchdog usava timeout fixo de 10s** no IMAP4_SSL, curto demais para o handshake TLS do Gmail — teste manual com timeout=45s logou e leu a INBOX (157 msgs) sem nenhum problema, e o próprio check-replies funcionou. **Patch aplicado em watchdog.py: timeout IMAP 10s → 45s** (+ docstring atualizada). Re-run → exit 0, "SMTP OK · IMAP OK", tudo saudável. **Sem impacto operacional real** (nenhuma resposta perdida), mas o falso alarme não volta mais.
+- **Respostas enviadas**: **0** neste tick — nenhuma resposta humana pendente (`replies_pending.json` = `[]`). **Leads novos**: 0. **Bounces novos**: 0.
+- **📊 Dashboard (ref. 09:47)**: 179 apresentações / 154 entregues / 25 bounces (14%) / **14 respostas / taxa 7,8%** (acima da meta de 3%) / 137 aguardando / 25 inbound. **Emails no tick**: 0.
+- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** respondeu com **VOLUME REAL** (10/09): Frescal **200 kg/mês** + manteiga/requeijão/doce **50–100 kg/mês** → proposta ajustada enviada (manteiga R$0,80–1,20/kg; frescal/queijos R$0,50–0,80/kg; **descaracterização cortesia**). **Aguardando relação de volumes + coleta-teste — lead mais próximo de contrato hoje.** Vetor laticínios/vencidos >40% — nicho prioritário.
+2. **Savegnago (comercial@, ~100 lojas):** respondido desde 07/09. **Toque WhatsApp pendente** (sem retorno desde 07/09 — prazo 10/09 vencido, URGENTE — ação humana em aberto). Paulistão Atacadista (id 149) é do mesmo grupo.
+3. **Grupo IMC / Rede Frango Assado:** apresentação enviada 07/09 p/ felix.costa@grupoimc.com.br. **Toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+4. **Selmi (compras@selmi.com.br):** canal comercial indicado 08/09 (Cristina Magalhães). **Toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.** Não reutilizar contato@selmi.com.br (está no cache de bounces).
+5. **Confiança Supermercados — STAND BY (não insistir):** óleo vendido a concorrente por valor ACIMA de R$ 2,50/L → porta aberta para 2ª cotação na renovação; recontatar em ~2–3 meses citando protocolo 236485.
+6. **Andorinha Hiper Center (id 147) — respondeu 12/09 12:02:** **recusa educada** — já possuem coletor contratado, mas guardaram o contato para interesse futuro. Loja em SALTO — registrar recontato no ciclo de renovação do coletor atual.
+7. **FP1 de supermercados aguardando resposta:** Dalben, Paulistão, Amigão (10/09), Enxuto, Tauste, Chimar (11/09) — o nicho que mais converte; monitorar nos próximos dias.
+8. **Queijarias (FP1 enviados 12/09, aguardando):** Usina Ipe, Laghi & Tosi, Betins, De Buffalas, Vale dos Anjos, Rima, Caprioles, Cabanha 53 — expansão do vetor laticínios/vencidos >40%.
+9. **Nicho hotelaria (lote 12/09 14:32):** Fazenda Capoava, Itu Garden SPA, Hotel Fazenda Brisa, Thermas de São Pedro, Dona Carolina — cozinhas de hotel geram óleo de fritura diariamente; seguem em 'novo' aguardando entrada na sequência.
+10. **Lote laticínios 09:44-45 (ids 196-205, apresentação enviada):** Goncalves Salles (Laticínios Aviacao), Sítio Piscke, Bom Rech, EmbaVi, Laticínios Manchester, Trani, TBS Santos, Homemade, Leiteria Prosperidade, Queijos Rosa — vetor vencidos >40% em expansão; monitorar respostas.
+
+## Padrão que se confirma
+
+- **Watchdog funcionou como projetado e o falso alarme foi eliminado:** o teste IMAP do watchdog com timeout de 10s é curto demais para o Gmail (handshake TLS às vezes passa de 10s). Teste manual com 45s: login + leitura OK (157 msgs). Patch em watchdog.py resolveu na hora — próximo tick não deve mais acusar IMAP. Lição: **timeout de 10s para IMAP do Gmail gera falso negativo; 45s é o seguro.**
+- **Nenhuma resposta perdida:** mesmo com o aviso do watchdog, o check-replies (que usa o imap_connect do bot_oleo.py, sem timeout curto) funcionou e confirmou 0 pendentes — caixa limpa por 2 vias.
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) seguem sem toque WhatsApp — três canais comerciais abertos parados há 6–7 dias; Queijos Itupeva aguarda cobrança de volumes + coleta-teste.
+- **Pipeline em ritmo, fila zerada:** 165 empresas na fila, 154 contatados, 0 pendentes — sem backlog.
+
+## Próximos passos recomendados
+
+1. **AÇÃO HUMANA (em aberto)**: toque WhatsApp de **Selmi** (prazo 11/09 vencido), **Savegnago** e **Grupo IMC** (prazo 10/09 vencido) — nenhum retorno desde 07–08/09.
+2. **Queijos Itupeva**: cobrar relação de volumes (Frescal 200 kg + manteiga/requeijão/doce 50–100 kg/mês) e **agendar coleta-teste** — lead mais próximo de contrato.
+3. **Confiança e Andorinha**: **não insistir** — registrar ciclo de renovação dos coletores concorrentes e recontatar em ~2–3 meses (Confiança: protocolo 236485; Andorinha: citar o contato guardado).
+4. **Watch**: resposta aos FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar), FP1 de queijarias (12/09), lote laticínios 09:44-45 e entrada dos 5 hotéis na sequência — o pipeline cobre automaticamente.
+5. **Manutenção**: watchdog.py já corrigido (timeout IMAP 45s) — nada a fazer no próximo tick.
+
+---
+
 # Insights — Master Óleo · 14/09/2026 (tick 09:47)
 
 ## Resumo do tick (09:47)

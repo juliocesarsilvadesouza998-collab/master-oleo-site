@@ -30,7 +30,7 @@ CONFIG_PATH = os.path.join(BASE, "config.json")
 
 def check_email_credentials():
     """Testa SMTP (login) e IMAP (login) com as credenciais do config.json.
-    Timeout curto (10s) para não travar o tick. Retorna (erros, ok_msg)."""
+    Timeout de 45s no IMAP (Gmail às vezes demora no handshake TLS). Retorna (erros, ok_msg)."""
     if not os.path.exists(CONFIG_PATH):
         return ["config.json ausente — impossível testar credenciais de email"], ""
     try:
@@ -54,7 +54,7 @@ def check_email_credentials():
         erros.append(f"SMTP inacessível: {ex}")
     # IMAP (leitura da caixa)
     try:
-        m = imaplib.IMAP4_SSL(e["imap_host"], e["imap_port"], timeout=10)
+        m = imaplib.IMAP4_SSL(e["imap_host"], e["imap_port"], timeout=45)
         m.login(e["usuario"], e["senha_app"])
         m.logout()
         ok.append("IMAP OK")

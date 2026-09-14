@@ -367,6 +367,8 @@ def check_replies(args):
                             break
         if not lead:
             continue  # só conversamos com leads cadastrados
+        if lead.get("status") == "encerrado":
+            continue  # lead arquivado (ex.: auto-resposta SAC) não gera resposta pendente
         pendentes.append({"to_email": rem_email, "lead_nome": lead["nome"], "lead_empresa": lead["empresa"],
                           "lead_id": lead["id"], "via": via,
                           "message_id": msg["message_id"], "subject": msg["subject"],
