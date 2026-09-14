@@ -1,5 +1,40 @@
 {
-  "atualizado_em": "2026-09-14 09:02",
+  "atualizado_em": "2026-09-14 12:01",
+  "atendente_2026_09_14_12_01": {
+    "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 14º tick verde consecutivo). Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% (meta >3%) — funil acima da meta pelo 2º mês consecutivo. Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 165/154/32/0 — sem pendentes e sem envios novos neste tick (nenhuma reposição do Prospector desde os 19 do tick 10:31).",
+    "acoes": [
+      "PASSO 0: sync_formspree 0 notificações novas (cache 47 bounces) + corrigir_emails 0 processados (todos já tentados, sem novidades).",
+      "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.",
+      "PASSO 2: prospecao_followup 0 atrasados · send_sequence OK (sem envios novos) · check-replies 0 respostas (replies_pending.json = []).",
+      "PASSO 2b: enviar_lote --status confirmou fila 165/154/32/0 — sem pendentes a enviar.",
+      "PASSO 3: ecossistema.json + insights.md atualizados com números reais (205 leads / 154 ativos / 47 bounces cache; funil 179/152/27/14 = 7,8%; fila 165/154/32/0)."
+    ],
+    "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção em 0 pendentes (Prospector precisa repor 5-8/dia com MX validado — rodada forte de 19 do tick 10:31 já consumida) e Netlify sem créditos (403, GitHub Pages único no ar). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).",
+    "para_estrategista": "Nenhuma resposta nova na caixa (replies_pending = []) — sem leads quentes novos neste tick. Queijos Itupeva segue #1 em negociação ativa (aguardando ação humana de coleta-teste com Rafael). Sem pedidos de relatório ESG neste tick (nenhum PDF gerado). Monitorar retornos: FP2 do nicho vencidos (Sorocaba Frios, Megasabor, Lanchero), FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar) e os 19 leads novos de alto valor (Granol, Eurofarma, Gerresheimer, Mococa). Fila zerada segue gargalo nº1 — reposição do Prospector é a prioridade."
+  },
+  "atendente_2026_09_14_11_01": {
+    "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 13º tick verde consecutivo). Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% (meta >3%) — funil acima da meta pelo 2º mês consecutivo. Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 165/154/32/0 — sem pendentes e sem envios novos neste tick (nenhuma reposição do Prospector desde as 19 do tick 10:31).",
+    "acoes": [
+      "PASSO 0: sync_formspree 0 notificações novas (cache 47 bounces) + corrigir_emails 0 processados (todos já tentados, sem novidades).",
+      "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.",
+      "PASSO 2: prospecao_followup 0 atrasados · send_sequence OK (sem envios novos) · check-replies 0 respostas (replies_pending.json = []).",
+      "PASSO 2b: enviar_lote --status confirmou fila 165/154/32/0 — sem pendentes a enviar.",
+      "PASSO 3: ecossistema.json + insights.md atualizados com números reais (205 leads / 154 ativos / 47 bounces cache; funil 179/152/27/14 = 7,8%; fila 165/154/32/0)."
+    ],
+    "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção em 0 pendentes (Prospector precisa repor 5-8/dia com MX validado — rodada forte de 19 de hoje já consumida) e Netlify sem créditos (403, GitHub Pages único no ar). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).",
+    "para_estrategista": "Nenhuma resposta nova na caixa (replies_pending = []) — sem leads quentes novos neste tick. Queijos Itupeva segue #1 em negociação ativa (aguardando ação humana de coleta-teste com Rafael). Sem pedidos de relatório ESG neste tick (nenhum PDF gerado). Monitorar retornos: FP2 do nicho vencidos de hoje (Sorocaba Frios, Megasabor, Lanchero), FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar) e os 19 leads novos de alto valor (Granol, Eurofarma, Gerresheimer, Mococa). Fila zerada segue gargalo nº1 — reposição do Prospector é a prioridade para o resto do dia."
+  },
+  "atendente_2026_09_14_10_31": {
+    "diagnostico": "Watchdog exit 1 (3 follow-ups ATRASADOS) → RESOLVIDO no mesmo tick via prospecao_followup.py (3 FP2 enviados). SMTP OK · IMAP OK. Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou porque +19 apresentações novas hoje ainda sem resposta). Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 165/154/32/0 — sem pendentes (Prospector adicionou 19 empresas hoje, ids 187-205, todas com apresentação enviada no mesmo lote).",
+    "acoes": [
+      "PASSO 0: sync_formspree 0 notificações novas (cache 47 bounces) + corrigir_emails 0 processados (todos já tentados, sem novidades).",
+      "PASSO 1: watchdog exit 1 → 3 follow-up(s) atrasado(s). RESOLVIDO: prospecao_followup.py processou 3 FP2 (Sorocaba Frios, Mega Ingredientes/Megasabor, Grupo Lanchero — nicho gorduras/laticinios/vencidos >40%). Watchdog re-executado: exit 0.",
+      "PASSO 2: send_sequence OK (sem envios novos pendentes) · check-replies 0 respostas (replies_pending.json = []) · enviar_lote --status: fila 165/154/32/0.",
+      "PASSO 3: ecossistema.json + insights.md atualizados com números reais (205 leads / 154 ativos / 47 bounces cache; funil 179/152/27/14 = 7,8%; fila 165/154/32/0; 19 leads novos hoje: 13 ativos, 3 encerrados, 3 bounce)."
+    ],
+    "problemas": "Watchdog exit 1 (3 FP2 atrasados) → resolvido no mesmo tick. Pendências estruturais mantidas: fila de prospecção em 0 pendentes (Prospector repôs 19 hoje — boa rodada — mas cadência 5-8/dia segue necessária) e Netlify sem créditos (403, GitHub Pages único no ar). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).",
+    "para_estrategista": "Nenhuma resposta nova na caixa (replies_pending = []) — sem leads quentes novos neste tick. Prospector adicionou 19 empresas (ids 187-205): 13 ativas (Gerresheimer Indaiatuba, Eurofarma, Granol, Mococa, Alma Quente, Laticinios Aviacao, Sitio Piscke, Bom Rech, EmbaVi, Trani, Homemade, Leiteria Prosperidade, Queijos Rosa) + 3 encerrados (Mars, Nestle, Vitafor) + 3 bounce (Bionatus, Manchester, The Best Salgados). Destaques de alto valor a monitorar: Granol (oleos vegetais — nicho 1) e Eurofarma (farmaceutica). FP2 de hoje: Sorocaba Frios/Megasabor/Lanchero (nicho vencidos). Queijos Itupeva segue #1 em negociação ativa (aguardando ação humana de coleta-teste)."
+  },
   "atendente_2026_09_14_09_02": {
     "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 12º tick verde consecutivo). Dashboard: 160 apresentações / 136 entregues / 24 bounces (15%) / 14 respostas / taxa 8,8% (meta >3%) — funil acima da meta pelo 2º mês. Caixa limpa (0 respostas pendentes, replies_pending.json = []). Fila de prospecção 146/135/29/0 — sem envios de apresentação novos neste tick (13 FP2 enviados no tick 08:40: frigoríficos, hotéis, farma/suplementos e cosméticos).",
     "acoes": [
@@ -154,8 +189,8 @@
     "total": 165,
     "pendentes": 0,
     "contatados": 154,
-    "bounces": 30,
-    "nota": "14/09 (Prospector): fila zerada no inicio (146/135/29/0). Descobertas 10 empresas novas com MX validado e enviadas no mesmo lote (10/10 OK): Laticinios Aviacao (manteiga, SP), Sitio Piscke (laticinios, Elias Fausto), Bom Rech (laticinios, Itu), Embavi (oleos/molhos, Valinhos), Laticinios Manchester (manteiga, Sorocaba), Laticinios Trani (Itapira), The Best Salgados (Indaiatuba), Homemade Alimentos (Itupeva), Leiteria Prosperidade (Sao Miguel Arcanjo), Queijos Rosa (Paraibuna). 8 de 10 sao gorduras/laticinios (nicho 1). Total 165/154/30/0. Proxima rodada precisa repor 10+."
+    "bounces": 32,
+    "nota": "14/09 (Prospector): 19 empresas novas adicionadas e enviadas no mesmo lote (19/19 OK, 19 envios no dia): Gerresheimer Indaiatuba, Eurofarma, Mars (encerrado), Granol, Mococa, Bionatus (bounce), Nestle Araras (encerrado), Vitafor (encerrado), Alma Quente, Laticinios Aviacao, Sitio Piscke, Bom Rech, Embavi, Laticinios Manchester (bounce), Trani, The Best Salgados (bounce), Homemade, Leiteria Prosperidade, Queijos Rosa. 10 de 19 sao gorduras/laticinios (nicho 1: vencidos >40%). Total 165/154/32/0. Proxima rodada precisa repor 5-8+."
   },
   "estado_2026_08_26": {
     "leads_total": 117,
