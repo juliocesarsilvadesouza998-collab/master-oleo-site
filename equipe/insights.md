@@ -1,3 +1,44 @@
+## 2026-09-14 (segunda) — ATENDENTE (tick 14:01)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (17º tick verde consecutivo) + 8 boas-vindas disparadas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **213** — ativos: **162** (bounces cache: 47). Fila de prospecção: **165 empresas / 154 contatados / 32 bounce / 0 pendentes**.
+
+### 🆕 8 leads novos (segmento ÓLEOS/DISTRIBUIÇÃO) — boas-vindas no ar às 14:01
+- Prospector adicionou **8 empresas hoje 13:41–13:53**, todas do segmento de óleos/distribuição (fit direto com o nicho 1 — óleo vegetal vencido de distribuidoras/envasadoras — e nicho 4 — óleo de limpeza de máquinas):
+  **PMG** (distribuição de alimentos), **Pedrinho Atacadista** (atacadista), **Ecirtec** (óleos), **Oil Company** (óleo vegetal), **Azevedo Óleos** (distribuição de óleos), **Imcopa** (óleo de soja — processadora), **Grupo Zaamp** (envasadora de óleo), **Comgroup** (óleos).
+- `send_sequence` enviou **8/8 boas-vindas (14:01)** — todas OK, sem bounce imediato.
+- ⚠️ Higiene: os 8 entraram **sem `id`** no leads.csv (mesma pendência dos 14 leads sem id registrados pelo Analista 12/09) — backfill de IDs segue pendente.
+
+### Números do estado real (pós-tick 14:01)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 47).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (todos os 47 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados.
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ **8 boas-vindas enviadas (14:01)** — PMG, Pedrinho Atacadista, Ecirtec, Oil Company, Azevedo Óleos, Imcopa, Grupo Zaamp, Comgroup (8/8 OK).
+- **check-replies:** ✅ 0 respostas aguardando (`replies_pending.json` = `[]`) — caixa limpa.
+- **enviar_lote --status:** ✅ 165 empresas / 154 contatados / 32 bounce / **0 pendentes**.
+- **Dashboard:** **179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8%** (meta >3%) — acima da meta pelo 2º mês. 135 aguardando resposta/follow-up · 33 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** desde a Andorinha (12/09 12:02, recusa cordial — já atendida). Caixa limpa, zero respostas órfãs, zero pendências. **Sem pedidos de relatório ESG/certificado** — sem geração de PDF neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: 8 leads novos sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).** FP2 reenviado ao Paulistão Atacadista (bandeira do Grupo Savegnago) — atenção para não duplicar insistência se o comercial responder.
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **🆕 8 leads novos do segmento ÓLEOS (boas-vindas 14:01) — monitorar resposta:** Imcopa (processadora de soja — alto potencial de vencidos), Azevedo Óleos, Oil Company, Grupo Zaamp (envasadora), Ecirtec, Comgroup, PMG, Pedrinho Atacadista. Fit perfeito para óleo vegetal vencido (nicho 1).
+6. **FP1/FP2 de supermercados em monitoramento (nicho que mais converte):** Dalben, Amigão, Tenda Atacado, Paulistão (Grupo Savegnago), Enxuto, Tauste, Chimar — monitorar retornos dos canais comerciais.
+7. **Andorinha Hiper Center (SALTO)** — loja na cidade-base; se responder, priorizar coleta-teste na unidade de Salto.
+
+### Nota
+Tick de rotina totalmente limpo: watchdog exit 0 no 1º run (17º verde consecutivo), 0 follow-ups atrasados, caixa sem respostas pendentes, 0 pedidos de ESG. Única novidade: **8 leads novos do segmento óleos entraram e já receberam boas-vindas** — próxima rodada de monitoramento. Nenhuma correção necessária. Próximas ações humanas seguem: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
 ## 2026-09-14 (segunda) — ATENDENTE (tick 13:31)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (16º tick verde consecutivo)
@@ -4941,3 +4982,50 @@ Rotina 100% verde após 1 correção real de persistência. Caixa limpa em dobro
 ### Nota
 
 Tick de rotina com 1 correção real: watchdog acusou 11 follow-ups atrasados e o prospecao_followup zerou todos no mesmo tick — caixa limpa após processamento, 0 respostas pendentes, 0 pedidos de ESG. Sem leads novos respondidos desde o último tick. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda-feira) — MELHORADOR CONTÍNUO (tick 14:10)
+
+### Diagnóstico
+
+- Watchdog exit 0 (SMTP OK · IMAP OK — 17º tick verde consecutivo). Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa **7,8%** (meta >3%).
+- **Ponto mais fraco do dia: fila de prospecção em 0 pendentes** (165/154/32/0) — gargalo nº1 recorrente; pipeline de novos contatos parado, mesmo com funil convertendo acima da meta.
+- Caixa limpa (replies_pending = []); 8 leads novos do segmento óleos/distribuição receberam boas-vindas no tick 14:01.
+
+### Melhorias implementadas
+
+1. **Fila reposta +2 empresas reais com MX validado** (fila_prospeccao_extra.json 134→136):
+   - **Coocerqui Supermercados** (Cerquilho/SP) — `coocerqui@coocerqui.com.br`, MX **Google (smtp.google.com)** — cooperativa de consumo com loja em Cerquilho (~30km de Salto); segmento supermercados → template V4 (nicho que mais converte).
+   - **Meqso Distribuidora** (Jundiaí/SP, Distrito Industrial) — `contato@meqso.com.br`, MX **Hostinger (mx1/mx2)** — distribuidora de alimentos há 20+ anos, 16.000m² de CD, atende restaurantes/supermercados/hotéis; segmento com "oleo vencido" → template de óleo vegetal vencido (estoque com validade = passivo real).
+   - Validados em 3 camadas: email público no site oficial + MX resolvido via nslookup + (para self-hosted) teste de porta 25.
+2. **Template V4 supermercados reforçado com argumento financeiro em R$** (bot/prospecao.py): adicionado "Pagamos de **R$ 1,00 a 2,50 por litro**, à vista (PIX) na coleta: uma rede com 10 lojas que gera 600 L/mês soma **R$ 14 mil/ano**" — mesmo cálculo que converteu no FP1/FP3, agora na apresentação do nicho que mais responde.
+3. **Template de óleo vegetal vencido reforçado com PIX na coleta** (bot/prospecao.py): "pagamento à vista (PIX) na coleta, sem burocracia" — diferencial de fechamento (lição BiOeste: concorrentes pagam PIX imediato).
+
+### Verificação
+
+- `python -m py_compile prospecao.py enviar_lote.py prospecao_followup.py watchdog.py dashboard.py` → OK (5 scripts).
+- Render dos templates: V4 (supermercado), óleo vencido, V6 (hotel) e genérico — todos OK, argumentos novos presentes.
+- `python enviar_lote.py --status` → 165 empresas / 154 contatados / 32 bounce / **2 pendentes** (exatamente Coocerqui e Meqso).
+
+### Descartados com critério (meta bounce <15% preservada)
+
+- **Selvatti Frigorífico** (Porto Feliz) — MX self-hosted mail.selvatti.com.br, **porta 25 timeout** (mesmo padrão Rede Correia/San Raphael → bounce provável).
+- **Rangão Cozinha Industrial** (Campinas) — MX = domínio raiz, porta 25 timeout.
+- **Rede Vem Supermercados** (Mairinque/São Roque) — MX aponta domínio raiz, porta 25 timeout.
+- **Dalle Distribuidora** (Sorocaba) — MX self-hosted, porta 25 timeout.
+- **Lourenço Alimentos** (Piracicaba) — MX self-hosted mail.lourencoalimentos.com.br, porta 25 timeout.
+- **Sabor Gourmet** (Campinas) — email do site com typo no domínio (`comercial@saborbourmetbr.com.br`) sem MX → bounce certo.
+- **Frigopoti** (Potirendaba — fora do raio), **Supermercados Avenida** (Assis — fora do raio), **Redemais** (site fora do ar/504), **MegaG** (sem email público no HTML), **Comercial Souza** (só email placeholder), **Laticínios Gioia** (site não respondeu).
+- **Delta Supermercados** (admgeral@deltasuper.com.br, lojas em SALTO) — já na base (lead 45, sequência completa 26/08, sem resposta) → NÃO reenviar.
+
+### Lições do tick
+
+- **Delta Supermercados tem loja em Salto e email de gerência administrativa público** (admgeral@deltasuper.com.br) — já contatado; se o Atendente achar outra porta (ex.: formulário de fornecedores delt super.com.br/fornecedores/), é lead a reativar com abordagem de rede (abriu 14ª loja em Tatuí).
+- **MX self-hosted é a armadilha nº1 de bounce**: muitos sites regionais apontam MX para o próprio domínio sem servidor SMTP acessível — o teste de porta 25 (6s) descarta em segundos o que viraria bounce semanas depois. Manter no pipeline de validação do Prospector/Melhorador.
+- **Canal de fornecedores de redes regionais continua sendo o achado de maior potencial** (Coocerqui cooperativa, Meqso distribuidora) — páginas "seja fornecedor/contato comercial" de distribuidoras e cooperativas de consumo da região ainda têm email público não explorado.
+
+### Para o Estrategista dominical
+
+- 2 emails pendentes serão enviados pelo Atendente no próximo tick (Coocerqui V4 + Meqso óleo vencido) — monitorar resposta do nicho supermercado/cooperativa e distribuidora.
+- Persistem: fila curta (Prospector precisa repor 5-8/dia), Netlify sem créditos (403), toques WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste Queijos Itupeva.
