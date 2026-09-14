@@ -5029,3 +5029,68 @@ Tick de rotina com 1 correção real: watchdog acusou 11 follow-ups atrasados e 
 
 - 2 emails pendentes serão enviados pelo Atendente no próximo tick (Coocerqui V4 + Meqso óleo vencido) — monitorar resposta do nicho supermercado/cooperativa e distribuidora.
 - Persistem: fila curta (Prospector precisa repor 5-8/dia), Netlify sem créditos (403), toques WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda-feira) — ATENDENTE (tick 15:01)
+
+### Resumo do tick
+
+- **Pipeline (snapshot 15:01)**: 213 leads · 162 ativos · 47 bounces (cache) · 179 apresentações enviadas · 152 entregues · 27 bounces (15%) · **14 respostas** · taxa **7,8%** (meta >3%) — funil acima da meta pelo 2º mês consecutivo (18º tick verde no watchdog).
+- **Sync**: Formspree OK (0 notificações novas); corrigir_emails OK (0 processados, todos já tentados).
+- **Watchdog**: exit 0 de primeira — SMTP OK · IMAP OK, nenhum follow-up atrasado, nenhum bounce sem correção.
+- **Sequência**: send_sequence processado (nenhum envio devido — boas-vindas dos 8 leads de óleos já saíram no tick 14:01).
+- **Caixa**: check-replies **0 respostas pendentes** (replies_pending.json = []). **0 respostas enviadas. Nenhum pedido de relatório ESG.**
+- **Fila de prospecção**: 167 empresas / 156 contatados / 32 bounce / **0 pendentes** — **2 envios novos neste tick** (pendência do Melhorador 14:10): **Coocerqui Supermercados** (Cerquilho, template V4) e **Meqso Distribuidora** (Jundiaí, template óleo vencido). Fila zerada após o envio.
+
+### Problemas encontrados e correções
+
+1. Nenhum problema neste tick (watchdog exit 0). A única pendência operacional era a fila com 2 emails parados deixados pelo Melhorador (14:10) — **RESOLVIDA**: `enviar_lote.py --max 2` enviou Coocerqui + Meqso no mesmo tick (2/2 OK, registrados no leads.csv).
+2. Pendências estruturais mantidas: fila de prospecção novamente em 0 pendentes (Prospector precisa repor 5-8/dia com MX validado); Netlify sem créditos (403) — GitHub Pages segue como único no ar.
+
+### 🏆 Leads quentes (para ação humana — destaque)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).** Atenção para não duplicar insistência com o Paulistão Atacadista (bandeira do grupo, FP2 reenviado hoje).
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **Monitorar respostas recém-enviadas deste tick:** Coocerqui (cooperativa de consumo, Cerquilho — nicho supermercados) e Meqso (distribuidora, Jundiaí — óleo vencido).
+6. **8 leads novos do segmento óleos/distribuição com boas-vindas no ar desde 14:01** (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista) — fit perfeito para óleo vegetal vencido e óleo de limpeza de máquinas.
+7. **Andorinha Hiper Center (SALTO)** — loja na cidade-base; se responder, priorizar coleta-teste na unidade de Salto.
+
+### Nota
+
+Tick de rotina totalmente saudável: watchdog exit 0 de primeira, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), sem follow-ups atrasados. Ação real do tick: envio dos 2 pendentes da fila deixados pelo Melhorador (Coocerqui V4 + Meqso óleo vencido), zerando a fila de prospecção. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda-feira) — ATENDENTE (tick 15:31)
+
+### Resumo do tick
+
+- **Pipeline (snapshot 15:31)**: **215 leads** (CSV: 129 novo / 34 sequencia / 16 respondido / 30 bounce / 6 encerrado) · **163 ativos** · **48 bounces (cache)** — base CRESCEU de 213 para 215 (+2 empresas repostas pelo Prospector na fila). Dashboard 15:34: **181 apresentações / 153 entregues / 28 bounces (15%) / 14 respostas / taxa 7,7%** (meta >3%) — funil acima da meta pelo 2º mês consecutivo (19º tick verde no watchdog).
+- **Sync**: Formspree OK (0 notificações novas); corrigir_emails OK (0 processados, todos já tentados).
+- **Watchdog**: exit 0 de primeira — SMTP OK · IMAP OK, nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.
+- **Sequência**: send_sequence processado (nenhum envio devido).
+- **Caixa**: check-replies **0 respostas pendentes** (replies_pending.json = []). **0 respostas enviadas. Nenhum pedido de relatório ESG.**
+- **Fila de prospecção**: 167 empresas / 156 contatados / **33 bounce** / **0 pendentes** — FILA ZERADA (bounce da fila subiu 32→33; Coocerqui e Meqso já enviados no tick 15:01).
+
+### Problemas encontrados e correções
+
+1. Nenhum problema neste tick (watchdog exit 0 de primeira — 5º tick do dia, todos verdes).
+2. Pendências estruturais mantidas: fila de prospecção zerada de novo (Prospector repôs +2 empresas — base 213→215 — mas cadência 5-8/dia segue necessária); Netlify sem créditos (403) — GitHub Pages segue como único no ar.
+3. Toques WhatsApp humanos vencidos (ação humana em aberto): Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).** Atenção para não duplicar insistência com o Paulistão Atacadista (bandeira do grupo, FP2 reenviado hoje 14:36).
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **Monitorar respostas recém-enviadas:** Coocerqui (cooperativa de consumo, Cerquilho — V4) e Meqso (distribuidora, Jundiaí — óleo vencido), enviados 15:01.
+6. **8 leads do segmento óleos/distribuição com boas-vindas no ar desde 14:01** (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista) — fit perfeito para óleo vegetal vencido e óleo de limpeza de máquinas.
+7. **Andorinha Hiper Center (SALTO)** — loja na cidade-base; recontato no ciclo de renovação do coletor (~2-3 meses).
+
+### Nota
+
+Tick de rotina totalmente saudável: watchdog exit 0 de primeira, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), sem follow-ups atrasados, fila zerada (167/156/33/0). Única novidade: base cresceu 213→215 leads (reposição do Prospector) e o bounce da fila subiu 32→33. Nenhuma resposta comercial pendente. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.

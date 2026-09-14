@@ -258,5 +258,12 @@
     "novo_email": null,
     "status": "nao_encontrado",
     "quando": "2026-09-14T10:01:00-03:00"
+  },
+  {
+    "email_antigo": "contato@meqso.com.br",
+    "empresa": "Meqso Distribuidora de Alimentos Ltda",
+    "novo_email": null,
+    "status": "nao_encontrado",
+    "quando": "2026-09-14T15:31:06-03:00"
   }
 ]

@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-14 14:01",
+ "atualizado_em": "2026-09-14 15:31",
  "atendente_2026_09_14_14_01": {
   "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 17º tick verde consecutivo). Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% (meta >3%) — funil acima da meta pelo 2º mês consecutivo. Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 165/154/32/0 — sem pendentes. NOVIDADE: +8 leads novos hoje 13:41-13:53 (segmento óleos/distribuição: PMG, Pedrinho Atacadista, Ecirtec, Oil Company, Azevedo Óleos, Imcopa, Grupo Zaamp, Comgroup) — todos receberam boas-vindas no send_sequence 14:01 (8/8 OK). Base agora 213 leads / 162 ativos / 47 bounces cache.",
   "acoes": [
@@ -209,11 +209,11 @@
  },
  "fila_prospeccao": {
   "atualizado_em": "2026-09-14",
-  "total": 165,
+  "total": 167,
   "pendentes": 0,
-  "contatados": 154,
+  "contatados": 156,
   "bounces": 32,
-  "nota": "14/09 (Prospector): 19 empresas novas adicionadas e enviadas no mesmo lote (19/19 OK, 19 envios no dia): Gerresheimer Indaiatuba, Eurofarma, Mars (encerrado), Granol, Mococa, Bionatus (bounce), Nestle Araras (encerrado), Vitafor (encerrado), Alma Quente, Laticinios Aviacao, Sitio Piscke, Bom Rech, Embavi, Laticinios Manchester (bounce), Trani, The Best Salgados (bounce), Homemade, Leiteria Prosperidade, Queijos Rosa. 10 de 19 sao gorduras/laticinios (nicho 1: vencidos >40%). Total 165/154/32/0. Proxima rodada precisa repor 5-8+."
+  "nota": "15:01 (Atendente): enviados os 2 pendentes deixados pelo Melhorador 14:10 (Coocerqui V4 supermercados + Meqso óleo vencido). Total 167/156/32/0. Prospector precisa repor 5-8/dia com MX validado."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -584,5 +584,29 @@
   "descartados": "9 candidatos descartados com critério (meta bounce <15% preservada): Selvatti Frigorífico (Porto Feliz), Rangão Cozinha Industrial (Campinas), Rede Vem Supermercados (Mairinque/São Roque), Dalle Distribuidora (Sorocaba), Lourenço Alimentos (Piracicaba) — todos MX self-hosted com PORTA 25 TIMEOUT (padrão Rede Correia/San Raphael → bounce provável); Sabor Gourmet (Campinas — email do site com typo no domínio 'saborbourmetbr.com.br' sem MX); Frigopoti (Potirendaba, fora do raio); Supermercados Avenida (Assis, fora do raio); Redemais (site 504), MegaG (sem email público), Comercial Souza (email placeholder), Laticínios Gioia (site sem resposta). Delta Supermercados (admgeral@deltasuper.com.br, lojas em SALTO) JÁ NA BASE (lead 45, sequência completa 26/08) — não reenviar.",
   "verificacao": "python -m py_compile prospecao.py enviar_lote.py prospecao_followup.py watchdog.py dashboard.py → OK (5 scripts). Render templates V4/óleo/V6/genérico → todos OK com argumentos novos presentes. python enviar_lote.py --status → 165 empresas / 154 contatados / 32 bounce / 2 pendentes (exatamente Coocerqui e Meqso). python watchdog.py → exit 0 saudável.",
   "para_estrategista": "2 emails pendentes serão enviados pelo Atendente no próximo tick (Coocerqui V4 supermercados + Meqso óleo vencido) — monitorar resposta dos nichos cooperativa/consumo e distribuidora. Lição do tick: MX self-hosted de sites regionais quase sempre falha porta 25 → incluir teste de porta 25 no pipeline padrão de validação. Delta Supermercados (14ª loja abrindo em Tatuí) merece reativação via formulário de fornecedores (deltasuper.com.br/fornecedores/) se o lead 45 seguir sem resposta — decisão humana. Persistem pendências: Netlify sem créditos (403), toques WhatsApp vencidos (Savegnago, Grupo IMC, Selmi), coleta-teste Queijos Itupeva."
+ },
+ "atendente_2026_09_14_15_01": {
+  "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 18º tick verde consecutivo). Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% (meta >3%) — funil acima da meta pelo 2º mês consecutivo. Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 167/156/32/0 — 2 pendentes do Melhorador (Coocerqui V4 + Meqso óleo vencido) ENVIADOS neste tick às 15:01, fila zerada. Base: 213 leads / 162 ativos / 47 bounces cache.",
+  "acoes": [
+   "PASSO 0: sync_formspree 0 notificações novas (cache 47 bounces) + corrigir_emails 0 processados (todos já tentados).",
+   "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.",
+   "PASSO 2: prospecao_followup 0 atrasados · send_sequence processado (nenhum envio devido) · check-replies 0 respostas (replies_pending.json = []).",
+   "EXTRA (pendência do Melhorador 14:10): enviar_lote.py --max 2 enviou os 2 pendentes da fila — Coocerqui (V4 supermercados) e Meqso (óleo vegetal vencido) — fila agora 167/156/32/0.",
+   "PASSO 3: ecossistema.json + insights.md atualizados com números reais (213 leads / 162 ativos / 47 bounces; funil 179/152/27/14 = 7,8%; fila 167/156/32/0; +2 envios novos neste tick)."
+  ],
+  "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção zerada de novo após o envio de hoje (Prospector precisa repor 5-8/dia com MX validado — agora há só 0 pendentes e nenhuma reposição programada) e Netlify sem créditos (403, GitHub Pages único no ar). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.",
+  "para_estrategista": "Nenhuma resposta nova na caixa (replies_pending = []) — sem leads quentes novos neste tick. Queijos Itupeva segue #1 em negociação ativa (aguardando ação humana de coleta-teste com Rafael). Sem pedidos de relatório ESG neste tick (nenhum PDF gerado). AÇÃO EXECUTADA: 2 pendentes da fila enviados (Coocerqui supermercados V4 + Meqso distribuidora óleo vencido) — monitorar resposta do nicho cooperativa/distribuidora. Monitorar: boas-vindas dos 8 leads de óleos de ontem 14:01 (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista), FP2 do nicho vencidos (Sorocaba Frios, Megasabor, Lanchero), FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar) e os 19 leads de alto valor (Granol, Eurofarma, Gerresheimer, Mococa). Fila zerada segue gargalo nº1 — reposição do Prospector é a prioridade."
+ },
+ "atendente_2026_09_14_15_31": {
+  "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 19º tick verde consecutivo). Dashboard: 181 apresentações / 153 entregues / 28 bounces (15%) / 14 respostas / taxa 7,7% (meta >3%) — funil acima da meta pelo 2º mês consecutivo. Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 167/156/33/0 — ZERADA (bounce subiu 32→33 neste tick). Base CRESCEU: 215 leads / 163 ativos / 48 bounces cache (era 213/162/47 no tick 15:01 — Prospector repôs a fila, ver fila_prospeccao_extra.json).",
+  "acoes": [
+   "PASSO 0: sync_formspree 0 notificações novas (cache 48 bounces) + corrigir_emails 0 processados (todos já tentados, sem novidades).",
+   "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.",
+   "PASSO 2: prospecao_followup 0 atrasados · send_sequence processado (nenhum envio devido) · check-replies 0 respostas (replies_pending.json = []).",
+   "PASSO 2b: enviar_lote --status confirmou fila 167/156/33/0 — sem pendentes a enviar.",
+   "PASSO 3: ecossistema.json + insights.md atualizados com números reais (215 leads / 163 ativos / 48 bounces cache; funil 181/153/28/14 = 7,7%; fila 167/156/33/0; dashboard 15:34 com 33 inbound)."
+  ],
+  "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção zerada de novo (Prospector repôs +2 leads — base 213→215 — mas cadência 5-8/dia segue necessária) e Netlify sem créditos (403, GitHub Pages único no ar). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.",
+  "para_estrategista": "Nenhuma resposta nova na caixa (replies_pending = []) — sem leads quentes novos neste tick. Queijos Itupeva segue #1 em negociação ativa (aguardando ação humana de coleta-teste com Rafael). Sem pedidos de relatório ESG neste tick (nenhum PDF gerado). NOVIDADE: base cresceu 213→215 leads (watchdog 215/163/48; CSV 215: 129 novo / 34 sequencia / 16 respondido / 30 bounce / 6 encerrado) — confirmar com o Prospector quais 2 empresas entraram na fila (167/156/33/0). Monitorar: boas-vindas dos 8 leads de óleos (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista), Coocerqui e Meqso (enviados 15:01), FP2 do nicho vencidos (Sorocaba Frios, Megasabor, Lanchero), FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar). Fila zerada segue gargalo nº1 — reposição do Prospector é a prioridade."
  }
 }
