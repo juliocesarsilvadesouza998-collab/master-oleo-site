@@ -1,5 +1,16 @@
 {
- "atualizado_em": "2026-09-14 16:04",
+ "atualizado_em": "2026-09-14 17:24",
+ "atendente_2026_09_14_17_22": {
+  "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 18º tick verde consecutivo). Dashboard: 181 apresentações / 153 entregues / 28 bounces (15%) / 15 respostas / taxa 8,3% (meta >3%) — acima da meta pelo 2º mês consecutivo, taxa subiu de 7,8% → 8,3% com a 15ª resposta (Betins Laticínios). Fila de prospecção 167/156/33/0 — sem pendentes. NOVIDADE: 1 resposta nova na caixa — Betins Laticínios (id 162) respondeu 17:15 'não utilizo óleo' (recusa cordial) → atendida no mesmo tick com resposta que menciona a compra de vencidos >40% gordura (manteiga/margarina) + WhatsApp; check-replies re-executado: 0 pendentes (replies_pending.json = []). Base agora 215 leads / 163 ativos / 48 bounces cache.",
+  "acoes": [
+   "PASSO 0: sync_formspree 0 notificações novas (cache 48 bounces) + corrigir_emails 0 processados (48/48 já tentados, sem novidades).",
+   "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.",
+   "PASSO 2: prospecao_followup 0 atrasados · send_sequence processada (sem envios novos) · check-replies: 1 resposta — Betins Laticínios (id 162) 'não utilizo óleo' → RESPOSTA ENVIADA (17:23, thread da mensagem original): agradecimento cordial + menção à compra de vencidos >40% gordura (laticínio: manteiga/margarina/cremes vencidos com descaracterização e certificado) + WhatsApp (11) 96785-9631. check-replies re-executado: 0 pendentes.",
+   "PASSO 3: ecossistema.json + insights.md atualizados com números reais (215 leads / 163 ativos / 48 bounces cache; funil 181/153/28/15 = 8,3%; fila 167/156/33/0; 1 lead respondido/atendido no tick)."
+  ],
+  "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção em 0 pendentes (Prospector precisa repor 5-8/dia com MX validado) e Netlify sem créditos (403, GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes ainda sem id no leads.csv (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).",
+  "para_estrategista": "1 resposta nova atendida: Betins Laticínios (id 162, betinslaticinios@gmail.com) respondeu 17:15 'não utilizo óleo' — recusa cordial, NÃO é lead quente; resposta enviada com menção ao nicho vencidos >40% gordura (por serem laticínio) + WhatsApp, sem insistência. Sem pedidos de relatório ESG neste tick (nenhum PDF gerado). Destaques seguem: Queijos Itupeva #1 em negociação ativa (coleta-teste com Rafael pendente de ação humana), Savegnago/Grupo IMC/Selmi com toques WhatsApp vencidos (10-11/09), e os 8 leads novos de óleos/distribuição de hoje (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista) aguardando resposta das boas-vindas 14:01. Fila zerada segue gargalo nº1."
+ },
  "atendente_2026_09_14_14_01": {
   "diagnostico": "Watchdog exit 0 de primeira (SMTP OK · IMAP OK — 17º tick verde consecutivo). Dashboard: 179 apresentações / 152 entregues / 27 bounces (15%) / 14 respostas / taxa 7,8% (meta >3%) — funil acima da meta pelo 2º mês consecutivo. Caixa limpa (replies_pending.json = [], 0 respostas pendentes). Fila de prospecção 165/154/32/0 — sem pendentes. NOVIDADE: +8 leads novos hoje 13:41-13:53 (segmento óleos/distribuição: PMG, Pedrinho Atacadista, Ecirtec, Oil Company, Azevedo Óleos, Imcopa, Grupo Zaamp, Comgroup) — todos receberam boas-vindas no send_sequence 14:01 (8/8 OK). Base agora 213 leads / 162 ativos / 47 bounces cache.",
   "acoes": [
@@ -208,13 +219,13 @@
   "nicho_prioritario": "supermercados/redes/atacarejo (nicho que mais converte) + encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
  },
  "fila_prospeccao": {
-  "atualizado_em": "2026-09-14",
-  "total": 167,
-  "pendentes": 0,
-  "contatados": 156,
-  "bounces": 32,
-  "nota": "15:01 (Atendente): enviados os 2 pendentes deixados pelo Melhorador 14:10 (Coocerqui V4 supermercados + Meqso óleo vencido). Total 167/156/32/0. Prospector precisa repor 5-8/dia com MX validado."
- },
+   "atualizado_em": "2026-09-14",
+   "total": 167,
+   "pendentes": 0,
+   "contatados": 156,
+   "bounces": 33,
+   "nota": "17:22 (Atendente): watchdog exit 0, fila sem pendentes. Total 167/156/33/0. Prospector precisa repor 5-8/dia com MX validado (gargalo nº1 mantido)."
+  },
  "estado_2026_08_26": {
   "leads_total": 117,
   "leads_ativos": 89,

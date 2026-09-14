@@ -1,3 +1,39 @@
+## 2026-09-14 (segunda) — ATENDENTE (tick 17:22)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (18º tick verde consecutivo) + 1 resposta atendida (Betins Laticínios)
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **215** — ativos: **163** (bounces cache: 48). Fila de prospecção: **167 empresas / 156 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 17:22)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 48).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (48/48 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados.
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ **1 resposta nova → ATENDIDA** (ver abaixo). Re-executado após o envio: **0 pendentes** (`replies_pending.json` = `[]`).
+- **Dashboard:** **181 apresentações / 153 entregues / 28 bounces (15%) / 15 respostas / taxa 8,3%** (meta >3%) — acima da meta pelo 2º mês; **taxa subiu de 7,8% → 8,3%** com a 15ª resposta. 135 aguardando resposta/follow-up · 33 inbound acumulados.
+
+### 🆕 Novidades na caixa — 1 resposta atendida
+- **Betins Laticínios (id 162, betinslaticinios@gmail.com)** respondeu **17:15** (thread do email de compra de óleo): *"Olá desculpe não ter respondido antes… não utilizo óleo"* — **recusa cordial**.
+- **Resposta enviada 17:23** na mesma thread: agradecimento sem insistência + menção objetiva ao fato de a Master Óleo **também comprar vencidos com >40% de gordura** (manteiga, margarina, cremes vegetais vencidos — perfil plausível para um laticínio) com descaracterização e certificado + canal WhatsApp (11) 96785-9631. **Não é lead quente** — sem volume informado, sem sinal de abertura.
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **🆕 8 leads novos do segmento ÓLEOS (boas-vindas 14:01) — monitorar resposta:** Imcopa (processadora de soja — alto potencial de vencidos), Azevedo Óleos, Oil Company, Grupo Zaamp (envasadora), Ecirtec, Comgroup, PMG, Pedrinho Atacadista. Fit perfeito para óleo vegetal vencido (nicho 1).
+6. **FP1/FP2 de supermercados em monitoramento (nicho que mais converte):** Dalben, Amigão, Tenda Atacado, Paulistão (Grupo Savegnago), Enxuto, Tauste, Chimar — monitorar retornos dos canais comerciais.
+7. **Andorinha Hiper Center (SALTO)** — recusa cordial 12/09; recontatar no ciclo de renovação do coletor.
+
+### Nota
+Tick de rotina limpo (18º verde consecutivo): watchdog exit 0 no 1º run, 0 follow-ups atrasados, caixa zerada após atendimento da única resposta do dia. **Betins Laticínios respondeu mas não gera óleo — recusa cordial já tratada com abertura leve para o nicho de vencidos >40% (laticínio), sem insistência.** Funil saudável e subindo (8,3%, acima da meta de 3%). Próximas ações humanas seguem: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
 ## 2026-09-14 (segunda) — ATENDENTE (tick 14:01)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (17º tick verde consecutivo) + 8 boas-vindas disparadas
