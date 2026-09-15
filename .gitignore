@@ -31,3 +31,5 @@ bot/_seo_tmp/
 # Local Netlify folder
 .netlify
 bot/bounces.json
+# Dados sensíveis: correções de email contêm endereços de leads
+bot/correcoes_emails.json
