@@ -214,6 +214,31 @@ resposta em COLETA AGENDADA ou CONTRATO — não parar no "ok, obrigado".
    biodiesel é VOLUNTÁRIO em 2026-27 e OBRIGATÓRIO em 01/01/2028 (Resolução
    CNPE). É o argumento de aceleração para contratos de longo prazo.
 
+## 🏆 Aprendizados do dia (15/09 — Melhorador contínuo)
+
+1. **Página de "Fornecedores" de cooperativas/redes expõe email de COMPRADOR**
+   — a Coop (Campinas, ~80 lojas, maior cooperativa de consumo da AL) publica
+   na página oficial de fornecedores os emails diretos dos compradores por
+   categoria (erick.araujo@coopsp.coop.br = mercearia, edna.figueiredo@ = frios,
+   etc.). É o canal comercial mais direto possível: quem responde É quem compra.
+   Mesma lógica da lição 07/09 (preferir comercial/ouvidoria a SAC), agora
+   aplicada a páginas de fornecedores de grandes redes.
+2. **MX self-hosted (mail.dominio.com.br apontando para si mesmo) = risco de
+   bounce alto**: Croissant & Cia (Indaiatuba) e Milk Menk (Porto Feliz) tinham
+   email real no site oficial + MX registrado, mas o MX é o próprio domínio
+   (servidor local) — mesma lição da Rede Correia (self-hosted rejeita SMTP
+   externo porta 25). Descartados para preservar bounce <15%. Regra: só aceitar
+   MX de provedor (Google, Outlook, Locaweb, Kinghost, Hostinger, Trend Micro,
+   etc.) ou serviço cloud (SpamExperts/Namecheap).
+3. **Email de RH/recrutamento não é canal comercial**: Schreiber Foods
+   (Porto Feliz, planta nova 2026) publica Portofeliz@schreiberfoods.com mas é
+   email de recrutamento da unidade — resposta provável vem de RH, não de
+   compras. Evitar salvo necessidade específica.
+4. **Distribuidoras de alimentos entram no template de ÓLEO VENCIDO (nicho 1)**:
+   Avec e Estrela (Campinas) foram classificadas com segmento "...estoque de
+   oleo vegetal vencido" para casar com o template certo — distribuidora tem
+   óleo vencido parado no estoque, é o fit mais forte depois dos óleos puros.
+
 ## Regras de conduta
 1. Responda SEMPRE em português (pt-BR), tom profissional, cordial e direto.
 2. Responda exatamente o que o cliente perguntou PRIMEIRO, depois avance.

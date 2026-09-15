@@ -1,3 +1,43 @@
+## 2026-09-15 (terça) — MELHORADOR CONTÍNUO (tick 18:50)
+
+### Diagnóstico do dia
+- **Watchdog exit 0** (SMTP OK · IMAP OK) — sistema saudável, 215 leads / 161 ativos / 49 bounces.
+- **Dashboard**: 182 apresentações / 153 entregues / **29 bounces (16%)** / 15 respostas / **taxa 8,2%** (meta >3%) — acima da meta pelo 2º mês.
+- **Ponto MAIS FRACO do dia**: **fila de prospecção em 0 pendentes** (167/156/33/0) — gargalo nº1 recorrente: pipeline de novos contatos parado. 2º: bounces em 16% (acima da meta de 15%).
+
+### Melhorias implementadas
+1. **FILA REPOSTA: +9 empresas novas com email de site oficial + MX validado via nslookup** (fila 167 → 176 empresas, 0 → **9 pendentes**):
+   - **Coop Cooperativa de Consumo** (Campinas, ~80 lojas, maior cooperativa de consumo da AL) — `erick.araujo@coopsp.coop.br` = **email DIRETO do COMPRADOR de mercearia**, publicado na página oficial de Fornecedores (https://www.portalcoop.com.br/fornecedores/). MX Trend Micro. **Lead de maior potencial do tick** — quem responde é quem compra.
+   - **Avec Campinas** (distribuidora food service, CD 5.942 m²) — avec@aveccampinas.com.br, MX Kinghost.
+   - **Estrela Distribuidora** (Campinas) — contato@estrelacampinas.com.br, MX Umbler.
+   - **TRZ Food** (atacadista de proteínas, Campinas) — contato@trzfood.com.br, MX Kinghost.
+   - **Super Tatuí** (Tatuí) — contato@supertatui.com.br, MX Hostinger.
+   - **EXAL** (refeições coletivas, Jundiaí) — exal@exal.com.br, MX Outlook.
+   - **Viva Food** (restaurantes corporativos, Jundiaí) — comercial@vivafood.com.br, MX Outlook.
+   - **Nutrivigor** (refeições coletivas, Campinas) — contato@nutrivigor.com.br, MX Locaweb.
+   - **RW Cozinha Industrial** (Itatiba) — contato@rwcozinhaindustrial.com.br, MX SpamExperts cloud.
+2. **Classificação de segmento otimizada**: Avec e Estrela marcadas como "distribuidora ... estoque de oleo vegetal vencido" → caem no **template de óleo vencido (nicho 1)** em vez do genérico. Render testado: assuntos corretos por lead.
+3. **persona.md**: seção "Aprendizados do dia 15/09" — (a) página de Fornecedores de redes expõe email de comprador (Coop); (b) MX self-hosted (mail.dominio → si mesmo) = descartar (Croissant & Cia, Milk Menk) para manter bounce <15%; (c) email de RH não é canal comercial (Schreiber); (d) distribuidoras → template óleo vencido.
+
+### Descartados com critério (bounce <15% preservado)
+- **Croissant & Cia** (Indaiatuba) e **Milk Menk** (Porto Feliz): MX self-hosted (`mail.dominio.com.br` → si mesmo) — risco de rejeição SMTP (lição Rede Correia).
+- **Schreiber Foods** (Porto Feliz): email é de recrutamento de planta nova, não comercial.
+- **Supermercados Caetano** (Valinhos): sem registro MX. **Delta Super** (Itu): mesmo CNPJ do Delta Max (já na base). **AD Food**: domínio morto. **Hotel Cabreúva**: só formulário. **Oggi/Marvi/Menu/Provare/3AB/Kentinha**: só formulário/WhatsApp, sem email público.
+
+### Resultado verificado
+- `python enviar_lote.py --status` → **176 empresas / 156 contatados / 33 bounce / 9 pendentes** (exatamente os 9 novos).
+- `nslookup -type=MX` revalidado em todos os 13 domínios candidatos (9 aprovados / 2 self-hosted descartados / 1 sem MX / 1 RH).
+- Render dos templates: Coop → V4 supermercados (assunto correto), Avec/Estrela → óleo vencido, demais → genérico.
+- `python watchdog.py` → exit 0 (pós-mudanças).
+
+### Para o Estrategista (domingo)
+- Os **9 emails pendentes serão enviados pelo Atendente** no próximo tick — **Coop é o lead nº1**: canal de compras explícito (comprador de mercearia), rede ~80 lojas com padaria/rotisserie; se responder, tratar como lead prioritário ao lado de Queijos Itupeva/Savegnago.
+- **Bounces em 16%** (29/182) — 1 ponto acima da meta: revisar cache de bounces (48 endereços; 17 são alternativos de leads vivos) e validar MX de tudo antes de enviar.
+- Pendências humanas seguem: toques WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste Queijos Itupeva.
+- Sugestão: Prospector explorar páginas "fornecedores" de redes médias (lição Coop) — ouro de emails de compradores.
+
+---
+
 ## 2026-09-14 (segunda) — ATENDENTE (tick 19:31)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (24º tick verde consecutivo) + caixa sem respostas novas

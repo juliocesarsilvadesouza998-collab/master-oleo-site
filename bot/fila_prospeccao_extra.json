@@ -950,5 +950,68 @@
   "email": "contato@meqso.com.br",
   "cidade": "Jundiai/SP",
   "segmento": "distribuidora de alimentos - estoque de oleo vegetal vencido"
+ },
+ {
+  "nome": "Coop Cooperativa de Consumo",
+  "empresa": "Cooperativa de Consumo (Campinas/SP) - maior cooperativa de consumo da America Latina, ~80 lojas",
+  "email": "erick.araujo@coopsp.coop.br",
+  "cidade": "Campinas/SP",
+  "segmento": "Rede de supermercados (cooperativa) - canal de COMPRAS explicito (pagina de fornecedores)"
+ },
+ {
+  "nome": "Avec Campinas",
+  "empresa": "Avec Comercio e Distribuicao de Alimentos Ltda",
+  "email": "avec@aveccampinas.com.br",
+  "cidade": "Campinas/SP",
+  "segmento": "Distribuidora de alimentos food service - estoque de oleo vegetal vencido"
+ },
+ {
+  "nome": "Estrela Distribuidora",
+  "empresa": "Estrela Distribuidora de Alimentos",
+  "email": "contato@estrelacampinas.com.br",
+  "cidade": "Campinas/SP",
+  "segmento": "Distribuidora de alimentos - estoque de oleo vegetal vencido"
+ },
+ {
+  "nome": "TRZ Food",
+  "empresa": "TRZ Food Atacadista de Proteinas",
+  "email": "contato@trzfood.com.br",
+  "cidade": "Campinas/SP",
+  "segmento": "Atacadista / CD de proteinas e alimentos"
+ },
+ {
+  "nome": "Super Tatuí",
+  "empresa": "Super Tatuí Supermercado",
+  "email": "contato@supertatui.com.br",
+  "cidade": "Tatui/SP",
+  "segmento": "Supermercado (varejo alimentar)"
+ },
+ {
+  "nome": "EXAL",
+  "empresa": "EXAL - Administracao de Restaurantes Empresariais e Facilities Ltda",
+  "email": "exal@exal.com.br",
+  "cidade": "Jundiai/SP",
+  "segmento": "Refeicoes coletivas / gestao de restaurantes corporativos"
+ },
+ {
+  "nome": "Viva Food",
+  "empresa": "Viva Food Restaurante e Entretenimento Ltda",
+  "email": "comercial@vivafood.com.br",
+  "cidade": "Jundiai/SP",
+  "segmento": "Restaurantes corporativos / refeicoes coletivas"
+ },
+ {
+  "nome": "Nutrivigor",
+  "empresa": "Nutrivigor Refeicoes Coletivas Ltda",
+  "email": "contato@nutrivigor.com.br",
+  "cidade": "Campinas/SP",
+  "segmento": "Refeicoes coletivas / cozinhas industriais (PAT)"
+ },
+ {
+  "nome": "RW Cozinha Industrial",
+  "empresa": "RW Cozinha Industrial Ltda",
+  "email": "contato@rwcozinhaindustrial.com.br",
+  "cidade": "Itatiba/SP",
+  "segmento": "Alimentacao corporativa / refeicoes coletivas"
  }
 ]
