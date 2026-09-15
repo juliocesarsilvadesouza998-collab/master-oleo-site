@@ -1,3 +1,108 @@
+## 2026-09-14 (segunda) — ATENDENTE (tick 19:31)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (24º tick verde consecutivo) + caixa sem respostas novas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **215** — ativos: **162** (bounces cache: 48). Fila de prospecção: **167 empresas / 156 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 19:31)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 48).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (48/48 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (24º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 17:23).
+- **Dashboard (ref. tick 17:22):** **181 apresentações / 153 entregues / 28 bounces (15%) / 15 respostas / taxa 8,3%** (meta >3%) — acima da meta pelo 2º mês consecutivo. 135 aguardando resposta/follow-up · 33 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial do dia: Betins Laticínios (id 162) respondeu 17:15 (recusa cordial "não utilizo óleo") e foi atendida 17:23 com menção ao nicho vencidos >40% gordura + WhatsApp — já registrado no tick 17:22.
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **8 leads novos do segmento ÓLEOS (boas-vindas 14:01) — monitorar resposta:** Imcopa (processadora de soja — alto potencial de vencidos), Azevedo Óleos, Oil Company, Grupo Zaamp (envasadora), Ecirtec, Comgroup, PMG, Pedrinho Atacadista. Fit perfeito para óleo vegetal vencido (nicho 1).
+6. **FP1/FP2 de supermercados em monitoramento (nicho que mais converte):** Dalben, Amigão, Tenda Atacado, Paulistão (Grupo Savegnago), Enxuto, Tauste, Chimar — monitorar retornos dos canais comerciais.
+7. **Monitorar respostas recém-enviadas:** Coocerqui (cooperativa de consumo, Cerquilho — V4) e Meqso (distribuidora, Jundiaí — óleo vencido), enviados 15:01.
+
+### Nota
+Tick de rotina totalmente saudável (24º verde consecutivo): watchdog exit 0 no 1º run, 0 follow-ups atrasados, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), fila zerada (167/156/33/0). Nenhuma resposta comercial nova para negociar neste tick — nada a responder. Próximas ações humanas seguem: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda) — ATENDENTE (tick 19:01)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (23º tick verde consecutivo) + caixa sem respostas novas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **215** — ativos: **162** (bounces cache: 48). Fila de prospecção: **167 empresas / 156 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 19:01)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 48).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (48/48 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (23º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 17:23).
+- **Dashboard (ref. tick 17:22):** **181 apresentações / 153 entregues / 28 bounces (15%) / 15 respostas / taxa 8,3%** (meta >3%) — acima da meta pelo 2º mês consecutivo. 135 aguardando resposta/follow-up · 33 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial do dia: Betins Laticínios (id 162) respondeu 17:15 (recusa cordial "não utilizo óleo") e foi atendida 17:23 com menção ao nicho vencidos >40% gordura + WhatsApp — já registrado no tick 17:22.
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **8 leads novos do segmento ÓLEOS (boas-vindas 14:01) — monitorar resposta:** Imcopa (processadora de soja — alto potencial de vencidos), Azevedo Óleos, Oil Company, Grupo Zaamp (envasadora), Ecirtec, Comgroup, PMG, Pedrinho Atacadista. Fit perfeito para óleo vegetal vencido (nicho 1).
+6. **FP1/FP2 de supermercados em monitoramento (nicho que mais converte):** Dalben, Amigão, Tenda Atacado, Paulistão (Grupo Savegnago), Enxuto, Tauste, Chimar — monitorar retornos dos canais comerciais.
+7. **Monitorar respostas recém-enviadas:** Coocerqui (cooperativa de consumo, Cerquilho — V4) e Meqso (distribuidora, Jundiaí — óleo vencido), enviados 15:01.
+
+### Nota
+Tick de rotina totalmente saudável (23º verde consecutivo): watchdog exit 0 no 1º run, 0 follow-ups atrasados, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), fila zerada (167/156/33/0). Nenhuma resposta comercial nova para negociar neste tick — nada a responder. Próximas ações humanas seguem: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda) — ATENDENTE (tick 18:01)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (22º tick verde consecutivo) + caixa sem respostas novas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **215** — ativos: **162** (bounces cache: 48). Fila de prospecção: **167 empresas / 156 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 18:01)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 48).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (48/48 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (22º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes).
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 17:23).
+- **Dashboard (ref. tick 17:22):** **181 apresentações / 153 entregues / 28 bounces (15%) / 15 respostas / taxa 8,3%** (meta >3%) — acima da meta pelo 2º mês consecutivo.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial do dia: Betins Laticínios (id 162) respondeu 17:15 (recusa cordial "não utilizo óleo") e foi atendida 17:23 com menção ao nicho vencidos >40% gordura + WhatsApp — já registrado no tick 17:22.
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **8 leads novos do segmento ÓLEOS (boas-vindas 14:01) — monitorar resposta:** Imcopa (processadora de soja — alto potencial de vencidos), Azevedo Óleos, Oil Company, Grupo Zaamp (envasadora), Ecirtec, Comgroup, PMG, Pedrinho Atacadista. Fit perfeito para óleo vegetal vencido (nicho 1).
+6. **FP1/FP2 de supermercados em monitoramento (nicho que mais converte):** Dalben, Amigão, Tenda Atacado, Paulistão (Grupo Savegnago), Enxuto, Tauste, Chimar — monitorar retornos dos canais comerciais.
+7. **Monitorar respostas recém-enviadas:** Coocerqui (cooperativa de consumo, Cerquilho — V4) e Meqso (distribuidora, Jundiaí — óleo vencido), enviados 15:01.
+
+### Nota
+Tick de rotina totalmente saudável (22º verde consecutivo): watchdog exit 0 no 1º run, 0 follow-ups atrasados, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), fila zerada (167/156/33/0). Nenhuma resposta comercial nova para negociar neste tick — nada a responder. Próximas ações humanas seguem: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
 ## 2026-09-14 (segunda) — ATENDENTE (tick 17:22)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (18º tick verde consecutivo) + 1 resposta atendida (Betins Laticínios)
@@ -5163,3 +5268,47 @@ Tick de rotina totalmente saudável: watchdog exit 0 de primeira, caixa limpa (0
 ### Nota
 
 Tick de rotina totalmente saudável: watchdog exit 0 de primeira (20º verde consecutivo), caixa limpa (0 respostas pendentes, 0 pedidos de ESG), sem follow-ups atrasados, fila zerada (167/156/33/0). Nenhuma resposta comercial pendente — nada para negociar neste tick. Próximas ações humanas: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
+## 2026-09-14 (segunda-feira) — ANALISTA DE QUALIDADE (auditoria fim de dia 19:35)
+
+### Resumo do dia
+
+- **Sync (19:31)**: sync_formspree.py OK — 48 emails no bounce cache, 30 leads marcados como bounce, 0 notificações novas do Formspree.
+- **Pipeline (215 leads)**: 128 novo / 34 sequencia / 30 bounce / 17 respondido / 6 encerrado.
+- **Envios hoje**: 71 emails (boas-vindas 8 · follow1 0 · follow2 13 · follow3 0 · apresentação 29 · fp1 6 · fp2 15 · fp3 0).
+- **Respostas hoje**: 4 leads respondidos (Mars 09:45 · Nestlé 09:45 · Vitafor 09:46 · Betins Laticínios 17:22 — 'não utilizo óleo', porta aberta p/ vencidos).
+- **Respostas pendentes**: 0 (replies_pending.json = []).
+
+### Auditoria de qualidade (o que foi conferido/corrigido)
+
+1. **Bounces novos hoje: 3** — atendimento@thebestsalgados.com.br (TBS/The Best Salgados, id 202), contato@meqso.com.br (Meqso, id 207), eaparecida@manchesterartesanal.com (Laticínios Manchester, id 200). O sync marcou os 3 como `bounce` + 'EMAIL INVÁLIDO (bounce) — não reenviar'. Nenhum dos 3 tinha boas-vindas_em → **0 envios desperdiçados**.
+2. **bounces.json × leads.csv consistente**: 0 leads com status bounce fora do cache; 0 emails do cache pendentes de marcação. Única exceção é a Rede Top (id 142, `encerrado`) — protegida por design (correção 13/09: nunca rebaixar status terminal/respondido). **Nada a corrigir.**
+3. **17 emails órfãos no cache** (sem lead correspondente hoje): endereços antigos/alternativos que deram bounce e foram trocados (ex.: contato@selmi.com.br bounce → sac@selmi.com.br respondeu; contato@arese.com.br → sac@arese.com.br; rh@realgastronomia.com.br → vendas@...; sac@oba.com.br e sac@redeoba.com.br → atendimento/ouvidoria@redeoba.com.br) + 2 com TLD errado (ecommerce704@redetop.com.b, contato@eixorestaurantes.co). **Manter no cache como trava anti-reenvio — não limpar.**
+4. **REGISTRO (sem correção, conforme orientação)**: lead id 1 (Ana Souza, ana@alimentossalto.com.br) está `bounce` com boas_vindas_em=2026-08-13T11:31:14 — o welcome foi enviado em 13/08 e o bounce foi detectado depois (caso histórico; o send_sequence já pula bounces, então não é bug ativo).
+5. **Leads com email trocado pós-bounce aguardando re-trigger**: Kelco (comercial@), Penina (info@), Cowpig (atendimento@), Infanger (supermercado@), Delta Terceirizações (adm@), Real Distribuidora (paulo@), Arese (sac@), Real Gastronomia (vendas@) e Oba (atendimento@redeoba) estão `novo`/`sequencia` com o email novo e boas-vindas ainda não enviada — o próximo ciclo do send_sequence deve disparar.
+
+### Sugestões para o Estrategista
+
+1. **Padrão de bounces em domínios de distribuidoras/fábricas** (thebestsalgados.com.br, meqso.com.br, manchesterartesanal.com): emails genéricos (contato@, sac@, atendimento@) têm taxa de bounce alta. Priorizar email nominal/verificado (LinkedIn, contato direto) na prospecção desses segmentos.
+2. **Validar TLD antes de inserir lead**: o cache tem 2 endereços com domínio quebrado (ecommerce704@redetop.com.b, contato@eixorestaurantes.co) — uma validação simples de DNS/domínio no Prospector evita retrabalho de correção e bounces duplicados.
+3. **Fila de prospecção zerada (167/156/33/0) segue como gargalo** — a cadência 5-8/dia do Prospector é o que mais destrava volume; e os 8 leads de óleos/distribuição com boas-vindas desde 14:01 estão sem resposta — janela de follow-up (follow2) chegando.
+
+
+---
+
+## 2026-09-15 (terça-feira) — BOT DE SEO (tick 18:46)
+
+### 📊 Posição real no Bing (top 20)
+
+- **Nenhuma keyword alvo ranqueou:** todas as 10 monitoradas estão **"fora do top 20"** (`seo_bot.py --rank --max-rank 10`). 5º+ tick consecutivo sem posição (10/09, 11/09, 12/09, 14/09 e agora).
+- **Diagnóstico novo deste tick (checagem extra de marca):** o domínio **já é conhecido pelo Bing** — a busca pelo próprio domínio ("masteroleo.eco.br") retorna o site na **posição 10**; porém buscas comerciais ("master oleo salto", "compra de oleo usado salto", "master oleo coleta de oleo usado") retornam **None** (nenhuma URL do site no top 20). Leitura honesta: **indexação OK, relevância/autoridade para as keywords comerciais ainda não construída** — não é problema técnico.
+- **SEO geral: OK** — site HTTP 200, todas as keywords presentes no HTML local, sitemap.xml com 15 URLs, indexnow-key.txt ativa, JSON-LD (LocalBusiness + FAQPage) validado nos ciclos anteriores.
+- **Nenhum conteúdo novo criado neste tick** (política anti-ruído, igual ao tick de 10/09 — commit 379933e: não forçar artigos sem base de ranking). Os 8 artigos do blog estão todos linkados no `index.html#blog` e no sitemap — nada a corrigir on-page.
+- Histórico de runtime: `equipe/seo.json` (61 registros, gitignored).
+
+### Backlog para quando houver sinal de ranking
+
+- Keywords alvo **sem página dedicada** (hoje cobertas só dentro de outros artigos): "maionese vencida", "manteiga vencida", "preço do óleo usado por litro". Criar artigo somente quando houver primeiros sinais de indexação/posição — evita canibalização e ruído.
+- Ação de maior impacto pendente (fora do escopo do bot): **link externo real** (associações comerciais, prefeitura de Salto, imprensa local, parceiros de coleta) — sem backlinks, um domínio novo não sai de "fora do top 20" apenas com conteúdo.
