@@ -1013,5 +1013,19 @@
   "email": "contato@rwcozinhaindustrial.com.br",
   "cidade": "Itatiba/SP",
   "segmento": "Alimentacao corporativa / refeicoes coletivas"
+ },
+ {
+  "nome": "IDNLABS",
+  "empresa": "IDNLABS Industria e Comercio de Suplementos Ltda",
+  "email": "sac@idnlabs.com.br",
+  "cidade": "Sao Caetano do Sul/SP",
+  "segmento": "Fabrica de suplementos e encapsulados (private label)"
+ },
+ {
+  "nome": "Romariz",
+  "empresa": "Romariz Alimentos Ltda",
+  "email": "faleconosco@romariz.com.br",
+  "cidade": "Sao Paulo/SP",
+  "segmento": "Industria de maionese e molhos"
  }
 ]

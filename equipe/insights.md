@@ -38,6 +38,42 @@
 
 ---
 
+## 2026-09-15 (terça) — ATENDENTE (tick 19:13)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (25º tick verde consecutivo) + caixa sem respostas novas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **226** (+11 vs tick 18:50: +9 do Melhorador — Coop, Avec, Estrela, TRZ, Super Tatuí, EXAL, Viva Food, Nutrivigor, RW; +2 do Prospector — IDNLABS, Romariz) — ativos: **172** (bounces cache: 49). Fila de prospecção: **178 empresas / 167 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 19:13)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 49).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (49/49 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (25º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada (sem envios novos pendentes — lote de 11 de hoje já consumido pelo Prospector).
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 14/09 17:23).
+- **Dashboard (ref. 19:13):** **193 apresentações / 164 entregues / 29 bounces (15%) / 15 respostas / taxa 7,8%** (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou para baixo porque +11 apresentações de hoje ainda sem resposta). 146 aguardando resposta/follow-up · 32 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial: Betins Laticínios (14/09 17:15, recusa cordial — já atendida).
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Grupo IMC / Frango Assado — toque WhatsApp com prazo 10/09 VENCIDO.**
+4. **Selmi (compras@selmi.com.br) — toque WhatsApp com prazo 11/09 VENCIDO.**
+5. **Coop Cooperativa de Consumo (Campinas, ~80 lojas) — lead nº1 do dia:** email DIRETO do comprador de mercearia (erick.araujo@coopsp.coop.br, página oficial de fornecedores). Apresentação V4 enviada hoje — **se responder, tratar como prioritário** (quem responde é quem compra).
+6. **11 leads novos de hoje em monitoramento (apresentações enviadas):** Coop (comprador), Avec e Estrela (distribuidoras — template óleo vencido), TRZ Food, Super Tatuí, EXAL, Viva Food, Nutrivigor, RW Cozinha Industrial, IDNLABS (encapsulados — nicho Catalent), Romariz (maionese/molhos — vencidos >40%).
+7. **8 leads do segmento ÓLEOS (boas-vindas 14/09) — monitorar resposta:** Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG, Pedrinho Atacadista.
+8. **FP1/FP2 de supermercados em monitoramento:** Dalben, Amigão, Tenda Atacado, Paulistão (Grupo Savegnago), Enxuto, Tauste, Chimar, Coocerqui, Meqso.
+
+### Nota
+Tick de rotina totalmente saudável (25º verde consecutivo): watchdog exit 0 no 1º run, 0 follow-ups atrasados, caixa limpa (0 respostas pendentes, 0 pedidos de ESG), fila zerada (178/167/33/0). Nenhuma resposta comercial nova para negociar neste tick — nada a responder. Próximas ações humanas seguem: toques de WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste com Queijos Itupeva.
+
+---
+
 ## 2026-09-14 (segunda) — ATENDENTE (tick 19:31)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (24º tick verde consecutivo) + caixa sem respostas novas
