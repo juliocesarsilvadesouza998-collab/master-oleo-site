@@ -1,3 +1,37 @@
+## 2026-09-16 (quarta) — MELHORADOR CONTÍNUO (tick 18:45)
+
+### Diagnóstico do dia
+- **Watchdog**: exit 0 pós-correção — 2 follow-ups FP2 ATRASADOS (Mambo, Piraquê) processados na abertura do tick via `prospecao_followup.py` (2/2 OK).
+- **Dashboard**: 193 apresentações / 164 entregues / 29 bounces (15%) / **15 respostas / taxa 7,8%** (meta >3%) — acima da meta pelo 2º mês. 146 leads em sequência de follow-up, 32 inbound.
+- **Ponto MAIS FRACO do dia**: **fila de prospecção em 0 pendentes** (178/167/33/0) — gargalo nº1 recorrente: pipeline de novos contatos parado.
+
+### Melhorias implementadas
+1. **FILA REPOSTA: +3 empresas novas com email de site oficial + MX validado via nslookup** (fila 178 → 181 empresas, 0 → **3 pendentes**):
+   - **Dori Alimentos S.A.** (Elias Fausto/SP — ~15 km de Salto!) — `sac@dori.com.br` (publicado no fale-conosco oficial dori.com.br). MX Proofpoint (pphosted). Fábrica de biscoitos/balas/confeitos = uso intenso de óleo de fritura e gorduras. Segmento marcado sem "gordura" para cair no template genérico de fritura (e não no de vencidos).
+   - **Hospital de Caridade São Vicente de Paulo** (Jundiaí) — `ouvidoria@hsvicente.org.br` (canal OUVIDORIA, que a lição Oba/Arcor ensinou responder gente). MX Outlook 365. Maior hospital da região (centro de trauma, ~1.000 leitos) = cozinha hospitalar frita todos os dias.
+   - **Unimed Sorocaba** (Hospital Unimed Sorocaba) — `sustentabilidade@unimedsorocaba.coop.br` (canal de SUSTENTABILIDADE publicado no site oficial = fit perfeito com o argumento ESG/PNRS). MX Outlook 365.
+2. **NOVO TEMPLATE V7 — HOSPITAIS/CLÍNICAS/SAÚDE** (`bot/prospecao.py`): ângulo de cozinha hospitalar (nutrição de pacientes + refeitório = fritura diária), certificado PNRS + **MTR**, relatório ESG mensal, auditorias de sustentabilidade/licenciamento do setor de saúde, urgência Portaria MME/MMA 3/2026 (jan/2028), CTA de volume + WhatsApp. Dispara para segmentos com hospital/saúde/clínica/unimed/maternidade/sanatório. Render testado (161 palavras, assunto correto). Nicho novo descoberto: hospitais como fonte de óleo de fritura + canal ouvidoria/sustentabilidade.
+
+### Descartados com critério (bounce <15% preservado)
+- **Rede Correia** (Porto Feliz/Itu, sac@redecorreia.com.br): já avaliada 09/09 — MX self-hosted não aceita SMTP externo (lição registrada; não re-adicionar).
+- **Supermercados Yeda** (Campinas, 3 lojas) e **DiQualità Foods** (Piracicaba, salgados): só WhatsApp/formulário, sem email público.
+- **Frijob** (Taquarituba) e **Cruzeiro do Sul** (MG): fora do raio. **União Supermercado**: cidade não confirmada + sem email público. **Supermercados JL** (Campinas): site Apache vazio sem contato. **Sonda/Assaí/Atacadão**: só formulários corporativos.
+
+### Resultado verificado
+- `python enviar_lote.py --status` → **181 empresas / 167 contatados / 33 bounce / 3 pendentes** (exatamente Dori, HSV Jundiaí, Unimed Sorocaba).
+- `nslookup -type=MX`: dori.com.br → Proofpoint; hsvicente.org.br e unimedsorocaba.coop.br → Outlook 365 (3/3 cloud, sem MX self-hosted).
+- `python -m py_compile prospecao.py enviar_lote.py prospecao_followup.py watchdog.py dashboard.py` → OK.
+- Render: V7 hospital (HSV e Unimed) com PNRS+MTR e ESG; Dori → template genérico de fritura (assunto "Óleo usado da Dori Alimentos S.A. vale dinheiro").
+- `python watchdog.py` pós-mudanças + `prospecao_followup.py` (2 FP2 processados) → follow-ups em dia.
+
+### Para o Estrategista (domingo)
+- **3 emails pendentes serão enviados pelo Atendente** no próximo tick: Dori (fábrica gigante vizinha de Salto — alto volume de fritura), HSV Jundiaí (ouvidoria) e Unimed Sorocaba (canal sustentabilidade — ESG). Monitorar resposta do **nicho hospitais/saúde** (novo, template V7).
+- Sugestão: Prospector explorar **hospitais/clínicas com cozinha própria** (Santa Casa, Unimed, beneficentes) na região — nicho sub-coberto com canal ouvidoria/sustentabilidade público.
+- Pendências humanas seguem: toques WhatsApp vencidos (Savegnago, Grupo IMC, Selmi) e coleta-teste Queijos Itupeva.
+- Bounces 15% na meta; Netlify sem créditos (403) segue pendente estrutural.
+
+---
+
 ## 2026-09-15 (terça) — MELHORADOR CONTÍNUO (tick 18:50)
 
 ### Diagnóstico do dia

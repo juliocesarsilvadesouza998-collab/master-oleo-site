@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-15 19:13",
+ "atualizado_em": "2026-09-16 18:45",
  "atendente_2026_09_15_19_13": {
   "diagnostico": "Watchdog exit 0 no 1º run (SMTP OK · IMAP OK — 25º tick verde consecutivo, contagem bot/equipe). Base: 226 leads / 172 ativos / 49 bounces cache (+11 leads vs tick 18:50: +9 do Melhorador — Coop/Avec/Estrela/TRZ/Super Tatuí/EXAL/Viva Food/Nutrivigor/RW — +2 do Prospector — IDNLABS e Romariz — todos já contatados). Fila de prospecção 178/167/33/0 — sem pendentes (lote de 11 enviado hoje, 11/11 OK). Dashboard (ref. 19:13): 193 apresentações / 164 entregues / 29 bounces (15%) / 15 respostas / taxa 7,8% (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou para baixo porque +11 apresentações de hoje ainda sem resposta). CAIXA LIMPA: 0 respostas novas, 0 pendências, nenhum pedido de relatório ESG/certificado. Nada a negociar neste tick.",
   "acoes": [
@@ -263,12 +263,12 @@
   "nicho_prioritario": "supermercados/redes/atacarejo (nicho que mais converte) + encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
  },
  "fila_prospeccao": {
-  "atualizado_em": "2026-09-15",
-  "total": 178,
-  "pendentes": 0,
+  "atualizado_em": "2026-09-16",
+  "total": 181,
+  "pendentes": 3,
   "contatados": 167,
   "bounces": 33,
-  "nota": "Prospector (cron 15/09): fila com 9 pendentes -> +2 empresas novas (IDNLABS/Sao Caetano - encapsulados; Romariz/Sao Paulo - maionese e molhos) com email do site oficial + MX validado -> 11 pendentes -> lote de 11 enviados (--max 15, 11/11 OK, 0 falhas). Audacci/Vinhedo (nutraceuticos) DESCARTADA: ja contatada 08/09 (leads.csv, status sequencia). Fila zerada - reposicao 5-8/dia segue necessaria."
+  "nota": "Melhorador (16/09): fila zerada -> +3 empresas novas com email oficial + MX cloud validado (Dori Elias Fausto; HSV Jundiai ouvidoria; Unimed Sorocaba sustentabilidade) -> 3 pendentes (Dori, HSV, Unimed). Descartados: Rede Correia (MX self-hosted), Yeda/DiQualita (sem email), Frijob/Cruzeiro do Sul (raio), JL (site vazio)."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -688,5 +688,15 @@
   "descartados": "Croissant & Cia (Indaiatuba) e Milk Menk (Porto Feliz): MX self-hosted mail.dominio->si mesmo (risco rejeicao SMTP, licao Rede Correia). Schreiber Foods (Porto Feliz): email de recrutamento de planta nova, nao comercial. Supermercados Caetano (Valinhos): sem registro MX. Delta Super (Itu): mesmo CNPJ do Delta Max (ja na base). AD Food: dominio morto. Hotel Cabreuva: so formulario. Oggi/Marvi/Menu/Provare/3AB/Kentinha: so formulario/WhatsApp.",
   "verificacao": "python enviar_lote.py --status -> 176 empresas / 156 contatados / 33 bounce / 9 pendentes (exatamente os 9 novos). nslookup -type=MX revalidado em 13 dominios candidatos (9 aprovados / 2 self-hosted / 1 sem MX / 1 RH). Render templates OK. python watchdog.py -> exit 0.",
   "para_estrategista": "9 emails pendentes serao enviados pelo Atendente no proximo tick. COOP = lead N1: canal de compras explicito (comprador de mercearia), rede ~80 lojas com padaria/rotisserie - se responder, tratar como prioridade ao lado de Queijos Itupeva/Savegnago. Bounces em 16% (29/182) - 1 ponto acima da meta: revisar cache (17 dos 48 sao alternativos de leads vivos). Sugestao: Prospector explorar paginas fornecedores de redes medias (licao Coop) - ouro de emails de compradores."
+ },
+ "melhorador_2026_09_16_18_45": {
+  "diagnostico": "Watchdog exit 0 apos correcao no tick: 2 FP2 atrasados (Mambo, Piraque) processados via prospecao_followup.py (2/2 OK). Dashboard: 193 apresentacoes / 164 entregues / 29 bounces (15%) / 15 respostas / taxa 7,8% (meta >3%) - acima da meta pelo 2o mes. 146 leads em sequencia, 32 inbound. Ponto MAIS FRACO: fila de prospeccao em 0 pendentes (178/167/33/0) - gargalo n1 recorrente.",
+  "melhorias_aplicadas": [
+   "FILA REPOSTA +3 empresas com email de site oficial + MX validado via nslookup (178 -> 181, 0 -> 3 pendentes): Dori Alimentos S.A. (Elias Fausto ~15km de Salto, sac@dori.com.br, MX Proofpoint, biscoitos/confeitos = fritura intensa), Hospital de Caridade Sao Vicente de Paulo (Jundiai, ouvidoria@hsvicente.org.br, MX Outlook 365, cozinha hospitalar), Unimed Sorocaba (sustentabilidade@unimedsorocaba.coop.br, MX Outlook 365, canal ESG fit perfeito).",
+   "NOVO TEMPLATE V7 HOSPITAIS/SAUDE em bot/prospecao.py: angulo cozinha hospitalar (fritura diaria), certificado PNRS + MTR, relatorio ESG mensal, auditorias de sustentabilidade do setor de saude, urgencia Portaria MME/MMA 3/2026, CTA volume + WhatsApp. Render testado (161 palavras). Nicho novo: hospitais + canal ouvidoria/sustentabilidade.",
+   "Descartados com criterio: Rede Correia (MX self-hosted, licao 09/09), Yeda e DiQualita (so WhatsApp/formulario), Frijob/Cruzeiro do Sul (fora do raio), JL (site vazio), Sonda/Assai/Atacadao (formularios)."
+  ],
+  "verificacao": "python -m py_compile prospecao.py enviar_lote.py prospecao_followup.py watchdog.py dashboard.py -> OK. python enviar_lote.py --status -> 181/167/33/3 pendentes (exatamente Dori, HSV, Unimed). nslookup MX 3/3 cloud. Render V7 hospital + Dori generico OK. watchdog.py exit 0 pos-mudancas.",
+  "para_estrategista": "3 emails pendentes serao enviados pelo Atendente (Dori, HSV Jundiai, Unimed Sorocaba). Monitorar nicho hospitais/saude (novo, V7). Sugestao: Prospector explorar hospitais/clinicas com cozinha propria (Santa Casa, Unimed, beneficentes). Pendencias humanas seguem: WhatsApp Savegnago/Grupo IMC/Selmi vencidos e coleta-teste Queijos Itupeva. Netlify 403 segue pendente estrutural."
  }
 }

@@ -231,6 +231,26 @@ def tpl_apresentacao(cfg, lead):
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
 </div>"""
         }
+    # Ângulo específico: HOSPITAIS/CLÍNICAS/SAÚDE — cozinha hospitalar (nutrição
+    # de pacientes + refeitório) frita todos os dias; setor presta contas de
+    # sustentabilidade (certificações ONA/Green Hospital) e auditoria de resíduos.
+    # V7 (16/09): HSV Jundiaí + Unimed Sorocaba adicionados à fila — nicho novo,
+    # canal ouvidoria/sustentabilidade responde gente (lição Oba/Arcor invertida).
+    if any(k in segmento for k in ["hospital", "hospitais", "saude", "saúde", "clinica",
+                                    "clínica", "unimed", "maternidade", "sanatorio",
+                                    "sanatório", "oncologia", "pronto socorro",
+                                    "assistencia medica", "assistência médica"]):
+        return {
+            "subject": f"Óleo de fritura da cozinha do {lead.get('empresa','')} — coleta com certificado e relatório ESG",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Cozinha hospitalar é <b>fritura todos os dias</b> (nutrição de pacientes + refeitório) — e o óleo usado, que hoje sai de graça, virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8,6 bi</b> e dobra com a demanda por biodiesel (Fortune Business Insights).</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta do óleo de fritura</b> de hospitais: coleta programada (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS) + MTR</b> e <b>relatório ESG mensal</b> — argumento forte para o setor de saúde, que presta contas em auditorias de sustentabilidade e licenciamento. O hospital zera o passivo ambiental e ainda recebe pelo material.</p>
+<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante prioridade.</p>
+<p><b>Quanto a cozinha gera por mês (litros)?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
+</div>"""
+        }
     return {
         "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
