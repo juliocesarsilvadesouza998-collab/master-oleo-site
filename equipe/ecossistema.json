@@ -1,5 +1,14 @@
 {
- "atualizado_em": "2026-09-17 08:39",
+ "atualizado_em": "2026-09-17 17:50",
+ "melhorador_2026_09_17_17_50": {
+  "diagnostico": "Watchdog exit 1 na abertura — 27 follow-ups ATRASADOS (maior backlog do mês) → processados no mesmo tick (27/27 OK: 17 FP1 + 4 FP2 + 6 FP3). CAUSA RAIZ: cron do Atendente PRESO desde 08:42 (scheduler caiu ~09:00 — execução 09:00:04 'unknown', owner exited; gateway voltou ~17:47 com catch-up). Dashboard (17:50): 197 apresentações / 168 entregues / 29 bounces (15%) / 15 respostas / taxa 7,6% (meta >3%) — acima da meta pelo 2º mês. Fila 182/171/33/0 — gargalo nº1 recorrente (Prospector não rodou hoje por causa do scheduler).",
+  "melhorias_aplicadas": [
+   "BACKLOG 27 FOLLOW-UPS processado via prospecao_followup.py (17 FP1: Gerresheimer, Eurofarma, Granol, Mococa, Alma Quente, Laticinios Aviacao, Sitio Piscke, Bom Rech, EmbaVi, Trani, Homemade, Leiteria Prosperidade, Queijos Rosa, Coocerqui + 4 FP2: Fugini, Grow, Lopes, Muffato + 6 FP3: Conrail, Nutylac, Gomah, Argenzio, São Roque, Tenda, Dalben, Paulistão, Amigão). Watchdog re-executado: exit 0.",
+   "FILA REPOSTA +3 HOSPITAIS com email público de site oficial + MX validado via nslookup (todos Outlook/M365, zero self-hosted): Hospital Regional de Sorocaba/SPDM ouvidoria@hrs.spdm.org.br, Hospital Santa Lucinda (PUC-SP) ouvidoriahsl@hospitalsantalucinda.com.br, Hospital PUC-Campinas ouvidoria@hospitaldapuc-campinas.com.br. Fila: 182/171/33/3 PENDENTES — todos cairão no template V7 (hospitais/saúde). Nicho V7 agora com 6 leads no ar."
+  ],
+  "verificacao": "JSON da fila validado (154 entradas, json.load OK); enviar_lote.py --status confirma 3 pendentes exatos; watchdog.py exit 0 pós-backlog; nenhum .py editado (sem py_compile necessário); nenhum email em massa enviado (3 hospitais ficam para o Atendente tick 18:00).",
+  "para_estrategista": "Scheduler do Hermes caiu ~09:00 e voltou ~17:47 (gateway) — backlog absorvido, mas watchdog exit 1 é o único sensor de queda; considerar alerta externo. Nicho V7 hospitais agora com 6 leads (Dori, HSV Jundiaí, Unimed Sorocaba + HRS, Santa Lucinda, PUC-Campinas). Pendências humanas inalteradas: Queijos Itupeva (coleta-teste Rafael), toques WhatsApp vencidos Savegnago (10/09)/Grupo IMC (10/09)/Selmi (11/09), Netlify sem créditos (403), backfill de ids no leads.csv pendente."
+ },
  "atendente_2026_09_17_08_39": {
   "diagnostico": "Watchdog exit 0 no 1º run (SMTP OK · IMAP OK — 27º tick verde consecutivo, contagem bot/equipe). Base: 230 leads / 169 ativos / 49 bounces cache. Fila de prospecção 182/171/33/0 — sem pendentes (sem reposição desde 16/09). Dashboard (ref. 08:39): 197 apresentações / 168 entregues / 29 bounces (15%) / 15 respostas / taxa 7,6% (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou para baixo porque +4 apresentações de ontem — Dori, HSV Jundiaí, Unimed Sorocaba, Milk Menk — ainda sem resposta). CAIXA LIMPA: 0 respostas novas, 0 pendências, nenhum pedido de relatório ESG/certificado. Nada a negociar neste tick.",
   "acoes": [

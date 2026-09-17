@@ -1,3 +1,32 @@
+## 2026-09-17 (quinta) — MELHORADOR CONTÍNUO (tick 17:50)
+
+### Diagnóstico do dia
+- **Watchdog: exit 1 na abertura — 27 follow-ups ATRASADOS** (o maior backlog do mês) → processados no mesmo tick via `prospecao_followup.py`: **27/27 OK** (17 FP1 + 4 FP2 + 6 FP3 — Gerresheimer, Eurofarma, Granol, Mococa, Fugini, Lopes, Muffato, Dalben, Paulistão, Amigão, Tenda, São Roque, Conrail, Nutylac, Gomah, Argenzio, Coocerqui etc). Watchdog re-executado: **exit 0**.
+- **CAUSA RAIZ do backlog: cron do Atendente PRESO desde 08:42** — `hermes cron runs` mostra execução 09:00:04 `unknown` com nota "Scheduler restarted after this execution's owner exited before a durable terminal state" e a execução seguinte só às 17:47:46 (catch-up do gateway, que voltou — heartbeat 50s). Ou seja: o scheduler caiu de manhã, o Atendente não rodou o dia todo, e os follow-ups que venceram (FP1/FP2/FP3 do dia) acumularam. **Lições: (1) watchdog exit 1 ≠ alarme de credencial — é também o sensor de scheduler caído; (2) quando o Atendente "some" por horas, o Melhorador deve processar o backlog e conferir `hermes cron runs`.**
+- **Dashboard (17:50)**: 197 apresentações / 168 entregues / 29 bounces (15%) / **15 respostas / taxa 7,6%** (meta >3%) — acima da meta pelo 2º mês. 149 aguardando resposta/follow-up · 32 inbound.
+- **Ponto MAIS FRACO estrutural**: fila de prospecção em **0 pendentes** (182/171/33/0) — gargalo nº1 recorrente: pipeline de novos contatos parado (Prospector não rodou hoje por causa do scheduler).
+
+### Melhorias implementadas
+1. **Backlog de 27 follow-ups processado** (17 FP1 + 4 FP2 + 6 FP3) — sequência voltou à cadência; watchdog exit 0.
+2. **Fila reposta +3 HOSPITAIS com email público de site oficial + MX validado via nslookup** (todos Outlook/Microsoft 365, zero risco self-hosted) — nicho V7 hospitais/saúde em expansão (era o menos povoado dos nichos ativos: só Dori, HSV Jundiaí, Unimed Sorocaba):
+   - **Hospital Regional de Sorocaba (SPDM)** — `ouvidoria@hrs.spdm.org.br` (ouvidoria pública do HRS, hospital de grande porte; cozinha hospitalar frita todo dia; setor presta contas de ESG/auditoria de resíduos)
+   - **Hospital Santa Lucinda (PUC-SP/Fundação São Paulo)** — `ouvidoriahsl@hospitalsantalucinda.com.br` (hospital de ensino de Sorocaba; ouvidoria com email no site)
+   - **Hospital PUC-Campinas (CEATEC)** — `ouvidoria@hospitaldapuc-campinas.com.br` (hospital universitário de Campinas; ouvidoria pública no site)
+   - Fila: **182 empresas / 171 contatados / 33 bounce / 3 PENDENTES** (confirmado via `enviar_lote.py --status`). Todos cairão no **template V7** (segmento contém "hospital/saude") — ângulo cozinha hospitalar + certificado PNRS/MTR + relatório ESG mensal.
+
+### Verificação
+- `python -m py_compile` não aplicável (nenhum .py editado; fila é JSON) — JSON validado (`json.load` OK, 154 entradas) e `enviar_lote.py --status` confirma os 3 pendentes.
+- `python watchdog.py` re-executado após processar backlog: **exit 0 — "Tudo saudável — nenhum follow-up atrasado"**.
+- Nenhum email em massa enviado neste tick (os 3 hospitais ficam para o Atendente no tick 18:00 — cadência normal).
+
+### Para o Estrategista dominical
+- **Scheduler do Hermes caiu ~09:00 e voltou ~17:47** (gateway). O backlog de follow-ups foi absorvido, mas convém acompanhar: se o Atendente falhar de novo por horas, o watchdog exit 1 será o único sensor. Considerar alerta externo (ex.: no_agent watcher por e-mail via config.json) para queda de scheduler.
+- Nicho hospitais/saúde (V7) agora com 6 leads no ar (Dori, HSV Jundiaí, Unimed Sorocaba + HRS, Santa Lucinda, PUC-Campinas) — avaliar resultado na semana.
+- Pendências humanas inalteradas: Queijos Itupeva (coleta-teste com Rafael), toques WhatsApp vencidos Savegnago (10/09) / Grupo IMC (10/09) / Selmi (11/09), Netlify sem créditos (403).
+- Higiene de dados: leads novos das rodadas recentes seguem sem id no leads.csv (backfill pendente).
+
+---
+
 ## 2026-09-17 (quinta) — ATENDENTE IA (tick 08:39)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (27º tick verde consecutivo) + caixa sem respostas novas
