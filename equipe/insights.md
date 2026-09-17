@@ -5482,9 +5482,9 @@ Tick de rotina totalmente saudável: watchdog exit 0 de primeira (20º verde con
 
 ### 📊 Posição real no Bing (top 20)
 
-- **Nenhuma keyword alvo ranqueou:** todas as 10 monitoradas seguem **"fora do top 20 (ainda não indexado)"** no Bing (). 6º tick consecutivo sem posição (10/09, 11/09, 12/09, 14/09, 15/09 e agora).
+- **Nenhuma keyword alvo ranqueou:** todas as 10 monitoradas seguem **"fora do top 20 (ainda não indexado)"** no Bing (`seo_bot.py --rank --max-rank 10`). 6º tick consecutivo sem posição (10/09, 11/09, 12/09, 14/09, 15/09 e agora).
 - **SEO geral: OK** — site HTTP 200, todas as 23 keywords presentes no HTML local, sitemap.xml presente, indexnow ativa. Conteúdo 100% on-page; o que falta é autoridade de domínio (backlinks), não técnica.
-- **Histórico honesto:**  com 60 registros de runtime desde 19/08/2026 — **0 registros com posição <= 20** em ~30 dias de monitoramento. Leitura: Bing conhece o site (indexação OK), mas relevância comercial ainda não construída — normal para domínio novo, curva de semanas/meses.
+- **Histórico honesto:** `equipe/seo.json` com 60 registros de runtime desde 19/08/2026 — **0 registros com posição <= 20** em ~30 dias de monitoramento. Leitura: Bing conhece o site (indexação OK), mas relevância comercial ainda não construída — normal para domínio novo, curva de semanas/meses.
 - **Nenhum conteúdo novo criado neste tick** (política anti-ruído mantida: não forçar artigos sem base de ranking — evitar canibalização e ruído). Nada a corrigir on-page.
 
 ### Backlog (mantido)
