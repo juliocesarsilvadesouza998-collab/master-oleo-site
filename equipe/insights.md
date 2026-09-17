@@ -1,3 +1,55 @@
+## 2026-09-17 (quinta) — ATENDENTE IA (tick 08:39)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (27º tick verde consecutivo) + caixa sem respostas novas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **230** — ativos: **169** (bounces cache: 49). Fila de prospecção: **182 empresas / 171 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 08:39)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 49).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (49/49 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (27º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada — **sem envios novos** (nenhum follow-up com vencimento hoje; sequência em cadência).
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 14/09 17:23).
+- **Dashboard (ref. 08:39):** **197 apresentações / 168 entregues / 29 bounces (15%) / 15 respostas / taxa 7,6%** (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou para baixo com +4 apresentações de ontem — Dori, HSV Jundiaí, Unimed Sorocaba, Milk Menk — ainda sem resposta). 149 aguardando resposta/follow-up · 32 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial: Betins Laticínios (14/09 17:15, recusa cordial — já atendida).
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1 — última reposição Milk Menk em 16/09) e Netlify sem créditos (403 — GitHub Pages único no ar). **Observação de qualidade:** Milk Menk foi adicionado/enviado pelo Prospector em 16/09 apesar da lição de 15/09 (MX self-hosted = risco de bounce) — monitorar se entra no cache de bounces. Higiene de dados: leads novos sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09).
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Coop Campinas (~80 lojas)** — apresentação enviada 15/09 ao email DIRETO do comprador de mercearia (erick.araujo@coopsp.coop.br) — aguardando retorno; quem responde é quem compra.
+4. **Nicho hospitais/saúde (V7)** — Dori Alimentos (Elias Fausto, vizinha de Salto), HSV Jundiaí (ouvidoria) e Unimed Sorocaba (sustentabilidade) — apresentações enviadas 16/09, aguardando retorno.
+- Em aberto: Grupo IMC (toque 10/09 vencido), Selmi (toque 11/09 vencido), Sumerbol (Ivone), GoodBom (Laura), Rede Boa, Arcor/Bagley, Sanofi.
+
+---
+
+## 2026-09-16 (quarta) — ATENDENTE IA (tick 18:50)
+
+### Diagnóstico do tick
+- **Watchdog exit 0 de primeira** (SMTP OK · IMAP OK) — 26º tick verde consecutivo; 226 leads / 172 ativos / 49 bounces cache; nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado.
+- **Dashboard (18:50)**: 193 apresentações / 164 entregues / **29 bounces (15%)** / 15 respostas / **taxa 7,8%** (meta >3%) — acima da meta pelo 2º mês consecutivo. 146 leads em sequência, 32 inbound.
+- **CAIXA LIMPA**: 0 respostas novas (replies_pending.json = []), 0 pendências, nenhum pedido de relatório ESG/certificado — nada a negociar neste tick.
+
+### Ações executadas
+1. **PASSO 0**: sync_formspree 0 notificações novas (cache 49 bounces) · corrigir_emails 0 processados (49/49 já tentados, sem novidades).
+2. **PASSO 1**: watchdog exit 0 — sistema saudável, sem correções necessárias.
+3. **PASSO 2**: prospecao_followup 0 atrasados · **send_sequence: 13 follow-ups enviados** (6 FP3: Novotel Itu/Accor, Metha Alimentos, Real Gastronomia, Mirassol Refeições, FS Alimentos, BelVit — + 7 FP1: PMG, Ecirtec, Oil Company, Azevedo Óleos, Imcopa, Grupo Zaamp, Comgroup) · check-replies: 0 respostas aguardando.
+4. **PENDÊNCIA DO MELHORADOR (18:45)**: **enviar_lote.py --max 3 enviou os 3 pendentes da fila** — **Dori Alimentos** (Elias Fausto, ~15 km de Salto; fábrica de biscoitos/confeitos = fritura intensa), **Hospital São Vicente de Paulo Jundiaí** (ouvidoria — V7 hospitais) e **Unimed Sorocaba** (canal sustentabilidade — V7 hospitais/ESG) — 3/3 OK, fila zerada (181/170/33/0).
+
+### Problemas
+Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção zerada de novo após o envio (Prospector precisa repor 5-8/dia com MX validado — gargalo nº1) e Netlify sem créditos (403; GitHub Pages único no ar). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.
+
+### Leads QUENTES
+- **Nenhum lead quente novo neste tick** — caixa sem respostas desde a Betins (14/09 17:15, recusa cordial já atendida). Monitorar: apresentações de hoje (Dori, HSV Jundiaí, Unimed Sorocaba — nicho hospitais/saúde V7), apresentações de ontem (Coop — email direto de comprador, maior potencial; Avec/Estrela; IDNLABS/Romariz) e os 7 FP1 enviados hoje para o segmento óleos (Imcopa, Azevedo Óleos, Oil Company, Grupo Zaamp, Ecirtec, Comgroup, PMG).
+- Destaques em aberto (inalterados): **Queijos Itupeva #1** em negociação ativa (coleta-teste com Rafael pendente de ação humana), **Savegnago/Grupo IMC/Selmi** com toques WhatsApp vencidos, **Coop** aguardando retorno do canal de compras.
+
+---
+
 ## 2026-09-16 (quarta) — MELHORADOR CONTÍNUO (tick 18:45)
 
 ### Diagnóstico do dia
@@ -5422,3 +5474,20 @@ Tick de rotina totalmente saudável: watchdog exit 0 de primeira (20º verde con
 
 - Keywords alvo **sem página dedicada** (hoje cobertas só dentro de outros artigos): "maionese vencida", "manteiga vencida", "preço do óleo usado por litro". Criar artigo somente quando houver primeiros sinais de indexação/posição — evita canibalização e ruído.
 - Ação de maior impacto pendente (fora do escopo do bot): **link externo real** (associações comerciais, prefeitura de Salto, imprensa local, parceiros de coleta) — sem backlinks, um domínio novo não sai de "fora do top 20" apenas com conteúdo.
+
+
+---
+
+## 2026-09-17 (quinta) — BOT DE SEO (tick 17:48)
+
+### 📊 Posição real no Bing (top 20)
+
+- **Nenhuma keyword alvo ranqueou:** todas as 10 monitoradas seguem **"fora do top 20 (ainda não indexado)"** no Bing (). 6º tick consecutivo sem posição (10/09, 11/09, 12/09, 14/09, 15/09 e agora).
+- **SEO geral: OK** — site HTTP 200, todas as 23 keywords presentes no HTML local, sitemap.xml presente, indexnow ativa. Conteúdo 100% on-page; o que falta é autoridade de domínio (backlinks), não técnica.
+- **Histórico honesto:**  com 60 registros de runtime desde 19/08/2026 — **0 registros com posição <= 20** em ~30 dias de monitoramento. Leitura: Bing conhece o site (indexação OK), mas relevância comercial ainda não construída — normal para domínio novo, curva de semanas/meses.
+- **Nenhum conteúdo novo criado neste tick** (política anti-ruído mantida: não forçar artigos sem base de ranking — evitar canibalização e ruído). Nada a corrigir on-page.
+
+### Backlog (mantido)
+
+- Keywords sem página dedicada ("maionese vencida", "manteiga vencida", "preço do óleo usado por litro") — criar artigo só quando houver primeiros sinais de posição.
+- Ação de maior impacto pendente (fora do escopo do bot): **backlinks externos reais** (associações comerciais, prefeitura de Salto, imprensa local, parceiros de coleta) — sem isso, domínio novo não sai do "fora do top 20" só com conteúdo.

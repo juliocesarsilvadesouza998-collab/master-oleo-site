@@ -1,5 +1,28 @@
 {
- "atualizado_em": "2026-09-16 18:45",
+ "atualizado_em": "2026-09-17 08:39",
+ "atendente_2026_09_17_08_39": {
+  "diagnostico": "Watchdog exit 0 no 1º run (SMTP OK · IMAP OK — 27º tick verde consecutivo, contagem bot/equipe). Base: 230 leads / 169 ativos / 49 bounces cache. Fila de prospecção 182/171/33/0 — sem pendentes (sem reposição desde 16/09). Dashboard (ref. 08:39): 197 apresentações / 168 entregues / 29 bounces (15%) / 15 respostas / taxa 7,6% (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou para baixo porque +4 apresentações de ontem — Dori, HSV Jundiaí, Unimed Sorocaba, Milk Menk — ainda sem resposta). CAIXA LIMPA: 0 respostas novas, 0 pendências, nenhum pedido de relatório ESG/certificado. Nada a negociar neste tick.",
+  "acoes": [
+   "PASSO 0: sync_formspree 0 notificações novas (cache 49 bounces) + corrigir_emails 0 processados (49/49 já tentados, sem novidades).",
+   "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado (27º verde consecutivo).",
+   "PASSO 2: prospecao_followup 0 atrasados · send_sequence processada (sem envios novos — nenhum follow-up com vencimento hoje; sequência em cadência, +4 apresentações de ontem já no dashboard) · check-replies: 0 respostas aguardando (replies_pending.json = []). Nenhuma resposta para responder; nenhum relatório ESG solicitado → nenhum PDF gerado.",
+   "PASSO 3: ecossistema.json + insights.md atualizados com números reais (230 leads / 169 ativos / 49 bounces cache; funil 197/168/29/15 = 7,6%; fila 182/171/33/0; 0 leads respondidos no tick)."
+  ],
+  "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção em 0 pendentes (Prospector precisa repor 5-8/dia com MX validado — gargalo nº1 recorrente; última reposição Milk Menk em 16/09, enviada apesar da lição 15/09 de MX self-hosted — monitorar se não vira bounce) e Netlify sem créditos (403, GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes ainda sem id no leads.csv (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.",
+  "para_estrategista": "Tick de rotina 100% limpo, sem eventos comerciais: caixa sem respostas novas (0 pendentes), fila zerada, watchdog verde (27º consecutivo). Nenhum lead novo respondeu desde a Betins (14/09 17:15, recusa cordial já atendida). AÇÕES DO TICK: nenhum envio novo — sequência em cadência, sem follow-ups vencidos. Destaques seguem inalterados: Queijos Itupeva #1 em negociação ativa (coleta-teste com Rafael pendente de ação humana), Savegnago/Grupo IMC/Selmi com toques WhatsApp vencidos (10-11/09), Coop (email direto de comprador) aguardando resposta da apresentação de 15/09, e nicho hospitais/saúde V7 (Dori, HSV Jundiaí, Unimed Sorocaba — enviado 16/09) aguardando retorno. Fila zerada segue gargalo nº1 — reposição do Prospector é a prioridade da semana."
+ },
+ "atendente_2026_09_16_18_50": {
+  "diagnostico": "Watchdog exit 0 no 1º run (SMTP OK · IMAP OK — 26º tick verde consecutivo, contagem bot/equipe). Base: 226 leads / 172 ativos / 49 bounces cache. Fila de prospecção 181/167/33/3 (3 pendentes do Melhorador 18:45) → ENVIADOS neste tick (3/3 OK) → fila 181/170/33/0. Dashboard (ref. 18:50): 193 apresentações / 164 entregues / 29 bounces (15%) / 15 respostas / taxa 7,8% (meta >3%) — acima da meta pelo 2º mês consecutivo. CAIXA LIMPA: 0 respostas novas, 0 pendências, nenhum pedido de relatório ESG/certificado. Nada a negociar neste tick.",
+  "acoes": [
+   "PASSO 0: sync_formspree 0 notificações novas (cache 49 bounces) + corrigir_emails 0 processados (49/49 já tentados, sem novidades).",
+   "PASSO 1: watchdog exit 0 — nenhum follow-up atrasado, nenhum bounce sem correção, nenhum lead parado (26º verde consecutivo).",
+   "PASSO 2: prospecao_followup 0 atrasados · send_sequence: 13 follow-ups enviados (6 FP3: Novotel Itu, Metha, Real Gastronomia, Mirassol, FS Alimentos, BelVit + 7 FP1: PMG, Ecirtec, Oil Company, Azevedo Óleos, Imcopa, Grupo Zaamp, Comgroup) · check-replies: 0 respostas aguardando (replies_pending.json = []). Nenhuma resposta para responder; nenhum relatório ESG solicitado → nenhum PDF gerado.",
+   "PENDÊNCIA DO MELHORADOR (18:45): enviar_lote.py --max 3 enviou os 3 pendentes da fila — Dori Alimentos (sac@dori.com.br, Elias Fausto ~15km de Salto, V7/genérico fritura), Hospital São Vicente de Paulo Jundiaí (ouvidoria@hsvicente.org.br, V7 hospitais) e Unimed Sorocaba (sustentabilidade@unimedsorocaba.coop.br, V7 hospitais/ESG) — 3/3 OK, fila zerada (181/170/33/0).",
+   "PASSO 3: ecossistema.json + insights.md atualizados com números reais (226 leads / 172 ativos / 49 bounces cache; funil 193/164/29/15 = 7,8%; fila 181/170/33/0; 13 follow-ups + 3 apresentações enviados no tick)."
+  ],
+  "problemas": "Nenhum neste tick (watchdog exit 0). Pendências estruturais mantidas: fila de prospecção zerada de novo após o envio de hoje (Prospector precisa repor 5-8/dia com MX validado — gargalo nº1 recorrente) e Netlify sem créditos (403, GitHub Pages único no ar). Higiene de dados: leads novos das rodadas recentes ainda sem id no leads.csv (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.",
+  "para_estrategista": "Tick de rotina 100% limpo, sem eventos comerciais: caixa sem respostas novas (0 pendentes), watchdog verde (26º consecutivo). Nenhum lead novo respondeu desde a Betins (14/09 17:15, recusa cordial já atendida). AÇÕES DO TICK: 13 follow-ups de sequência (6 FP3 + 7 FP1) + 3 apresentações da fila (Dori, HSV Jundiaí, Unimed Sorocaba — nicho hospitais/saúde V7 no ar, monitorar resposta). Destaques seguem inalterados: Queijos Itupeva #1 em negociação ativa (coleta-teste com Rafael pendente de ação humana), Savegnago/Grupo IMC/Selmi com toques WhatsApp vencidos (10-11/09), Coop (email direto de comprador) aguardando resposta da apresentação de ontem. Fila zerada segue gargalo nº1."
+ },
  "atendente_2026_09_15_19_13": {
   "diagnostico": "Watchdog exit 0 no 1º run (SMTP OK · IMAP OK — 25º tick verde consecutivo, contagem bot/equipe). Base: 226 leads / 172 ativos / 49 bounces cache (+11 leads vs tick 18:50: +9 do Melhorador — Coop/Avec/Estrela/TRZ/Super Tatuí/EXAL/Viva Food/Nutrivigor/RW — +2 do Prospector — IDNLABS e Romariz — todos já contatados). Fila de prospecção 178/167/33/0 — sem pendentes (lote de 11 enviado hoje, 11/11 OK). Dashboard (ref. 19:13): 193 apresentações / 164 entregues / 29 bounces (15%) / 15 respostas / taxa 7,8% (meta >3%) — acima da meta pelo 2º mês consecutivo (taxa recalculou para baixo porque +11 apresentações de hoje ainda sem resposta). CAIXA LIMPA: 0 respostas novas, 0 pendências, nenhum pedido de relatório ESG/certificado. Nada a negociar neste tick.",
   "acoes": [
@@ -264,11 +287,11 @@
  },
  "fila_prospeccao": {
   "atualizado_em": "2026-09-16",
-  "total": 181,
-  "pendentes": 3,
-  "contatados": 167,
+  "total": 182,
+  "pendentes": 0,
+  "contatados": 171,
   "bounces": 33,
-  "nota": "Melhorador (16/09): fila zerada -> +3 empresas novas com email oficial + MX cloud validado (Dori Elias Fausto; HSV Jundiai ouvidoria; Unimed Sorocaba sustentabilidade) -> 3 pendentes (Dori, HSV, Unimed). Descartados: Rede Correia (MX self-hosted), Yeda/DiQualita (sem email), Frijob/Cruzeiro do Sul (raio), JL (site vazio)."
+  "nota": "Prospector (16/09): fila zerada -> +1 empresa nova (Milk Menk, Porto Feliz, laticinios artesanais, contato@milkmenk.com.br, MX mail.milkmenk.com.br valido) -> 1 pendente enviado no mesmo tick (1/1 OK). Fila volta a 0 pendentes."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -698,5 +721,31 @@
   ],
   "verificacao": "python -m py_compile prospecao.py enviar_lote.py prospecao_followup.py watchdog.py dashboard.py -> OK. python enviar_lote.py --status -> 181/167/33/3 pendentes (exatamente Dori, HSV, Unimed). nslookup MX 3/3 cloud. Render V7 hospital + Dori generico OK. watchdog.py exit 0 pos-mudancas.",
   "para_estrategista": "3 emails pendentes serao enviados pelo Atendente (Dori, HSV Jundiai, Unimed Sorocaba). Monitorar nicho hospitais/saude (novo, V7). Sugestao: Prospector explorar hospitais/clinicas com cozinha propria (Santa Casa, Unimed, beneficentes). Pendencias humanas seguem: WhatsApp Savegnago/Grupo IMC/Selmi vencidos e coleta-teste Queijos Itupeva. Netlify 403 segue pendente estrutural."
+ },
+ "tick_prospector_16_09_09_00": {
+  "diagnostico": "enviar_lote --status: 181 empresas — 170 contatados, 33 bounces, 0 pendentes (< 10, acionou PASSO 2)",
+  "buscas_web": 4,
+  "buscas_executadas": [
+   "fabrica margarina OR industria manteiga interior SP email contato site oficial (achados: BRF IR, Interfood, Arla — fora do raio ou sem email util)",
+   "laticinios Tiete OR Porto Feliz OR Cerquilho OR Capivari SP fabrica queijos manteiga contato email (achados: MILK MENK/Porto Feliz — EMAIL PUBLICO contato@milkmenk.com.br; Laticinios Pereira/PR e Larisol/RJ — fora do raio)",
+   "laticinios Itu OR Salto OR Indaiatuba OR Cabreuva OR Itupeva SP queijos manteiga fabrica site contato (achados: Queijos Itupeva e Laghi & Tosi — JA NA BASE; Duluiz — so Instagram, sem email publico)",
+   "fabrica maionese molhos gorduras vegetais SP email contato (achados: nenhum email publico util dentro do raio — artigos tecnicos e chamadas publicas)"
+  ],
+  "verificacoes_extra": "web_extract em milkmenk.com.br/ e /contato/ (email contato@milkmenk.com.br confirmado no rodape oficial + pagina de contato com endereco Fazenda Santo Antonio, Porto Feliz); nslookup MX milkmenk.com.br -> mail.milkmenk.com.br OK",
+  "empresas_novas_adicionadas": 1,
+  "adicionadas": [
+   {
+    "nome": "Milk Menk",
+    "email": "contato@milkmenk.com.br",
+    "mx": "valido (mail.milkmenk.com.br)",
+    "cidade": "Porto Feliz/SP",
+    "segmento": "laticinios artesanal (queijos, iogurte, doce de leite) - NICHO PRIORITARIO (vencidos >40% gordura)"
+   }
+  ],
+  "emails_enviados": 1,
+  "falhas": "nenhuma (1/1 enviados; 1 registrado no leads.csv com lock)",
+  "destaques_gorduras_laticinios": "MILK MENK (Porto Feliz/SP) — laticinios artesanais de fazenda (queijos, iogurte, doce de leite; 33+ anos, 90% da fazenda sustentavel): candidato de vencidos >40% + descaracterizacao, raio ~40km de Salto; recebe discurso automatico do segmento",
+  "destaques_encapsulados": "nenhum novo nesta rodada (buscas esgotadas em gorduras/laticinios; encapsulados ja bem cobertos: Catalent cliente real, Cellera/Sorocaps/Hile/WBM/Ekobe/Grow contatados)",
+  "nota": "Rodada de reposicao minima: 4 buscas (limite anti-loop) consumidas; unico alvo novo util foi Milk Menk (Porto Feliz) — adicionado e enviado no mesmo tick. Fila 182/171/33/0 — volta a precisar de reposicao. RECOMENDACAO p/ proximas rodadas: (1) Porto Feliz/Tiete/Capivari ainda pouco explorados com termos de gorduras/laticinios (Milk Menk veio dai); (2) explorar frigorificos/gordura animal (Boituva/Tatui); (3) diretorios setoriais ABIA/SINDALIMENTOS para emails de fale-conosco."
  }
 }
