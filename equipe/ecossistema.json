@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-18 10:46",
+ "atualizado_em": "2026-09-18 12:31",
  "criado_em": "2026-08-13",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14",
@@ -47,12 +47,12 @@
   "nicho_prioritario": "supermercados/redes/atacarejo (nicho que mais converte) + encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
  },
  "fila_prospeccao": {
-  "atualizado_em": "2026-09-18",
-  "total": 187,
-  "pendentes": 0,
+  "atualizado_em": "2026-09-18 12:31",
+  "total": 189,
+  "pendentes": 2,
   "contatados": 176,
   "bounces": 33,
-  "nota": "Prospector (18/09, rodada 10:46): fila zerada -> reposicao com 4 buscas web ineditas. 2 empresas novas validas adicionadas e ENVIADAS: Capivariana Alimentos (atendimento@capivariana.com.br, graos/farinaceos, Capivari ~30km de Salto, MX valido) e Frinni Frigodeliss/Grupo Bressiani (frigodeliss@frigodeliss.com.br, laticinios/sobremesas lacteas, Capivari, NICHO PRIORITARIO vencidos >40% gordura, MX Locaweb valido). enviar_lote --max 15: 2/2 OK. Fila 187/176/33/0. Capivari revelou bolsao nao explorado - proximas rodadas devem mirar Capivari/Rafard/Mombuca/Rio das Pedras."
+  "nota": "Atendente IA (18/09, rodada 12:01): sync OK, watchdog OK (33o tick verde), 0 follow-ups, 0 envios novos, 0 respostas pendentes. Fila: 189 empresas - 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br). Sem leads quentes novos. Toques WhatsApp humanos pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva."
  },
  "estado_2026_08_26": {
   "leads_total": 117,
@@ -433,7 +433,156 @@
    "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês)",
    "watchdog_verde_consecutivo": 31
   },
-  "caixa_entrada_auditoria": "0 mensagens novas desde tick 10:31 (scan_inbox: OK). Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
-  "observacoes": "Sem leads quentes novos neste tick. Dalben (tick 10:31) segue como lead quente nº1 — Luis luish@supermercadosdalben.com.br aguardando retorno. Fila: 2 pendentes (UNISO, Sapore). 22 leads sem id no CSV. Netlify 403. Toques WhatsApp pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva, Coop, hospitais."
+  "caixa_entrada_auditoria": "0 mensagens novas desde tick 10:31 (scan_inbox: OK). Nenhum pedido de relatorio ESG/certificado — nenhum PDF gerado.",
+  "observacoes": "Sem leads quentes novos neste tick. Dalben (tick 10:31) segue como lead quente n1 — Luis luish@supermercadosdalben.com.br aguardando retorno. Fila: 2 pendentes (UNISO, Sapore). 22 leads sem id no CSV. Netlify 403. Toques WhatsApp pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva, Coop, hospitais."
+ },
+ "atendente_ia_2026_09_18_11_31": {
+  "tick": "2026-09-18 11:31",
+  "passo_0_sync": "sync_formspree.py OK - 0 notificacoes Formspree novas; 49 bounces no cache. corrigir_emails.py OK - 0 bounces novos processados (ja tentados anteriormente).",
+  "passo_1_watchdog": "exit 0 - SMTP OK - IMAP OK. 32o tick verde consecutivo. Nenhum follow-up atrasado, bounces corrigidos ou leads parados.",
+  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados. send_sequence: 4 boas-vindas enviadas (sac@bembrasil.ind.br, megachips@megachips.com.br, sac@crac.com.br, contato@praticlevealimentos.com.br). check-replies: 0 respostas pendentes (replies_pending.json = []). scan_inbox: 0 mensagens nao lidas na caixa.",
+  "pipeline": {
+   "leads_total": 239,
+   "leads_ativos": 182,
+   "novo": 146,
+   "sequencia": 0,
+   "respondido": 18,
+   "bounce": 31,
+   "encerrado": 26,
+   "bounces_cache": 49,
+   "fila_prospeccao": "189 empresas - 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
+  },
+  "dashboard": {
+   "apresentacoes": 204,
+   "entregues_est": 175,
+   "bounces_pct": "14%",
+   "respostas": 18,
+   "taxa_resposta": "~8% (meta >3% - acima pelo 2o mes consecutivo)",
+   "watchdog_verde_consecutivo": 32
+  },
+  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatorio ESG/certificado - nenhum PDF gerado.",
+  "observacoes": "Tick rotineiro sem leads quentes novos. Dalben (respondido 18/09 10:23) segue como lead quente n1 - Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes. Nenhuma resposta para atender no replies_pending. Proxima acao humana necessaria: toques WhatsApp nos leads vencidos (Savegnago, Grupo IMC, Selmi, Queijos Itupeva) seguem como pendencia."
+ },
+ "atendente_ia_2026_09_18_12_01": {
+  "tick": "2026-09-18 12:01",
+  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas; 49 bounces no cache. corrigir_emails.py OK — 0 bounces novos processados (já tentados).",
+  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 33º tick verde consecutivo. Nenhum follow-up atrasado.",
+  "passo_2_sequencia": "0 follow-ups processados; send_sequence OK (Sequência processada, 0 envios novos); check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG.",
+  "pipeline": {
+   "leads_total": 239,
+   "leads_ativos": 164,
+   "novo": 146,
+   "sequencia": 0,
+   "respondido": 18,
+   "bounce": 31,
+   "encerrado": 26,
+   "bounces_cache": 49,
+   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
+  },
+  "dashboard": {
+   "apresentacoes": 204,
+   "entregues_est": 175,
+   "bounces_pct": "14%",
+   "respostas": 18,
+   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
+   "watchdog_verde_consecutivo": 33
+  },
+  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
+  "observacoes": "Tick rotineiro. Sem leads quentes novos neste tick. Dalben (respondido 18/09 10:23) segue como lead quente n1 — Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes (UNISO, Sapore). Toques WhatsApp humanos pendentes: Savegnago (vencido 10/09), Grupo IMC (10/09), Selmi (11/09), Queijos Itupeva (coleta-teste). Netlify 403."
+ },
+ "atendente_ia_2026_09_18_12_31": {
+  "tick": "2026-09-18 12:31",
+  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas; 49 bounces no cache. corrigir_emails.py OK — 0 bounces novos processados.",
+  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 34º tick verde consecutivo. Nenhum follow-up atrasado.",
+  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados; send_sequence OK (Sequência processada, 0 envios novos); check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG.",
+  "pipeline": {
+   "leads_total": 239,
+   "leads_ativos": 182,
+   "novo": 146,
+   "sequencia": 0,
+   "respondido": 18,
+   "bounce": 31,
+   "encerrado": 26,
+   "bounces_cache": 49,
+   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
+  },
+  "dashboard": {
+   "apresentacoes": 204,
+   "entregues_est": 175,
+   "bounces_pct": "14%",
+   "respostas": 18,
+   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
+   "watchdog_verde_consecutivo": 34
+  },
+  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
+  "observacoes": "Tick rotineiro sem leads quentes novos. Dalben (respondido 18/09 10:23) segue como lead quente nº1 — Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes (UNISO, Sapore). Toques WhatsApp humanos pendentes: Savegnago (vencido 10/09), Grupo IMC (10/09), Selmi (11/09), Queijos Itupeva (coleta-teste). Netlify 403."
+ },
+ "atendente_ia_2026_09_18_13_32": {
+  "tick": "2026-09-18 13:32",
+  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas (49 bounces no cache). corrigir_emails.py OK — 0 bounces novos processados (já tentados).",
+  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 35º tick verde CONSECUTIVO. Nenhum follow-up atrasado.",
+  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados. send_sequence OK (Sequência processada, 0 envios novos). check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
+  "pipeline": {
+   "leads_total": 239,
+   "leads_ativos": 164,
+   "novo": 146,
+   "sequencia": 0,
+   "respondido": 18,
+   "bounce": 31,
+   "encerrado": 26,
+   "bounces_cache": 49,
+   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
+  },
+  "dashboard": {
+   "apresentacoes": 204,
+   "entregues_est": 175,
+   "bounces_pct": "14%",
+   "respostas": 18,
+   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
+   "watchdog_verde_consecutivo": 35
+  },
+  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
+  "observacoes": "Tick rotineiro sem leads quentes novos. Dalben (respondido 18/09) segue como lead quente nº1 — Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes (UNISO ouvidoria@uniso.br, Sapore suprimentos@sapore.com.br). Toques WhatsApp humanos pendentes: Savegnago (vencido 10/09), Grupo IMC (10/09), Selmi (11/09), Queijos Itupeva (coleta-teste). Netlify 403."
+ },
+ "atendente_ia_2026_09_18_14_01": {
+  "tick": "2026-09-18 14:01",
+  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas (49 bounces no cache). corrigir_emails.py OK — 0 bounces novos processados (já tentados).",
+  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 36º tick verde CONSECUTIVO. Nenhum follow-up atrasado.",
+  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados. send_sequence OK (Sequência processada, sem novos leads com status 'novo'). check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG/certificado.",
+  "pipeline": {
+   "leads_total": 239,
+   "leads_ativos": 164,
+   "novo": 146,
+   "sequencia": 0,
+   "respondido": 18,
+   "bounce": 31,
+   "encerrado": 26,
+   "bounces_cache": 49,
+   "fila_prospeccao": "189 empresas — 178 contatados, 33 bounce, 0 PENDENTES"
+  },
+  "dashboard": {
+   "apresentacoes": 206,
+   "entregues_est": 177,
+   "bounces_pct": "14%",
+   "respostas": 18,
+   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
+   "watchdog_verde_consecutivo": 36
+  },
+  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
+  "observacoes": "Fila desemperrada: UNISO (ouvidoria@uniso.br, nicho universidades) e Sapore (suprimentos@sapore.com.br, canal de compras) enviados manualmente via enviar_lote.py --max 10 (send_sequence não os processava). ATENÇÃO: scan_inbox detectou bounce do Sapore — suprimentos@sapore.com.br é grupo Microsoft 365 que rejeita emails externos. UNISO: aguardando confirmação de entrega. Dalben (18/09) segue como lead quente nº1 — aguardando retorno de Luis. Fila agora zerada (0 pendentes) — precisa de reposição pelo Prospector. Toques WhatsApp humanos pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva. Netlify 403."
+ },
+ "melhorador_continuo_2026_09_18_14_14": {
+  "diagnostico": "Watchdog OK (36o tick verde). Dashboard: 206 apresentações / 177 entregues / 14% bounce / 18 respostas / taxa ~8% — acima da meta. Ponto MAIS FRACO: fila de prospecção ZERADA (0 pendentes) pelo 4o dia consecutivo — pipeline de novos leads parado.",
+  "melhorias_aplicadas": [
+   "SITE (deploy-vercel/index.html): adicionada seção PROVA SOCIAL real — cases BSBIOS × Madero (55 mil L/mês, 270 restaurantes), Catalent Indaiatuba/Sorocaba (cliente real encapsulados), e mercado UCO USbi→US5bi + exportação EUA + Portaria 3/2026. CSS já existia, HTML nunca implementado.",
+   "FP1 (bot/prospeccao_followup.py): adicionado argumento de URGÊNCIA — escassez global (exportação EUA 1,4 mi t + Portaria 3/2026 jan/2028). py_compile OK.",
+   "Fila: 0 novas — buscas web não acharam emails públicos MX válidos adicionais na região (Supermercados Revolução, Yeda, São Roque, União — só formulário/WhatsApp)."
+  ],
+  "para_estrategista": [
+   "Site com PROVA SOCIAL agora no ar (GitHub Pages) — melhora inbound conversion.",
+   "FP1 fortalecido com escassez global — leads em FP1 recebem o argumento de urgência 1 tick antes.",
+   "Fila segue precisando de reposição estrutural — Prospector precisa de metodologia mais eficiente (páginas de fornecedores, diretórios setoriais).",
+   "Toques WhatsApp humanos seguem como única barreira de fechamento (Savegnago, Queijos Itupeva, Selmi, Grupo IMC)."
+  ]
  }
 }

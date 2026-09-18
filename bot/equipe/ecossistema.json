@@ -1,6 +1,29 @@
 {
- "atualizado_em": "2026-09-18T10:41-03:00",
- "atividade_tick_10h41_18_09": {
+ "atualizado_em": "2026-09-18T13:03-03:00",
+  "atividade_tick_13h03_18_09": {
+   "rodadas_no_dia": 3,
+   "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (239 leads no CSV)",
+   "corrigir_emails": "OK offline — 0 processados neste tick (todos os 49 bounces do cache já com tentativa registrada em correcoes_emails.json)",
+   "watchdog": "exit 0 no 1º run — SAUDÁVEL: 239 leads / 164 ativos / 49 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados",
+   "prospecao_followup": "0 follow-ups processados — nada atrasado",
+   "send_sequence": "OK — sequência processada, nada devido",
+   "check_replies": "OK — 0 respostas pendentes; replies_pending.json vazio ([]) — caixa limpa, nada a atender neste tick",
+   "respostas_enviadas": "0 neste tick — nenhuma resposta humana pendente (caixa limpa desde o atendimento da Dalben no tick 10:21)",
+   "relatorio_esg": "nenhum pedido — sem geração de PDF",
+   "emails_enviados_hoje": "0 neste tick (2 no dia: proposta Dalben/Luis + confirmação Escuta Dalben, ambos do tick 10:21)",
+   "enviar_lote_status": "fila não re-checada neste tick (watchdog verde, sem pendentes operacionais)",
+   "leads_novos": [
+    "Capivariana Alimentos (id 226, atendimento@capivariana.com.br, 18/09 10:46)",
+    "Frinni (id 227, frigodeliss@frigodeliss.com.br, 18/09 10:46)",
+    "Bem Brasil (sac@bembrasil.ind.br, 18/09 11:18 — sequencia)",
+    "Megachips (megachips@megachips.com.br, 18/09 11:18 — sequencia)",
+    "CRAC (sac@crac.com.br, 18/09 11:18 — sequencia)",
+    "Praticleve Alimentos (contato@praticlevealimentos.com.br, 18/09 11:18 — sequencia)"
+   ],
+   "pipeline_snapshot_13h03": "239 leads / 146 novo / 18 sequencia / 18 respondido / 31 bounce (CSV) / 49 cache / 26 encerrado / 164 ativos (watchdog)",
+   "observacao": "Tick 13:03 18/09 (sexta-feira) — 3º tick do dia, rotina 100% verde desde a largada. Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados), followups 0, send_sequence nada devido, check-replies 0 pendentes — caixa limpa. +6 leads novos desde o tick 10:41: Capivariana (id 226), Frinni (id 227) e 4 empresas de batata (Bem Brasil, Megachips, CRAC, Praticleve) adicionadas pelo prospector em 10:46 e 11:18. Nenhuma resposta nova de lead desde a Dalben (09:07, atendida 10:21) — nada a atender neste tick. Leads quentes inalterados: Dalben (aguardando volume do gerente Luis), Queijos Itupeva (aguardando relação de volumes + coleta-teste), Savegnago, Grupo IMC e Selmi (toques WhatsApp pendentes — ação humana em aberto)."
+  },
+  "atividade_tick_10h41_18_09": {
   "rodadas_no_dia": 2,
   "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (233 leads no CSV)",
   "corrigir_emails": "OK offline — 0 processados neste tick (todos os 49 bounces do cache já com tentativa registrada em correcoes_emails.json)",

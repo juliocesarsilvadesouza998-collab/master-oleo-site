@@ -184,6 +184,20 @@ def tpl_apresentacao(cfg, lead):
 <p>Abraço,<br><b>{g['nome']}</b> · Destinação de óleo vegetal vencido · {cidade}</p>
 </div>"""
         }
+    # Ângulo específico V8: FÁBRICAS DE BATATA — fritura industrial em volume (>200L/mês)
+    if any(k in segmento for k in ["batata", "chips", "salgadinho", "congelada",
+                                    "palha", "fritas", "batata frita", "snack"]):
+        return {
+            "subject": f"Óleo de fritura da {lead.get('empresa','')} vira receita contínua — coleta programada",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Fábricas que fritam batata em escala industrial geram <b>centenas a milhares de litros de óleo usado por mês</b> — e esse óleo, que hoje sai de graça, virou commodity energética: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8 bi</b> e deve dobrar com a demanda por biodiesel e SAF.</p>
+<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta do óleo de fritura industrial</b> de fábricas de batata: coleta programada (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS)</b> e relatório de impacto ambiental. Sua fábrica zera o passivo e ainda recebe mensalmente pelo material.</p>
+<p>E há urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — a demanda por óleo usado vai disparar. Quem fecha contrato agora garante prioridade e preço estável.</p>
+<p><b>Quantos litros de óleo de fritura sua produção gera por mês?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Destinação de óleo de fritura industrial · {cidade}</p>
+</div>"""
+        }
     # Ângulo específico: indústrias que geram vencidos com >40% de gordura (material oleoso)
     if any(k in segmento for k in ["margarina", "manteiga", "maionese", "gordura",
                                     "laticinio", "creme vegetal", "oleos vegetais",

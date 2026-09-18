@@ -87,6 +87,7 @@ def tpl_fp(cfg, lead, n):
 <p>Olá, {lead['nome']}.</p>
 <p>Te escrevi há poucos dias sobre a <b>compra do óleo usado da {lead['empresa']}</b> — como sei que a caixa de entrada enche, deixo aqui o essencial:</p>
 <p>Pagamos de <b>R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em toda coleta e bombonas fornecidas. Para ter ideia: um estabelecimento que gera <b>600 L/mês</b> recebe cerca de <b>R$ 14 mil por ano</b> só com o resíduo que hoje é descartado — sem nenhum custo de logística.</p>
+<p>E não é só: o Brasil acaba de liberar <b>exportação de óleo usado para os EUA</b> (1,4 mi t importadas em 2023) e a <b>Portaria MME/MMA nº 3/2026</b> torna obrigatório uso de óleo residual no biodiesel a partir de <b>jan/2028</b>. O mundo está disputando essa matéria-prima — fechar contrato agora garante preço e prioridade.</p>
 <p>Para eu te passar o valor exato da sua operação: <b>quanto vocês geram por mês (litros ou kg)?</b> Me responde esse número que eu te mando a estimativa ainda esta semana.</p>
 <p>Alternativa rápida: WhatsApp {g['telefone_whatsapp']}.</p>
 <p>Abraço,<br><b>{g['nome']}</b></p>
