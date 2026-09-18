@@ -1,3 +1,23 @@
+## 2026-09-18 (sexta) — BOT DE SEO (tick 10:51)
+
+### 📊 Posição real no Bing (top 20)
+
+- **Nenhuma keyword alvo ranqueou:** todas as 10 monitoradas seguem **"fora do top 20 (ainda não indexado)"** no Bing (`seo_bot.py --rank --max-rank 10`). 7º tick consecutivo sem posição (10/09 → 18/09).
+- **SEO geral: OK** — site HTTP 200, todas as 23 keywords presentes no HTML local, sitemap.xml presente, indexnow ativa. Histórico salvo em `equipe/seo.json` (61 registros).
+- **Auditoria on-page completa (lean tick, zero correções necessárias):**
+  - **8/8 artigos** do `blog/` linkados no `index.html#blog` (nenhum card faltando).
+  - **Sitemap 15/15 URLs** — home + 6 páginas + 8 artigos; nenhuma URL ausente.
+  - **Schema íntegro** — `index.html` com LocalBusiness (GeoCoordinates + PostalAddress) + FAQPage (5 Q&A); `descaracterizacao.html` e `industrias.html` com JSON-LD.
+  - Balanceamento de tags HTML OK.
+- **Nenhum conteúdo novo criado neste tick** (política anti-ruído mantida: não forçar artigos sem base de ranking — evitar canibalização e ruído). IndexNow não re-disparado (nenhuma URL nova).
+
+### Backlog (mantido)
+
+- Keywords sem página dedicada ("maionese vencida", "manteiga vencida", "preço do óleo usado por litro" — hoje cobertas dentro do artigo quem-compra-margarina-vencida.html e quanto-vale-oleo-usado.html) — criar artigos dedicados só quando houver primeiros sinais de posição.
+- Ação de maior impacto pendente (fora do escopo do bot): **backlinks externos reais** (associações comerciais, prefeitura de Salto, imprensa local, parceiros de coleta) — sem isso, domínio novo não sai do "fora do top 20" só com conteúdo.
+
+---
+
 ## 2026-09-17 (quinta) — ATENDENTE IA (tick 19:02)
 
 ### ✅ Tick limpo — watchdog exit 0 de primeira (29º tick verde consecutivo) + fila consumida (3 hospitais V7)
