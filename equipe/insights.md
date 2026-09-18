@@ -1,3 +1,64 @@
+## 2026-09-17 (quinta) — ATENDENTE IA (tick 19:02)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (29º tick verde consecutivo) + fila consumida (3 hospitais V7)
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **230** — ativos: **156** (bounces cache: 49). Fila de prospecção: **182 empresas / 174 contatados / 33 bounce / 0 pendentes** (3 pendentes do Melhorador 17:50 consumidos neste tick).
+
+### Números do estado real (pós-tick 19:02)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 49).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (49/49 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (29º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ sequência processada — sem follow-ups vencidos (cadência em dia após o backlog do Melhorador 17:50).
+- **FILA CONSUMIDA — 3 apresentações V7 enviadas (nicho hospitais/saúde):** **Hospital Regional de Sorocaba (SPDM)** — ouvidoria@hrs.spdm.org.br, **Hospital Santa Lucinda (PUC-SP)** — ouvidoriahsl@hospitalsantalucinda.com.br, **Hospital PUC-Campinas (CEATEC)** — ouvidoria@hospitaldapuc-campinas.com.br — 3/3 OK via `enviar_lote.py --max 3`, template V7 (cozinha hospitalar + certificado PNRS/MTR + relatório ESG). Fila zerada (182/174/33/0).
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 14/09 17:23).
+- **Dashboard (ref. 19:02):** **197 apresentações / 168 entregues / 29 bounces (15%) / 15 respostas / taxa 7,6%** (meta >3%) — acima da meta pelo 2º mês consecutivo. 149 aguardando resposta/follow-up · 32 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial: Betins Laticínios (14/09 17:15, recusa cordial — já atendida).
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1 — última reposição Melhorador 17:50 com 3 hospitais, já consumida) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Coop Campinas (~80 lojas)** — apresentação enviada 15/09 ao email DIRETO do comprador de mercearia (erick.araujo@coopsp.coop.br) — aguardando retorno; quem responde é quem compra.
+4. **Nicho hospitais/saúde (V7) — agora com 6 leads no ar:** Dori Alimentos (Elias Fausto), HSV Jundiaí (ouvidoria), Unimed Sorocaba (sustentabilidade) + **HRS Sorocaba/SPDM, Santa Lucinda (PUC-SP), PUC-Campinas (enviados hoje 19:02)** — monitorar retorno do nicho.
+- Em aberto: Grupo IMC (toque 10/09 vencido), Selmi (toque 11/09 vencido), Sumerbol (Ivone), GoodBom (Laura), Rede Boa, Arcor/Bagley, Sanofi.
+
+---
+
+## 2026-09-17 (quinta) — ATENDENTE IA (tick 18:03)
+
+### ✅ Tick limpo — watchdog exit 0 de primeira (28º tick verde consecutivo) + caixa sem respostas novas
+- **Estado**: watchdog **exit 0 direto** (`SMTP OK · IMAP OK`). **Nada a corrigir neste tick.** Leads totais: **230** — ativos: **169** (bounces cache: 49). Fila de prospecção: **182 empresas / 171 contatados / 33 bounce / 0 pendentes**.
+
+### Números do estado real (pós-tick 18:03)
+- **Sync Formspree:** ✅ OK — 0 notificações novas (0 leads novos via site; cache 49).
+- **corrigir_emails:** ✅ OK — 0 bounces processados (49/49 do cache já tentados).
+- **Watchdog:** ✅ **exit 0 de primeira** — saudável, sem follow-ups atrasados, bounces sem correção ou leads parados (28º verde consecutivo).
+- **prospecao_followup:** ✅ 0 follow-ups atrasados — nenhum envio necessário.
+- **send_sequence:** ✅ **13 follow-ups FP3 enviados** (última etapa da sequência) — frigoríficos (Verdi, 3R, Frisa, Frigorífico do Sul), hotéis (Intercity), indústrias/farma/saúde/cosméticos (Arese, Infinity Pharma, Veridi Nutrition, Larimar, Maila Cosméticos, FarmaViva, Audacci, GDS) — 13/13 OK, sequência em cadência.
+- **check-replies:** ✅ **0 respostas aguardando** (`replies_pending.json` = `[]`) — caixa limpa, sem novidades desde a Betins (atendida 14/09 17:23).
+- **Dashboard (ref. 18:05):** **197 apresentações / 168 entregues / 29 bounces (15%) / 15 respostas / taxa 7,6%** (meta >3%) — acima da meta pelo 2º mês consecutivo. 149 aguardando resposta/follow-up · 32 inbound acumulados.
+
+### 🆕 Novidades na caixa
+- **Nenhuma resposta nova** neste tick. Último evento comercial: Betins Laticínios (14/09 17:15, recusa cordial — já atendida).
+- **Sem pedidos de relatório ESG/certificado** — nenhum PDF gerado neste tick.
+
+### Problemas encontrados e correções
+- **Nenhum neste tick** (watchdog exit 0). Pendências estruturais mantidas: fila em **0 pendentes** (reposição do Prospector segue sendo o gargalo nº1 — última reposição Milk Menk em 16/09, monitorar possível bounce por MX self-hosted) e Netlify sem créditos (403 — GitHub Pages único no ar). Higiene de dados: leads novos sem id no CSV (backfill pendente). Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09). Coleta-teste Queijos Itupeva segue aguardando ação humana.
+
+### 🏆 Leads quentes (para ação humana — destaque)
+1. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + derivados 50–100 kg/mês), proposta enviada com descaracterização cortesia. **Aguardando confirmação de coleta-teste — lead mais próximo de contrato** (WhatsApp 11 940333759).
+2. **Savegnago (~100 lojas) — toque WhatsApp com prazo 10/09 VENCIDO (URGENTE).**
+3. **Coop Campinas (~80 lojas)** — apresentação enviada 15/09 ao email DIRETO do comprador de mercearia (erick.araujo@coopsp.coop.br) — aguardando retorno; quem responde é quem compra.
+4. **Nicho hospitais/saúde (V7)** — Dori Alimentos (Elias Fausto, vizinha de Salto), HSV Jundiaí (ouvidoria), Unimed Sorocaba (sustentabilidade) + HRS Sorocaba, Santa Lucinda (PUC-SP), PUC-Campinas — apresentações no ar desde 16-17/09, aguardando retorno.
+- Em aberto: Grupo IMC (toque 10/09 vencido), Selmi (toque 11/09 vencido), Sumerbol (Ivone), GoodBom (Laura), Rede Boa, Arcor/Bagley, Sanofi.
+
+---
+
 ## 2026-09-17 (quinta) — MELHORADOR CONTÍNUO (tick 17:50)
 
 ### Diagnóstico do dia
@@ -5520,3 +5581,63 @@ Tick de rotina totalmente saudável: watchdog exit 0 de primeira (20º verde con
 
 - Keywords sem página dedicada ("maionese vencida", "manteiga vencida", "preço do óleo usado por litro") — criar artigo só quando houver primeiros sinais de posição.
 - Ação de maior impacto pendente (fora do escopo do bot): **backlinks externos reais** (associações comerciais, prefeitura de Salto, imprensa local, parceiros de coleta) — sem isso, domínio novo não sai do "fora do top 20" só com conteúdo.
+
+
+---
+
+## 2026-09-17 (quinta-feira) — ANALISTA DE QUALIDADE (auditoria fim de dia 19:45)
+
+### Resumo do dia
+
+- **Sync (19:45)**: sync_formspree.py OK — **49 emails no bounce cache, 31 leads marcados como bounce, 0 notificações novas do Formspree** (nenhum bounce novo desde o tick 19:31; caixa sem leads novos do formulário).
+- **Pipeline (233 leads)**: **145 novo** / **14 sequencia** / **31 bounce** (CSV) e **49 cache** / **17 respondido** / **26 encerrado**. Snapshot idêntico ao tick 19:31 (nenhuma mudança desde então — nenhum lead novo, nenhuma resposta).
+- **Envios hoje (17/09)**: **43 emails** — apresentação 3 · fp1 14 · fp2 4 · fp3 9 · follow3 13 (boas-vindas 0, follow1 0, follow2 0).
+- **Respostas hoje**: **0** — nenhum lead respondeu (última resposta segue a Betins, 14/09).
+- **Respostas pendentes**: **0** (`replies_pending.json` = `[]`) — nada para o Atendente responder no próximo tick.
+
+### Auditoria de qualidade (o que foi conferido/corrigido)
+
+1. **bounces.json × leads.csv — consistente nas duas direções**: 0 leads `bounce` fora do cache (31/31 presentes) e as 18 entradas do cache sem status `bounce` no CSV são 17 endereços órfãos (já corrigidos/substituídos — ex.: contato@selmi.com.br → sac@selmi.com.br respondeu; contato@cowpig.com.br → atendimento@; sac@redeoba.com.br → ouvidoria@; contato@beirariosm.com.br → faleconosco@; 2 com TLD quebrado: ecommerce704@redetop.com.b, contato@eixorestaurantes.co) + 1 protegida por design (Rede Top id 142, `encerrado` — correção 13/09: nunca rebaixar status terminal). **Nada a corrigir; manter órfãos no cache como trava anti-reenvio.**
+2. **Leads `bounce` com `boas_vindas_em` preenchido — 2 casos conhecidos, apenas registro (sem correção)**: Ana Souza (id 1, welcome 13/08 11:31, bounce detectado depois) e **Pedrinho Atacadista** (sem id, apresentação 14/09 13:41 + welcome 14/09 14:01, bounce só entrou no cache em 15/09 → 2 envios desperdiçados). Nenhum caso NOVO hoje. O send_sequence pula `bounce` (linha 213 do bot_oleo.py), então não há risco de reenvio — a falha é detecção tardia do Gmail, não do bot.
+3. **Leads corrigidos pós-bounce em `novo` aguardando re-trigger** (welcome ainda não enviado para o email novo): Kelco (comercial@kelcopetcare.com.br), Penina (info@), Cowpig (atendimento@), Infanger (supermercado@), Delta Terceirizações (adm@), Real Distribuidora (paulo@realdist.com.br), Oba (atendimento@redeoba.com.br) — próximo ciclo do send_sequence deve disparar.
+4. **Higiene**: 22 leads sem `id` no CSV (lote de óleos de 14/09 + antigos) — o Pedrinho só não foi pego antes porque não tem id; lead sem id fica invisível em relatórios e correções pontuais.
+
+### Sugestões para o Estrategista
+
+1. **Backfill de IDs para os 22 leads sem id** — corrige a cegueira operacional: lead sem id não aparece em relatórios por id, nem em correções pontuais (foi o que escondeu o caso Pedrinho nas auditorias anteriores).
+2. **Aproveitar o funil hospitalar em aberto (5 hospitais, 3 com boas-vindas a disparar)** — SPDM, Santa Lucinda e PUC-Campinas (ids 223-225) entraram hoje e não têm resposta ainda; template hospitalar + relatório ESG na abertura é o padrão que destravou a Unimed — considerar follow-up humano (WhatsApp) na semana.
+3. **Detecção tardia de bounce segue sendo o único desperdício de envio** (Pedrinho, Ana Souza, Kemin, Nutraway) — mitigação barata: validar MX/domínio antes do 1º email de lote (padrão já usado pelo Melhorador Contínuo) em vez de depender do mailer-daemon do Gmail.
+
+
+---
+
+## 2026-09-18 (sexta-feira) — ATENDENTE IA (tick 10:31)
+
+### Resumo do tick
+
+- **PASSO 0 (sync)**: sync_formspree.py OK — 0 notificações novas do Formspree; 49 emails no bounce cache. corrigir_emails.py OK — 0 bounces novos processados (2 DSNs de Pedrinho Atacadista `contato@pedrinhoatacadista.com.br` já em cache; erro 451 = tenant Outlook sem assinatura de e-mail).
+- **PASSO 1 (watchdog)**: exit 0 no 1º run — SMTP OK · IMAP OK, **30º tick verde consecutivo**. Nenhum follow-up atrasado, nenhum bounce pendente de correção.
+- **PASSO 2 (sequência)**: 0 follow-ups atrasados; send_sequence em cadência (0 envios novos necessários); check-replies: **0 respostas pendentes** (`replies_pending.json` = `[]`).
+- **Pipeline**: 233 leads / 158 ativos / 49 bounces cache (CSV: 144 novo / 14 sequencia / 18 respondido / 31 bounce / 26 encerrado). Fila de prospecção **185/174/33/0 — zerada** (gargalo nº1 segue: nenhuma reposição desde os 3 hospitais de 17/09).
+- **Dashboard (10:37)**: **200 apresentações / 171 entregues / 29 bounces (14%) / 16 respostas / taxa 8,0%** (meta >3%) — acima da meta pelo 2º mês consecutivo.
+
+### 🎯 EVENTO COMERCIAL DO DIA — Supermercados Dalben respondeu (lead QUENTE)
+
+- **09:07** — a **Escuta Dalben** respondeu ao nosso "último contato" encaminhando **para o gerente Luis (`luish@supermercadosdalben.com.br`)** — canal de compra real, mesmo padrão que destravou Savegnago.
+- **10:29 (tick anterior)** — resposta enviada em thread:
+  - Para **Luis**: proposta completa Master Óleo (coleta programada com logística por nossa conta, bombonas com troca cheia/vazia, **certificado de destinação**, **relatório ESG mensal com a marca Dalben** — litros coletados, água preservada, CO₂ —, pedido de volume mensal + tipo de material, **coleta-teste sem compromisso** e WhatsApp (11) 96785-9631).
+  - Para **Escuta Dalben**: confirmação de que a proposta foi encaminhada ao Luis, conforme solicitado.
+- **Leitura**: rede de ~30 lojas no interior de SP = potencial de **CONTRATO de volume** (padrão Savegnago/Sumerbol/GoodBom). Resposta de hoje segue a tese dos aprendizados de 07/09: SAC/Ouvidoria corporativa que encaminha para o comercial é o funil que converte.
+- **Recomendação humana**: se Luis não responder em 2–3 dias, **toque no WhatsApp (11) 96785-9631** — este é o lead quente nº1 da semana.
+
+### Caixa de entrada (auditoria extra)
+
+- 4 mensagens desde 17/09: 2 DSN (Pedrinho, já em cache), 1 **auto-resposta de férias** da **Coocerqui** (Carlos Machado, financeiro — ausente 15/09 a 06/10; contato alternativo indicado é só para Convênio Empresa, não para óleo → aguardar retorno pós-06/10) e 1 resposta real (Dalben, tratada).
+- Nenhum pedido de relatório ESG/certificado neste tick — nenhum PDF gerado.
+
+### Pendências estruturais (mantidas)
+
+1. **Fila de prospecção zerada** — Prospector precisa repor 5–8/dia com MX validado (prioridade da semana; última reposição: 3 hospitais em 17/09).
+2. **22 leads sem `id` no leads.csv** — backfill pendente (o caso Pedrinho mostrou o risco de lead invisível em relatórios).
+3. **Netlify sem créditos** (403) — GitHub Pages único no ar.
+4. Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09); coleta-teste Queijos Itupeva aguardando ação humana; Coop aguardando resposta da apresentação de 15/09; 3 hospitais novos (HRS, Santa Lucinda, PUC-Campinas) sem resposta.

@@ -1,5 +1,45 @@
 {
- "atualizado_em": "2026-09-16T19:05-03:00",
+ "atualizado_em": "2026-09-18T10:24-03:00",
+ "atividade_tick_19h31_17_09": {
+  "rodadas_no_dia": 2,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (233 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (todos os 49 bounces do cache já com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0 no 1º run — SAUDÁVEL: 233 leads / 159 ativos / 49 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "OK — 0 respostas pendentes; replies_pending.json vazio ([]) — caixa limpa, nada a atender neste tick",
+  "scan_inbox": "não executado neste tick (check-replies confirmou caixa limpa)",
+  "respostas_enviadas": "0 neste tick — nenhuma resposta humana pendente",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick",
+  "enviar_lote_status": "fila: 185 empresas / 174 contatados / 33 bounce / 0 pendentes — FILA ZERADA (lote hospitalar contatado: SPDM Sorocaba, Santa Lucinda PUC-SP e PUC-Campinas entraram como leads ids 223-225 às 19:02-19:03)",
+  "leads_novos": [
+   "Hospital Regional de Sorocaba SPDM (id 223, ouvidoria@hrs.spdm.org.br, 17/09 19:02)",
+   "Hospital Santa Lucinda PUC-SP (id 224, ouvidoriahsl@hospitalsantalucinda.com.br, 17/09 19:02)",
+   "Hospital PUC-Campinas (id 225, ouvidoria@hospitaldapuc-campinas.com.br, 17/09 19:03)"
+  ],
+  "pipeline_snapshot_19h31": "233 leads / 145 novo / 14 sequencia / 17 respondido / 31 bounce (CSV) / 49 cache / 26 encerrado / 159 ativos (watchdog)",
+  "dashboard": "ref. tick 16/09 19:01 — sem geração nova (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3%)",
+  "observacao": "Tick 19:31 17/09 (quinta-feira) — 2º tick do dia, rotina 100% verde desde a largada. Sync OK (0 notificações), corrigir_emails OK (0 processados; 49 bounces todos com tentativa), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados), followups 0, send_sequence nada devido, check-replies 0 pendentes (caixa limpa). Fila de prospecção ZERADA (185/174/33/0): os 3 pendentes hospitalares do tick 18:32 (SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas) foram contatados pelo prospector às 19:02-19:03 e entraram como leads NOVOS (ids 223-225) — status 'novo', entram na sequência de boas-vindas no próximo ciclo. Nenhuma resposta de lead desde a Betins (14/09) — nenhum lead quente NOVO neste tick. Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp em aberto para ação humana: Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09); Confiança stand by (protocolo 236485); Andorinha no ciclo de renovação; FP2 queijarias (15/09), FP1 hotéis (15/09) e FP1 supermercados aguardando resposta."
+ },
+ "atividade_tick_18h32_17_09": {
+  "rodadas_no_dia": 1,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (230 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (todos os 49 bounces do cache já com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0 no 1º run — SAUDÁVEL: 230 leads / 156 ativos / 49 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "OK — 0 respostas pendentes; replies_pending.json vazio ([]) — caixa limpa, nada a atender neste tick",
+  "scan_inbox": "não executado neste tick (check-replies confirmou caixa limpa)",
+  "respostas_enviadas": "0 neste tick — nenhuma resposta humana pendente",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (1º tick registrado do dia 17/09)",
+  "enviar_lote_status": "fila: 185 empresas / 149 contatados / 33 bounce / 3 pendentes normais (Hospital Regional Sorocaba SPDM, Hospital Santa Lucinda PUC-SP, Hospital PUC-Campinas — fila extra hospitalar, aguardando próximo ciclo do prospector)",
+  "leads_novos": [],
+  "pipeline_snapshot_18h32": "230 leads / 142 novo / 14 sequencia / 17 respondido / 31 bounce (CSV) / 49 cache / 26 encerrado / 156 ativos (watchdog)",
+  "dashboard": "ref. tick 16/09 19:01 — sem geração nova (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3%)",
+  "observacao": "Tick 18:32 17/09 (quinta-feira) — 1º tick registrado do dia, rotina 100% verde desde a largada. Sync OK (0 notificações), corrigir_emails OK (0 processados; 49 bounces todos com tentativa), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados), followups 0, send_sequence nada devido, check-replies 0 pendentes (caixa limpa). Fila de prospecção: 3 pendentes normais — lote hospitalar (SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas) aguardando o próximo ciclo do prospector; nenhum lead novo desde os ids 219-221 (16/09 18:51). Nenhuma resposta de lead desde a Betins (14/09 17:15) — nenhum lead quente NOVO neste tick. Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp em aberto para ação humana: Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09); Confiança stand by (protocolo 236485); Andorinha no ciclo de renovação; FP2 queijarias (15/09), FP1 hotéis (15/09) e FP1 supermercados aguardando resposta."
+ },
  "atividade_tick_19h01_16_09": {
   "rodadas_no_dia": 1,
   "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (230 leads no CSV)",
@@ -13,7 +53,12 @@
   "relatorio_esg": "nenhum pedido — sem geração de PDF",
   "emails_enviados_hoje": "0 neste tick (primeiro tick registrado do dia)",
   "enviar_lote_status": "fila: 182 empresas / 171 contatados / 33 bounce / 0 pendentes — FILA ZERADA",
-  "leads_novos": ["Dori Alimentos (id 219, sac@dori.com.br, 16/09 18:51)", "Hospital Sao Vicente de Jundiai (id 220, ouvidoria@hsvicente.org.br, 16/09 18:51)", "Unimed Sorocaba (id 221, sustentabilidade@unimedsorocaba.coop.br, 16/09 18:51)", "Milk Menk (id 222, contato@milkmenk.com.br, 16/09 18:56 — DESCARTADO: marcado encerrado, MX self-hosted = bounce alto, regra 15/09)"],
+  "leads_novos": [
+   "Dori Alimentos (id 219, sac@dori.com.br, 16/09 18:51)",
+   "Hospital Sao Vicente de Jundiai (id 220, ouvidoria@hsvicente.org.br, 16/09 18:51)",
+   "Unimed Sorocaba (id 221, sustentabilidade@unimedsorocaba.coop.br, 16/09 18:51)",
+   "Milk Menk (id 222, contato@milkmenk.com.br, 16/09 18:56 — DESCARTADO: marcado encerrado, MX self-hosted = bounce alto, regra 15/09)"
+  ],
   "pipeline_snapshot_19h01": "230 leads / 142 novo / 27 sequencia / 17 respondido / 31 bounce (CSV) / 49 cache / 13 encerrado / 169 ativos (watchdog)",
   "dashboard": "ref. tick 15/09 19:31 — sem geração nova (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3%)",
   "observacao": "Tick 19:01 16/09 (quarta-feira) — 1º tick registrado do dia; rotina 100% verde. Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (SMTP OK · IMAP OK), followups 0, send_sequence nada devido, check-replies 0 pendentes (caixa limpa), fila de prospecção zerada (182/171/33/0). 4 leads novos do prospector (18:51-18:56): Dori Alimentos, Hospital São Vicente de Jundiaí e Unimed Sorocaba (bom fit — cozinhas hospitalares geram óleo de fritura; Unimed via sustentabilidade@ = ângulo ESG) entram na sequência no próximo ciclo; Milk Menk foi RE-adicionado pelo prospector apesar da lição 15/09 (MX self-hosted mail.milkmenk.com.br = risco de bounce alto) — marcado como 'encerrado' manualmente no CSV para preservar bounce <15% (mesma regra dos descartes Croissant & Cia / Rede Correia). Nenhuma resposta de lead desde a última registrada (Betins 14/09). Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp em aberto para ação humana: Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09); Confiança stand by (protocolo 236485); Andorinha no ciclo de renovação; FP2 queijarias (15/09), FP1 hotéis (15/09) e FP1 supermercados aguardando resposta."
@@ -1690,5 +1735,23 @@
   "pipeline_snapshot_19h31": "226 leads / 139 novo / 33 sequencia / 17 respondido / 31 bounce (CSV) / 49 cache / 6 encerrado / 172 ativos (watchdog)",
   "dashboard": "sem geração nova neste tick (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3%)",
   "observacao": "Tick 19:31 15/09 (terça-feira) — 2º tick do dia, 100% verde de primeira: watchdog exit 0 no 1º run (226 leads / 172 ativos / 49 bounces; SMTP OK · IMAP OK), 0 follow-ups atrasados, 0 respostas pendentes (caixa limpa), fila de prospecção zerada (178/167/33/0). Destaque: 11 leads NOVOS entraram às 19:08-19:10 via prospector (prospeccao-lote, ids 208-218) — incluindo a Cooperativa de Consumo de Campinas (~80 lojas, maior cooperativa de consumo da AL — página de fornecedores expõe emails diretos de compradores, canal mais forte do lote), distribuidoras Avec e Estrela (fit óleo vencido), Super Tatuí, TRZ Food, EXAL, Viva Food, Nutrivigor, RW Cozinha Industrial, IDNLABS e Romariz. Leads quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp vencidos seguem em aberto para ação humana: Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09)."
+ },
+ "atividade_tick_10h21_18_09": {
+  "rodadas_no_dia": 1,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (233 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (todos os 49 bounces do cache já com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 1 no 1º run — 6 follow-ups ATRASADOS (FP2 x3 + FP3 x3); após prospecao_followup.py re-run exit 0 — SAUDÁVEL: 233 leads / 158 ativos / 49 bounces; SMTP OK · IMAP OK; 0 atrasados",
+  "prospecao_followup": "6 follow-ups processados — FP3: Sorocaba Frios (contato@sorocabafrios.com.br), Mega Ingredientes (contato@megasabor.com.br), Grupo Lanchero (sac@lanchero.com.br); FP2: Laticinios Pelissari (contato@laticiniospelissari.com.br), Quata Alimentos (sac@quataalimentos.com.br), Produtos Marcy (contato@produtosmarcy.com.br)",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "OK — 1 resposta pendente ATENDIDA: Supermercados Dalben (escutadalben@supermercadosdalben.com.br, 18/09 09:07) pediu para encaminhar ao gerente Luis (luish@supermercadosdalben.com.br) — email enviado ao Luis + confirmação à Escuta Dalben; replies_pending.json limpo ([])",
+  "scan_inbox": "não executado (check-replies cobriu)",
+  "respostas_enviadas": "2 neste tick — (1) luish@supermercadosdalben.com.br: proposta de compra do óleo usado p/ gerente Luis (coleta programada, certificado, relatório ESG para redes, pedido de volume mensal + tipo, coleta-teste, WhatsApp); (2) escutadalben@supermercadosdalben.com.br: confirmação de encaminhamento",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "2 neste tick (respostas Dalben)",
+  "enviar_lote_status": "fila: 185 empresas / 174 contatados / 33 bounce / 0 pendentes — FILA ZERADA",
+  "leads_novos": [],
+  "pipeline_snapshot_10h24": "233 leads / 145 novo / 14 sequencia / 18 respondido / 31 bounce (CSV) / 49 cache / 26 encerrado / 158 ativos (watchdog)",
+  "dashboard": "ref. tick 16/09 19:01 — sem geração nova (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3%)",
+  "observacao": "Tick 10:21 18/09 (sexta-feira) — 1º tick do dia. Watchdog pegou 6 follow-ups atrasados (FP2/FP3 acumulados) → prospecao_followup.py enviou os 6 e re-run confirmou exit 0 (0 atrasados). CHECK-REPLIES ACHOU RESPOSTA QUENTE: a Ouvidoria/Escuta do Supermercados Dalben (rede grande de Campinas, ~20+ lojas) respondeu ao FP3 de ontem (17/09 17:48) pedindo para encaminhar a proposta ao GERENTE LUIS (luish@supermercadosdalben.com.br) — exatamente o padrão Savegnago: ouvidoria abrindo o canal comercial direto. Enviados 2 emails: proposta ao Luis (coleta programada + certificado + relatório ESG com marca Dalben + pedido de volume mensal/tipo + coleta-teste + WhatsApp (11) 96785-9631) e confirmação de encaminhamento à Escuta Dalben. Lead 148 marcado como respondido (atendente_ia). Nova resposta em menos de 24h do FP3 — sinal forte de interesse."
  }
 }
