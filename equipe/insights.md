@@ -1,3 +1,32 @@
+## 2026-09-18 (sexta) — MELHORADOR CONTÍNUO (tick 11:07)
+
+### 🔍 Diagnóstico: funil saudável, fila ZERADA (gargalo nº1 de novo)
+
+- Watchdog **exit 0** (30º tick verde; SMTP OK · IMAP OK, sem FP atrasados). Dashboard: **202 apresentações / 173 entregues / 29 bounces (14%) / 16 respostas / taxa 7,9%** (meta >3% — acima pelo 2º mês).
+- Ponto mais fraco: **fila de prospecção em 0 pendentes** (187/176/33/0) — nenhuma reposição desde os 3 hospitais de 17/09. O funil inteiro depende do reabastecimento.
+
+### ✅ Melhorias implementadas
+
+1. **Fila +2 (0 → 2 pendentes, verificado com `enviar_lote.py --status`):**
+   - **UNISO — Universidade de Sorocaba** (`ouvidoria@uniso.br`, MX Microsoft 365): restaurante escola PRÓPRIO com **400+ refeições/dia** (Instagram oficial). **Nicho INÉDITO na base: universidades** — cozinha que frita diariamente + prestação de contas ESG/auditoria. Canal ouvidoria institucional (padrão HSV validado).
+   - **Sapore S.A. — REENGAGE pelo canal de compras** (`suprimentos@sapore.com.br`, MX Outlook): rede nacional de refeições coletivas (1,3M refeições/dia), cozinhas em clientes da região. **Já era lead id 8** (contatado 13–26/08 via `contato@` = caixa de triagem, sequência completa sem resposta). Tese: o canal errado matou o lead; `suprimentos@` é quem DECIDE compra (lição Coop/HSV). Email novo → passa no dedup por email.
+2. **Render validado por lead** (regra 15–16/09): ambos no branch genérico de fritura (assunto "Óleo usado da X vale dinheiro"), **sem R$/pagamos/1,00-2,50** (regra de ouro), ~140 palavras.
+3. **Dedup 4 fontes funcionou como rede de segurança:** Avec Campinas (já lead 209, enviado 15/09) e Sapore `contato@` (id 8) foram bloqueados antes da adição — sem duplicidade.
+
+### ⚠️ Aprendizados do tick
+
+- **Fila bem coberta nos nichos antigos; escassez é de NOVIDADE e CANAL:** refeições coletivas locais (EXAL, Viva Food, Nutrivigor, RW), distribuidoras (Avec, Estrela, Meqso), hospitais (HSV, Unimed, HRS, Santa Lucinda, PUC) já estão lá. O que faltava: **universidades** (nicho zero na base) e **canal de compras de gigantes** (Sapore via contato@ falhou na triagem).
+- **Descartados no tick (regras reaplicadas):** Na Fazenda Restaurante (Salto!) — `contato@nafazenda.com.br` com **MX self-hosted porta 25 timeout** (regra Rede Correia, mesmo com email real no Facebook oficial); Boa Vista Refeições (sem MX); Take Foods (CEP 04269 = SP capital, fora do raio); Meqso (sem email público no site; já na fila via contato@meqso.com.br); Kemisk (Cotia, borda); Grupo Farina/Pita Bread (Atibaia, borda + panificação usa pouco óleo); Horus Oil (sem cidade regional confirmada).
+- **Firecrawl search instável no tick (502 billing 3×):** limita o volume de buscas do Melhorador — quando acontecer, priorizar validação profunda de poucas candidatas em vez de rodadas de busca.
+
+### 📌 Para o Estrategista dominical
+
+- **Ritmo do Prospector segue insuficiente:** fila zera em menos de 1 dia (reposições de 2–3 por tick). Pedir **5–8/dia ou 2 horários**.
+- **Sapore:** acompanhar resposta do `suprimentos@` — se responder, é contrato de volume (padrão Savegnago/Dalben).
+- **UNISO:** validar nicho universidades com mais alvos (FACENS, UNIP, FATEC) — restaurante escola próprio = fritura + ESG.
+
+---
+
 ## 2026-09-18 (sexta) — BOT DE SEO (tick 10:51)
 
 ### 📊 Posição real no Bing (top 20)

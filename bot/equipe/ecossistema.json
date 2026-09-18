@@ -1,5 +1,23 @@
 {
- "atualizado_em": "2026-09-18T10:24-03:00",
+ "atualizado_em": "2026-09-18T10:41-03:00",
+ "atividade_tick_10h41_18_09": {
+  "rodadas_no_dia": 2,
+  "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (233 leads no CSV)",
+  "corrigir_emails": "OK offline — 0 processados neste tick (todos os 49 bounces do cache já com tentativa registrada em correcoes_emails.json)",
+  "watchdog": "exit 0 no 1º run — SAUDÁVEL: 233 leads / 158 ativos / 49 bounces; SMTP OK · IMAP OK; 0 follow-ups atrasados, 0 bounces sem correção, 0 leads parados",
+  "prospecao_followup": "0 follow-ups processados — nada atrasado (os 6 atrasados do 1º run de hoje já foram enviados pelo tick 10:21)",
+  "send_sequence": "OK — sequência processada, nada devido",
+  "check_replies": "OK — 0 respostas pendentes; replies_pending.json vazio ([]) — caixa limpa, nada a atender neste tick",
+  "scan_inbox": "OK — 0 mensagens não lidas/recentes (caixa limpa confirmada por 2ª via; aviso benigno: SELECT do Sent Mail falhou, sem impacto)",
+  "respostas_enviadas": "0 neste tick — nenhuma resposta humana pendente (Dalben já atendida no tick 10:21)",
+  "relatorio_esg": "nenhum pedido — sem geração de PDF",
+  "emails_enviados_hoje": "0 neste tick (2 no dia: proposta Dalben/Luis + confirmação Escuta Dalben, ambos do tick 10:21)",
+  "enviar_lote_status": "fila: 185 empresas / 174 contatados / 33 bounce / 0 pendentes — FILA ZERADA (ref. tick 10:21)",
+  "leads_novos": [],
+  "pipeline_snapshot_10h41": "233 leads / 144 novo / 14 sequencia / 18 respondido / 31 bounce (CSV) / 49 cache / 26 encerrado / 158 ativos (watchdog)",
+  "dashboard": "sem geração nova (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3% — 16ª resposta Dalben registrada no tick 10:21)",
+  "observacao": "Tick 10:41 18/09 (sexta-feira) — 2º tick do dia, rotina 100% verde desde a largada. Sync OK (0 notificações), corrigir_emails OK (0 processados), watchdog exit 0 no 1º run (SMTP OK · IMAP OK, 0 atrasados — os 6 follow-ups atrasados do 1º run de hoje foram enviados pelo tick 10:21), followups 0, send_sequence nada devido, check-replies 0 pendentes + scan_inbox 0 não lidas (caixa limpa em dobro). Nenhuma resposta nova de lead desde a Dalben (09:07, atendida 10:21-10:23 com proposta ao gerente Luis) — nada a atender neste tick. Fila de prospecção zerada (185/174/33/0). Lead quente do dia segue SUPERMERCADOS DALBEN (id 148, respondido): proposta enviada ao gerente Luis (luish@supermercadosdalben.com.br) aguardando volume mensal; monitorar nos próximos ticks (toque de acompanhamento em 24-48h se não responder). Demais quentes inalterados: Queijos Itupeva (Rafael) #1 aguardando relação de volumes + coleta-teste; toques WhatsApp em aberto para ação humana: Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09); Confiança stand by (protocolo 236485); Andorinha no ciclo de renovação; lote hospitalar ids 220-225 na sequência."
+ },
  "atividade_tick_19h31_17_09": {
   "rodadas_no_dia": 2,
   "sync_formspree": "OK — 0 notificações novas do Formspree; cache de bounces permanece 49 (233 leads no CSV)",

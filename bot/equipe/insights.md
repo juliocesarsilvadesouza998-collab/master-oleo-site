@@ -1,3 +1,49 @@
+# Insights — Master Óleo · 18/09/2026 (tick 10:41)
+
+## Resumo do tick (10:41)
+
+- **Pipeline (snapshot 10:41)**: **233 leads** (CSV) · **18 respondidos** · 14 sequência · **144 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 158** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces já com tentativa), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]`), scan_inbox ✅ (**0 não lidas/recentes — caixa limpa confirmada em dobro**), enviar_lote --status ✅ (**185 / 174 contatados / 33 bounce / 0 pendentes — FILA ZERADA**).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead desde a Dalben (09:07, já atendida no tick 10:21). **Emails no tick**: 0.
+- **📊 Dashboard**: sem geração nova (dados estáveis — 181 apresentações / 15 respostas / taxa 8,3%).
+- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+
+## 🏆 Leads quentes (destaque!)
+
+> **🆕 SUPERMERCADOS DALBEN segue como LEAD QUENTE #1 do dia** — proposta enviada ao gerente Luis (luish@supermercadosdalben.com.br) no tick 10:21; **aguardando volume mensal — monitorar de perto nos próximos ticks** (toque de acompanhamento em 24–48h se não responder).
+
+1. **Supermercados Dalben (id 148) — 🆕 LEAD QUENTE #1:** ouvidoria (Escuta Dalben) respondeu 18/09 09:07 → **gerente Luis (luish@supermercadosdalben.com.br)**. Proposta enviada 10:23 (coleta programada, certificado, relatório ESG com marca Dalben, coleta-teste, WhatsApp (11) 96785-9631). **Aguardando resposta do Luis com volume mensal.**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** respondeu com **VOLUME REAL** (10/09): Frescal **200 kg/mês** + manteiga/requeijão/doce **50–100 kg/mês** → proposta ajustada enviada (manteiga R$0,80–1,20/kg; frescal/queijos R$0,50–0,80/kg; **descaracterização cortesia**). **Aguardando relação de volumes + coleta-teste — lead mais próximo de contrato (junto com Dalben).**
+3. **Savegnago (comercial@, ~100 lojas):** respondido desde 07/09. **Toque WhatsApp pendente** (prazo 10/09 vencido, URGENTE — ação humana em aberto). Paulistão Atacadista (id 149) é do mesmo grupo.
+4. **Grupo IMC / Rede Frango Assado:** apresentação enviada 07/09 p/ felix.costa@grupoimc.com.br. **Toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+5. **Selmi (compras@selmi.com.br):** canal comercial indicado 08/09 (Cristina Magalhães). **Toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.** Não reutilizar contato@selmi.com.br (cache de bounces).
+6. **Lote hospitalar (ids 220-225):** Unimed Sorocaba (sustentabilidade@ — ângulo ESG), Hospital São Vicente de Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — cozinhas centrais hospitalares geram óleo de fritura diariamente; template hospitalar + relatório ESG na abertura (padrão Unimed).
+7. **Dori Alimentos (id 219):** sac@dori.com.br — SAC corporativo pode encaminhar a compras.
+8. **Betins Laticínios (id 162) — respondido 14/09 (já atendido):** recusa de fritura, PORÉM porta aberta para **vencidos >40%** (descaracterização gratuita + certificado biodiesel). **Registrar recontato no ciclo de renovação.**
+9. **Confiança Supermercados — STAND BY (não insistir):** óleo vendido a concorrente ACIMA de R$ 2,50/L → porta aberta para 2ª cotação na renovação; recontatar em ~2–3 meses citando protocolo 236485.
+10. **Andorinha Hiper Center (id 147) — respondeu 12/09 12:02:** recusa educada (coletor contratado), contato guardado para futuro. Loja em SALTO — recontato no ciclo de renovação.
+11. **FP2 queijarias (15/09, 7 leads) e FP1 hotelaria (15/09, 5 leads):** respostas a qualquer momento.
+
+## Padrão que se confirma
+
+- **Rotina 100% verde em 2 ticks no dia:** o tick 10:21 corrigiu os 6 follow-ups atrasados (watchdog exit 1 → prospecao_followup enviou → re-run exit 0) e este tick 10:41 rodou limpo de primeira (exit 0, 0 atrasados) — a auto-correção funcionou e estabilizou.
+- **Caixa limpa em dobro:** check-replies 0 pendentes + scan_inbox 0 não lidas — nenhuma resposta órfã.
+- **Fila de prospecção ZERADA** (185/174/33/0).
+- **Taxa de resposta em alta (estável):** 8,3% (15 respostas / 181 apresentações) — a 16ª resposta (Dalben) já registrada no tick 10:21.
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) seguem sem toque WhatsApp — três canais comerciais abertos parados há 9–11 dias; **Dalben entra na fila de acompanhamento humano se o Luis não responder em 24-48h.**
+
+## Próximos passos recomendados
+
+1. **AÇÃO HUMANA (prioridade máxima):** toque WhatsApp de **Savegnago** e **Grupo IMC** (prazo 10/09 vencido) e **Selmi** (prazo 11/09 vencido).
+2. **Dalben — monitorar de perto:** proposta enviada ao gerente Luis (luish@supermercadosdalben.com.br) em 18/09 10:23. Se não responder em 24–48h, toque de acompanhamento (WhatsApp (11) 96785-9631). Rede de ~20+ lojas = contrato de volume.
+3. **Queijos Itupeva**: cobrar relação de volumes (Frescal 200 kg + manteiga/requeijão/doce 50–100 kg/mês) e **agendar coleta-teste**.
+4. **Leads hospitalares novos (ids 223-225)**: quando entrarem na sequência, priorizar template hospitalar + relatório ESG (padrão Unimed).
+5. **Betins Laticínios**: registrar no ciclo de renovação (porta aberta para vencidos >40%).
+6. **Confiança e Andorinha**: **não insistir** — ciclo de renovação dos coletores concorrentes em ~2–3 meses (Confiança: protocolo 236485).
+7. **Manutenção**: fila zerada, watchdog verde, caixa limpa — nada pendente.
+
+---
+
 # Insights — Master Óleo · 18/09/2026 (tick 10:21)
 
 ## Resumo do tick (10:21)
