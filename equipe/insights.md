@@ -5690,3 +5690,31 @@ Tick de rotina totalmente saudável: watchdog exit 0 de primeira (20º verde con
 2. **22 leads sem `id` no leads.csv** — backfill pendente (o caso Pedrinho mostrou o risco de lead invisível em relatórios).
 3. **Netlify sem créditos** (403) — GitHub Pages único no ar.
 4. Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09); coleta-teste Queijos Itupeva aguardando ação humana; Coop aguardando resposta da apresentação de 15/09; 3 hospitais novos (HRS, Santa Lucinda, PUC-Campinas) sem resposta.
+
+## 2026-09-18 (sexta-feira) — ATENDENTE IA (tick 11:09)
+
+### Resumo do tick
+
+- **PASSO 0 (sync)**: sync_formspree.py OK — 0 notificações novas do Formspree; 49 emails no bounce cache. corrigir_emails.py OK — 0 bounces novos processados (todos os DSNs já conhecidos).
+- **PASSO 1 (watchdog)**: exit 0 no 1º run — SMTP OK · IMAP OK, **31º tick verde consecutivo**. Nenhum follow-up atrasado, nenhum bounce pendente de correção, nenhum lead parado.
+- **PASSO 2 (sequência)**: 0 follow-ups atrasados; send_sequence em cadência (0 envios novos necessários); check-replies: **0 respostas pendentes** (`replies_pending.json` = `[]`). Auditoria extra da caixa (scan_inbox): 0 mensagens não lidas/recentes desde o tick 10:31.
+- **Pipeline**: 235 leads / 160 ativos / 49 bounces cache (CSV: 146 novo / 14 sequencia / 18 respondido / 31 bounce / 26 encerrado). Fila de prospecção **189/176/33/2 pendentes** — UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) aguardando envio de apresentação (adicionadas pelo Melhorador 11:07).
+- **Dashboard (11:09)**: **200 apresentações / 171 entregues / 29 bounces (14%) / 16 respostas / taxa ~8%** (meta >3%) — acima da meta pelo 2º mês consecutivo.
+
+### Leads quentes (sem novidade neste tick)
+
+- Nenhum lead novo respondeu desde o tick 10:31 — **0 respostas pendentes**.
+- **Dalben segue como lead quente nº1 do dia**: Escuta Dalben encaminhou ao gerente de compras **Luis (luish@supermercadosdalben.com.br)** às 09:07; proposta completa enviada no tick 10:29. **Recomendação humana: toque WhatsApp (11) 96785-9631 em 2–3 dias se Luis não responder** — padrão Savegnago (rede ~30 lojas = contrato de volume).
+- Demais em aberto (aguardando ação humana): Savegnago, Grupo IMC, Selmi, Queijos Itupeva (coleta-teste), Coop, Sumerbol, GoodBom, Rede Boa, hospitais HRS/Santa Lucinda/PUC-Campinas.
+
+### Caixa de entrada (auditoria extra)
+
+- 0 mensagens desde 17/09 além das já tratadas (2 DSN Pedrinho em cache; auto-resposta de férias Coocerqui — Carlos Machado ausente até 06/10; resposta Dalben tratada no tick 10:31).
+- **Nenhum pedido de relatório ESG/certificado de impacto neste tick — nenhum PDF gerado.** (Script relatorio_esg.py disponível para quando houver pedido.)
+
+### Pendências estruturais (mantidas)
+
+1. **Fila de prospecção com 2 pendentes** (UNISO + Sapore) — Prospector precisa manter reposição de 5–8/dia com MX validado (prioridade da semana).
+2. **22 leads sem `id` no leads.csv** — backfill pendente (caso Pedrinho mostrou o risco).
+3. **Netlify sem créditos** (403) — GitHub Pages único no ar; inbound via site zerado.
+4. Toques WhatsApp humanos vencidos: Savegnago (10/09), Grupo IMC (10/09), Selmi (11/09); coleta-teste Queijos Itupeva aguardando ação humana; Coop aguardando resposta da apresentação de 15/09; 3 hospitais novos sem resposta.

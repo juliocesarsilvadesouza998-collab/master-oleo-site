@@ -1771,5 +1771,40 @@
   "pipeline_snapshot_10h24": "233 leads / 145 novo / 14 sequencia / 18 respondido / 31 bounce (CSV) / 49 cache / 26 encerrado / 158 ativos (watchdog)",
   "dashboard": "ref. tick 16/09 19:01 — sem geração nova (dados estáveis: 181 apresentações / 15 respostas / taxa 8,3%)",
   "observacao": "Tick 10:21 18/09 (sexta-feira) — 1º tick do dia. Watchdog pegou 6 follow-ups atrasados (FP2/FP3 acumulados) → prospecao_followup.py enviou os 6 e re-run confirmou exit 0 (0 atrasados). CHECK-REPLIES ACHOU RESPOSTA QUENTE: a Ouvidoria/Escuta do Supermercados Dalben (rede grande de Campinas, ~20+ lojas) respondeu ao FP3 de ontem (17/09 17:48) pedindo para encaminhar a proposta ao GERENTE LUIS (luish@supermercadosdalben.com.br) — exatamente o padrão Savegnago: ouvidoria abrindo o canal comercial direto. Enviados 2 emails: proposta ao Luis (coleta programada + certificado + relatório ESG com marca Dalben + pedido de volume mensal/tipo + coleta-teste + WhatsApp (11) 96785-9631) e confirmação de encaminhamento à Escuta Dalben. Lead 148 marcado como respondido (atendente_ia). Nova resposta em menos de 24h do FP3 — sinal forte de interesse."
+ },
+ "atividade_tick_11h09_18_09": {
+  "tick": "2026-09-18 11:09",
+  "pipeline": {
+   "leads_total": 235,
+   "leads_ativos": 160,
+   "novo": 146,
+   "sequencia": 14,
+   "respondido": 18,
+   "bounce_csv": 31,
+   "bounce_cache": 49,
+   "encerrado": 26,
+   "fila_prospeccao": "189/176/33/2 pendentes (UNISO + Sapore)"
+  },
+  "dashboard": {
+   "apresentacoes": 200,
+   "entregues": 171,
+   "bounces_pct": "14%",
+   "respostas": 16,
+   "taxa": "~8%"
+  },
+  "acoes": {
+   "sync": "OK — 0 notificações Formspree; 49 bounces cache",
+   "corrigir_emails": "OK — 0 novos processados",
+   "watchdog": "exit 0 no 1º run (31º verde) — SMTP OK · IMAP OK",
+   "followup": "0 atrasados",
+   "send_sequence": "OK — nada devido",
+   "check_replies": "0 pendentes (replies_pending.json = [])",
+   "scan_inbox": "0 não lidas/recentes — caixa limpa",
+   "respostas_enviadas": 0,
+   "emails_no_tick": 0,
+   "relatorio_esg": "nenhum pedido — sem PDF"
+  },
+  "leads_quentes": "Dalben segue #1 (Luis luish@supermercadosdalben.com.br aguardando volume); Queijos Itupeva (coleta-teste); Savegnago/IMC/Selmi (toques WhatsApp vencidos — ação humana)",
+  "nota": "Tick sem novidades — sistema 100% verde, caixa limpa, fila com 2 pendentes aguardando envio de apresentação (adicionadas pelo Melhorador 11:07)."
  }
 }

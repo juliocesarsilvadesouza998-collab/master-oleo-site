@@ -408,5 +408,32 @@
    "Descartados no tick: Na Fazenda Restaurante (Salto, contato@nafazenda.com.br - MX self-hosted mail.nafazenda.com.br porta 25 timeout = regra Rede Correia), Boa Vista Refeicoes (sem MX), Take Foods (CEP 04269 SP capital = fora do raio), Meqso (sem email publico; ja na fila via contato@meqso.com.br), Kemisk (Cotia, borda), Horus Oil (sem cidade regional), Croissant&Cia (descartado 15/09 MX self), Grupo Farina (Atibaia, borda + panificacao pouco oleo); Avec Campinas e Sapore (contato@) ja na base - dedup 4 fontes pegou"
   ],
   "para_estrategista": "Ritmo do Prospector segue insuficiente (fila zera em <1 dia; reposicoes de 2-3). Sugerir Prospector repor 5-8/dia ou 2 horarios. Sapore: acompanhar resposta do suprimentos@ (lead grande). UNISO: nicho universidades = restaurante escola proprio, replicar para outras (PUC-Campinas ja via hospital). Firecrawl search instavel (502 billing) limitou buscas deste tick."
+ },
+ "atendente_ia_2026_09_18_11_09": {
+  "tick": "2026-09-18 11:09",
+  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas; 49 bounces no cache. corrigir_emails.py OK — 0 bounces novos processados.",
+  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 31º tick verde consecutivo. Nenhum follow-up atrasado.",
+  "passo_2_sequencia": "0 follow-ups processados; send_sequence OK (Sequência processada, 0 envios novos); check-replies: 0 respostas pendentes (replies_pending.json = []).",
+  "pipeline": {
+   "leads_total": 235,
+   "leads_ativos": 160,
+   "novo": 146,
+   "sequencia": 14,
+   "respondido": 18,
+   "bounce": 31,
+   "encerrado": 26,
+   "bounces_cache": 49,
+   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
+  },
+  "dashboard": {
+   "apresentacoes": 200,
+   "entregues_est": 171,
+   "bounces_pct": "14%",
+   "respostas": 16,
+   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês)",
+   "watchdog_verde_consecutivo": 31
+  },
+  "caixa_entrada_auditoria": "0 mensagens novas desde tick 10:31 (scan_inbox: OK). Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
+  "observacoes": "Sem leads quentes novos neste tick. Dalben (tick 10:31) segue como lead quente nº1 — Luis luish@supermercadosdalben.com.br aguardando retorno. Fila: 2 pendentes (UNISO, Sapore). 22 leads sem id no CSV. Netlify 403. Toques WhatsApp pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva, Coop, hospitais."
  }
 }

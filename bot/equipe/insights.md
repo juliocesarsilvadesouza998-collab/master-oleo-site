@@ -1,3 +1,55 @@
+# Insights — Master Óleo · 18/09/2026 (tick 11:09)
+
+## Resumo do tick (11:09)
+
+- **Pipeline (snapshot 11:09)**: **235 leads** (CSV) · **18 respondidos** · 14 sequência · **146 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 160** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces já com tentativa), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — **31º tick verde consecutivo**; 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]`), scan_inbox ✅ (**0 não lidas/recentes — caixa limpa**), enviar_lote --status ✅ (**189 / 176 contatados / 33 bounce / 2 pendentes — UNISO + Sapore**).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead desde a Dalben (09:07, já atendida no tick 10:21). **Emails no tick**: 0.
+- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada 10:23 (coleta programada, certificado, relatório ESG com marca Dalben, coleta-teste, WhatsApp (11) 96785-9631). **Monitorar de perto; toque de acompanhamento em 24–48h se não responder.**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50–100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido, URGENTE — ação humana em aberto).
+4. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+5. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.**
+6. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente de Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta ainda.
+7. **UNISO (novo, Melhorador 11:07):** ouvidoria@uniso.br — restaurante escola 400+ refeições/dia — aguardando envio de apresentação (fila).
+8. **Sapore (REENGAGE, Melhorador 11:07):** suprimentos@sapore.com.br — canal de compras, rede nacional — aguardando envio de apresentação (fila).
+
+## Padrão que se confirma
+
+- **31º tick verde consecutivo** — rotina totalmente automatizada estabilizada: sync → corrigir → watchdog → followup → sequência → check-replies → scan; tudo exit 0, caixa limpa, 0 pendências operacionais.
+- **Fila saiu de 0 para 2 pendentes** (UNISO + Sapore, adicionadas pelo Melhorador 11:07) — o gargalo nº1 (fila zerada) começa a ser atacado; falta o envio das apresentações (Prospector/Atendente).
+
+---
+# Insights — Master Óleo · 18/09/2026 (tick 11:09)
+
+## Resumo do tick (11:09)
+
+- **Pipeline (snapshot 11:09)**: **235 leads** (CSV) · **18 respondidos** · 14 sequência · **146 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 160** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces já com tentativa), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — **31º tick verde consecutivo**; 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** —  = ), scan_inbox ✅ (**0 não lidas/recentes — caixa limpa**), enviar_lote --status ✅ (**189 / 176 contatados / 33 bounce / 2 pendentes — UNISO + Sapore**).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead desde a Dalben (09:07, já atendida no tick 10:21). **Emails no tick**: 0.
+- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada 10:23 (coleta programada, certificado, relatório ESG com marca Dalben, coleta-teste, WhatsApp (11) 96785-9631). **Monitorar de perto; toque de acompanhamento em 24–48h se não responder.**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50–100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido, URGENTE — ação humana em aberto).
+4. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+5. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.**
+6. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente de Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta ainda.
+7. **UNISO (novo, Melhorador 11:07):** ouvidoria@uniso.br — restaurante escola 400+ refeições/dia — aguardando envio de apresentação (fila).
+8. **Sapore (REENGAGE, Melhorador 11:07):** suprimentos@sapore.com.br — canal de compras, rede nacional — aguardando envio de apresentação (fila).
+
+## Padrão que se confirma
+
+- **31º tick verde consecutivo** — rotina totalmente automatizada estabilizada: sync → corrigir → watchdog → followup → sequência → check-replies → scan; tudo exit 0, caixa limpa, 0 pendências operacionais.
+- **Fila saiu de 0 para 2 pendentes** (UNISO + Sapore, adicionadas pelo Melhorador 11:07) — o gargalo nº1 (fila zerada) começa a ser atacado; falta o envio das apresentações (Prospector/Atendente).
+
+---
 # Insights — Master Óleo · 18/09/2026 (tick 10:41)
 
 ## Resumo do tick (10:41)
