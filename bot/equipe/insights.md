@@ -1,21 +1,179 @@
-# Insights — Master Óleo · 18/09/2026 (tick 13:03)
+# Insights — Master Oleo · 19/09/2026 (tick 14:01 — 3o tick do dia, sabado)
 
-## Resumo do tick (13:03)
+## Resumo do tick (14:01) — ✅ Tudo verde, 7 FP2 enviados
 
-- **Pipeline (snapshot 13:03)**: **239 leads** (CSV) · **18 respondidos** · 18 sequência · **146 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 164** (watchdog).
-- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces já com tentativa), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]`), scan_inbox confirmada via check-replies (**0 não lidas — caixa limpa**).
-- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead desde a Dalben (09:07, atendida no tick 10:21). **Emails no tick**: 0.
-- **Relatório ESG**: nenhum pedido — sem geração de PDF.
+- **Pipeline (snapshot 14:01)**: **244 leads** (CSV) · **18 respondidos** · 18 sequencia · **151 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 169** (watchdog) — identico ao tick 11:02.
+- **Acao do tick**: sync ✅ (0 notificacoes Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces ja com tentativa), watchdog ✅ **exit 0 no 1o run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correcao, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (**7 FP2 enviados** — ver abaixo), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]` — caixa limpa).
+- **7 FP2 enviados neste tick**: contato@pmg.com.br (PMG), vendas@ecirtec.com.br (Ecirtec), oilcompany@oilcompany.com.br (Oil Company), atendimento@azevedooleos.com.br (Azevedo Oleos), sac@imcopa.com.br (Imcopa), contato@grupozaamp.com.br (Grupo Zaamp), clientes@comgroup.com.br (Comgroup) — lote oleos de 14/01.
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead pendente (caixa limpa, nada desde a Dalben em 18/09 09:07).
+- **Relatorio ESG**: nenhum pedido recebido neste tick.
+- **Pipeline identico ao tick 11:02** — nenhum evento entre os ticks. Sabado tranquilo.
+- **Dia**: 3o tick de sabado (19/09) — operacao 100% automatizada, sem incidentes. 7 emails enviados no dia.
 
 ## 🏆 Leads quentes (destaque!)
 
-1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada 10:23 (coleta programada, certificado, relatório ESG com marca Dalben, coleta-teste, WhatsApp (11) 96785-9631). **Monitorar de perto; toque de acompanhamento em 24–48h se não responder (vence amanhã 19/09).**
-2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50–100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
-3. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido, URGENTE — ação humana em aberto).
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada sexta 18/09 10:23. **12 dias sem retorno** (desde 09/07). Monitorar.
+2. **Queijos Itupeva (Rafael Galvao) — #1 da semana:** volume real informado (Frescal 200 kg/mes + 50-100 kg/mes outros) — **aguardando relacao de volumes + coleta-teste; lead mais proximo de contrato.**
+3. **Coop Campinas (erick.araujo@coopsp.coop.br) — FOLLOW-UP FP1 ENVIADO SEXTA 19:34** (~80 lojas, maior cooperativa de consumo da AL). **Aguardando resposta.**
+4. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido ha 9 dias — acao humana em aberto).
+5. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — acao humana em aberto).
+6. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido ha 8 dias — acao humana segue em aberto.**
+7. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital Sao Vicente Jundiai, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta.
+8. **Lote batata (4 leads 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — em sequencia.
+9. **UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — leads novos aguardando entrada na fila.**
+10. **Lote oleos (7 leads, FP2 enviados neste tick):** PMG, Ecirtec, Oil Company, Azevedo Oleos, Imcopa, Grupo Zaamp, Comgroup — geradores potenciais de vencidos >40% e oleo de limpeza de maquinas.
+
+## Padrao que se confirma
+
+- **3o tick de sabado — 100% verde.** Rotina automatizada funcionando perfeitamente mesmo em dia nao util. Nenhum problema de infraestrutura.
+- **Pipeline estavel em 244 leads** — nenhum lead novo desde o inicio do dia. Prospector nao esta rodando em sabado (esperado).
+- **Caixa limpa — nenhuma resposta de lead no sabado ate agora.** 7 FP2 enviados para o lote oleos — aguardando possiveis respostas nos proximos dias.
+- **Acao humana segue sendo o gargalo principal:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) — tres canais comerciais abertos parados ha 8-11 dias; Dalben entrando no 12o dia sem retorno do gerente Luis.
+
+---
+
+# Insights — Master Óleo · 19/09/2026 (tick 11:02 — 2º tick do dia, sábado)
+
+## Resumo do tick (11:02) — ✅ Tudo verde, caixa limpa, pipeline estável
+
+- **Pipeline (snapshot 11:02)**: **244 leads** (CSV) · **18 respondidos** · 18 sequência · **151 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 169** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces já com tentativa), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]` — caixa limpa).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead pendente (caixa limpa).
+- **Relatório ESG**: nenhum pedido recebido neste tick.
+- **Pipeline idêntico ao tick 10:31** — nenhum evento entre os ticks. Sábado tranquilo.
+- **Dia**: 2º tick de sábado (19/09) — operação 100% automatizada, sem incidentes.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada sexta (10:23). **Aguardando retorno desde 09/07 — 10 dias sem resposta.**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50-100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Coop Campinas (erick.araujo@coopsp.coop.br) — FOLLOW-UP FP1 ENVIADO SEXTA 19:34** (~80 lojas, maior cooperativa de consumo da AL). **Aguardando resposta — pode vir no sábado.**
+4. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido há 9 dias — ação humana em aberto).
+5. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+6. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido há 8 dias — ação humana segue em aberto.**
+7. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta.
+8. **Lote batata (4 leads 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — em sequência.
+9. **UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — leads novos aguardando entrada na fila.**
+
+## Padrão que se confirma
+
+- **2º tick de sábado — 100% verde.** Rotina automatizada funcionando perfeitamente mesmo em dia não útil. Nenhum problema de infraestrutura.
+- **Pipeline estável em 244 leads** — nenhum lead novo desde o início do dia. Prospector não está rodando em sábado (esperado).
+- **Caixa limpa — nenhuma resposta de lead no sábado até agora.** Leads podem responder durante o dia.
+- **Ação humana segue sendo o gargalo principal:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) — três canais comerciais abertos parados há 8–11 dias; Dalben entrando no 10º dia sem retorno do gerente Luis.
+
+---
+
+## Resumo do tick (10:31) — ✅ Tudo verde, caixa limpa
+
+- **Pipeline (snapshot 10:31)**: **244 leads** (CSV) · **18 respondidos** · 18 sequência · **151 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 169** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados — todos os 49 bounces já com tentativa), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]` — caixa limpa).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead pendente (caixa limpa).
+- **Relatório ESG**: nenhum pedido recebido neste tick.
+- **Leads novos desde o fechamento de sexta (19:34)**: **~3 leads adicionados** pelo prospector (pipeline subiu de 241 → 244).
+- **Dia**: 1º tick de sábado (19/09) — operação 100% automatizada, sem incidentes.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada na sexta (10:23). **Aguardando retorno desde 09/07 — 10 dias sem resposta.** Monitorar no próximo tick.
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50-100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Coop Campinas (erick.araujo@coopsp.coop.br) — FOLLOW-UP FP1 ENVIADO SEXTA 19:34** (~80 lojas, maior cooperativa de consumo da AL). **Aguardando resposta — pode vir no sábado.**
+4. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido há 9 dias — ação humana em aberto).
+5. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+6. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido há 8 dias — ação humana segue em aberto.**
+7. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta.
+8. **Lote batata (4 leads 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — em sequência.
+9. **UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — leads novos aguardando entrada na fila.**
+
+## Padrão que se confirma
+
+- **1º tick de sábado — 100% verde.** Rotina automatizada funcionando perfeitamente mesmo em dia não útil. Nenhum problema de infraestrutura.
+- **Pipeline cresceu de 241 → 244 leads** (+3 desde sexta 19:34) — prospector adicionou leads no período noturno/madrugada.
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) — três canais comerciais abertos parados há 8–11 dias; Dalben entrando no 10º dia sem retorno do gerente Luis.
+- **Coop Campinas** é o lead mais promissor deste tick — FP1 enviado na sexta à noite para o comprador direto (~80 lojas).**
+
+---
+
+## Resumo do tick (19:34) — ⚠️ Watchdog exit 1 → resolvido
+
+- **Pipeline (snapshot 19:34)**: **241 leads** (CSV) · **18 respondidos** · 18 sequência · **148 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 166** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados), watchdog ⚠️ **exit 1 no 1º run** (11 follow-ups ATRASADOS → RESOLVIDO rodando prospecao_followup), prospecao_followup ✅ (11 FP1 enviados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — caixa limpa), enviar_lote --status ✅ (0 pendentes).
+- **Respostas enviadas**: **11 follow-ups FP1 neste tick** — para: Coop Campinas (~80 lojas), Avec, Estrela, TRZ Food, Super Tatuí, EXAL, Viva Food, Nutrivigor, RW Cozinha, IDNLABS, Romariz.
+- **Relatório ESG**: nenhum pedido recebido neste tick.
+- **Leads novos desde o tick 19:01**: nenhum — pipeline inalterado (241 leads).
+- **Dia**: 6 ticks de cron (06:25, 10:21, 13:03, 18:39, 19:01, 19:34) — 13 emails no total do dia (2 proposta Dalben + 11 follow-ups FP1). Pipeline fechou com 241 leads (+8 no dia).
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada 10:23. **Aguardando retorno desde as 09:07; monitorar no próximo tick (19/09).**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50-100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
 4. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
 5. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.**
-6. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente de Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta ainda.
-7. **Lote batata (4 leads novos 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — entrando em sequência; geradores de óleo de fritura de fábricas.
+6. **Coop Campinas (erick.araujo@coopsp.coop.br) — FOLLOW-UP ENVIADO HOJE** (~80 lojas, maior cooperativa de consumo da AL). FP1 enviado 19:34 — monitorar resposta.
+7. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta.
+8. **Lote batata (4 leads 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — em sequência.
+9. **UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — leads novos aguardando entrada na fila.**
+
+## Padrão que se confirma
+
+- **6º tick do dia** — watchdog acusou atrasados pela primeira vez no dia (11 FP1 pendentes); **resolvido automaticamente** rodando prospecao_followup. Rotina 100% automatizada e estável.
+- **Pipeline fechou o dia em 241 leads** (+8 desde a abertura: Capivariana, Frinni, 4 batateiras, UNISO, Sapore).
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) — três canais comerciais abertos parados há 8–11 dias.
+- **11 novos FP1 enviados na noite de sexta-feira** — Coop Campinas é o destaque (maior cooperativa de consumo da AL, ~80 lojas). Resposta pode vir no sábado.
+
+---
+
+# Insights — Master Óleo · 18/09/2026 (tick 19:01 — último do dia, 5º tick)
+
+## Resumo do tick (19:01) — ✅ Tudo verde, caixa limpa
+
+- **Pipeline (snapshot 19:01)**: **241 leads** (CSV) · **18 respondidos** · 18 sequência · **148 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 166** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]` — caixa limpa).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead no dia desde a Dalben (09:07, atendida às 10:21). Emails no tick: 0 (+2 no dia: proposta e confirmação Dalben).
+- **Relatório ESG**: nenhum pedido recebido neste tick.
+- **Leads novos desde o tick 18:39**: nenhum — pipeline inalterado.
+- **Dia encerrado**: 5 ticks de cron (06:25, 10:21, 13:03, 18:39, 19:01) — 100% operação limpa, 0 respostas de leads no período vespertino, 2 emails enviados (proposta Dalben manhã). Pipeline cresceu de 233 para 241 leads (+8) no dia.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada 10:23 (coleta programada, certificado, relatório ESG com marca Dalben, coleta-teste, WhatsApp). **Aguardando retorno desde as 09:07; monitorar no próximo tick (19/09).**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50-100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+4. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+5. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.**
+6. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta.
+7. **Lote batata (4 leads 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — em sequência.
+8. **UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — leads novos aguardando entrada na fila.**
+
+## Padrão que se confirma
+
+- **5º tick do dia, todos verdes** — rotina 100% automatizada e estável. Nenhum problema de infraestrutura. Nenhuma resposta pendente. Nada a corrigir.
+- **Pipeline fechou o dia em 241 leads** (+8 desde a abertura: Capivariana, Frinni, 4 batateiras, UNISO, Sapore).
+- **Ação humana segue sendo o gargalo:** Selmi (prazo 11/09), Savegnago e Grupo IMC (prazo 10/09) — três canais comerciais abertos parados há 8–11 dias; Dalben entra na fila de acompanhamento se o Luis não responder em 24h (vence amanhã 19/09).
+- **Nenhuma resposta de lead no período vespertino** — sábado (19/09) pode trazer retornos da Dalben e de leads que receberam email durante o dia.
+
+---
+
+## Resumo do tick (18:39) — ✅ Tudo verde, caixa limpa
+
+- **Pipeline (snapshot 18:39)**: **241 leads** (CSV) · **18 respondidos** · 18 sequência · **148 novos** · 31 bounce (CSV) / **49 cache** · **26 encerrados** · **ativos: 166** (watchdog).
+- **Ação do tick**: sync ✅ (0 notificações Formspree), corrigir_emails ✅ (0 processados), watchdog ✅ **exit 0 no 1º run** (SMTP OK · IMAP OK — 0 atrasados, 0 bounces sem correção, 0 leads parados), prospecao_followup ✅ (0 atrasados), send_sequence ✅ (nada devido), check-replies ✅ (**0 pendentes** — `replies_pending.json` = `[]` — caixa limpa).
+- **Respostas enviadas**: **0 neste tick** — nenhuma resposta nova de lead no dia desde a Dalben (09:07, atendida às 10:21). **Emails no tick**: 0 (+2 no dia: proposta e confirmação Dalben).
+- **Relatório ESG**: nenhum pedido recebido neste tick.
+- **Leads novos desde o tick 13:03**: UNISO — Universidade de Sorocaba (id 228, ouvidoria@uniso.br, 14:03) e Sapore S.A. refeições coletivas (id 229, suprimentos@sapore.com.br, 14:03).
+- **Dia encerrado**: 4 ticks de cron (06:25, 10:21, 13:03, 18:39) — 100% operação limpa, 0 respostas de leads no período, 2 emails enviados (proposta Dalben). Pipeline cresceu de 233 para 241 leads (+8) no dia.
+
+## 🏆 Leads quentes (destaque!)
+
+1. **Supermercados Dalben (id 148) — LEAD QUENTE #1:** gerente **Luis (luish@supermercadosdalben.com.br)** aguardando volume mensal — proposta enviada 10:23 (coleta programada, certificado, relatório ESG com marca Dalben, coleta-teste, WhatsApp). **Aguardando retorno desde as 09:07; monitorar no próximo tick (19/09).**
+2. **Queijos Itupeva (Rafael Galvão) — #1 da semana:** volume real informado (Frescal 200 kg/mês + 50-100 kg/mês outros) — **aguardando relação de volumes + coleta-teste; lead mais próximo de contrato.**
+3. **Savegnago (comercial@, ~100 lojas):** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+4. **Grupo IMC / Rede Frango Assado:** **toque WhatsApp pendente** (prazo 10/09 vencido — ação humana em aberto).
+5. **Selmi (compras@selmi.com.br):** **toque WhatsApp prazo 11/09 vencido — ação humana segue em aberto.**
+6. **Lote hospitalar (ids 220-225):** Unimed Sorocaba, Hospital São Vicente Jundiaí, SPDM Sorocaba, Santa Lucinda PUC-SP, PUC-Campinas — sem resposta.
+7. **Lote batata (4 leads 11:18):** Bem Brasil, Megachips, CRAC, Praticleve — em sequência.
+8. **Novos (14:03):** UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — entrando na fila.
 
 ## Padrão que se confirma
 

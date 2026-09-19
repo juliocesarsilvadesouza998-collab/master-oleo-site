@@ -1,71 +1,77 @@
-# Insights da Operação — Master Óleo
-## Atualizado em: 18/09/2026 14:14 (Melhorador Contínuo)
+# Insights Diários — Analista de Qualidade
 
-### Melhorias Implementadas em 18/09
+## 2026-09-19 (sábado) — 14:05 (cron Melhorador Contínuo)
 
-1. **Seção PROVA SOCIAL no site** (deploy-vercel/index.html) — 3 cases reais:
-   - BSBIOS × Madero (55 mil L/mês, 270 restaurantes)
-   - Catalent Indaiatuba/Sorocaba (cliente real encapsulados)
-   - Mercado UCO US$8bi→US$15bi + exportação EUA + Portaria 3/2026
-   
-2. **FP1 fortalecido com escassez global** (prospecao_followup.py) — antes FP1 só tinha preço e renda calculada; agora inclui exportação EUA + jan/2028 como gatilho de urgência, alinhando FP1 com a força do FP2.
+### Resumo do diagnóstico do dia
 
-3. **Aprendizado novo — sites de supermercados regionais não expõem email público** (Revolução, Yeda, São Roque, União): só formulário ou WhatsApp. Fila precisa de fontes alternativas (páginas de fornecedores, diretórios setoriais ABIA/SINDALIMENTOS, LinkedIn).
+**Watchdog:** ✅ exit 0 — saudável. SMTP OK, IMAP OK.
 
-### Resumo do Tick Atual (14:01)
+**Dashboard:** 207 emails enviados | 178 entregues | 29 bounces (14%) | 16 respostas (7.7%) | 158 aguardando follow-up.
 
-| Indicador | Valor | Meta | Status |
-|-----------|-------|------|--------|
-| Leads totais | 239 | — | ✅ |
-| Ativos | 164 | — | ✅ |
-| Apresentações enviadas | 206 | — | ✅ |
-| Entregues (est.) | 177 | — | ✅ |
-| Bounce rate | 14% | <15% | ✅ |
-| Respostas | 18 | — | ✅ |
-| Taxa de resposta | ~8% | >3% | ✅ BATIDA (2º mês) |
-| Watchdog verde consecutivo | 36 | — | ✅ |
-| Fila pendentes | 0 | ≥10 | ❌ ZERADA |
+**Fila de prospecção:** 0 pendentes (7º dia consecutivo zerado). **Este é o ponto MAIS FRACO do sistema hoje.**
 
-### Ações Realizadas neste Tick
+### Melhorias implementadas hoje
 
-1. **Sync + Auto-correção:** sync_formspree.py e corrigir_emails.py OK (49 bounces no cache, nenhum novo)
-2. **Watchdog:** 36º tick verde consecutivo (SMTP OK, IMAP OK, sem follow-ups atrasados)
-3. **Sequência:** 0 follow-ups processados, 0 envios novos pelo send_sequence, 0 respostas pendentes
-4. **Desemperramento da fila:** UNISO (ouvidoria@uniso.br) e Sapore (suprimentos@sapore.com.br) — estavam PENDENTES há vários ticks sem serem enviados automaticamente. Enviados manualmente via `enviar_lote.py --max 10`
-5. **Check-replies:** replies_pending.json vazio — nenhuma resposta para atender
+1. **✅ 13 NOVAS EMPRESAS adicionadas à fila_prospeccao_extra.json**
+   - Foco em redes de supermercados (Revolução Campinas/Indaiatuba, SuperViva Salto), indústrias gigantes (PepsiCo - fritura industrial em volume, Cacau Show, Kopenhagen, Camil, Piraquê), distribuidoras (Traviú, MegaG) e indústrias de gorduras (Alibra).
+   - Total extra: 161 → 174 empresas.
+   - Pipeline passa de 0 pendentes para ~13 novos leads disponíveis (após MX check).
 
-### Leads QUENTES (prioridade máxima)
+2. **✅ Site melhorado com 2 novos argumentos de conversão**
+   - **Anti-furto:** nova seção "Segurança anti-furto" nos serviços — argumento forte para redes (Gangue do Óleo atuou em +20 cidades, prejuízo R$ 500 mil). Coletor com crachá, pesagem na frente do cliente, bombona com trava.
+   - **Relatório ESG:** adicionado na trust strip — diferencial para empresas médias/grandes que prestam contas de sustentabilidade.
+   - Ambas as melhorias no deploy-vercel/index.html.
 
-| Lead | Contato | Situação | Ação Necessária |
-|------|---------|----------|-----------------|
-| **Dalben Supermercados** | Luis (luish@supermercadosdalben.com.br) | Respondeu 18/09 10:23 | Aguardando retorno dele — lead quente nº1 |
-| **Savegnago Supermercados** | comercial@savegnago.com.br | Apresentação enviada 07/09 | Toque WhatsApp (11) 96785-9631 URGENTE (prazo 10/09 vencido) |
-| **Grupo IMC / Frango Assado** | Geral | Apresentação enviada | Toque WhatsApp (11) 96785-9631 (prazo 10/09 vencido) |
-| **Selmi** | compras@selmi.com.br | Apresentação enviada 11/09 | Toque leve WhatsApp (prazo vencido) |
-| **Queijos Itupeva** | Rafael | Negociação ativa | Agendar coleta-teste (R$0,50-1,50/kg, descaracterização cortesia) |
-| **Sumerbol (Ivone Franca)** | ivone.franca@sumerbol.com.br | Email de fechamento enviado | Toque WhatsApp/telefone |
-| **GoodBom (Laura)** | (19) 3828-9798 | Proposta encaminhada | Telefonar |
-| **Rede Boa** | produtos.novos@smboa.com.br | Ticket #23915 | Toque leve |
-| **Arcor/Bagley** | SAC | Protocolo encaminhado | Aguardando retorno |
-| **Sanofi Medley** | SAC | Protocolo 02995121 | Aguardando direcionamento interno |
+3. **✅ Ecossistema atualizado** com estado real do pipeline.
 
-### Gargalos Atuais
+### Lições do dia
 
-1. **Fila de prospecção ZERADA (0 pendentes)** — gargalo nº1 recorrente. Prospector precisa repor com urgência (5-8/dia, 2 horários)
-2. **Fechamento zero em 2 meses** — 18 respostas reais, nenhum contrato ou coleta-teste. Ação humana (WhatsApp/telefone) é o elo que falta
-3. **Netlify 403** — site masteroleo.eco.br sem créditos de build (versão antiga no ar)
-4. **Inbound zerado** — site não gera leads; só GitHub Pages com versão nova ativo
+1. **Fila zerada por 7 dias é crítica.** O pipeline não gera novos leads sem reposição ativa. O Melhorador Contínuo precisa fazer a reposição manualmente (adicionar à fila_prospeccao_extra.json) já que não há script automático de descoberta.
+2. **O anti-furto é o argumento que fecha rede.** Óleo virou commodity disputada — e alvo de furto organizado. Redes que já tiveram prejuízo ou sabem do risco fecham mais rápido.
+3. **Relatório ESG mensal** diferencia a Master Óleo de coletores informais — indústrias médias/grandes valorizam o relatório para seus próprios reporting.
 
-### Novos Enviados (18/09)
+### Para o Estrategista (domingo)
 
-- **UNISO - Universidade de Sorocaba** (ouvidoria@uniso.br) — restaurante universitário próprio (~400+ refeições/dia), nicho NOVO (universidades)
-- **Sapore S.A.** (suprimentos@sapore.com.br) — rede nacional de refeições coletivas (1,3M refeições/dia), canal de compras (quem decide)
+- **Reposição da fila é prioridade #1.** Sugiro criar script ou fluxo automático que pesquise novas empresas semanalmente.
+- **Leads quentes ainda aguardam toque humano:** Dalben, Muffato, Savegnago (WhatsApp urgente), Queijos Itupeva.
+- **Netlify fora do ar** — site principal em masteroleo.eco.br com 403 (créditos esgotados). GitHub Pages com versão atualizada funcionando.
 
-### Pendências WhatsApp/Telefone (ação humana necessária)
+---
 
-- Savegnago — (16) 3946-2088 / WhatsApp (11) 96785-9631
-- Grupo IMC / Frango Assado — WhatsApp (11) 96785-9631
-- Selmi — WhatsApp/compras@selmi.com.br
-- Queijos Itupeva — WhatsApp (11) 940333759 (fechar coleta-teste)
-- Sumerbol (Ivone) — WhatsApp/telefone
-- GoodBom (Laura) — (19) 3828-9798
+## 2026-09-19 (sábado) — 13:31 (cron Atendente IA)
+
+### Resumo do 7º tick
+
+**Sincronização:** sync_formspree.py — 0 notificações Formspree; 49 bounces no cache. corrigir_emails.py — 0 novos bounces (todos já tentados anteriormente).
+
+**Pipeline:**
+
+| Etapa | Status |
+|-------|--------|
+| sync_formspree | ✅ 0 notificações |
+| corrigir_emails | ✅ 0 novos bounces |
+| watchdog | ✅ exit 0 — saudável |
+| prospecao_followup | ✅ 0 follow-ups atrasados |
+| bot_oleo send_sequence | ✅ sequência processada |
+| bot_oleo check-replies | ✅ 0 respostas pendentes |
+
+**Respostas pendentes:** 0 — `replies_pending.json` vazio.
+
+**Fila de prospecção:** 0 pendentes (7º dia consecutivo zerado). Necessita reposição urgente.
+
+### Problemas encontrados e resolvidos
+
+Nenhum problema neste tick. Pipeline estável, sem bounces novos, sem atrasados, sem respostas para atender.
+
+### Leads QUENTES 🎯
+
+1. **🔥 DALBEN SUPERMERCADOS (PRIORIDADE MÁXIMA):** Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br) — proposta enviada. Aguardar retorno.
+2. **🔥 MUFFATO / MAX ATACADISTA (AÇÃO HUMANA):** SAC orientou ligar (43) 3371-1700.
+3. **🔥 Savegnago (~100 lojas):** Aguardando retorno após apresentação. Urgente: toque WhatsApp (11) 96785-9631.
+4. **Queijos Itupeva (Rafael):** Negociação ativa para coleta-teste de resíduos vencidos >40% gordura.
+
+### Ações recomendadas (humanas)
+
+- **Repor fila de prospecção** — 7 dias zerado é crítico. Necessário Melhorador Contínuo/Prospector.
+- **Toque humano urgente** nos 4 leads quentes acima — WhatsApp/telefone antes que esfriem.
+- **Considerar limpeza do cache de bounces** (reduziria de 49 para ~17 emails reais).

@@ -1104,5 +1104,117 @@
     "email": "suprimentos@sapore.com.br",
     "cidade": "Campinas/SP",
     "segmento": "refeicoes coletivas rede nacional (1,3M refeicoes/dia, cozinhas industriais em clientes da regiao) - REENGAGE canal de compras suprimentos@; ja contatado 13-26/08 via contato@ (triagem) sem resposta; MX Outlook valido 18/09"
+  },
+  {
+    "nome": "Sauvet",
+    "empresa": "Sauvet Industria Farmaceutica e Veterinaria Ltda",
+    "email": "contato@sauvet.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "industria farmaceutica e veterinaria - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX Claramail valido 19/09"
+  },
+  {
+    "nome": "Mondiale Alimentos",
+    "empresa": "Mondiale Alimentos Ltda",
+    "email": "sac@mondialealimentos.com.br",
+    "cidade": "Sao Roque/SP",
+    "segmento": "industria de alimentos (massas, molhos, conservas, antepastos) - usa oleos vegetais em conservas e molhos; Sao Roque a ~20km de Salto; MX Locaweb valido 19/09"
+  },
+  {
+    "nome": "Schreiber Foods Porto Feliz",
+    "empresa": "Schreiber Foods Brasil (fabrica de queijos processados em Porto Feliz/SP)",
+    "email": "contact@schreiberfoods.com",
+    "cidade": "Porto Feliz/SP",
+    "segmento": "laticinios multinacional (queijos processados, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); nova fabrica em Porto Feliz a ~40km de Salto; MX Outlook valido 19/09"
+  },
+  {
+    "nome": "Supermercados Revolucao",
+    "empresa": "Supermercados Revolucao (Campinas e Indaiatuba)",
+    "email": "sac@supermercadosrevolucao.com.br",
+    "cidade": "Campinas/Indaiatuba-SP",
+    "segmento": "Supermercados (rede, padaria/rotisserie/acougue)"
+  },
+  {
+    "nome": "Traviu Alimentos",
+    "empresa": "Traviu Alimentos (food service e cozinhas industriais)",
+    "email": "contato@traviualimentos.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Distribuicao de alimentos para food service - estoque de oleo vegetal vencido"
+  },
+  {
+    "nome": "Alibra Ingredientes",
+    "empresa": "Alibra Ingredientes Alimenticios (gorduras em po e emulsificantes)",
+    "email": "sac@alibra.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Industria de gorduras e emulsificantes alimenticios - NICHO PRIORITARIO (oleos e gorduras)"
+  },
+  {
+    "nome": "Alibra Comercial",
+    "empresa": "Alibra Comercio e Industria",
+    "email": "contato@alibra.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Industria de gorduras e emulsificantes alimenticios - NICHO PRIORITARIO (oleos e gorduras)"
+  },
+  {
+    "nome": "Camil Alimentos",
+    "empresa": "Camil Alimentos S/A (arroz, feijao, graos)",
+    "email": "sac@camil.com.br",
+    "cidade": "Sao Paulo/SP (fabrica em Itaqui/RS e SP)",
+    "segmento": "Industria de alimentos (graos) - biodiesel demanda alta; oleo de fritura em volume"
+  },
+  {
+    "nome": "Camil Comercial",
+    "empresa": "Camil Alimentos S/A",
+    "email": "comercial@camil.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de alimentos (graos) - oleo de fritura industrial e vencidos"
+  },
+  {
+    "nome": "Cacau Show",
+    "empresa": "Cacau Show Industria e Comercio (maior rede de chocolates finos do Brasil)",
+    "email": "atendimento@cacaushow.com.br",
+    "cidade": "SP (fabrica em Itapevi/SP, 2000+ lojas)",
+    "segmento": "Industria de chocolates (manteiga de cacau, gorduras vegetais em volume) - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Kopenhagen",
+    "empresa": "Kopenhagen (Grupo CRM - chocolates premium)",
+    "email": "sac@kopenhagen.com.br",
+    "cidade": "Sao Paulo/SP (fabrica em SP)",
+    "segmento": "Industria de chocolates e confeitaria - gorduras vegetais, manteiga de cacau, oleo de fritura"
+  },
+  {
+    "nome": "PepsiCo Brasil",
+    "empresa": "PepsiCo do Brasil (Elma Chips, Quaker, Gatorade)",
+    "email": "faleconosco@pepsico.com",
+    "cidade": "SP (fabricas em Campinas, Jundiai e outras)",
+    "segmento": "Industria de alimentos - salgadinhos, batata frita (fritura industrial em VOLUME MUITO ALTO) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Moinho Paulista",
+    "empresa": "Moinho Paulista Industria de Farinhas",
+    "email": "contato@moinhopaulista.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de moagem e farinhas - oleo e gordura vegetal vencidos"
+  },
+  {
+    "nome": "Piraque",
+    "empresa": "Piraque Industria de Biscoitos",
+    "email": "contato@piraque.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de biscoitos e massas - oleo de fritura em volume"
+  },
+  {
+    "nome": "SuperViva Salto",
+    "empresa": "SuperViva Supermercados Salto",
+    "email": "faleconosco@superviva.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "Supermercado (Salto/SP - padaria/rotisserie/acougue) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "MegaG Alimentos",
+    "empresa": "MegaG Alimentos (distribuidora de alimentos Jundiai)",
+    "email": "contato@megag.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Distribuidora de alimentos - estoque de oleo vegetal vencido"
   }
 ]

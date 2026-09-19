@@ -1,588 +1,128 @@
 {
- "atualizado_em": "2026-09-18 12:31",
- "criado_em": "2026-08-13",
- "metas": {
-  "enviar_50_emails_a_partir_de": "2026-08-14",
-  "limite_diario_prospeccao": 15,
-  "meta_semana_08_14_09": {
-   "foco_fechamento": "Savegnago (#1 - aguardar retorno comercial@savegnago.com.br; follow-up humano na matriz (16) 3946-2088 em 3-5 dias se silencio) + Sumerbol (Ivone - telefonar/WhatsApp) + GoodBom (Laura - (19) 3828-9798)",
-   "meta_contratos": "1 coleta-teste OU contrato de volume fechado ate 14/09 (prioridade: Savegnago ou rede de supermercado)",
-   "meta_fila": "manter fila prospeccao >= 15 pendentes (Estrategista repoe 3 em 07/09; Prospector: 5-8/dia, prioridade REDES DE SUPERMERCADO/ATACAREJO com MX validado)",
-   "nicho_prioritario": "SUPERMERCADOS/REDES/ATACAREJO (4 dos 7 respondidos reais; Savegnago/Sumerbol/GoodBom/Rede Boa) + encapsulados/farmaceuticas (Catalent)",
-   "regra_canal": "preferir email do depto COMERCIAL/ouvidoria em vez de SAC generico (lição Oba/Arcor: SAC fecha ticket; comercial responde gente)",
-   "pendencia_humana": "telefonar GoodBom (19) 3828-9798 e Sumerbol (Ivone) antes do proximo domingo"
+  "atualizado_em": "2026-09-19 14:05",
+      "criado_em": "2026-08-13",
+    "metas": {
+      "enviar_50_emails_a_partir_de": "2026-08-14",
+      "limite_diario_prospeccao": 15,
+      "meta_semana_14_20_09_foco_fechamento": {
+        "meta_contrato": "1 coleta-teste CONFIRMADA até 20/09 (pendente)",
+        "acao_humana_1": "Savegnago: toque WhatsApp (11) 96785-9631 citando apresentação",
+        "acao_humana_2": "Queijos Itupeva: fechar coleta-teste (R$0,50-1,50/kg)",
+        "acao_humana_3": "Sumerbol, GoodBom, Rede Boa, Arcor, Sanofi: toque leve",
+        "meta_fila": ">= 10 pendentes ao fim da semana",
+        "meta_resposta": "taxa >= 8%",
+        "meta_bounce": "< 15%"
+    },
+    "foco_cidades": [
+      "Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai",
+      "Louveira", "Valinhos", "Piracicaba", "Vinhedo", "Monte Mor",
+      "Hortolandia", "Sumare", "Limeira", "Nova Odessa", "Cabreuva",
+      "Tatui", "Porto Feliz", "Boituva", "Americana", "Votorantim", "Aluminio"
+    ],
+    "nicho_prioritario": "supermercados/redes/atacarejo (nicho que mais converte) + encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
   },
-  "meta_semana_09_14_20": {
-   "foco_fechamento": "1 COLETA-TESTE OU 1 CONTRATO ate 20/09: Queijos Itupeva (negociacao ativa, agendar coleta-teste com Rafael) + Savegnago (toque WhatsApp URGENTE, vencido 10/09) + Grupo IMC (vencido 10/09) + Selmi (vencido 11/09)",
-   "meta_contrato": "1 coleta-teste CONFIRMADA ou 1 contrato de volume fechado ate 20/09",
-   "meta_fila": "fila >= 10 pendentes ao fim da semana (Prospector: 5-8/dia em 2 horarios; prioridade supermercados/atacarejo, frigorificos, cozinhas industriais)",
-   "meta_resposta": "manter taxa >= 8% (FP2 novo com argumento de exportacao EUA/escassez global)",
-   "nicho_prioritario": "SUPERMERCADOS/REDES + VENCIDOS >40% GORDURA (Queijos Itupeva) + HOTEIS/RESORTS (V6)",
-   "pendencia_estrutural": "Netlify sem creditos (403) — destravar ou apontar DNS para GitHub Pages (inbound zerado)"
+  "fila_prospeccao": {
+    "atualizado_em": "2026-09-19 13:31",
+        "total": 244,
+    "pendentes": 0,
+    "contatados": 187,
+    "bounces": 49,
+    "nota": "Fila zerada pelo 7º dia consecutivo. Pipeline de novos contatos parado — necessita reposição do Melhorador Contínuo/Prospector (5-8/dia)."
   },
-  "foco_cidades": [
-   "Salto",
-   "Campinas",
-   "Indaiatuba",
-   "Itu",
-   "Sorocaba",
-   "Jundiai",
-   "Louveira",
-   "Valinhos",
-   "Piracicaba",
-   "Vinhedo",
-   "Monte Mor",
-   "Hortolandia",
-   "Sumare",
-   "Limeira",
-   "Nova Odessa",
-   "Cabreuva",
-   "Tatui",
-   "Porto Feliz",
-   "Boituva",
-   "Americana",
-   "Votorantim",
-   "Aluminio"
-  ],
-  "nicho_prioritario": "supermercados/redes/atacarejo (nicho que mais converte) + encapsulados/farmaceuticas/nutraceuticas (oleo vegetal de limpeza de maquinas)"
- },
- "fila_prospeccao": {
-  "atualizado_em": "2026-09-18 12:31",
-  "total": 189,
-  "pendentes": 2,
-  "contatados": 176,
-  "bounces": 33,
-  "nota": "Atendente IA (18/09, rodada 12:01): sync OK, watchdog OK (33o tick verde), 0 follow-ups, 0 envios novos, 0 respostas pendentes. Fila: 189 empresas - 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br). Sem leads quentes novos. Toques WhatsApp humanos pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva."
- },
- "estado_2026_08_26": {
-  "leads_total": 117,
-  "leads_ativos": 89,
-  "apresentacoes_enviadas": 117,
-  "entregues_sem_bounce": 78,
-  "bounces": 32,
-  "taxa_bounce": "23% (cache de bounces acumulado — 32 enderecos; maioria dominios sem MX)",
-  "respostas_reais": 7,
-  "taxa_resposta": "~6,5% de leads contatados",
-  "lead_quente": "Sumerbol Supermercados (resposta 26/08 13:21 GMT — SAC/atendimento encaminhou a proposta ao setor responsavel e passou contatos diretos: manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br; resposta enviada 11:05 pedindo volume + tipo + coleta-teste + WhatsApp; lead id 21 marcado respondido) + Arcor/Bagley (auto-resposta SAC 26/08 12:17 GMT 'mensagem encaminhada a area responsavel' — resposta enviada 09:35 agradecendo, pedindo volume e oferecendo WhatsApp; sem retorno ainda) + Oba Hortifrutigranjeiros (SAC respondeu 26/08 09:40 'recebemos a sua mensagem!' e 09:46 'Atendimento Finalizado' = ticket FECHADO pelo SAC, sem interesse humano — porta fechada por ora, seguir via ouvidoria@redeoba.com.br se insistir). Continuam em aberto: GoodBom, Rede Boa, Sanofi, Hile, Arcor/Bagley.",
-  "leads_nicho_encapsulados": 25,
-  "inbound_formspree": 3,
-  "watchdog": "saudavel (26/08 18:01, exit 0 - 117 leads, 89 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
-  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
- },
- "estado_2026_09_07": {
-  "leads_total": 129,
-  "leads_ativos": 99,
-  "novo": 85,
-  "sequencia": 14,
-  "respondidos": 9,
-  "encerrados": 2,
-  "bounces_leads": 19,
-  "bounces_cache": 33,
-  "taxa_resposta": "~7,3% (8 respostas reais, excl. teste / ~110 contatados sem bounce)",
-  "lead_quente": "Savegnago Supermercados (RESPOSTA HUMANA 07/09 13:23 GMT — Central de Relacionamento (Gabriele) pediu apresentacao da empresa para comercial@savegnago.com.br; apresentacao completa enviada ao comercial + confirmacao ao atendimento; rede de ~100 lojas no interior de SP = alto volume de fritura. Lead id 118 marcado respondido + novo lead id 129 (comercial) cadastrado e respondido). Em aberto: Sumerbol (Ivone), Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile.",
-  "watchdog": "saudavel (07/09 10:36, exit 0 - 129 leads, 99 ativos, 33 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
-  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
- },
- "estado_2026_09_07_11_06": {
-  "leads_total": 131,
-  "leads_ativos": 101,
-  "novo": 87,
-  "sequencia": 14,
-  "respondidos": 9,
-  "encerrados": 2,
-  "bounces_leads": 19,
-  "bounces_cache": 33,
-  "taxa_resposta": "~7,3% (8 respostas reais, excl. teste / ~110 contatados sem bounce)",
-  "lead_quente": "Savegnago Supermercados (RESPOSTA HUMANA 07/09 13:23 GMT — Central de Relacionamento (Gabriele) pediu apresentacao da empresa para comercial@savegnago.com.br; apresentacao completa enviada ao comercial + confirmacao ao atendimento; rede de ~100 lojas no interior de SP = alto volume de fritura. Lead id 118 marcado respondido + lead id 129 (comercial) cadastrado e respondido). Em aberto: Sumerbol (Ivone), Arcor/Bagley, GoodBom, Rede Boa, Sanofi, Hile.",
-  "watchdog": "saudavel (07/09 11:06, exit 0 - 131 leads, 101 ativos, 33 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
-  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
- },
- "estrategista_2026_09_07_12_00": {
-  "diagnostico_semana": {
-   "leads_total": 131,
-   "leads_ativos": 101,
-   "respondidos": 9,
-   "respostas_reais": 7,
-   "taxa_resposta": "~7,3% (meta >3%) - acima da meta pelo 2o mes",
-   "bounces_cache": 33,
-   "gargalo_1": "FILA DE PROSPECCAO VAZIA (0 pendentes em 07/09 11:06) - pipeline de novos contatos parado; Prospector saturou industrias de gordura",
-   "gargalo_2": "respostas humanas avancando devagar: 7 respondidos, mas so 3 com canal humano real (Savegnago, Sumerbol, GoodBom); 4 sao SAC automatico (Arcor, Oba, Sanofi, Rede Boa ticket)",
-   "gargalo_3": "inbound via site zerado (3 acumulados; Netlify sem creditos serve versao antiga sem calculadora - GitHub Pages unico no ar)"
+      "atendente_cron_2026_09_19_13_31": {
+    "timestamp": "2026-09-19 13:31 (Atendente IA - cron)",
+    "leads_total": 244,
+    "leads_ativos": 169,
+    "bounces_cache": 49,
+    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
+    "respondidos": 18,
+    "sequencia": 18,
+    "encerrados": 26,
+    "novo": 151,
+    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
+    "watchdog": "exit 0 — saudável",
+    "acoes": [
+      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
+      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
+      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
+      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
+      "bot_oleo.py send_sequence: sequência processada",
+      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
+            "Nenhuma novidade neste tick — pipeline estável e saudável (tick 13:31)"
+          ],
+    "followups_processados": 0,
+    "lead_quente": [
+      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
+      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
+      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
+      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
+    ],
+    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
+    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
+    "fila_pendentes": 0
+      },
+      "atendente_cron_2026_09_19_13_01": {
+    "timestamp": "2026-09-19 13:01 (Atendente IA - cron)",
+    "leads_total": 244,
+    "leads_ativos": 169,
+    "bounces_cache": 49,
+    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
+    "respondidos": 18,
+    "sequencia": 18,
+    "encerrados": 26,
+    "novo": 151,
+    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
+    "watchdog": "exit 0 — saudável",
+    "acoes": [
+      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
+      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
+      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
+      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
+      "bot_oleo.py send_sequence: sequência processada",
+      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
+      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 13:01)"
+    ],
+    "followups_processados": 0,
+    "lead_quente": [
+      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
+      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
+      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
+      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
+    ],
+    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
+    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
+    "fila_pendentes": 0
   },
-  "pesquisa_mercado_07_09": [
-   "Mercado global UCO: US$ 8,63 bi (2026) -> US$ 15,16 bi (Fortune Business Insights) - confirma projecao do estudo",
-   "Cotacao SP: ~R$ 4.825/t cif para UCO (Argus via biodieselbr.com) - contexto de margem para negociacao",
-   "Mandato OGR 1%: VOLUNTARIO em 2026-27, OBRIGATORIO em 01/01/2028 (Portaria MME/MMA 3/2026 + Resolucao CNPE, megawhat.uol.com.br/eixos.com.br) - urgência confirmada",
-   "Prova social de contrato: BSBIOS x Grupo Madero 55 mil L/mes (270 restaurantes) - usado no template V4 e FP2",
-   "Leads descobertos: Rede Bom Lugar (50 lojas, RM Sorocaba, lojas em Aluminio vizinha de Salto), Tenda Atacado, Roldao Atacadista (comercial@ publico)"
-  ],
-  "melhorias_aplicadas": [
-   "TEMPLATE V4 em prospecao.py: angulo dedicado SUPERMERCADOS/ATACAREJO (padaria+rotisserie+acougue = oleo toda semana; contrato de rede; prova social Madero 55 mil L/mes; R$ 1,00-2,50/L; urgencia jan/2028) - py_compile OK, renderizacao OK",
-   "FP2 em prospecao_followup.py: prova social BSBIOS x Madero adicionada ('rede grande ja trata oleo usado como receita') - py_compile OK",
-   "persona.md: secao 'Aprendizados da semana 07/09' - nicho supermercados e o que converte; preferir canal comercial/ouvidoria a SAC; coleta-teste como proximo passo obrigatorio",
-   "fila_prospeccao_extra.json: +3 empresas com MX validado via nslookup (Rede Bom Lugar contato@redebomlugar.com.br MX Locaweb; Tenda Atacado dpo@tendaatacado.com.br MX Outlook; Roldao comercial@roldao.com.br MX Google) - fila: 110 empresas, 96 contatados, 24 bounces, 3 PENDENTES"
-  ],
-  "metas_semana_08_14_09": {
-   "fechamento": "Savegnago (#1): aguardar retorno comercial@savegnago.com.br; follow-up humano matriz (16) 3946-2088 em 3-5 dias se silencio",
-   "fechamento_2": "Sumerbol (Ivone Franca) + GoodBom (Laura) - telefonar/WhatsApp (11) 96785-9631 antes do proximo domingo",
-   "meta_contrato": "1 coleta-teste OU contrato de volume fechado ate 14/09 (prioridade Savegnago ou rede de supermercado)",
-   "meta_fila": "fila >= 15 pendentes ao fim da semana (Prospector: 5-8/dia focando REDES DE SUPERMERCADO/ATACAREJO + cozinhas industriais; usar pagina 'fale-conosco' e e-commerce das redes para achar emails publicos)",
-   "meta_bounce": "manter taxa de bounce < 15% (validar MX SEMPRE antes de adicionar)",
-   "canal": "preferir depto comercial/ouvidoria; SAC generico so como ultimo recurso"
-  },
-  "aprendizados": [
-   "Supermercados/redes = nicho que mais converte (4 dos 7 respondidos reais: Savegnago, Sumerbol, GoodBom, Rede Boa) - redirecionar prospeccao",
-   "SAC corporativo (Oba, Arcor) responde automatico e FECHA ticket - nao e porta; canal comercial (Savegnago comercial@, Roldao comercial@, Sumerbol Ivone) responde gente",
-   "Emails publicos achados em paginas 'fale-conosco/central de atendimento' (ex.: comercial@roldao.com.br, dpo@tendaatacado.com.br) - melhor que chutar padrao",
-   "Prova social de contrato (BSBIOS x Madero) entra no discurso de redes - usar exemplo real, nao prometer",
-   "Pendencias estruturais seguem: ids duplicados 84/86/88, Netlify sem creditos (403), inbound fraco"
-  ]
- },
- "estado_2026_08_19": {
-  "leads_total": 104,
-  "leads_ativos": 81,
-  "apresentacoes_enviadas": 101,
-  "entregues_sem_bounce": 87,
-  "bounces": 17,
-  "taxa_bounce": "16%",
-  "respostas_reais": 4,
-  "taxa_resposta": "4% (meta >3%) — Boa + GoodBom (humanas) + Oba (SAC automatico) + Sanofi (SAC automatico protocolo); template V2 em monitoramento (1a leva 19/08)",
-  "lead_quente": "GoodBom Supermercados (resposta humana cortes 19/08 10:36 — proposta encaminhada ao depto responsavel, sem negativa; resposta de acompanhamento enviada) + Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br) + Oba Hortifrutigranjeiros (SAC automatico 19/08 10:16 — esclarecimento comercial enviado, seguir por ouvidoria/WhatsApp) + Sanofi Medley (SAC automatico 19/08 20:49 GMT — protocolo 02995121 encaminhado ao depto responsavel; resposta enviada 18:03 pedindo direcionamento a residuos/meio ambiente/facilities + WhatsApp) + Hile (nicho encapsulados, 1a leva template V2). OBS 16:04: ICT Farmaceutica CANCELOU tickets 1057/1058 (agente Julia Leite 15:33) — lead encerrado, REMOVIDO dos quentes.",
-  "leads_nicho_encapsulados": 25,
-  "inbound_formspree": 3,
-  "watchdog": "saudavel (19/08 19:31, exit 0)",
-  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
- },
- "melhorias_2026_08_19": {
-  "template_apresentacao_v2": "prospecao.py: de ~160 para ~131 palavras, 4 paragrafos escaneaveis, assunto direto 'Oleo usado da {empresa} vale dinheiro'. py_compile OK",
-  "fp1_renda_anual": "prospecao_followup.py: FP1 agora cita 600 L/mes = R$ 14 mil/ano. py_compile OK",
-  "deploy_netlify": "BLOQUEADO: API retorna 403 'Account credit usage exceeded'. GitHub Pages ja tem a versao nova",
-  "fila_extra_3_novas": "fila_prospeccao_extra.json: +3 empresas (Ekobe nutraceuticos Capela do Alto, Zuhan refeicoes Campinas, Lollos Sorocaba) - emails dos sites oficiais + MX validado via nslookup. JSON ok (60 entradas unicas)",
-  "alias_send_sequence": "bot_oleo.py: adicionado alias 'send_sequence' (underscore) ao argparse - resolve bug de processo registrado 6x hoje; py_compile OK + send_sequence --help exit 0"
- },
- "estado_2026_08_18": {
-  "leads_total": 89,
-  "leads_ativos": 71,
-  "apresentacoes_enviadas": 86,
-  "entregues_sem_bounce": 71,
-  "bounces": 15,
-  "taxa_bounce": "17%",
-  "respostas_reais": 1,
-  "lead_quente": "Rede Boa (ticket #23915, proposta enviada ao setor comercial produtos.novos@smboa.com.br)",
-  "leads_nicho_encapsulados": 12,
-  "inbound_formspree": 3,
-  "watchdog": "saudavel",
-  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build esgotados, versao anterior no ar)",
-  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora)"
- },
- "aprendizados": [
-  "Emails padrao contato@dominio falham ~25% das vezes - sempre buscar email real do site antes de enviar",
-  "Case Catalent (Indaiatuba/Sorocaba) e prova social forte para o nicho de encapsulados",
-  "Mercado UCO vale US$11bi e lei 2028 obriga usinas a usar oleo residual - argumento de urgencia",
-  "Netlify gratuito esgota creditos de build (300min/mes) - GitHub Pages como backup automatico",
-  "Watchdog evita follow-ups atrasados e bounces nao corrigidos",
-  "Cold email longo derruba resposta: template V1 (~160 palavras) rendeu 1% de resposta; V2 encurtado para ~131 palavras com 4 paragrafos escaneaveis (19/08) - monitorar",
-  "Renda extra calculada (600 L/mes = R$14 mil/ano) e argumento que faltava no FP1 - numeros concretos convertem em follow-up",
-  "Resposta cortes 'encaminhamos ao departamento responsavel' (GoodBom, 19/08) NAO e negativa - e porta aberta: responder agradecendo, mantendo disponibilidade e pedindo volume mantem o lead vivo sem insistir",
-  "Fila de prospeccao esgota rapido (57+ empresas em 6 dias): o melhorador continuo deve repor 2-4 empresas/dia com MX validado para o Prospector nunca ficar parado",
-  "Alias no argparse evita falha de processo: 'send_sequence' (underscore) falhava 6x/dia porque o comando era 'send-sequence' - aceitar ambos elimina o retry manual",
-  "Nem toda resposta do check-replies e lead: helpdesks (Movidesk/Zendesk/Salesforce) respondem com notificacoes automaticas de protocolo/CANCELAMENTO. Notificacao de cancelamento = sinal de desinteresse: NAO responder (reabriria o ticket), encerrar o lead e registrar (ICT Farmaceutica, 19/08 - tickets 1057/1058 cancelados pela agente)",
-  "Acuse automatico de SAC/protocolo SEM negativa (Sanofi Medley, 19/08 - protocolo 02995121 'encaminhado ao departamento responsavel') e porta aberta, nao lixo: responder leve agradecendo, mantendo a oferta e pedindo direcionamento ao setor de residuos/meio ambiente/facilities + WhatsApp mantem o lead vivo sem insistir. Distinguir de CANCELAMENTO de ticket (desinteresse). Grandes farmaceuticas respondem so via SAC - o caminho e o departamento interno, nao o atendente",
-  "Pagina de Fornecedores de redes/cooperativas publica email DIRETO do comprador por categoria (Coop Campinas: erick.araujo@coopsp.coop.br mercearia, edna.figueiredo@ frios) - o canal comercial mais direto possivel; prospector deve mirar paginas fornecedores (15/09)",
-  "MX self-hosted (mail.dominio.com.br apontando para si mesmo) = risco de bounce alto mesmo com email real no site: descartar (Croissant & Cia, Milk Menk, Rede Correia) - aceitar so MX de provedor ou cloud (15/09)",
-  "Email de RH/recrutamento publicado por planta nova nao e canal comercial (Schreiber Foods Porto Feliz) - resposta viria de RH, nao compras (15/09)"
- ],
- "estrategista_2026_08_26": {
-  "diagnostico_semana": {
-   "leads_total": 107,
-   "leads_ativos": 80,
-   "apresentacoes_enviadas": 104,
-   "bounces_leads": 19,
-   "bounces_cache": 32,
-   "taxa_bounce": "18% dos leads (cache inclui 13 historicos/alternativos)",
-   "taxa_resposta": "4,8% dos contatados (meta >3% BATIDA - tendencia: 1% no lote V1 -> 4,8% no V2)",
-   "respostas_humanas": "2 (Rede Boa + GoodBom) | SAC automaticas: 3 (Arcor/Bagley, Oba, Sanofi)",
-   "inbound_formspree": "0 novos na semana (3 acumulados, todos de teste) - SITE NAO GERA LEAD",
-   "watchdog": "saudavel (exit 0) - backlog de 154 follow-ups do gap 19-26/08 limpo no tick 09:40",
-   "fila_prospeccao": "7 pendentes (5 hoteis + Frango Assado + Sao Vicente, MX validado pelo Melhorador 26/08 10:25) - nao esta zerada, mas exige reposicao continua",
-   "ponto_mais_fraco": "FECHAMENTO: 5 leads quentes em aberto ha dias/semanas e NENHUM contrato ou coleta-teste; conversao depende de acao humana (telefone/WhatsApp/LinkedIn) que nao aconteceu"
-  },
-  "mudancas_aplicadas": {
-   "fp2_reforcado_fechamento": "prospecao_followup.py FP2: adicionados Portaria MME/MMA 3/2026 (1% OGR jan/2028) + PNRS/CNPJ + contrato de coleta com volume minimo + relatorio ESG mensal + pagamento a vista (PIX) na coleta + CTA coleta-teste. py_compile OK, render 189 palavras",
-   "persona_playbook_fechamento": "persona.md: nova secao 'Playbook de Fechamento' - roteiro do Atendente para converter lead quente em coleta/contrato (pedir volume, coleta-teste, WhatsApp, argumentos legais/ESG/anti-furto, cronograma 24h-3d, contrato para >500L/mes)",
-   "fila_nao_alterada": "NAO adicionei empresas a fila_prospeccao_extra.json - sem email novo confirmado em site oficial (regra da equipe); 7 pendentes validos ja existem. Prospector deve repor com MX validado"
-  },
-  "metas_semana_26_08_a_01_09_foco_fechamento": [
-   "FECHAR >=1 contrato/coleta-teste: acao humana OBRIGATORIA nos 5 quentes - telefonar GoodBom (19) 3828-9798, Arcor/Bagley (compras/facilities/qualidade), Rede Boa (#23915), Sanofi (departamento interno de residuos/facilities), Hile",
-   "Atendente: usar o Playbook de Fechamento em TODA resposta de lead quente; nao parar em 'encaminhei ao departamento' - pedir volume + propor coleta-teste",
-   "Manter taxa de resposta >=4% e subir para >=5% com V2 + FP2 novo (monitorar respostas da leva 26/08)",
-   "Fila: Prospector repor 5-8 empresas/dia (ou 2 rodadas 09:00+15:00) com MX validado; alvo >=10 pendentes no fim da semana",
-   "Bounce: manter <15% (validador MX ja ativo no enviar_lote); nao marcar lead como bounce quando so o email ALTERNATIVO falhou (13 orfaos do cache)",
-   "Inbound: 1 lead real via site na semana - destravar Netlify (creditos) ou HTTPS do GitHub Pages p/ masteroleo.eco.br e cadastrar no Google Search Console",
-   "Novos segmentos em curso: hoteis (5), rotisserie (Frango Assado), supermercados (Sao Vicente), refeicoes coletivas - monitorar resposta"
-  ],
-  "aprendizados_novos": [
-   "Portaria MME/MMA 3/2026 CONFIRMADA (biodieselbr 13/05/2026, eixos, trenchrossi, megawhat): 1% OGR obrigatorio no biodiesel/SAF/diesel verde a partir de jan/2028 - argumento de urgencia legitimo, usar em FP2/FP3 e propostas",
-   "Concorrentes pagam via PIX imediato na coleta (ex.: BiOeste 'pagamento imediato via PIX') - pagamento a vista vira diferencial de fechamento; adicionado ao FP2 e ao playbook",
-   "Obrigacao legal de destincao (bomgourmet: 'por lei, estabelecimentos sao obrigados a destinar corretamente contratando empresa de reciclagem') - reforca o angulo PNRS/CNPJ",
-   "Backlog de follow-ups acumula quando o cron fica dias sem rodar (154 atrasados em 26/08) - manter cadencia diaria do Atendente; o catch-up funciona mas entrega FP2/FP3 no mesmo dia de um FP1",
-   "Fila vive zerada porque Atendente consome de manha e Prospector repoe pouco - reposicao de 5-8/dia ou 2 rodadas resolve (gargalo nº1 de crescimento)"
-  ],
-  "para_equipe": [
-   "ATENDENTE: aplicar Playbook de Fechamento (persona.md) em toda resposta; nao responder auto-respostas de SAC de ticket FECHADO (Oba) - marcar visto",
-   "PROSPECTOR: repor 5-8 empresas/dia com MX valido; priorizar hoteis/restaurantes/refeicoes coletivas/rotisserie (alto volume de fritura, base pouco explorada)",
-   "ANALISTA: monitorar resposta dos 7 novos (hoteis) + efeito do FP2 novo; nao marcar lead bounce por email alternativo falho",
-   "HUMANO: telefonar GoodBom (19) 3828-9798, Arcor/Bagley, Rede Boa (#23915) - email ja fez a parte dele"
-  ]
- },
- "tick_melhorador_26_08_14_15": {
-  "diagnostico": "Sistema saudavel (watchdog exit 0, 114 leads, 86 ativos, 32 bounces cache; dashboard 5,4% resposta/6 respostas - acima da meta 3%). Fila de prospeccao ativa em 0 pendentes (Atendente consumiu; Prospector 09:00 nao repoe o suficiente) - gargalo recorrente de crescimento. FECHAMENTO: Sumerbol (lead #1) deu contatos diretos (ivone.franca@sumerbol.com.br) via SAC 26/08 13:21 GMT, mas o ciclo de respostas do Atendente nao emite email proativo ao contato direto - fechamento dependia de acao nao automatizada.",
-  "melhoria_fechamento_sumerbol": "1 email pontual de FECHAMENTO enviado (14:10) para ivone.franca@sumerbol.com.br (contato direto fornecido pelo SAC da propria Sumerbol): referencia o encaminhamento da proposta, reforca valor R$ 1,00-2,50/L + certificado PNRS + pagamento a vista (PIX) na coleta, oferece coleta-teste sem compromisso, pede volume mensal (litros/kg) e indica WhatsApp (11) 96785-9631. Message-ID <178776400471.3432.17605087092737523952@Juquinha>. Nao e massa (1 email, lead mais quente); Atendente nao reenviara (lead ja respondido, replies_pending vazio).",
-  "melhoria_fila": "fila_prospeccao_extra.json reposta 67 -> 70 com 3 empresas NOVAS reais (email de fonte oficial + MX valido via nslookup): Savegnago Supermercados (atendimento@savegnago.com.br, rede do interior paulista - padaria/rotisserie/fritura), GRSA/Grupo GR (contato@grsa.com.br, refeicoes coletivas 1M+ refeicoes/dia - cozinha industrial), Premium Hotel Campinas (contato@hotelpremiumcampinas.com.br, hotel com restaurante). Verificado: enviar_lote --status mostra 3 pendentes com MX valido - Atendente enviara a apresentacao no proximo tick. Obs: Covabra (sac@covabra.com.br, lojas em Indaiatuba/Jundiai/Sumare/Vinhedo) ja estava na base - Prospector acertou, nao duplicado.",
-  "para_estrategista": [
-   "Sumerbol: email direto enviado a Ivone - proximo passo e telefonar/WhatsApp (11) 96785-9631 para o mesmo contato em 2-3 dias se sem retorno (acao humana de fechamento)",
-   "Fila segue com poucos pendentes: cadencia do Prospector (09:00) repoe pouco vs. consumo do Atendente (30/30min) - 2 rodadas/dia segue valendo",
-   "Netlify sem creditos (403) - versao nova da calculadora so no GitHub Pages; priorizar DNS/creditos para destravar inbound"
-  ]
- },
- "estado_2026_09_07_09_40": {
-  "leads_total": 117,
-  "leads_ativos": 89,
-  "apresentacoes_enviadas": 117,
-  "entregues_sem_bounce": 78,
-  "bounces": 32,
-  "taxa_bounce": "23% (cache de bounces acumulado — 32 enderecos; maioria dominios sem MX)",
-  "respostas_reais": 7,
-  "taxa_resposta": "~6,5% de leads contatados",
-  "lead_quente": "Sumerbol Supermercados (resposta 26/08 13:21 GMT — SAC encaminhou ao setor responsavel, contatos diretos manutencao@sumerbol.com.br e ivone.franca@sumerbol.com.br; resposta IA 11:05 + email de fechamento do Melhorador 14:10. PRAZO DE RETORNO VENCIDO — acionar Ivone via WhatsApp (11) 96785-9631). 13 leads completaram sequencia FP2+FP3 em 07/09 sem resposta (Savegnago, GRSA, Sao Vicente, Royal Palm, Vitoria Hotel, Nacional Inn, Dan Inn, Blue Tree, Premium Hotel, Frango Assado, Ekobe, Zuhan, Lollos). Continuam em aberto: GoodBom, Rede Boa, Sanofi, Hile, Arcor/Bagley.",
-  "leads_nicho_encapsulados": 25,
-  "inbound_formspree": 3,
-  "watchdog": "saudavel (07/09 09:40, exit 0 apos correcao de 13 follow-ups atrasados — 117 leads, 89 ativos, 32 bounces; nenhum atrasado/bounce sem correcao/lead parado)",
-  "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403 em novo deploy; versao ANTIGA sem calculadora no ar)",
-  "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
- },
- "tick_prospector_07_09_10_52": {
-  "diagnostico": "enviar_lote --status: 105 empresas — 94 contatados, 24 bounces, 0 pendentes (< 10, acionou PASSO 2)",
-  "buscas_web": 4,
-  "buscas_executadas": [
-   "fabrica margarina Campinas contato email (achados: Crista Margarina/Indaiatuba — JA NA BASE + contatado; Pregiata/Itapolis — fora do raio; Agro Foods/Orlandia-Pirapozinho — fora do raio)",
-   "laticinios Jundiai fale conosco email (achados: KiSabor/Jundiai — JA NA BASE + contatado; Quata Alimentos — email LGPD e fabrica fora do raio; Carolina/PR, Tirolez/MG, Itambe/BH — fora do raio)",
-   "industria maionese Sorocaba contato (achados: Italfood/PR — fora do raio e sem email publico; Venturim — sem site/email)",
-   "industria farmaceutica encapsulados Indaiatuba contato (achados: Catalent — cliente real; Cellera — ja contatado; MP Pharma/Pharmapele — manipulacao, nao industria; IFBrasil/PB — fora do raio)"
-  ],
-  "verificacoes_extra": "web_extract em ~20 sites (Catupiry, Hikari, Max Atacadista, Itambe, Galena, Greenpharma, Jussara, Predilecta, Latvida, Frisabor, Casa Suica, Pague Menos, Pastorinho, Casa Mathias, Amigao, Serve Bem, Scala, Quata, Tirolez, Carolina, Italfood, Pregiata, Agro Foods): nenhum email publico novo valido dentro do raio (maioria so formulario, site fora do ar, ou empresa fora da regiao)",
-  "empresas_novas_adicionadas": 0,
-  "emails_enviados": 0,
-  "falhas": "nenhuma (script: 'Nenhum email pendente. Use --status para ver a fila.')",
-  "destaques_gorduras_laticinios": "Crista Margarina (Indaiatuba) e KiSabor/Food Brands (Jundiai, maioneses) confirmados como candidatos ideais de vencidos >40% + descaracterizacao, porem JA contatados (leads id 20 e 27 em leads.csv) — nao duplicados",
-  "destaques_encapsulados": "nenhum novo — Catalent (Indaiatuba/Sorocaba) ja e cliente real; Cellera Farma e Sorocaps ja contatados",
-  "nota": "Rodada sem reposicao: todas as 4 buscas (limite anti-loop) consumidas; os 2 unicos alvos de alto valor na regiao (Crista, KiSabor) ja constavam na base e foram contatados. Fila permanece 0 pendentes. RECOMENDACAO p/ proximas rodadas: (1) usar cidades ainda nao exploradas da lista foco (Porto Feliz, Cabreuva, Louveira, Votorantim, Boituva, Tatui) com termos de gorduras/laticinios; (2) explorar frigorificos/gordura animal da regiao; (3) capturar emails de paginas 'fale-conosco' de industrias locais via outros mecanismos alem de busca generica (ex.: diretorios setoriais ABIA/SINDALIMENTOS)."
- },
- "tick_prospector_08_09_10_30": {
-  "diagnostico": "enviar_lote --status: 115 empresas — 104 contatados, 27 bounces, 0 pendentes (< 10, acionou PASSO 2)",
-  "buscas_web": 4,
-  "buscas_executadas": [
-   "fabrica margarina Campinas SP contato email fale conosco (achados: Qualy/Bunge — so formulario, sem email publico; Mars, P&G, Sadia — fora do escopo/formulario; Sapore — JA NA BASE)",
-   "laticinios Sorocaba SP industria queijos manteiga email contato (achados: Carmolac — fabrica MG, fora do raio; Gvinah manteiga — SP capital; Laticinios Manchester/Sorocaba — so Instagram, sem site acessivel; Sorocaba Frios — EMAIL PUBLICO contato@sorocabafrios.com.br VALIDADO MX Google)",
-   "fabrica maionese molhos industria Jundiai SP email contato (achados: KiSabor — JA CONTATADO; MasterSense — JA CONTATADO; Lanchero Alimentos/Marilia — sac@lanchero.com.br VALIDADO MX Supramail, industria de maioneses = NICHO PRIORITARIO)",
-   "industria gordura vegetal creme vegetal Itu Indaiatuba SP email contato (achados: Crista Margarina/Indaiatuba — JA CONTATADO; Apical — trading SP capital; Vila Nova — palma Norte; Megasabor/Indaiatuba — contato@megasabor.com.br VALIDADO MX proprio, ingredientes/emulsificantes)"
-  ],
-  "verificacoes_extra": "web_extract em sorocabafrios.com.br (email confirmado no rodape), grupolanchero.com.br/contato (SAC sac@lanchero.com.br oficial), megasabor.com.br/contato (email + razao social Mega Ingredientes Alimenticios Ltda); nslookup MX: sorocabafrios.com.br -> smtp.google.com OK; megasabor.com.br -> mail.megasabor.com.br OK; lanchero.com.br -> mia1-load.supramail.com.br OK. Manchester Laticinios (Sorocaba) sem site/email publico — descartado.",
-  "empresas_novas_adicionadas": 3,
-  "adicionadas": [
-   {
-    "nome": "Sorocaba Frios",
-    "email": "contato@sorocabafrios.com.br",
-    "mx": "valido (smtp.google.com)",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de frios e laticinios (queijos, cremes alto teor de gordura)"
-   },
-   {
-    "nome": "Megasabor (Mega Ingredientes)",
-    "email": "contato@megasabor.com.br",
-    "mx": "valido (mail.megasabor.com.br)",
-    "cidade": "Indaiatuba/SP",
-    "segmento": "industria de ingredientes alimenticios (emulsificantes, confeitaria, sorvetes)"
-   },
-   {
-    "nome": "Lanchero Alimentos",
-    "email": "sac@lanchero.com.br",
-    "mx": "valido (mia1-load.supramail.com.br)",
-    "cidade": "Marilia/SP",
-    "segmento": "industria de maioneses, catchups e molhos - NICHO PRIORITARIO (vencidos >40% gordura)"
-   }
-  ],
-  "emails_enviados": 3,
-  "falhas": "nenhuma (3/3 enviados; 3 registrados no leads.csv com lock)",
-  "destaques_gorduras_laticinios": "LANCHERO ALIMENTOS (Marilia) — industria de maioneses/molhos (marcas Lanchero, D'mais, Bona): candidato ideal de vencidos >40% + descaracterizacao; recebe discurso automatico do segmento. SOROCABA FRIOS (Sorocaba) — distribuidora de laticinios/frios com foco em derivados de alto teor de gordura, raio de coleta direto",
-  "destaques_encapsulados": "nenhum novo nesta rodada (buscas esgotadas no nicho gorduras; encapsulados ja bem cobertos: Catalent cliente real, Cellera/Sorocaps/Hile/WBM/Ekobe contatados)",
-  "nota": "Rodada produtiva: fila saiu de 0 para 3 pendentes e os 3 foram enviados no mesmo tick (3/3 OK, sem bounce imediato). Fila agora 118 empresas: 107 contatados, 27 bounces, 0 pendentes — volta a precisar de reposicao na proxima rodada. Recomendacao: explorar Porto Feliz/Cabreuva/Louveira/Votorantim com termos de gorduras/laticinios, e frigorificos de gordura animal da regiao."
- },
- "estrategista_2026_09_13_08_00": {
-  "diagnostico_semana": {
-   "leads_total": 186,
-   "leads_ativos": 157,
-   "respondidos": 16,
-   "respostas_reais": 14,
-   "taxa_resposta": "8,8% das apresentações entregues (meta >3%) — ACIMA da meta pelo 2º mês consecutivo",
-   "bounces_csv": "26 (após correção do id 142 Rede Top -> encerrado; cache: 44)",
-   "fila_prospeccao": "146 empresas / 135 contatados / 29 bounce / 0 PENDENTES — gargalo nº1 mantido",
-   "inbound_formspree": "0 novos na semana (3 acumulados históricos) — site não gera lead; Netlify sem créditos (403), só GitHub Pages no ar",
-   "gargalo_1": "FECHAMENTO: 14 respostas reais e ZERO contratos/coletas-teste confirmados em 2 meses — o funil converte em conversa, não em receita. Ação humana é o elo que falta (toques WhatsApp vencidos há 3+ dias: Savegnago, Grupo IMC, Selmi; Queijos Itupeva aguardando coleta-teste)",
-   "gargalo_2": "FILA ZERADA (0 pendentes) — Prospector repõe 2-4/dia vs. consumo de 3-5/dia; pipeline de novos contatos parado desde 12/09 14:31",
-   "gargalo_3": "Inbound zerado — site sem prova social suficiente + Netlify travado"
-  },
-  "pesquisa_mercado_13_09": [
-   "ESCASSEZ GLOBAL DE UCO (NOVO, fonte APROBIO/Exame): Brasil passou a poder EXPORTAR óleo de cozinha usado para os EUA (CSIV aceito por MAPA/MRE); EUA importaram 1,4 mi t de UCO em 2023 (~US$ 1,66 bi); Europa consome 130 mil barris/dia de UCO = 8x o que coleta; T&E: metas globais de SAF até 2030 exigirão o DOBRO do UCO coletável nos EUA+Europa+China juntos — 'o mundo está disputando óleo usado'",
-   "Mercado Mordor Intelligence: UCO global US$ 7,28 bi (2025) -> US$ 7,68 bi (2026) — consistente com o US$ 8 bi/Fortune usado nos templates (mantido)",
-   "Cotação SP UCO ~R$ 4.825/t cif (Argus via biodieselbr) — contexto de margem mantido; faixa ao gerador R$ 1,00-2,50/L segue referência",
-   "Ofertas de R$ 3,50/L vistas em anúncios de coletores (Instagram) — confirma alerta do estudo: acima de R$ 2,50 é sinal de coletor irregular/leilão; usar como argumento de credibilidade",
-   "Indama (coletora nacional) padroniza descarte para redes multi-estado com coleta programada — coleta programada é padrão de mercado, não diferencial isolado"
-  ],
-  "melhorias_aplicadas": [
-   "BUG CORRIGIDO (sync_formspree.py): leads com status 'encerrado' ou 'respondido' NÃO são mais rebaixados a 'bounce' pelo sync de bounces (antes: Rede Top id 142 voltava a bounce a cada tick, inflando os bounces do CSV — causa-raiz identificada pelo Analista 12/09). Testado: py_compile OK. Lead id 142 corrigido manualmente para 'encerrado' (bounce CSV: 27 -> 26)",
-   "persona.md: novo argumento 'ESCASSEZ GLOBAL DE UCO' (exportação EUA/CSIV + 1,4 mi t importadas em 2023 + T&E dobrar demanda até 2030) — Atendente passa a usar em respostas de leads quentes para acelerar fechamento",
-   "FP2 (prospecao_followup.py): item (1) de urgência reforçado com o fato da exportação para EUA — 'o mundo está disputando essa matéria-prima' + Portaria 3/2026. Render OK (1587 chars), py_compile OK"
-  ],
-  "metas_semana_14_20_09_foco_fechamento": {
-   "meta_contrato": "1 coleta-teste CONFIRMADA OU 1 contrato de volume fechado até 20/09 — caminho: Queijos Itupeva (negociação ativa, Rafael aguardando — chamar WhatsApp (11) 940333759 e agendar coleta-teste de Frescal 200 kg/mês) + Savegnago (toque WhatsApp (11) 96785-9631 URGENTE, prazo 10/09 vencido) + Grupo IMC/Frango Assado (mesmo número) + Selmi (compras@selmi.com.br, toque leve)",
-   "acao_humana_1": "Savegnago: toque WhatsApp (11) 96785-9631 citando a apresentação enviada ao comercial@ — se não responder, telefonar matriz (16) 3946-2088",
-   "acao_humana_2": "Queijos Itupeva: fechar coleta-teste (referência R$0,50-1,50/kg; descaracterização cortesia) — lead nº1 de fechamento rápido",
-   "acao_humana_3": "Sumerbol (Ivone), GoodBom (Laura), Rede Boa (#23915), Arcor/Bagley, Sanofi: 1 rodada de toque leve (WhatsApp ou email direto) nos que ainda estiverem em aberto",
-   "meta_fila": "fila >= 10 pendentes ao fim da semana — Prospector repor 5-8/dia (2 horários: 09:00 + 15:00) com MX validado; prioridade: supermercados/atacarejo com email de compras/fale-conosco, frigoríficos/gordura animal (recomendação recorrente) e cozinhas industriais da região de Salto",
-   "meta_resposta": "manter taxa de resposta >= 8% com o FP2 novo (argumento de exportação/escassez) e monitorar respostas dos 5 hotéis/resorts V6 (prazo ~17-22/09) e dos FP1 de supermercados (Dalben, Paulistão, Amigão, Enxuto, Tauste, Chimar)",
-   "meta_bounce": "manter < 15% (validar MX sempre antes de adicionar à fila)",
-   "nicho_prioritario": "SUPERMERCADOS/REDES/ATACAREJO (nicho que mais converte: 4+ dos 14 respondidos) + vencidos >40% gordura (Queijos Itupeva em negociação) + hotéis/resorts (V6 no ar)",
-   "decisao_paulistao": "Paulistão Atacadista (id 149) JÁ ENVIADO (ap 07/09 + FP1 10/09) antes da resposta do Savegnago comercial — decisão da semana passada resolvida; se Paulistão responder, tratar como lead do Grupo Savegnago em conjunto (mesma negociação de rede)",
-   "pendencia_estrutural": "Netlify sem créditos (403) — destravar créditos ou apontar DNS do masteroleo.eco.br para GitHub Pages; site é o canal inbound que segue zerado"
-  },
-  "aprendizados": [
-   "O funil NÃO é o problema: 8,8% de resposta (14 reais) com 0 fechamentos prova que a conversão final depende de AÇÃO HUMANA (telefone/WhatsApp), não de mais emails — prioridade máxima da semana",
-   "Escassez global de UCO (exportação EUA + T&E) é argumento de urgência NOVO e verificável — mais forte que a Portaria 3/2026 para quem quer 'garantir matéria-prima'",
-   "Bug de sync que rebaixava 'encerrado'/'respondido' para 'bounce' distorcia as métricas (Rede Top recidiva) — status terminais devem ser sagrados",
-   "Ofertas de R$ 3,50/L de coletores seguem ativas no mercado (Instagram) — reforçar nas respostas o contraste 'preço justo + operação regular'",
-   "Dom Olivio (Campinas) avaliado e DESCARTADO: só formulário/SAC digital, sem email público — manter regra de email público + MX válido"
-  ],
-  "para_equipe": [
-   "ATENDENTE: usar o argumento de escassez global (exportação EUA) em respostas de leads quentes; aplicar Playbook de Fechamento em TODA resposta — pedir volume + propor coleta-teste; não deixar resposta de lead 'quente' sem próximo passo agendado",
-   "PROSPECTOR: repor 5-8/dia com MX validado (2 horários se possível); priorizar supermercados com email de compras/fale-conosco, frigoríficos e cozinhas industriais; validar duplicatas em leads.csv + EMPRESAS + fila antes de adicionar",
-   "ANALISTA: conferir no próximo tick que o id 142 (Rede Top) permanece 'encerrado' (fix do sync deve segurar); monitorar respostas dos hotéis V6 e dos FP1 de supermercados; registrar se o FP2 novo (exportação EUA) aumenta resposta de leads em sequência",
-   "HUMANO: ações de fechamento da semana — WhatsApp Savegnago/Grupo IMC (vencido 10/09), Selmi (vencido 11/09), Queijos Itupeva (agendar coleta-teste), Sumerbol/GoodBom/Rede Boa (toque leve)"
-  ]
- },
- "tick_prospector_16_09_09_00": {
-  "diagnostico": "enviar_lote --status: 181 empresas — 170 contatados, 33 bounces, 0 pendentes (< 10, acionou PASSO 2)",
-  "buscas_web": 4,
-  "buscas_executadas": [
-   "fabrica margarina OR industria manteiga interior SP email contato site oficial (achados: BRF IR, Interfood, Arla — fora do raio ou sem email util)",
-   "laticinios Tiete OR Porto Feliz OR Cerquilho OR Capivari SP fabrica queijos manteiga contato email (achados: MILK MENK/Porto Feliz — EMAIL PUBLICO contato@milkmenk.com.br; Laticinios Pereira/PR e Larisol/RJ — fora do raio)",
-   "laticinios Itu OR Salto OR Indaiatuba OR Cabreuva OR Itupeva SP queijos manteiga fabrica site contato (achados: Queijos Itupeva e Laghi & Tosi — JA NA BASE; Duluiz — so Instagram, sem email publico)",
-   "fabrica maionese molhos gorduras vegetais SP email contato (achados: nenhum email publico util dentro do raio — artigos tecnicos e chamadas publicas)"
-  ],
-  "verificacoes_extra": "web_extract em milkmenk.com.br/ e /contato/ (email contato@milkmenk.com.br confirmado no rodape oficial + pagina de contato com endereco Fazenda Santo Antonio, Porto Feliz); nslookup MX milkmenk.com.br -> mail.milkmenk.com.br OK",
-  "empresas_novas_adicionadas": 1,
-  "adicionadas": [
-   {
-    "nome": "Milk Menk",
-    "email": "contato@milkmenk.com.br",
-    "mx": "valido (mail.milkmenk.com.br)",
-    "cidade": "Porto Feliz/SP",
-    "segmento": "laticinios artesanal (queijos, iogurte, doce de leite) - NICHO PRIORITARIO (vencidos >40% gordura)"
-   }
-  ],
-  "emails_enviados": 1,
-  "falhas": "nenhuma (1/1 enviados; 1 registrado no leads.csv com lock)",
-  "destaques_gorduras_laticinios": "MILK MENK (Porto Feliz/SP) — laticinios artesanais de fazenda (queijos, iogurte, doce de leite; 33+ anos, 90% da fazenda sustentavel): candidato de vencidos >40% + descaracterizacao, raio ~40km de Salto; recebe discurso automatico do segmento",
-  "destaques_encapsulados": "nenhum novo nesta rodada (buscas esgotadas em gorduras/laticinios; encapsulados ja bem cobertos: Catalent cliente real, Cellera/Sorocaps/Hile/WBM/Ekobe/Grow contatados)",
-  "nota": "Rodada de reposicao minima: 4 buscas (limite anti-loop) consumidas; unico alvo novo util foi Milk Menk (Porto Feliz) — adicionado e enviado no mesmo tick. Fila 182/171/33/0 — volta a precisar de reposicao. RECOMENDACAO p/ proximas rodadas: (1) Porto Feliz/Tiete/Capivari ainda pouco explorados com termos de gorduras/laticinios (Milk Menk veio dai); (2) explorar frigorificos/gordura animal (Boituva/Tatui); (3) diretorios setoriais ABIA/SINDALIMENTOS para emails de fale-conosco."
- },
- "melhorador_2026_09_18_11_07": {
-  "diagnostico": "Watchdog exit 0 (30o tick verde, SMTP OK/IMAP OK, sem FP atrasados). Dashboard: 202 apresentacoes / 173 entregues / 29 bounces (14%) / 16 respostas / taxa 7,9% (meta >3%) - acima da meta. Ponto MAIS FRACO: fila de prospeccao ZERADA (187/176/33/0) - gargalo n1 recorrente, nenhuma reposicao desde 3 hospitais de 17/09.",
-  "melhorias_aplicadas": [
-   "FILA +2: UNISO - Universidade de Sorocaba (ouvidoria@uniso.br, MX Outlook 365, restaurante escola proprio 400+ refeicoes/dia = NICH0 NOVO universidades, fit ESG) e Sapore S.A. REENGAGE canal de compras (suprimentos@sapore.com.br, MX Outlook, rede nacional 1,3M refeicoes/dia; ja contatado 13-26/08 via contato@ = triagem, sem resposta; canal compras = quem decide compra, licao Coop/HSV)",
-   "Validacao: enviar_lote.py --status -> pendentes 2 = exatamente as novas; render tpl_apresentacao -> branch generico fritura (assunto 'vale dinheiro'), SEM R$/pagamos/1,00-2,50 (regra de ouro), ~140 palavras",
-   "Descartados no tick: Na Fazenda Restaurante (Salto, contato@nafazenda.com.br - MX self-hosted mail.nafazenda.com.br porta 25 timeout = regra Rede Correia), Boa Vista Refeicoes (sem MX), Take Foods (CEP 04269 SP capital = fora do raio), Meqso (sem email publico; ja na fila via contato@meqso.com.br), Kemisk (Cotia, borda), Horus Oil (sem cidade regional), Croissant&Cia (descartado 15/09 MX self), Grupo Farina (Atibaia, borda + panificacao pouco oleo); Avec Campinas e Sapore (contato@) ja na base - dedup 4 fontes pegou"
-  ],
-  "para_estrategista": "Ritmo do Prospector segue insuficiente (fila zera em <1 dia; reposicoes de 2-3). Sugerir Prospector repor 5-8/dia ou 2 horarios. Sapore: acompanhar resposta do suprimentos@ (lead grande). UNISO: nicho universidades = restaurante escola proprio, replicar para outras (PUC-Campinas ja via hospital). Firecrawl search instavel (502 billing) limitou buscas deste tick."
- },
- "atendente_ia_2026_09_18_11_09": {
-  "tick": "2026-09-18 11:09",
-  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas; 49 bounces no cache. corrigir_emails.py OK — 0 bounces novos processados.",
-  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 31º tick verde consecutivo. Nenhum follow-up atrasado.",
-  "passo_2_sequencia": "0 follow-ups processados; send_sequence OK (Sequência processada, 0 envios novos); check-replies: 0 respostas pendentes (replies_pending.json = []).",
-  "pipeline": {
-   "leads_total": 235,
-   "leads_ativos": 160,
-   "novo": 146,
-   "sequencia": 14,
-   "respondido": 18,
-   "bounce": 31,
-   "encerrado": 26,
-   "bounces_cache": 49,
-   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
-  },
-  "dashboard": {
-   "apresentacoes": 200,
-   "entregues_est": 171,
-   "bounces_pct": "14%",
-   "respostas": 16,
-   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês)",
-   "watchdog_verde_consecutivo": 31
-  },
-  "caixa_entrada_auditoria": "0 mensagens novas desde tick 10:31 (scan_inbox: OK). Nenhum pedido de relatorio ESG/certificado — nenhum PDF gerado.",
-  "observacoes": "Sem leads quentes novos neste tick. Dalben (tick 10:31) segue como lead quente n1 — Luis luish@supermercadosdalben.com.br aguardando retorno. Fila: 2 pendentes (UNISO, Sapore). 22 leads sem id no CSV. Netlify 403. Toques WhatsApp pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva, Coop, hospitais."
- },
- "atendente_ia_2026_09_18_11_31": {
-  "tick": "2026-09-18 11:31",
-  "passo_0_sync": "sync_formspree.py OK - 0 notificacoes Formspree novas; 49 bounces no cache. corrigir_emails.py OK - 0 bounces novos processados (ja tentados anteriormente).",
-  "passo_1_watchdog": "exit 0 - SMTP OK - IMAP OK. 32o tick verde consecutivo. Nenhum follow-up atrasado, bounces corrigidos ou leads parados.",
-  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados. send_sequence: 4 boas-vindas enviadas (sac@bembrasil.ind.br, megachips@megachips.com.br, sac@crac.com.br, contato@praticlevealimentos.com.br). check-replies: 0 respostas pendentes (replies_pending.json = []). scan_inbox: 0 mensagens nao lidas na caixa.",
-  "pipeline": {
-   "leads_total": 239,
-   "leads_ativos": 182,
-   "novo": 146,
-   "sequencia": 0,
-   "respondido": 18,
-   "bounce": 31,
-   "encerrado": 26,
-   "bounces_cache": 49,
-   "fila_prospeccao": "189 empresas - 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
-  },
-  "dashboard": {
-   "apresentacoes": 204,
-   "entregues_est": 175,
-   "bounces_pct": "14%",
-   "respostas": 18,
-   "taxa_resposta": "~8% (meta >3% - acima pelo 2o mes consecutivo)",
-   "watchdog_verde_consecutivo": 32
-  },
-  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatorio ESG/certificado - nenhum PDF gerado.",
-  "observacoes": "Tick rotineiro sem leads quentes novos. Dalben (respondido 18/09 10:23) segue como lead quente n1 - Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes. Nenhuma resposta para atender no replies_pending. Proxima acao humana necessaria: toques WhatsApp nos leads vencidos (Savegnago, Grupo IMC, Selmi, Queijos Itupeva) seguem como pendencia."
- },
- "atendente_ia_2026_09_18_12_01": {
-  "tick": "2026-09-18 12:01",
-  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas; 49 bounces no cache. corrigir_emails.py OK — 0 bounces novos processados (já tentados).",
-  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 33º tick verde consecutivo. Nenhum follow-up atrasado.",
-  "passo_2_sequencia": "0 follow-ups processados; send_sequence OK (Sequência processada, 0 envios novos); check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG.",
-  "pipeline": {
-   "leads_total": 239,
-   "leads_ativos": 164,
-   "novo": 146,
-   "sequencia": 0,
-   "respondido": 18,
-   "bounce": 31,
-   "encerrado": 26,
-   "bounces_cache": 49,
-   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
-  },
-  "dashboard": {
-   "apresentacoes": 204,
-   "entregues_est": 175,
-   "bounces_pct": "14%",
-   "respostas": 18,
-   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
-   "watchdog_verde_consecutivo": 33
-  },
-  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
-  "observacoes": "Tick rotineiro. Sem leads quentes novos neste tick. Dalben (respondido 18/09 10:23) segue como lead quente n1 — Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes (UNISO, Sapore). Toques WhatsApp humanos pendentes: Savegnago (vencido 10/09), Grupo IMC (10/09), Selmi (11/09), Queijos Itupeva (coleta-teste). Netlify 403."
- },
- "atendente_ia_2026_09_18_12_31": {
-  "tick": "2026-09-18 12:31",
-  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas; 49 bounces no cache. corrigir_emails.py OK — 0 bounces novos processados.",
-  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 34º tick verde consecutivo. Nenhum follow-up atrasado.",
-  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados; send_sequence OK (Sequência processada, 0 envios novos); check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG.",
-  "pipeline": {
-   "leads_total": 239,
-   "leads_ativos": 182,
-   "novo": 146,
-   "sequencia": 0,
-   "respondido": 18,
-   "bounce": 31,
-   "encerrado": 26,
-   "bounces_cache": 49,
-   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
-  },
-  "dashboard": {
-   "apresentacoes": 204,
-   "entregues_est": 175,
-   "bounces_pct": "14%",
-   "respostas": 18,
-   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
-   "watchdog_verde_consecutivo": 34
-  },
-  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
-  "observacoes": "Tick rotineiro sem leads quentes novos. Dalben (respondido 18/09 10:23) segue como lead quente nº1 — Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes (UNISO, Sapore). Toques WhatsApp humanos pendentes: Savegnago (vencido 10/09), Grupo IMC (10/09), Selmi (11/09), Queijos Itupeva (coleta-teste). Netlify 403."
- },
- "atendente_ia_2026_09_18_13_32": {
-  "tick": "2026-09-18 13:32",
-  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas (49 bounces no cache). corrigir_emails.py OK — 0 bounces novos processados (já tentados).",
-  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 35º tick verde CONSECUTIVO. Nenhum follow-up atrasado.",
-  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados. send_sequence OK (Sequência processada, 0 envios novos). check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
-  "pipeline": {
-   "leads_total": 239,
-   "leads_ativos": 164,
-   "novo": 146,
-   "sequencia": 0,
-   "respondido": 18,
-   "bounce": 31,
-   "encerrado": 26,
-   "bounces_cache": 49,
-   "fila_prospeccao": "189 empresas — 176 contatados, 33 bounce, 2 PENDENTES (UNISO ouvidoria@uniso.br + Sapore suprimentos@sapore.com.br)"
-  },
-  "dashboard": {
-   "apresentacoes": 204,
-   "entregues_est": 175,
-   "bounces_pct": "14%",
-   "respostas": 18,
-   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
-   "watchdog_verde_consecutivo": 35
-  },
-  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
-  "observacoes": "Tick rotineiro sem leads quentes novos. Dalben (respondido 18/09) segue como lead quente nº1 — Luis do Supermercados Dalben aguardando retorno. Fila com 2 pendentes (UNISO ouvidoria@uniso.br, Sapore suprimentos@sapore.com.br). Toques WhatsApp humanos pendentes: Savegnago (vencido 10/09), Grupo IMC (10/09), Selmi (11/09), Queijos Itupeva (coleta-teste). Netlify 403."
- },
- "atendente_ia_2026_09_18_14_01": {
-  "tick": "2026-09-18 14:01",
-  "passo_0_sync": "sync_formspree.py OK — 0 notificações Formspree novas (49 bounces no cache). corrigir_emails.py OK — 0 bounces novos processados (já tentados).",
-  "passo_1_watchdog": "exit 0 — SMTP OK · IMAP OK. 36º tick verde CONSECUTIVO. Nenhum follow-up atrasado.",
-  "passo_2_sequencia": "prospecao_followup.py: 0 follow-ups processados. send_sequence OK (Sequência processada, sem novos leads com status 'novo'). check-replies: 0 respostas pendentes (replies_pending.json = []). Nenhum pedido de relatório ESG/certificado.",
-  "pipeline": {
-   "leads_total": 239,
-   "leads_ativos": 164,
-   "novo": 146,
-   "sequencia": 0,
-   "respondido": 18,
-   "bounce": 31,
-   "encerrado": 26,
-   "bounces_cache": 49,
-   "fila_prospeccao": "189 empresas — 178 contatados, 33 bounce, 0 PENDENTES"
-  },
-  "dashboard": {
-   "apresentacoes": 206,
-   "entregues_est": 177,
-   "bounces_pct": "14%",
-   "respostas": 18,
-   "taxa_resposta": "~8% (meta >3% — acima pelo 2º mês consecutivo)",
-   "watchdog_verde_consecutivo": 36
-  },
-  "caixa_entrada_auditoria": "0 mensagens novas. Nenhum pedido de relatório ESG/certificado — nenhum PDF gerado.",
-  "observacoes": "Fila desemperrada: UNISO (ouvidoria@uniso.br, nicho universidades) e Sapore (suprimentos@sapore.com.br, canal de compras) enviados manualmente via enviar_lote.py --max 10 (send_sequence não os processava). ATENÇÃO: scan_inbox detectou bounce do Sapore — suprimentos@sapore.com.br é grupo Microsoft 365 que rejeita emails externos. UNISO: aguardando confirmação de entrega. Dalben (18/09) segue como lead quente nº1 — aguardando retorno de Luis. Fila agora zerada (0 pendentes) — precisa de reposição pelo Prospector. Toques WhatsApp humanos pendentes: Savegnago, Grupo IMC, Selmi, Queijos Itupeva. Netlify 403."
- },
- "melhorador_continuo_2026_09_18_14_14": {
-  "diagnostico": "Watchdog OK (36o tick verde). Dashboard: 206 apresentações / 177 entregues / 14% bounce / 18 respostas / taxa ~8% — acima da meta. Ponto MAIS FRACO: fila de prospecção ZERADA (0 pendentes) pelo 4o dia consecutivo — pipeline de novos leads parado.",
-  "melhorias_aplicadas": [
-   "SITE (deploy-vercel/index.html): adicionada seção PROVA SOCIAL real — cases BSBIOS × Madero (55 mil L/mês, 270 restaurantes), Catalent Indaiatuba/Sorocaba (cliente real encapsulados), e mercado UCO USbi→US5bi + exportação EUA + Portaria 3/2026. CSS já existia, HTML nunca implementado.",
-   "FP1 (bot/prospeccao_followup.py): adicionado argumento de URGÊNCIA — escassez global (exportação EUA 1,4 mi t + Portaria 3/2026 jan/2028). py_compile OK.",
-   "Fila: 0 novas — buscas web não acharam emails públicos MX válidos adicionais na região (Supermercados Revolução, Yeda, São Roque, União — só formulário/WhatsApp)."
-  ],
-  "para_estrategista": [
-   "Site com PROVA SOCIAL agora no ar (GitHub Pages) — melhora inbound conversion.",
-   "FP1 fortalecido com escassez global — leads em FP1 recebem o argumento de urgência 1 tick antes.",
-   "Fila segue precisando de reposição estrutural — Prospector precisa de metodologia mais eficiente (páginas de fornecedores, diretórios setoriais).",
-   "Toques WhatsApp humanos seguem como única barreira de fechamento (Savegnago, Queijos Itupeva, Selmi, Grupo IMC)."
-  ]
- }
-}
+              "atendente_cron_2026_09_19_12_31": {
+                "timestamp": "2026-09-19 12:31 (Atendente IA - cron)",
+                "leads_total": 244,
+                "leads_ativos": 169,
+                "bounces_cache": 49,
+                "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
+                "respondidos": 18,
+                "sequencia": 18,
+                "encerrados": 26,
+                "novo": 151,
+                "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
+                "watchdog": "exit 0 — saudável",
+                "acoes": [
+                  "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
+                  "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
+                  "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
+                  "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
+                  "bot_oleo.py send_sequence: sequência processada",
+                  "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
+                  "Nenhuma novidade neste tick — pipeline estável e saudável (tick 12:31)"
+                ],
+                "followups_processados": 0,
+                "lead_quente": [
+                  "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
+                  "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
+                  "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
+                  "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
+                ],
+                "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
+                "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
+                "fila_pendentes": 0
+              }
+            }
