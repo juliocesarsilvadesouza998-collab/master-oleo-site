@@ -1216,5 +1216,47 @@
     "email": "contato@megag.com.br",
     "cidade": "Jundiai/SP",
     "segmento": "Distribuidora de alimentos - estoque de oleo vegetal vencido"
+  },
+  {
+    "nome": "Bunge Alimentos",
+    "empresa": "Bunge Alimentos S/A (oleos vegetais, margarinas e gorduras)",
+    "email": "sac@bunge.com",
+    "cidade": "SP (fabrica em Gaspar e escritorio SP)",
+    "segmento": "Industria de oleos vegetais, margarinas e gorduras - NICHO PRIORITARIO (oleos e gorduras)"
+  },
+  {
+    "nome": "M. Dias Branco (fabrica SP)",
+    "empresa": "M. Dias Branco S/A (Piraque, Adria, Vitarella, Finna)",
+    "email": "sac@mdiasbranco.com.br",
+    "cidade": "SP (fabrica em Jundiai - maior fabricante de biscoitos do Brasil)",
+    "segmento": "Industria de biscoitos e massas (fritura industrial em volume MUITO ALTO) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Embaré",
+    "empresa": "Embaré Indústria de Laticínios (manteiga, creme de leite, leite em po)",
+    "email": "sac@embare.com.br",
+    "cidade": "SP (fabrica em SP e regiao)",
+    "segmento": "laticinios gigante (manteiga, creme de leite, leite condensado) - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Kazuo Alimentos",
+    "empresa": "Kazuo Alimentos (fabrica de maionese e molhos - Americana/SP)",
+    "email": "sac@kazuo.com.br",
+    "cidade": "Americana/SP",
+    "segmento": "industria de maioneses, molhos e conservas (vencidos >40% gordura) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Brasfrigo",
+    "empresa": "Brasfrigo S/A (frigorifico - Salto/SP)",
+    "email": "sac@brasfrigo.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "Frigorifico (gordura animal e oleo de fritura - volume alto) - NICHO PRIORITARIO; localizacao em SALTO (mesma cidade da Master Oleo)"
+  },
+  {
+    "nome": "Biolab Farmacêutica",
+    "empresa": "Biolab Farmacêutica Ltda.",
+    "email": "faleconosco@biolabfarma.com.br",
+    "cidade": "São Paulo/SP (fábricas em Taboão da Serra, Jandira, Bragança Paulista)",
+    "segmento": "Indústria farmacêutica (encapsulados) - NICHO PRIORITÁRIO (óleo vegetal limpeza máquinas)"
   }
 ]

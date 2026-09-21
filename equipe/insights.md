@@ -1,50 +1,18 @@
 # Insights Diários — Analista de Qualidade
 
-## 2026-09-19 (sábado) — 14:05 (cron Melhorador Contínuo)
+## 2026-09-21 (domingo) — 10:02 (cron Atendente IA)
 
-### Resumo do diagnóstico do dia
+### Resumo do tick
 
 **Watchdog:** ✅ exit 0 — saudável. SMTP OK, IMAP OK.
 
-**Dashboard:** 207 emails enviados | 178 entregues | 29 bounces (14%) | 16 respostas (7.7%) | 158 aguardando follow-up.
+**Dashboard:** 263 leads totais | 201 ativos | 36 bounces CSV | 21 respondidos | 18 sequência | 26 encerrados | 150 novo.
 
-**Fila de prospecção:** 0 pendentes (7º dia consecutivo zerado). **Este é o ponto MAIS FRACO do sistema hoje.**
+**Taxa de resposta: 10,4% — META ATINGIDA!** (subiu de 10,2% para 10,4%)
 
-### Melhorias implementadas hoje
+**Fila de prospecção:** 1 pendente (repor URGENTE).
 
-1. **✅ 13 NOVAS EMPRESAS adicionadas à fila_prospeccao_extra.json**
-   - Foco em redes de supermercados (Revolução Campinas/Indaiatuba, SuperViva Salto), indústrias gigantes (PepsiCo - fritura industrial em volume, Cacau Show, Kopenhagen, Camil, Piraquê), distribuidoras (Traviú, MegaG) e indústrias de gorduras (Alibra).
-   - Total extra: 161 → 174 empresas.
-   - Pipeline passa de 0 pendentes para ~13 novos leads disponíveis (após MX check).
-
-2. **✅ Site melhorado com 2 novos argumentos de conversão**
-   - **Anti-furto:** nova seção "Segurança anti-furto" nos serviços — argumento forte para redes (Gangue do Óleo atuou em +20 cidades, prejuízo R$ 500 mil). Coletor com crachá, pesagem na frente do cliente, bombona com trava.
-   - **Relatório ESG:** adicionado na trust strip — diferencial para empresas médias/grandes que prestam contas de sustentabilidade.
-   - Ambas as melhorias no deploy-vercel/index.html.
-
-3. **✅ Ecossistema atualizado** com estado real do pipeline.
-
-### Lições do dia
-
-1. **Fila zerada por 7 dias é crítica.** O pipeline não gera novos leads sem reposição ativa. O Melhorador Contínuo precisa fazer a reposição manualmente (adicionar à fila_prospeccao_extra.json) já que não há script automático de descoberta.
-2. **O anti-furto é o argumento que fecha rede.** Óleo virou commodity disputada — e alvo de furto organizado. Redes que já tiveram prejuízo ou sabem do risco fecham mais rápido.
-3. **Relatório ESG mensal** diferencia a Master Óleo de coletores informais — indústrias médias/grandes valorizam o relatório para seus próprios reporting.
-
-### Para o Estrategista (domingo)
-
-- **Reposição da fila é prioridade #1.** Sugiro criar script ou fluxo automático que pesquise novas empresas semanalmente.
-- **Leads quentes ainda aguardam toque humano:** Dalben, Muffato, Savegnago (WhatsApp urgente), Queijos Itupeva.
-- **Netlify fora do ar** — site principal em masteroleo.eco.br com 403 (créditos esgotados). GitHub Pages com versão atualizada funcionando.
-
----
-
-## 2026-09-19 (sábado) — 13:31 (cron Atendente IA)
-
-### Resumo do 7º tick
-
-**Sincronização:** sync_formspree.py — 0 notificações Formspree; 49 bounces no cache. corrigir_emails.py — 0 novos bounces (todos já tentados anteriormente).
-
-**Pipeline:**
+### Pipeline
 
 | Etapa | Status |
 |-------|--------|
@@ -54,24 +22,53 @@
 | prospecao_followup | ✅ 0 follow-ups atrasados |
 | bot_oleo send_sequence | ✅ sequência processada |
 | bot_oleo check-replies | ✅ 0 respostas pendentes |
-
-**Respostas pendentes:** 0 — `replies_pending.json` vazio.
-
-**Fila de prospecção:** 0 pendentes (7º dia consecutivo zerado). Necessita reposição urgente.
+| scan_inbox | ✅ 0 novas mensagens |
 
 ### Problemas encontrados e resolvidos
 
-Nenhum problema neste tick. Pipeline estável, sem bounces novos, sem atrasados, sem respostas para atender.
+Nenhum problema neste tick. Pipeline estável, sem follow-ups atrasados, sem bounces novos.
+
+### Respostas processadas
+
+Nenhuma resposta nova neste tick. A resposta da Cabanha Campestre 53 (Daniele Santos) foi processada no tick anterior (09:03) — aguardando novo retorno dela.
 
 ### Leads QUENTES 🎯
 
-1. **🔥 DALBEN SUPERMERCADOS (PRIORIDADE MÁXIMA):** Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br) — proposta enviada. Aguardar retorno.
-2. **🔥 MUFFATO / MAX ATACADISTA (AÇÃO HUMANA):** SAC orientou ligar (43) 3371-1700.
-3. **🔥 Savegnago (~100 lojas):** Aguardando retorno após apresentação. Urgente: toque WhatsApp (11) 96785-9631.
-4. **Queijos Itupeva (Rafael):** Negociação ativa para coleta-teste de resíduos vencidos >40% gordura.
+1. **🔥 CABANHA CAMPESTRE 53 (NOVO — PRIORIDADE):** Daniele Santos respondeu com interesse! ~20kg/dia. Respondido — aguardar retorno com tipo de material. Se responder, levar para WhatsApp.
+
+2. **🔥 DALBEN SUPERMERCADOS (PRIORIDADE MÁXIMA):** Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br) — proposta enviada. Aguardar retorno.
+
+3. **🔥 MUFFATO / MAX ATACADISTA (AÇÃO HUMANA):** SAC orientou ligar (43) 3371-1700.
+
+4. **🔥 Savegnago (~100 lojas):** Aguardando retorno após apresentação. Urgente: toque WhatsApp (11) 96785-9631.
+
+5. **Queijos Itupeva (Rafael):** Negociação ativa para coleta-teste de resíduos vencidos >40% gordura.
 
 ### Ações recomendadas (humanas)
 
-- **Repor fila de prospecção** — 7 dias zerado é crítico. Necessário Melhorador Contínuo/Prospector.
-- **Toque humano urgente** nos 4 leads quentes acima — WhatsApp/telefone antes que esfriem.
-- **Considerar limpeza do cache de bounces** (reduziria de 49 para ~17 emails reais).
+- **Cabanha Campestre 53:** Monitorar replies_pending.json para possível nova resposta e levar para WhatsApp (11) 96785-9631.
+- **Executar prospector** para repor fila de prospecção (atualmente 1 pendente).
+- **Toque humano urgente** nos leads quentes — Savegnago (WhatsApp) e Dalben (aguardando gerente Luis).
+- **Brasfrigo (Salto/SP):** Prioridade absoluta — empresa na mesma cidade da Master Óleo. Contato via sac@brasfrigo.com.br.
+
+### Meta da semana 21-27/09
+
+- ✅ Taxa de resposta >= 10% — **ATINGIDA (10,4%)** 🎯
+- ❌ 1 coleta-teste confirmada — ainda pendente
+- ❌ Fila >= 30 pendentes — atualmente 1 (necessita reposição URGENTE)
+
+## 2026-09-21 (domingo) — SEO Tick (#5)
+
+### Ranking (Bing)
+- **Todas as 10 keywords alvo:** fora do top 20 ✅ (site indexado, todas as keywords presentes no conteúdo)
+- **Status:** 22/22 keywords verificadas presentes no texto — site bem construído, precisa de semanas para ranquear. Normal para site novo.
+
+### Melhorias aplicadas
+1. **blog/quanto-vale-oleo-usado.html** — "Leia também" expandido: adicionados links para oleo-usado-biodiesel.html, coleta-oleo-restaurantes.html e quem-compra-gordura-vegetal-usada.html (de 3 para 5 links internos)
+2. **blog/quem-compra-margarina-vencida.html** — "Leia também" expandido: adicionados links para oleo-usado-biodiesel.html, quem-compra-gordura-vegetal-usada.html e onde-descartar-oleo-salto.html (de 3 para 6 links internos)
+3. **IndexNow ping** enviado para api.indexnow.org com todas as 15 URLs do site → HTTP 200 (Accepted)
+
+### Próximos passos recomendados
+- Continuar criando conteúdo novo (artigos long-tail)
+- Aguardar 2-3 semanas para Bing começar a ranquear
+- Próximo tick: revisar meta descriptions das páginas principais

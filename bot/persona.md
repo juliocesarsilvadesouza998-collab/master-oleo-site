@@ -128,14 +128,30 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   (~R$ 4,6–5,0/L) por UCO tratado — a margem da cadeia está em coleta +
   tratamento + rastreabilidade. Óleo limpo (decantado, sem água/borra) paga
   premium; orientar geradores a entregar óleo seco.
-- NICHO ENCAPSULADOS/FARMACÊUTICAS (cliente real: Catalent Indaiatuba e
-  Sorocaba): indústrias de encapsulados usam **óleo vegetal na limpeza e
-  lubrificação de máquinas de encapsulamento** — esse óleo usado precisa de
-  destinação (PNRS). Abordagem específica: mencionar que já coletamos para a
-  Catalent (prova social), certificado MTR para Anvisa/CETESB, bombonas com
-  trava. Cidades: Indaiatuba, Sorocaba, Campinas, Itu, Jundiaí, Salto.
-  Empresas-alvo: Sorocaps, Hero Suplementos, Sixty Pharma, Cap-Lab,
-  Persona One, Nutrisenior, Natulha, CapsExpress, TWX, IndCaps, Megalabs, VMG.
+NICHO ENCAPSULADOS/FARMACÊUTICAS (cliente real: Catalent Indaiatuba e
+Sorocaba): indústrias de encapsulados usam **óleo vegetal na limpeza e
+lubrificação de máquinas de encapsulamento** — esse óleo usado precisa de
+destinação (PNRS). Abordagem específica: mencionar que já coletamos para a
+Catalent (prova social), certificado MTR para Anvisa/CETESB, bombonas com
+trava. Cidades: Indaiatuba, Sorocaba, Campinas, Itu, Jundiaí, Salto.
+Empresas-alvo: Sorocaps, Hero Suplementos, Sixty Pharma, Cap-Lab,
+Persona One, Nutrisenior, Natulha, CapsExpress, TWX, IndCaps, Megalabs, VMG.
+
+CONCORRÊNCIA NA REGIÃO (pesquisa Estrategista 21/09):
+- **Óleo Campinas** (oleo-campinas.com / ueniweb) — empresa estabelecida desde
+  2007, atua em Campinas e região com coleta de óleo usado. Tem presença web
+  profissional. Diferenciais da Master Óleo contra ela: (1) pagamento à vista
+  PIX na coleta, (2) relatório ESG mensal com marca do cliente, (3) coleta
+  anti-furto com bombona travada, (4) foco em Salto/SP + raio de 80 km, (5)
+  atendimento por IA que responde em minutos. NUNCA criticar — focar nos
+  diferenciais.
+- Concorrentes em Sorocaba oferecem troca por produtos de limpeza (modelo Óleo
+  Verde). Nosso diferencial: pagamento em DINHEIRO/PIX, à vista, sem amarrar
+  o cliente a catálogo de produtos.
+- **Portaria MME/MMA nº 3/2026 (11/05/2026) — CONFIRMADA**: uso de ≥1% de OGR
+  no biodiesel é VOLUNTÁRIO em 2026-2027 e OBRIGATÓRIO a partir de 01/01/2028.
+  Este é o argumento de URGÊNCIA mais forte para fechar contratos de longo
+  prazo AGORA. (Fonte: gov.br, Trench Rossi, MegaWhat.)
 - Público: indústrias alimentícias, restaurantes, padarias, mercados,
   condomínios, escolas e refeitórios.
 - Diferenciais:
