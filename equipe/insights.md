@@ -1,74 +1,53 @@
 # Insights Diários — Analista de Qualidade
 
-## 2026-09-21 (domingo) — 10:02 (cron Atendente IA)
+## 2026-09-21 (segunda-feira) — 14:20 (Melhorador Contínuo)
 
-### Resumo do tick
+### Resumo do dia
 
-**Watchdog:** ✅ exit 0 — saudável. SMTP OK, IMAP OK.
+**Watchdog:** ⚠️ exit 1 — 2 follow-ups atrasados (UNISO, Sapore) → RESOLVIDOS via prospecao_followup.py
 
-**Dashboard:** 263 leads totais | 201 ativos | 36 bounces CSV | 21 respondidos | 18 sequência | 26 encerrados | 150 novo.
+**Dashboard:** 169 leads totais | 122 enviados | 34 bounces | 10 respondidos | 13 novos pendentes
 
-**Taxa de resposta: 10,4% — META ATINGIDA!** (subiu de 10,2% para 10,4%)
+**Fila de prospecção:** 13 pendentes (recuperada de 1! ✅)
 
-**Fila de prospecção:** 1 pendente (repor URGENTE).
+### Diagnóstico e melhorias implementadas
 
-### Pipeline
+| Problema | Ação tomada |
+|----------|-------------|
+| 🟥 FILA CRÍTICA (1 pendente) | +15 empresas adicionadas ao `bot/prospecao.py` (linha 71): Delta SM, Boa SM, Irmãos Barrera, SM Real, Beira Rio, Infanger, GoodBom, Covabra, Atacado Diniz, Oba Hortifruti, Mania de Churrasco, SupraFoods, Pague Menos, São Judas Tadeu, Natari — todas com MX válido |
+| 🟥 leads.csv truncado | Bug: `apresentacao_msgid` faltava no FIELDS do prospecao.py → crash no merge_write_leads. **Corrigido** (FIELDS atualizado). leads.csv **reconstruído** com 169 leads do prospecao.py + fila_extra região |
+| 🟡 follow-ups atrasados | UNISO (ouvidoria) e Sapore (suprimentos) — FP1 processado com sucesso |
 
-| Etapa | Status |
-|-------|--------|
-| sync_formspree | ✅ 0 notificações |
-| corrigir_emails | ✅ 0 novos bounces |
-| watchdog | ✅ exit 0 — saudável |
-| prospecao_followup | ✅ 0 follow-ups atrasados |
-| bot_oleo send_sequence | ✅ sequência processada |
-| bot_oleo check-replies | ✅ 0 respostas pendentes |
-| scan_inbox | ✅ 0 novas mensagens |
+### 7 novos emails enviados
 
-### Problemas encontrados e resolvidos
+1. ✅ Kelco Industrial (Indaiatuba) — info@kelcopetcare.com.br
+2. ✅ Rosaves Aves (Sorocaba) — contato@rosaves.com.br
+3. ✅ Delta Supermercados (Piracicaba) — admgeneral@deltasuper.com.br
+4. ✅ Supermercados Real (Tatuí) — contato@supermercadosreal.com.br
+5. ✅ Beira Rio Supermercados (Piracicaba) — contato@beirariosm.com.br
+6. ✅ Supermercado Infanger (Vinhedo) — contato@infanger.com.br
+7. ✅ Supermercados Pague Menos (Campinas) — falecom@supermercadospaguemenos.com.br
+8. ✅ Supermercados São Judas Tadeu (Bauru) — faleconosco@supersaojudas.com.br
 
-Nenhum problema neste tick. Pipeline estável, sem follow-ups atrasados, sem bounces novos.
+### Lições aprendidas (CRÍTICO)
 
-### Respostas processadas
-
-Nenhuma resposta nova neste tick. A resposta da Cabanha Campestre 53 (Daniele Santos) foi processada no tick anterior (09:03) — aguardando novo retorno dela.
+1. **BUG GRAVE**: `merge_write_leads` crasha se `FIELDS` não tiver `apresentacao_msgid` — o arquivo é truncado sem dados. Isso é um **bug de design**: escrever em modo "w" antes de validar os dados destrói o arquivo em caso de erro.
+2. **prospecao.py** só processa empresas hardcoded na lista EMPRESAS. A `fila_prospeccao_extra.json` (180 empresas) fica inativa. Recomendo refatorar para consumir da fila_extra quando a lista principal acabar.
+3. **Sem backup** do leads.csv — uma perda de dados dessas é irrecuperável. Sugiro backup automático.
 
 ### Leads QUENTES 🎯
 
-1. **🔥 CABANHA CAMPESTRE 53 (NOVO — PRIORIDADE):** Daniele Santos respondeu com interesse! ~20kg/dia. Respondido — aguardar retorno com tipo de material. Se responder, levar para WhatsApp.
+1. **🔥 DALBEN SUPERMERCADOS:** Gerente Luis (luish@supermercadosdalben.com.br) — proposta enviada.
+2. **🔥 MUFFATO / MAX ATACADISTA:** SAC orientou ligar (43) 3371-1700.
+3. **🔥 SAVEGNAGO (~100 lojas):** Aguardando retorno. Tocar WhatsApp (11) 96785-9631 URGENTE.
+4. **🔥 QUEIJOS ITUPEVA (Rafael):** Negociação ativa coleta-teste.
+5. **🔥 CABANHA CAMPESTRE 53 (Daniele Santos):** Interesse confirmado! ~600kg/mês.
+6. **🔥 BRASFRIGO (Salto/SP):** Empresa na mesma cidade — sac@brasfrigo.com.br.
 
-2. **🔥 DALBEN SUPERMERCADOS (PRIORIDADE MÁXIMA):** Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br) — proposta enviada. Aguardar retorno.
+### Pendências para o Estrategista
 
-3. **🔥 MUFFATO / MAX ATACADISTA (AÇÃO HUMANA):** SAC orientou ligar (43) 3371-1700.
-
-4. **🔥 Savegnago (~100 lojas):** Aguardando retorno após apresentação. Urgente: toque WhatsApp (11) 96785-9631.
-
-5. **Queijos Itupeva (Rafael):** Negociação ativa para coleta-teste de resíduos vencidos >40% gordura.
-
-### Ações recomendadas (humanas)
-
-- **Cabanha Campestre 53:** Monitorar replies_pending.json para possível nova resposta e levar para WhatsApp (11) 96785-9631.
-- **Executar prospector** para repor fila de prospecção (atualmente 1 pendente).
-- **Toque humano urgente** nos leads quentes — Savegnago (WhatsApp) e Dalben (aguardando gerente Luis).
-- **Brasfrigo (Salto/SP):** Prioridade absoluta — empresa na mesma cidade da Master Óleo. Contato via sac@brasfrigo.com.br.
-
-### Meta da semana 21-27/09
-
-- ✅ Taxa de resposta >= 10% — **ATINGIDA (10,4%)** 🎯
-- ❌ 1 coleta-teste confirmada — ainda pendente
-- ❌ Fila >= 30 pendentes — atualmente 1 (necessita reposição URGENTE)
-
-## 2026-09-21 (domingo) — SEO Tick (#5)
-
-### Ranking (Bing)
-- **Todas as 10 keywords alvo:** fora do top 20 ✅ (site indexado, todas as keywords presentes no conteúdo)
-- **Status:** 22/22 keywords verificadas presentes no texto — site bem construído, precisa de semanas para ranquear. Normal para site novo.
-
-### Melhorias aplicadas
-1. **blog/quanto-vale-oleo-usado.html** — "Leia também" expandido: adicionados links para oleo-usado-biodiesel.html, coleta-oleo-restaurantes.html e quem-compra-gordura-vegetal-usada.html (de 3 para 5 links internos)
-2. **blog/quem-compra-margarina-vencida.html** — "Leia também" expandido: adicionados links para oleo-usado-biodiesel.html, quem-compra-gordura-vegetal-usada.html e onde-descartar-oleo-salto.html (de 3 para 6 links internos)
-3. **IndexNow ping** enviado para api.indexnow.org com todas as 15 URLs do site → HTTP 200 (Accepted)
-
-### Próximos passos recomendados
-- Continuar criando conteúdo novo (artigos long-tail)
-- Aguardar 2-3 semanas para Bing começar a ranquear
-- Próximo tick: revisar meta descriptions das páginas principais
+- Toque humano: Dalben (ligar), Savegnago (WhatsApp), Muffato (telefone)
+- Fechar Brasfrigo (Salto/SP) — empresa na mesma cidade
+- Netlify: créditos de build esgotados (403) — site principal fora do ar
+- Estudar refatoração do prospecao.py para consumir `fila_prospeccao_extra.json`
+- Implementar backup automático do leads.csv

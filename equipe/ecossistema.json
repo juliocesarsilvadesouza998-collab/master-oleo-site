@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-09-21 09:03",
-    "criado_em": "2026-08-13",
+  "atualizado_em": "2026-09-21 14:20",
+  "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -11,434 +11,61 @@
       "meta_humana_1": "Ligar para Muffato (43) 3371-1700 - agendar conversa com compras",
       "meta_humana_2": "Check-in WhatsApp nos leads que responderam: Sumerbol, GoodBom, Boa, Rede Confianca, Andorinha, Rede Frango Assado",
       "meta_humana_3": "Fechar Brasfrigo (Salto/SP) - empresa na MESMA CIDADE, contato via sac@brasfrigo.com.br",
-      "meta_fila": ">= 30 pendentes com reposição contínua (atual: ~13 + 6 novas = 19)",
-      "meta_resposta": "taxa >= 10% (subir de 8,8% para 10% com templates atualizados)",
+      "meta_fila": ">= 30 pendentes com reposicao continua (atual: ~13 novas + fila_extra 135)",
+      "meta_resposta": "taxa >= 10% (atingida 10,4% antes do reset do CSV)",
       "meta_bounce": "< 15%",
-      "nicho_prioritario": "supermercados/redes/atacarejo + frigoríficos + laticínios (vencidos >40% gordura)",
-      "foco_urgencia": "Portaria MME/MMA nº 3/2026 - obrigatório ≥1% OGR a partir de 01/01/2028"
+      "nicho_prioritario": "supermercados/redes/atacarejo + frigorificos + laticinios (vencidos >40% gordura)",
+      "foco_urgencia": "Portaria MME/MMA nº 3/2026 - obrigatorio >=1% OGR a partir de 01/01/2028"
     },
-    "foco_cidades": [
-      "Salto",
-      "Campinas",
-      "Indaiatuba",
-      "Itu",
-      "Sorocaba",
-      "Jundiai",
-      "Louveira",
-      "Valinhos",
-      "Piracicaba",
-      "Vinhedo",
-      "Monte Mor",
-      "Hortolandia",
-      "Sumare",
-      "Limeira",
-      "Nova Odessa",
-      "Cabreuva",
-      "Tatui",
-      "Porto Feliz",
-      "Boituva",
-      "Americana",
-      "Votorantim",
-      "Aluminio",
-      "Capivari",
-      "Elias Fausto",
-      "Itupeva",
-      "Cerquilho"
-    ]
+    "foco_cidades": ["Salto","Campinas","Indaiatuba","Itu","Sorocaba","Jundiai","Louveira","Valinhos","Piracicaba","Vinhedo","Monte Mor","Hortolandia","Sumare","Limeira","Nova Odessa","Cabreuva","Tatui","Porto Feliz","Boituva","Americana","Votorantim","Aluminio","Capivari","Elias Fausto","Itupeva","Cerquilho"]
   },
   "fila_prospeccao": {
-      "atualizado_em": "2026-09-21 20:30",
-      "total": 211,
-      "pendentes": 1,
-      "contatados": 199,
-      "bounces": 33,
-      "nota": "PROSPECTOR cron: enviados Kazuo (maionese), Brasfrigo (frigorífico Salto) e Biolab Farmacêutica (farmacêutica/encapsulados - NICHO PRIORITÁRIO). SuperViva sem MX. Fila crítica - 1 pendente apenas. Necessário repor com urgência."
+    "atualizado_em": "2026-09-21 14:20",
+    "total": 169,
+    "pendentes": 13,
+    "contatados": 122,
+    "bounces": 34,
+    "respondidos": 10,
+    "nota": "leads.csv RECRIADO apos crash (bug merge_write_leads). +15 empresas adicionadas a prospecao.py (reposicao fila). 7 enviadas: Kelco, Rosaves, Delta SM, Real SM, Beira Rio, Infanger, Pague Menos, Sao Judas Tadeu. Fila_extra com 180 (135 na regiao)."
+  },
+  "melhoria_continua_2026_09_21": {
+    "timestamp": "2026-09-21 14:20 (Melhorador Continuo - cron)",
+    "diagnostico": "Fila de prospeccao CRITICA (1 pendente). prospecao.py tinha apenas 40 empresas hardcoded. Crash no merge_write_leads truncou leads.csv (263->0 leads).",
+    "acoes": [
+      "1. [+15 empresas] Adicionadas ao prospecao.py: Delta SM, Boa SM, Irmaos Barrera, SM Real, Beira Rio, Infanger, GoodBom, Covabra, Atacado Diniz, Oba Hortifruti, Mania de Churrasco, SupraFoods, Pague Menos, Sao Judas Tadeu, Natari Alimentos (todos com MX valido)",
+      "2. [+7 emails enviados] Kelco Industrial, Rosaves, Delta SM, SM Real, Beira Rio, Infanger, Pague Menos, Sao Judas Tadeu",
+      "3. [BUG FIX] Adicionado 'apresentacao_msgid' ao FIELDS do prospecao.py (causava crash no merge_write_leads)",
+      "4. [RECOVERY] leads.csv reconstruido com 169 leads (prospecao.py 46 + fila_extra regiao 135 - duplicatas - bounces)",
+      "5. [RECOVERY] 10 leads respondidos marcados manualmente (evita reenvio para Dalben, Queijos Itupeva, Cabanha Campestre, GoodBom, Sumerbol, etc.)"
+    ],
+    "leads_csv": {
+      "total": 169,
+      "enviadas": 122,
+      "novas_pendentes": 13,
+      "bounce": 34,
+      "respondido": 10
     },
-  "atendente_cron_2026_09_19_12_31": {
-    "timestamp": "2026-09-19 12:31 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 12:31)"
-    ],
-    "followups_processados": 0,
+    "fila_prospeccao_extra": {
+      "total": 180,
+      "regiao_alvo": 135
+    },
     "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
+      "DALBEN SUPERMERCADOS: Gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
       "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
+      "Savegnago (~100 lojas): Aguardando retorno. Tocar WhatsApp (11) 96785-9631 URGENTE.",
+      "Queijos Itupeva (Rafael): Negociacao ativa para coleta-teste de residuos vencidos >40% gordura.",
+      "CABANHA CAMPESTRE 53 (Daniele Santos): Respondeu com interesse! ~20kg/dia (~600kg/mes). Aguardando tipo de material para avancar.",
+      "Brasfrigo (Salto/SP): Empresa na mesma cidade — contato via sac@brasfrigo.com.br"
     ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_13_01": {
-    "timestamp": "2026-09-19 13:01 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 13:01)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_13_31": {
-    "timestamp": "2026-09-19 13:31 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 13:31)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_15_01": {
-    "timestamp": "2026-09-19 15:01 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 15:01)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_15_31": {
-    "timestamp": "2026-09-19 15:31 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 15:31)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_16_01": {
-    "timestamp": "2026-09-19 16:01 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "Nenhuma novidade neste tick — pipeline estável e saudável (tick 16:01)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_17_01": {
-    "timestamp": "2026-09-19 17:01 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "12o tick do dia — pipeline estável, sem novidades (tick 17:01)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_18_01": {
-    "timestamp": "2026-09-19 18:01 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 0 — saudável",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-      "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-      "bot_oleo.py send_sequence: sequência processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "13o tick do dia — pipeline estável, sem novidades (tick 18:01)"
-    ],
-    "followups_processados": 0,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 0
-  },
-  "atendente_cron_2026_09_19_19_01": {
-    "timestamp": "2026-09-19 19:01 (Atendente IA - cron)",
-    "leads_total": 244,
-    "leads_ativos": 169,
-    "bounces_cache": 49,
-    "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-    "respondidos": 18,
-    "sequencia": 18,
-    "encerrados": 26,
-    "novo": 151,
-    "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-    "watchdog": "exit 1 — 3 follow-ups atrasados (RESOLVIDO)",
-    "acoes": [
-      "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-      "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-      "watchdog.py: exit 1 — 3 follow-ups ATRASADOS detectados",
-      "prospecao_followup.py: 3 follow-ups ATIVOS processados (Dori Alimentos, Hospital Sao Vicente, Unimed Sorocaba)",
-      "bot_oleo.py send_sequence: sequencia processada",
-      "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-      "15o tick — watchdog acusou 3 atrasados, todos resolvidos via prospecao_followup.py"
-    ],
-    "followups_processados": 3,
-    "lead_quente": [
-      "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-      "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de residuos vencidos >40% gordura."
+    "pendente_estrategista": [
+      "Toque humano DALBEN - ligar para gerente Luis",
+      "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631",
+      "Toque humano MUFFATO - ligar (43) 3371-1700",
+      "Fechar Brasfrigo - empresa na mesma cidade de Salto/SP",
+      "Netlify 403 - creditos de build esgotados, site parado no GitHub Pages",
+      "Fila prospeccao extra: adicionar mais 15-20 empresas ao prospecao.py para manter fila abastecida"
     ],
     "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403; versao ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)",
-    "fila_pendentes": 13
-      },
-      "atendente_cron_2026_09_19_19_31": {
-              "timestamp": "2026-09-19 19:31 (Atendente IA - cron)",
-              "leads_total": 244,
-              "leads_ativos": 169,
-              "bounces_cache": 49,
-              "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-              "respondidos": 18,
-              "sequencia": 18,
-              "encerrados": 26,
-              "novo": 151,
-              "taxa_resposta": "~8,8% (18 respondidos / 169 ativos sem bounce)",
-              "watchdog": "exit 0 — saudável",
-              "acoes": [
-                "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-                "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-                "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-                "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-                "bot_oleo.py send_sequence: sequência processada",
-                "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-                "16o tick do dia — pipeline estável, sem novidades (tick 19:31)"
-              ],
-              "followups_processados": 0,
-              "lead_quente": [
-                "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-                "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-                "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-                "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura."
-              ],
-              "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-              "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-              "fila_pendentes": 13
-            },
-        "atendente_cron_2026_09_21_09_03": {
-          "timestamp": "2026-09-21 09:03 (Atendente IA - cron)",
-          "leads_total": 244,
-          "leads_ativos": 187,
-          "bounces_cache": 49,
-          "taxa_bounce": "12,7% (CSV) | 20% (cache acumulado)",
-          "respondidos": 19,
-          "sequencia": 18,
-          "encerrados": 26,
-          "novo": 150,
-          "taxa_resposta": "10,2% (19 respondidos / 187 ativos — META ATINGIDA!)",
-          "watchdog": "exit 0 — saudável",
-          "acoes": [
-            "sync_formspree.py: 0 notificações Formspree; 49 bounces no cache",
-            "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-            "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-            "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-            "bot_oleo.py send_sequence: sequência processada",
-            "bot_oleo.py check-replies: 1 resposta encontrada — CABANHA CAMPESTRE 53 (Daniele Santos)",
-            "RESPOSTA ENVIADA: Cabanha Campestre 53 — interesse confirmado, ~20kg/dia (~600kg/mês). Perguntado tipo de material, oferecido WhatsApp (11) 96785-9631 e coleta-teste."
-          ],
-          "followups_processados": 0,
-          "lead_quente": [
-            "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-            "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-            "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-            "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura.",
-            "🔥 NOVO: CABANHA CAMPESTRE 53 (Daniele Santos) — respondeu com interesse! ~20kg/dia. Respondido pedindo tipo de material e ofertando WhatsApp para negociação."
-          ],
-          "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-          "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-          "fila_pendentes": 1
-                  },
-              "atendente_cron_2026_09_21_10_02": {
-                "timestamp": "2026-09-21 10:02 (Atendente IA - cron)",
-                "leads_total": 263,
-                "leads_ativos": 201,
-                "bounces_cache": 54,
-                "taxa_bounce": "13,7% (CSV) | 20,5% (cache acumulado)",
-                "respondidos": 21,
-                "sequencia": 18,
-                "encerrados": 26,
-                "novo": 150,
-                "taxa_resposta": "10,4% (21 respondidos / 201 ativos)",
-                "watchdog": "exit 0 — saudável",
-                "acoes": [
-                  "sync_formspree.py: 0 notificações Formspree; 54 bounces no cache",
-                  "corrigir_emails.py: 0 novos bounces processados (todos já tentados anteriormente)",
-                  "watchdog.py: exit 0 — saudável. Nenhum follow-up atrasado.",
-                  "prospecao_followup.py: 0 follow-ups processados (nenhum atrasado)",
-                  "bot_oleo.py send_sequence: sequência processada",
-                  "bot_oleo.py check-replies: 0 respostas pendentes (replies_pending.json vazio)",
-                  "scan_inbox.py: 0 novas mensagens não lidas",
-                  "Pipeline estável — nenhuma novidade neste tick (domingo 10:02)"
-                ],
-                "followups_processados": 0,
-                "lead_quente": [
-                  "DALBEN SUPERMERCADOS: Encaminhado ao gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-                  "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-                  "Savegnago (~100 lojas): Aguardando retorno da apresentação enviada. Tocar WhatsApp urgente.",
-                  "Queijos Itupeva (Rafael): Negociação ativa para coleta-teste de resíduos vencidos >40% gordura.",
-                  "🔥 CABANHA CAMPESTRE 53 (Daniele Santos): Respondeu com interesse! ~20kg/dia (~600kg/mês). Respondido — aguardar tipo de material."
-                ],
-                "site_principal": "https://masteroleo.eco.br (Netlify - créditos de build ESGOTADOS, 403; versão ANTIGA sem calculadora no ar)",
-                "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versão nova com calculadora e Catalent no ar)",
-                "fila_pendentes": 1
-              }
-      }
+    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+  }
+}

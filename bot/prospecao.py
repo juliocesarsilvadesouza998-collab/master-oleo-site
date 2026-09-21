@@ -22,7 +22,7 @@ CONFIG_PATH = os.path.join(BASE, "config.json")
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
-          "apresentacao_em","fp1_em","fp2_em","fp3_em",
+          "apresentacao_em","apresentacao_msgid","fp1_em","fp2_em","fp3_em",
           "ultima_resposta","respondido_em","respondido_por"]
 
 # Empresas com MX válido + email (corrigido onde houve bounce)
@@ -58,17 +58,34 @@ EMPRESAS = [
     {"nome": "Castelo Alimentos", "empresa": "Castelo Alimentos S/A", "email": "sacc@casteloalimentos.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de biscoitos e massas"},
     {"nome": "CRS Brands", "empresa": "CRS Brands Industria e Comercio S/A", "email": "contato@crsbrands.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de bebidas e alimentos"},
     # --- Louveira (grandes) ---
-    {"nome": "Prime Cater", "empresa": "Prime Cater Comercial de Produtos Alimenticios S/A", "email": "contato@pmct.com.br", "cidade": "Louveira/SP", "segmento": "Refeicoes coletivas e catering"},
-    {"nome": "PGR Sao Paulo Refeicoes", "empresa": "P.G.R. Sao Paulo Refeicoes LTDA", "email": "marcia.mendes@somospremium.com.br", "cidade": "Louveira/SP", "segmento": "Restaurantes e refeicoes"},
-    # --- Piracicaba (grandes) ---
-    {"nome": "Bom Peixe", "empresa": "Bom Peixe Industria e Comercio LTDA", "email": "sac@bompeixe.com.br", "cidade": "Piracicaba/SP", "segmento": "Industria de pescados e conservas"},
-    {"nome": "Laticinios Noiva da Colina", "empresa": "Laticinios Noiva da Colina LTDA", "email": "contato@vimilk.com.br", "cidade": "Piracicaba/SP", "segmento": "Industria de laticinios"},
-    # --- Valinhos (grandes) ---
-    {"nome": "Zarelli Supermercados", "empresa": "Zarelli Supermercados LTDA", "email": "contato@supermercadoszarelli.com.br", "cidade": "Valinhos/SP", "segmento": "Supermercados (rede)"},
-    {"nome": "Chr Hansen Brasil", "empresa": "Chr Hansen Industria e Comercio LTDA", "email": "braco@chr-hansen.com", "cidade": "Valinhos/SP", "segmento": "Industria de culturas e ingredientes"},
-    {"nome": "Pronutrition", "empresa": "Pronutrition do Brasil Industria de Suplementos", "email": "compras@pronutrition.com.br", "cidade": "Valinhos/SP", "segmento": "Industria de suplementos alimentares"},
-    {"nome": "Ultrapan", "empresa": "Ultrapan Industria e Comercio LTDA", "email": "marketing@ultrapan.com.br", "cidade": "Valinhos/SP", "segmento": "Industria de produtos alimenticios"},
-]
+        {"nome": "Prime Cater", "empresa": "Prime Cater Comercial de Produtos Alimenticios S/A", "email": "contato@pmct.com.br", "cidade": "Louveira/SP", "segmento": "Refeicoes coletivas e catering"},
+        {"nome": "PGR Sao Paulo Refeicoes", "empresa": "P.G.R. Sao Paulo Refeicoes LTDA", "email": "marcia.mendes@somospremium.com.br", "cidade": "Louveira/SP", "segmento": "Restaurantes e refeicoes"},
+        # --- Piracicaba (grandes) ---
+        {"nome": "Bom Peixe", "empresa": "Bom Peixe Industria e Comercio LTDA", "email": "sac@bompeixe.com.br", "cidade": "Piracicaba/SP", "segmento": "Industria de pescados e conservas"},
+        {"nome": "Laticinios Noiva da Colina", "empresa": "Laticinios Noiva da Colina LTDA", "email": "contato@vimilk.com.br", "cidade": "Piracicaba/SP", "segmento": "Industria de laticinios"},
+        # --- Valinhos (grandes) ---
+        {"nome": "Zarelli Supermercados", "empresa": "Zarelli Supermercados LTDA", "email": "contato@supermercadoszarelli.com.br", "cidade": "Valinhos/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Chr Hansen Brasil", "empresa": "Chr Hansen Industria e Comercio LTDA", "email": "braco@chr-hansen.com", "cidade": "Valinhos/SP", "segmento": "Industria de culturas e ingredientes"},
+        {"nome": "Pronutrition", "empresa": "Pronutrition do Brasil Industria de Suplementos", "email": "compras@pronutrition.com.br", "cidade": "Valinhos/SP", "segmento": "Industria de suplementos alimentares"},
+        {"nome": "Ultrapan", "empresa": "Ultrapan Industria e Comercio LTDA", "email": "marketing@ultrapan.com.br", "cidade": "Valinhos/SP", "segmento": "Industria de produtos alimenticios"},
+        # --- NOVAS EMPRESAS (adicionadas 21/09 - reposição de fila) ---
+        # Supermercados que mais convertem - região
+        {"nome": "Delta Supermercados", "empresa": "Delta Supermercados LTDA", "email": "admgeneral@deltasuper.com.br", "cidade": "Piracicaba/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Boa Supermercados", "empresa": "Supermercado Boa LTDA", "email": "atendimento@smboa.com.br", "cidade": "Jundiai/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Supermercado Irmaos Barrera", "empresa": "Supermercado Irmaos Barrera LTDA", "email": "social@irmaosbarrera.com.br", "cidade": "Elias Fausto/SP", "segmento": "Supermercado"},
+        {"nome": "Supermercados Real", "empresa": "Supermercados Real LTDA", "email": "contato@supermercadosreal.com.br", "cidade": "Tatui/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Beira Rio Supermercados", "empresa": "Beira Rio Supermercados LTDA", "email": "contato@beirariosm.com.br", "cidade": "Piracicaba/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Supermercado Infanger", "empresa": "Supermercado Infanger LTDA", "email": "contato@infanger.com.br", "cidade": "Vinhedo/SP", "segmento": "Supermercado"},
+        {"nome": "GoodBom Supermercados", "empresa": "GoodBom Supermercados LTDA", "email": "contato@goodbom.com.br", "cidade": "Tatui/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Covabra Supermercados", "empresa": "Covabra Supermercados LTDA", "email": "sac@covabra.com.br", "cidade": "Limeira/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Atacado Diniz", "empresa": "Atacado Diniz LTDA", "email": "sac@atacadodiniz.com.br", "cidade": "Louveira/SP", "segmento": "Atacado e distribuicao de alimentos"},
+        {"nome": "Oba Hortifruti", "empresa": "Oba Hortifruti SA", "email": "ouvidoria@redeoba.com.br", "cidade": "Sumare/SP", "segmento": "Varejo de hortifruti (rede)"},
+        {"nome": "Mania de Churrasco", "empresa": "Mania de Churrasco LTDA", "email": "sac@maniadechurrasco.com", "cidade": "Limeira/SP", "segmento": "Restaurantes (rede steak house)"},
+        {"nome": "SupraFoods", "empresa": "SupraFoods Comercio de Alimentos LTDA", "email": "comercial@suprafoods.com.br", "cidade": "Americana/SP", "segmento": "Industria de alimentos"},
+        {"nome": "Supermercado Pague Menos", "empresa": "Supermercados Pague Menos SA", "email": "falecom@supermercadospaguemenos.com.br", "cidade": "Campinas/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Supermercados Sao Judas Tadeu", "empresa": "Supermercados Sao Judas Tadeu LTDA", "email": "faleconosco@supersaojudas.com.br", "cidade": "Bauru/SP", "segmento": "Supermercados (rede)"},
+        {"nome": "Natari Alimentos", "empresa": "Natari Comercio de Alimentos LTDA", "email": "natari@alhonatari.com.br", "cidade": "Monte Mor/SP", "segmento": "Atacado de hortifrutis e alimentos"},
+    ]
 
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
