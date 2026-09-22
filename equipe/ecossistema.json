@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-21 14:20",
+  "atualizado_em": "2026-09-21 19:31 (cron #8)",
   "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
@@ -11,7 +11,7 @@
       "meta_humana_1": "Ligar para Muffato (43) 3371-1700 - agendar conversa com compras",
       "meta_humana_2": "Check-in WhatsApp nos leads que responderam: Sumerbol, GoodBom, Boa, Rede Confianca, Andorinha, Rede Frango Assado",
       "meta_humana_3": "Fechar Brasfrigo (Salto/SP) - empresa na MESMA CIDADE, contato via sac@brasfrigo.com.br",
-      "meta_fila": ">= 30 pendentes com reposicao continua (atual: ~13 novas + fila_extra 135)",
+      "meta_fila": ">= 30 pendentes com reposicao continua (atual: 10 pendentes + fila_extra 135)",
       "meta_resposta": "taxa >= 10% (atingida 10,4% antes do reset do CSV)",
       "meta_bounce": "< 15%",
       "nicho_prioritario": "supermercados/redes/atacarejo + frigorificos + laticinios (vencidos >40% gordura)",
@@ -20,48 +20,50 @@
     "foco_cidades": ["Salto","Campinas","Indaiatuba","Itu","Sorocaba","Jundiai","Louveira","Valinhos","Piracicaba","Vinhedo","Monte Mor","Hortolandia","Sumare","Limeira","Nova Odessa","Cabreuva","Tatui","Porto Feliz","Boituva","Americana","Votorantim","Aluminio","Capivari","Elias Fausto","Itupeva","Cerquilho"]
   },
   "fila_prospeccao": {
-    "atualizado_em": "2026-09-21 14:20",
+    "atualizado_em": "2026-09-21 19:31 (cron #8)",
     "total": 169,
-    "pendentes": 13,
-    "contatados": 122,
-    "bounces": 34,
-    "respondidos": 10,
-    "nota": "leads.csv RECRIADO apos crash (bug merge_write_leads). +15 empresas adicionadas a prospecao.py (reposicao fila). 7 enviadas: Kelco, Rosaves, Delta SM, Real SM, Beira Rio, Infanger, Pague Menos, Sao Judas Tadeu. Fila_extra com 180 (135 na regiao)."
+    "pendentes": 10,
+    "contatados": 124,
+    "bounces": 55,
+    "respondidos": 12,
+    "nota": "leads.csv funcional. Watchdog 21/09 19:31: 169 leads, 124 ativos, 55 bounces. Ciclo tranquilo sem respostas novas. Cron #8."
   },
-  "melhoria_continua_2026_09_21": {
-    "timestamp": "2026-09-21 14:20 (Melhorador Continuo - cron)",
-    "diagnostico": "Fila de prospeccao CRITICA (1 pendente). prospecao.py tinha apenas 40 empresas hardcoded. Crash no merge_write_leads truncou leads.csv (263->0 leads).",
+  "melhoria_continua_2026_09_21_cron_19h31": {
+    "timestamp": "2026-09-21 19:31 (cron #8)",
+    "diagnostico": "Ciclo normal noturno. Sem follow-ups atrasados. Sem notificacoes Formspree. Sem respostas pendentes. Cron #8.",
     "acoes": [
-      "1. [+15 empresas] Adicionadas ao prospecao.py: Delta SM, Boa SM, Irmaos Barrera, SM Real, Beira Rio, Infanger, GoodBom, Covabra, Atacado Diniz, Oba Hortifruti, Mania de Churrasco, SupraFoods, Pague Menos, Sao Judas Tadeu, Natari Alimentos (todos com MX valido)",
-      "2. [+7 emails enviados] Kelco Industrial, Rosaves, Delta SM, SM Real, Beira Rio, Infanger, Pague Menos, Sao Judas Tadeu",
-      "3. [BUG FIX] Adicionado 'apresentacao_msgid' ao FIELDS do prospecao.py (causava crash no merge_write_leads)",
-      "4. [RECOVERY] leads.csv reconstruido com 169 leads (prospecao.py 46 + fila_extra regiao 135 - duplicatas - bounces)",
-      "5. [RECOVERY] 10 leads respondidos marcados manualmente (evita reenvio para Dalben, Queijos Itupeva, Cabanha Campestre, GoodBom, Sumerbol, etc.)"
+      "1. [PASSO 0] sync_formspree.py: 55 bounces em cache, 0 notificacoes novas (cron #8)",
+      "2. [PASSO 0] corrigir_emails.py: 0 bounces processados (todos ja tentados anteriormente) (cron #8)",
+      "3. [PASSO 1] watchdog.py: exit 0 — saudavel, sem problemas (cron #8)",
+      "4. [PASSO 2] prospecao_followup.py: 0 processados (nenhum follow-up atrasado) (cron #8)",
+      "5. [PASSO 2] send_sequence: sequencia processada (cron #8)",
+      "6. [PASSO 2] check-replies: 0 respostas pendentes — ninguem respondeu neste ciclo (cron #8)"
     ],
     "leads_csv": {
       "total": 169,
-      "enviadas": 122,
-      "novas_pendentes": 13,
-      "bounce": 34,
-      "respondido": 10
-    },
-    "fila_prospeccao_extra": {
-      "total": 180,
-      "regiao_alvo": 135
+      "enviadas": 124,
+      "novas_pendentes": 10,
+      "bounce": 55,
+      "respondido": 12,
+      "cron": "#8"
     },
     "lead_quente": [
+      "🔥 PASTIFICIO SELMI (Sumare/SP): Ticket #89532 aberto no Zendesk — proposta na fila de analise do SAC.",
       "DALBEN SUPERMERCADOS: Gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
       "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "Savegnago (~100 lojas): Aguardando retorno. Tocar WhatsApp (11) 96785-9631 URGENTE.",
+      "SAVEGNAGO (~100 lojas): Aguardando retorno.",
       "Queijos Itupeva (Rafael): Negociacao ativa para coleta-teste de residuos vencidos >40% gordura.",
-      "CABANHA CAMPESTRE 53 (Daniele Santos): Respondeu com interesse! ~20kg/dia (~600kg/mes). Aguardando tipo de material para avancar.",
-      "Brasfrigo (Salto/SP): Empresa na mesma cidade — contato via sac@brasfrigo.com.br"
+      "CABANHA CAMPESTRE 53 (Daniele Santos): ~600kg/mes. Aguardando tipo de material.",
+      "Brasfrigo (Salto/SP): Empresa na mesma cidade — contato via sac@brasfrigo.com.br.",
+      "PAGUE MENOS (Campinas): Proposta enviada para Josiane Marinho."
     ],
     "pendente_estrategista": [
       "Toque humano DALBEN - ligar para gerente Luis",
       "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631",
       "Toque humano MUFFATO - ligar (43) 3371-1700",
       "Fechar Brasfrigo - empresa na mesma cidade de Salto/SP",
+      "Acompanhar Selmi ticket #89532",
+      "Acompanhar Pague Menos - Josiane Marinho",
       "Netlify 403 - creditos de build esgotados, site parado no GitHub Pages",
       "Fila prospeccao extra: adicionar mais 15-20 empresas ao prospecao.py para manter fila abastecida"
     ],

@@ -1,53 +1,63 @@
 # Insights Diários — Analista de Qualidade
 
-## 2026-09-21 (segunda-feira) — 14:20 (Melhorador Contínuo)
+## 2026-09-21 (segunda-feira) — 19:31 (Cron #8 — noturno)
 
-### Resumo do dia
+### Resumo do ciclo (cron noturno)
 
-**Watchdog:** ⚠️ exit 1 — 2 follow-ups atrasados (UNISO, Sapore) → RESOLVIDOS via prospecao_followup.py
+**Watchdog:** ✅ OK (exit 0) — tudo saudável, SMTP/IMAP normais, sem follow-ups atrasados.
 
-**Dashboard:** 169 leads totais | 122 enviados | 34 bounces | 10 respondidos | 13 novos pendentes
+**Dashboard:** 169 leads totais | 124 ativos | 55 bounces | 12 respondidos | 10 pendentes — estável, sem alterações.
 
-**Fila de prospecção:** 13 pendentes (recuperada de 1! ✅)
+**Sequência:** prospecao_followup → 0. send_sequence → OK. check-replies → 0 pendentes.
 
-### Diagnóstico e melhorias implementadas
+### O que foi feito neste ciclo
 
-| Problema | Ação tomada |
-|----------|-------------|
-| 🟥 FILA CRÍTICA (1 pendente) | +15 empresas adicionadas ao `bot/prospecao.py` (linha 71): Delta SM, Boa SM, Irmãos Barrera, SM Real, Beira Rio, Infanger, GoodBom, Covabra, Atacado Diniz, Oba Hortifruti, Mania de Churrasco, SupraFoods, Pague Menos, São Judas Tadeu, Natari — todas com MX válido |
-| 🟥 leads.csv truncado | Bug: `apresentacao_msgid` faltava no FIELDS do prospecao.py → crash no merge_write_leads. **Corrigido** (FIELDS atualizado). leads.csv **reconstruído** com 169 leads do prospecao.py + fila_extra região |
-| 🟡 follow-ups atrasados | UNISO (ouvidoria) e Sapore (suprimentos) — FP1 processado com sucesso |
+| Ação | Detalhe |
+|------|---------|
+| ✅ PASSO 0 | sync_formspree.py (0 notificações novas, 55 bounces em cache) + corrigir_emails.py (0 novos bounces) — cron #8 |
+| ✅ PASSO 1 | watchdog.py → exit 0, saudável. Nada a corrigir. — cron #8 |
+| ✅ PASSO 2 | prospecao_followup.py (0 follow-ups). send_sequence OK. check-replies → 0 respostas. — cron #8 |
+| ✅ Relatório | ecossistema.json → cron #8. insights.md → cron #8. — cron #8 |
 
-### 7 novos emails enviados
+### Observações
 
-1. ✅ Kelco Industrial (Indaiatuba) — info@kelcopetcare.com.br
-2. ✅ Rosaves Aves (Sorocaba) — contato@rosaves.com.br
-3. ✅ Delta Supermercados (Piracicaba) — admgeneral@deltasuper.com.br
-4. ✅ Supermercados Real (Tatuí) — contato@supermercadosreal.com.br
-5. ✅ Beira Rio Supermercados (Piracicaba) — contato@beirariosm.com.br
-6. ✅ Supermercado Infanger (Vinhedo) — contato@infanger.com.br
-7. ✅ Supermercados Pague Menos (Campinas) — falecom@supermercadospaguemenos.com.br
-8. ✅ Supermercados São Judas Tadeu (Bauru) — faleconosco@supersaojudas.com.br
+- **🥶 Ciclo noturno tranquilo** — mesmo padrão do cron #7 vespertino. Sem respostas novas, sem follow-ups atrasados, sem notificações Formspree, sem pedidos de relatório ESG.
+- **10 pendentes na fila** — abaixo do ideal (>30). Necessário repor fila em breve.
+- **Taxa de bounce: 32,5%** (55/169) — acima do ideal (<15%). Os 55 bounces históricos continuam como passivo; sem novos para processar.
+- **Nenhum lead pediu relatório ESG** neste ciclo.
+- **Nenhum lead pediu remoção** da lista.
 
-### Lições aprendidas (CRÍTICO)
+### Leads QUENTES 🔥 (sem alterações desde cron #7)
 
-1. **BUG GRAVE**: `merge_write_leads` crasha se `FIELDS` não tiver `apresentacao_msgid` — o arquivo é truncado sem dados. Isso é um **bug de design**: escrever em modo "w" antes de validar os dados destrói o arquivo em caso de erro.
-2. **prospecao.py** só processa empresas hardcoded na lista EMPRESAS. A `fila_prospeccao_extra.json` (180 empresas) fica inativa. Recomendo refatorar para consumir da fila_extra quando a lista principal acabar.
-3. **Sem backup** do leads.csv — uma perda de dados dessas é irrecuperável. Sugiro backup automático.
+1. **🔥 PASTIFÍCIO SELMI (Sumaré/SP)** — Ticket #89532 no Zendesk. Proposta na fila de análise do SAC. Potencial para óleo vencido + resíduos >40% gordura.
 
-### Leads QUENTES 🎯
+2. **🔥 PAGUE MENOS (Campinas)** — Proposta enviada para Josiane Marinho. Aguardar retorno.
 
-1. **🔥 DALBEN SUPERMERCADOS:** Gerente Luis (luish@supermercadosdalben.com.br) — proposta enviada.
-2. **🔥 MUFFATO / MAX ATACADISTA:** SAC orientou ligar (43) 3371-1700.
-3. **🔥 SAVEGNAGO (~100 lojas):** Aguardando retorno. Tocar WhatsApp (11) 96785-9631 URGENTE.
-4. **🔥 QUEIJOS ITUPEVA (Rafael):** Negociação ativa coleta-teste.
-5. **🔥 CABANHA CAMPESTRE 53 (Daniele Santos):** Interesse confirmado! ~600kg/mês.
-6. **🔥 BRASFRIGO (Salto/SP):** Empresa na mesma cidade — sac@brasfrigo.com.br.
+3. **🔥 DALBEN SUPERMERCADOS** — Gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada. Aguardar retorno.
+
+4. **🔥 QUEIJOS ITUPEVA (Rafael)** — Negociação ativa para coleta-teste de vencidos >40% gordura. Lead mais quente para conversão rápida.
+
+5. **🔥 CABANHA CAMPESTRE 53 (Daniele Santos)** — ~600kg/mês. Aguardando detalhamento do tipo de material.
+
+6. **🔥 BRASFRIGO (Salto/SP)** — Empresa na mesma cidade-sede (Salto). Contato via sac@brasfrigo.com.br. Pendente toque humano.
+
+7. **🔥 SAVEGNAGO (~100 lojas)** — Aguardando retorno após apresentação comercial. Pendente toque via WhatsApp (11) 96785-9631.
+
+8. **🔥 MUFFATO / MAX ATACADISTA** — SAC orientou ligar (43) 3371-1700. Pendente ação humana.
+
+## 2026-09-22 (terça-feira) — Bot de SEO
+
+### Ranking Bing (cron #9)
+
+- **22 keywords monitoradas** — todas indexadas ✅
+- **Ranking real:** todas fora do top 20 ⏳
+- **Diagnóstico:** Site indexado, SEO geral OK. Sem posições ainda — normal para site novo, precisa de semanas de maturação + backlinks.
+- **Ação:** Nenhuma mudança aplicada (conforme regra: "SEO OK, sem posições → reportar e parar").
 
 ### Pendências para o Estrategista
 
-- Toque humano: Dalben (ligar), Savegnago (WhatsApp), Muffato (telefone)
-- Fechar Brasfrigo (Salto/SP) — empresa na mesma cidade
-- Netlify: créditos de build esgotados (403) — site principal fora do ar
-- Estudar refatoração do prospecao.py para consumir `fila_prospeccao_extra.json`
-- Implementar backup automático do leads.csv
+- **🔴 Alta prioridade:** Toque humano Dalben (ligar Luis), Savegnago (WhatsApp), Muffato (ligar 43 3371-1700)
+- **🟡 Média prioridade:** Fechar Brasfrigo (Salto/SP), acompanhar Selmi ticket #89532, acompanhar Pague Menos
+- **🔧 Infra:** Netlify créditos esgotados (403) — site principal offline; versão nova no GitHub Pages
+- **📋 Manutenção:** Repor fila de prospecção com +15-20 empresas (pendentes = 10, abaixo do ideal 30+)
+- **📊 Qualidade:** Revisar lista de 55 bounces para eventual limpeza/migração de dados

@@ -1,20 +1,21 @@
 {
-  "atualizado_em": "2026-09-21T14:02-03:00",
-  "atividade_tick_14h02_21_09": {
-    "rodadas_no_dia": 7,
-    "sync_formspree": "OK — 0 notificacoes novas do Formspree; cache de bounces permanece 54 (54 emails no bounces.json)",
-    "corrigir_emails": "OK — 0 processados neste tick (todos os 54 bounces ja com tentativa registrada)",
-    "watchdog": "exit 0 — tudo saudavel, nenhum follow-up atrasado; SMTP OK · IMAP OK; 263 leads / 201 ativos / 36 bounce (CSV) / 54 bounce (cache)",
-    "prospecao_followup": "0 follow-ups processados — nada atrasado neste tick",
-    "send_sequence": "OK — sequencia processada, 0 emails enviados (sequencia vazia para hoje)",
-    "check_replies": "OK — 0 respostas pendentes; replies_pending.json = [] — caixa limpa",
-    "respostas_enviadas": "0 neste tick — nenhuma resposta de lead pendente",
+  "atualizado_em": "2026-09-22T17:44-03:00",
+  "atividade_tick_17h44_22_09": {
+    "rodadas_no_dia": 1,
+    "sync_formspree": "OK — 0 notificacoes novas do Formspree; cache de bounces permanece 55",
+    "corrigir_emails": "OK — 0 bounces processados (todos os 55 ja com tentativa registrada)",
+    "watchdog": "EXIT 1 (1 problema: 122 follow-ups atrasados) → RESOLVIDO via prospecao_followup.py → EXIT 0 apos correcao: 122 follow-ups enviados; tudo saudavel",
+    "prospecao_followup": "OK — 122 follow-ups atrasados enviados (FP1 para leads comerciais)",
+    "send_sequence": "OK — sequencia processada, 0 emails da fila principal",
+    "check_replies": "OK — 2 respostas pendentes: (1) COVABRA SUPERMERCADOS via Zendesk (Ana Paula) — portal de fornecedores aberto! canal comercial direto; (2) VITAFOR via Freshdesk — auto-resposta de ticket (nao comercial)",
+    "respostas_enviadas": "1 — Covabra Supermercados (lead 39): resposta para support@covabra.zendesk.com agradecendo pelo portal e perguntando volume mensal + tipo de material + oferecendo WhatsApp. Lead QUENTE.",
+    "respostas_nao_comerciais": "1 — Vitafor (lead 127): auto-resposta Freshdesk (ticket 515718 recebido). Nenhuma acao de resposta necessaria — aguardar contato humano.",
     "relatorio_esg": "nenhum pedido — sem geracao de PDF",
-    "emails_enviados_hoje": "4 no total (2 FP3 + 2 respostas); 0 novos neste tick",
-    "enviar_lote_status": "1 pendente na fila extra: SuperViva Supermercados Salto <faleconosco@superviva.com.br>",
+    "emails_enviados_hoje": "123 no total (1 resposta Covabra + 122 follow-ups FP1)",
+    "enviar_lote_status": "N/A — nao rodado neste tick",
     "leads_novos": [],
-    "pipeline_snapshot_14h02": "263 leads / 162 novo / 18 sequencia / 21 respondido / 36 bounce (CSV) / 54 cache / 26 encerrado / 201 ativos — pipeline estavel",
-    "observacao": "Tick 14:02 21/09 (segunda-feira) — 7o tick do dia. Watchdog exit 0 pelo 4o tick seguido. Sequencia OK, check-replies 0 pendentes — caixa limpa. Nenhum follow-up atrasado. Pipeline estavel em 263 leads. Fila prospeccao extra: 180 itens, 1 pendente (SuperViva). Nenhuma resposta de lead pendente para atender neste tick.",
-    "gargalos_humanos": "Selmi (contato@selmi.com.br, prazo 11/09 vencido ha 10d), Savegnago (comercial@, prazo 10/09 vencido ha 11d), Grupo IMC (felix.costa@grupoimc.com.br, prazo 10/09 vencido ha 11d), Queijos Itupeva (Rafael — aguardando relacao de volumes + coleta-teste), Dalben (gerente Luis — aguardando volume mensal desde 18/09)"
+    "pipeline_snapshot_17h44": "169 leads / 123 novo / 13 respondido / 33 bounce (CSV) / 55 cache — Covabra respondeu como lead quente (portal de fornecedores aberto!) +1 respondido",
+    "observacao": "Tick 17:44 22/09 (terca-feira) — 1o tick do dia. Watchdog acusou 122 follow-ups atrasados — resolvido via prospecao_followup.py que enviou todos. Check-replies encontrou 2 respostas: COVABRA SUPERMERCADOS (portal de fornecedores — canal comercial aberto!) e VITAFOR (auto-resposta Freshdesk). Resposta enviada para Covabra perguntando volume + tipo de material + WhatsApp. Lead QUENTE adicionado.",
+    "gargalos_humanos": "Savegnago (comercial@, prazo 10/09 vencido ha 13d), Grupo IMC (felix.costa@grupoimc.com.br, prazo 10/09 vencido ha 13d), Queijos Itupeva (Rafael — aguardando relacao de volumes + coleta-teste), Dalben (gerente Luis — aguardando volume mensal desde 18/09)"
   }
 }
