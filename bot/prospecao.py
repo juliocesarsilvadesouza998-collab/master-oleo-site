@@ -84,8 +84,28 @@ EMPRESAS = [
         {"nome": "SupraFoods", "empresa": "SupraFoods Comercio de Alimentos LTDA", "email": "comercial@suprafoods.com.br", "cidade": "Americana/SP", "segmento": "Industria de alimentos"},
         {"nome": "Supermercado Pague Menos", "empresa": "Supermercados Pague Menos SA", "email": "falecom@supermercadospaguemenos.com.br", "cidade": "Campinas/SP", "segmento": "Supermercados (rede)"},
         {"nome": "Supermercados Sao Judas Tadeu", "empresa": "Supermercados Sao Judas Tadeu LTDA", "email": "faleconosco@supersaojudas.com.br", "cidade": "Bauru/SP", "segmento": "Supermercados (rede)"},
-        {"nome": "Natari Alimentos", "empresa": "Natari Comercio de Alimentos LTDA", "email": "natari@alhonatari.com.br", "cidade": "Monte Mor/SP", "segmento": "Atacado de hortifrutis e alimentos"},
-    ]
+        # --- NOVAS EMPRESAS (adicionadas 22/09 - reposicao de fila, MX verificado) ---
+                # Oleos e gorduras - alta prioridade
+                {"nome": "Unigra Brasil", "empresa": "Unigra Brasil Industria e Comercio de Produtos Alimenticios LTDA", "email": "sac.br@mastermartini.com", "cidade": "Sorocaba/SP", "segmento": "Industria de oleos, gorduras e margarinas"},
+                {"nome": "AAK do Brasil", "empresa": "AAK do Brasil Industria e Comercio de Oleos Vegetais LTDA", "email": "marketing.sola@aak.com", "cidade": "Jundiai/SP", "segmento": "Industria de oleos e gorduras especiais"},
+                # Industrias de alimentos
+                {"nome": "Perfetti Van Melle Brasil", "empresa": "Perfetti Van Melle Brasil LTDA", "email": "contato@perfettivanmelle.com.br", "cidade": "Vinhedo/SP", "segmento": "Industria de balas e guloseimas"},
+                {"nome": "Bakels Brasil", "empresa": "Bakels Brasil Ingredientes para Panificacao LTDA", "email": "brazil@bakels.com.br", "cidade": "Vinhedo/SP", "segmento": "Industria de ingredientes para panificacao"},
+                {"nome": "Kemin do Brasil", "empresa": "Kemin Industria e Comercio LTDA", "email": "marketing.foodlatam@kemin.com", "cidade": "Valinhos/SP", "segmento": "Industria de ingredientes alimenticios"},
+                {"nome": "Theoto S/A", "empresa": "Theoto S/A Industria e Comercio", "email": "sac@theoto.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de produtos alimenticios"},
+                {"nome": "Marquespan", "empresa": "Marquespan Industria de Alimentos LTDA", "email": "sac@marquespan.com.br", "cidade": "Tatui/SP", "segmento": "Industria de panificacao (paes congelados)"},
+                {"nome": "Flamboia Alimentos", "empresa": "Flamboia Alimentos LTDA", "email": "comercial@flamboia.com.br", "cidade": "Cabreuva/SP", "segmento": "Industria de alimentos"},
+                {"nome": "Agrana Fruit Brasil", "empresa": "Agrana Fruit Brasil Industria e Comercio LTDA", "email": "atendimento@agrana.com", "cidade": "Cabreuva/SP", "segmento": "Industria de frutas e ingredientes"},
+                {"nome": "Moinho Potenza", "empresa": "Industria Moageira Nova Odessa LTDA", "email": "contato@moinhopotenza.com.br", "cidade": "Hortolandia/SP", "segmento": "Industria de farinhas e moagem"},
+                {"nome": "Bem Casado", "empresa": "Bem Casado Industria de Alimentos e Bebidas LTDA", "email": "sac@arrozbemcasado.com.br", "cidade": "Nova Odessa/SP", "segmento": "Industria de arroz e alimentos"},
+                {"nome": "Penina Alimentos", "empresa": "Penina Alimentos LTDA", "email": "contato@penina.com.br", "cidade": "Boituva/SP", "segmento": "Industria de alimentos (temperos e especiarias)"},
+                # Frigorificos - nicho prioritario (gordura animal + oleo de fritura)
+                {"nome": "Frigorifico Cowpig", "empresa": "Frigorifico Cowpig LTDA", "email": "contato@cowpig.com.br", "cidade": "Boituva/SP", "segmento": "Frigorifico (cortes nobres de carne)"},
+                # Refeicoes coletivas
+                {"nome": "CBR Refeicoes", "empresa": "C.B.R. Fornecedora de Refeicoes LTDA", "email": "fiscal@cbr-refeicoes.com.br", "cidade": "Hortolandia/SP", "segmento": "Refeicoes coletivas"},
+                # Frutas processadas
+                {"nome": "Only Fruit", "empresa": "Only Fruit Industria de Alimentos LTDA", "email": "contato@onlyfruit.com.br", "cidade": "Nova Odessa/SP", "segmento": "Industria de alimentos (frutas)"},
+            ]
 
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")

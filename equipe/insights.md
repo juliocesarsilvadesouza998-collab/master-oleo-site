@@ -54,10 +54,30 @@
 - **Diagnóstico:** Site indexado, SEO geral OK. Sem posições ainda — normal para site novo, precisa de semanas de maturação + backlinks.
 - **Ação:** Nenhuma mudança aplicada (conforme regra: "SEO OK, sem posições → reportar e parar").
 
-### Pendências para o Estrategista
+## 2026-09-22 (terça-feira) — Melhorador Contínuo (17:48)
 
-- **🔴 Alta prioridade:** Toque humano Dalben (ligar Luis), Savegnago (WhatsApp), Muffato (ligar 43 3371-1700)
-- **🟡 Média prioridade:** Fechar Brasfrigo (Salto/SP), acompanhar Selmi ticket #89532, acompanhar Pague Menos
-- **🔧 Infra:** Netlify créditos esgotados (403) — site principal offline; versão nova no GitHub Pages
-- **📋 Manutenção:** Repor fila de prospecção com +15-20 empresas (pendentes = 10, abaixo do ideal 30+)
-- **📊 Qualidade:** Revisar lista de 55 bounces para eventual limpeza/migração de dados
+### Diagnóstico
+- **10 leads pendentes** — abaixo da meta 30+. Pipeline secando.
+- **Bounce 26%** (33/126) — acima do ideal <15%.
+- **Respostas 10,3%** (13/126) — boa taxa, mas sem novidade desde 19/09.
+- **Site:** masteroleo.eco.br = 200 OK (GitHub Pages), Netlify 403.
+
+### Melhorias implementadas
+
+| Ação | Arquivo | Detalhe |
+|------|---------|---------|
+| ✅ +15 empresas MX-verificadas | bot/prospecao.py | Unigra, AAK, Perfetti, Bakels, Kemin, Theoto, Marquespan, Flamboia, Agrana, Moinho Potenza, Bem Casado, Penina, Cowpig, CBR, Only Fruit — todas com MX Outlook/Locaweb/Mimecast |
+| ✅ FP3 reformulado | bot/prospecao_followup.py | Tom mais suave, opção de saída explícita, US$11 bi + escassez global + 2028 em 2 parágrafos |
+| ✅ Pipeline +33% | bot/prospecao.py | EMPRESAS: 45 → 60 empresas |
+
+### Aprendizados
+1. **Bounce alto é o maior problema estrutural**. Novos emails com MX de provedores grandes (Outlook, Locaweb) devem reduzir isso.
+2. **FP3 estava repetitivo** — só repetia preço + 2028 sem diferencial do FP2. Novo template é mais honesto ("prometo que é a última"), dá saída clara.
+3. **Repor fila é a alavanca mais imediata**: 10 pendentes → ~1 resposta esperada; 30 pendentes → ~3 respostas. +15 empresas = salto estimado de 60% na fila.
+4. **Indústrias de óleos e gorduras (Unigra, AAK) são o melhor fit** — geram óleo vencido E óleo de limpeza de máquinas.
+
+### Pendências para o Estrategista
+- 🔴 Toque humano: Dalben, Savegnago (WhatsApp), Muffato (ligar)
+- 🟡 Fechar Brasfrigo (Salto/SP), acompanhar Selmi, Pague Menos
+- 🔧 Netlify 403 — site principal offline (GitHub Pages funciona)
+- 📋 Pipeline: rodar `python prospecao.py --dry-run` nas 15 novas empresas

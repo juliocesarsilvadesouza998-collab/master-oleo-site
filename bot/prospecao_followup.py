@@ -103,15 +103,14 @@ def tpl_fp(cfg, lead, n):
 <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
-        subj = f"Último contato sobre a compra do óleo — {g['nome']}"
-        html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, {lead['nome']}.</p>
-<p>Última mensagem sobre a <b>compra do óleo usado</b> da {lead['empresa']} — só 2 motivos para valer 2 minutos de atenção:</p>
-<p>1) O óleo que hoje sai de graça <b>paga de R$ 1,00 a R$ 2,50/litro</b>, à vista (<b>PIX na coleta</b>), com certificado de destinação e coleta programada — logística 100% por nossa conta. Um ponto que gera 600 L/mês recebe cerca de <b>R$ 14 mil/ano</b> só com esse resíduo.</p>
-<p>2) A partir de <b>jan/2028</b>, o biodiesel é obrigado a usar óleo residual (<b>Portaria MME/MMA nº 3/2026</b>) — quem fechar contrato agora garante preço e prioridade antes da disputa pela matéria-prima.</p>
-<p>Se fizer sentido, agendamos uma <b>coleta-teste</b> essa semana, sem compromisso: me responde a quantidade mensal (litros ou kg) que eu te passo o valor e o certificado em até 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-<p>Sem interesse? Sem problema — é só ignorar. Obrigado pela atenção.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
-</div>"""
+            subj = f"Encerrando contato — {lead['empresa']} × {g['nome']}"
+            html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+    <p>Olá, {lead['nome']}.</p>
+    <p>Só mais esta — prometo que é a última sobre a <b>compra do óleo usado da {lead['empresa']}</b>.</p>
+    <p>O mercado global UCO vale <b>US$ 11 bi</b> e a demanda mundial já supera a coleta — Europa consome 8× mais do que coleta, e a partir de <b>jan/2028</b> o biodiesel brasileiro é obrigado a usar ≥1% de óleo residual (Portaria MME/MMA nº 3/2026). Quem tiver contrato assinado antes estará na dianteira.</p>
+    <p>Não precisa de nada agora? Sem problema — é só ignorar e não receberá mais mensagens sobre isso. Se no futuro fizer sentido, chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p>Obrigado pela atenção e sucesso com a {lead['empresa']}.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+    </div>"""
     return {"subject": subj, "html": html}
 
 def main():

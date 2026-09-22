@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-21 19:31 (cron #8)",
+  "atualizado_em": "2026-09-22 17:48 (cron #9 - Melhorador Continuo)",
   "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
@@ -28,46 +28,46 @@
     "respondidos": 12,
     "nota": "leads.csv funcional. Watchdog 21/09 19:31: 169 leads, 124 ativos, 55 bounces. Ciclo tranquilo sem respostas novas. Cron #8."
   },
-  "melhoria_continua_2026_09_21_cron_19h31": {
-    "timestamp": "2026-09-21 19:31 (cron #8)",
-    "diagnostico": "Ciclo normal noturno. Sem follow-ups atrasados. Sem notificacoes Formspree. Sem respostas pendentes. Cron #8.",
+  "melhoria_continua_2026_09_22_cron_17h48": {
+    "timestamp": "2026-09-22 17:48 (cron #9 - Melhorador Continuo)",
+    "diagnostico": "10 leads pendentes (abaixo da meta 30+). Bounce 26% (acima do ideal 15%). Respostas sem novidade desde 19/09. Pipeline precisa de reposicao.",
     "acoes": [
-      "1. [PASSO 0] sync_formspree.py: 55 bounces em cache, 0 notificacoes novas (cron #8)",
-      "2. [PASSO 0] corrigir_emails.py: 0 bounces processados (todos ja tentados anteriormente) (cron #8)",
-      "3. [PASSO 1] watchdog.py: exit 0 — saudavel, sem problemas (cron #8)",
-      "4. [PASSO 2] prospecao_followup.py: 0 processados (nenhum follow-up atrasado) (cron #8)",
-      "5. [PASSO 2] send_sequence: sequencia processada (cron #8)",
-      "6. [PASSO 2] check-replies: 0 respostas pendentes — ninguem respondeu neste ciclo (cron #8)"
+      "1. Prospecao: +15 empresas adicionadas ao prospecao.py (MX verificado, todas com Outlook/Locaweb/Mimecast/Barracuda = baixo risco bounce)",
+      "2. FP3 template reformulado em prospecao_followup.py: tom mais suave, opcao de saida explicita, US$11bi + Europa 8x + 2028 como argumento forte unico",
+      "3. Pipeline EMPRESAS passa de 45 para 60 empresas (+33%), fila pendente projetada para ~25"
     ],
-    "leads_csv": {
-      "total": 169,
-      "enviadas": 124,
-      "novas_pendentes": 10,
-      "bounce": 55,
-      "respondido": 12,
-      "cron": "#8"
+    "pipeline": {
+      "empresas_em_prospecao_py": 60,
+      "pendentes_leads_csv": 10,
+      "total_na_fila_extra": 180,
+      "nota": "15 novas empresas MX-verificadas aguardando envio. Prospexao rodara no proximo cron."
     },
-    "lead_quente": [
-      "🔥 PASTIFICIO SELMI (Sumare/SP): Ticket #89532 aberto no Zendesk — proposta na fila de analise do SAC.",
-      "DALBEN SUPERMERCADOS: Gerente Luis (luish@supermercadosdalben.com.br). Proposta enviada — aguardar retorno.",
-      "MUFFATO / MAX ATACADISTA: SAC orientou ligar (43) 3371-1700.",
-      "SAVEGNAGO (~100 lojas): Aguardando retorno.",
-      "Queijos Itupeva (Rafael): Negociacao ativa para coleta-teste de residuos vencidos >40% gordura.",
-      "CABANHA CAMPESTRE 53 (Daniele Santos): ~600kg/mes. Aguardando tipo de material.",
-      "Brasfrigo (Salto/SP): Empresa na mesma cidade — contato via sac@brasfrigo.com.br.",
-      "PAGUE MENOS (Campinas): Proposta enviada para Josiane Marinho."
+    "novas_empresas": [
+      "Unigra Brasil (Sorocaba) - oleos/gorduras",
+      "AAK do Brasil (Jundiai) - oleos especiais",
+      "Perfetti Van Melle (Vinhedo) - balas/guloseimas",
+      "Bakels Brasil (Vinhedo) - ingredientes panificacao",
+      "Kemin do Brasil (Valinhos) - ingredientes alimenticios",
+      "Theoto S/A (Jundiai) - produtos alimenticios",
+      "Marquespan (Tatui) - paes congelados",
+      "Flamboia Alimentos (Cabreuva) - alimentos",
+      "Agrana Fruit Brasil (Cabreuva) - frutas/ingredientes",
+      "Moinho Potenza (Hortolandia) - farinhas",
+      "Bem Casado (Nova Odessa) - arroz",
+      "Penina Alimentos (Boituva) - temperos",
+      "Frigorifico Cowpig (Boituva) - frigorifico",
+      "CBR Refeicoes (Hortolandia) - refeicoes coletivas",
+      "Only Fruit (Nova Odessa) - frutas processadas"
     ],
     "pendente_estrategista": [
-      "Toque humano DALBEN - ligar para gerente Luis",
+      "Toque humano DALBEN - ligar gerente Luis",
       "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631",
       "Toque humano MUFFATO - ligar (43) 3371-1700",
-      "Fechar Brasfrigo - empresa na mesma cidade de Salto/SP",
+      "Fechar Brasfrigo (Salto/SP)",
       "Acompanhar Selmi ticket #89532",
       "Acompanhar Pague Menos - Josiane Marinho",
-      "Netlify 403 - creditos de build esgotados, site parado no GitHub Pages",
-      "Fila prospeccao extra: adicionar mais 15-20 empresas ao prospecao.py para manter fila abastecida"
-    ],
-    "site_principal": "https://masteroleo.eco.br (Netlify - creditos de build ESGOTADOS, 403; versao ANTIGA sem calculadora no ar)",
-    "site_backup": "https://juliocesarsilvadesouza998-collab.github.io/master-oleo-site/ (GitHub Pages, versao nova com calculadora e Catalent no ar)"
+      "Netlify 403 - site principal offline, GitHub Pages funciona",
+      "Pipeline: rodar --dry-run nas 15 novas empresas antes do envio real"
+    ]
   }
 }
