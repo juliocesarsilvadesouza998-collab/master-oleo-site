@@ -1,21 +1,43 @@
 {
-  "atualizado_em": "2026-09-22T17:44-03:00",
-  "atividade_tick_17h44_22_09": {
-    "rodadas_no_dia": 1,
-    "sync_formspree": "OK — 0 notificacoes novas do Formspree; cache de bounces permanece 55",
-    "corrigir_emails": "OK — 0 bounces processados (todos os 55 ja com tentativa registrada)",
-    "watchdog": "EXIT 1 (1 problema: 122 follow-ups atrasados) → RESOLVIDO via prospecao_followup.py → EXIT 0 apos correcao: 122 follow-ups enviados; tudo saudavel",
-    "prospecao_followup": "OK — 122 follow-ups atrasados enviados (FP1 para leads comerciais)",
-    "send_sequence": "OK — sequencia processada, 0 emails da fila principal",
-    "check_replies": "OK — 2 respostas pendentes: (1) COVABRA SUPERMERCADOS via Zendesk (Ana Paula) — portal de fornecedores aberto! canal comercial direto; (2) VITAFOR via Freshdesk — auto-resposta de ticket (nao comercial)",
-    "respostas_enviadas": "1 — Covabra Supermercados (lead 39): resposta para support@covabra.zendesk.com agradecendo pelo portal e perguntando volume mensal + tipo de material + oferecendo WhatsApp. Lead QUENTE.",
-    "respostas_nao_comerciais": "1 — Vitafor (lead 127): auto-resposta Freshdesk (ticket 515718 recebido). Nenhuma acao de resposta necessaria — aguardar contato humano.",
-    "relatorio_esg": "nenhum pedido — sem geracao de PDF",
-    "emails_enviados_hoje": "123 no total (1 resposta Covabra + 122 follow-ups FP1)",
-    "enviar_lote_status": "N/A — nao rodado neste tick",
-    "leads_novos": [],
-    "pipeline_snapshot_17h44": "169 leads / 123 novo / 13 respondido / 33 bounce (CSV) / 55 cache — Covabra respondeu como lead quente (portal de fornecedores aberto!) +1 respondido",
-    "observacao": "Tick 17:44 22/09 (terca-feira) — 1o tick do dia. Watchdog acusou 122 follow-ups atrasados — resolvido via prospecao_followup.py que enviou todos. Check-replies encontrou 2 respostas: COVABRA SUPERMERCADOS (portal de fornecedores — canal comercial aberto!) e VITAFOR (auto-resposta Freshdesk). Resposta enviada para Covabra perguntando volume + tipo de material + WhatsApp. Lead QUENTE adicionado.",
-    "gargalos_humanos": "Savegnago (comercial@, prazo 10/09 vencido ha 13d), Grupo IMC (felix.costa@grupoimc.com.br, prazo 10/09 vencido ha 13d), Queijos Itupeva (Rafael — aguardando relacao de volumes + coleta-teste), Dalben (gerente Luis — aguardando volume mensal desde 18/09)"
+  "atualizado_em": "2026-09-23T14:01-03:00",
+  "atividade_tick_14h01_23_09": {
+    "ciclo": "cron_tick_4",
+    "acao": "sync + watchdog + send_sequence + check-replies",
+    "emails_enviados": 0,
+    "bounces_novos": 0,
+    "resultado": "Tick de manutenção — sem novas respostas, sem bounces, sistema saudável"
+  },
+  "atividade_tick_14h01_23_09_detalhado": {
+    "sync_formspree": "OK — 0 notificacoes novas",
+    "corrigir_emails": "OK — 0 processados (todos os 56 ja com tentativa)",
+    "watchdog": "EXIT 0 — tudo saudavel (SMTP OK · IMAP OK; 199 leads / 150 ativos / 56 bounce cache)",
+    "prospecao_followup": "OK — 0 atrasados",
+    "send_sequence": "OK — sequencia processada",
+    "check_replies": "OK — 0 respostas pendentes (replies_pending.json vazio)",
+    "respostas_enviadas": "0 — nenhuma resposta nova para atender",
+    "relatorio_esg": "nenhum pedido",
+    "enviar_lote_status": "11 pendentes na fila (grandes industrias: Bunge, Camil, Cacau Show, Kopenhagen, Embaré, Biolab, RW, IDNLABS, Romariz, Mondiale)",
+    "pipeline_atual": "199 leads / 150 novo / 15 respondido / 34 bounce (56 cache) / 165 ativos",
+    "observacao": "Tick 14:01 23/09 — 4o tick do dia. Pipeline estavel em 199 leads. Watchdog verde direto (exit 0). 0 respostas pendentes, 0 bounces novos, 0 follow-ups atrasados. Fila de prospeccao com 11 pendentes de alto valor (Bunge, Camil, Cacau Show, Kopenhagen, Embaré, Biolab). Sem acao de resposta necessaria neste tick. Leads quentes mantidos: Savegnago, Covabra, Selmi, Queijos Itupeva, Pague Menos, Cabanha Campestre."
+  },
+  "atividade_tick_13h32_23_09": {
+    "ciclo": "cron_tick_3",
+    "acao": "sync + watchdog + send_sequence + check-replies",
+    "emails_enviados": 0,
+    "bounces_novos": 0,
+    "resultado": "Tick de manutenção — sem novas respostas, sem bounces, sistema saudável"
+  },
+  "atividade_tick_11h32_23_09": {
+    "ciclo": "cron_tick_2",
+    "acao": "sync + watchdog + send_sequence + check-replies",
+    "emails_enviados": 0,
+    "bounces_novos": 0,
+    "resultado": "Tick de manutenção — sem novas respostas, sem bounces, sistema saudável"
+  },
+  "fila_prospeccao": {
+    "total": 240,
+    "pendentes": 11,
+    "contatados": 197,
+    "bounces": 40
   }
 }

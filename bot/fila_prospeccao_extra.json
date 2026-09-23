@@ -1258,5 +1258,33 @@
     "email": "faleconosco@biolabfarma.com.br",
     "cidade": "São Paulo/SP (fábricas em Taboão da Serra, Jandira, Bragança Paulista)",
     "segmento": "Indústria farmacêutica (encapsulados) - NICHO PRIORITÁRIO (óleo vegetal limpeza máquinas)"
-  }
-]
+      },
+      {
+        "nome": "Siol Alimentos",
+        "empresa": "Siol Alimentos Ltda",
+        "email": "sac@siol.com.br",
+        "cidade": "Jundiai/SP",
+        "segmento": "Industria de oleos, maioneses e gordura vegetal (Google MX)"
+      },
+      {
+        "nome": "Metha Alimentos",
+        "empresa": "Metha Distribuidora de Produtos Ltda",
+        "email": "comercial@methaalimentosoficial.com",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Refeicoes coletivas (360k refeicoes/mes - Hostinger MX)"
+      },
+      {
+        "nome": "Supermercados Tauste",
+        "empresa": "Supermercados Tauste S/A",
+        "email": "sac@tauste.com.br",
+        "cidade": "Americana/SP",
+        "segmento": "Supermercados rede (~60 lojas - Google MX)"
+      },
+      {
+        "nome": "BRF Sorocaba",
+        "empresa": "BRF S.A. Unidade Sorocaba",
+        "email": "faleconosco@brf-br.com",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Industria de alimentos frigorifico (Outlook MX)"
+      }
+    ]
