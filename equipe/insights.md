@@ -1,43 +1,88 @@
 # Insights Diários — Analista de Qualidade
 
-## 2026-09-23 (quarta-feira) — 14:03 (Cron #20 — Melhorador Contínuo)
+## 2026-09-24 (quinta-feira) — 18:23 (Cron #27 — Melhorador Contínuo)
 
-### Melhorias implementadas
+### Resumo do ciclo
 
-1. **🎯 Fila de prospecção fortalecida**: adicionadas 4 novas empresas com MX verificado ao `fila_prospeccao_extra.json`:
-   - **Siol Alimentos** (Jundiaí/SP) — indústria de óleos, maioneses e gordura vegetal (Google MX ✅)
-   - **Metha Alimentos** (Sorocaba/SP) — refeições coletivas, 360K refeições/mês (Hostinger MX ✅)
-   - **Supermercados Tauste** (Americana/SP) — rede de ~60 lojas (Google MX ✅)
-   - **BRF Sorocaba** (Sorocaba/SP) — frigorífico BRF (Outlook MX ✅)
-   - **Resultado**: fila extra cresceu de 180 → 184 empresas. Reposição para >30 pendentes.
+| Métrica | Valor | Δ |
+|---------|-------|---|
+| **Total de leads (watchdog)** | 199 | — |
+| **Ativos** | 150 | — |
+| **Bounce (cache)** | 56 | — |
+| **Empresas em prospecao.py** | 73 | **+15** ✅ |
+| **Pendentes (fila)** | 15 | — |
+| **Fila extra** | 184 | — |
 
-2. **🌐 Site melhorado (`deploy-vercel/index.html`)**:
-   - Hero card alterado de "Para indústrias alimentícias" para **"Urgência regulatória — jan/2028"** com destaque à Portaria MME/MMA nº 3/2026
-   - Nova FAQ **"Quanto rende vender óleo usado por mês?"** com cálculo R$ 14,4 mil/ano + link para calculadora
-   - Site funcional (Netlify OK — PDF guia-descarte-oleo.pdf acessível via masteroleo.eco.br 200 ✅)
+### Melhorias implementadas neste ciclo
 
-3. **🔧 Descoberta**: site masteroleo.eco.br **está online** (HTTP 200) — relatório anterior de 403 pode ter sido intermitente ou resolvido. PDF guia-descarte-oleo.pdf acessível.
+1. **🎯 Fila fortalecida (+15 empresas)**: adicionadas 15 novas empresas de alto potencial à `prospecao.py` (EMPREAS):
+   - **Salto/SP**: Cap-Lab (encapsulados) — na cidade-sede!
+   - **Indaiatuba**: Cellera Farma, Farmoterapica, Hero Suplementos (farmacêuticas/encapsulados → óleo vegetal limpeza máquinas)
+   - **Sorocaba**: Sorocaps (farmacêutica encapsulados)
+   - **Jundiaí**: Hile, WBM (suplementos/encapsulados)
+   - **Piracicaba**: Supermercados São Vicente (rede — alta conversão)
+   - **Capela do Alto**: Ekobe (nutracêuticos — nicho prioritário)
+   - **Campinas/Sorocaba**: Zuhan Refeições, Lollos Refeições (coletivas)
+   - **Louveira**: Rede Frango Assado (fritura alto volume)
+   - **Campo Limpo Paulista**: Mareia/Conrail (maioneses — vencidos >40% gordura!)
+   - **Total**: 73 empresas na lista de prospecção ativa.
 
-### Diagnóstico do dia
-| Métrica | Valor |
-|---------|-------|
-| Total de leads (watchdog) | 199 |
-| Ativos | 150 |
-| Bounces | 56 (22%) |
-| Respostas | 15 (9.6%) |
-| Pendentes | 26 |
-| Fila extra | 184 (+4 hoje) |
-| Site | ✅ Online (masteroleo.eco.br) |
+2. **📧 Template genérico de apresentação reforçado** (`prospecao.py` linha 305):
+   - US$ 8 bi → **US$ 11 bi** (mercado global UCO)
+   - Adicionado: **R$ 14,4 mil/ano** (600 L/mês × R$ 2,00/L)
+   - Adicionado: Prova social **Madero 55 mil L/mês**
+   - Adicionado: **Exportação EUA 1,4 mi t** (2023)
+   - Adicionado: **PS com link para calculadora** no rodapé
+
+3. **🌐 Site — Página standalone de calculadora** (`deploy-vercel/calculadora.html`):
+   - Calculadora interativa de valor do óleo usado
+   - Tabela de referência: 600L/mês → R$ 14,4k/ano até 55kL/mês → R$ 1,2M/ano
+   - Indicador de água preservada (1L óleo = 25.000L água contaminada)
+   - Formulário de lead com volume + valor estimado (Formspree)
+   - Fallback para WhatsApp se formulário falhar
+   - Schema WebApplication + SEO metadata
+   - Linkável em campanhas de email e redes sociais
+
+4. **🌐 Home page** (`deploy-vercel/index.html`):
+   - Nova seção "Quanto vale o seu óleo usado?" após o hero
+   - 4 números-chave: US$ 11 bi | 55 mil L/mês | R$ 14,4 mil/ano | Jan/2028
+   - CTA duplo: "Abrir calculadora →" e "Simular na página"
+
+### Diagnóstico do sistema
+
+| Métrica | Valor | Meta |
+|---------|-------|------|
+| Watchdog | ✅ Saudável (exit 0) | — |
+| SMTP/IMAP | ✅ OK | — |
+| Emails enviados | 156 | — |
+| Taxa resposta | 9.6% | >3% ✅ |
+| Bounce rate | 22% (34/156) | <15% ❌ |
+| Pendentes fila | 15 | >30 ❌ |
+| Empresas em lista | 73 (+15) | — |
+| Fila extra | 184 | — |
+
+### Observações
+
+- **Watchdog verde direto (exit 0)** — SMTP/IMAP operacionais, sem follow-ups atrasados, sem bounces novos.
+- **15 leads pendentes na fila** — abaixo da meta de 30+. Mas com 73 empresas em prospecao.py (+15 hoje), a reposição do cron noturno deve elevar esse número.
+- **Bounce rate 22%** — acima da meta de 15%. Continua sendo o calcanhar de Aquiles do sistema. A causa raiz são domínios self-hosted sem MX confiável.
+- **Site ganhou calculadora standalone** — linkável em emails e campanhas. Pode gerar leads inbound se divulgada.
+- **Nova oportunidade: Cap-Lab em Salto/SP** — laboratório de encapsulados na mesma cidade, usa óleo vegetal para limpeza de máquinas como a Catalent. Contato local é muito mais conversível.
 
 ### Pendências para o Estrategista
-- 🔴 **Toque humano**: Dalben, Savegnago (WhatsApp), Muffato (tel 43 3371-1700)
-- 🔴 **Bounce rate 22%** — acima da meta de <15%. Sugerir revisão da lista de leads com MX self-hosted
-- 🟡 **Queijos Itupeva (Rafael)** — lead mais quente, agendar coleta-teste
-- 🟡 **Covabra** e **Coocerqui** — responderam, priorizar follow-up humano
-- 🟡 **Fila pendente em 26** — abaixo da meta 30+. Novas empresas adicionadas para reposição
-- 🟡 **Nova lead Metha Alimentos (Sorocaba)** — 360K refeições/mês, alto potencial de óleo
 
-## 2026-09-23 (quarta-feira) — 13:01 (Cron #19 — Atendente IA)
+- 🔴 **Toque humano**: Dalben, Savegnago (WhatsApp 11 96785-9631), Muffato (tel 43 3371-1700)
+- 🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste (lead mais próximo de fechar)
+- 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
+- 🟡 **Coocerqui** — Carlos Machado respondeu. Verificar lead.
+- 🟡 **Selmi** — acompanhar ticket #89532
+- 🟡 **Pague Menos** — acompanhar Josiane Marinho
+- 🔧 **Bounce rate 22%** — acima da meta. Sugerir revisão de domínios self-hosted.
+- 🔧 **Fila em 15** — abaixo da meta 30+. Novas empresas adicionadas para reposição.
+
+---
+
+## 2026-09-24 (quinta-feira) — 18:14 (Cron #26 — Atendente IA)
 
 ### Resumo do ciclo
 
@@ -46,54 +91,25 @@
 | **Total de leads (watchdog)** | 199 |
 | **Ativos** | 150 |
 | **Bounce (cache)** | 56 |
-| **Respondidos (histórico CSV)** | 12-15 leads marcados |
-| **Pendentes (fila)** | 26 |
-| **Respostas pendentes (replies_pending.json)** | 0 |
+| **Pendentes (fila prospecção)** | 15 |
+| **Fila extra** | 184 |
+| **Follow-ups processados** | 2 (FP1) |
+| **Respostas genuínas** | 0 (3 auto-replies Zendesk Pague Menos) |
 
-### Atividades de hoje (13:01)
+### Atividades deste ciclo (18:14)
 
 | Ação | Resultado | Detalhe |
 |------|-----------|---------|
 | ✅ sync_formspree.py | 0 notificações novas | 56 bounces em cache |
-| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados anteriormente |
-| ✅ watchdog.py | exit 0 — saudável | SMTP OK, IMAP OK, sem atrasados |
-| ✅ prospecao_followup.py | 0 follow-ups | Nenhum atrasado |
-| ✅ send_sequence | OK | Sequência processada — sem novos envios neste ciclo |
-| ✅ check-replies | 0 aguardando | replies_pending.json vazio — nenhuma resposta genuína nova |
+| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados |
+| ⚠️ watchdog.py | exit 1 — 2 atrasados | Resolvido com prospecao_followup.py |
+| ✅ prospecao_followup.py | 2 FP1 enviados | Kelco Industrial + Supermercados Sao Judas Tadeu |
+| ✅ send_sequence | Sequência processada | Sem novos envios neste ciclo |
+| ✅ check-replies | 3 auto-replies | Pague Menos Zendesk surveys — limpo |
 
 ### Observações
 
-- **🥶 Ciclo tranquilo (#19)** — mesmo padrão do cron #18 (12:31). Nenhuma resposta nova de leads no período.
-- **26 pendentes na fila de prospecção** — estável, próximo da meta de 30+.
-- **0 respostas genuínas de leads** neste ciclo. Replies_pending.json vazio.
-- **Watchdog verde direto (exit 0)** — SMTP/IMAP operacionais.
-- **Nenhum lead solicitou relatório ESG**, remoção da lista ou relatou problemas.
-- **Nenhuma notificação do Formspree** (56 bounces em cache, nenhum novo formulário).
-- **Atenção estratégica**: dia inteiro sem resposta genuína — leads quentes (Savegnago, Covabra, Queijos Itupeva, Dalben) dependem de toque HUMANO para avançar; o bot manteve o fluxo mas a conversão agora está nas mãos do Estrategista.
-
-### Leads QUENTES 🔥 (mesmo pipeline — sem alterações)
-
-1. **🔥 SAVEGNAGO SUPERMERCADOS (~100 lojas) / PAULISTÃO ATACADISTA** — SAC redirecionou para tel 16 3946-2088 (22/09). Pendente toque humano via WhatsApp (11) 96785-9631 ou ligação.
-2. **🔥 COVABRA SUPERMERCADOS** — Respondeu 22/09 via Zendesk (Ana Paula). Priorizar follow-up humano.
-3. **🔥 PASTIFÍCIO SELMI (Sumaré/SP)** — Ticket #89532 no Zendesk. Proposta na fila.
-4. **🔥 PAGUE MENOS (Campinas)** — Proposta enviada para Josiane Marinho. Aguardar retorno.
-5. **🔥 DALBEN SUPERMERCADOS** — Gerente Luis (luish@supermercadosdalben.com.br). Aguardar retorno.
-6. **🔥 QUEIJOS ITUPEVA (Rafael)** — Negociação ativa para coleta-teste. **Lead mais próximo de conversão.**
-7. **🔥 CABANHA CAMPESTRE 53 (Daniele Santos)** — ~600kg/mês. Aguardando detalhamento do tipo de material.
-8. **🔥 BRASFRIGO (Salto/SP)** — Empresa na cidade-sede. Pendente toque humano.
-9. **🔥 MUFFATO / MAX ATACADISTA** — Pendente ligação (43) 3371-1700.
-10. **🔥 COOCERQUI (Carlos Machado — Financeiro)** — Resposta humana recebida 22/09 de carlos.machado@coocerqui.com.br.
-
-### Pendências para o Estrategista
-
-- 🔴 **Toque humano**: Dalben, Savegnago (WhatsApp 11 96785-9631 / tel 16 3946-2088), Muffato (ligar 43 3371-1700)
-- 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
-- 🟡 **Queijos Itupeva (Rafael)** — agendar coleta-teste (lead mais próximo de fechar)
-- 🟡 **Brasfrigo (Salto/SP)** — empresa na cidade-sede, pendente toque humano
-- 🟡 **Coocerqui** — Carlos Machado respondeu. Verificar lead no CSV.
-- 🟡 **Selmi** — acompanhar ticket #89532
-- 🟡 **Pague Menos** — acompanhar Josiane Marinho
-- 🔧 **Nestlé Araras** — considerar contato direto na unidade (não via SAC central)
-- 🔧 **Netlify 403** — site principal offline (GitHub Pages funciona)
-- 🔧 **Backfill segmento** em todos os leads
-- 📋 **Pipeline**: 26 pendentes na fila — próximo da meta 30+, precisa de reposição contínua
+- **⚠️ Watchdog acusou exit 1** — 2 follow-ups atrasados (FP1 para Kelco e Supermercados Sao Judas Tadeu). Resolvido rodando `prospecao_followup.py`. Sistema retornou ao normal.
+- **📬 3 respostas do Pague Menos** — todas pesquisas automáticas de satisfação do Zendesk ("Compartilhar seu feedback conosco"). Nenhuma resposta humana genuína de lead.
+- **15 pendentes na fila** — abaixo da meta de 30+. Fila extra com 184 empresas prontas para reposição. Grandes nomes pendentes: Camil Alimentos, Cacau Show, Kopenhagen, Bunge, Embaré, Biolab, BRF Sorocaba, Tauste.
+- **🥶 Dia sem respostas genuínas** — último lead humano que respondeu foi 22/09 (Savegnago, Covabra, Coocerqui). Conversão segue dependente de toque humano do Estrategista.

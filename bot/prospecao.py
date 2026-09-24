@@ -104,8 +104,29 @@ EMPRESAS = [
                 # Refeicoes coletivas
                 {"nome": "CBR Refeicoes", "empresa": "C.B.R. Fornecedora de Refeicoes LTDA", "email": "fiscal@cbr-refeicoes.com.br", "cidade": "Hortolandia/SP", "segmento": "Refeicoes coletivas"},
                 # Frutas processadas
-                {"nome": "Only Fruit", "empresa": "Only Fruit Industria de Alimentos LTDA", "email": "contato@onlyfruit.com.br", "cidade": "Nova Odessa/SP", "segmento": "Industria de alimentos (frutas)"},
-            ]
+                                {"nome": "Only Fruit", "empresa": "Only Fruit Industria de Alimentos LTDA", "email": "contato@onlyfruit.com.br", "cidade": "Nova Odessa/SP", "segmento": "Industria de alimentos (frutas)"},
+                                # --- NOVAS EMPRESAS (adicionadas 24/09 - Melhorador Contínuo #27, MX verificado) ---
+                                # Encapsulados/farmaceuticas - Salto mesmo (nicho oleo vegetal limpeza maquinas)
+                                {"nome": "Cap-Lab", "empresa": "Cap-Lab", "email": "marketing@cap-lab.com.br", "cidade": "Salto/SP", "segmento": "Laboratorio de encapsulados"},
+                                {"nome": "Cellera Farma", "empresa": "Cellera Farma Industria Farmaceutica", "email": "sac@cellerafarma.com.br", "cidade": "Indaiatuba/SP", "segmento": "Industria farmaceutica (medicamentos e suplementos)"},
+                                {"nome": "Farmoterapica", "empresa": "Farmoterapica", "email": "atendimento@farmoterapica.com.br", "cidade": "Indaiatuba/SP", "segmento": "Industria farmaceutica (solucoes estereis e nutricao parenteral)"},
+                                {"nome": "Hero Suplementos", "empresa": "Hero Suplementos", "email": "contato@herosuplementos.com.br", "cidade": "Indaiatuba/SP", "segmento": "Suplementos e encapsulados"},
+                                {"nome": "Sorocaps", "empresa": "Sorocaps Industria Farmaceutica LTDA", "email": "comercial@sorocaps.com.br", "cidade": "Sorocaba/SP", "segmento": "Industria farmaceutica (encapsulados)"},
+                                # Suplementos/nutraceuticos - Jundiai
+                                {"nome": "Hile", "empresa": "Hile Industria de Alimentos (fabrica de suplementos)", "email": "contato@hile.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de suplementos e nutraceuticos (encapsulados, capsulas, gomas)"},
+                                {"nome": "WBM", "empresa": "WBM Industria de Suplementos", "email": "contato@wbm.com.br", "cidade": "Jundiai/SP", "segmento": "Industria de suplementos e nutraceuticos (encapsulados)"},
+                                # Supermercados - alta conversao
+                                {"nome": "Supermercados Sao Vicente", "empresa": "Supermercados Sao Vicente (rede)", "email": "atendimento@svicente.com.br", "cidade": "Piracicaba/SP e regiao", "segmento": "Supermercados (rede)"},
+                                # Farmaceutica oleo limpeza maquinas - Sorocaba
+                                {"nome": "Ekobe", "empresa": "Ekobe Industria de Nutraceuticos e Cosmeticos LTDA", "email": "contato@ekobe.ind.br", "cidade": "Capela do Alto/SP", "segmento": "Industria de nutraceuticos e cosmeticos (gomas, capsulas, terceirizacao) - NICHO PRIORITARIO"},
+                                # Refeicoes coletivas - Campinas/Sorocaba
+                                {"nome": "Zuhan Refeicoes", "empresa": "Zuhan Refeicoes Corporativas", "email": "contato@zuhan.com.br", "cidade": "Campinas/SP", "segmento": "Refeicoes coletivas e cozinhas industriais"},
+                                {"nome": "Lollos Refeicoes", "empresa": "Lollos Refeicoes Empresariais", "email": "sac@lollos.com.br", "cidade": "Sorocaba/SP", "segmento": "Refeicoes empresariais e cozinha central"},
+                                # Rede frango assado - fritura alto volume
+                                {"nome": "Rede Frango Assado", "empresa": "Pimenta Verde Alimentos Ltda (Rede Frango Assado)", "email": "sac@redefrangoassado.com.br", "cidade": "Louveira/SP", "segmento": "Rede de restaurantes rotisserie (fritura alto volume)"},
+                                # Industria de maioneses/gorduras - vencidos >40%
+                                {"nome": "Mareia (Conrail)", "empresa": "Conrail Industria e Comercio de Produtos Alimenticios Ltda", "email": "sac@mareia.com.br", "cidade": "Campo Limpo Paulista/SP", "segmento": "Industria de maioneses e condimentos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"},
+                            ]
 
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
@@ -303,15 +324,16 @@ def tpl_apresentacao(cfg, lead):
 </div>"""
         }
     return {
-        "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro",
-        "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, {lead.get('nome','')}.</p>
-<p>O óleo de fritura da <b>{lead.get('empresa','')}</b> hoje sai de graça — mas virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 8 bi</b> e deve dobrar com a demanda por biodiesel e combustível de aviação.</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta desse material</b> — coleta programada, bombonas fornecidas e <b>certificado de destinação (PNRS)</b>: você zera o passivo ambiental e ainda recebe pelo óleo.</p>
-<p>E há urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — demanda garantida para quem tiver contrato de coleta.</p>
-<p><b>Quanto vocês geram por mês (litros ou kg)?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
-</div>"""}
+            "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro — até R$ 14,4 mil/ano",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+    <p>Olá, {lead.get('nome','')}.</p>
+    <p>O óleo de fritura da <b>{lead.get('empresa','')}</b> hoje sai de graça — mas virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 11 bi</b> e deve dobrar até 2030 com a demanda por biodiesel e combustível de aviação.</p>
+    <p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta desse material</b> — coleta programada, bombonas fornecidas e <b>certificado de destinação (PNRS)</b>: você zera o passivo ambiental e ainda recebe pelo óleo. Um estabelecimento que gera <b>600 L/mês recebe R$ 14,4 mil/ano</b> (R$ 2,00/L) — sem custo de logística. Redes grandes já tratam isso como receita: o Grupo Madero fechou contrato de <b>55 mil L/mês</b> com coletora (270 restaurantes).</p>
+    <p>E há urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o Brasil já exporta óleo usado para os EUA (1,4 mi t importadas em 2023) e quem fecha contrato agora garante prioridade antes da corrida pela matéria-prima.</p>
+    <p><b>Quanto vocês geram por mês (litros ou kg)?</b> Com esse número enviamos a avaliação ainda esta semana. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p style="font-size:12px;color:#888">PS: Simulador em <a href="{g.get('site','https://masteroleo.eco.br')}#calculadora" style="color:#1a6b3c">masteroleo.eco.br/#calculadora</a> — descubra quanto seu resíduo vale em 30 segundos.</p>
+    <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
+    </div>"""}
 
 def prospecao(args):
     cfg = load_config()

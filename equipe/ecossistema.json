@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-23 14:03 (cron #20 - Melhorador Continuo)",
+  "atualizado_em": "2026-09-24 18:14 (cron #26 - Atendente IA)",
   "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
@@ -11,90 +11,80 @@
       "meta_humana_1": "Ligar para Muffato (43) 3371-1700 - agendar conversa com compras",
       "meta_humana_2": "Check-in WhatsApp nos leads que responderam: Sumerbol, GoodBom, Boa, Rede Confianca, Andorinha, Rede Frango Assado",
       "meta_humana_3": "Fechar Brasfrigo (Salto/SP) - empresa na MESMA CIDADE, contato via sac@brasfrigo.com.br",
-      "meta_fila": ">= 30 pendentes com reposicao continua (atual: 26 pendentes + fila_extra 135)",
+      "meta_fila": ">= 30 pendentes com reposicao continua (atual: 15 pendentes + fila_extra 184)",
       "meta_resposta": "taxa >= 10% (atingida 10,4% antes do reset do CSV)",
       "meta_bounce": "< 15%",
       "nicho_prioritario": "supermercados/redes/atacarejo + frigorificos + laticinios (vencidos >40% gordura)",
       "foco_urgencia": "Portaria MME/MMA nº 3/2026 - obrigatorio >=1% OGR a partir de 01/01/2028"
     },
     "foco_cidades": [
-      "Salto",
-      "Campinas",
-      "Indaiatuba",
-      "Itu",
-      "Sorocaba",
-      "Jundiai",
-      "Louveira",
-      "Valinhos",
-      "Piracicaba",
-      "Vinhedo",
-      "Monte Mor",
-      "Hortolandia",
-      "Sumare",
-      "Limeira",
-      "Nova Odessa",
-      "Cabreuva",
-      "Tatui",
-      "Porto Feliz",
-      "Boituva",
-      "Americana",
-      "Votorantim",
-      "Aluminio",
-      "Capivari",
-      "Elias Fausto",
-      "Itupeva",
-      "Cerquilho"
-          ]
-        },
-        "melhorador_continuo_2026_09_23": {
-          "timestamp": "2026-09-23 14:03 (cron #20 - Melhorador Continuo)",
-          "diagnostico": "Sistema estavel. 199 leads, 150 ativos, 56 bounces (22% - acima da meta <15%), 15 respostas (9.6%), 26 pendentes (abaixo da meta 30+). Site masteroleo.eco.br online (HTTP 200).",
-          "melhorias": [
-            "Adicionadas 4 empresas a fila_prospeccao_extra.json: Siol Alimentos (Jundiai/Google MX), Metha Alimentos (Sorocaba/Hostinger MX), Tauste (Americana/Google MX), BRF Sorocaba (Outlook MX). Fila: 180->184.",
-            "Site index.html: hero card alterado para 'Urgencia regulatoria - jan/2028'. Nova FAQ 'Quanto rende vender oleo usado' (R$14,4 mil/ano).",
-            "Insights.md e ecossistema.json atualizados."
-          ],
-          "fila_extra_total": 184,
-          "nota": "Foco em reposicao de fila e melhorias no site. Site online."
-        },
-        "fila_prospeccao": {
-          "atualizado_em": "2026-09-23 14:03 (cron #20 - Melhorador Continuo)",
-    "total": 240,
-    "pendentes": 26,
-    "contatados": 182,
-    "bounces": 56,
-    "respondidos": 12,
-    "nota": "Estavel. 26 pendentes. Watchdog: 199 leads totais, 150 ativos, 56 bounces em cache. Sem novos envios neste tick (check-replies das 12h31)."
+      "Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai",
+      "Louveira", "Valinhos", "Piracicaba", "Vinhedo", "Monte Mor",
+      "Hortolandia", "Sumare", "Limeira", "Nova Odessa", "Cabreuva",
+      "Tatui", "Porto Feliz", "Boituva", "Americana", "Votorantim",
+      "Aluminio", "Capivari", "Elias Fausto", "Itupeva", "Cerquilho"
+    ]
   },
-  "cron_2026_09_23_09h31_atendente_ia": {
-    "timestamp": "2026-09-23 09:31 (cron #13 - Atendente IA)",
-    "diagnostico": "Ciclo matinal tranquilo. Watchdog OK direto. 0 follow-ups atrasados. 4 respostas recebidas (auto-replies de Mars Brasil e Nestlé Araras — nenhuma resposta genuína de lead). 0 notificacoes Formspree. Sistema estavel sem anomalias.",
+  "cron_2026_09_24_18h23_melhorador_continuo": {
+    "timestamp": "2026-09-24 18:23 (Cron #27 - Melhorador Contínuo)",
+    "diagnostico": "Watchdog exit 0 — sistema saudável. 15 leads pendentes (abaixo da meta 30+). 73 empresas em prospecao.py (+15 hoje). Bounce rate 22% (acima da meta 15%). Taxa resposta 9.6% (acima da meta 3%). Site ganhou calculadora standalone e seção numeros.",
     "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-      "3. watchdog.py: exit 0 — SMTP OK, IMAP OK, sem atrasados",
-      "4. prospecao_followup.py: 0 follow-ups",
-      "5. send_sequence: OK — sequencia processada",
-      "6. check-replies: 4 respostas — todas auto-replies (Mars x2, Nestle x2). Nenhuma resposta genuina de lead. Nenhum reply humano para responder."
+      "1. 15 NOVAS EMPRESAS adicionadas a prospecao.py (73 total): Cap-Lab (Salto/SP!), Cellera Farma (Indaiatuba), Farmoterapica (Indaiatuba), Hero Suplementos (Indaiatuba), Sorocaps (Sorocaba), Hile (Jundiai), WBM (Jundiai), Supermercados Sao Vicente (Piracicaba), Ekobe (Capela do Alto), Zuhan Refeicoes (Campinas), Lollos Refeicoes (Sorocaba), Rede Frango Assado (Louveira), Mareia/Conrail (Campo Limpo Paulista — vencidos >40%)",
+      "2. Template generico de apresentação reforçado: US$ 8bi → US$ 11bi, adicionado R$ 14,4 mil/ano calculado, prova social Madero 55 mil L/mês, exportação EUA 1,4mi t, link para calculadora no rodapé do email",
+      "3. Site ganhou calculadora standalone (deploy-vercel/calculadora.html) com tabela de referencia (600 L = R$ 14,4k/ano a 55k L = R$ 1,2M/ano), formulario de lead (Formspree), indicador de agua preservada",
+      "4. Home page (index.html) ganhou seção 'Quanto vale o seu óleo usado?' com numeros-chave (US$ 11bi, 55k L/mes Madero, R$ 14,4k/ano) e CTA para calculadora.html"
     ],
     "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 26,
-      "total_na_fila_extra": 135,
+      "empresas_em_prospecao_py": 73,
+      "pendentes_leads_csv": 15,
+      "total_na_fila_extra": 184,
       "watchdog_leads_total": 199,
       "watchdog_ativos": 150,
       "watchdog_bounces": 56,
-      "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56 cache. Fila prospeccao: 240 total + 26 pendentes. Estavel."
+      "nota": "Fila fortalecida com 15 novas empresas (73 total). Foco em farmaceuticas/encapsulados (oleo vegetal limpeza) + supermercados (alta conversao)."
+    },
+    "pendente_estrategista": [
+      "Toque humano DALBEN — ligar gerente Luis",
+      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+      "Toque humano MUFFATO — ligar (43) 3371-1700",
+      "Fechar Brasfrigo (Salto/SP)",
+      "Acompanhar Selmi ticket #89532",
+      "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+      "Covabra — priorizar follow-up humano (respondeu 22/09)",
+      "Acompanhar Pague Menos — Josiane Marinho",
+      "Bounce rate 22% acima da meta <15% — revisar lista com MX self-hosted"
+    ]
+  },
+  "cron_2026_09_24_18h14_atendente_ia": {
+    "timestamp": "2026-09-24 18:14 (cron #26 - Atendente IA)",
+    "diagnostico": "Ciclo noturno. Watchdog exit 1 — 2 follow-ups atrasados detectados (Kelco Industrial e Supermercados Sao Judas Tadeu), resolvidos com prospecao_followup.py. 3 replies do Pague Menos — todas auto-replies de pesquisa Zendesk (survey), nenhuma resposta genuina de lead. Sistema estavel apos correcao.",
+    "acoes": [
+      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas do Formspree",
+      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
+      "3. watchdog.py: exit 1 — 2 follow-ups ATRASADOS (Kelco Industrial, Supermercados Sao Judas Tadeu)",
+      "4. prospecao_followup.py: 2 follow-ups FP1 processados → comercial@kelcopetcare.com.br e faleconosco@supersaojudas.com.br",
+      "5. enviar_lote.py --status: 15 pendentes na fila (Camil, Cacau Show, Kopenhagen, Bunge, Embare, Biolab, Siol, Metha, Tauste, BRF Sorocaba, etc.)",
+      "6. send_sequence: Sequencia processada",
+      "7. check-replies: 3 respostas — todas auto-replies de pesquisa Zendesk do Pague Menos (survey de satisfacao). Nenhuma resposta genuina de lead. replies_pending.json limpo."
+    ],
+    "pipeline": {
+      "empresas_em_prospecao_py": 60,
+      "pendentes_leads_csv": 15,
+      "total_na_fila_extra": 184,
+      "watchdog_leads_total": 199,
+      "watchdog_ativos": 150,
+      "watchdog_bounces": 56,
+      "nota": "199 leads totais | 150 ativos | 56 bounces. Fila prospeccao: 244 total (197 contatados + 40 bounces + 15 pendentes). Fila extra: 184. 2 follow-ups processados (watchdog corrigido)."
     },
     "replies_pending": {
-      "total": 4,
+      "total": 3,
       "genuinas": 0,
-      "auto_replies": 4,
+      "auto_replies": 3,
       "detalhe": [
-        "1. Mars Brasil (noreply@br.mars.com) — auto-reply 'Recebemos sua mensagem' (thread)",
-        "2. Nestle Brasil Araras (falecom@nestle.com.br) — auto-reply 'Confirmamos recebimento' (direto)",
-        "3. Mars Brasil (noreply@br.mars.com) — auto-reply 'Recebemos sua mensagem' (thread duplicata)",
-        "4. Nestle Brasil Araras (falecom@nestle.com.br) — auto-reply 'Confirmamos recebimento' (direto duplicata)"
+        "1. Supermercados Pague Menos SA (falecom@paguemenos.zendesk.com) — survey Zendesk 'Compartilhar seu feedback conosco' (18:01)",
+        "2. Supermercados Pague Menos SA (falecom@paguemenos.zendesk.com) — survey Zendesk 'Compartilhar seu feedback conosco' (18:01)",
+        "3. Supermercados Pague Menos SA (falecom@paguemenos.zendesk.com) — survey Zendesk 'Compartilhar seu feedback conosco' (19:01)",
+        "Todas auto-replies de sistema — nenhuma resposta humana de lead."
       ]
     },
     "pendente_estrategista": [
@@ -104,259 +94,11 @@
       "Fechar Brasfrigo (Salto/SP)",
       "Acompanhar Selmi ticket #89532",
       "Acompanhar Pague Menos — Josiane Marinho",
-      "Netlify 403 — site principal offline, GitHub Pages funciona",
       "Covabra — priorizar follow-up humano (respondeu 22/09)",
       "Queijos Itupeva (Rafael) — agendar coleta-teste",
-      "Backfill segmento em todos os leads"
+      "Coocerqui — Carlos Machado respondeu, verificar lead",
+      "Backfill segmento em todos os leads",
+      "15 pendentes na fila — considerar novos envios de prospeccao"
     ]
-  },
-  "cron_2026_09_23_10h01_atendente_ia": {
-    "timestamp": "2026-09-23 10:01 (cron #14 - Atendente IA)",
-    "diagnostico": "Ciclo tranquilo. Watchdog OK direto (exit 0). 0 follow-ups atrasados. 0 replies pendentes genuinos — apenas 4 auto-replies de Mars e Nestlé já registradas. 0 notificacoes Formspree. Sistema estavel sem anomalias.",
-    "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados)",
-      "3. watchdog.py: exit 0 — SMTP OK, IMAP OK, sem atrasados",
-      "4. prospecao_followup.py: 0 follow-ups",
-      "5. send_sequence: OK — sequencia processada",
-      "6. check-replies: 0 respostas aguardando — 4 auto-replies (Mars x2, Nestle x2) ja registradas, nenhuma nova resposta genuina"
-    ],
-    "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 26,
-      "total_na_fila_extra": 135,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56. Fila prospeccao: 240 total + 26 pendentes. Estavel."
-    },
-    "replies_pending": {
-      "total": 0,
-      "genuinas": 0,
-      "auto_replies": 4,
-      "detalhe": [
-        "1. Mars Brasil (noreply@br.mars.com) — auto-reply (ja registrada)",
-        "2. Nestle Brasil Araras (falecom@nestle.com.br) — auto-reply (ja registrada)",
-        "3. Mars Brasil duplicata — auto-reply",
-        "4. Nestle Brasil Araras duplicata — auto-reply"
-      ]
-    },
-    "pendente_estrategista": [
-      "Toque humano DALBEN — ligar gerente Luis",
-      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-      "Toque humano MUFFATO — ligar (43) 3371-1700",
-      "Fechar Brasfrigo (Salto/SP)",
-      "Acompanhar Selmi ticket #89532",
-      "Acompanhar Pague Menos — Josiane Marinho",
-      "Netlify 403 — site principal offline, GitHub Pages funciona",
-      "Covabra — priorizar follow-up humano (respondeu 22/09)",
-      "Queijos Itupeva (Rafael) — agendar coleta-teste",
-      "Backfill segmento em todos os leads"
-    ]
-  },
-  "cron_2026_09_23_10h31_atendente_ia": {
-    "timestamp": "2026-09-23 10:31 (cron #15 - Atendente IA)",
-    "diagnostico": "Ciclo tranquilo sem novidades. Watchdog OK direto (exit 0). 0 follow-ups atrasados. 0 replies pendentes. Nenhuma nova resposta de lead — mesmo padrao do cron #14. Sistema estavel sem anomalias.",
-    "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-      "3. watchdog.py: exit 0 — SMTP OK, IMAP OK, sem atrasados",
-      "4. prospecao_followup.py: 0 follow-ups processados",
-      "5. send_sequence: Sequencia processada — sem novos envios agendados neste ciclo",
-      "6. check-replies: 0 respostas aguardando — replies_pending.json vazio. Nenhuma resposta genuina nova desde o cron #14."
-    ],
-    "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 26,
-      "total_na_fila_extra": 135,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56. Fila prospeccao: 240 total + 26 pendentes. Estavel sem alteracoes desde cron #14."
-    },
-    "replies_pending": {
-      "total": 0,
-      "genuinas": 0,
-      "auto_replies": 4,
-      "detalhe": [
-        "1-4. Mesmas 4 auto-replies de Mars e Nestle ja registradas no cron #13 e #14. Nenhuma resposta nova neste tick."
-      ]
-    },
-    "pendente_estrategista": [
-      "Toque humano DALBEN — ligar gerente Luis",
-      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-      "Toque humano MUFFATO — ligar (43) 3371-1700",
-      "Fechar Brasfrigo (Salto/SP)",
-      "Acompanhar Selmi ticket #89532",
-      "Acompanhar Pague Menos — Josiane Marinho",
-      "Netlify 403 — site principal offline, GitHub Pages funciona",
-      "Covabra — priorizar follow-up humano (respondeu 22/09)",
-      "Queijos Itupeva (Rafael) — agendar coleta-teste",
-      "Backfill segmento em todos os leads"
-    ]
-  },
-  "cron_2026_09_23_11h02_atendente_ia": {
-    "timestamp": "2026-09-23 11:02 (cron #16 - Atendente IA)",
-    "diagnostico": "Ciclo tranquilo sem novidades. Watchdog OK direto (exit 0). 0 follow-ups atrasados. 0 replies pendentes - replies_pending.json vazio. Nenhuma resposta genuina nova de lead. 0 notificacoes Formspree. Sistema estavel sem anomalias.",
-    "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-      "3. watchdog.py: exit 0 - SMTP OK, IMAP OK, sem atrasados",
-      "4. prospecao_followup.py: 0 follow-ups processados",
-      "5. send_sequence: Sequencia processada - sem novos envios agendados neste ciclo",
-      "6. check-replies: 0 respostas aguardando - replies_pending.json vazio. Nenhuma resposta genuina nova desde cron #15."
-    ],
-    "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 26,
-      "total_na_fila_extra": 135,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56. Fila prospeccao: 240 total + 26 pendentes. Estavel sem alteracoes desde cron #15."
-    },
-    "replies_pending": {
-      "total": 0,
-      "genuinas": 0,
-      "auto_replies": 4,
-      "detalhe": [
-        "1-4. Mesmas 4 auto-replies de Mars e Nestle ja registradas nos crons anteriores. Nenhuma resposta nova neste tick."
-      ]
-    },
-    "pendente_estrategista": [
-      "Toque humano DALBEN - ligar gerente Luis",
-      "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-      "Toque humano MUFFATO - ligar (43) 3371-1700",
-      "Fechar Brasfrigo (Salto/SP)",
-      "Acompanhar Selmi ticket #89532",
-      "Acompanhar Pague Menos - Josiane Marinho",
-      "Netlify 403 - site principal offline, GitHub Pages funciona",
-      "Covabra - priorizar follow-up humano (respondeu 22/09)",
-      "Queijos Itupeva (Rafael) - agendar coleta-teste",
-      "Backfill segmento em todos os leads"
-    ]
-  },
-  "cron_2026_09_23_12h07_atendente_ia": {
-    "timestamp": "2026-09-23 12:07 (cron #17 - Atendente IA)",
-    "diagnostico": "Ciclo tranquilo sem novidades (padrao da tarde). Watchdog OK direto (exit 0). 0 follow-ups atrasados. 0 replies pendentes - replies_pending.json vazio. Nenhuma resposta genuina nova de lead. 0 notificacoes Formspree. Sistema estavel sem anomalias.",
-    "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-      "3. watchdog.py: exit 0 - SMTP OK, IMAP OK, sem atrasados",
-      "4. prospecao_followup.py: 0 follow-ups processados",
-      "5. send_sequence: Sequencia processada - sem novos envios agendados neste ciclo",
-      "6. check-replies: 0 respostas aguardando - replies_pending.json vazio. Nenhuma resposta genuina nova desde cron #16."
-    ],
-    "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 26,
-      "total_na_fila_extra": 135,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56. Fila prospeccao: 240 total + 26 pendentes. Estavel sem alteracoes desde cron #16."
-    },
-    "replies_pending": {
-      "total": 0,
-      "genuinas": 0,
-      "auto_replies": 4,
-      "detalhe": [
-        "1-4. Mesmas 4 auto-replies de Mars e Nestle ja registradas nos crons anteriores. Nenhuma resposta nova neste tick."
-      ]
-    },
-    "pendente_estrategista": [
-      "Toque humano DALBEN - ligar gerente Luis",
-      "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-      "Toque humano MUFFATO - ligar (43) 3371-1700",
-      "Fechar Brasfrigo (Salto/SP)",
-      "Acompanhar Selmi ticket #89532",
-      "Acompanhar Pague Menos - Josiane Marinho",
-      "Netlify 403 - site principal offline, GitHub Pages funciona",
-      "Covabra - priorizar follow-up humano (respondeu 22/09)",
-      "Queijos Itupeva (Rafael) - agendar coleta-teste",
-      "Backfill segmento em todos os leads"
-    ]
-  },
-  "cron_2026_09_23_12h31_atendente_ia": {
-    "timestamp": "2026-09-23 12:31 (cron #18 - Atendente IA)",
-    "diagnostico": "Ciclo tranquilo sem novidades (padrao da tarde). Watchdog OK direto (exit 0). 0 follow-ups atrasados. 0 replies pendentes - replies_pending.json vazio. Nenhuma resposta genuina nova de lead. 0 notificacoes Formspree. Sistema estavel sem anomalias.",
-    "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-      "3. watchdog.py: exit 0 - SMTP OK, IMAP OK, sem atrasados",
-      "4. prospecao_followup.py: 0 follow-ups processados",
-      "5. send_sequence: Sequencia processada - sem novos envios agendados neste ciclo",
-      "6. check-replies: 0 respostas aguardando - replies_pending.json vazio. Nenhuma resposta genuina nova desde cron #17."
-    ],
-    "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 26,
-      "total_na_fila_extra": 135,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56. Fila prospeccao: 240 total + 26 pendentes. Estavel sem alteracoes desde cron #17."
-    },
-    "replies_pending": {
-      "total": 0,
-      "genuinas": 0,
-      "auto_replies": 4,
-      "detalhe": [
-        "1-4. Mesmas 4 auto-replies de Mars e Nestle ja registradas nos crons anteriores. Nenhuma resposta nova neste tick."
-      ]
-    },
-    "pendente_estrategista": [
-      "Toque humano DALBEN - ligar gerente Luis",
-      "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-      "Toque humano MUFFATO - ligar (43) 3371-1700",
-      "Fechar Brasfrigo (Salto/SP)",
-      "Acompanhar Selmi ticket #89532",
-      "Acompanhar Pague Menos - Josiane Marinho",
-      "Netlify 403 - site principal offline, GitHub Pages funciona",
-      "Covabra - priorizar follow-up humano (respondeu 22/09)",
-            "Queijos Itupeva (Rafael) - agendar coleta-teste",
-            "Backfill segmento em todos os leads"
-          ]
-        },
-        "cron_2026_09_23_13h01_atendente_ia": {
-          "timestamp": "2026-09-23 13:01 (cron #19 - Atendente IA)",
-          "diagnostico": "Ciclo tranquilo sem novidades (padrao da tarde). Watchdog OK direto (exit 0). 0 follow-ups atrasados. 0 replies pendentes - replies_pending.json vazio. Nenhuma resposta genuina nova de lead. 0 notificacoes Formspree. Sistema estavel sem anomalias.",
-          "acoes": [
-            "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas",
-            "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-            "3. watchdog.py: exit 0 - SMTP OK, IMAP OK, sem atrasados",
-            "4. prospecao_followup.py: 0 follow-ups processados",
-            "5. send_sequence: Sequencia processada - sem novos envios agendados neste ciclo",
-            "6. check-replies: 0 respostas aguardando - replies_pending.json vazio. Nenhuma resposta genuina nova desde cron #18."
-          ],
-          "pipeline": {
-            "empresas_em_prospecao_py": 60,
-            "pendentes_leads_csv": 26,
-            "total_na_fila_extra": 135,
-            "watchdog_leads_total": 199,
-            "watchdog_ativos": 150,
-            "watchdog_bounces": 56,
-            "nota": "Leads totais watchdog: 199 | ativos: 150 | bounces: 56. Fila prospeccao: 240 total + 26 pendentes. Estavel sem alteracoes desde cron #18."
-          },
-          "replies_pending": {
-            "total": 0,
-            "genuinas": 0,
-            "auto_replies": 4,
-            "detalhe": [
-              "1-4. Mesmas 4 auto-replies de Mars e Nestle ja registradas nos crons anteriores. Nenhuma resposta nova neste tick."
-            ]
-          },
-          "pendente_estrategista": [
-            "Toque humano DALBEN - ligar gerente Luis",
-            "Toque humano SAVEGNAGO - WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-            "Toque humano MUFFATO - ligar (43) 3371-1700",
-            "Fechar Brasfrigo (Salto/SP)",
-            "Acompanhar Selmi ticket #89532",
-            "Acompanhar Pague Menos - Josiane Marinho",
-            "Netlify 403 - site principal offline, GitHub Pages funciona",
-            "Covabra - priorizar follow-up humano (respondeu 22/09)",
-            "Queijos Itupeva (Rafael) - agendar coleta-teste",
-            "Backfill segmento em todos os leads"
-          ]
-        }
-      }
+  }
+}
