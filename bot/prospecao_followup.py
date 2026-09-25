@@ -93,14 +93,16 @@ def tpl_fp(cfg, lead, n):
 <p>Abraço,<br><b>{g['nome']}</b></p>
 </div>"""
     elif n == 2:
-        subj = f"Re: compra de óleo usado — {lead['empresa']} × Master Óleo"
+        subj = f"Re: oleo usado da {lead['empresa']} — 3 motivos para tratar isso este ano"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, {lead['nome']}.</p>
-<p>Entendo que o momento pode não ser o ideal, mas a proposta segue de pé: <b>compramos o óleo e a gordura vegetal usados</b> da {lead['empresa']} com coleta programada, bombonas fornecidas e certificado de destinação em toda retirada.</p>
-<p>Dois fatos recentes que mudam o jogo para quem gera esse resíduo: (1) a <b>Portaria Interministerial MME/MMA nº 3/2026</b> (11/05/2026, publicada no DOU — fonte: gov.br) torna <b>OBRIGATÓRIO ≥1% de óleo residual no biodiesel a partir de 01/01/2028</b> (voluntário em 2026-2027) — e o Brasil acaba de liberar <b>exportação de óleo usado para os EUA</b> (que importaram 1,4 mi t em 2023, ~US$ 1,66 bi): o mundo está disputando essa matéria-prima, e quem fecha contrato agora garante preço e prioridade; (2) pela <b>PNRS (Lei 12.305/2010)</b>, a destinação correta é obrigação do gerador — se o coletor não emitir MTR/certificado, o passivo ambiental fica no CNPJ de vocês.</p>
-<p>E não é conversa: a <b>BSBIOS fechou contrato de 55 mil L/mês com o Grupo Madero</b> (270 restaurantes) — rede grande já trata óleo usado como receita, com coleta integrada à logística. Para quem gera <b>mais de 500 L/mês</b>: contrato de <b>coleta programada com volume mínimo</b>, logística 100% por nossa conta, <b>relatório ESG mensal</b> (litros, água preservada, CO₂) e <b>pagamento à vista (PIX) na coleta</b>.</p>
-<p>Vamos agendar uma <b>coleta-teste</b>? Me diz quantos litros (ou kg) vocês geram por mês que eu te passo o valor e o certificado em até 24h. WhatsApp: {g['telefone_whatsapp']}.</p>
-<p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+<p>Ola, {lead['nome']}.</p>
+<p>Sei que esta ocupado, entao vou direto aos <b>3 fatos</b> que tornam a destinacao do oleo usado da <b>{lead['empresa']}</b> urgente:</p>
+<p><b>1</b> A <b>Portaria MME/MMA no 3/2026</b> torna <b>OBRIGATORIO >=1%</b> de oleo residual no biodiesel a partir de <b>jan/2028</b> (fonte: gov.br). Quem ja tiver contrato assinado tera prioridade antes da corrida.</p>
+<p><b>2</b> O <b>Grupo Madero</b> (270 restaurantes) ja vende 55 mil L/mes para biodiesel — rede grande <b>ja trata como receita</b>, nao como descarte.</p>
+<p><b>3</b> Se o coletor nao emitir <b>MTR + certificado de destinacao</b>, o passivo ambiental fica no CNPJ da {lead['empresa']} (Lei 12.305/2010). Nos emitimos em toda coleta.</p>
+<p>Para {lead['empresa']}: <b>coleta programada semanal</b>, bombonas fornecidas, logistica por nossa conta e <b>pagamento a vista (PIX) na coleta</b>. Cada litro vira biodiesel certificado.</p>
+<p><b>Quantos litros a {lead['empresa']} gera por mes?</b> Responda este numero que envio a avaliacao em 24h. WhatsApp: {g['telefone_whatsapp']}.</p>
+<p>Abraco,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
             subj = f"Encerrando contato — {lead['empresa']} × {g['nome']}"

@@ -1258,33 +1258,160 @@
     "email": "faleconosco@biolabfarma.com.br",
     "cidade": "São Paulo/SP (fábricas em Taboão da Serra, Jandira, Bragança Paulista)",
     "segmento": "Indústria farmacêutica (encapsulados) - NICHO PRIORITÁRIO (óleo vegetal limpeza máquinas)"
-      },
-      {
-        "nome": "Siol Alimentos",
-        "empresa": "Siol Alimentos Ltda",
-        "email": "sac@siol.com.br",
-        "cidade": "Jundiai/SP",
-        "segmento": "Industria de oleos, maioneses e gordura vegetal (Google MX)"
-      },
-      {
-        "nome": "Metha Alimentos",
-        "empresa": "Metha Distribuidora de Produtos Ltda",
-        "email": "comercial@methaalimentosoficial.com",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Refeicoes coletivas (360k refeicoes/mes - Hostinger MX)"
-      },
-      {
-        "nome": "Supermercados Tauste",
-        "empresa": "Supermercados Tauste S/A",
-        "email": "sac@tauste.com.br",
-        "cidade": "Americana/SP",
-        "segmento": "Supermercados rede (~60 lojas - Google MX)"
-      },
-      {
-        "nome": "BRF Sorocaba",
-        "empresa": "BRF S.A. Unidade Sorocaba",
-        "email": "faleconosco@brf-br.com",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Industria de alimentos frigorifico (Outlook MX)"
-      }
-    ]
+  },
+  {
+    "nome": "Siol Alimentos",
+    "empresa": "Siol Alimentos Ltda",
+    "email": "sac@siol.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de oleos, maioneses e gordura vegetal (Google MX)"
+  },
+  {
+    "nome": "Metha Alimentos",
+    "empresa": "Metha Distribuidora de Produtos Ltda",
+    "email": "comercial@methaalimentosoficial.com",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Refeicoes coletivas (360k refeicoes/mes - Hostinger MX)"
+  },
+  {
+    "nome": "Supermercados Tauste",
+    "empresa": "Supermercados Tauste S/A",
+    "email": "sac@tauste.com.br",
+    "cidade": "Americana/SP",
+    "segmento": "Supermercados rede (~60 lojas - Google MX)"
+  },
+  {
+    "nome": "BRF Sorocaba",
+    "empresa": "BRF S.A. Unidade Sorocaba",
+    "email": "faleconosco@brf-br.com",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de alimentos frigorifico (Outlook MX)"
+  },
+  {
+    "nome": "Vigor Alimentos",
+    "empresa": "Vigor Alimentos S.A.",
+    "email": "sac@vigor.com.br",
+    "cidade": "São Paulo/SP",
+    "segmento": "laticinios (manteiga, creme de leite, iogurtes e requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 24/09"
+  },
+  {
+    "nome": "Laticinios Catupiry",
+    "empresa": "Laticinios Catupiry Ltda (requeijao, queijos processados)",
+    "email": "sac@catupiry.com.br",
+    "cidade": "São Paulo/SP",
+    "segmento": "laticinios (requeijao, queijos processados, manteiga) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 24/09"
+  },
+  {
+    "nome": "Balan Ingredientes",
+    "empresa": "Balan Ingredientes Ltda",
+    "email": "comercial@balaningredientes.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "distribuidora de materias-primas alimenticias (oleos, gorduras e ingredientes) - MX Locaweb valido 24/09"
+  },
+  {
+    "nome": "Maguacamp Sorocaba",
+    "empresa": "Maguacamp Distribuidora (Sorocaba/Campinas)",
+    "email": "comercial@maguacamp.com.br",
+    "cidade": "Sorocaba/Campinas-SP",
+    "segmento": "distribuidora de alimentos e bebidas (estoque de oleo vegetal vencido) - MX Kinghost valido 24/09"
+  },
+  {
+    "nome": "Yema (Grupo Granarolo)",
+    "empresa": "Granarolo Brasil Ltda (Yema laticinios)",
+    "email": "faleconosco@granarolo.com.br",
+    "cidade": "São Paulo/SP",
+    "segmento": "laticinios (mozzarella, queijos, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 24/09"
+  },
+  {
+    "nome": "Vitall Sorvetes",
+    "empresa": "Vitall Sorvetes (Itu/SP)",
+    "email": "contato@vitallesorvetes.com.br",
+    "cidade": "Itu/SP",
+    "segmento": "industria de sorvetes (cremes, leite, gordura lactea) - usa laticinios em volume; Itu a ~20km de Salto; MX Hostinger valido 24/09"
+  },
+  {
+    "nome": "Green Ingredients",
+    "empresa": "Green Ingredientes Especiais Ltda",
+    "email": "marcelo@greeningredients.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "distribuidora de ingredientes especiais para industria alimenticia (oleos e gorduras) - MX valido 24/09"
+  },
+  {
+    "nome": "Atlantica Foods Group",
+    "empresa": "Atlantica Foods Group (Jundiai/SP)",
+    "email": "atlanticafoods@atlanticafoods.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "fornecedora global de ingredientes e materias-primas alimenticias (oleos, gorduras) - MX Outlook valido 24/09"
+  },
+  {
+    "nome": "Level Alimentos",
+    "empresa": "Level Alimentos Ltda (Indaiatuba/SP)",
+    "email": "contato@levelalimentos.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria de alimentos em po (tecnologia dryblend) - usa oleos e gorduras vegetais; Indaiatuba/SP; MX sslbr valido 24/09"
+  },
+  {
+    "nome": "Madero Salto",
+    "empresa": "Madero Steak House (Unidade Salto)",
+    "email": "salto@madero.com.br",
+    "cidade": "Salto/SP",
+    "nicho": "Restaurante steak house",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "Ragazzo Salto",
+    "empresa": "Ragazzo Fast Food (Unidade Salto)",
+    "email": "sac@ragazzo.com.br",
+    "cidade": "Salto/SP",
+    "nicho": "Fast food fritura alto volume",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "BK Salto",
+    "empresa": "Burger King Brasil (Unidade Salto)",
+    "email": "faleconosco@burgerking.com.br",
+    "cidade": "Salto/SP",
+    "nicho": "Fast food fritura alto volume",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "McDonalds Salto",
+    "empresa": "McDonalds Brasil (Unidade Salto)",
+    "email": "sac@mcdonalds.com.br",
+    "cidade": "Salto/SP",
+    "nicho": "Fast food fritura alto volume",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "Domino Pizza Itu",
+    "empresa": "Dominos Pizza (Unidade Itu)",
+    "email": "contato@dominos.com.br",
+    "cidade": "Itu/SP",
+    "nicho": "Pizzaria massa de pizza gordura vegetal",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "Pizza Hut Itu",
+    "empresa": "Pizza Hut Brasil (Unidade Itu)",
+    "email": "sac@pizzahut.com.br",
+    "cidade": "Itu/SP",
+    "nicho": "Pizzaria gordura e fritura",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "Hotel Fazenda DItu",
+    "empresa": "Hotel Fazenda DItu (Rede DHotel)",
+    "email": "reservas@ditu.com.br",
+    "cidade": "Itu/SP",
+    "nicho": "Hotel fazenda cozinha industrial alta rotacao",
+    "fonte": "melhoria_continua_20260925"
+  },
+  {
+    "nome": "Fasano Boa Vista",
+    "empresa": "Fasano Hotel e Resort (Boa Vista)",
+    "email": "reservas.boavista@fasano.com.br",
+    "cidade": "Porto Feliz/SP",
+    "nicho": "Hotel resort cozinha gastronomica e eventos",
+    "fonte": "melhoria_continua_20260925"
+  }
+]

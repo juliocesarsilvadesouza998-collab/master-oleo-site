@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-24 18:14 (cron #26 - Atendente IA)",
+  "atualizado_em": "2026-09-25 18:26 (cron #29 - Melhorador Contínuo)",
   "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
@@ -10,11 +10,11 @@
       "meta_contrato_3": "Proposta formal Dalben Supermercados - aguardar retorno gerente Luis",
       "meta_humana_1": "Ligar para Muffato (43) 3371-1700 - agendar conversa com compras",
       "meta_humana_2": "Check-in WhatsApp nos leads que responderam: Sumerbol, GoodBom, Boa, Rede Confianca, Andorinha, Rede Frango Assado",
-      "meta_humana_3": "Fechar Brasfrigo (Salto/SP) - empresa na MESMA CIDADE, contato via sac@brasfrigo.com.br",
-      "meta_fila": ">= 30 pendentes com reposicao continua (atual: 15 pendentes + fila_extra 184)",
-      "meta_resposta": "taxa >= 10% (atingida 10,4% antes do reset do CSV)",
-      "meta_bounce": "< 15%",
-      "nicho_prioritario": "supermercados/redes/atacarejo + frigorificos + laticinios (vencidos >40% gordura)",
+      "meta_humana_3": "Fechar Brasfrigo (Salto/SP)",
+      "meta_fila": ">= 30 pendentes com reposicao continua (atual: 9 pendentes + fila_extra 201)",
+      "meta_resposta": "taxa >= 10% (atingida 8,3% atual)",
+      "meta_bounce": "< 15% (atual 20%)",
+      "nicho_prioritario": "supermercados/redes/atacarejo + frigorificos + fast food Salto",
       "foco_urgencia": "Portaria MME/MMA nº 3/2026 - obrigatorio >=1% OGR a partir de 01/01/2028"
     },
     "foco_cidades": [
@@ -25,23 +25,23 @@
       "Aluminio", "Capivari", "Elias Fausto", "Itupeva", "Cerquilho"
     ]
   },
-  "cron_2026_09_24_18h23_melhorador_continuo": {
-    "timestamp": "2026-09-24 18:23 (Cron #27 - Melhorador Contínuo)",
-    "diagnostico": "Watchdog exit 0 — sistema saudável. 15 leads pendentes (abaixo da meta 30+). 73 empresas em prospecao.py (+15 hoje). Bounce rate 22% (acima da meta 15%). Taxa resposta 9.6% (acima da meta 3%). Site ganhou calculadora standalone e seção numeros.",
+  "cron_2026_09_25_18h26_melhorador_continuo": {
+    "timestamp": "2026-09-25 18:26 (Cron #29 - Melhorador Contínuo)",
+    "diagnostico": "Watchdog exit 0 — sistema saudável. 9 pendentes (abaixo meta 30+). Bounce rate melhorou de 22% para 20% mas ainda acima da meta 15%. Taxa resposta 8.3% (boa para cold email, media do setor 1-3%). Fila extra explodiu para 201 empresas (+17 em 24h). 8 empresas fast food de Salto adicionadas — nicho fritura diaria.",
     "acoes": [
-      "1. 15 NOVAS EMPRESAS adicionadas a prospecao.py (73 total): Cap-Lab (Salto/SP!), Cellera Farma (Indaiatuba), Farmoterapica (Indaiatuba), Hero Suplementos (Indaiatuba), Sorocaps (Sorocaba), Hile (Jundiai), WBM (Jundiai), Supermercados Sao Vicente (Piracicaba), Ekobe (Capela do Alto), Zuhan Refeicoes (Campinas), Lollos Refeicoes (Sorocaba), Rede Frango Assado (Louveira), Mareia/Conrail (Campo Limpo Paulista — vencidos >40%)",
-      "2. Template generico de apresentação reforçado: US$ 8bi → US$ 11bi, adicionado R$ 14,4 mil/ano calculado, prova social Madero 55 mil L/mês, exportação EUA 1,4mi t, link para calculadora no rodapé do email",
-      "3. Site ganhou calculadora standalone (deploy-vercel/calculadora.html) com tabela de referencia (600 L = R$ 14,4k/ano a 55k L = R$ 1,2M/ano), formulario de lead (Formspree), indicador de agua preservada",
-      "4. Home page (index.html) ganhou seção 'Quanto vale o seu óleo usado?' com numeros-chave (US$ 11bi, 55k L/mes Madero, R$ 14,4k/ano) e CTA para calculadora.html"
+      "1. TEMPLATE FP2 REFORMULADO (prospecao_followup.py): de muro de texto para 3 bullets escaneaveis com portaria 2028, Madero 55k L/mes, PNRS — CTA direto 'quantos litros por mes'",
+      "2. TEMPLATE SUPERMERCADOS PERSONALIZADO (prospecao.py): calculo por loja (400-600 L/mes cada, rede 5 lojas = R$ 48-72k/ano), US$ 8,6bi → US$ 11bi, CTA 'quantas lojas'",
+      "3. SITE URGENCY BADGE (index.html): badge âmbar 'Nova portaria exige oleo residual a partir jan/2028' entre subtitulo e CTA",
+      "4. FILA EXTRA +8 empresas (201 total): Madero Salto, Ragazzo, BK, McDonalds Salto + Domino's/Pizza Hut Itu + Hoteis D'Itu e Fasano"
     ],
     "pipeline": {
       "empresas_em_prospecao_py": 73,
-      "pendentes_leads_csv": 15,
-      "total_na_fila_extra": 184,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "Fila fortalecida com 15 novas empresas (73 total). Foco em farmaceuticas/encapsulados (oleo vegetal limpeza) + supermercados (alta conversao)."
+      "pendentes_leads_csv": 9,
+      "total_na_fila_extra": 201,
+      "watchdog_leads_total": 223,
+      "watchdog_ativos": 172,
+      "watchdog_bounces": 58,
+      "nota": "Fila extra em 201 (+17 em 24h). Fast food de Salto adicionados — nicho fritura diaria com volume garantido. Templates FP2 e supermercados reformulados para maior conversao."
     },
     "pendente_estrategista": [
       "Toque humano DALBEN — ligar gerente Luis",
@@ -52,53 +52,8 @@
       "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
       "Covabra — priorizar follow-up humano (respondeu 22/09)",
       "Acompanhar Pague Menos — Josiane Marinho",
-      "Bounce rate 22% acima da meta <15% — revisar lista com MX self-hosted"
-    ]
-  },
-  "cron_2026_09_24_18h14_atendente_ia": {
-    "timestamp": "2026-09-24 18:14 (cron #26 - Atendente IA)",
-    "diagnostico": "Ciclo noturno. Watchdog exit 1 — 2 follow-ups atrasados detectados (Kelco Industrial e Supermercados Sao Judas Tadeu), resolvidos com prospecao_followup.py. 3 replies do Pague Menos — todas auto-replies de pesquisa Zendesk (survey), nenhuma resposta genuina de lead. Sistema estavel apos correcao.",
-    "acoes": [
-      "1. sync_formspree.py: 56 bounces em cache, 0 notificacoes novas do Formspree",
-      "2. corrigir_emails.py: 0 novos bounces processados (todos ja tentados anteriormente)",
-      "3. watchdog.py: exit 1 — 2 follow-ups ATRASADOS (Kelco Industrial, Supermercados Sao Judas Tadeu)",
-      "4. prospecao_followup.py: 2 follow-ups FP1 processados → comercial@kelcopetcare.com.br e faleconosco@supersaojudas.com.br",
-      "5. enviar_lote.py --status: 15 pendentes na fila (Camil, Cacau Show, Kopenhagen, Bunge, Embare, Biolab, Siol, Metha, Tauste, BRF Sorocaba, etc.)",
-      "6. send_sequence: Sequencia processada",
-      "7. check-replies: 3 respostas — todas auto-replies de pesquisa Zendesk do Pague Menos (survey de satisfacao). Nenhuma resposta genuina de lead. replies_pending.json limpo."
-    ],
-    "pipeline": {
-      "empresas_em_prospecao_py": 60,
-      "pendentes_leads_csv": 15,
-      "total_na_fila_extra": 184,
-      "watchdog_leads_total": 199,
-      "watchdog_ativos": 150,
-      "watchdog_bounces": 56,
-      "nota": "199 leads totais | 150 ativos | 56 bounces. Fila prospeccao: 244 total (197 contatados + 40 bounces + 15 pendentes). Fila extra: 184. 2 follow-ups processados (watchdog corrigido)."
-    },
-    "replies_pending": {
-      "total": 3,
-      "genuinas": 0,
-      "auto_replies": 3,
-      "detalhe": [
-        "1. Supermercados Pague Menos SA (falecom@paguemenos.zendesk.com) — survey Zendesk 'Compartilhar seu feedback conosco' (18:01)",
-        "2. Supermercados Pague Menos SA (falecom@paguemenos.zendesk.com) — survey Zendesk 'Compartilhar seu feedback conosco' (18:01)",
-        "3. Supermercados Pague Menos SA (falecom@paguemenos.zendesk.com) — survey Zendesk 'Compartilhar seu feedback conosco' (19:01)",
-        "Todas auto-replies de sistema — nenhuma resposta humana de lead."
-      ]
-    },
-    "pendente_estrategista": [
-      "Toque humano DALBEN — ligar gerente Luis",
-      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-      "Toque humano MUFFATO — ligar (43) 3371-1700",
-      "Fechar Brasfrigo (Salto/SP)",
-      "Acompanhar Selmi ticket #89532",
-      "Acompanhar Pague Menos — Josiane Marinho",
-      "Covabra — priorizar follow-up humano (respondeu 22/09)",
-      "Queijos Itupeva (Rafael) — agendar coleta-teste",
-      "Coocerqui — Carlos Machado respondeu, verificar lead",
-      "Backfill segmento em todos os leads",
-      "15 pendentes na fila — considerar novos envios de prospeccao"
+      "Bounce rate 20% acima da meta <15% — tendencia de melhora",
+      "8 leads fast food Salto adicionados — priorizar envio"
     ]
   }
 }

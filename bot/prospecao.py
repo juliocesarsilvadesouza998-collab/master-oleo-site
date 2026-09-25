@@ -216,17 +216,17 @@ def tpl_apresentacao(cfg, lead):
     segmento = (lead.get("segmento") or "alimentação").lower()
     # Ângulo específico: supermercados/atacarejo — padaria+rotisserie+açougue = óleo toda semana
     if any(k in segmento for k in ["supermercado", "supermercados", "atacarejo",
-                                    "atacado", "varejo"]):
-        return {
-            "subject": f"Óleo de fritura da {lead.get('empresa','')} vira renda — coleta na rede toda",
-            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Olá, {lead.get('nome','')}.</p>
-<p>Cada loja com padaria, rotisserie e açougue gera <b>óleo de fritura toda semana</b> — e o que sai de graça virou commodity: o mercado global de óleo usado vale <b>US$ 8,6 bi</b> e deve dobrar com a demanda por biodiesel (Fortune Business Insights).</p>
-<p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta do óleo de fritura</b> de redes inteiras: coleta programada por loja (semana fixa), bombonas fornecidas, <b>certificado de destinação (PNRS)</b> e <b>relatório ESG mensal</b> para a rede — a rede zera o passivo ambiental e ainda recebe pelo material. Pagamos de <b>R$ 1,00 a 2,50 por litro</b>, à vista (PIX) na coleta: uma rede com 10 lojas que gera 600 L/mês soma <b>R$ 14 mil/ano</b> só com o óleo usado. Redes já tratam isso como receita — o Grupo Madero fechou contrato de <b>55 mil L/mês</b> (270 restaurantes) com coletora.</p>
-<p>Urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante prioridade.</p>
-<p><b>Quanto a rede gera por mês (litros)?</b> Com esse número enviamos a avaliação. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-<p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
-</div>"""
+                                        "atacado", "varejo"]):
+            return {
+                "subject": f"Oleo de fritura da {lead.get('empresa','')} vira renda — coleta na rede toda",
+                "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+        <p>Ola, {lead.get('nome','')}.</p>
+        <p>Cada loja com padaria, rotisserie e acougue gera <b>oleo de fritura toda semana</b> — e o que sai de graca virou commodity: o mercado global de oleo usado vale <b>US$ 11 bi</b> e deve dobrar com a demanda por biodiesel (Fortune Business Insights).</p>
+        <p>A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinacao correta do oleo de fritura</b> de redes inteiras: coleta programada por loja (semana fixa), bombonas fornecidas, <b>certificado de destinacao (PNRS)</b> e <b>relatorio ESG mensal</b> para a rede — a rede zera o passivo ambiental e ainda recebe pelo material. Pagamos de <b>R$ 1,00 a 2,50 por litro</b>, a vista (PIX) na coleta: cada supermercado com padaria e rotisserie gera de <b>400 a 600 L/mes</b>. Uma rede com 5 lojas como a {lead.get('empresa','')} pode estar gerando <b>2.000 a 3.000 L/mes = R$ 48 mil a R$ 72 mil/ano</b> so com o oleo de fritura.</p>
+        <p>Urgencia: a <b>Portaria MME/MMA no 3/2026</b> obriga >=1% de oleo residual no biodiesel a partir de <b>jan/2028</b> — quem fecha contrato agora garante prioridade.</p>
+        <p><b>Quantas lojas a rede tem?</b> Com esse numero enviamos o calculo exato. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+        <p>Abraco,<br><b>{g['nome']}</b> · Compra de oleo e gordura vegetal usados · {cidade}</p>
+        </div>"""
         }
     # Ângulo específico: ÓLEO VEGETAL VENCIDO — produto carro-chefe (indústrias,
     # distribuidoras, atacadistas, supermercados com estoque de óleo vencido)

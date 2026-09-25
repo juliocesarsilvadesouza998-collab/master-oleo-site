@@ -1,5 +1,81 @@
 # Insights Diários — Analista de Qualidade
 
+## 2026-09-25 (sexta-feira) — 18:26 (Cron #29 — Melhorador Contínuo)
+
+### Resumo do ciclo
+
+| Métrica | Valor | Δ |
+|---------|-------|---|
+| **Total de leads (watchdog)** | 223 | +24 |
+| **Ativos** | 172 | +22 |
+| **Bounce (cache)** | 58 | +2 |
+| **Emails enviados** | 180 (144 entregues) | +24 |
+| **Respostas** | 15 | — |
+| **Taxa resposta** | 8.3% | -1.3pp |
+| **Bounce rate** | 20% (36/180) | -2pp (era 22%) |
+| **Empresas em prospecao.py** | 73 | — |
+| **Pendentes (fila)** | 9 | -6 |
+| **Fila extra** | 201 | +17 |
+
+### Melhorias implementadas neste ciclo
+
+1. **📧 Template FP2 reformulado** (`bot/prospecao_followup.py` linha 95-104):
+   - ❌ ANTES: muro de texto com 12 linhas, todos os argumentos amontoados num parágrafo só — cansativo de ler
+   - ✅ AGORA: 3 bullets escaneáveis com 3 fatos: (1) Portaria 3/2026 obriga ≥1% jan/2028, (2) Madero 55k L/mês como prova social, (3) PNRS — sem MTR passivo fica no CNPJ
+   - CTA direto ("Quantos litros por mês?") em vez de pedido genérico de "coleta-teste"
+   - Assunto mudou para "3 motivos para tratar isso este ano"
+
+2. **🎯 Template de supermercados personalizado** (`bot/prospecao.py` linhas 218-230):
+   - ❌ ANTES: "uma rede com 10 lojas que gera 600 L/mês soma R$ 14 mil/ano" — volume irreal para 10 lojas
+   - ✅ AGORA: "cada supermercado com padaria e rotisserie gera de 400 a 600 L/mês. Uma rede com 5 lojas: 2.000 a 3.000 L/mês = R$ 48 mil a R$ 72 mil/ano"
+   - US$ 8,6 bi → US$ 11 bi (atualizado com dados Fortune Business Insights)
+   - CTA mudou para "Quantas lojas a rede tem?" (pergunta mais fácil de responder)
+
+3. **🌐 Site — Urgency badge no hero** (`deploy-vercel/index.html`):
+   - Badge âmbar visível entre o subtítulo e os CTAs: "⚠️ Nova portaria exige óleo residual no biodiesel a partir jan/2028"
+   - CSS do badge com fundo semi-transparente e destaque para a data
+
+4. **🎯 Fila extra fortalecida (+8)**: adicionadas 8 empresas de alto volume de fritura em Salto/região:
+   - Madero Salto, Ragazzo Salto, BK Salto, McDonalds Salto (fast food — fritura alto volume!)
+   - Domino's Pizza Itu, Pizza Hut Itu (pizzarias — gordura vegetal)
+   - Hotel Fazenda D'Itu, Fasano Boa Vista (hotéis — cozinha industrial todo dia)
+   - **Total**: 201 empresas na fila extra (+8 neste ciclo, +17 desde ontem)
+
+### Diagnóstico do sistema
+
+| Métrica | Valor | Meta |
+|---------|-------|------|
+| Watchdog | ✅ Saudável (exit 0) | — |
+| SMTP/IMAP | ✅ OK | — |
+| Emails enviados | 180 | — |
+| Taxa resposta | 8.3% | >3% ✅ |
+| Bounce rate | 20% (36/180) | <15% ❌ (melhorou de 22%) |
+| Pendentes fila | 9 | >30 ❌ |
+| Fila extra | 201 | — |
+
+### Observações
+
+- **Watchdog verde direto (exit 0)** — SMTP/IMAP operacionais, sem follow-ups atrasados.
+- **Bounce rate caiu de 22% para 20%** — tendência de melhora, mas ainda acima da meta de 15%.
+- **Sexta-feira mais lenta** — só 9 emails enviados (final de semana empresas não respondem).
+- **8,3% de resposta ainda é excelente** para cold email B2B (média do setor 1-3%).
+- **Fila extra em 201** — mais de 200 empresas prontas para reposição. Nunca estivemos tão bem abastecidos.
+- **8 empresas fast food adicionadas em Salto** — nicho de fritura diária com volume garantido.
+
+### Pendências para o Estrategista
+
+- 🔴 **Toque humano**: Dalben, Savegnago (WhatsApp 11 96785-9631), Muffato (tel 43 3371-1700)
+- 🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste (lead mais próximo de fechar)
+- 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
+- 🟡 **Coocerqui** — Carlos Machado respondeu. Verificar lead.
+- 🟡 **Selmi** — acompanhar ticket #89532
+- 🟡 **Pague Menos** — acompanhar Josiane Marinho
+- 🔧 **Bounce rate 20%** — melhorou de 22%, mas ainda acima da meta <15%
+- 🔧 **Pendentes em 9** — abaixo da meta 30+. Fila extra em 201 para reposição contínua.
+- 🔧 **8 novos leads fast food** em Salto — Madero, Burger King, McDonalds — priorizar envio
+
+---
+
 ## 2026-09-24 (quinta-feira) — 18:23 (Cron #27 — Melhorador Contínuo)
 
 ### Resumo do ciclo
