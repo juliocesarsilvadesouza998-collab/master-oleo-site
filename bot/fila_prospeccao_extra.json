@@ -1356,7 +1356,8 @@
     "email": "salto@madero.com.br",
     "cidade": "Salto/SP",
     "nicho": "Restaurante steak house",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Restaurante steak house (fritura alto volume)"
   },
   {
     "nome": "Ragazzo Salto",
@@ -1364,7 +1365,8 @@
     "email": "sac@ragazzo.com.br",
     "cidade": "Salto/SP",
     "nicho": "Fast food fritura alto volume",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Fast food (fritura alto volume)"
   },
   {
     "nome": "BK Salto",
@@ -1372,7 +1374,8 @@
     "email": "faleconosco@burgerking.com.br",
     "cidade": "Salto/SP",
     "nicho": "Fast food fritura alto volume",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Fast food (fritura alto volume)"
   },
   {
     "nome": "McDonalds Salto",
@@ -1380,7 +1383,8 @@
     "email": "sac@mcdonalds.com.br",
     "cidade": "Salto/SP",
     "nicho": "Fast food fritura alto volume",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Fast food (fritura alto volume)"
   },
   {
     "nome": "Domino Pizza Itu",
@@ -1388,7 +1392,8 @@
     "email": "contato@dominos.com.br",
     "cidade": "Itu/SP",
     "nicho": "Pizzaria massa de pizza gordura vegetal",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Pizzaria (gordura vegetal e fritura)"
   },
   {
     "nome": "Pizza Hut Itu",
@@ -1396,7 +1401,8 @@
     "email": "sac@pizzahut.com.br",
     "cidade": "Itu/SP",
     "nicho": "Pizzaria gordura e fritura",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Pizzaria (gordura e fritura)"
   },
   {
     "nome": "Hotel Fazenda DItu",
@@ -1404,7 +1410,8 @@
     "email": "reservas@ditu.com.br",
     "cidade": "Itu/SP",
     "nicho": "Hotel fazenda cozinha industrial alta rotacao",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Hotel fazenda (cozinha industrial)"
   },
   {
     "nome": "Fasano Boa Vista",
@@ -1412,6 +1419,16 @@
     "email": "reservas.boavista@fasano.com.br",
     "cidade": "Porto Feliz/SP",
     "nicho": "Hotel resort cozinha gastronomica e eventos",
-    "fonte": "melhoria_continua_20260925"
+    "fonte": "melhoria_continua_20260925",
+    "segmento": "Hotel resort (cozinha gastronomica)"
+  },
+  {
+    "nome": "Creme Jundiaí",
+    "empresa": "Romica Brasil Comercio de Alimentos Ltda",
+    "email": "sac@cremejundiai.com.br",
+    "cidade": "Louveira/SP",
+    "segmento": "Industria de alimentos (cremes culinarios, chantilly, gorduras vegetais) - NICHO PRIORITARIO",
+    "nicho": "industria de gorduras e alimentos",
+    "fonte": "prospector_20260925"
   }
 ]
