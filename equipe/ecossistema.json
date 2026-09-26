@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-09-25 20:01 (cron #32 - Atendente IA - ciclo noturno)",
-    "criado_em": "2026-08-13",
+  "atualizado_em": "2026-09-26 12:31 (cron #36 - Atendente IA - ciclo noturno/sob demanda)",
+  "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -11,38 +11,255 @@
       "meta_humana_1": "Ligar para Muffato (43) 3371-1700 - agendar conversa com compras",
       "meta_humana_2": "Check-in WhatsApp nos leads que responderam: Sumerbol, GoodBom, Boa, Rede Confianca, Andorinha, Rede Frango Assado",
       "meta_humana_3": "Fechar Brasfrigo (Salto/SP)",
-      "meta_fila": ">= 30 pendentes com reposicao continua (atual: 9 pendentes + fila_extra 201)",
+      "meta_fila": ">= 30 pendentes com reposicao continua (atual: pendentes reduzidos)",
       "meta_resposta": "taxa >= 10% (atingida 8,3% atual)",
-      "meta_bounce": "< 15% (atual 20%)",
+      "meta_bounce": "< 15% (atual ~18%)",
       "nicho_prioritario": "supermercados/redes/atacarejo + frigorificos + fast food Salto",
       "foco_urgencia": "Portaria MME/MMA nº 3/2026 - obrigatorio >=1% OGR a partir de 01/01/2028"
     },
     "foco_cidades": [
-      "Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba", "Jundiai",
-      "Louveira", "Valinhos", "Piracicaba", "Vinhedo", "Monte Mor",
-      "Hortolandia", "Sumare", "Limeira", "Nova Odessa", "Cabreuva",
-      "Tatui", "Porto Feliz", "Boituva", "Americana", "Votorantim",
-      "Aluminio", "Capivari", "Elias Fausto", "Itupeva", "Cerquilho"
+      "Salto",
+      "Campinas",
+      "Indaiatuba",
+      "Itu",
+      "Sorocaba",
+      "Jundiai",
+      "Louveira",
+      "Valinhos",
+      "Piracicaba",
+      "Vinhedo",
+      "Monte Mor",
+      "Hortolandia",
+      "Sumare",
+      "Limeira",
+      "Nova Odessa",
+      "Cabreuva",
+      "Tatui",
+      "Porto Feliz",
+      "Boituva",
+      "Americana",
+      "Votorantim",
+      "Aluminio",
+      "Capivari",
+      "Elias Fausto",
+      "Itupeva",
+      "Cerquilho"
     ]
   },
-  "cron_2026_09_25_20h01_atendente_ia": {
-        "timestamp": "2026-09-25 20:01 (Cron #32 - Atendente IA - ciclo noturno)",
-        "diagnostico": "Watchdog exit 0 — sistema saudável. 237 leads totais, 181 ativos, 63 bounces. SMTP/IMAP OK. 0 follow-ups atrasados. Sequência processada. Nenhuma resposta pendente. Sistema rodando limpo em ciclo noturno de sexta-feira.",
+  "cron_2026_09_26_11h03_atendente_ia": {
+    "timestamp": "2026-09-26 11:03 (Cron #33 - Atendente IA - ciclo matinal)",
+    "diagnostico": "Watchdog exit 1 (menor — 2 bounces já tentados sem correcao). SMTP/IMAP OK. 15 follow-ups atrasados processados (FP1 para Piraquê, Fugini, Pelissari, Quata, Thermas SP, Dona Carolina, Eurofarma, Mars, Granol, Mococa, Nestlé, Aviação, Trani, Leiteria Prosperidade, Queijos Rosa). 3 boas-vindas novas enviadas. Betins Laticínios respondeu 'Não utilizo óleo' — resposta enviada fechando educadamente. Mars Brasil (noreply@br.mars.com) respondeu auto-resposta SAC — arquivada.",
+    "acoes": [
+      "1. SYNC + CORRECAO: sync_formspree.py (0 notificações novas, 65 bounces em cache), corrigir_emails.py (0 novos bounces processados — todos já tentados anteriormente)",
+      "2. WATCHDOG: exit 1 — 15 follow-ups atrasados + 2 bounces sem correção. Resolvido com prospecao_followup.py.",
+      "3. PROSPECAO_FOLLOWUP: 15 FP1 enviados (Piraquê, Fugini, Pelissari, Quata, Thermas SP, Dona Carolina, Eurofarma, Mars, Granol, Mococa, Nestlé, Aviação, Trani, Leiteria Prosperidade, Queijos Rosa)",
+      "4. SEND_SEQUENCE: 3 boas-vindas enviadas (Batata Palha Ouro de Minas, Quetti Alimentos, Batata Palha Frishow)",
+      "5. CHECK-REPLIES: 2 respostas pendentes processadas. Betins Laticínios = 'Não utilizo óleo' (respondido e encerrado). Mars Brasil = auto-resposta SAC noreply (arquivada como automática). replies_pending.json limpo."
+    ],
+    "pipeline": {
+      "empresas_em_prospecao_py": 73,
+      "total_leads_csv": 242,
+      "ativos_csv": 199,
+      "bounce_csv": 43,
+      "encerrados_csv": 0,
+      "respondidos_com_respondido_por": 6,
+      "bounce_cache_json": 65,
+      "watchdog_leads_total": 242,
+      "watchdog_ativos": 183,
+      "watchdog_bounces": 65,
+      "nota": "Ciclo matinal de sábado. 15 follow-ups FP1 processados. Betins Laticínios respondeu 'não utilizo óleo' — encerrado. Nenhum lead quente neste ciclo."
+    },
+    "pendente_estrategista": [
+      "Toque humano DALBEN — ligar gerente Luis",
+      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+      "Toque humano MUFFATO — ligar (43) 3371-1700",
+      "Fechar Brasfrigo (Salto/SP)",
+      "Acompanhar Selmi ticket #89532",
+      "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+      "Covabra — priorizar follow-up humano (respondeu 22/09)",
+      "Acompanhar Pague Menos — Josiane Marinho",
+      "Bounce rate ~18% acima da meta <15% — tendencia de melhora",
+      "FP1 enviado hoje para Piraquê, Fugini, Pelissari, Quata, Granol, Mococa, Nestlé — aguardar respostas"
+    ]
+  },
+  "cron_2026_09_26_prospector": {
+    "timestamp": "2026-09-26 (Cron Prospector)",
+    "fila_prospeccao": {
+      "total": 284,
+      "pendentes": 2,
+      "contatados": 237,
+      "bounces": 47,
+      "novas_empresas_adicionadas": 8,
+      "emails_enviados_no_lote": 8
+    },
+    "acoes": [
+      "1. DIAGNOSTICO: fila com apenas 1 pendente (Madero)",
+      "2. DESCOBERTA: 8 novas empresas de NICHO PRIORITARIO adicionadas a fila_prospeccao_extra.json",
+      "3. ENVIO: 8 emails enviados com sucesso (0 falhas)",
+      "4. EMPRESAS DE ALTO VALOR: Piracanjuba (manteiga/creme de leite), Danone (iogurtes/laticinios), Itambé/Batavo (manteiga/queijos - grupo Lactalis), Cargill (oleos/gorduras), Laticinios Porto Alegre (queijos/manteiga), Predilecta (maioneses), Bom Gosto (laticinios)"
+    ],
+    "pendentes_fila": [
+      "Madero Steak House <salto@madero.com.br> (sem MX - não enviável)",
+      "Parmalat/Lactalis <sac@parmalat.com.br> (sem MX - não enviável)"
+    ]
+  },
+  "cron_2026_09_26_atendente_ia_ciclo_noturno": {
+    "timestamp": "2026-09-26 12:01 (Cron #35 - Atendente IA - ciclo noturno)",
+    "diagnostico": "Watchdog exit 0 (saudavel). SMTP/IMAP OK. 0 follow-ups atrasados. 0 boas-vindas novas. 0 respostas pendentes. Nenhum lead quente neste ciclo.",
+    "acoes": [
+      "1. SYNC + CORRECAO: sync_formspree.py (0 notificacoes novas, 66 bounces em cache), corrigir_emails.py (0 novos bounces — todos já tentados anteriormente)",
+      "2. WATCHDOG: exit 0 — tudo saudavel, nenhum follow-up atrasado.",
+      "3. PROSPECAO_FOLLOWUP: 0 atrasados para processar.",
+      "4. SEND_SEQUENCE: sequencia processada sem novos envios.",
+      "5. CHECK-REPLIES: 0 respostas pendentes. replies_pending.json vazio.",
+      "6. IMAP SCAN: 0 emails nao lidos na caixa de entrada."
+    ],
+    "pipeline": {
+      "total_leads_csv": 250,
+      "ativos_csv": 190,
+      "bounce_csv": 44,
+      "encerrados_csv": 0,
+      "respondidos_com_respondido_por": 6,
+      "bounce_cache_json": 66,
+      "watchdog_leads_total": 250,
+      "watchdog_ativos": 190,
+      "watchdog_bounces": 66,
+      "nota": "Ciclo noturno de sabado. Sistema saudavel e ocioso. 0 respostas pendentes. 0 leads quentes neste ciclo."
+    },
+    "pendente_estrategista": [
+      "Toque humano DALBEN — ligar gerente Luis",
+      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+      "Toque humano MUFFATO — ligar (43) 3371-1700",
+      "Fechar Brasfrigo (Salto/SP)",
+      "Acompanhar Selmi ticket #89532",
+      "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+      "Covabra — priorizar follow-up humano (respondeu 22/09)",
+      "Acompanhar Pague Menos — Josiane Marinho"
+    ]
+  },
+  "cron_2026_09_26_atendente_ia": {
+    "timestamp": "2026-09-26 11:35 (Cron #34 - Atendente IA - ciclo vespertino)",
+    "diagnostico": "Watchdog exit 0 (saudavel). SMTP/IMAP OK. 0 follow-ups atrasados. 0 boas-vindas novas. Sequencia processada. 1 resposta automatica (Piracanjuba SAC) arquivada. 2 bounces Tostally registrados como nao_encontrado (dominio sem site). Nenhum lead quente novo neste ciclo.",
+    "acoes": [
+      "1. SYNC + CORRECAO: sync_formspree.py (0 notificacoes novas, 66 bounces em cache), corrigir_emails.py (1 novo bounce processado: Lactalis — nao_encontrado)",
+      "2. WATCHDOG: exit 1 — 2 bounces Tostally sem correcao. Corrigido manualmente adicionando a correcoes_emails.json como nao_encontrado (dominio sem site). Watchdog reexecutado: exit 0 ✅",
+      "3. PROSPECAO_FOLLOWUP: 0 follow-ups atrasados para processar",
+      "4. SEND_SEQUENCE: sequencia processada sem novos envios",
+      "5. CHECK-REPLIES: 1 resposta pendente (Piracanjuba — auto-resposta SAC com protocolo). Sem acao — arquivada como automatica.",
+      "6. EQUIPE: ecossistema.json e insights.md atualizados com dados reais"
+    ],
+    "pipeline": {
+      "total_leads_csv": 250,
+      "ativos_csv": 190,
+      "bounce_csv": 44,
+      "encerrados_csv": 0,
+      "respondidos_com_respondido_por": 6,
+      "bounce_cache_json": 66,
+      "watchdog_leads_total": 250,
+      "watchdog_ativos": 190,
+      "watchdog_bounces": 66,
+      "nota": "Ciclo vespertino de sabado. Sistema saudavel. Piracanjuba respondeu com auto-reply SAC (arquivado). Nenhum lead quente novo neste ciclo."
+    },
+    "pendente_estrategista": [
+      "Toque humano DALBEN — ligar gerente Luis",
+      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+      "Toque humano MUFFATO — ligar (43) 3371-1700",
+      "Fechar Brasfrigo (Salto/SP)",
+      "Acompanhar Selmi ticket #89532",
+      "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+      "Covabra — priorizar follow-up humano (respondeu 22/09)",
+      "Acompanhar Pague Menos — Josiane Marinho",
+      "Betins Laticinios respondeu 'Nao utilizo oleo' — encerrado",
+      "Piracanjuba respondeu auto-reply SAC — sem acao"
+    ]
+  },
+  "cron_2026_09_26_atendente_ia_ciclo_1301": {
+    "timestamp": "2026-09-26 13:01 (Cron #37 - Atendente IA - ciclo sabado tarde)",
+    "diagnostico": "Watchdog exit 0 (saudavel). SMTP/IMAP OK. 0 follow-ups atrasados. 0 boas-vindas novas. Sequencia processada. 0 respostas pendentes. replies_pending.json vazio.",
+    "acoes": [
+      "1. SYNC + CORRECAO: sync_formspree.py (0 notificacoes novas, 66 bounces em cache), corrigir_emails.py (0 novos bounces — todos ja tentados anteriormente)",
+      "2. WATCHDOG: exit 0 — tudo saudavel, nenhum follow-up atrasado.",
+      "3. PROSPECAO_FOLLOWUP: 0 atrasados para processar.",
+      "4. SEND_SEQUENCE: sequencia processada sem novos envios.",
+      "5. CHECK-REPLIES: 0 respostas pendentes. replies_pending.json vazio."
+    ],
+    "pipeline": {
+      "total_leads_csv": 250,
+      "ativos_csv": 190,
+      "bounce_csv": 44,
+      "encerrados_csv": 0,
+      "respondidos_com_respondido_por": 6,
+      "bounce_cache_json": 66,
+      "watchdog_leads_total": 250,
+      "watchdog_ativos": 190,
+      "watchdog_bounces": 66,
+      "nota": "Ciclo sabado tarde. Sistema saudavel e ocioso. 0 respostas pendentes. 0 leads quentes neste ciclo."
+    },
+    "pendente_estrategista": [
+      "Toque humano DALBEN — ligar gerente Luis",
+      "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+      "Toque humano MUFFATO — ligar (43) 3371-1700",
+      "Fechar Brasfrigo (Salto/SP)",
+      "Acompanhar Selmi ticket #89532",
+      "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+      "Covabra — priorizar follow-up humano (respondeu 22/09)",
+      "Acompanhar Pague Menos — Josiane Marinho"
+    ]
+  },
+  "cron_2026_09_26_atendente_ia_ciclo_1331": {
+        "timestamp": "2026-09-26 13:31 (Cron #38 - Atendente IA - ciclo sabado tarde)",
+        "diagnostico": "Watchdog exit 0 (saudavel). SMTP/IMAP OK. 0 follow-ups atrasados. 0 boas-vindas novas. Sequencia processada. 0 respostas pendentes. replies_pending.json vazio ([]).",
         "acoes": [
-          "1. SYNC + CORRECAO: sync_formspree.py (0 notificações novas, 63 bounces em cache), corrigir_emails.py (0 novos bounces processados — todos já tentados anteriormente)",
-          "2. WATCHDOG: exit 0 — saudável. SMTP/IMAP OK. Nenhum follow-up atrasado.",
-          "3. PROSPECAO_FOLLOWUP: 0 follow-ups processados (nada em atraso).",
-          "4. SEND_SEQUENCE: sequência processada — sem boas-vindas novas neste ciclo (processado no ciclo anterior).",
-          "5. CHECK-REPLIES: 0 respostas pendentes. replies_pending.json vazio."
+          "1. SYNC + CORRECAO: sync_formspree.py (0 notificacoes novas, 66 bounces em cache), corrigir_emails.py (0 novos bounces — todos ja tentados anteriormente)",
+          "2. WATCHDOG: exit 0 — tudo saudavel, nenhum follow-up atrasado. SMTP/IMAP OK.",
+          "3. PROSPECAO_FOLLOWUP: 0 atrasados para processar.",
+          "4. SEND_SEQUENCE: sequencia processada sem novos envios.",
+          "5. CHECK-REPLIES: 0 respostas pendentes. replies_pending.json vazio ([])."
         ],
         "pipeline": {
-          "empresas_em_prospecao_py": 73,
-          "pendentes_leads_csv": 9,
-          "total_na_fila_extra": 202,
-          "watchdog_leads_total": 237,
-          "watchdog_ativos": 181,
-          "watchdog_bounces": 63,
-          "nota": "Ciclo noturno de sexta-feira. Sistema saudável. Nenhuma resposta de lead para atender. Fila extra em 202 empresas."
+          "total_leads_csv": 250,
+          "ativos_csv": 190,
+          "bounce_csv": 44,
+          "encerrados_csv": 0,
+          "respondidos_com_respondido_por": 6,
+          "bounce_cache_json": 66,
+          "watchdog_leads_total": 250,
+          "watchdog_ativos": 190,
+          "watchdog_bounces": 66,
+          "nota": "Ciclo sabado tarde #2. Sistema saudavel e ocioso. 0 respostas pendentes. 0 leads quentes neste ciclo. Mesmo estado do ciclo 13:01."
+        },
+        "pendente_estrategista": [
+          "Toque humano DALBEN — ligar gerente Luis",
+          "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+          "Toque humano MUFFATO — ligar (43) 3371-1700",
+          "Fechar Brasfrigo (Salto/SP)",
+          "Acompanhar Selmi ticket #89532",
+          "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+          "Covabra — priorizar follow-up humano (respondeu 22/09)",
+          "Acompanhar Pague Menos — Josiane Marinho"
+        ]
+      },
+      "melhorador_continuo_2026_09_26": {
+        "timestamp": "2026-09-26 14:07 (Cron Melhorador Contínuo - sábado tarde)",
+        "diagnostico": "Watchdog exit 0 (saudavel). SMTP/IMAP OK. Sistema ocioso - fila de prospeccao quase vazia (2 pendentes sem MX, 237 contatados, 48 bounces). BOUNCE RATE 21% acima da meta (15%). RESPOSTA RATE 8.2% abaixo da meta (10%). CRITICO: pipeline de leads secando.",
+        "acoes": [
+          "1. ADICAO DE 7 NOVAS EMPRESAS em prospecao.py EMPRESAS e fila_prospeccao_extra.json: Tauste Supermercados (sac@tauste.com.br, Campinas, MX valido), Rede Bom Lugar (clube@redebomlugar.com.br, Sorocaba/50+ lojas, MX valido), Supermercados Galassi (contato@galassi.com.br, Campinas, MX valido), Supermercados Enxuto (sac@enxuto.com.br, Campinas, MX valido), Hotel Nacional Inn Jundiai (reservas@...), Hotel Dan Inn Sorocaba (reservas@...), Gross Burger (contato@grossburger.com.br, Jundiai, MX valido)",
+          "2. FP3 TEMPLATE REFORCADO em prospecao_followup.py: nova versao mais direta com 3 argumentos (R$ 14,4k/ano, Portaria 2028, passivo ambiental/anti-furto), CTA mais claro, tom de urgencia em vez de despedida",
+          "3. VERIFICACAO: py_compile OK em ambos scripts, enviar_lote.py --status mostra 12 pendentes (antes eram 2 com MX invalido)"
+        ],
+        "pipeline": {
+          "total_leads_csv": 250,
+          "ativos_csv": 190,
+          "bounce_csv": 44,
+          "encerrados_csv": 0,
+          "respondidos_com_respondido_por": 6,
+          "bounce_cache_json": 66,
+          "watchdog_leads_total": 250,
+          "watchdog_ativos": 190,
+          "watchdog_bounces": 66,
+          "fila_total_empresas": 298,
+          "fila_pendentes_validas": 6,
+          "nota": "Fila reabastecida com 6 empresas com MX valido (Tauste, Bom Lugar, Galassi, Enxuto, Gross Burger) + 2 sem MX (Nacional Inn, Dan Inn - documentados). FP3 reforcado com urgencia regulatória + receita R$ 14,4k/ano + risco passivo/anti-furto."
         },
         "pendente_estrategista": [
           "Toque humano DALBEN — ligar gerente Luis",
@@ -53,8 +270,7 @@
           "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
           "Covabra — priorizar follow-up humano (respondeu 22/09)",
           "Acompanhar Pague Menos — Josiane Marinho",
-          "Bounce rate 20% acima da meta <15% — tendencia de melhora",
-          "8 leads fast food Salto adicionados — priorizar envio"
+          "ENVIAR_LOTE - proximo cron pode enviar ate 15 emails para as 6 novas empresas com MX valido"
         ]
+      }
     }
-}

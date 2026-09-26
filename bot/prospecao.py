@@ -125,8 +125,19 @@ EMPRESAS = [
                                 # Rede frango assado - fritura alto volume
                                 {"nome": "Rede Frango Assado", "empresa": "Pimenta Verde Alimentos Ltda (Rede Frango Assado)", "email": "sac@redefrangoassado.com.br", "cidade": "Louveira/SP", "segmento": "Rede de restaurantes rotisserie (fritura alto volume)"},
                                 # Industria de maioneses/gorduras - vencidos >40%
-                                {"nome": "Mareia (Conrail)", "empresa": "Conrail Industria e Comercio de Produtos Alimenticios Ltda", "email": "sac@mareia.com.br", "cidade": "Campo Limpo Paulista/SP", "segmento": "Industria de maioneses e condimentos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"},
-                            ]
+                                                                {"nome": "Mareia (Conrail)", "empresa": "Conrail Industria e Comercio de Produtos Alimenticios Ltda", "email": "sac@mareia.com.br", "cidade": "Campo Limpo Paulista/SP", "segmento": "Industria de maioneses e condimentos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"},
+                                                                # --- NOVAS EMPRESAS (adicionadas 26/09 - Melhorador Contínuo, MX verificado) ---
+                                                                # Redes de supermercados - maior taxa de conversao
+                                                                {"nome": "Tauste Supermercados", "empresa": "Tauste Supermercados SA", "email": "sac@tauste.com.br", "cidade": "Campinas/SP", "segmento": "Supermercados (rede grande, 10+ lojas, padaria/rotisserie/acougue) - MX Google valido 26/09"},
+                                                                {"nome": "Rede Bom Lugar", "empresa": "Rede Bom Lugar Supermercados SA", "email": "clube@redebomlugar.com.br", "cidade": "Sorocaba/SP", "segmento": "Supermercados (rede 50+ lojas, 13 cidades, padaria/rotisserie/acougue) - MX Locaweb valido 26/09"},
+                                                                {"nome": "Supermercados Galassi", "empresa": "Supermercados Galassi Ltda", "email": "contato@galassi.com.br", "cidade": "Campinas/SP", "segmento": "Supermercados (rede, padaria/rotisserie/acougue) - MX Locaweb valido 26/09"},
+                                                                {"nome": "Supermercados Enxuto", "empresa": "Enxuto Supermercados Ltda", "email": "sac@enxuto.com.br", "cidade": "Campinas/SP", "segmento": "Supermercados (rede, padaria/rotisserie/acougue) - MX Outlook valido 26/09"},
+                                                                # Hotéis - fritura alto volume, setor com sensibilidade ESG
+                                                                {"nome": "Hotel Nacional Inn Jundiai", "empresa": "Nacional Inn Jundiai", "email": "reservas@nacionalinnjundiai.com.br", "cidade": "Jundiai/SP", "segmento": "Hotel (cozinha industrial propria, cafe/almoço/jantar)"},
+                                                                {"nome": "Dan Inn Sorocaba", "empresa": "Hotel Dan Inn Sorocaba", "email": "reservas@daninnsorocaba.com.br", "cidade": "Sorocaba/SP", "segmento": "Hotel (cozinha industrial propria, fritura diaria)"},
+                                                                # Fast food regional - fritura alto volume
+                                                                {"nome": "Gross Burger", "empresa": "Gross Burger (Jundiai)", "email": "contato@grossburger.com.br", "cidade": "Jundiai/SP", "segmento": "Hamburgueria artesanal (fritura alto volume, batata frita)"},
+                                                            ]
 
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")

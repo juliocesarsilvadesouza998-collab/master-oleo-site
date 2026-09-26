@@ -1,0 +1,60 @@
+{
+  "atualizado_em": "2026-09-26T14:04:00-03:00",
+  "total_leads": 250,
+  "leads_ativos": 190,
+  "leads_bounce": 44,
+  "leads_respondido": 16,
+  "leads_encerrado": 0,
+  "status_detalhado": {
+    "bounce": 44,
+    "novo": 181,
+    "respondido": 16,
+    "sequencia": 9
+  },
+  "top_segmentos": {},
+  "top_cidades": {},
+  "top_fontes": {
+    "prospeccao": 169,
+    "prospeccao-lote": 70,
+    "vazio": 11
+  },
+  "respondidos_recentes": [
+    {
+      "empresa": "Betins Laticinios",
+      "email": "betinslaticinios@gmail.com",
+      "respondido_em": "2026-09-26T11:02:25-03:00",
+      "ultima_resposta": ""
+    },
+    {
+      "empresa": "Covabra Supermercados LTDA",
+      "email": "sac@covabra.com.br",
+      "respondido_em": "2026-09-22T17:44:11-03:00",
+      "ultima_resposta": ""
+    },
+    {
+      "empresa": "Savegnago Supermercados",
+      "email": "atendimento@savegnago.com.br",
+      "respondido_em": "2026-09-22T18:32:34-03:00",
+      "ultima_resposta": ""
+    },
+    {
+      "empresa": "Paulistao Atacadista (Grupo Savegnago)",
+      "email": "atendimento@paulistaoatacadista.com.br",
+      "respondido_em": "2026-09-22T18:32:40-03:00",
+      "ultima_resposta": ""
+    },
+    {
+      "empresa": "Supermercados Pague Menos SA",
+      "email": "falecom@supermercadospaguemenos.com.br",
+      "respondido_em": "2026-09-21T15:11:40-03:00",
+      "ultima_resposta": ""
+    },
+    {
+      "empresa": "Pastificio Selmi S/A",
+      "email": "compras@selmi.com.br",
+      "respondido_em": "2026-09-21T15:32:00-03:00",
+      "ultima_resposta": "2026-09-21T15:32:00-03:00"
+    }
+  ],
+  "bounces_cache": 66
+}

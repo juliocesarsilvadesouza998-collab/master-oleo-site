@@ -105,13 +105,15 @@ def tpl_fp(cfg, lead, n):
 <p>Abraco,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
-            subj = f"Encerrando contato — {lead['empresa']} × {g['nome']}"
+            subj = f"Último contato — {lead['empresa']} pode estar perdendo R$ 14,4 mil/ano em óleo"
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
-    <p>Só mais esta — prometo que é a última sobre a <b>compra do óleo usado da {lead['empresa']}</b>.</p>
-    <p>O mercado global UCO vale <b>US$ 11 bi</b> e a demanda mundial já supera a coleta — Europa consome 8× mais do que coleta, e a partir de <b>jan/2028</b> o biodiesel brasileiro é obrigado a usar ≥1% de óleo residual (Portaria MME/MMA nº 3/2026). Quem tiver contrato assinado antes estará na dianteira.</p>
-    <p>Não precisa de nada agora? Sem problema — é só ignorar e não receberá mais mensagens sobre isso. Se no futuro fizer sentido, chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-    <p>Obrigado pela atenção e sucesso com a {lead['empresa']}.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+    <p><b>Última mensagem sobre este assunto</b> — e é direta ao ponto:</p>
+    <p><b>1. O óleo de fritura da {lead['empresa']} vale dinheiro</b> — R$ 1,00 a R$ 2,50/L, pago à vista (PIX) na coleta. Um estabelecimento que gera 600 L/mês recebe R$ 14,4 mil/ano. Redes grandes geram 3.000+ L/mês = R$ 72 mil+/ano.</p>
+    <p><b>2. A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de jan/2028</b> — a demanda por óleo usado vai disparar (mercado global UCO = US$ 11 bi) e quem tiver contrato assinado antes terá prioridade.</p>
+    <p><b>3. Sem coleta com certificado, o passivo ambiental fica no CNPJ</b> (Lei 12.305/2010 — PNRS). E pior: sem MTR, o óleo pode ser desviado para reuso ilegal na alimentação — e a responsabilidade de rastreio é de quem gerou o resíduo.</p>
+    <p>Não precisa de nada agora? Sem problema, esta é a última mensagem. <b>Mas se no futuro quiser transformar o óleo em receita</b> com coleta programada, bombonas fornecidas e certificado de destinação, chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p>Sucesso com a {lead['empresa']}.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
     </div>"""
     return {"subject": subj, "html": html}
 
