@@ -1,31 +1,30 @@
 {
-  "atualizado_em": "2026-09-25T18:25-03:00",
-  "atividade_tick_18h25_25_09": {
-    "ciclo": "cron_tick_job_25_09",
-    "acao": "sync + corrigir_emails + watchdog + prospecao_followup(133) + send_sequence + check-replies + enviar_lote(9)",
-    "emails_enviados": 151,
+  "atualizado_em": "2026-09-25T19:31-03:00",
+  "atividade_tick_19h31_25_09": {
+    "ciclo": "cron_tick_job_25_09_19h31",
+    "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
+    "emails_enviados": 0,
     "bounces_novos": 0,
-    "resultado": "133 follow-ups atrasados limpos + 9 primeiros contatos enviados (fila zerada)"
+    "resultado": "Sistema saudável — nenhum follow-up atrasado, fila zerada, 0 respostas pendentes"
   },
-  "atividade_tick_18h25_25_09_detalhado": {
-    "sync_formspree": "OK — 0 notificacoes novas (58 bounces em cache)",
-    "corrigir_emails": "OK — 0 processados (todos com tentativa registrada)",
-    "watchdog": "EXIT 1 → resolvido → EXIT 0 — 133 atrasados limpos, sistema saudavel",
-    "prospecao_followup": "OK — 133 follow-ups processados (FP2 para maioria, FP1 para thread-reply)",
+  "atividade_tick_19h31_25_09_detalhado": {
+    "sync_formspree": "OK — 0 notificacoes novas (63 bounces em cache)",
+    "corrigir_emails": "OK — 0 processados (todos com tentativa registrada anteriormente)",
+    "watchdog": "EXIT 0 — sistema saudavel, sem problemas",
+    "prospecao_followup": "OK — 0 follow-ups atrasados para processar",
     "send_sequence": "OK — sequencia processada",
-    "check_replies": "OK — 2 respostas pendentes (ambas auto-respostas de ticket — Boa Supermercados e Vitafor)",
+    "check_replies": "OK — 0 respostas pendentes (replies_pending.json vazio)",
     "respostas_enviadas": "0 — nenhuma resposta humana para atender",
-    "enviar_lote": "OK — 9 primeiros contatos enviados (Vigor, Catupiry, Balan Ingredientes, Maguacamp, Granarolo, Vitall Sorvetes, Green Ingredientes, Atlantica Foods, Level Alimentos)",
     "relatorio_esg": "nenhum pedido",
-    "pipeline_atual": "214 leads / 163 ativos / 15 respondido / 36 bounce (58 cache)",
-    "fila_prospeccao_extra": "193 empresas na fila extra",
-    "observacao": "Tick 18:25 25/09 — Pipeline zerada (0 pendentes na fila principal). 133 follow-ups atrasados limpos. 9 novos primeiros contatos enviados. Ambas as respostas na caixa sao auto-respostas de ticket — sem leads quentes para atendimento. Watchdog verde. Fila extra com 193 empresas prontas para proximo ciclo."
+    "pipeline_atual": "237 leads / 181 ativos / 5 respondido / 63 bounce (cache)",
+    "fila_prospeccao_extra": "202 empresas na fila extra",
+    "observacao": "Tick 19:31 25/09 — Pipeline saudavel. 0 follow-ups atrasados. 0 respostas pendentes. Nenhum lead quente neste ciclo. Fila extra com 202 empresas prontas para proximo ciclo."
   },
   "fila_prospeccao": {
-    "total": 266,
+    "total": 237,
     "pendentes": 0,
-    "contatados": 224,
-    "bounces": 42,
-    "fila_extra": 193
+    "contatados": 237,
+    "bounces": 63,
+    "fila_extra": 202
   }
 }

@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-09-25 18:26 (cron #29 - Melhorador Contínuo)",
-  "criado_em": "2026-08-13",
+  "atualizado_em": "2026-09-25 20:01 (cron #32 - Atendente IA - ciclo noturno)",
+    "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14",
     "limite_diario_prospeccao": 15,
@@ -25,54 +25,36 @@
       "Aluminio", "Capivari", "Elias Fausto", "Itupeva", "Cerquilho"
     ]
   },
-  "cron_2026_09_25_18h26_melhorador_continuo": {
-      "timestamp": "2026-09-25 18:26 (Cron #29 - Melhorador Contínuo)",
-      "diagnostico": "Watchdog exit 0 — sistema saudável. 9 pendentes (abaixo meta 30+). Bounce rate melhorou de 22% para 20% mas ainda acima da meta 15%. Taxa resposta 8.3% (boa para cold email, media do setor 1-3%). Fila extra explodiu para 201 empresas (+17 em 24h). 8 empresas fast food de Salto adicionadas — nicho fritura diaria.",
-      "acoes": [
-        "1. TEMPLATE FP2 REFORMULADO (prospecao_followup.py): de muro de texto para 3 bullets escaneaveis com portaria 2028, Madero 55k L/mes, PNRS — CTA direto 'quantos litros por mes'",
-        "2. TEMPLATE SUPERMERCADOS PERSONALIZADO (prospecao.py): calculo por loja (400-600 L/mes cada, rede 5 lojas = R$ 48-72k/ano), US$ 8,6bi → US$ 11bi, CTA 'quantas lojas'",
-        "3. SITE URGENCY BADGE (index.html): badge âmbar 'Nova portaria exige oleo residual a partir jan/2028' entre subtitulo e CTA",
-        "4. FILA EXTRA +8 empresas (201 total): Madero Salto, Ragazzo, BK, McDonalds Salto + Domino's/Pizza Hut Itu + Hoteis D'Itu e Fasano"
-      ],
-      "pipeline": {
-        "empresas_em_prospecao_py": 73,
-        "pendentes_leads_csv": 9,
-        "total_na_fila_extra": 201,
-        "watchdog_leads_total": 223,
-        "watchdog_ativos": 172,
-        "watchdog_bounces": 58,
-        "nota": "Fila extra em 201 (+17 em 24h). Fast food de Salto adicionados — nicho fritura diaria com volume garantido. Templates FP2 e supermercados reformulados para maior conversao."
-      },
-      "pendente_estrategista": [
-        "Toque humano DALBEN — ligar gerente Luis",
-        "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
-        "Toque humano MUFFATO — ligar (43) 3371-1700",
-        "Fechar Brasfrigo (Salto/SP)",
-        "Acompanhar Selmi ticket #89532",
-        "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
-        "Covabra — priorizar follow-up humano (respondeu 22/09)",
-        "Acompanhar Pague Menos — Josiane Marinho",
-        "Bounce rate 20% acima da meta <15% — tendencia de melhora",
-        "8 leads fast food Salto adicionados — priorizar envio"
-      ]
-    },
-    "cron_2026_09_25_19h26_prospector": {
-      "timestamp": "2026-09-25 19:26 (Cron #30 - Prospector IA)",
-      "diagnostico": "Prospecção executada: 8 pendentes iniciais, 1 nova empresa descoberta (Creme Jundiaí/Romica Brasil - Louveira/SP - indústria de gorduras e cremes culinários), 8 emails enviados (7 fast food/hotéis + 1 indústria). Madero sem MX (não enviado). Fila agora com 1 pendente apenas (Madero, sem MX). Necessário repor fila urgentemente com novas descobertas.",
-      "acoes": [
-        "1. NOVA EMPRESA DESCOBERTA: Creme Jundiaí (Romica Brasil) em Louveira/SP - indústria de cremes culinários, chantilly, gorduras vegetais — NICHO PRIORITÁRIO de gorduras/laticínios",
-        "2. FIX: 8 pendentes com 'nicho' em vez de 'segmento' corrigidos — agora podem ser processados pelo script",
-        "3. 7 emails enviados com sucesso (Ragazzo, BK, McDonalds, Domino's, Pizza Hut, Hotel D'Itu, Fasano)",
-        "4. 1 email enviado para Creme Jundiaí (sac@cremejundiai.com.br) - indústria de gorduras"
-      ],
-      "pipeline": {
-        "fila_prospeccao_total": 275,
-        "fila_prospeccao_pendentes": 1,
-        "fila_prospeccao_contatados": 229,
-        "fila_prospeccao_bounces": 42,
-        "fila_extra_total": 202,
-        "novas_empresas_descobertas": 1,
-        "emails_enviados_lote": 8
-      }
+  "cron_2026_09_25_20h01_atendente_ia": {
+        "timestamp": "2026-09-25 20:01 (Cron #32 - Atendente IA - ciclo noturno)",
+        "diagnostico": "Watchdog exit 0 — sistema saudável. 237 leads totais, 181 ativos, 63 bounces. SMTP/IMAP OK. 0 follow-ups atrasados. Sequência processada. Nenhuma resposta pendente. Sistema rodando limpo em ciclo noturno de sexta-feira.",
+        "acoes": [
+          "1. SYNC + CORRECAO: sync_formspree.py (0 notificações novas, 63 bounces em cache), corrigir_emails.py (0 novos bounces processados — todos já tentados anteriormente)",
+          "2. WATCHDOG: exit 0 — saudável. SMTP/IMAP OK. Nenhum follow-up atrasado.",
+          "3. PROSPECAO_FOLLOWUP: 0 follow-ups processados (nada em atraso).",
+          "4. SEND_SEQUENCE: sequência processada — sem boas-vindas novas neste ciclo (processado no ciclo anterior).",
+          "5. CHECK-REPLIES: 0 respostas pendentes. replies_pending.json vazio."
+        ],
+        "pipeline": {
+          "empresas_em_prospecao_py": 73,
+          "pendentes_leads_csv": 9,
+          "total_na_fila_extra": 202,
+          "watchdog_leads_total": 237,
+          "watchdog_ativos": 181,
+          "watchdog_bounces": 63,
+          "nota": "Ciclo noturno de sexta-feira. Sistema saudável. Nenhuma resposta de lead para atender. Fila extra em 202 empresas."
+        },
+        "pendente_estrategista": [
+          "Toque humano DALBEN — ligar gerente Luis",
+          "Toque humano SAVEGNAGO — WhatsApp (11) 96785-9631 / tel 16 3946-2088",
+          "Toque humano MUFFATO — ligar (43) 3371-1700",
+          "Fechar Brasfrigo (Salto/SP)",
+          "Acompanhar Selmi ticket #89532",
+          "Acompanhar Queijos Itupeva (Rafael) — agendar coleta-teste (lead mais quente)",
+          "Covabra — priorizar follow-up humano (respondeu 22/09)",
+          "Acompanhar Pague Menos — Josiane Marinho",
+          "Bounce rate 20% acima da meta <15% — tendencia de melhora",
+          "8 leads fast food Salto adicionados — priorizar envio"
+        ]
     }
-  }
+}

@@ -1,6 +1,66 @@
 # Insights Diários — Analista de Qualidade
 
-## 2026-09-25 (sexta-feira) — 18:26 (Cron #29 — Melhorador Contínuo)
+## 2026-09-25 (sexta-feira) — 20:01 (Cron #32 — Atendente IA - ciclo noturno)
+
+### Resumo do ciclo
+
+| Métrica | Valor | Δ |
+|---------|-------|---|
+| **Total de leads (watchdog)** | 237 | — |
+| **Ativos** | 181 | — |
+| **Bounce (cache)** | 63 | — |
+| **Emails enviados (total)** | 186 | — |
+| **Boas-vindas enviadas hoje** | — | — |
+| **Taxa resposta** | 8.3% (sem novas respostas) | — |
+| **Bounce rate** | ~20% | — |
+| **Empresas em prospecao.py** | 73 | — |
+| **Pendentes (fila)** | 9 | — |
+| **Fila extra** | 202 | — |
+
+### Atividades deste ciclo (20:01)
+
+| Ação | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 0 notificações novas | 63 bounces em cache |
+| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados anteriormente |
+| ✅ watchdog.py | exit 0 — saudável | SMTP/IMAP OK, sem atrasados |
+| ✅ prospecao_followup.py | 0 follow-ups | Nada em atraso |
+| ✅ send_sequence | Sequência processada | Sem novas boas-vindas |
+| ✅ check-replies | 0 pendentes | replies_pending.json vazio |
+
+### Diagnóstico do sistema
+
+| Métrica | Valor | Meta |
+|---------|-------|------|
+| Watchdog | ✅ Saudável (exit 0) | — |
+| SMTP/IMAP | ✅ OK | — |
+| Total leads | 237 | — |
+| Ativos | 181 | — |
+| Bounces | 63 | — |
+| Taxa resposta | 8.3% | >3% ✅ |
+| Bounce rate | ~20% | <15% ❌ |
+| Pendentes fila | 9 | >30 ❌ |
+| Fila extra | 202 | — |
+
+### Observações
+
+- **Ciclo noturno de sexta-feira — tranquilo.** Sem follow-ups atrasados, sem respostas pendentes, sem bounce novo.
+- **Sistema saudável** — watchdog exit 0, SMTP/IMAP OK, tudo rodando sem intervenção.
+- **Nenhuma resposta de lead** neste ciclo. Sem leads quentes para atender.
+- **Fila extra em 202** — mais de 200 empresas prontas para reposição quando necessário.
+
+### Pendências para o Estrategista (inalteradas)
+
+- 🔴 **Toque humano**: Dalben, Savegnago (WhatsApp 11 96785-9631), Muffato (tel 43 3371-1700)
+- 🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste (lead mais próximo de fechar)
+- 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
+- 🟡 **Coocerqui** — Carlos Machado respondeu. Verificar lead.
+- 🟡 **Selmi** — acompanhar ticket #89532
+- 🟡 **Pague Menos** — acompanhar Josiane Marinho
+- 🔧 **Bounce rate ~20%** — melhorou de 22%, mas ainda acima da meta <15%
+- 🔧 **Pendentes em 9** — abaixo da meta 30+. Fila extra em 202 para reposição contínua.
+
+---
 
 ### Resumo do ciclo
 
@@ -189,3 +249,58 @@
 - **📬 3 respostas do Pague Menos** — todas pesquisas automáticas de satisfação do Zendesk ("Compartilhar seu feedback conosco"). Nenhuma resposta humana genuína de lead.
 - **15 pendentes na fila** — abaixo da meta de 30+. Fila extra com 184 empresas prontas para reposição. Grandes nomes pendentes: Camil Alimentos, Cacau Show, Kopenhagen, Bunge, Embaré, Biolab, BRF Sorocaba, Tauste.
 - **🥶 Dia sem respostas genuínas** — último lead humano que respondeu foi 22/09 (Savegnago, Covabra, Coocerqui). Conversão segue dependente de toque humano do Estrategista.
+---
+
+## 2026-09-25 (sexta-feira) — ~19:30 (Cron — Analista de Qualidade)
+
+### Resumo do ciclo
+
+| Métrica | Valor | Δ |
+|---------|-------|---|
+| **Total de leads (CSV)** | 237 | — |
+| **Novo** | 175 | — |
+| **Sequência** | 6 | — |
+| **Respondido** | 15 | — |
+| **Bounce (CSV)** | 41 | — |
+| **Encerrado** | 0 | — |
+| **Bounce (cache bounces.json)** | 63 emails únicos | — |
+| **Órfãos no bounces.json** | 22 (não estão no leads.csv) | — |
+| **Replies pendentes** | 0 | ✅ vazio |
+| **Notificações Formspree** | 0 | — |
+
+### Atividades deste ciclo
+
+| Ação | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 63 bounces em cache, 0 notificações novas | Nada novo do Formspree |
+| ✅ bot_oleo.py leads | 237 leads contados | 175 novo, 6 sequencia, 15 respondido, 41 bounce |
+| ✅ Auditoria bounces.json | 22 emails órfãos | Explicação abaixo |
+| ✅ Auditoria boas_vindas_em | 0 bounces com boas_vindas preenchido | Tudo correto |
+| ✅ Auditoria replies | replies_pending.json = vazio | Sem pendências |
+
+### Diagnóstico detalhado
+
+**22 emails órfãos no bounces.json** — estes emails constam no cache de bounces mas NÃO estão no leads.csv atual. São registros de campanhas de prospecção anteriores (correcoes_emails.json, lotes antigos) que usaram emails alternativos de empresas que nunca entraram na base ativa. Exemplos: `3d@roldao.com.br`, `avesideal@rosaves.com.br`, `contato@arcor.com`, `sac@oba.com.br`, `contato@scallet.com.br` (o lead atual do Scallet usa `pedidos@scallet.com.br`). **Não é um problema** — o cache de bounces é cumulativo entre campanhas, mas esses emails podem ser removidos se quiserem liberar espaço.
+
+**Bounces sem boas_vindas_em**: ✅ 0 ocorrências — o sistema está pulando bounces corretamente no envio de sequência.
+
+**Respondidos sem respondido_por**: 10 dos 15 leads respondidos têm o campo `respondido_por` vazio (apenas 5 foram marcados como `atendente_ia`). Isso indica que esses 10 leads podem ter sido detectados como respondidos antes do campo ser implementado, ou foram respondidos manualmente sem registro.
+
+### Pendências para o Estrategista (atualizadas)
+
+- 🔴 **Toque humano**: Dalben, Savegnago (WhatsApp 11 96785-9631), Muffato (tel 43 3371-1700)
+- 🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste (lead mais próximo de fechar)
+- 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
+- 🟡 **Coocerqui** — Carlos Machado respondeu. Verificar lead.
+- 🟡 **Selmi** — acompanhar ticket #89532
+- 🟡 **Pague Menos** — acompanhar Josiane Marinho
+- 🔧 **10 respondidos sem respondido_por** — revisar se são respostas genuínas ou auto-replies
+- 🔧 **Bounce rate ~17% (41/237)** — sobre total de leads, não emails enviados
+
+### Sugestões de melhoria
+
+1. 🔧 **Limpeza do bounces.json**: os 22 emails órfãos poderiam ser removidos do cache para deixar o arquivo mais enxuto (63 → 41, redução de 35%). Não causam dano, mas poluem a base histórica.
+
+2. 📋 **Rastrear respondido_por retroativamente**: 10 dos 15 respondidos estão sem `respondido_por`. Uma script de backfill que busca no IMAP o remetente da thread original poderia preencher esse campo — essencial para saber se a resposta foi humana ou automática.
+
+3. 🎯 **Revisar leads "novo" que já receberam FP2**: leads 2 (Casa Aliança) e 3 (Scallet) estão como "novo" mas já receberam FP1 e FP2. O Scallet em particular: o email `pedidos@scallet.com.br` não consta como bounce, mas o email alternativo `contato@scallet.com.br` está no cache de bounces. Vale verificar se estão recebendo os emails corretamente.

@@ -1,50 +1,46 @@
-# Insights — Master Óleo · 25/09/2026 (18:25)
+# Insights — Master Óleo · 25/09/2026 (19:31)
 
 ## Resumo do Tick
 
 ### ✅ O que foi feito
 
 **Passo 0 — Sync + Auto-correção:**
-- `sync_formspree.py`: OK — 0 notificações novas do Formspree (58 bounces em cache).
-- `corrigir_emails.py`: OK — 0 novos processados (todos já tinham tentativa registrada).
+- `sync_formspree.py`: OK — 0 notificações novas do Formspree (63 bounces em cache — 41 no CSV + 22 adicionais em cache).
+- `corrigir_emails.py`: OK — 0 novos processados (todos os 41 bounces do CSV já têm tentativa de correção registrada).
 
 **Passo 1 — Watchdog:**
-- ⚠️ Watchdog acusou **133 follow-ups atrasados** (exit 1).
-- `prospecao_followup.py` executou com sucesso: processou todos os 133 follow-ups (FP2 para a maioria, FP1 para leads com thread-reply ativa).
-- Watchdog reexecutado: **EXIT 0 ✅ — sistema saudável**.
+- ✅ **EXIT 0 — sistema saudável.** Nenhum follow-up atrasado, nenhum lead parado, SMTP/IMAP funcionando.
 
 **Passo 2 — Sequência e Respostas:**
+- `prospecao_followup.py`: 0 follow-ups atrasados para processar.
 - `send_sequence`: OK — sequência processada.
-- `check-replies`: encontrou **2 respostas** na caixa:
-  | Lead | Tipo | Avaliação |
-  |---|---|---|
-  | **Boa Supermercados** (atendimento@smboa.com.br) | Auto-resposta Hiplatform (ticket #25696) | ❌ Não é humano |
-  | **Vitafor Nutrientes** (sac@vitafor.com.br) | Auto-resposta Freshdesk (ticket #517395) | ❌ Não é humano |
-- Nenhuma resposta humana para atender — sem leads quentes neste tick.
-
-**Passo 3 — Fila de prospecção:**
-- Fila principal tinha **9 pendentes** (Vigor, Catupiry, Balan Ingredientes, Maguacamp, Granarolo, Vitall Sorvetes, Green Ingredientes, Atlantica Foods, Level Alimentos).
-- `enviar_lote.py --max 9`: **✅ 9 enviados com sucesso** — fila principal zerada!
+- `check-replies`: **0 respostas** aguardando atendimento (replies_pending.json = []).
+- Nenhuma resposta humana para atender neste ciclo.
 
 ### 📊 Pipeline atual
-| Indicador | Valor | Δ |
+| Indicador | Valor | Δ desde 18:25 |
 |---|---|---|
-| Leads totais | 214 | → |
-| Leads ativos | 163 | → |
-| Bounces em cache | 58 | → |
-| Follow-ups atrasados | **0** | ✅ limpo |
+| Leads totais | 237 | +23 |
+| Leads ativos | 181 | +18 |
+| Bounces (cache) | 63 | +5 |
+| Respondidos | 5 | → |
+| Follow-ups atrasados | **0** | ✅ |
 | Respostas pendentes | 0 | → |
-| Fila prospecção principal | **0** | 🎯 zerada! |
-| Fila prospecção extra | 193 | → |
+| Fila prospecção extra | **202** | +9 |
+
+**Nota:** O acréscimo de 23 leads desde as 18:25 veio de novas adições via Formspree ou prospecção automática no período entre ticks.
 
 ### ❌ Problemas resolvidos
-1. **133 follow-ups atrasados** — limpos com sucesso, watchdog verde.
-2. **9 pendentes na fila principal** — todos enviados, fila zerada.
+Nenhum problema encontrado neste ciclo.
+
+### ℹ️ Observações
+- O número de bounces em cache (63) supera o de bounces marcados no CSV (41) — há 22 leads com bounce detectado pelo cache de email (sync_formspree) mas ainda não atualizados no CSV. O `corrigir_emails.py` continuará tentando encontrar emails alternativos para esses leads nos próximos ciclos.
+- Fila extra cresceu para 202 empresas — material para próximos ciclos de prospecção.
 
 ### 🎯 Leads QUENTES (respostas humanas com interesse)
-**NENHUM** neste tick. Ambas as respostas na caixa de entrada são auto-respostas de sistemas de ticket (Boa Supermercados via Hiplatform; Vitafor via Freshdesk).
+**NENHUM** neste tick. Nenhuma resposta na caixa de entrada para atender.
 
 ### 📝 Recomendações para próximo ciclo
-1. **Atacar fila extra (193 empresas)** — próximo passo natural após zerar a fila principal.
-2. **Acompanhar Vigor, Catupiry, Granarolo** — como são laticínios (queijos/requeijão), o fit pode não ser ideal para coleta de óleo de fritura, mas podem ter óleo vencido em estoque (nicho 1) ou resíduos >40% gordura.
-3. **Monitorar respostas das 9 novas prospecções** nos próximos dias.
+1. **Atacar fila extra (202 empresas)** — próximo passo natural.
+2. **Monitorar bounces em cache** — acompanhar se `corrigir_emails.py` encontra alternativas para os 22 leads com bounce não marcado no CSV.
+3. **Aguardar respostas** dos 5 leads que já responderam e dos novos contatos enviados em ticks anteriores.
