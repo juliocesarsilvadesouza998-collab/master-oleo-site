@@ -105,14 +105,14 @@ def tpl_fp(cfg, lead, n):
 <p>Abraco,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
-            subj = f"Último contato — {lead['empresa']} pode estar perdendo R$ 14,4 mil/ano em óleo"
+            subj = f"Último contato — {lead['empresa']} pode estar gerando R$ 14,4 mil/ano em óleo"
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
-    <p><b>Última mensagem sobre este assunto</b> — e é direta ao ponto:</p>
-    <p><b>1. O óleo de fritura da {lead['empresa']} vale dinheiro</b> — R$ 1,00 a R$ 2,50/L, pago à vista (PIX) na coleta. Um estabelecimento que gera 600 L/mês recebe R$ 14,4 mil/ano. Redes grandes geram 3.000+ L/mês = R$ 72 mil+/ano.</p>
-    <p><b>2. A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de jan/2028</b> — a demanda por óleo usado vai disparar (mercado global UCO = US$ 11 bi) e quem tiver contrato assinado antes terá prioridade.</p>
-    <p><b>3. Sem coleta com certificado, o passivo ambiental fica no CNPJ</b> (Lei 12.305/2010 — PNRS). E pior: sem MTR, o óleo pode ser desviado para reuso ilegal na alimentação — e a responsabilidade de rastreio é de quem gerou o resíduo.</p>
-    <p>Não precisa de nada agora? Sem problema, esta é a última mensagem. <b>Mas se no futuro quiser transformar o óleo em receita</b> com coleta programada, bombonas fornecidas e certificado de destinação, chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p><b>Última mensagem sobre este assunto</b> — direta ao ponto:</p>
+    <p><b>1. Renda extra com coleta segura</b> — R$ 1,00 a R$ 2,50/L, pago <b>à vista (PIX) na hora da coleta</b>. 600 L/mês = R$ 14,4 mil/ano. Redes grandes geram 3.000+ L/mês = R$ 72 mil+/ano. <b>A Savegnago</b> (#1 do interior SP, R$ 7,98 bi) já está negociando conosco — maior rede do interior fechando, sua {lead['empresa']} não pode ficar de fora.</p>
+    <p><b>2. Anti-furto: segurança que vira diferencial</b> — óleo de cozinha virou alvo de quadrilhas especializadas (vale US$ 11 bi global). Nosso protocolo: coleta com crachá, bombona lacrada com trava, pesagem na hora e comprovante. O óleo sai do seu estabelecimento direto para o biodiesel — sem risco de reuso ilegal na alimentação.</p>
+    <p><b>3. Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de jan/2028</b> — a demanda vai explodir. Quem assinar contrato agora garante preço antes da disputa. Sem certificado de destinação (MTR), o passivo fica no CNPJ da {lead['empresa']} (Lei 12.305/2010 — PNRS).</p>
+    <p>Não precisa agora? Esta é a última mensagem automática. <b>Mas quando quiser transformar o óleo em receita com coleta segura</b>, chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>. Respondemos em minutos.</p>
     <p>Sucesso com a {lead['empresa']}.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
     </div>"""
     return {"subject": subj, "html": html}

@@ -1,13 +1,13 @@
 {
-  "atualizado_em": "2026-09-26T14:04-03:00",
-  "atividade_tick_14h04_26_09": {
-    "ciclo": "cron_tick_job_26_09_14h04",
+  "atualizado_em": "2026-09-26T16:31-03:00",
+  "atividade_tick_16h31_26_09": {
+    "ciclo": "cron_tick_job_26_09_16h31",
     "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
     "emails_enviados": 0,
     "bounces_novos": 0,
     "resultado": "Sistema saudável — nenhum follow-up atrasado, fila zerada, 0 respostas pendentes"
   },
-  "atividade_tick_14h04_26_09_detalhado": {
+  "atividade_tick_16h31_26_09_detalhado": {
     "sync_formspree": "OK — 0 notificacoes novas (66 bounces em cache)",
     "corrigir_emails": "OK — 0 processados (todos com tentativa registrada anteriormente)",
     "watchdog": "EXIT 0 — sistema saudavel, sem problemas (SMTP OK · IMAP OK)",
@@ -18,6 +18,6 @@
     "relatorio_esg": "nenhum pedido",
     "pipeline_atual": "250 leads / 190 ativos / 16 respondido / 66 bounce (cache)",
     "fila_prospeccao_extra": "202 empresas na fila extra (desatualizado desde 25/09)",
-    "observacao": "Tick 14:04 26/09 — Pipeline saudavel. Betins Laticinios respondeu hoje (11:02) mas sem conteudo de lead quente (auto-reply provavel)."
+    "observacao": "Tick 16:31 26/09 — Pipeline saudavel. Sem respostas novas desde o tick 14:31. 0 respostas pendentes."
   }
 }

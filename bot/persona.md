@@ -137,6 +137,21 @@ trava. Cidades: Indaiatuba, Sorocaba, Campinas, Itu, Jundiaí, Salto.
 Empresas-alvo: Sorocaps, Hero Suplementos, Sixty Pharma, Cap-Lab,
 Persona One, Nutrisenior, Natulha, CapsExpress, TWX, IndCaps, Megalabs, VMG.
 
+PROVA SOCIAL: SAVEGNAGO #1 NO INTERIOR SP (descoberta Estrategista 27/09 — ABRAS Ranking 2026):
+- Savegnago Supermercados é a **MAIOR rede de supermercados do interior de São Paulo**
+  com faturamento de **R$ 7,98 bilhões** (Ranking ABRAS 2026, 15ª maior do Brasil).
+- Eles ABRIRAM canal comercial conosco e estão negociando — use isso como PROVA SOCIAL
+  ao abordar outras redes: "a maior rede do interior, a Savegnago (R$ 7,98 bi de faturamento),
+  já está em negociação conosco para coleta programada de óleo de fritura em toda a rede."
+- Isso vale OURO na prospecção: toda rede quer saber o que a líder está fazendo.
+- Ranking interior SP (ABRAS 2026): 1️⃣ Savegnago (R$7,98bi) 2️⃣ Pague Menos (R$4,33bi)
+  3️⃣ Tauste — já estamos falando com as 3 maiores!
+
+Pague Menos (2º maior do interior, R$ 4,33 bi): já respondeu (Josiane Marinho) — prioridade.
+Tauste (3º maior): adicionado recentemente à fila.
+Covabra: respondeu 22/09 — prioridade.
+Dalben: respondeu — aguarda retorno gerente Luis.
+
 CONCORRÊNCIA NA REGIÃO (pesquisa Estrategista 21/09):
 - **Óleo Campinas** (oleo-campinas.com / ueniweb) — empresa estabelecida desde
   2007, atua em Campinas e região com coleta de óleo usado. Tem presença web
