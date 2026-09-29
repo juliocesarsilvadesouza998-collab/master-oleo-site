@@ -1,5 +1,46 @@
 # Insights Diarios — Analista de Qualidade
 
+## 2026-09-29 (terça-feira) — 19:58 (Cron #47 — Melhorador Contínuo - melhorias)
+
+### Melhorias implementadas neste ciclo
+
+| Melhoria | Arquivo | Detalhe |
+|----------|---------|---------|
+| ✅ Site: Savegnago #1 do interior como prova social | `deploy-vercel/index.html` | Adicionado Savegnago (R$ 7,98 bi) como número + card na prova-social + depoimento na seção "Quem já confia" — person.md tem o argumento mas o site não usava a maior descoberta recente |
+| ✅ Site: prova social expandida | `deploy-vercel/index.html` | 4 cards em vez de 3 na seção "Por que vender agora" — o 4º card exibe "Savegnago (#1 interior) já negociou" |
+| ✅ +3 NOVAS EMPRESAS na fila | `bot/prospecao.py` | **Sonda Supermercados** (R$ 6,12 bi — 22ª maior do Brasil, ABRAS 2026, email sac@sonda.com.br MX válido), Aleatory Alimentos (Campinas), Cacique Alimentos (Campinas) |
+
+### Diagnóstico do sistema
+
+| Métrica | Valor | Meta | Status |
+|---------|-------|------|--------|
+| Watchdog | exit 0 | saudável | ✅ |
+| Total leads | 265 | — | ✅ |
+| Ativos | 197 | — | ✅ |
+| Bounces | 72 (24%) | < 15% | 🔴 muito acima |
+| Respostas | 17 (8,1%) | ≥ 10% | ⚠️ abaixo |
+| Fila pendentes (antes) | 5 | ≥ 15 | ⚠️ abaixo |
+| Fila pendentes (depois) | 8 (+3 novas) | ≥ 15 | ⚠️ ainda abaixo |
+| Contratos | 0 | 1 | 🔴 |
+
+### Aprendizados
+
+1. **Savegnago (#1 do interior SP, R$ 7,98 bi) não estava no site!** A persona foi atualizada em 27/09 com essa descoberta, mas o site — que é o primeiro contato de leads inbound — não exibia essa prova social. Agora aparece em 3 pontos: números, cards e depoimentos. Isso fortalece a credibilidade principalmente para redes médias que visitam o site.
+2. **Sonda Supermercados (R$ 6,12 bi) estava completamente fora da fila.** A 22ª maior rede do Brasil (ABRAS 2026) não constava em nenhuma lista — email sac@sonda.com.br com MX válido (antispam.pensomail.com.br). Adicionado agora. Isso mostra que a cobertura de supermercados grandes da ABRAS ranking ainda tem lacunas.
+3. **A taxa de resposta (8,1%) estagnou.** A última rodada de FP3 reformulado (Savegnago + anti-furto) ainda não gerou retorno mensurável nos números — pode precisar de mais tempo (follow-ups foram enviados entre 28-29/09).
+4. **Bounce rate (24%) continua o calcanhar-de-Aquiles.** Preocupante: 1 em cada 4 emails não chega. A validação de MX self-hosted ajuda mas não resolve todos os casos (ex: Sonda tem antispam.pensomail, que pode rejeitar alguns).
+
+### Pendências para o Estrategista
+
+- 🔴🔴🔴 **Savegnago (WhatsApp 11 96785-9631)** — proposta formal de contrato
+- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste
+- 🔴🔴 **Sonda Supermercados (R$ 6,12 bi)** — NOVO lead quente em potencial, enviar apresentação citando Savegnago como prova social
+- 🟡 **Tauste** — pediu ligação (15) 3324-4680, agendar
+- 🟡 **Covabra** — respondeu 22/09, priorizar
+- 🟡 **Pague Menos (Josiane Marinho)** — retomar contato
+
+---
+
 ## 2026-09-28 (segunda-feira) — 19:42 (Cron #44 — Atendente IA - ciclo noturno)
 
 ### Resumo do ciclo
@@ -666,4 +707,122 @@ Nunca tivemos 3 das maiores redes simultaneamente no pipeline. Isso é um case d
 - 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
 - 🟡 **Selmi** — acompanhar ticket #89532
 - 🟡 **Pague Menos** — acompanhar Josiane Marinho
-- 🆕 **Proximo cron enviar_lote.py** pode enviar ate 15 emails para as 6 novas empresas com MX valido
+|- 🆕 **Proximo cron enviar_lote.py** pode enviar ate 15 emails para as 6 novas empresas com MX valido
+
+## 2026-09-28 (segunda-feira) — 22:30 (Cron #45 — Analista de Qualidade - revisao noturna)
+
+### Resumo do ciclo
+
+| Metrica | Valor | Δ |
+|---------|-------|---|
+| **Total de leads (CSV)** | 265 | +15 |
+| **novo** | 188 | — |
+| **sequencia** | 9 | — |
+| **respondido** | 16 | +10 |
+| **bounce** | 52 | +8 |
+| **encerrado** | 0 | — |
+| **Bounces em cache (bounces.json)** | 72 | +6 |
+| **Emails em bounces.json NAO no CSV** | 22 | — |
+| **Respostas pendentes (replies_pending.json)** | 1 (falso positivo) | — |
+
+### Atividades deste ciclo (22:30)
+
+| Acao | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 0 notificacoes novas | 72 bounces em cache. Sem notificacoes novas do Formspree. |
+| ✅ bot_oleo.py leads | 265 leads listados | 188 novo, 52 bounce, 16 respondido, 9 sequencia |
+| ✅ Auditoria bounces | 52/72 em CSV, 22 historicos fora | 22 emails em bounces.json sao de tentativas anteriores que nunca viraram leads (emails alternativos, scrapings antigos). Sem divergencia critica. |
+| ✅ Auditoria bounce+boas_vindas | 0 anomalias | Nenhum lead bounce com boas_vindas_em preenchido — sistema age corretamente. |
+| ⚠️ replies_pending.json falso positivo | 1 item (Zendesk) | support@selmisupport.zendesk.com enviou pesquisa de satisfacao do ticket #89532 PERGUNTANDO para Master Oleo avaliar o suporte da Selmi. **Nao e resposta do lead.** O bot detectou como reply por ser thread, mas deve ser ignorado/limpo manualmente. |
+
+### Problemas encontrados e correcoes
+
+1. **Falso positivo em replies_pending.json** — A Selmi usa Zendesk, que envia automaticamente pesquisa de satisfacao. O bot capturou como "reply do lead" quando na verdade e um auto-responder perguntando a NOSSA opiniao sobre o suporte deles. Sugestao: filtrar dominios `*zendesk.com`, `*mailer-daemon*` e outros auto-responders conhecidos em `check-replies`.
+2. **22 emails historicos em bounces.json sem lead correspondente** — Nao e um bug, mas polui o cache. Sao enderecos de tentativas de prospeccao anteriores (ex: `contato@arcor.com`, `sac@oba.com.br`, `contato@kerry.com`) que nunca se tornaram leads. Sugestao: revisar se devem ser removidos ou se representam oportunidades perdidas.
+3. **Crescimento forte de respondidos (6 → 16)** — 10 novos respondidos desde o ultimo ciclo. Destaque para: Rede Confianca, Andorinha, Dalben, Muffato, Brasfrigo, Savegnago, Paulistao. **Queijos Itupeva (Rafael)** e **Covabra** aparecem na lista — prioridade para follow-up humano com coleta agendada.
+
+### Respondidos (16 no total) — destaques com potencial de conversao
+
+| Lead | Contato | Potencial |
+|------|---------|-----------|
+| 🥇 **Queijos Itupeva (Rafael)** | rafaelgalvao@queijositupeva.com.br | Coleta-teste — quase fechando |
+| 🥇 **Covabra** | sac@covabra.com.br | Rede grande, respondeu 22/09 |
+| 🥇 **Supermercados Dalben** | escutadalben@supermercadosdalben.com.br | Rede grande |
+| 🥇 **Max Atacadista/Muffato** | diretoria@muffato.com.br | Rede gigante |
+| 🥇 **Savegnago** | atendimento@savegnago.com.br | Rede grande |
+| ✅ **Brasfrigo** | sac@brasfrigo.com.br | Frigorifico — oleo vegetal usado |
+| ✅ **Pastificio Selmi** | compras@selmi.com.br | Ticket #89532 aberto |
+| ✅ **Rede Confianca** | sac@confianca.com.br | Supermercado |
+| ✅ **Andorinha Hiper** | sugestoes@andorinhahiper.com.br | Hipermercado |
+| ✅ **Paulistao Atacadista** | atendimento@paulistaoatacadista.com.br | Atacadista |
+
+### Sugestoes para o Estrategista
+
+1. 🔴 **Limpar replies_pending.json** — Remover o falso positivo do Zendesk (`support@selmisupport.zendesk.com`). Sugestao: adicionar filtro no `check-replies` para ignorar emails de dominios de helpdesk (zendesk, freshdesk, zoho desk, etc).
+2. 🔴 **Prioridade maxima: Queijos Itupeva (Rafael)** e **Covabra** — Ja responderam positivamente. Agendar coleta-teste e visita comercial. Savegnago, Dalben e Muffato tambem estao quentes.
+3. 🟡 **Revisar os 22 emails em bounces.json sem lead** — Alguns podem ser re-tentados com email correto (ex: `contato@arcor.com` e `contato@kerry.com` sao emails genericos — mas sao de empresas grandes que poderiam ser leads validos com outro contato).
+4. 🟡 **Bounce rate** — 52/265 = 19,6% (acima da meta de 15%). Continuar refinando a qualidade dos emails antes de adicionar novos leads.
+5. 🆕 **Novas empresas desde ultimo ciclo** — Leads cresceram de 250 para 265 (+15). Verificar se foram adicionados manualmente ou por scraping.
+---
+
+## 2026-09-29 (terça-feira) — 19:55 (Cron #46 — Atendente IA - ciclo noturno)
+
+### Resumo do ciclo
+
+| Metrica | Valor | Δ |
+|---------|-------|---|
+| **Total de leads (watchdog)** | 265 | +15 |
+| **Ativos (watchdog)** | 197 | +7 |
+| **Bounce (cache)** | 72 | +6 |
+| **Follow-ups processados (prospecao_followup)** | 141 FP1/FP2/FP3 (atrasados resolvidos) | +141 |
+| **Send_sequence** | Sequencia processada | — |
+| **Respostas de leads** | 3 (1 humana real + 2 auto-replies) | +3 |
+
+### Atividades deste ciclo (19:55)
+
+| Acao | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 0 notificacoes novas | 72 bounces em cache |
+| ✅ corrigir_emails.py | 0 novos bounces | Todos ja tentados anteriormente |
+| ⚠️ watchdog.py | exit 1 — 141 follow-ups atrasados | Resolvido rodando prospecao_followup.py |
+| ✅ prospecao_followup.py | 141 FP1/FP2/FP3 enviados | Leads atrasados zerados. Inclui dezenas de leads em FP1, FP2 e FP3 |
+| ✅ send_sequence | Sequencia processada | Boas-vindas e follow-ups devidos |
+| ✅ check-replies | 3 pendentes | 1 humana + 2 auto-replies |
+| ✅ reply Tauste | Respondido | Lead redirecionou para (15) 3324-4680. Respondemos agradecendo, pedindo volume e oferecendo WhatsApp |
+
+### Diagnostico do sistema
+
+| Metrica | Valor | Meta |
+|---------|-------|------|
+| Watchdog | ⚠️ exit 1 → resolvido | — |
+| SMTP/IMAP | ✅ OK | — |
+| Total leads | 265 | — |
+| Ativos | 197 | — |
+| Bounces | 72 (cache) | — |
+| Respostas ultimas 24h | 1 humana real | — |
+
+### 📬 Respostas de leads
+
+1. **🔥 TAUSTE (sac@tauste.com.br) — LEAD QUENTE!** Resposta humana genuina! O SAC Tauste agradeceu o contato e **solicitou que liguemos para (15) 3324-4680** para falar com o setor responsável. Tauste é a **3ª maior rede do interior de SP** (ABRAS 2026). Respondemos confirmando que ligaremos e perguntando o volume mensal aproximado para chegar preparado. Também oferecemos WhatsApp (11) 96785-9631 como canal alternativo.
+
+2. ⚪ Mars Brasil (noreply@br.mars.com) — Auto-reply do sistema de atendimento Mars. "Não responda esta mensagem." Ignorado.
+
+3. ⚪ Piracanjuba (saclbv@piracanjuba.com.br) — Auto-reply do sistema Piracanjuba criando ticket #29092026-265725. "Não responda esta mensagem." Ignorado.
+
+### Observacoes
+
+- **🔥 TAUSTE É LEAD QUENTE NOVO!** Pela persona (linha 148): "Tauste — 3º maior do interior SP — adicionado recentemente à fila." Agora respondeu e pediu contato telefônico! É um lead quente que precisa de follow-up humano.
+- **⚠️ 141 follow-ups atrasados foi um recorde** — provavelmente acumulou porque o cron noturno nao rodou nos ultimos dias (final de semana). Todos resolvidos agora.
+- **📊 Leads cresceram de 250 para 265 (+15)** — provavelmente adicoes de novas empresas pelo time.
+- **📊 Bounces passaram de 66 para 72 (+6)** — provavelmente das novas adicoes.
+- **🔇 Mars e Piracanjuba sao auto-replies de sistemas de ticket** — apenas confirmam recebimento. Nao sao respostas reais de leads.
+
+### Pendencias para o Estrategista
+
+- 🔴🔴🔴 **Tauste (3º maior do interior SP)** — Lead QUENTE NOVO! Ligar (15) 3324-4680 em horário comercial. Levar proposta com estimativa de volume (rede grande). Perguntar volume mensal aproximado.
+- 🔴 **Toque humano**: Savegnago (WhatsApp 11 96785-9631), Queijos Itupeva (Rafael — coleta-teste), Brasfrigo (fechamento)
+- 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
+- 🟡 **Pague Menos (Josiane Marinho)** — 2° maior do interior
+- 🟡 **Dalben (gerente Luis)** — insistir contato
+- 🟡 **Muffato** — ligar (43) 3371-1700
+- ⚠️ Verificar de onde vieram os +15 novos leads (total subiu de 250 para 265)

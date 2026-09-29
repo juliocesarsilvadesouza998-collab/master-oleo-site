@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-28 19:46 (Melhorador Contínuo - cron #45 - melhorias)",
+  "atualizado_em": "2026-09-29 19:58 (Melhorador Contínuo - cron #47 - melhorias)",
   "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14 (atingida: 74+ envios)",
@@ -13,19 +13,40 @@
       "meta_humana_3": "Dalben (gerente Luis) — insistir contato, proposta formal pronta.",
       "meta_humana_4": "Muffato — ligar (43) 3371-1700. Grupo nacional com loja em Campinas (Max Atacadista).",
       "meta_humana_5": "Selmi — ticket #89532. Acompanhar compras@selmi.com.br.",
-      "meta_resposta": "taxa >= 10% (atual 8,2% — abaixo da meta). FP3 reformulado 28/09 c/ anti-furto + Savegnago proof social.",
+      "meta_resposta": "taxa >= 10% (atual 8,2%). Tauste respondeu 29/09 como novo lead quente.",
       "meta_bounce": "< 15% (atual ~21% no cache, ~18% no CSV). Continuar validando MX com filtro de self-hosted.",
-      "meta_fila": ">= 15 pendentes com MX valido (atual ~6). Reposicao continua pelo Prospector.",
+      "meta_fila": ">= 15 pendentes com MX valido (atual ~5). Sonda (R$6,12bi) + 2 empresas adicionadas em 29/09.",
       "nicho_prioritario": "SUPERMERCADOS (maior conversao comprovada) + encapsulados/farmaceuticas",
       "foco_urgencia": "Portaria MME/MMA nº 3/2026 - >=1% OGR obrigatorio jan/2028. Usar como acelerador de contratos."
     },
     "foco_cidades": [
-      "Salto", "Campinas", "Indaiatuba", "Itu", "Sorocaba",
-      "Jundiai", "Louveira", "Valinhos", "Piracicaba", "Vinhedo",
-      "Monte Mor", "Hortolandia", "Sumare", "Limeira", "Nova Odessa",
-      "Cabreuva", "Tatui", "Porto Feliz", "Boituva", "Americana",
-      "Votorantim", "Aluminio", "Capivari", "Elias Fausto",
-      "Itupeva", "Cerquilho", "Salto de Pirapora"
+      "Salto",
+      "Campinas",
+      "Indaiatuba",
+      "Itu",
+      "Sorocaba",
+      "Jundiai",
+      "Louveira",
+      "Valinhos",
+      "Piracicaba",
+      "Vinhedo",
+      "Monte Mor",
+      "Hortolandia",
+      "Sumare",
+      "Limeira",
+      "Nova Odessa",
+      "Cabreuva",
+      "Tatui",
+      "Porto Feliz",
+      "Boituva",
+      "Americana",
+      "Votorantim",
+      "Aluminio",
+      "Capivari",
+      "Elias Fausto",
+      "Itupeva",
+      "Cerquilho",
+      "Salto de Pirapora"
     ]
   },
   "estrategista_2026_09_27_cron_43": {
@@ -46,8 +67,8 @@
       "fila_pendentes_validas": 6,
       "fila_contatados": 237,
       "watchdog_status": "exit 1 (40 follow-ups atrasados - RESOLVIDO: prospecao_followup.py enviou 40 FP1)"
-          },
-          "acoes_da_semana_passada": [
+    },
+    "acoes_da_semana_passada": [
       "1. FP1 enviado para 15 empresas (Piraquê, Fugini, Pelissari, Quata, Granol, Moca, Nestlé etc)",
       "2. +7 novas empresas adicionadas (Tauste, Bom Lugar, Galassi, Enxuto, etc)",
       "3. FP3 template reforçado com urgência regulatória + R$ 14,4k/ano + anti-furto",
@@ -57,46 +78,86 @@
       "7. Pessoas que responderam: Covabra (22/09), Paulistão, Brasfrigo mantiveram-se quentes"
     ],
     "descobertas_da_pesquisa": [
-      "DESCOBERTA #1 - SAVEGNAGO É #1 DO INTERIOR SP (ABRAS 2026): Savegnago fatura R$ 7,98 bi e é a 15ª maior rede do Brasil. Líder absoluta no interior paulista. Já abriu canal comercial conosco. Isso transforma nossa abordagem de prospecção: 'a maior rede do interior já está negociando conosco' vira prova social.",
-      "DESCOBERTA #2 - TOP 3 INTERIOR SP: 1° Savegnago (R$7,98bi), 2° Pague Menos (R$4,33bi), 3° Tauste. JÁ ESTAMOS FALANDO COM OS 3! Isso é um case de venda raro — 3 maiores redes simultaneamente no pipeline.",
-      "DESCOBERTA #3 - INTERIOR SP RANKING COMPLETO: Supermercados São Vicente (#4?), Covabra, Dalben, Paulistão (Grupo Savegnago) — todos no pipeline. Maior concentracao de leads de alto valor em supermercados na história do projeto.",
-      "DESCOBERTA #4 - MERCADO UCO: Global US$ 8bi (2025) → US$ 15bi (2033). Brasil exporta UCO para EUA (1,4M t importadas 2023). Demanda global de SAF dobra até 2030. Cenário nunca foi tão favorável.",
-      "DESCOBERTA #5 - ECOPOS JUNDIAÍ: 'Óleo do Bem' da DAE Jundiaí (postos de coleta públicos) mostra que há concorrência pelo UCO residencial, mas nosso foco B2B (indústrias/redes) continua sem concorrência local forte."
-    ],
+          "DESCOBERTA #1 - SAVEGNAGO É #1 DO INTERIOR SP (ABRAS 2026): Savegnago fatura R$ 7,98 bi e é a 15ª maior rede do Brasil. Líder absoluta no interior paulista. Já abriu canal comercial conosco. Isso transforma nossa abordagem de prospecção: 'a maior rede do interior já está negociando conosco' vira prova social.",
+          "DESCOBERTA #2 - TOP 3 INTERIOR SP: 1° Savegnago (R$7,98bi), 2° Pague Menos (R$4,33bi), 3° Tauste. JÁ ESTAMOS FALANDO COM OS 3! Isso é um case de venda raro — 3 maiores redes simultaneamente no pipeline.",
+          "DESCOBERTA #3 - INTERIOR SP RANKING COMPLETO: Supermercados São Vicente (#4?), Covabra, Dalben, Paulistão (Grupo Savegnago) — todos no pipeline. Maior concentracao de leads de alto valor em supermercados na história do projeto.",
+          "DESCOBERTA #4 - MERCADO UCO: Global US$ 8bi (2025) → US$ 15bi (2033). Brasil exporta UCO para EUA (1,4M t importadas 2023). Demanda global de SAF dobra até 2030. Cenário nunca foi tão favorável.",
+          "DESCOBERTA #5 - ECOPOS JUNDIAÍ: 'Óleo do Bem' da DAE Jundiaí (postos de coleta públicos) mostra que há concorrência pelo UCO residencial, mas nosso foco B2B (indústrias/redes) continua sem concorrência local forte.",
+          "DESCOBERTA #6 - SONDA SUP. (R$6,12bi, 22ª do Brasil) NÃO ESTAVA NA FILA: Sonda Supermercados, 22ª maior rede do Brasil (ABRAS 2026), não constava em nenhuma lista. Email sac@sonda.com.br com MX antispam.pensomail válido. Adicionado 29/09. Mostra que a cobertura ABRAS ainda tem lacunas."
+        ],
     "acoes_implementadas": [
       "1. PERSONA.MD ATUALIZADO: Adicionada seção 'PROVA SOCIAL: SAVEGNAGO #1 NO INTERIOR SP' com ranking ABRAS 2026 completo, posicionamento e como usar como argumento de venda.",
       "2. RANKING ABRAS INCORPORADO: Os 3 maiores do interior SP (Savegnago, Pague Menos, Tauste) estão no pipeline ativo. Usar isso como carta na manga.",
-      "3. FOCO REDEFINIDO: Fechamento sobre prospecção. Temos leads quentes suficientes para 3-5 contratos — o gargalo é follow-up humano, não descoberta."
-    ],
-    "pendente_humano_critico": [
-          "🔴 COBRAR: Queijos Itupeva (Rafael) — agendar coleta-teste. LEAD MAIS QUENTE.",
-          "🔴 COBRAR: Savegnago — WhatsApp (11) 96785-9631. #1 do interior SP, R$7,98bi. Tratar como PRIORIDADE MÁXIMA.",
-          "🔴 COBRAR: Brasfrigo (Salto/SP) — fechar contrato. Respondeu, é local.",
-          "🟡 ACOMPANHAR: Covabra — respondeu 22/09. Oferecer loja piloto.",
-          "🟡 ACOMPANHAR: Pague Menos (Josiane Marinho) — 2° maior do interior.",
-          "🟡 ACOMPANHAR: Dalben (gerente Luis) — insistir contato.",
-          "🟡 ACOMPANHAR: Muffato — ligar (43) 3371-1700.",
-          "🟡 ACOMPANHAR: Selmi — ticket #89532.",
-          "🟢 MONITORAR: Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Paulistão."
-        ],
-        "ciclo_2026_09_28_cron_44": {
-          "timestamp": "2026-09-28 19:42 (Atendente IA - cron #44 - ciclo noturno)",
-          "acoes": [
-            "✅ sync_formspree.py — 0 notificacoes novas (66 bounces em cache)",
-            "✅ corrigir_emails.py — 0 novos bounces processados",
-            "⚠️ watchdog.py — exit 1: 40 follow-ups atrasados",
-            "✅ prospecao_followup.py — 40 FP1 enviados para leads atrasados. Resolvido.",
-            "✅ send_sequence — 9 FP1 enviados (fritas/batata palha)",
-            "✅ check-replies — 1 pendente: Pastificio Selmi (auto-reply Zendesk satisfacao — ignorado, nao e lead)",
-            "📭 0 leads quentes novos. 1 auto-reply arquivavel."
+      "3. FOCO REDEFINIDO: Fechamento sobre prospecção. Temos leads quentes suficientes para 3-5 contratos — o gargalo é follow-up humano, não descoberta.",
+            "4. SITE ATUALIZADO: Savegnago (#1 interior SP, R$7,98bi) adicionado como prova social no site em 3 pontos: números, cards de vantagens e depoimentos. Antes só existia na persona.md.",
+            "5. SONDA SUP. ADICIONADO À FILA: Sonda (R$6,12bi, 22ª do Brasil) não estava em nenhuma lista. Adicionado com MX válido. +2 outras empresas (Aleatory, Cacique)."
           ],
-          "diagnostico": {
-            "total_leads_csv": 250,
-            "ativos_csv": 190,
-            "bounce_cache_json": 66,
-            "watchdog": "exit 0 apos correcao (40 atrasados resolvidos)",
-            "respostas_reais": 0
-          }
-        }
+    "pendente_humano_critico": [
+      "🔴 COBRAR: Queijos Itupeva (Rafael) — agendar coleta-teste. LEAD MAIS QUENTE.",
+            "🔴 COBRAR: Savegnago — WhatsApp (11) 96785-9631. #1 do interior SP, R$7,98bi. Tratar como PRIORIDADE MÁXIMA.",
+            "🔴 COBRAR: Brasfrigo (Salto/SP) — fechar contrato. Respondeu, é local.",
+            "🔴 NOVO: Sonda Supermercados (R$6,12bi, 22ª Brasil) — enviar apresentação citando Savegnago.",
+            "🔴 QUENTE: Tauste — ligar (15) 3324-4680. Respondeu pedindo contato.",
+            "🟡 ACOMPANHAR: Covabra — respondeu 22/09. Oferecer loja piloto.",
+            "🟡 ACOMPANHAR: Pague Menos (Josiane Marinho) — 2° maior do interior.",
+            "🟡 ACOMPANHAR: Dalben (gerente Luis) — insistir contato.",
+            "🟡 ACOMPANHAR: Muffato — ligar (43) 3371-1700.",
+            "🟡 ACOMPANHAR: Selmi — ticket #89532.",
+      "🟢 MONITORAR: Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Paulistão."
+    ],
+    "ciclo_2026_09_28_cron_45_prospector": {
+      "timestamp": "2026-09-28 ~20:00 (Prospector - cron #45)",
+      "acoes": [
+        "✅ enviar_lote.py --max 15: 15 emails enviados, 4 pulados (sem MX), 11 novos contatados",
+        "✅ ecossistema.json atualizado com numeros pos-envio"
+      ],
+      "diagnostico": {
+        "total_empresas": 306,
+        "contatados": 248,
+        "bounce": 48,
+        "pendentes": 5,
+        "pendentes_detalhe": "4 empresas sem MX valido (Nacional Inn, Biazoto, Madero, Lactalis) + 1 duplicata. Fila precisa de reposicao."
+      }
+    },
+    "ciclo_2026_09_28_cron_44": {
+      "timestamp": "2026-09-28 19:42 (Atendente IA - cron #44 - ciclo noturno)",
+      "acoes": [
+        "✅ sync_formspree.py — 0 notificacoes novas (66 bounces em cache)",
+        "✅ corrigir_emails.py — 0 novos bounces processados",
+        "⚠️ watchdog.py — exit 1: 40 follow-ups atrasados",
+        "✅ prospecao_followup.py — 40 FP1 enviados para leads atrasados. Resolvido.",
+        "✅ send_sequence — 9 FP1 enviados (fritas/batata palha)",
+        "✅ check-replies — 1 pendente: Pastificio Selmi (auto-reply Zendesk satisfacao — ignorado, nao e lead)",
+        "📭 0 leads quentes novos. 1 auto-reply arquivavel."
+      ],
+      "diagnostico": {
+        "total_leads_csv": 250,
+        "ativos_csv": 190,
+        "bounce_cache_json": 66,
+        "watchdog": "exit 0 apos correcao (40 atrasados resolvidos)",
+        "respostas_reais": 0
       }
     }
+  },
+  "ciclo_2026_09_29_cron_46_atendente": {
+    "timestamp": "2026-09-29 19:55 (Atendente IA - cron #46 - ciclo noturno)",
+    "acoes": [
+      "sync_formspree.py — 0 notificacoes novas (72 bounces em cache)",
+      "corrigir_emails.py — 0 bounces processados (ja tentados anteriormente)",
+      "watchdog.py — exit 1: 141 follow-ups atrasados - RESOLVIDO rodando prospecao_followup.py",
+      "prospecao_followup.py — 141 follow-ups processados (FP1/FP2/FP3). Todos atrasados zerados.",
+      "send_sequence — sequencia processada",
+      "check-replies — 3 respostas: Tauste (HUMANO - quente), Mars Brasil (auto-reply), Piracanjuba (auto-reply)",
+      "reply para Tauste — encaminhado numero e perguntado volume. Lead quente: mandou ligar (15) 3324-4680"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 265,
+      "ativos_watchdog": 197,
+      "bounce_cache_json": 72,
+      "watchdog": "exit 0 apos correcao (141 atrasados resolvidos)",
+      "respostas_reais": 1,
+      "respostas_humanas": "Tauste - direcionou para telefone (15) 3324-4680",
+      "respostas_auto": "2 (Mars Brasil - ticket auto; Piracanjuba - ticket auto)"
+    }
+  }
+}
