@@ -1,4 +1,149 @@
+
+## 2026-09-30 (quarta-feira) — 15:56 (Cron #60 — Atendente IA - ciclo vespertino)
+
+### Resumo do ciclo
+
+| Métrica | Valor | Δ vs. anterior |
+|---------|-------|----------------|
+| **Total de leads (watchdog)** | 271 | mesmo (271→271) |
+| **Ativos (watchdog)** | 200 | mesmo (200→200) |
+| **Bounce (cache)** | 73 | mesmo (73→73) |
+| **SMTP/IMAP** | ✅ OK | — |
+| **Watchdog** | ✅ exit 0 (saudável) | — |
+
+### Atividades deste ciclo (15:56)
+
+| Ação | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 0 notificações novas | 73 bounces em cache |
+| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados anteriormente |
+| ✅ watchdog.py | exit 0 — saudável | SMTP/IMAP OK. 271 leads, 200 ativos, 73 bounces |
+| ✅ prospecao_followup.py | 0 atrasados | Nenhum follow-up pendente |
+| ✅ send_sequence | Sequência processada | — |
+| ✅ check-replies | 0 pendentes | replies_pending.json vazio |
+
+### Respostas pendentes
+
+Nenhuma. Nenhum lead respondeu neste ciclo (desde 15:02).
+
+### Observações
+
+- **✅ Watchdog exit 0** — sistema completamente saudável, sem follow-ups atrasados.
+- **📭 0 respostas pendentes** — nenhum lead respondeu neste ciclo.
+- **🔇 Sem leads quentes novos neste ciclo.** Leads quentes permanecem: Queijos Itupeva (Rafael — coleta-teste pendente), Savegnago (#1 interior SP, R,98bi), Brasfrigo (Salto/SP — contrato pendente), Tauste (liga (15) 3324-4680), Covabra (follow-up pendente), Sonda Supermercados (R,12bi — ligar (11) 2145-6200), Pague Menos (Josiane Marinho — 2º maior do interior).
+- **📊 Meta da semana (28/09 a 04/10):** Foco FECHAMENTO — todos dependem de ação humana presencial (WhatsApp/telefone).
+
+### Pendências para o Estrategista
+
+- 🔴🔴🔴 **Savegnago** (WhatsApp 11 96785-9631) — proposta formal de contrato. #1 do interior SP (R$ 7,98 bi).
+- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste. LEAD MAIS QUENTE.
+- 🔴🔴 **Brasfrigo (Salto/SP)** — fechar contrato. É local, respondeu.
+- 🔴🔴 **Sonda Supermercados (R$ 6,12 bi)** — ligar (11) 2145-6200, pedir comercial/compras.
+- 🟡 **Tauste** — ligar (15) 3324-4680 (seg-sex 08h-17h).
+- 🟡 **Covabra** — respondeu 22/09, priorizar follow-up humano.
+- 🟡 **Pague Menos (Josiane Marinho)** — 2º maior do interior (R$ 4,33 bi), retomar contato.
+- 🟡 **Dalben (gerente Luis)** — insistir contato, proposta formal pronta.
+- 🟡 **Muffato** — ligar (43) 3371-1700.
+
+---
+
 # Insights Diarios — Analista de Qualidade
+
+## 2026-09-30 (quarta-feira) — 15:02 (Cron #59 — Atendente IA - ciclo vespertino)
+
+### Resumo do ciclo
+
+| Métrica | Valor | Δ vs. anterior |
+|---------|-------|----------------|
+| **Total de leads (watchdog)** | 271 | mesmo (271→271) |
+| **Ativos (watchdog)** | 200 | mesmo (200→200) |
+| **Bounce (cache)** | 73 | mesmo (73→73) |
+| **SMTP/IMAP** | ✅ OK | — |
+| **Watchdog** | ✅ exit 0 (saudável) | — |
+
+### Atividades deste ciclo (15:02)
+
+| Ação | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 0 notificações novas | 73 bounces em cache |
+| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados anteriormente |
+| ✅ watchdog.py | exit 0 — saudável | SMTP/IMAP OK. 271 leads, 200 ativos, 73 bounces |
+| ✅ prospecao_followup.py | 0 atrasados | Nenhum follow-up pendente |
+| ✅ send_sequence | Sequência processada | — |
+| ✅ check-replies | 0 pendentes | replies_pending.json vazio |
+
+### Respostas pendentes
+
+Nenhuma. Nenhum lead respondeu desde o último ciclo (14:33).
+
+### Observações
+
+- **✅ Watchdog exit 0** — sistema completamente saudável, sem follow-ups atrasados.
+- **📭 0 respostas pendentes** — nenhum lead respondeu neste ciclo.
+- **🔇 Sem leads quentes novos neste ciclo.** Leads quentes permanecem: Queijos Itupeva (Rafael — coleta-teste pendente), Savegnago (#1 interior SP, R$7,98bi), Brasfrigo (Salto/SP — contrato pendente), Tauste (liga (15) 3324-4680), Covabra (follow-up pendente), Sonda Supermercados (R$6,12bi — ligar (11) 2145-6200), Pague Menos (Josiane Marinho — 2º maior do interior).
+- **📊 Meta da semana (28/09 a 04/10):** Foco FECHAMENTO — coleta-teste Queijos Itupeva, proposta Savegnago, ligação Tauste, contrato Brasfrigo. Todos esses dependem de ação humana presencial (WhatsApp/telefone) — a IA fez a prospecção e o follow-up, agora o fechamento é humano.
+
+### Pendências para o Estrategista
+
+- 🔴🔴🔴 **Savegnago** (WhatsApp 11 96785-9631) — proposta formal de contrato. #1 do interior SP (R$ 7,98 bi).
+- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste. LEAD MAIS QUENTE.
+- 🔴🔴 **Brasfrigo (Salto/SP)** — fechar contrato. É local, respondeu.
+- 🔴🔴 **Sonda Supermercados (R$ 6,12 bi)** — ligar (11) 2145-6200, pedir comercial/compras.
+- 🟡 **Tauste** — ligar (15) 3324-4680 (seg-sex 08h-17h).
+- 🟡 **Covabra** — respondeu 22/09, priorizar follow-up humano.
+- 🟡 **Pague Menos (Josiane Marinho)** — 2º maior do interior (R$ 4,33 bi), retomar contato.
+- 🟡 **Dalben (gerente Luis)** — insistir contato, proposta formal pronta.
+- 🟡 **Muffato** — ligar (43) 3371-1700.
+
+---
+
+## 2026-09-30 (quarta-feira) — 14:33 (Cron #58 — Atendente IA - ciclo vespertino)
+
+### Resumo do ciclo
+
+| Métrica | Valor | Δ vs. anterior |
+|---------|-------|----------------|
+| **Total de leads (watchdog)** | 271 | mesmo (271→271) |
+| **Ativos (watchdog)** | 200 | mesmo (200→200) |
+| **Bounce (cache)** | 73 | mesmo (73→73) |
+| **SMTP/IMAP** | ✅ OK | — |
+| **Watchdog** | ✅ exit 0 (saudável) | — |
+
+### Atividades deste ciclo (14:33)
+
+| Ação | Resultado | Detalhe |
+|------|-----------|---------|
+| ✅ sync_formspree.py | 0 notificações novas | 73 bounces em cache (timeout inicial, ok na 2ª tentativa) |
+| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados anteriormente |
+| ✅ watchdog.py | exit 0 — saudável | SMTP/IMAP OK. 271 leads, 200 ativos, 73 bounces |
+| ✅ prospecao_followup.py | 0 atrasados | Nenhum follow-up pendente |
+| ✅ send_sequence | Sequência processada | — |
+| ✅ check-replies | 0 pendentes | replies_pending.json vazio |
+
+### Respostas pendentes
+
+Nenhuma. Nenhum lead respondeu desde o último ciclo (14:07).
+
+### Observações
+
+- **✅ Watchdog exit 0** — sistema completamente saudável, sem follow-ups atrasados.
+- **📭 0 respostas pendentes** — nenhum lead respondeu neste ciclo.
+- **🔇 Sem leads quentes novos neste ciclo.** Leads quentes permanecem: Queijos Itupeva (Rafael — coleta-teste pendente), Savegnago (#1 interior SP, R$7,98bi), Brasfrigo (Salto/SP — contrato pendente), Tauste (liga (15) 3324-4680), Covabra (follow-up pendente), Sonda Supermercados (R$6,12bi — ligar (11) 2145-6200), Pague Menos (Josiane Marinho — 2º maior do interior).
+- **📊 Meta da semana (28/09 a 04/10):** Foco FECHAMENTO — coleta-teste Queijos Itupeva, proposta Savegnago, ligação Tauste, contrato Brasfrigo. Todos esses dependem de ação humana presencial (WhatsApp/telefone) — a IA fez a prospecção e o follow-up, agora o fechamento é humano.
+
+### Pendências para o Estrategista
+
+- 🔴🔴🔴 **Savegnago** (WhatsApp 11 96785-9631) — proposta formal de contrato. #1 do interior SP (R$ 7,98 bi).
+- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste. LEAD MAIS QUENTE.
+- 🔴🔴 **Brasfrigo (Salto/SP)** — fechar contrato. É local, respondeu.
+- 🔴🔴 **Sonda Supermercados (R$ 6,12 bi)** — ligar (11) 2145-6200, pedir comercial/compras.
+- 🟡 **Tauste** — ligar (15) 3324-4680 (seg-sex 08h-17h).
+- 🟡 **Covabra** — respondeu 22/09, priorizar follow-up humano.
+- 🟡 **Pague Menos (Josiane Marinho)** — 2º maior do interior (R$ 4,33 bi), retomar contato.
+- 🟡 **Dalben (gerente Luis)** — insistir contato, proposta formal pronta.
+- 🟡 **Muffato** — ligar (43) 3371-1700.
+
+---
 
 ## 2026-09-30 (quarta-feira) — 14:07 (Cron #57 — Melhorador Contínuo - melhoria contínua)
 
@@ -446,47 +591,6 @@ Nenhuma. replies_pending.json está vazio.
 
 ---
 
-## 2026-09-29 (terça-feira) — 19:58 (Cron #47 — Melhorador Contínuo - melhorias)
-
-### Melhorias implementadas neste ciclo
-
-| Melhoria | Arquivo | Detalhe |
-|----------|---------|---------|
-| ✅ Site: Savegnago #1 do interior como prova social | `deploy-vercel/index.html` | Adicionado Savegnago (R$ 7,98 bi) como número + card na prova-social + depoimento na seção "Quem já confia" — person.md tem o argumento mas o site não usava a maior descoberta recente |
-| ✅ Site: prova social expandida | `deploy-vercel/index.html` | 4 cards em vez de 3 na seção "Por que vender agora" — o 4º card exibe "Savegnago (#1 interior) já negociou" |
-| ✅ +3 NOVAS EMPRESAS na fila | `bot/prospecao.py` | **Sonda Supermercados** (R$ 6,12 bi — 22ª maior do Brasil, ABRAS 2026, email sac@sonda.com.br MX válido), Aleatory Alimentos (Campinas), Cacique Alimentos (Campinas) |
-
-### Diagnóstico do sistema
-
-| Métrica | Valor | Meta | Status |
-|---------|-------|------|--------|
-| Watchdog | exit 0 | saudável | ✅ |
-| Total leads | 265 | — | ✅ |
-| Ativos | 197 | — | ✅ |
-| Bounces | 72 (24%) | < 15% | 🔴 muito acima |
-| Respostas | 17 (8,1%) | ≥ 10% | ⚠️ abaixo |
-| Fila pendentes (antes) | 5 | ≥ 15 | ⚠️ abaixo |
-| Fila pendentes (depois) | 8 (+3 novas) | ≥ 15 | ⚠️ ainda abaixo |
-| Contratos | 0 | 1 | 🔴 |
-
-### Aprendizados
-
-1. **Savegnago (#1 do interior SP, R$ 7,98 bi) não estava no site!** A persona foi atualizada em 27/09 com essa descoberta, mas o site — que é o primeiro contato de leads inbound — não exibia essa prova social. Agora aparece em 3 pontos: números, cards e depoimentos. Isso fortalece a credibilidade principalmente para redes médias que visitam o site.
-2. **Sonda Supermercados (R$ 6,12 bi) estava completamente fora da fila.** A 22ª maior rede do Brasil (ABRAS 2026) não constava em nenhuma lista — email sac@sonda.com.br com MX válido (antispam.pensomail.com.br). Adicionado agora. Isso mostra que a cobertura de supermercados grandes da ABRAS ranking ainda tem lacunas.
-3. **A taxa de resposta (8,1%) estagnou.** A última rodada de FP3 reformulado (Savegnago + anti-furto) ainda não gerou retorno mensurável nos números — pode precisar de mais tempo (follow-ups foram enviados entre 28-29/09).
-4. **Bounce rate (24%) continua o calcanhar-de-Aquiles.** Preocupante: 1 em cada 4 emails não chega. A validação de MX self-hosted ajuda mas não resolve todos os casos (ex: Sonda tem antispam.pensomail, que pode rejeitar alguns).
-
-### Pendências para o Estrategista
-
-- 🔴🔴🔴 **Savegnago (WhatsApp 11 96785-9631)** — proposta formal de contrato
-- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste
-- 🔴🔴 **Sonda Supermercados (R$ 6,12 bi)** — NOVO lead quente em potencial, enviar apresentação citando Savegnago como prova social
-- 🟡 **Tauste** — pediu ligação (15) 3324-4680, agendar
-- 🟡 **Covabra** — respondeu 22/09, priorizar
-- 🟡 **Pague Menos (Josiane Marinho)** — retomar contato
-
----
-
 ## 2026-09-28 (segunda-feira) — 19:42 (Cron #44 — Atendente IA - ciclo noturno)
 
 | Metrica | Valor | Δ |
@@ -539,42 +643,6 @@ Nenhuma. replies_pending.json está vazio.
 - 🟡 **Covabra** — respondeu 22/09 — priorizar follow-up humano
 - 🟡 **Selmi** — acompanhar ticket #89532 (compras@selmi.com.br)
 - 🟡 **Pague Menos** — acompanhar Josiane Marinho
-
----
-
-## 2026-09-28 (segunda-feira) — 19:46 (Cron #45 — Melhorador Contínuo - melhorias)
-
-### Melhorias implementadas neste ciclo
-
-| Melhoria | Arquivo | Detalhe |
-|----------|---------|---------|
-| ✅ FP3 reformulado c/ anti-furto + Savegnago | `bot/prospecao_followup.py` | Anti-furto (quadrilhas, bombona lacrada), prova social Savegnago #1 SP (R$ 7,98 bi), PIX hora da coleta |
-| ✅ +8 novas empresas MX validado | `bot/prospecao.py` | Iquegami (Outlook), Campos (Hotmail), Fernandão (uhserver), Nicolau Max (Google), ASC, Maia, Biazoto, Univale |
-
-### Diagnóstico do sistema
-
-| Métrica | Valor | Meta | Status |
-|---------|-------|------|--------|
-| Watchdog | exit 0 | saudável | ✅ |
-| Total leads | 250 | — | ✅ |
-| Ativos | 190 | — | ✅ |
-| Bounces | 42 (21%) | < 15% | 🔴 acima |
-| Respostas | 16 (8,2%) | ≥ 10% | ⚠️ abaixo |
-| Fila pendentes | ~14 (6+8) | ≥ 15 | ⚠️ quase |
-| Contratos | 0 | 1 | 🔴 |
-
-### Aprendizados
-
-- **FP3 com anti-furto + Savegnago**: o argumento anti-furto diferencia a Master Óleo de coletores informais (que não usam protocolo de segurança). Savegnago como prova social mostra que a maior rede do interior confia no serviço.
-- **Fila quase na meta**: com +8 empresas, a fila sobe de 6 para ~14. Ainda faltam ~2 para a meta de 15. Próxima rodada pode mirar Sonda Supermercados (R$ 6,12 bi, não contactado) e outras do ABRAS ranking.
-- **O gargalo continua sendo fechamento humano**: 0 contratos em 250 leads e 16 respostas é alarmante. A IA fez o trabalho de prospecção; agora precisa de intervenção humana.
-
-### Pendências para o Estrategista
-
-- 🔴🔴🔴 Savegnago (WhatsApp), Queijos Itupeva (Rafael), Brasfrigo
-- 🟡 Covabra, Pague Menos (Josiane), Dalben (Luis), Muffato (tel)
-- ⚠️ Acompanhar se novo FP3 aumenta resposta
-- ⚠️ Buscar +2 empresas para fila chegar em 15+
 
 ---
 
@@ -644,52 +712,4 @@ Nunca tivemos 3 das maiores redes simultaneamente no pipeline. Isso é um case d
 | 🟡 | Covabra (respondeu 22/09) | Oferecer loja piloto | Telefone/WhatsApp |
 | 🟡 | Pague Menos (Josiane Marinho) | Retomar contato, oferta | Email/Telefone |
 | 🟡 | Dalben (gerente Luis) | Proposta formal | Telefone |
-|| 🟡 | Muffato | Ligar compras | (43) 3371-1700 |
-
----
-
-## 2026-09-30 (quarta-feira) — 13:33 (Cron #55 — Atendente IA - ciclo vespertino)
-
-### Resumo do ciclo
-
-| Métrica | Valor | Δ vs. anterior |
-|---------|-------|----------------|
-| **Total de leads (watchdog)** | 271 | mesmo (271→271) |
-| **Ativos (watchdog)** | 200 | mesmo (200→200) |
-| **Bounce (cache)** | 73 | mesmo (73→73) |
-| **SMTP/IMAP** | ✅ OK | — |
-| **Watchdog** | ✅ exit 0 (saudável) | — |
-
-### Atividades deste ciclo (13:33)
-
-| Ação | Resultado | Detalhe |
-|------|-----------|---------|
-| ✅ sync_formspree.py | 0 notificações novas | 73 bounces em cache |
-| ✅ corrigir_emails.py | 0 bounces processados | Todos já tentados anteriormente |
-| ✅ watchdog.py | exit 0 — saudável | SMTP/IMAP OK. 271 leads, 200 ativos, 73 bounces |
-| ✅ prospecao_followup.py | 0 atrasados | Nenhum follow-up pendente |
-| ✅ send_sequence | Sequência processada | — |
-| ✅ check-replies | 0 pendentes | replies_pending.json vazio |
-
-### Respostas pendentes
-
-Nenhuma. Nenhum lead respondeu desde o último ciclo (12:02).
-
-### Observações
-
-- **✅ Watchdog exit 0** — sistema completamente saudável, sem follow-ups atrasados.
-- **📭 0 respostas pendentes** — nenhum lead respondeu neste ciclo.
-- **🔇 Sem leads quentes novos neste ciclo.** Leads quentes permanecem: Queijos Itupeva (Rafael — coleta-teste pendente), Savegnago (#1 interior SP, R$7,98bi), Brasfrigo (Salto/SP — contrato pendente), Tauste (liga (15) 3324-4680), Covabra (follow-up pendente), Sonda Supermercados (R$6,12bi — ligar (11) 2145-6200), Pague Menos (Josiane Marinho — 2º maior do interior).
-- **📊 Meta da semana (28/09 a 04/10):** Foco FECHAMENTO — coleta-teste Queijos Itupeva, proposta Savegnago, ligação Tauste, contrato Brasfrigo. Todos esses dependem de ação humana presencial (WhatsApp/telefone) — a IA fez a prospecção e o follow-up, agora o fechamento é humano.
-
-### Pendências para o Estrategista
-
-- 🔴🔴🔴 **Savegnago** (WhatsApp 11 96785-9631) — proposta formal de contrato. #1 do interior SP (R$ 7,98 bi).
-- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste. LEAD MAIS QUENTE.
-- 🔴🔴 **Brasfrigo (Salto/SP)** — fechar contrato. É local, respondeu.
-- 🔴🔴 **Sonda Supermercados (R$ 6,12 bi)** — ligar (11) 2145-6200, pedir comercial/compras.
-- 🟡 **Tauste** — ligar (15) 3324-4680 (seg-sex 08h-17h).
-- 🟡 **Covabra** — respondeu 22/09, priorizar follow-up humano.
-- 🟡 **Pague Menos (Josiane Marinho)** — 2º maior do interior (R$ 4,33 bi), retomar contato.
-- 🟡 **Dalben (gerente Luis)** — insistir contato, proposta formal pronta.
-- 🟡 **Muffato** — ligar (43) 3371-1700.
+| 🟡 | Muffato | Ligar compras | (43) 3371-1700 |
