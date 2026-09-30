@@ -1,4 +1,4 @@
-# 📊 Insights Master Óleo — 30/09/2026 (13:02) — 6º CICLO DO DIA
+# 📊 Insights Master Óleo — 30/09/2026 (16:32) — 7º CICLO DO DIA
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## 📊 Pipeline Atual
 
-| Indicador | Valor | Δ desde último tick (12:32) |
+| Indicador | Valor | Δ desde último tick (13:02) |
 |---|---|---|
 | **Leads totais** | **271** | → |
 | Leads **novo** | **191** | → |
@@ -39,14 +39,14 @@
 
 ## ❌ Problemas encontrados
 
-**Nenhum problema neste ciclo.** Watchdog saudável com exit 0 em todos os 6 ciclos de hoje.
+**Nenhum problema neste ciclo.** Watchdog saudável com exit 0 em todos os 7 ciclos de hoje.
 
 **Detalhes:**
 - 53 leads bounce no CSV, 73 no cache bounces.json (diferença de ~20 emails órfãos de correções anteriores).
 - 0 follow-ups atrasados.
 - 0 respostas pendentes.
 - 0 bounces novos.
-- Inbox vazio — sem novas replies desde 10:31.
+- Inbox vazio — sem novas replies desde 10:31. Tarde tranquila.
 
 ---
 
@@ -83,11 +83,11 @@
 
 ## 📝 Observações
 
-1. **Pipeline estabilizado em 271 leads.** Nenhuma alteração desde o ciclo 10:31.
+1. **Pipeline estabilizado em 271 leads.** Nenhuma alteração desde o ciclo 13:02.
 2. **Taxa de resposta:** 18/271 ≈ 6,6%. Redes de supermercados dominam os respondidos.
 3. **Zero respostas humanas pendentes** — todas institucionais sem conteúdo comercial.
-4. **6º ciclo do dia sem incidentes.** Sistema roda de forma autônoma e previsível.
-5. **Sonda (R$6,12bi) e Tauste (3º maior interior SP)** são os lead mais valiosos não-negociados — qualquer movimento comercial deles deve ser prioridade.
+4. **7º ciclo do dia sem incidentes.** Sistema roda de forma autônoma e previsível.
+5. **Sonda (R$6,12bi) e Tauste (3º maior interior SP)** são os leads mais valiosos não-negociados — qualquer movimento comercial deles deve ser prioridade máxima.
 6. **Relatório ESG (relatorio_esg.py)** disponível sob demanda — argumento de fechamento para indústrias.
 
 ---
@@ -101,4 +101,4 @@
 
 ---
 
-_Relatório gerado automaticamente pelo cron job em 30/09/2026 13:02 — 6º ciclo do dia._
+_Relatório gerado automaticamente pelo cron job em 30/09/2026 16:32 — 7º ciclo do dia._

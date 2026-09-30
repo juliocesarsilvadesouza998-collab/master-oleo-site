@@ -1,4 +1,4 @@
-# 📊 Insights Master Óleo — 30/09/2026 11:32
+# 📊 Insights Master Óleo — 30/09/2026 16:32
 
 ## Métricas gerais
 - **Total de leads:** 271

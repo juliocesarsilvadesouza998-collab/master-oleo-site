@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-30T13:02:00-03:00",
+  "atualizado_em": "2026-09-30T16:32:00-03:00",
   "atividade_tick_13h02_30_09": {
     "ciclo": "cron_tick_job_30_09_13h02",
     "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
@@ -8,7 +8,15 @@
     "resultado": "Sistema saudável — 6º ciclo do dia. 0 follow-ups atrasados, fila zerada, 0 respostas pendentes.",
     "pipeline": "271 leads totais (191 novo, 18 respondido, 9 sequencia, 53 bounce CSV)"
   },
-  "atividade_tick_13h02_30_09_detalhado": {
+  "atividade_tick_16h32_30_09": {
+    "ciclo": "cron_tick_job_30_09_16h32",
+    "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
+    "emails_enviados": 0,
+    "bounces_novos": 0,
+    "resultado": "Sistema saudável — 7º ciclo do dia. 0 follow-ups atrasados, fila zerada, 0 respostas pendentes.",
+    "pipeline": "271 leads totais (191 novo, 18 respondido, 9 sequencia, 53 bounce CSV)"
+  },
+  "atividade_tick_16h32_30_09_detalhado": {
     "sync_formspree": "OK — 0 novas notificacoes (73 bounces em cache)",
     "corrigir_emails": "OK — 0 processados (ja tentados)",
     "watchdog": "EXIT 0 — saudavel. 271 leads, 200 ativos, 73 bounces cache, SMTP OK, IMAP OK",
@@ -19,11 +27,11 @@
     "relatorio_esg": "nenhum pedido neste ciclo",
     "pipeline_atual": "271 leads / 191 novo / 18 respondido / 9 sequencia / 53 bounce CSV / 73 bounces cache / 0 encerrado",
     "destaques_tick": [
-      "6o ciclo do dia sem incidentes — sistema operacional estavel",
+      "7o ciclo do dia sem incidentes — sistema operacional estavel",
       "18 leads respondidos acumulados — Sonda (R$6,12bi) e Tauste (3o maior interior SP) sao os destaques",
-      "Nenhum lead novo respondeu desde 10h31 — silencio comercial",
-      "Watchdog saudavel em todos os 6 ciclos de hoje"
+      "Nenhum lead novo respondeu desde 10h31 — silencio comercial se mantem",
+      "Watchdog saudavel em todos os 7 ciclos de hoje"
     ],
-    "observacao": "Pipeline estabilizado em 271 leads. Sistema operando sem problemas no 6o ciclo. Nenhuma acao humana necessaria. Leads quentes: Sonda, Tauste, Savegnago, Pague Menos, Covabra, Betins."
+    "observacao": "Pipeline estabilizado em 271 leads. Sistema operando sem problemas no 7o ciclo. Nenhuma acao humana necessaria. Leads quentes: Sonda, Tauste, Savegnago, Pague Menos, Covabra, Betins. Tarde tranquila sem novidades."
   }
 }
