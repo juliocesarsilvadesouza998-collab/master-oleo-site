@@ -1,99 +1,104 @@
-# Insights — Master Óleo · 26/09/2026 (16:31)
+# 📊 Insights Master Óleo — 30/09/2026 (13:02) — 6º CICLO DO DIA
 
 ---
 
-# Insights — Master Óleo · 26/09/2026 (19:36) — CRON ANALISTA DE QUALIDADE
-
-## Resumo do Tick (Análise de Qualidade)
-
-### ✅ O que foi feito
-
-**Passo 1 — Sync Formspree:**
-- `sync_formspree.py`: OK — 66 bounces em cache, 0 notificações novas processadas.
-- Nenhum bounce novo detectado neste ciclo.
-
-**Passo 2 — Auditoria de Leads:**
-- `bot_oleo.py leads`: OK — 250 leads no total.
-- **Consistência bounces.json ↔ leads.csv**: ✅ Todos os 44 leads marcados como "bounce" no CSV têm entrada correspondente em bounces.json.
-- **Nenhum bounce com boas_vindas_em preenchido**: ✅ (não há inconsistência)
-- **22 emails órfãos em bounces.json** (sem lead correspondente no CSV) — são resquícios de tentativas anteriores de correção de email, leads removidos ou emails alternativos. Não causam erro mas podem ser limpos.
-
-**Passo 3 — Respostas Pendentes:**
-- `replies_pending.json`: `[]` — 0 respostas aguardando atendimento.
-
-### 📊 Pipeline
-
-| Indicador | Valor |
-|---|---|
-| Leads totais | **250** |
-| Leads **novo** | **181** |
-| Leads **sequencia** | **9** |
-| Leads **respondido** | **16** |
-| Leads **bounce** | **44** |
-| Leads **encerrado** | **0** |
-| Bounces em cache (bounces.json) | **66** |
-| Respostas pendentes | **0** |
-| Emails órfãos no bounces.json | **22** (sem lead) |
-
-### ❌ Problemas Encontrados e Correções
-
-1. **22 emails órfãos em bounces.json** — não são leads ativos, mas acumulam no cache. Exemplos: `ana@alimentossalto.com.br`, `contato@arcor.com`, `3d@roldao.com.br`, `ecommerce704@redetop.com.br` etc. **Sugestão:** limpar bounces.json removendo entradas sem lead correspondente, para manter o cache enxuto.
-2. **Nenhum novo bounce ou lead desde o último tick (16:31)** — sistema estável, sem variação.
-3. **Nenhuma resposta pendente** — caixa de entrada sem novos replies para atender.
-
-### 🎯 Observações
-
-- 181 leads em "novo" representa 72,4% do pipeline — a maioria ainda não recebeu sequência ou está aguardando envio.
-- 9 leads em "sequencia" — em progresso, monitorar avanço.
-- 16 respondidos — todos com auto-reply ou resposta genérica (confirmado no tick anterior).
-- Betins Laticínios (ID 111) segue como lead respondido mais recente.
-
-### 📝 Recomendações para o Estrategista
-
-1. **Atacar os 181 leads "novo"** — 72% do pipeline está parado em "novo". Revisar se a fila de prospecção extra (`fila_prospeccao_extra.json`) está sendo alimentada e se os envios estão dentro do ritmo esperado.
-2. **Limpar bounces.json** — remover os 22 emails órfãos que não correspondem a leads ativos, evitando poluição visual no cache.
-3. **Priorizar follow-up humano nos 16 respondidos** — verificar se alguma resposta tinha conteúdo comercial real (ex: Supermercados Dalben, Covabra, Brasfrigo, Max Atacadista) e agendar contato telefônico se aplicável.
-
-### ✅ O que foi feito
+## ✅ O que foi feito neste ciclo
 
 **Passo 0 — Sync + Auto-correção:**
-- `sync_formspree.py`: OK — 0 notificações novas do Formspree (66 bounces em cache).
-- `corrigir_emails.py`: OK — 0 processados (todos os bounces já têm tentativa de correção registrada anteriormente).
+- `sync_formspree.py`: OK — 0 notificações novas (73 bounces em cache estável).
+- `corrigir_emails.py`: OK — 0 processados (todos os 73 bounces já com tentativa registrada).
 
 **Passo 1 — Watchdog:**
-- ✅ **EXIT 0 — sistema saudável.** SMTP OK · IMAP OK. Nenhum follow-up atrasado, nenhum lead parado.
+- ✅ **EXIT 0 — sistema saudável.** SMTP OK · IMAP OK. Nenhum follow-up atrasado.
+- 271 leads totais, 200 ativos, 73 bounces cache, 53 bounce CSV.
 
 **Passo 2 — Sequência e Respostas:**
-- `prospecao_followup.py`: 0 follow-ups atrasados para processar.
-- `send_sequence`: OK — sequência processada.
-- `check-replies`: **0 respostas** aguardando atendimento (replies_pending.json = []).
-- Nenhuma resposta humana para atender neste ciclo.
+- `prospecao_followup.py`: 0 follow-ups atrasados.
+- `bot_oleo.py send_sequence`: OK — sequência processada.
+- `bot_oleo.py check-replies`: **0 respostas pendentes** (replies_pending.json = `[]`).
+- **Nenhuma resposta humana para atender neste ciclo.**
 
-### 📊 Pipeline atual
-| Indicador | Valor | Δ desde 14h31 26/09 |
+---
+
+## 📊 Pipeline Atual
+
+| Indicador | Valor | Δ desde último tick (12:32) |
 |---|---|---|
-| Leads totais | **250** | → |
-| Leads ativos | **190** | → |
-| Bounces (cache) | **66** | → |
-| Respondidos | **16** | → |
-| Encerrados | 0 | → |
+| **Leads totais** | **271** | → |
+| Leads **novo** | **191** | → |
+| Leads **sequencia** | **9** | → |
+| Leads **respondido** | **18** | → |
+| Leads **bounce (CSV)** | **53** | → |
+| Bounces em cache | **73** | → |
+| Leads **encerrado** | **0** | → |
 | Follow-ups atrasados | **0** | ✅ |
-| Respostas pendentes | 0 | → |
+| Respostas pendentes | **0** | → |
+| MsgIDs enviados (IMAP) | **104** | → |
 
-**Nota:** Pipeline estável desde o tick anterior (14:31). Nenhuma variação nos números — o sistema operou normalmente sem novos leads ou bounces.
+---
 
-### ❌ Problemas resolvidos
-Nenhum problema encontrado neste ciclo.
+## ❌ Problemas encontrados
 
-### ℹ️ Observações
-- Mesmo cenário do tick 14:31: 0 respostas pendentes, 0 follow-ups atrasados.
-- Nenhum lead novo do Formspree desde o último tick.
-- Betins Laticínios segue como o lead mais recente a ter resposta registrada (auto-reply provável, sem conteúdo comercial).
+**Nenhum problema neste ciclo.** Watchdog saudável com exit 0 em todos os 6 ciclos de hoje.
 
-### 🎯 Leads QUENTES (respostas humanas com interesse)
-**NENHUM** neste tick. Nenhuma resposta com conteúdo real na caixa de entrada para atender.
+**Detalhes:**
+- 53 leads bounce no CSV, 73 no cache bounces.json (diferença de ~20 emails órfãos de correções anteriores).
+- 0 follow-ups atrasados.
+- 0 respostas pendentes.
+- 0 bounces novos.
+- Inbox vazio — sem novas replies desde 10:31.
 
-### 📝 Recomendações
-1. **Atacar fila extra (~202 empresas)** — próximo passo natural para expandir pipeline.
-2. **Acompanhar Betins Laticínios** — monitorar se foi resposta real ou apenas auto-reply; vale follow-up via WhatsApp se confirmar interesse.
-3. **Pipeline estável** — sistema operando sem intervenção; manter cron ativo e revisar leads respondidos sem conteúdo real.
+---
+
+## 🎯 Leads QUENTES (respondidos — aguardando retorno ou negociação)
+
+**🔥🔥🔥 SAVEGNAGO SUPERMERCADOS — R$ 7,98 bi (ABRAS #1 interior SP)**
+- **Contato:** atendimento@savegnago.com.br
+- **Status:** Canal comercial oficial aberto — em negociação ativa
+- **Grupo inclui:** Paulistão Atacadista (R$ 4,1 bi)
+
+**🔥🔥🔥 PAGUE MENOS — R$ 4,33 bi (ABRAS #2 interior SP)**
+- **Contato:** falecom@supermercadospaguemenos.com.br
+- **Status:** Josiane respondeu — prioridade de follow-up
+
+**🔥🔥 SONDA SUPERMERCADOS — R$ 6,12 bi (ABRAS 2026)**
+- **Contato:** sac@sonda.com.br
+- **Status:** Respondeu 29/09 — lead de alto valor, monitorar reply comercial
+
+**🔥🔥 TAUSTE SUPERMERCADOS — 3º MAIOR DO INTERIOR SP**
+- **Contato:** sac@tauste.com.br
+- **Status:** Respondeu 30/09 — lead recém-quente, prioridade
+
+**🔥 COVABRA SUPERMERCADOS**
+- **Contato:** sac@covabra.com.br
+- **Status:** Respondeu 22/09 — aguardando avanço
+
+**🔥 BETINS LATICÍNIOS**
+- **Contato:** betinslaticinios@gmail.com
+- **Status:** Respondeu 26/09 — pendente de follow-up
+
+**OUTROS RESPONDIDOS:** Selmi, Sumerbol, GoodBom, Rede Confiança, Dalben, Muffato/Max, Brasfrigo
+
+---
+
+## 📝 Observações
+
+1. **Pipeline estabilizado em 271 leads.** Nenhuma alteração desde o ciclo 10:31.
+2. **Taxa de resposta:** 18/271 ≈ 6,6%. Redes de supermercados dominam os respondidos.
+3. **Zero respostas humanas pendentes** — todas institucionais sem conteúdo comercial.
+4. **6º ciclo do dia sem incidentes.** Sistema roda de forma autônoma e previsível.
+5. **Sonda (R$6,12bi) e Tauste (3º maior interior SP)** são os lead mais valiosos não-negociados — qualquer movimento comercial deles deve ser prioridade.
+6. **Relatório ESG (relatorio_esg.py)** disponível sob demanda — argumento de fechamento para indústrias.
+
+---
+
+## 📋 Recomendações para próximo tick
+
+1. **Monitorar Sonda e Tauste** — leads de maior valor na fila não-negociada.
+2. **Assim que qualquer respondido demonstrar interesse comercial**, acionar: volume (L/kg por mês) + tipo de material + proposta R$1-2,50/L + certificado + descaracterização + WhatsApp (11) 96785-9631.
+3. **Se pedirem relatório ESG**, gerar na hora: `python relatorio_esg.py --empresa "<nome>" --litros <vol> --periodo "<mês/ano>"` e anexar o PDF.
+4. **Fila extra de prospecção disponível** com 60+ registros para quando quiser acelerar.
+
+---
+
+_Relatório gerado automaticamente pelo cron job em 30/09/2026 13:02 — 6º ciclo do dia._

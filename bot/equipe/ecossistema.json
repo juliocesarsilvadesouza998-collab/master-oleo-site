@@ -1,23 +1,29 @@
 {
-  "atualizado_em": "2026-09-26T16:31-03:00",
-  "atividade_tick_16h31_26_09": {
-    "ciclo": "cron_tick_job_26_09_16h31",
+  "atualizado_em": "2026-09-30T13:02:00-03:00",
+  "atividade_tick_13h02_30_09": {
+    "ciclo": "cron_tick_job_30_09_13h02",
     "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
     "emails_enviados": 0,
     "bounces_novos": 0,
-    "resultado": "Sistema saudável — nenhum follow-up atrasado, fila zerada, 0 respostas pendentes"
+    "resultado": "Sistema saudável — 6º ciclo do dia. 0 follow-ups atrasados, fila zerada, 0 respostas pendentes.",
+    "pipeline": "271 leads totais (191 novo, 18 respondido, 9 sequencia, 53 bounce CSV)"
   },
-  "atividade_tick_16h31_26_09_detalhado": {
-    "sync_formspree": "OK — 0 notificacoes novas (66 bounces em cache)",
-    "corrigir_emails": "OK — 0 processados (todos com tentativa registrada anteriormente)",
-    "watchdog": "EXIT 0 — sistema saudavel, sem problemas (SMTP OK · IMAP OK)",
-    "prospecao_followup": "OK — 0 follow-ups atrasados para processar",
+  "atividade_tick_13h02_30_09_detalhado": {
+    "sync_formspree": "OK — 0 novas notificacoes (73 bounces em cache)",
+    "corrigir_emails": "OK — 0 processados (ja tentados)",
+    "watchdog": "EXIT 0 — saudavel. 271 leads, 200 ativos, 73 bounces cache, SMTP OK, IMAP OK",
+    "prospecao_followup": "OK — 0 follow-ups atrasados",
     "send_sequence": "OK — sequencia processada",
     "check_replies": "OK — 0 respostas pendentes (replies_pending.json vazio)",
-    "respostas_enviadas": "0 — nenhuma resposta humana para atender",
-    "relatorio_esg": "nenhum pedido",
-    "pipeline_atual": "250 leads / 190 ativos / 16 respondido / 66 bounce (cache)",
-    "fila_prospeccao_extra": "202 empresas na fila extra (desatualizado desde 25/09)",
-    "observacao": "Tick 16:31 26/09 — Pipeline saudavel. Sem respostas novas desde o tick 14:31. 0 respostas pendentes."
+    "respostas_enviadas": "0 — nenhuma reply para atender neste ciclo",
+    "relatorio_esg": "nenhum pedido neste ciclo",
+    "pipeline_atual": "271 leads / 191 novo / 18 respondido / 9 sequencia / 53 bounce CSV / 73 bounces cache / 0 encerrado",
+    "destaques_tick": [
+      "6o ciclo do dia sem incidentes — sistema operacional estavel",
+      "18 leads respondidos acumulados — Sonda (R$6,12bi) e Tauste (3o maior interior SP) sao os destaques",
+      "Nenhum lead novo respondeu desde 10h31 — silencio comercial",
+      "Watchdog saudavel em todos os 6 ciclos de hoje"
+    ],
+    "observacao": "Pipeline estabilizado em 271 leads. Sistema operando sem problemas no 6o ciclo. Nenhuma acao humana necessaria. Leads quentes: Sonda, Tauste, Savegnago, Pague Menos, Covabra, Betins."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-29 19:58 (Melhorador Contínuo - cron #47 - melhorias)",
+  "atualizado_em": "2026-09-30 14:07 (Melhorador Contínuo - cron #57 - melhoria contínua)",
   "criado_em": "2026-08-13",
   "metas": {
     "enviar_50_emails_a_partir_de": "2026-08-14 (atingida: 74+ envios)",
@@ -13,7 +13,7 @@
       "meta_humana_3": "Dalben (gerente Luis) — insistir contato, proposta formal pronta.",
       "meta_humana_4": "Muffato — ligar (43) 3371-1700. Grupo nacional com loja em Campinas (Max Atacadista).",
       "meta_humana_5": "Selmi — ticket #89532. Acompanhar compras@selmi.com.br.",
-      "meta_resposta": "taxa >= 10% (atual 8,2%). Tauste respondeu 29/09 como novo lead quente.",
+      "meta_resposta": "taxa >= 10% (atual ~8,5%). Tauste respondeu 29/09 e respondido 30/09. Mantido como lead quente para call comercial.",
       "meta_bounce": "< 15% (atual ~21% no cache, ~18% no CSV). Continuar validando MX com filtro de self-hosted.",
       "meta_fila": ">= 15 pendentes com MX valido (atual ~5). Sonda (R$6,12bi) + 2 empresas adicionadas em 29/09.",
       "nicho_prioritario": "SUPERMERCADOS (maior conversao comprovada) + encapsulados/farmaceuticas",
@@ -78,31 +78,31 @@
       "7. Pessoas que responderam: Covabra (22/09), Paulistão, Brasfrigo mantiveram-se quentes"
     ],
     "descobertas_da_pesquisa": [
-          "DESCOBERTA #1 - SAVEGNAGO É #1 DO INTERIOR SP (ABRAS 2026): Savegnago fatura R$ 7,98 bi e é a 15ª maior rede do Brasil. Líder absoluta no interior paulista. Já abriu canal comercial conosco. Isso transforma nossa abordagem de prospecção: 'a maior rede do interior já está negociando conosco' vira prova social.",
-          "DESCOBERTA #2 - TOP 3 INTERIOR SP: 1° Savegnago (R$7,98bi), 2° Pague Menos (R$4,33bi), 3° Tauste. JÁ ESTAMOS FALANDO COM OS 3! Isso é um case de venda raro — 3 maiores redes simultaneamente no pipeline.",
-          "DESCOBERTA #3 - INTERIOR SP RANKING COMPLETO: Supermercados São Vicente (#4?), Covabra, Dalben, Paulistão (Grupo Savegnago) — todos no pipeline. Maior concentracao de leads de alto valor em supermercados na história do projeto.",
-          "DESCOBERTA #4 - MERCADO UCO: Global US$ 8bi (2025) → US$ 15bi (2033). Brasil exporta UCO para EUA (1,4M t importadas 2023). Demanda global de SAF dobra até 2030. Cenário nunca foi tão favorável.",
-          "DESCOBERTA #5 - ECOPOS JUNDIAÍ: 'Óleo do Bem' da DAE Jundiaí (postos de coleta públicos) mostra que há concorrência pelo UCO residencial, mas nosso foco B2B (indústrias/redes) continua sem concorrência local forte.",
-          "DESCOBERTA #6 - SONDA SUP. (R$6,12bi, 22ª do Brasil) NÃO ESTAVA NA FILA: Sonda Supermercados, 22ª maior rede do Brasil (ABRAS 2026), não constava em nenhuma lista. Email sac@sonda.com.br com MX antispam.pensomail válido. Adicionado 29/09. Mostra que a cobertura ABRAS ainda tem lacunas."
-        ],
+      "DESCOBERTA #1 - SAVEGNAGO É #1 DO INTERIOR SP (ABRAS 2026): Savegnago fatura R$ 7,98 bi e é a 15ª maior rede do Brasil. Líder absoluta no interior paulista. Já abriu canal comercial conosco. Isso transforma nossa abordagem de prospecção: 'a maior rede do interior já está negociando conosco' vira prova social.",
+      "DESCOBERTA #2 - TOP 3 INTERIOR SP: 1° Savegnago (R$7,98bi), 2° Pague Menos (R$4,33bi), 3° Tauste. JÁ ESTAMOS FALANDO COM OS 3! Isso é um case de venda raro — 3 maiores redes simultaneamente no pipeline.",
+      "DESCOBERTA #3 - INTERIOR SP RANKING COMPLETO: Supermercados São Vicente (#4?), Covabra, Dalben, Paulistão (Grupo Savegnago) — todos no pipeline. Maior concentracao de leads de alto valor em supermercados na história do projeto.",
+      "DESCOBERTA #4 - MERCADO UCO: Global US$ 8bi (2025) → US$ 15bi (2033). Brasil exporta UCO para EUA (1,4M t importadas 2023). Demanda global de SAF dobra até 2030. Cenário nunca foi tão favorável.",
+      "DESCOBERTA #5 - ECOPOS JUNDIAÍ: 'Óleo do Bem' da DAE Jundiaí (postos de coleta públicos) mostra que há concorrência pelo UCO residencial, mas nosso foco B2B (indústrias/redes) continua sem concorrência local forte.",
+      "DESCOBERTA #6 - SONDA SUP. (R$6,12bi, 22ª do Brasil) NÃO ESTAVA NA FILA: Sonda Supermercados, 22ª maior rede do Brasil (ABRAS 2026), não constava em nenhuma lista. Email sac@sonda.com.br com MX antispam.pensomail válido. Adicionado 29/09. Mostra que a cobertura ABRAS ainda tem lacunas."
+    ],
     "acoes_implementadas": [
       "1. PERSONA.MD ATUALIZADO: Adicionada seção 'PROVA SOCIAL: SAVEGNAGO #1 NO INTERIOR SP' com ranking ABRAS 2026 completo, posicionamento e como usar como argumento de venda.",
       "2. RANKING ABRAS INCORPORADO: Os 3 maiores do interior SP (Savegnago, Pague Menos, Tauste) estão no pipeline ativo. Usar isso como carta na manga.",
       "3. FOCO REDEFINIDO: Fechamento sobre prospecção. Temos leads quentes suficientes para 3-5 contratos — o gargalo é follow-up humano, não descoberta.",
-            "4. SITE ATUALIZADO: Savegnago (#1 interior SP, R$7,98bi) adicionado como prova social no site em 3 pontos: números, cards de vantagens e depoimentos. Antes só existia na persona.md.",
-            "5. SONDA SUP. ADICIONADO À FILA: Sonda (R$6,12bi, 22ª do Brasil) não estava em nenhuma lista. Adicionado com MX válido. +2 outras empresas (Aleatory, Cacique)."
-          ],
+      "4. SITE ATUALIZADO: Savegnago (#1 interior SP, R$7,98bi) adicionado como prova social no site em 3 pontos: números, cards de vantagens e depoimentos. Antes só existia na persona.md.",
+      "5. SONDA SUP. ADICIONADO À FILA: Sonda (R$6,12bi, 22ª do Brasil) não estava em nenhuma lista. Adicionado com MX válido. +2 outras empresas (Aleatory, Cacique)."
+    ],
     "pendente_humano_critico": [
       "🔴 COBRAR: Queijos Itupeva (Rafael) — agendar coleta-teste. LEAD MAIS QUENTE.",
-            "🔴 COBRAR: Savegnago — WhatsApp (11) 96785-9631. #1 do interior SP, R$7,98bi. Tratar como PRIORIDADE MÁXIMA.",
-            "🔴 COBRAR: Brasfrigo (Salto/SP) — fechar contrato. Respondeu, é local.",
-            "🔴 NOVO: Sonda Supermercados (R$6,12bi, 22ª Brasil) — enviar apresentação citando Savegnago.",
-            "🔴 QUENTE: Tauste — ligar (15) 3324-4680. Respondeu pedindo contato.",
-            "🟡 ACOMPANHAR: Covabra — respondeu 22/09. Oferecer loja piloto.",
-            "🟡 ACOMPANHAR: Pague Menos (Josiane Marinho) — 2° maior do interior.",
-            "🟡 ACOMPANHAR: Dalben (gerente Luis) — insistir contato.",
-            "🟡 ACOMPANHAR: Muffato — ligar (43) 3371-1700.",
-            "🟡 ACOMPANHAR: Selmi — ticket #89532.",
+      "🔴 COBRAR: Savegnago — WhatsApp (11) 96785-9631. #1 do interior SP, R$7,98bi. Tratar como PRIORIDADE MÁXIMA.",
+      "🔴 COBRAR: Brasfrigo (Salto/SP) — fechar contrato. Respondeu, é local.",
+      "🔴 NOVO: Sonda Supermercados (R$6,12bi, 22ª Brasil) — enviar apresentação citando Savegnago.",
+      "🔴 QUENTE: Tauste — ligar (15) 3324-4680. Respondeu pedindo contato.",
+      "🟡 ACOMPANHAR: Covabra — respondeu 22/09. Oferecer loja piloto.",
+      "🟡 ACOMPANHAR: Pague Menos (Josiane Marinho) — 2° maior do interior.",
+      "🟡 ACOMPANHAR: Dalben (gerente Luis) — insistir contato.",
+      "🟡 ACOMPANHAR: Muffato — ligar (43) 3371-1700.",
+      "🟡 ACOMPANHAR: Selmi — ticket #89532.",
       "🟢 MONITORAR: Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Paulistão."
     ],
     "ciclo_2026_09_28_cron_45_prospector": {
@@ -159,5 +159,200 @@
       "respostas_humanas": "Tauste - direcionou para telefone (15) 3324-4680",
       "respostas_auto": "2 (Mars Brasil - ticket auto; Piracanjuba - ticket auto)"
     }
-  }
-}
+  },
+  "ciclo_2026_09_29_cron_48_atendente": {
+    "timestamp": "2026-09-29 20:23 (Atendente IA - cron #48 - ciclo noturno)",
+    "acoes": [
+      "✅ sync_formspree.py — 0 notificacoes novas (73 bounces em cache)",
+      "✅ corrigir_emails.py — 0 bounces processados (ja tentados anteriormente)",
+      "✅ watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequencia processada",
+      "✅ check-replies — 1 resposta: Sonda Supermercados (SAC)",
+      "✅ reply para Sonda — agradecido contato, pedido direcionamento ao comercial",
+      "📭 Nova lead em potencial: Sonda Supermercados (R$6,12bi, 22ª Brasil) — respondeu via SAC direcionando para Escritorio Central (11) 2145-6200"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 270,
+      "ativos_watchdog": 200,
+      "bounce_cache_json": 73,
+      "watchdog": "exit 0 — saudavel",
+      "respostas_reais": 1,
+      "respostas_humanas": "Sonda Supermercados — SAC direcionou para telefone do Escritorio Central (11) 2145-6200",
+      "respostas_auto": 0
+    }
+  },
+  "ciclo_2026_09_29_cron_47_prospector": {
+    "timestamp": "2026-09-29 20:00 (Prospector - cron #47)",
+    "acoes": [
+      "✅ Diagnostico inicial: 8 pendentes (<10) — necessidade de reposicao",
+      "✅ Descoberta: 2 novas empresas adicionadas a fila_prospeccao_extra.json",
+      "  ⭐ Alvoar Lácteos (sac@alvoarlacteos.com.br) — laticinios gigante (Betania, Embare, Camponesa) - NICHO PRIORITARIO vencidos >40% gordura",
+      "  ⭐ Fort Alimentos (vendas@fortalimentossorocaba.com.br) — distribuidora de frios e laticinios em Sorocaba - NICHO PRIORITARIO",
+      "✅ enviar_lote.py --max 15: 5 emails enviados, 5 pulados (sem MX)",
+      "✅ ecossistema.json atualizado com numeros pos-envio"
+    ],
+    "diagnostico": {
+      "fila_total_empresas": 311,
+      "fila_contatados": 253,
+      "fila_bounce": 54,
+      "fila_pendentes": 5,
+      "fila_pendentes_validas": "0 com MX valido (5: 2x Nacional Inn Jundiai, Biazoto, Madero, Lactalis — todos sem MX)",
+      "enviados_lote": 5,
+      "pulados_sem_mx": 5,
+      "novos_contatados": "Sonda Supermercados (R$6,12bi), Aleatory Alimentos, Cacique Alimentos, Alvoar Lácteos, Fort Alimentos",
+      "fila_precisa_reposicao": true
+    }
+  },
+  "ciclo_2026_09_30_cron_50_atendente_matinal": {
+    "timestamp": "2026-09-30 08:31 (Atendente IA - cron #50 - ciclo matinal)",
+    "acoes": [
+      "✅ sync_formspree.py — 0 notificacoes novas (73 bounces em cache)",
+      "✅ corrigir_emails.py — 0 bounces processados (ja tentados anteriormente)",
+      "✅ watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 270 leads, 199 ativos, 73 bounces",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequencia processada",
+      "✅ check-replies — 1 resposta: Tauste (SAC direcionou call comercial)",
+      "✅ reply para Tauste — agradecido contato, confirmado que ligaremos (15) 3324-4680. WhatsApp deixado como canal alternativo"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 270,
+      "ativos_watchdog": 199,
+      "bounce_cache_json": 73,
+      "watchdog": "exit 0 — saudavel",
+      "respostas_reais": 1,
+      "respostas_humanas": "Tauste (Supermercados Tauste S/A — ID 213) — SAC direcionou para comercial (15) 3324-4680. Respondido agradecendo e confirmando contato telefonico.",
+      "respostas_auto": 0
+    }
+  },
+  "ciclo_2026_09_30_cron_52_prospector": {
+    "timestamp": "2026-09-30 ~20:00 (Prospector - cron #52)",
+    "acoes": [
+      "✅ Diagnostico inicial: 5 pendentes (<10) — necessidade de reposicao, sem buscas web produtivas (fila ja extensa com 309 empresas)",
+      "✅ Descoberta: 1 nova empresa adicionada a fila_prospeccao_extra.json",
+      "  ⭐ Oil Company (oilcompany@oilcompany.com.br) — comercializacao de oleos vegetais e gorduras, SP - estoque de oleos vencidos; MX Outlook valido",
+      "✅ enviar_lote.py --max 15: 1 email enviado, 5 pulados (sem MX)",
+      "✅ ecossistema.json atualizado com numeros pos-envio"
+    ],
+    "diagnostico": {
+      "fila_total_empresas": 310,
+      "fila_contatados": 254,
+      "fila_bounce": 55,
+      "fila_pendentes": 5,
+      "fila_pendentes_validas": "0 com MX valido (5: 2x Nacional Inn Jundiai, Biazoto, Madero, Lactalis — todos sem MX)",
+      "enviados_lote": 1,
+      "pulados_sem_mx": 5,
+      "novos_contatados": "Oil Company (oleos vegetais e gorduras)",
+      "fila_precisa_reposicao": true,
+      "observacao": "Fila de prospeccao atingiu 310 empresas com cobertura quase completa dos nichos na regiao. 5 pendentes restantes sao todos sem MX valido. Sugere-se limpeza dos 5 pendentes invalidos (remover ou corrigir emails) para destravar contagem."
+    }
+  },
+  "ciclo_2026_09_30_cron_51_atendente_matinal": {
+    "timestamp": "2026-09-30 10:05 (Atendente IA - cron #51 - ciclo matinal)",
+    "acoes": [
+      "sync_formspree.py — 0 notificacoes novas (73 bounces em cache)",
+      "corrigir_emails.py — 0 bounces processados (ja tentados anteriormente)",
+      "watchdog.py — exit 0: sistema saudavel. 271 leads, 200 ativos, 73 bounces",
+      "prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "send_sequence — sequencia processada",
+      "check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 271,
+      "ativos_watchdog": 200,
+      "bounce_cache_json": 73,
+      "watchdog": "exit 0 — saudavel",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+      "respostas_auto": 0
+    }
+  },
+  "ciclo_2026_09_30_cron_53_atendente": {
+      "timestamp": "2026-09-30 11:01 (Atendente IA - cron #53 - ciclo matinal)",
+      "acoes": [
+        "sync_formspree.py - 0 notificacoes novas (73 bounces em cache)",
+        "corrigir_emails.py - 0 bounces processados (ja tentados anteriormente)",
+        "watchdog.py - exit 0: sistema saudavel. 271 leads, 200 ativos, 73 bounces",
+        "prospecao_followup.py - 0 follow-ups processados (nada pendente)",
+        "send_sequence - sequencia processada",
+        "check-replies - 0 respostas pendentes (replies_pending.json vazio)"
+      ],
+      "diagnostico": {
+        "total_leads_watchdog": 271,
+        "ativos_watchdog": 200,
+        "bounce_cache_json": 73,
+        "watchdog": "exit 0 - saudavel",
+        "respostas_reais": 0,
+        "respostas_humanas": "Nenhuma - replies_pending.json vazio",
+        "respostas_auto": 0
+      }
+    },
+    "ciclo_2026_09_30_cron_54_atendente_tarde": {
+          "timestamp": "2026-09-30 12:02 (Atendente IA - cron #54 - ciclo vespertino)",
+          "acoes": [
+            "✅ sync_formspree.py — 73 bounces em cache, 0 notificações novas",
+            "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+            "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados",
+            "   271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+            "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+            "✅ send_sequence — sequência processada",
+            "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+          ],
+          "diagnostico": {
+            "total_leads_watchdog": 271,
+            "ativos_watchdog": 200,
+            "bounce_cache_json": 73,
+            "watchdog": "exit 0 — saudável",
+            "respostas_reais": 0,
+            "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+            "respostas_auto": 0
+          }
+        },
+        "ciclo_2026_09_30_cron_55_atendente_vespertino": {
+                  "timestamp": "2026-09-30 13:33 (Atendente IA - cron #55 - ciclo vespertino)",
+                  "acoes": [
+                    "✅ sync_formspree.py — 73 bounces em cache, 0 notificações novas (timeout inicial na 1ª tentativa, ok na 2ª)",
+                    "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+                    "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados",
+                    "   271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+                    "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+                    "✅ send_sequence — sequência processada",
+                    "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+                  ],
+                  "diagnostico": {
+                    "total_leads_watchdog": 271,
+                    "ativos_watchdog": 200,
+                    "bounce_cache_json": 73,
+                    "watchdog": "exit 0 — saudável",
+                    "respostas_reais": 0,
+                    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+                    "respostas_auto": 0
+                  }
+                },
+                "ciclo_2026_09_30_cron_57_melhorador_continuo": {
+                    "timestamp": "2026-09-30 14:07 (Melhorador Contínuo - cron #57)",
+                    "diagnostico": {
+                      "watchdog": "exit 0 — saudável",
+                      "total_leads_watchdog": 271,
+                      "ativos_watchdog": 200,
+                      "bounce_cache_json": 73,
+                      "fila_total_empresas": 318,
+                      "fila_contatados": 254,
+                      "fila_bounce": 55,
+                      "fila_pendentes": "5 sem MX — precisa limpeza manual",
+                      "fila_pendentes_validas": "0 com MX (5 inválidos: 2x Nacional Inn Jundiai, Biazoto, Madero, Lactalis)"
+                    },
+                    "problema_critico": "FILA CONGELADA — 5 pendentes inválidos bloqueiam reposição. +7 empresas adicionadas com MX válido para reabastecer quando pendentes forem limpos.",
+                    "acoes": [
+                      "✅ +7 NOVAS EMPRESAS adicionadas à fila_prospeccao_extra.json: Roldão Atacadista (falecomric@roldao.com.br — Google MX), São Roque Supermercados (sac@smsr.com.br — custom MX), Nobre Supermercados (sac@nobrehipermercado.com.br — Hostinger MX), Supermercados São Vicente (atendimento@svicente.com.br — Outlook MX), Grupo Muffato/Max Atacadista (sac@supermuffato.com.br e diretoria@muffato.com.br — ambos Outlook MX)",
+                      "✅ SITE: Seção 'Top 3 do interior SP no pipeline' adicionada ao index.html — 1º Savegnago (R$7,98bi), 2º Pague Menos (R$4,33bi), 3º Tauste. Callout do nicho supermercados como o que mais converte.",
+                      "✅ ecossistema.json e insights.md atualizados"
+                    ],
+                    "insights_novos": [
+                      "FILA PRECISA DE LIMPEZA MANUAL: 5 pendentes sem MX válido (Nacional Inn Jundiai x2, Biazoto, Madero, Lactalis) precisam ser removidos ou ter emails corrigidos para destravar a contagem do sistema.",
+                      "ROLDÃO ATACADISTA É OPORTUNIDADE: Google MX (falecomric@roldao.com.br) é canal de ouvidoria/comercial — mesmo padrão de Savegnago, Covabra e Tauste que responderam. Rede com 30+ lojas em SP incluindo Campinas, Jundiaí e Sorocaba.",
+                      "MUFFATO/MAX ATACADISTA EM CAMPINAS: Grupo Muffato (R$ ~4 bi) tem loja Max Atacadista em Campinas — pode ser abordado como 'rede do PR com operação em SP' similar ao que fizemos com Sonda.",
+                      "SÃO ROQUE SUPERMERCADOS FICA PERTO DE SALTO: Rede em São Roque (sac@smsr.com.br) está a 15 min de Salto — coleta logística ultra-simples, ideal para piloto de contrato local."
+                    ]
+                  }
+                }
