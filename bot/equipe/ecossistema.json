@@ -1,37 +1,110 @@
 {
-  "atualizado_em": "2026-09-30T16:32:00-03:00",
-  "atividade_tick_13h02_30_09": {
-    "ciclo": "cron_tick_job_30_09_13h02",
+  "atualizado_em": "2026-10-01T12:02:00-03:00",
+  "atividade_tick_01_10_10h02": {
+    "ciclo": "cron_tick_job_01_10_10h02",
     "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
     "emails_enviados": 0,
     "bounces_novos": 0,
-    "resultado": "Sistema saudável — 6º ciclo do dia. 0 follow-ups atrasados, fila zerada, 0 respostas pendentes.",
-    "pipeline": "271 leads totais (191 novo, 18 respondido, 9 sequencia, 53 bounce CSV)"
+    "resultado": "Sistema saudavel — 1o ciclo do dia 01/10. 0 follow-ups atrasados, 0 respostas pendentes.",
+    "pipeline": "274 leads totais (193 novo, 18 respondido, 9 sequencia, 54 bounce CSV)"
   },
-  "atividade_tick_16h32_30_09": {
-    "ciclo": "cron_tick_job_30_09_16h32",
-    "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
-    "emails_enviados": 0,
-    "bounces_novos": 0,
-    "resultado": "Sistema saudável — 7º ciclo do dia. 0 follow-ups atrasados, fila zerada, 0 respostas pendentes.",
-    "pipeline": "271 leads totais (191 novo, 18 respondido, 9 sequencia, 53 bounce CSV)"
-  },
-  "atividade_tick_16h32_30_09_detalhado": {
-    "sync_formspree": "OK — 0 novas notificacoes (73 bounces em cache)",
+  "atividade_tick_01_10_10h02_detalhado": {
+    "sync_formspree": "OK (retentativa) — 74 bounces em cache, 0 notificacoes novas",
     "corrigir_emails": "OK — 0 processados (ja tentados)",
-    "watchdog": "EXIT 0 — saudavel. 271 leads, 200 ativos, 73 bounces cache, SMTP OK, IMAP OK",
+    "watchdog": "EXIT 0 — saudavel. 274 leads, 202 ativos, 74 bounces cache, SMTP OK, IMAP OK",
     "prospecao_followup": "OK — 0 follow-ups atrasados",
     "send_sequence": "OK — sequencia processada",
     "check_replies": "OK — 0 respostas pendentes (replies_pending.json vazio)",
     "respostas_enviadas": "0 — nenhuma reply para atender neste ciclo",
     "relatorio_esg": "nenhum pedido neste ciclo",
-    "pipeline_atual": "271 leads / 191 novo / 18 respondido / 9 sequencia / 53 bounce CSV / 73 bounces cache / 0 encerrado",
+    "pipeline_atual": "274 leads / 193 novo / 18 respondido / 9 sequencia / 54 bounce CSV / 74 bounces cache / 0 encerrado",
     "destaques_tick": [
-      "7o ciclo do dia sem incidentes — sistema operacional estavel",
-      "18 leads respondidos acumulados — Sonda (R$6,12bi) e Tauste (3o maior interior SP) sao os destaques",
-      "Nenhum lead novo respondeu desde 10h31 — silencio comercial se mantem",
-      "Watchdog saudavel em todos os 7 ciclos de hoje"
+      "1o ciclo de 01/10 — sistema estavel apos correcao do sync_formspree (2 tentativas, IMAP transiente)",
+      "274 leads (+3 desde 30/09) — Roldao, Nobre, Grupo Muffato adicionados",
+      "18 leads respondidos — Sonda (R$6,12bi) e Tauste (3o maior interior SP) sao os destaques",
+      "Nenhum lead novo respondeu desde 30/09 — silencio comercial",
+      "Watchdog saudavel"
     ],
-    "observacao": "Pipeline estabilizado em 271 leads. Sistema operando sem problemas no 7o ciclo. Nenhuma acao humana necessaria. Leads quentes: Sonda, Tauste, Savegnago, Pague Menos, Covabra, Betins. Tarde tranquila sem novidades."
-  }
+    "observacao": "Pipeline em 274 leads. Sistema operacional estavel. Sync IMAP precisou de retentativa (transiente Gmail). Nenhuma reply humana pendente. Leads quentes inalterados: Savegnago, Pague Menos, Sonda, Tauste, Covabra, Betins."
+  },
+  "atividade_tick_01_10_11h03": {
+    "ciclo": "cron_tick_job_01_10_11h03",
+    "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
+    "emails_enviados": 0,
+    "bounces_novos": 0,
+    "resultado": "Sistema saudavel — 11h03. 0 follow-ups atrasados, 0 respostas pendentes. Sem mudancas desde 10h31.",
+    "pipeline": "274 leads totais (193 novo, 18 respondido, 9 sequencia, 54 bounce CSV)"
+  },
+  "atividade_tick_01_10_11h03_detalhado": {
+    "sync_formspree": "OK (2 tentativas — Gmail transiente na 1a, OK na 2a) — 74 bounces em cache, 0 notificacoes novas do Formspree",
+    "corrigir_emails": "OK — 0 bounces processados (todos ja tentados anteriormente — 55+ registros em correcoes_emails.json)",
+    "watchdog": "EXIT 0 — saudavel. 274 leads, 202 ativos, 74 bounces cache. SMTP OK, IMAP OK. Sem follow-ups atrasados.",
+    "prospecao_followup": "OK — 0 follow-ups atrasados",
+    "send_sequence": "OK — sequencia processada",
+    "check_replies": "OK — 0 respostas pendentes (replies_pending.json = [])",
+    "respostas_enviadas": "0 — nenhuma reply para atender neste ciclo",
+    "relatorio_esg": "nenhum pedido neste ciclo",
+    "pipeline_atual": "274 leads / 193 novo / 18 respondido / 9 sequencia / 54 bounce CSV / 74 bounces cache / 0 encerrado",
+    "destaques_tick": [
+      "Ciclo 11h03 — mesmo estado do ciclo 10h31. Sistema estavel.",
+      "274 leads mantidos — sem novas adicoes, sem novos bounces, sem novas respostas.",
+      "IMAP apresentou transiente Gmail na 1a tentativa do sync_formspree — retentativa bem-sucedida.",
+      "Silencio comercial mantido — ultima resposta real foi Tauste (30/09).",
+      "Watchdog saudevel — nenhuma intervencao necessaria."
+    ],
+    "observacao": "Pipeline estavel em 274 leads. Sistema operacional nominal. O silencio comercial persiste, sem leads novos no Formspree nem respostas desde Tauste (30/09). Leads quentes inalterados: Savegnago, Pague Menos, Sonda, Tauste, Covabra, Brasfrigo, Queijos Itupeva. A acao decisiva continua sendo humana (WhatsApp/telefone) para fechar contratos."
+  },
+  "atividade_tick_01_10_12h02": {
+    "ciclo": "cron_tick_job_01_10_12h02",
+    "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
+    "emails_enviados": 0,
+    "bounces_novos": 0,
+    "resultado": "Sistema saudavel — 12h02. 0 follow-ups atrasados, 0 respostas pendentes. Sem mudancas desde 11h32.",
+    "pipeline": "274 leads totais (193 novo, 18 respondido, 9 sequencia, 54 bounce CSV)"
+  },
+  "atividade_tick_01_10_12h02_detalhado": {
+      "sync_formspree": "OK — 74 bounces em cache, 0 notificacoes novas do Formspree",
+      "corrigir_emails": "OK — 0 bounces processados (todos ja tentados anteriormente)",
+      "watchdog": "EXIT 0 — saudavel. 274 leads, 202 ativos, 74 bounces cache. SMTP OK, IMAP OK. Sem follow-ups atrasados.",
+      "prospecao_followup": "OK — 0 follow-ups atrasados",
+      "send_sequence": "OK — sequencia processada",
+      "check_replies": "OK — 0 respostas pendentes (replies_pending.json = [])",
+      "respostas_enviadas": "0 — nenhuma reply para atender neste ciclo",
+      "relatorio_esg": "nenhum pedido neste ciclo",
+      "pipeline_atual": "274 leads / 193 novo / 18 respondido / 9 sequencia / 54 bounce CSV / 74 bounces cache / 0 encerrado",
+      "destaques_tick": [
+        "Ciclo 12h02 — mesmo estado do ciclo 11h32. Sistema estavel.",
+        "274 leads mantidos — sem novas adicoes, sem novos bounces, sem novas respostas.",
+        "Silencio comercial mantido — ultima resposta real foi Tauste (30/09).",
+        "Watchdog saudavel — nenhuma intervencao necessaria."
+      ],
+      "observacao": "Pipeline estavel em 274 leads. Sistema operacional nominal. Silencio comercial persiste. Nenhuma reply pendente. Leads quentes inalterados: Savegnago, Pague Menos, Sonda, Tauste, Covabra, Brasfrigo, Queijos Itupeva."
+    },
+    "atividade_tick_01_10_13h33": {
+      "ciclo": "cron_tick_job_01_10_13h33",
+      "acao": "sync_formspree + corrigir_emails + watchdog + prospecao_followup + send_sequence + check-replies",
+      "emails_enviados": 0,
+      "bounces_novos": 0,
+      "resultado": "Sistema saudavel — 13h33. 0 follow-ups atrasados, 0 respostas pendentes. Sem mudancas desde 12h02.",
+      "pipeline": "274 leads totais (193 novo, 18 respondido, 9 sequencia, 54 bounce CSV)"
+    },
+    "atividade_tick_01_10_13h33_detalhado": {
+      "sync_formspree": "OK — 74 bounces em cache, 0 notificacoes novas do Formspree",
+      "corrigir_emails": "OK — 0 bounces processados (ja tentados anteriormente)",
+      "watchdog": "EXIT 0 — saudavel. 274 leads, 202 ativos, 74 bounces cache. SMTP OK, IMAP OK. Sem follow-ups atrasados.",
+      "prospecao_followup": "OK — 0 follow-ups atrasados",
+      "send_sequence": "OK — sequencia processada",
+      "check_replies": "OK — 0 respostas pendentes (replies_pending.json = [])",
+      "respostas_enviadas": "0 — nenhuma reply para atender neste ciclo",
+      "relatorio_esg": "nenhum pedido neste ciclo",
+      "pipeline_atual": "274 leads / 193 novo / 18 respondido / 9 sequencia / 54 bounce CSV / 74 bounces cache / 0 encerrado",
+      "destaques_tick": [
+        "Ciclo 13h33 — mesmo estado do ciclo 12h02. Sistema estavel.",
+        "274 leads mantidos — sem novas adicoes, sem novos bounces, sem novas respostas.",
+        "Silencio comercial persiste — ultima resposta real foi Tauste (30/09).",
+        "Watchdog saudavel — nenhuma intervencao necessaria.",
+        "2o ciclo da tarde de 01/10 — pipeline inalterado."
+      ],
+      "observacao": "Pipeline estavel em 274 leads. Sistema operacional nominal. Silencio comercial persiste — sem novas respostas desde Tauste (30/09). Nenhuma reply pendente. Leads quentes inalterados: Savegnago, Pague Menos, Sonda, Tauste, Covabra, Brasfrigo, Queijos Itupeva."
+    }
 }

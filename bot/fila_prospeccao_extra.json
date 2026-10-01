@@ -1337,15 +1337,6 @@
     "segmento": "industria de alimentos em po (tecnologia dryblend) - usa oleos e gorduras vegetais; Indaiatuba/SP; MX sslbr valido 24/09"
   },
   {
-    "nome": "Madero Salto",
-    "empresa": "Madero Steak House (Unidade Salto)",
-    "email": "salto@madero.com.br",
-    "cidade": "Salto/SP",
-    "nicho": "Restaurante steak house",
-    "fonte": "melhoria_continua_20260925",
-    "segmento": "Restaurante steak house (fritura alto volume)"
-  },
-  {
     "nome": "Ragazzo Salto",
     "empresa": "Ragazzo Fast Food (Unidade Salto)",
     "email": "sac@ragazzo.com.br",
@@ -1467,14 +1458,6 @@
     "segmento": "laticinios (manteiga, queijos, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
-    "nome": "Parmalat (Lactalis Brasil)",
-    "empresa": "Lactalis do Brasil (Parmalat, Itambé, Batavo)",
-    "email": "sac@parmalat.com.br",
-    "cidade": "SP (fabrica em SP - leite UHT, creme de leite, manteiga)",
-    "segmento": "laticinios (leite UHT, creme de leite, manteiga, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
-    "nome": "Bom Gosto Alimentos",
     "empresa": "Bom Gosto Alimentos Ltda",
     "email": "contato@bongosto.com.br",
     "cidade": "Belo Horizonte/MG (e-commerce nacional de queijos e laticinios)",
@@ -1509,13 +1492,6 @@
     "segmento": "supermercados (rede, padaria/rotisserie/acougue) - MX Outlook valido 26/09"
   },
   {
-    "nome": "Hotel Nacional Inn Jundiai",
-    "empresa": "Nacional Inn Jundiai",
-    "email": "reservas@nacionalinnjundiai.com.br",
-    "cidade": "Jundiai/SP",
-    "segmento": "hotel (cozinha industrial propria, cafe/almoço/jantar) - fritura alto volume"
-  },
-  {
     "nome": "Dan Inn Sorocaba",
     "empresa": "Hotel Dan Inn Sorocaba",
     "email": "reservas@daninnsorocaba.com.br",
@@ -1542,54 +1518,82 @@
     "email": "vendas@fortalimentossorocaba.com.br",
     "cidade": "Sorocaba/SP",
     "segmento": "distribuidora de frios e laticínios (queijos, mortadela, requeijão) - NICHO PRIORITARIO (estoque de laticínios vencidos >40% gordura); MX SpamExperts valido 29/09"
-      },
-      {
-        "nome": "Oil Company",
-        "empresa": "Oil Company Comercio de Oleos Vegetais Ltda",
-                "email": "oilcompany@oilcompany.com.br",
-                "cidade": "Sao Paulo/SP (escritorio; atuacao nacional)",
-                "segmento": "comercializacao de oleos vegetais e gorduras (oleos de soja, canola, girassol, palma, gordura vegetal) - pode ter estoque de oleos vencidos; MX Outlook valido 30/09"
-              },
-              {
-                "nome": "Roldão Atacadista",
-                "empresa": "Roldão Atacadista S/A",
-                "email": "falecomric@roldao.com.br",
-                "cidade": "Grande SP/Interior (30+ lojas em SP, lojas em Campinas, Jundiaí, Sorocaba)",
-                "segmento": "atacadista (fritura alto volume, padaria, açougue, rotisserie) - canal ouvidoria/comercial direto; MX Google valido 30/09"
-              },
-              {
-                "nome": "São Roque Supermercados",
-                "empresa": "São Roque Supermercados Ltda",
-                "email": "sac@smsr.com.br",
-                "cidade": "São Roque/SP (proximo a Salto/Itu)",
-                "segmento": "supermercados (rede, fritura, padaria, açougue) - MX custom valido 30/09"
-              },
-              {
-                "nome": "Nobre Supermercados",
-                "empresa": "Nobre Supermercados Ltda (Hiper Nobre Atacado)",
-                "email": "sac@nobrehipermercado.com.br",
-                "cidade": "Indaiatuba/Campinas/SP",
-                "segmento": "supermercados (rede, hipermercado, padaria/rotisserie/açougue, fritura alto volume) - MX Hostinger valido 30/09"
-              },
-              {
-                "nome": "Supermercados São Vicente",
-                "empresa": "Grupo São Vicente (Supermercados São Vicente / Arena Atacadista)",
-                "email": "atendimento@svicente.com.br",
-                "cidade": "Piracicaba/SP (lojas em Piracicaba, Campinas, Hortolândia)",
-                "segmento": "supermercados (rede em expansão, padaria/rotisserie/açougue, fritura alto volume) - MX Outlook valido 30/09"
-              },
-              {
-                "nome": "Grupo Muffato / Max Atacadista",
-                "empresa": "Grupo Muffato (Max Atacadista)",
-                "email": "sac@supermuffato.com.br",
-                "cidade": "Londrina/PR (loja Max Atacadista em Campinas/SP)",
-                "segmento": "supermercados (rede gigante do PR, Max Atacadista em Campinas, padaria/rotisserie, fritura alto volume) - MX Outlook valido 30/09"
-              },
-              {
-                "nome": "Grupo Muffato - Diretoria",
-                "empresa": "Grupo Muffato (Diretoria)",
-                "email": "diretoria@muffato.com.br",
-                "cidade": "Londrina/PR",
-                "segmento": "supermercados (contato diretoria, canal comercial para contratos grandes) - MX Outlook valido 30/09"
-              }
-            ]
+  },
+  {
+    "nome": "Oil Company",
+    "empresa": "Oil Company Comercio de Oleos Vegetais Ltda",
+    "email": "oilcompany@oilcompany.com.br",
+    "cidade": "Sao Paulo/SP (escritorio; atuacao nacional)",
+    "segmento": "comercializacao de oleos vegetais e gorduras (oleos de soja, canola, girassol, palma, gordura vegetal) - pode ter estoque de oleos vencidos; MX Outlook valido 30/09"
+  },
+  {
+    "nome": "Roldão Atacadista",
+    "empresa": "Roldão Atacadista S/A",
+    "email": "falecomric@roldao.com.br",
+    "cidade": "Grande SP/Interior (30+ lojas em SP, lojas em Campinas, Jundiaí, Sorocaba)",
+    "segmento": "atacadista (fritura alto volume, padaria, açougue, rotisserie) - canal ouvidoria/comercial direto; MX Google valido 30/09"
+  },
+  {
+    "nome": "São Roque Supermercados",
+    "empresa": "São Roque Supermercados Ltda",
+    "email": "sac@smsr.com.br",
+    "cidade": "São Roque/SP (proximo a Salto/Itu)",
+    "segmento": "supermercados (rede, fritura, padaria, açougue) - MX custom valido 30/09"
+  },
+  {
+    "nome": "Nobre Supermercados",
+    "empresa": "Nobre Supermercados Ltda (Hiper Nobre Atacado)",
+    "email": "sac@nobrehipermercado.com.br",
+    "cidade": "Indaiatuba/Campinas/SP",
+    "segmento": "supermercados (rede, hipermercado, padaria/rotisserie/açougue, fritura alto volume) - MX Hostinger valido 30/09"
+  },
+  {
+    "nome": "Supermercados São Vicente",
+    "empresa": "Grupo São Vicente (Supermercados São Vicente / Arena Atacadista)",
+    "email": "atendimento@svicente.com.br",
+    "cidade": "Piracicaba/SP (lojas em Piracicaba, Campinas, Hortolândia)",
+    "segmento": "supermercados (rede em expansão, padaria/rotisserie/açougue, fritura alto volume) - MX Outlook valido 30/09"
+  },
+  {
+    "nome": "Grupo Muffato / Max Atacadista",
+    "empresa": "Grupo Muffato (Max Atacadista)",
+    "email": "sac@supermuffato.com.br",
+    "cidade": "Londrina/PR (loja Max Atacadista em Campinas/SP)",
+    "segmento": "supermercados (rede gigante do PR, Max Atacadista em Campinas, padaria/rotisserie, fritura alto volume) - MX Outlook valido 30/09"
+  },
+  {
+    "nome": "Grupo Muffato - Diretoria",
+    "empresa": "Grupo Muffato (Diretoria)",
+    "email": "diretoria@muffato.com.br",
+    "cidade": "Londrina/PR",
+    "segmento": "supermercados (contato diretoria, canal comercial para contratos grandes) - MX Outlook valido 30/09"
+  },
+  {
+    "nome": "Assai Atacadista Campinas",
+    "empresa": "Assai Atacadista S.A. (lojas em Campinas, Jundiai e regiao)",
+    "email": "sac@assai.com.br",
+    "cidade": "Campinas/SP (rede nacional, atacarejo com padaria/rotisserie/acougue em todas as lojas)",
+    "segmento": "Atacarejo (rede grande, 200+ lojas no Brasil, fritura alto volume em cada loja) - MX Outlook valido 01/10"
+  },
+  {
+    "nome": "Bauducco",
+    "empresa": "Bauducco Industria de Alimentos Ltda (Jundiai)",
+    "email": "sac@bauducco.com.br",
+    "cidade": "Jundiai/SP (fabrica em Jundiai - panettones, pão de mel, biscoitos)",
+    "segmento": "Industria de panificacao e confeitaria (usa gorduras vegetais e margarinas em alta escala) - NICHO PRIORITARIO (vencidos >40% gordura) - MX Outlook valido 01/10"
+  },
+  {
+    "nome": "Grupo Bimbo Brasil",
+    "empresa": "Bimbo Brasil (Plus Ultra, El Milagro)",
+    "email": "faleconosco@gb.com.br",
+    "cidade": "SP (fabrica em Jundiai/Votorantim - paes, bolos, tortas congeladas)",
+    "segmento": "Industria de panificacao (paes, bolos, tortas congeladas - usa oleos, gorduras e margarinas vegetais em escala industrial) - NICHO PRIORITARIO (vencidos >40% gordura) - MX skymail valido 01/10"
+  },
+  {
+    "nome": "Atacadao Carrefour",
+    "empresa": "Atacadao S.A. (Grupo Carrefour - lojas em Campinas, Jundiai, Sorocaba)",
+    "email": "sac@atacadao.com.br",
+    "cidade": "Campinas/SP (rede de atacarejo, lojas na regiao, padaria/rotisserie/acougue em todas)",
+    "segmento": "Atacarejo (rede Carrefour, fritura alto volume em todas as lojas, acougue e rotisserie) - MX Mimecast valido 01/10"
+  }
+]

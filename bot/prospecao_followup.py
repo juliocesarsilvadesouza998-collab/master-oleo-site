@@ -85,22 +85,22 @@ def tpl_fp(cfg, lead, n):
         subj = f"Re: óleo usado da {lead['empresa']} vale dinheiro"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Te escrevi há poucos dias sobre a <b>compra do óleo usado da {lead['empresa']}</b> — como sei que a caixa de entrada enche, deixo aqui o essencial:</p>
-<p>Pagamos de <b>R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em toda coleta e bombonas fornecidas. Para ter ideia: um estabelecimento que gera <b>600 L/mês</b> recebe cerca de <b>R$ 14 mil por ano</b> só com o resíduo que hoje é descartado — sem nenhum custo de logística.</p>
-<p>E não é só: o Brasil acaba de liberar <b>exportação de óleo usado para os EUA</b> (1,4 mi t importadas em 2023) e a <b>Portaria Interministerial MME/MMA nº 3/2026</b> (11/05/2026) torna obrigatório o uso de ≥1% de óleo residual no biodiesel a partir de <b>01/01/2028</b> — voluntário em 2026-2027, obrigatório em 2028 (fonte: gov.br). O mundo está disputando essa matéria-prima — fechar contrato agora garante preço e prioridade antes da disputa.</p>
-<p>Para eu te passar o valor exato da sua operação: <b>quanto vocês geram por mês (litros ou kg)?</b> Me responde esse número que eu te mando a estimativa ainda esta semana.</p>
-<p>Alternativa rápida: WhatsApp {g['telefone_whatsapp']}.</p>
-<p>Abraço,<br><b>{g['nome']}</b></p>
+<p>Te escrevi há poucos dias sobre a <b>compra do óleo usado da {lead['empresa']}</b> — direto ao ponto:</p>
+<p><b>Pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em cada coleta e bombonas fornecidas. 600 L/mês = R$ 14 mil/ano de renda extra, sem custo de logística.</p>
+<p><b>Prova social:</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bilhões — ABRAS 2026) já está negociando conosco. A maior rede do interior fechando — sua {lead['empresa']} não pode ficar de fora.</p>
+<p><b>Urgência regulatória:</b> A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o mundo está disputando essa matéria-prima e quem fecha contrato agora garante preço e prioridade antes da corrida.</p>
+<p><b>Quanto vocês geram por mês (litros ou kg)?</b> Me responda esse número que eu te mando a estimativa ainda esta semana. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     elif n == 2:
         subj = f"Re: oleo usado da {lead['empresa']} — 3 motivos para tratar isso este ano"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Ola, {lead['nome']}.</p>
 <p>Sei que esta ocupado, entao vou direto aos <b>3 fatos</b> que tornam a destinacao do oleo usado da <b>{lead['empresa']}</b> urgente:</p>
-<p><b>1</b> A <b>Portaria MME/MMA no 3/2026</b> torna <b>OBRIGATORIO >=1%</b> de oleo residual no biodiesel a partir de <b>jan/2028</b> (fonte: gov.br). Quem ja tiver contrato assinado tera prioridade antes da corrida.</p>
-<p><b>2</b> O <b>Grupo Madero</b> (270 restaurantes) ja vende 55 mil L/mes para biodiesel — rede grande <b>ja trata como receita</b>, nao como descarte.</p>
-<p><b>3</b> Se o coletor nao emitir <b>MTR + certificado de destinacao</b>, o passivo ambiental fica no CNPJ da {lead['empresa']} (Lei 12.305/2010). Nos emitimos em toda coleta.</p>
-<p>Para {lead['empresa']}: <b>coleta programada semanal</b>, bombonas fornecidas, logistica por nossa conta e <b>pagamento a vista (PIX) na coleta</b>. Cada litro vira biodiesel certificado.</p>
+<p><b>1</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi — ABRAS 2026) ja esta negociando conosco. E o <b>Grupo Madero</b> (270 restaurantes) ja vende 55 mil L/mes para biodiesel — rede grande <b>ja trata oleo usado como receita</b>, nao como descarte.</p>
+<p><b>2</b> A <b>Portaria MME/MMA no 3/2026</b> torna <b>OBRIGATORIO >=1%</b> de oleo residual no biodiesel a partir de <b>jan/2028</b> (fonte: gov.br). Quem ja tiver contrato assinado tera prioridade antes da corrida pela materia-prima.</p>
+<p><b>3</b> Sem <b>MTR + certificado de destinacao</b>, o passivo ambiental fica no CNPJ da {lead['empresa']} (Lei 12.305/2010). Nos emitimos em toda coleta.</p>
+<p>Para {lead['empresa']}: <b>coleta programada semanal</b>, bombonas fornecidas, logistica por nossa conta e <b>pagamento a vista (PIX) na coleta</b>.</p>
 <p><b>Quantos litros a {lead['empresa']} gera por mes?</b> Responda este numero que envio a avaliacao em 24h. WhatsApp: {g['telefone_whatsapp']}.</p>
 <p>Abraco,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""

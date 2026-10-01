@@ -1,23 +1,23 @@
 {
-  "atualizado_em": "2026-09-30T16:32:00-03:00",
-  "total_leads": 271,
-  "leads_ativos": 200,
-  "leads_bounce": 53,
+  "atualizado_em": "2026-10-01T10:31:00-03:00",
+  "total_leads": 274,
+  "leads_ativos": 202,
+  "leads_bounce": 54,
   "leads_respondido": 18,
   "leads_encerrado": 0,
   "status_detalhado": {
-    "bounce": 73,
-    "novo": 191,
+    "bounce": 74,
+    "novo": 193,
     "respondido": 18,
-    "sequencia": 0
+    "sequencia": 9
   },
   "top_segmentos": {},
   "top_cidades": {},
   "top_fontes": {
-    "prospeccao": 169,
-    "prospeccao-lote": 91
+    "prospeccao": 172,
+    "prospeccao-lote": 94
   },
-  "bounces_cache": 73,
+  "bounces_cache": 74,
   "respondidos_recentes": [
     {
       "empresa": "Betins Laticinios",

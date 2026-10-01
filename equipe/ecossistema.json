@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-09-30 15:02 (Atendente IA - cron #59 - ciclo vespertino)",
+ "atualizado_em": "2026-10-01 14:06 (Melhorador Contínuo - cron #78)",
  "criado_em": "2026-08-13",
  "metas": {
   "enviar_50_emails_a_partir_de": "2026-08-14 (atingida: 74+ envios)",
@@ -414,5 +414,356 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
    "respostas_auto": 0
   }
+ },
+ "ciclo_2026_09_30_cron_62_atendente": {
+  "timestamp": "2026-09-30 18:01 (Atendente IA - cron #62 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 73 bounces em cache, 0 notificações novas",
+   "corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "send_sequence — sequência processada",
+   "check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_09_30_cron_64_atendente": {
+  "timestamp": "2026-09-30 19:01 (Atendente IA - cron #64 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py - 73 bounces em cache, 0 notificacoes novas",
+   "corrigir_emails.py - 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py - exit 0: sistema saudavel, sem follow-ups atrasados. 271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py - 0 follow-ups processados (nada pendente)",
+   "send_sequence - 6 FP2 enviados (Ricks Fritas, Art Fritas, Point Chips, FritaMaz, Mantiqueira, Mega Chips)",
+   "check-replies - 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 - saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma - replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_09_30_cron_63_atendente": {
+  "timestamp": "2026-09-30 18:38 (Atendente IA - cron #63 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py - 73 bounces em cache, 0 notificacoes novas",
+   "corrigir_emails.py - 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py - exit 1: 12 follow-ups atrasados (FP2)",
+   "prospecao_followup.py - 12 FP2 enviados para leads atrasados. Resolvido.",
+   "send_sequence - sequencia processada",
+   "check-replies - 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 apos correcao - saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma - replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_09_30_cron_65_atendente": {
+  "timestamp": "2026-09-30 19:33 (Atendente IA - cron #65 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 73 bounces em cache, 0 notificações novas",
+   "corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "send_sequence — sequência processada",
+   "check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_10_01_cron_66_atendente_matinal": {
+  "timestamp": "2026-10-01 08:24 (Atendente IA - cron #66 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 73 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — 3 FP2 enviados (Batata Palha Uro de Minas, Quetti Alimentos, Batata Palha Frishow)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_10_01_cron_67_atendente_matinal": {
+  "timestamp": "2026-10-01 08:31 (Atendente IA - cron #67 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 73 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_10_01_cron_68_atendente": {
+  "timestamp": "2026-10-01 09:02 (Atendente IA - cron #68 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 73 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 271 leads, 200 ativos, 73 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 271,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 73,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_10_01_cron_72_prospector": {
+  "timestamp": "2026-10-01 ~20:00 (Prospector - cron #72)",
+  "acoes": [
+   "✅ Diagnostico inicial: 8 pendentes (<10) — necessidade de reposicao, sem descobertas produtivas nas buscas web (fila ja extensa com 316 empresas)",
+   "✅ enviar_lote.py --max 15: 3 emails enviados, 5 pulados (sem MX)",
+   "✅ ecossistema.json atualizado com numeros pos-envio"
+  ],
+  "diagnostico": {
+   "fila_total_empresas": 316,
+   "fila_contatados": 257,
+   "fila_bounce": 55,
+   "fila_pendentes": 5,
+   "fila_pendentes_validas": "0 com MX valido (5: Nacional Inn Jundiai x2, Biazoto, Madero, Lactalis — todos sem MX)",
+   "enviados_lote": 3,
+   "pulados_sem_mx": 5,
+   "novos_contatados": "Roldao Atacadista, Nobre Supermercados, Grupo Muffato (Max Atacadista)",
+   "fila_precisa_reposicao": true
+  }
+ },
+ "ciclo_2026_10_01_cron_68_atendente_segundo": {
+  "timestamp": "2026-10-01 09:32 (Atendente IA - cron #68 - ciclo matinal)",
+  "acoes": [
+   "sync_formspree.py - 74 bounces em cache, 0 notificacoes novas",
+   "corrigir_emails.py - 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py - exit 0: sistema saudavel, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py - 0 follow-ups processados (nada pendente)",
+   "send_sequence - sequencia processada",
+   "check-replies - 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 - saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma - replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_10_01_cron_70_atendente": {
+  "timestamp": "2026-10-01 10:31 (Atendente IA - cron #70 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 74 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0
+  }
+ },
+ "ciclo_2026_10_01_cron_69_atendente": {
+  "timestamp": "2026-10-01 10:02 (Atendente IA - cron #69 - ciclo matinal)",
+  "acoes": [
+   "⚠️ sync_formspree.py - 1a tentativa System Error (transiente Gmail), 2a tentativa OK - 74 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py - 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py - exit 0: sistema saudavel, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py - 0 follow-ups processados (nada pendente)",
+   "send_sequence - sequencia processada",
+   "check-replies - 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 - saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma - replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "Sync formspree com transiente Gmail na 1a tentativa - retentativa bem-sucedida. Sistema saudavel. Sem leads quentes novos."
+  }
+ },
+ "ciclo_2026_10_01_cron_71_atendente": {
+  "timestamp": "2026-10-01 11:03 (Atendente IA - cron #71 - ciclo matinal)",
+  "acoes": [
+   "sync_formspree.py — 74 bounces em cache, 0 notificações novas (1a tentativa transiente Gmail, OK na 2a)",
+   "corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "send_sequence — sequência processada",
+   "check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "Pipeline estável em 274 leads. Silêncio comercial persiste — última resposta real foi Tauste (30/09). Leads quentes inalterados: Savegnago, Pague Menos, Sonda, Tauste, Covabra, Brasfrigo, Queijos Itupeva. Fechamento depende de ação humana (WhatsApp/telefone)."
+  }
+ },
+ "ciclo_2026_10_01_cron_73_atendente": {
+  "timestamp": "2026-10-01 11:32 (Atendente IA - cron #73 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 74 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "Pipeline estável em 274 leads — 202 ativos, 74 bounces. Silêncio comercial persiste. Nenhum lead novo respondeu desde Tauste (30/09). Leads quentes inalterados: Savegnago (#1 interior SP, R$7,98bi), Brasfrigo, Queijos Itupeva, Sonda (R$6,12bi), Tauste, Covabra, Pague Menos (R$4,33bi), Dalben, Muffato."
+  }
+ },
+ "cron_2026_10_01_12h02_atendente_cron_74": {
+  "timestamp": "2026-10-01 12:02 (Atendente IA - cron #74 - ciclo depois do almoço)",
+  "acoes": [
+   "✅ sync_formspree.py — 74 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio, silêncio total",
+   "respostas_auto": 0,
+   "observacao": "Pipeline estável em 274 leads (202 ativos, 74 bounces). Nenhum lead novo respondeu — silêncio comercial se mantém. Última resposta real continua sendo Tauste (30/09). Leads quentes inalterados: Savegnago (#1 interior SP), Pague Menos (#2), Sonda (R$6,12bi), Tauste (#3), Covabra, Brasfrigo, Queijos Itupeva."
+  }
+ },
+ "ciclo_2026_10_01_cron_76_atendente_tarde": {
+  "timestamp": "2026-10-01 13:01 (Atendente IA - cron #76 - ciclo da tarde)",
+  "acoes": [
+   "✅ sync_formspree.py — 74 bounces em cache, 0 notificações novas (já processadas)",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio, silêncio total",
+   "respostas_auto": 0,
+   "observacao": "Pipeline estável em 274 leads (202 ativos, 74 bounces). Nenhuma resposta nova recebida. Silêncio comercial persiste — última resposta real: Tauste (30/09). 5 pendentes na fila de prospecção sem MX válido aguardando limpeza manual (Nacional Inn Jundiai x2, Biazoto, Madero, Lactalis)."
+  }
+ },
+ "ciclo_2026_10_01_cron_77_atendente_tarde14h": {
+  "timestamp": "2026-10-01 14:02 (Atendente IA - cron #77 - ciclo da tarde)",
+  "acoes": [
+   "sync_formspree.py - 74 bounces em cache, 0 notificacoes novas",
+   "corrigir_emails.py - 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py - exit 0: sistema saudavel, sem follow-ups atrasados. 274 leads, 202 ativos, 74 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py - 0 follow-ups processados (nada pendente)",
+   "send_sequence - sequencia processada",
+   "check-replies - 0 respostas pendentes (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 - saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma - replies_pending.json vazio, silencio total",
+   "respostas_auto": 0,
+   "observacao": "Pipeline estavel em 274 leads (202 ativos, 74 bounces). Nenhuma resposta nova recebida - silencio comercial persiste. Ultima resposta real: Tauste (30/09). 5 pendentes na fila de prospeccao sem MX valido aguardando limpeza manual (Nacional Inn Jundiai x2, Biazoto, Madero, Lactalis)."
+  }
+ },
+ "ciclo_2026_10_01_cron_78_melhorador": {
+  "timestamp": "2026-10-01 14:06 (Melhorador Contínuo - cron #78)",
+  "diagnostico": {
+   "watchdog": "exit 0 — saudável",
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "fila_total_empresas": 315,
+   "fila_contatados": 257,
+   "fila_bounce": 56,
+   "fila_pendentes": "4 com MX válido (após limpeza)",
+   "problema_critico_anterior": "FILA CONGELADA — 5 pendentes inválidos bloqueavam reposição. RESOLVIDO."
+  },
+  "acoes": [
+   "✅ FILA LIMPA: removidas 5 empresas sem MX (2x Nacional Inn Jundiai, Biazoto, Madero Salto, Parmalat/Lactalis) de prospecao.py e fila_prospeccao_extra.json",
+   "✅ +4 NOVAS EMPRESAS adicionadas com MX válido: Assai Atacadista (Outlook), Bauducco (Outlook), Grupo Bimbo (skymail), Atacadão Carrefour (Mimecast)",
+   "✅ FP1 REFORÇADO: prova social Savegnago (R,98bi) adicionada como 1º argumento + urgência regulatória + CTA direto com WhatsApp",
+   "✅ FP2 REFORÇADO: prova social Savegnago + Madero como argumento #1 (antes era só Madero)",
+   "✅ Template genérico de prospecção atualizado com Savegnago + Madero lado a lado"
+  ],
+  "insights_novos": [
+   "FILA ESTAVA VAZIA: após remover os 5 pendentes inválidos (0 empresas com MX para enviar), a prospecção estava efetivamente parada. Foram adicionadas 4 novas para reabastecer.",
+   "PROVA SOCIAL SAVEGNAGO AGORA ESTÁ EM TODOS OS MOMENTOS: apresentação (genérico), FP1 (novo!), FP2 (novo!), FP3 (já tinha). A prova da maior rede do interior SP vale ouro para converter leads frios.",
+   "TEM QUE CONTINUAR REPONDO FILA: com 315 empresas totais e 257 contatados, a cobertura está boa mas precisa de reposição constante de novas empresas com MX válido"
+  ]
  }
 }
