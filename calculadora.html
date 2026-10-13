@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Valor do Óleo Usado — Quanto Vale? | Master Óleo</title>
+<meta name="description" content="Calculadora gratuita: descubra quanto sua empresa pode receber pelo óleo de cozinha usado, gordura vegetal usada e resíduos vencidos com mais de 40% de gordura. Coleta em Salto/SP e região.">
+<meta property="og:title" content="Calculadora de Valor do Óleo Usado — Master Óleo">
+<meta property="og:description" content="Descubra em 30 segundos quanto sua empresa pode receber pelo óleo de cozinha usado. Simule seu volume e receba uma proposta personalizada.">
+<meta property="og:url" content="https://masteroleo.eco.br/calculadora.html">
+<link rel="canonical" href="https://masteroleo.eco.br/calculadora.html">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Valor do Óleo Usado",
+  "url": "https://masteroleo.eco.br/calculadora.html",
+  "description": "Calculadora gratuita para estimar o valor do óleo de cozinha usado, gordura vegetal usada e resíduos vencidos com mais de 40% de gordura.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "JavaScript"
+}
+</script>
+<style>
+  :root{
+    --green:#14532d; --green2:#1a6b3c; --green3:#22a058; --leaf:#3fae6b;
+    --amber:#f59e0b; --amber-d:#d97706; --cream:#f7f5ef; --ink:#1c2a21;
+    --muted:#5b6b60; --white:#ffffff; --line:#e4e9e2; --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f0f7f1 0%,var(--white) 400px);min-height:100vh;line-height:1.65}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+  header{background:var(--white);border-bottom:1px solid var(--line);padding:16px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:800;font-size:18px;color:var(--green)}
+  .logo img{height:40px;width:auto;display:inline-block;vertical-align:middle;margin-right:8px}
+  a{color:var(--green2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1{font-size:clamp(26px,3.6vw,38px);letter-spacing:-.5px;color:var(--green);text-align:center;margin-top:40px;line-height:1.15}
+  .sub{text-align:center;color:var(--muted);font-size:16px;max-width:640px;margin:10px auto 30px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  @media(max-width:740px){.grid{grid-template-columns:1fr}}
+  .calc-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+  .calc-card h3{font-size:17px;color:var(--green);margin-bottom:6px}
+  .calc-card p.sub-text{font-size:13.5px;color:var(--muted);margin-bottom:18px}
+  label{display:block;font-size:13px;font-weight:700;color:var(--green);margin:14px 0 6px}
+  input[type=number],input[type=text],input[type=email],select{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:var(--cream);transition:border-color .2s}
+  input:focus,select:focus{outline:2px solid var(--green3);border-color:transparent;background:var(--white)}
+  .result-box{background:var(--cream);border-radius:12px;padding:22px;text-align:center;margin-top:4px}
+  .result-box .l{font-size:12.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+  .result-box .v{font-size:44px;font-weight:800;color:var(--green);letter-spacing:-1px}
+  .result-box .a{font-size:14px;color:var(--muted);margin-top:2px}
+  .result-box .d{font-size:13px;color:var(--muted);margin-top:8px;padding-top:12px;border-top:1px solid #d8e0d6}
+  .result-box .d span{color:var(--green);font-weight:700}
+  .cta-btn{display:block;width:100%;background:linear-gradient(180deg,var(--amber),var(--amber-d));border:none;color:#3b2600;font-weight:800;font-size:16px;padding:15px;border-radius:12px;cursor:pointer;transition:transform .15s,box-shadow .15s;margin-top:16px;text-align:center}
+  .cta-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(245,158,11,.35)}
+  .cta-btn:disabled{opacity:.6;cursor:wait}
+  .ok-msg{display:none;background:#e7f6ec;border:1px solid #b7e3c6;color:#14532d;border-radius:12px;padding:16px;font-size:14px;font-weight:600;text-align:center;margin-top:14px}
+  small{display:block;color:var(--muted);font-size:12px;margin-top:10px;text-align:center}
+  .tabela-ref{max-width:600px;margin:30px auto;display:grid;gap:8px}
+  .ref-item{display:flex;justify-content:space-between;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:12px 16px;font-size:14px}
+  .ref-item .bold{font-weight:700;color:var(--green)}
+  .ref-item .dim{color:var(--muted)}
+  footer{margin-top:50px;background:#0c301d;color:#a9cdb7;padding:32px 0 22px;text-align:center;font-size:13px}
+  footer a{color:#a9cdb7}
+  .kicker{display:block;text-align:center;color:var(--amber-d);font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-top:30px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><img src="assets/logo-master-oleo.png" alt="Master Óleo"> Master Óleo</a>
+    <a href="index.html" style="font-size:14px;font-weight:600">← Voltar ao site</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <span class="kicker">💰 Ferramenta gratuita</span>
+  <h1>Quanto vale o seu <em style="color:var(--amber-d)">óleo usado</em>?</h1>
+  <p class="sub">Descubra em segundos quanto sua empresa pode <b>receber</b> pelo óleo de cozinha usado, gordura vegetal usada e resíduos vencidos com &gt;40% de gordura. Preencha o volume e receba uma proposta personalizada.</p>
+
+  <div class="grid">
+    <!-- CALCULATOR -->
+    <div class="calc-card">
+      <h3>📊 Simule sua renda</h3>
+      <p class="sub-text">Arraste o volume para ver o valor estimado por mês e por ano.</p>
+      <label for="calc_litros">Volume aproximado por mês (litros)</label>
+      <input type="number" id="calc_litros" min="10" step="10" value="200" style="font-size:22px;font-weight:700;text-align:center">
+
+      <label for="calc_qualidade">Qualidade do material</label>
+      <select id="calc_qualidade">
+        <option value="2.20">Óleo limpo (filtrado, sem água/borra) — R$ 2,20/L</option>
+        <option value="1.70" selected>Óleo normal (fritura com resíduos leves) — R$ 1,70/L</option>
+        <option value="1.20">Óleo com mais resíduos/água — R$ 1,20/L</option>
+      </select>
+
+      <div class="result-box">
+        <div class="l">Renda estimada por mês</div>
+        <div class="v" id="calc_resultado">R$ 340</div>
+        <div class="a" id="calc_anual">≈ R$ 4.080 por ano</div>
+        <div class="d">💧 Água preservada: <span id="calc_agua">5.000.000</span> litros/mês (equivalente a <span id="calc_piscinas">1,4</span> piscinas olímpicas)</div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="calc-card">
+      <h3>📬 Receba proposta personalizada</h3>
+      <p class="sub-text">Envie seu volume estimado e nossa equipe retorna com o <b>valor exato em até 24h</b>, com certificado de destinação e coleta programada — sem compromisso.</p>
+      <form id="calcform">
+        <label for="calc_nome">Seu nome *</label>
+        <input type="text" id="calc_nome" name="nome" required>
+
+        <label for="calc_email">Seu melhor e-mail *</label>
+        <input type="email" id="calc_email" name="email" required>
+
+        <label for="calc_empresa">Empresa</label>
+        <input type="text" id="calc_empresa" name="empresa" placeholder="Ex.: Restaurante Bom Gosto">
+
+        <label for="calc_telefone">WhatsApp (opcional)</label>
+        <input type="text" id="calc_telefone" name="telefone" placeholder="(11) 9XXXX-XXXX">
+
+        <input type="hidden" id="calc_volume" name="volume">
+        <input type="hidden" id="calc_valor" name="valor_estimado">
+
+        <button class="cta-btn" type="submit">💬 Receber proposta de compra</button>
+        <small>Seus dados ficam protegidos. Usamos apenas para falar sobre a coleta.</small>
+        <div class="ok-msg" id="calc_ok">✅ Recebemos! Em breve enviaremos sua proposta com o valor exato.</div>
+      </form>
+      <p style="text-align:center;margin-top:14px;font-size:13px;color:var(--muted)">📱 Prefere falar agora? <a href="https://wa.me/5511967859631?text=Ol%C3%A1!%20Usei%20a%20calculadora%20de%20valor%20do%20%C3%B3leo%20usado." target="_blank" rel="noopener"><b>Chame no WhatsApp</b></a></p>
+    </div>
+  </div>
+
+  <!-- TABELA DE REFERÊNCIA -->
+  <div class="tabela-ref">
+    <div class="ref-item"><span><span class="bold">600 L/mês</span> <span class="dim">(restaurante médio-grande)</span></span> <span class="bold" style="color:var(--green)">R$ 14.400/ano</span></div>
+    <div class="ref-item"><span><span class="bold">1.200 L/mês</span> <span class="dim">(supermercado com padaria + açougue)</span></span> <span class="bold" style="color:var(--green)">R$ 28.800/ano</span></div>
+    <div class="ref-item"><span><span class="bold">5.000 L/mês</span> <span class="dim">(indústria alimentícia / frigorífico)</span></span> <span class="bold" style="color:var(--green)">R$ 120.000/ano</span></div>
+    <div class="ref-item"><span><span class="bold">55.000 L/mês</span> <span class="dim">(Grupo Madero — 270 restaurantes)</span></span> <span class="bold" style="color:var(--green)">R$ 1.188.000/ano</span></div>
+  </div>
+
+  <!-- BENEFITS -->
+  <div style="background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;margin:28px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+    <div style="text-align:center"><div style="font-size:32px;margin-bottom:6px">📄</div><b>Certificado de destinação</b><br><span style="font-size:13px;color:var(--muted)">PNRS + MTR em toda coleta</span></div>
+    <div style="text-align:center"><div style="font-size:32px;margin-bottom:6px">🚚</div><b>Coleta programada</b><br><span style="font-size:13px;color:var(--muted)">Semanal, quinzenal ou sob demanda</span></div>
+    <div style="text-align:center"><div style="font-size:32px;margin-bottom:6px">🛢️</div><b>Bombonas fornecidas</b><br><span style="font-size:13px;color:var(--muted)">Troca cheia/vazia na coleta</span></div>
+    <div style="text-align:center"><div style="font-size:32px;margin-bottom:6px">💰</div><b>Pagamento à vista (PIX)</b><br><span style="font-size:13px;color:var(--muted)">Na hora da coleta, sem atraso</span></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">Master Óleo</a> — Coleta de Óleo Usado · Salto/SP e região<br>
+    WhatsApp: <a href="https://wa.me/5511967859631">(11) 96785-9631</a> | E-mail: contato@masteroleo.com.br<br>
+    <span style="font-size:11.5px;color:#6a8f78;margin-top:6px;display:block">© 2026 Master Óleo. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<script>
+  var LEAD_ENDPOINT = "https://formspree.io/f/xppalazn";
+
+  function calcAtualizar(){
+    var l = parseFloat(document.getElementById('calc_litros').value) || 0;
+    var p = parseFloat(document.getElementById('calc_qualidade').value) || 0;
+    var m = l * p;
+    document.getElementById('calc_resultado').textContent = 'R$ ' + m.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+    document.getElementById('calc_anual').textContent = '≈ R$ ' + (m*12).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' por ano';
+    document.getElementById('calc_volume').value = l + ' L/mês';
+    document.getElementById('calc_valor').value = 'R$ ' + m.toFixed(2) + '/mês';
+
+    // Água preservada: 1L óleo contamina 25.000L de água = 25m³
+    var agua = l * 25000;
+    document.getElementById('calc_agua').textContent = agua.toLocaleString('pt-BR');
+    document.getElementById('calc_piscinas').textContent = (agua / 2500000).toFixed(1);
+  }
+  document.getElementById('calc_litros').addEventListener('input', calcAtualizar);
+  document.getElementById('calc_qualidade').addEventListener('change', calcAtualizar);
+  calcAtualizar();
+
+  document.getElementById('calcform').addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(e.target);
+    fd.append('tipo', 'calculadora');
+    var btn = e.target.querySelector('.cta-btn');
+    btn.disabled = true; btn.textContent = 'Enviando...';
+    fetch(LEAD_ENDPOINT, { method:'POST', body:fd, headers:{'Accept':'application/json'} })
+      .then(function(r){ if(!r.ok) throw new Error('falha'); return r.json(); })
+      .then(function(){ document.getElementById('calc_ok').style.display='block'; e.target.reset(); calcAtualizar(); })
+      .catch(function(){
+        window.location.href = 'https://wa.me/5511967859631?text=' + encodeURIComponent('Olá! Usei a calculadora de valor do óleo usado. Volume: ' + (document.getElementById('calc_volume').value||'') + ' - Empresa: ' + (document.getElementById('calc_empresa').value||''));
+      })
+      .finally(function(){ btn.disabled=false; btn.textContent='💬 Receber proposta de compra'; });
+  });
+</script>
+</body>
+</html>

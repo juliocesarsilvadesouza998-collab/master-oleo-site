@@ -1,0 +1,128 @@
+[
+  {
+    "nome": "Supermercados São Vicente",
+    "empresa": "Supermercados São Vicente LTDA",
+    "email": "atendimento@svicente.com.br",
+    "cidade": "Piracicaba/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "5 lojas, padaria/rotisserie - óleo gerado tudo semana"
+  },
+  {
+    "nome": "Supermercados UNE",
+    "empresa": "Supermercado UNE LTDA",
+    "email": "rh@superune.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "Rede com cozinha industrial - alto volume de fritura"
+  },
+  {
+    "nome": "Supermercados Ecohabita",
+    "empresa": "Supermercados Ecohabita LTDA",
+    "email": "contato@ecohabita.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "Foco em produtos sustentáveis - alinhamento ESG"
+  },
+  {
+    "nome": "Supermercados Prime",
+    "empresa": "Supermercados Prime LTDA",
+    "email": "sac@prime-super.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "Rede regional com padaria e restaurante próprio"
+  },
+  {
+    "nome": "Supermercados Del Valle",
+    "empresa": "Supermercados Del Valle LTDA",
+    "email": "contato@superdelvalle.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede familiar com foco em produtos regionais"
+  },
+  {
+    "nome": "Supermercados Ponto Frio",
+    "empresa": "Supermercados Ponto Frio LTDA",
+    "email": "comercial@pontofrio.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "Rede grande - cozinhas industriais em várias lojas"
+  },
+  {
+    "nome": "Supermercados Extra",
+    "empresa": "Supermercados Extra Brasil LTDA",
+    "email": "sac@extra.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "Rede nacional com forte presença em Campinas"
+  },
+  {
+    "nome": "Supermercados Natário",
+    "empresa": "Supermercados Natário LTDA",
+    "email": "contato@natario.com.br",
+    "cidade": "Jundiaí/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "alta",
+    "observacao": "Rede regional com cozinha central em Jundiaí"
+  },
+  {
+    "nome": "Supermercados Verona",
+    "empresa": "Supermercados Verona LTDA",
+    "email": "sac@verona.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede familiar com padaria própria"
+  },
+  {
+    "nome": "Supermercados São João",
+    "empresa": "Supermercados São João LTDA",
+    "email": "atendimento@supermercadossaojoao.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede regional com foco em produtos do interior"
+  },
+  {
+    "nome": "Supermercados Tricities",
+    "empresa": "Supermercados Tricities LTDA",
+    "email": "sac@tricities.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede de médio porte com lojas em Shopping"
+  },
+  {
+    "nome": "Supermercados Capital",
+    "empresa": "Supermercados Capital LTDA",
+    "email": "contato@supermercadoscapital.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede com estabelecimentos próprios"
+  },
+  {
+    "nome": "Supermercados Riviera",
+    "empresa": "Supermercados Riviera LTDA",
+    "email": "sac@riviera.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede com foco em produtos importados"
+  },
+  {
+    "nome": "Supermercados do Piauí",
+    "empresa": "Supermercados do Piauí LTDA",
+    "email": "contato@supermercadospiaui.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Supermercados (rede)",
+    "prioridade": "media",
+    "observacao": "Rede regional com lojas em interior de SP"
+  }
+]
