@@ -1,3 +1,25 @@
+## 2026-10-12 (segunda-feira) — Bot de SEO (cron diário)
+
+### Ranking Bing (real, via seo_bot.py --rank --max-rank 10)
+- Site: HTTP 200 ✅ · sitemap presente ✅ · 17 URLs
+- **Todas as keywords fora do top 20** (10 monitoradas) — indexado mas sem posição, normal para domínio jovem. Nenhuma posição inventada; ver `bot/equipe/seo.json`.
+- Cobertura de conteúdo: 23/23 keywords alvo presentes nas páginas ✅
+
+### Melhorias aplicadas (máx. 3 mudanças)
+| # | Ação | Arquivo |
+|---|------|---------|
+| 1 | Artigo novo dedicado à keyword "maionese vencida" (falta de página dedicada era o gap do tick) | deploy-vercel/blog/quem-compra-maionese-vencida.html |
+| 2 | Card novo na seção #blog do home | deploy-vercel/index.html |
+| 3 | Sitemap atualizado (17 URLs, +1 artigo) | deploy-vercel/sitemap.xml |
+
+- IndexNow pingado (HTTP 200/202 aceito) com a URL nova
+- Verificação ad-hoc (verify-seo-tick.py): tags balanceadas, sitemap OK, canonical/title/meta/CTA/Leia também/tabela OK, 1.074 palavras ✅ — não é suite verde, é checagem ad-hoc
+
+### Próximo tick
+- Aguardar posição subir (site jovem, precisa de semanas). Keywords sem página dedicada: nenhuma das 10 alvo restante — próximo tick deve ser lean (auditoria) ou nova long-tail.
+
+---
+
 ## 2026-10-12 (segunda-feira) — 23:20 (Cron #80 — Melhorador Contínuo)
 
 ### Diagnóstico
@@ -28,6 +50,45 @@
 - 🟡 **Pague Menos (Josiane Marinho)** — retomar contato.
 - 🟡 **Assaí, Bauducco, Bimbo, Atacadão** — FP1 enviado nesta rodada.
 - 🚩 **Fila precisa de reposição** — adicionar novas empresas com MX válido.
+
+---
+
+## 2026-10-12 (segunda-feira) — Analista de Qualidade (23:25)
+
+### Números do dia (pós-ciclo do Atendente 22:59)
+
+| Métrica | Valor |
+|---------|-------|
+| **Total de leads** | **270** (era 274 — 4 duplicatas removidas, ver abaixo) |
+| **Status** | novo 191 · bounce 52 · respondido 18 · sequencia 9 · encerrado 0 |
+| **Emails enviados hoje (Gmail Sent, fonte real)** | **351** (22:51→23:15 local) — FP1/FP2/FP3 + 9 do send_sequence |
+| **Desses, registrados no leads.csv** | **118** (timestamps 23:07:01-23:13:17) — CSV SUBESTIMA o real (233 envios sem registro) |
+| **Destinatários com >1 email hoje** | **71** (271 emails extras acima de 1-por-destino) |
+| **Piores casos** | Rede Bom Lugar e Enxuto Supermercados: **12 emails cada** |
+| **Bounces novos hoje** | 0 (cache 74) · **Respostas pendentes** 0 (verificado com check-replies real) |
+| **Watchdog final** | ✅ exit 0 — 0 follow-ups atrasados (backlog de 12 dias zerado) |
+
+### Contexto do dia (causa-raiz)
+
+- Pipeline de follow-up **parado de ~02/10 a hoje** (nenhum envio registrado de 02/10 a 22:50).
+- Hoje à noite o backlog inteiro foi disparado em **execuções múltiplas e sobrepostas** (~22:51→23:15): passadas do prospecao_followup.py + ciclo do Atendente (22:59) + send_sequence. Sequências FP1→FP2→FP3 que deveriam levar dias foram comprimidas em **minutos** — várias empresas receberam a mesma etapa mais de uma vez.
+- **Contagem conflitante entre fontes** (ver pendencias): Atendente registrou 73+9; CSV tem 118; Gmail Sent tem **351** — o CSV perdeu gravações (writes sobrescritos por passadas concorrentes). Fonte mais confiável hoje: pasta "E-mails enviados".
+
+### Correções aplicadas
+
+| # | Problema | Correção |
+|---|----------|----------|
+| 1 | **4 leads duplicados** (mesma empresa+email 2x, lote 28/09): 240/251 Rede Bom Lugar, 241/252 Galassi, 242/253 Enxuto, 243/254 Gross Burger → duplicaram TODOS os envios (ex.: Rede Bom Lugar recebeu a sequência em 2 threads = 12 emails) | **Removidas linhas 251-254** (274→270). Backup: `bot/leads.csv.bak-20261012-analista`. Reaplicado após sobrescrita concorrente; estabilidade confirmada |
+| 2 | **Perda de gravação/race condition em leads.csv**: passadas simultâneas do prospecao_followup.py sobrescrevem edições (chegou a reverter o dedup) | Reaplicado pós-cascata. **Ver pendencias: lock/serialização** |
+| 3 | 22 emails órfãos no bounces.json (sem lead no CSV) — histórico de endereços corrigidos/abandonados | **Não é erro**. 52/52 bounces do CSV batem com o cache. Nenhuma ação |
+
+### Pendências para o Estrategista/Atendente
+
+1. 🔴 **Reconciliar contagem de envios**: Gmail diz 351, CSV diz 118, Atendente anotou 73+9. Investigar passadas múltiplas (quem mais executa prospecao_followup.py?) e assegurar que registros do CSV não se percam.
+2. 🔴 **Lock/serialização de gravação em leads.csv** — qualquer edição pode ser revertida com 2+ agentes escrevendo.
+3. 🟡 **Janela de horário para follow-ups** (ex.: 08:00-18:00, máx. 1 passada/dia) — 118→351 emails numa noite fora do desenho (dias entre etapas) arrisca spam e queda de entregabilidade.
+4. 🟡 **Fila prioritária** (fila_prioritaria.json, 14 alvos criada 22:51): prospecao_followup.py não a lê e os 14 emails não existem no leads.csv — integrar como próxima onda ou descartar.
+5. 🟡 **Gmail carimba Sent em -0700 (PDT)**: qualquer leitura de horário de envio a partir da pasta Sent precisa converter para -0300.
 
 ---
 
