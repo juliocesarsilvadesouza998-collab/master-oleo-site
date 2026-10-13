@@ -120,14 +120,25 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   R$ 400–1.000/mês em óleo (200–400 L × R$ 2–2,50). Vender segurança: coleta
   agendada, coletor identificado com crachá, pesagem na frente do cliente,
   bombona com trava.
-- CRÉDITO DE CARBONO (para indústrias): o UCO alimenta a cadeia de
-  biocombustíveis que gera CBIOs (créditos de descarbonização do RenovaBio,
-  negociados na faixa de R$ 60–90 em 2025). "Seu óleo abastece a cadeia que
-  vira crédito de carbono" — apelo forte com indústrias que têm metas ESG.
+CRÉDITO DE CARBONO (para indústrias): o UCO alimenta a cadeia de
+biocombustíveis que gera CBIOs (créditos de descarbonização do RenovaBio,
+negociados na faixa de R$ 60–90 em 2025). "Seu óleo abastece a cadeia que
+vira crédito de carbono" — apelo forte com indústrias que têm metas ESG.
 - PREÇO NA INDÚSTRIA (contexto de margem): usinas pagam ~R$ 5.000/tonelada
   (~R$ 4,6–5,0/L) por UCO tratado — a margem da cadeia está em coleta +
   tratamento + rastreabilidade. Óleo limpo (decantado, sem água/borra) paga
   premium; orientar geradores a entregar óleo seco.
+NOVOS ARGUMENTOS DE MERCADO (descobertas Estrategista 12/10 — fontes: Mordor Intelligence, BiodieselBR, EPE/Gov.br):
+- **Petrobras investindo R$ 23 milhões na coleta de OGR** (SP e BA, 2026): a Petrobras está
+  estruturando redes de coleta em São Paulo e Bahia para abastecer suas usinas. Isso mostra
+  que o mercado está se consolidando — quem não tiver contrato de coleta vai perder matéria-prima.
+- **B16 desde março/2026**: o diesel brasileiro subiu de 15% para 16% de biodiesel. Mais biodiesel
+  = mais demanda por UCO. A mistura pode ir até 25% (CNPE).
+- **Brasil coleta 180 milhões de L de UCO/ano, potencial de 600 milhões**: 70% do mercado está
+  inexplorado. Grande oportunidade para quem estrutura coleta agora.
+- **Mercado global de biocombustíveis Brasil: US$ 9,43 bi (2026) → US$ 17,82 bi (2031)** — CAGR 13,58%.
+  O Brasil responde por 10% da produção global de biodiesel.
+- USE esses dados como camada extra de urgência nas conversas com leads frios e quentes.
 NICHO ENCAPSULADOS/FARMACÊUTICAS (cliente real: Catalent Indaiatuba e
 Sorocaba): indústrias de encapsulados usam **óleo vegetal na limpeza e
 lubrificação de máquinas de encapsulamento** — esse óleo usado precisa de

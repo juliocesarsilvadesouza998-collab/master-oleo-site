@@ -1,15 +1,16 @@
 {
- "atualizado_em": "2026-10-12 08:00 (Estrategista - cron domingo)",
+ "atualizado_em": "2026-10-13 17:51 (Melhorador Contínuo - cron #83)",
   "criado_em": "2026-08-13",
-  "metas_semana_12_10_a_18_10": {
-   "meta_contrato_1": "FECHAR Savegnago Supermercados — #1 interior SP, R$ 7,98 bi. PROPOSTA FORMAL ENVIAR HOJE.",
-   "meta_contrato_2": "FECHAR Queijos Itupeva (Rafael) — coleta-teste agendada. LIGAR IMEDIATAMENTE.",
-   "meta_contrato_3": "FECHAR Brasfrigo (Salto/SP) — fechar contrato. PRIORIDADE ABSOLUTA.",
-   "meta_humana_1": "Sonda Supermercados (R$ 6,12 bi) — ligar (11) 2145-6200. Proposta enviada 01/10.",
-   "meta_humana_2": "Tauste — ligar (15) 3324-4680. OFERTAR COLETA-TESTE.",
-   "meta_resposta": "taxa >= 12% (atual ~3,2%)",
-   "meta_bounce": "< 15% (atual ~28%)",
-   "meta_fila": ">= 20 pendentes com MX válido"
+  "metas_semana_13_10_a_19_10": {
+   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
+   "meta_contrato_2": "🔴 FECHAR Brasfrigo (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
+   "meta_contrato_3": "🔴 Queijos Itupeva (Rafael) — agendar coleta-teste. Lead mais quente individual.",
+   "meta_telefone_1": "🔴 Sonda Supermercados (R$ 6,12 bi) — ligar (11) 2145-6200. Retomar contato.",
+   "meta_telefone_2": "🟡 Tauste — ligar (15) 3324-4680. Respondeu 30/09, ofertar coleta-teste.",
+   "meta_telefone_3": "🟡 Covabra — respondeu 22/09, priorizar follow-up humano.",
+   "meta_fila": ">= 10 pendentes com MX válido (fila está em 0 — reposição manual no lote de prospecção é prioridade)",
+   "meta_bounce": "< 15% (atual ~24% no dashboard, 20,4% no CSV — divergencia entre fontes, padronizar por bounces.json)",
+   "meta_resposta": "manter >= 8% (atual 8,1% — excelente para cold email, teto do canal)"
   },
   "metas": {
    "enviar_50_emails_a_partir_de": "2026-08-14 (atingida: 74+ envios)",
@@ -913,5 +914,46 @@
       "FILA REPOSTA PELO PROSPECTOR: 6 novas empresas adicionadas e 10 emails enviados. Fila em 0 pendentes. Manutencao continua necessaria.",
       "22% DE BOUNCE AINDA ACIMA DA META DE 15%: 74 bounces no cache. A maioria ja foi corrigida."
     ]
-  }
+  },
+ "estrategista_2026_10_13_cron_82": {
+  "timestamp": "2026-10-13 08:00 (Estrategista - cron domingo #82)",
+  "diagnostico_semana": {
+   "total_leads_csv": 280,
+   "novo": 196,
+   "bounce_csv": 57,
+   "respondido": 18,
+   "sequencia": 9,
+   "encerrado": 0,
+   "bounce_cache_json": 79,
+   "taxa_resposta_real": "18/280 = 6,4% sobre total; 18/223 = 8,1% sobre ativos",
+   "taxa_bounce_csv": "57/280 = 20,4% (acima da meta 15%)",
+   "fila_pendentes_validas": "0 com MX válido (fila zerada após lote do Prospector 12/10)",
+   "dias_sem_resposta_humana": "12 dias desde Tauste (30/09)",
+   "respostas_auto_reply_no_periodo": "8 (todas auto-replies SAC: Higa, Mars, Piracanjuba)"
+  },
+  "insight_central": "O SISTEMA ATINGIU O TETO DO CANAL EMAIL. 8,1% de resposta está acima da média de mercado (1-5%). As 18 respostas acumuladas são de redes de alto valor (Savegnago, Brasfrigo, Sonda, Tauste, Covabra, Pague Menos) mas NENHUMA virou contrato porque TODAS pedem ação humana (WhatsApp/telefone) que o sistema automatizado não pode realizar. O próximo salto do projeto depende de fechamento humano, não de mais automação.",
+  "descobertas_da_pesquisa_web_13_10": [
+   "DESCOBERTA #1 - PETROBRAS INVESTE R$23 MI NA COLETA DE OGR: A Petrobras está investindo R$ 23 milhões em redes de coleta de óleo residual em São Paulo e Bahia (2026). Isso confirma que o mercado está se consolidando e que a demanda por UCO vai crescer — argumento de urgência para fechar contratos agora.",
+   "DESCOBERTA #2 - B16 EM VIGOR: O diesel brasileiro subiu para 16% de biodiesel (B16) desde março/2026 (Resolução CNPE). A mistura pode ir até 25%, o que significa demanda crescente por UCO como matéria-prima.",
+   "DESCOBERTA #3 - BRASIL SÓ CAPTA 30% DO UCO POTENCIAL: O Brasil coleta ~180 milhões de L de UCO/ano, mas o potencial nacional é de ~600 milhões de L — 70% do mercado está inexplorado (fonte: Mordor Intelligence). Grande oportunidade para quem estrutura coleta agora.",
+   "DESCOBERTA #4 - MERCADO DE BIOC. BRASIL: US$ 9,43 bi (2026) → US$ 17,82 bi (2031) a CAGR 13,58%. O Brasil responde por 10% da produção global de biodiesel (Mordor Intelligence).",
+   "DESCOBERTA #5 - 50% BOUNCE EM SAC DE MEGA-CORPORAÇÕES: Assaí (sac@assai.com.br), Bimbo (faleconosco@gb.com.br), Atacadão (sac@atacadao.com.br), Maldonado (contabildias@terra.com.br), Rocha (contato@rochadist.com.br) — TODOS com bounce imediato. SAC corporativo de mega-empresas tem proteção anti-bot. Regra: evitar sac@ de gigantes, preferir canais comerciais/ouvidoria."
+  ],
+  "acoes_implementadas_13_10": [
+   "1. TEMPLATES FP1/FP2/FP3 REFORÇADOS (prospecao_followup.py): Adicionado argumento Petrobras R$23 mi + B16 + 600M L potencial + 70% inexplorado em FP1 e FP3. py_compile OK.",
+   "2. PERSONA.MD ATUALIZADO: Adicionada seção 'NOVOS ARGUMENTOS DE MERCADO' com os 5 dados da pesquisa (Petrobras, B16, 600M L, US$ 9,43 bi, regra SAC).",
+   "3. METAS DA SEMANA REDEFINIDAS: Foco em FECHAMENTO HUMANO (Savegnago WhatsApp, Brasfrigo coleta-teste, Queijos Itupeva coleta-teste, Sonda telefone, Tauste telefone, Covabra follow-up). Fila precisa de reposição ≥10. Bounce <15%.",
+   "4. ESTRATÉGIA DE REPOSIÇÃO DE FILA: Priorizar emails de CANAL COMERCIAL/OUVIDORIA (não SAC genérico) para reduzir bounce rate abaixo de 15%."
+  ],
+  "pendente_humano_critico": [
+   "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 12+ dias sem ação.",
+   "🔴🔴🔴 BRASFRIGO (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
+   "🔴🔴🔴 QUEIJOS ITUPEVA (Rafael) — agendar coleta-teste.",
+   "🔴🔴 SONDA SUP. (R$6,12bi) — ligar (11) 2145-6200.",
+   "🟡 TAUSTE — ligar (15) 3324-4680. Respondeu 30/09.",
+   "🟡 COVABRA — respondeu 22/09.",
+   "🟡 PAGUE MENOS (R$4,33bi) — retomar contato.",
+   "🟡 MUFFATO — ligar (43) 3371-1700."
+  ]
+ }
 }

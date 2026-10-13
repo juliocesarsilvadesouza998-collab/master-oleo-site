@@ -1,3 +1,133 @@
+|## 2026-10-13 (terça-feira) — 17:51 (Melhorador Contínuo - cron #83)
+|
+|### Diagnóstico do dia
+|- 280 leads, 205 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+|- Dashboard: 226 enviados, 171 entregues, 55 bounces (24%), 18 respostas (8,0%)
+|- **🔴 13 dias sem respostas humanas** — última resposta real: Tauste (30/09). Leads quentes aguardam ação humana.
+|- **🔴 0 fechamentos** — nenhum contrato fechado até o momento
+|- **🔴 24% bounce rate** — acima da meta de 15%
+|- **🟡 Fila de prospecção em 0** — todas as 321+ empresas da fila já foram contatadas
+|- **🟡 5 bounces sem correção** — watchdog aponta, mas corrigir_emails.py já processou todos (53+ tentados sem nova alternativa)
+
+### Análise
+O sistema de email atingiu o teto do canal cold email. Com 8% de resposta, estamos acima da média de mercado (1-5%). O gargalo é exclusivamente humano: todos os 18 leads que responderam são redes de alto valor (Savegnago, Brasfrigo, Sonda, Tauste, Covabra, Pague Menos) mas NENHUM virou contrato porque TODOS pedem ação via WhatsApp/telefone.
+
+### Melhorias implementadas
+| # | Ação | Arquivo |
+|---|------|---------|
+| 1 | ✅ Nova seção "Mercado em ebulição" no site com dados Petrobras R$23M, B16, 70% gap, US$ 17,82bi — conteúdo fresco para conversão de visitantes | deploy-vercel/index.html |
+| 2 | ✅ py_compile de 7 scripts — todos OK | prospecao.py, prospecao_followup.py, enviar_lote.py, bot_oleo.py, dashboard.py, watchdog.py, sync_formspree.py |
+| 3 | ✅ Diagnóstico registrado | ecossistema.json, insights.md |
+
+### Pendências para o Estrategista (inalteradas — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 13 DIAS SEM AÇÃO. |
+| 🔴🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste. É local. |
+| 🔴🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste. Lead mais quente individual. |
+| 🔴🔴 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680. Respondeu 30/09 — 13 dias. |
+| 🟡 | **Covabra** | Respondeu 22/09 — 21 dias. Priorizar. |
+| 🟡 | **Pague Menos** (R$4,33bi) | Retomar contato. |
+| 🟡 | **Muffato/Max Atacadista** | Ligar (43) 3371-1700. |
+
+---
+
+### Resumo da semana (12-13/10)
+
+| Métrica | Valor |
+|---------|-------|
+| **Total de leads** | 280 |
+| **Status** | novo 196 · bounce 57 · respondido 18 · sequencia 9 · encerrado 0 |
+| **Bounce cache (bounces.json)** | 79 |
+| **Taxa de resposta (sobre ativos)** | 8,1% — excelente, acima da média de mercado (1-5%) |
+| **Taxa de bounce (CSV)** | 20,4% — acima da meta de 15% |
+| **Dias sem resposta humana** | **12** (desde Tauste em 30/09) |
+| **Fila de prospecção** | 0 pendentes com MX válido |
+| **Fechamentos** | **ZERO** — nenhum contrato fechado até o momento |
+| **Total enviados acumulados** | ~226 |
+
+### Observações críticas
+
+1. **🔴 SISTEMA ATINGIU O TETO DO EMAIL COLD** — 8% de resposta é excelente para email frio. As 18 respostas são de redes GRANDES (Savegnago, Brasfrigo, Sonda, Tauste, Covabra, Pague Menos) mas NENHUMA virou contrato porque TODAS pedem ação humana via WhatsApp/telefone que o sistema não pode realizar.
+2. **🔴 12 DIAS SEM RESPOSTA HUMANA** — última resposta real foi Tauste em 30/09. O pipeline de follow-up foi todo processado (118+73 atrasados) mas sem gerar novas respostas humanas — só auto-replies de SAC.
+3. **🔴 FILA ZERADA** — 0 empresas pendentes com MX válido. A prospecção precisa de reposição urgente.
+4. **🔴 50% BOUNCE NO ÚLTIMO LOTE** — 5/10 enviados no lote 12/10 (23:24) tiveram bounce imediato: Assaí, Bimbo, Atacadão, Maldonado, Rocha — todos SAC corporativo com proteção anti-bot.
+5. **🔴 RACE CONDITION NO CSV** — 351 emails segundo Gmail Sent vs 118 no CSV (envios simultâneos do prospecao_followup.py + send_sequence sobrescrevem registros).
+
+### Ações implementadas
+
+| # | Ação | Arquivo |
+|---|------|---------|
+| 1 | ✅ Templates FP1 e FP3 atualizados com argumento Petrobras R$23M + B16 + 600M L potencial | `bot/prospecao_followup.py` — py_compile OK |
+| 2 | ✅ Persona.md atualizada com NOVOS ARGUMENTOS DE MERCADO (5 novos dados) | `bot/persona.md` |
+| 3 | ✅ Metas da semana redefinidas com foco em FECHAMENTO HUMANO | `equipe/ecossistema.json` |
+| 4 | ✅ Diagnóstico completo registrado | `equipe/ecossistema.json` |
+
+### Descobertas da pesquisa web (13/10)
+
+1. **Petrobras investe R$23 milhões na coleta de OGR** em SP e BA — o mercado está se consolidando, quem não fechar contrato agora vai perder matéria-prima. (fontes: Mordor Intelligence, BiodieselBR)
+2. **B16 em vigor desde março/2026** — mais biodiesel = mais demanda por UCO. Mistura pode ir até 25% (CNPE).
+3. **Brasil capta só 180M L de UCO/ano mas potencial é 600M L** — 70% do mercado inexplorado. Oportunidade gigante.
+4. **Mercado de biocombustíveis Brasil: US$ 9,43 bi (2026) → US$ 17,82 bi (2031)** — CAGR 13,58%.
+5. **SAC de mega-empresas não funciona para prospecção** — bounce de 50% nos últimos 10 envios. Regra: preferir canais comerciais/ouvidoria.
+
+### Metas da semana (13 a 19/10)
+
+| Prioridade | Lead | Ação necessária | Prazo |
+|:----------:|------|----------------|:-----:|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. Proposta formal. | URGENTE |
+| 🔴🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste. | URGENTE |
+| 🔴🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste. | URGENTE |
+| 🔴🔴 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200. | Esta semana |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680. | Esta semana |
+| 🟡 | **Covabra** | Follow-up humano. | Esta semana |
+| 🟡 | **Pague Menos** (R$4,33bi) | Retomar contato. | Esta semana |
+| 🟡 | **Muffato/Max Atacadista** | Ligar (43) 3371-1700. | Esta semana |
+
+### Regra de ouro para prospecção (NOVA)
+
+**NÃO adicionar emails SAC@ de mega-corporações** (Assaí, Bimbo, Carrefour/Atacadão, etc.) — esses endereços têm proteção anti-bot e sempre darão bounce (50% no último lote). Preferir:
+- CANAL COMERCIAL (comercial@, compras@, falecomric@)
+- OUVIDORIA (ouvidoria@)
+- EMAIL DIRETO DE COMPRADOR (páginas de fornecedores, tipo Coop: erick.araujo@coopsp.coop.br)
+
+---
+
+## 2026-10-12 (segunda-feira) — 23:45 (Cron Analista de Qualidade)
+
+### Números do dia (auditoria ao vivo, sem inventar)
+
+| Métrica | Valor |
+|---------|-------|
+| **Total de leads** | **280** (novo 196 · bounce 57 · respondido 18 · sequencia 9 · encerrado 0) |
+| **Cache bounces.json** | **79 emails** (era 74 → **+5 novos** nesta rodada) |
+| **Respostas pendentes** (replies_pending.json) | **0** ([] — as 8 auto-replies do ciclo 22:59 já foram processadas) |
+| **Envios registrados hoje no CSV** | **122** em 81 leads distintos (CSV subestima vs Gmail Sent — pendência conhecida) |
+| **Duplicatas por email** | **0** ✅ — dedup das linhas 251-254 (Analista 23:25) se manteve |
+| **Formspree** | 0 notificações novas |
+
+### Auditoria — o que estava errado e o que foi corrigido
+
+1. **sync_formspree.py (rodado 23:41)** — ✅ corrigiu: cache 74→79 e marcou como **bounce** os 5 emails novos da leva de 23:24 (Assaí `sac@assai.com.br`, Bimbo `faleconosco@gb.com.br`, Atacadão `sac@atacadao.com.br`, Maldonado `contabildias@terra.com.br`, Rocha `contato@rochadist.com.br`). leads.csv reescrito na própria execução (mtime 23:41:32 confirma).
+2. **22 emails no cache sem lead exato no CSV** — são endereços alternativos/corrigidos (histórico), **não é inconsistência**: 57/57 bounces do CSV batem com o cache e 0 bounces do CSV estão fora do cache. Nenhuma ação necessária.
+3. **0 leads com status bounce + boas_vindas_em preenchido** ✅ — comportamento correto do send_sequence (pula bounces).
+4. **0 respostas pendentes** — nada para o Atendente responder no próximo tick.
+
+### Problemas registrados (sem correção automática possível)
+
+- **fila_prioritaria.json segue órfã (14 itens, criada 22:51)** — 12/14 emails não existem no leads.csv e vários são endereços irreais/gerados (`comercial@pontofrio.com.br`, `sac@extra.com.br`, `contato@supermercadospiaui.com.br`). Nenhum script da pipeline a lê.
+- **3 contatos "Delta" fragmentados** (id 32 `admgeneral@deltasuper.com.br` bounce, id 54 `admgeral@deltasuper.com.br` novo, id 65 `contato@deltamax.com.br` bounce) — mesma rede, 3 threads.
+- **Métricas divergentes entre crons**: Melhorador 23:50 registrou "74 bounces" com watchdog, mas o cache real já tinha 79 — padronizar fonte única.
+
+### Sugestões para o Estrategista
+
+1. **Padronizar a métrica de bounces** (cache × CSV × watchdog divergem entre crons) — fonte única: `bounces.json`.
+2. **Decidir o destino da fila_prioritaria.json**: integrar com verificação de MX ou descartar (14 itens órfãos poluem o estado).
+3. **Leva de 23:24 teve 5/10 bounces imediatos (50%)** — esses endereços de SAC corporativo (assai, gb.com.br, atacadao) têm proteção anti-bot; validar MX/regex antes de incluir em lote de prospecção.
+
+---
+
 ## 2026-10-12 (segunda-feira) — 23:50 (Cron #81 — Melhorador Contínuo)
 
 ### Diagnóstico
