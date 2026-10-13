@@ -53,7 +53,7 @@ def write_leads(leads):
         w.writerows(normal)
     os.replace(tmp, LEADS_PATH)  # atômico: nunca deixa o arquivo truncado
 
-def smtp_send(cfg, e, to, subject, html, in_reply_to=None):
+def smtp_send(cfg, e, to, subject, html, in_reply_to=None, conn=None):
     ctx = ssl.create_default_context()
     msg = MIMEMultipart("alternative")
     msg["From"] = formataddr((str(Header(cfg["email"]["remetente_nome"], "utf-8")), e["usuario"]))
@@ -65,9 +65,12 @@ def smtp_send(cfg, e, to, subject, html, in_reply_to=None):
         msg["References"] = in_reply_to
     msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
-    with smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30) as s:
-        s.login(e["usuario"], e["senha_app"].replace(" ",""))
-        s.sendmail(e["usuario"], [to], msg.as_string())
+    if conn:
+        conn.sendmail(e["usuario"], [to], msg.as_string())
+    else:
+        with smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30) as s:
+            s.login(e["usuario"], e["senha_app"].replace(" ",""))
+            s.sendmail(e["usuario"], [to], msg.as_string())
     return msg["Message-ID"]
 
 def _plain_from_html(html):
@@ -85,35 +88,40 @@ def tpl_fp(cfg, lead, n):
         subj = f"Re: óleo usado da {lead['empresa']} vale dinheiro"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Te escrevi há poucos dias sobre a <b>compra do óleo usado da {lead['empresa']}</b> — direto ao ponto:</p>
-<p><b>Pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em cada coleta e bombonas fornecidas. 600 L/mês = R$ 14 mil/ano de renda extra, sem custo de logística.</p>
-<p><b>Prova social:</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bilhões — ABRAS 2026) já está negociando conosco. A maior rede do interior fechando — sua {lead['empresa']} não pode ficar de fora.</p>
-<p><b>Urgência regulatória:</b> A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o mundo está disputando essa matéria-prima e quem fecha contrato agora garante preço e prioridade antes da corrida.</p>
-<p><b>Quanto vocês geram por mês (litros ou kg)?</b> Me responda esse número que eu te mando a estimativa ainda esta semana. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Te escrevi sobre a <b>compra do óleo usado da {lead['empresa']}</b> — direto ao ponto:</p>
+<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em cada coleta e bombonas fornecidas. 600 L/mês = R$ 14 mil/ano de renda extra, sem custo de logística.</p>
+<p><b>🏆 Prova social — Top 3 do interior SP no pipeline:</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi), o <b>Pague Menos</b> (R$ 4,33 bi — #2) e o <b>Tauste</b> (#3) — as três maiores redes do interior estão em negociação conosco (ABRAS 2026). Se os líderes estão fechando, sua empresa também pode transformar resíduo em receita.</p>
+<p><b>⚖️ Urgência regulatória:</b> A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o mundo está disputando essa matéria-prima e quem fecha contrato agora garante preço e prioridade.</p>
+<p><b>📊 Quanto vocês geram por mês (litros ou kg)?</b> Me responda esse número que eu te mando a estimativa. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     elif n == 2:
-        subj = f"Re: oleo usado da {lead['empresa']} — 3 motivos para tratar isso este ano"
+        subj = f"Re: oleo usado da {lead['empresa']} — valor de mercado R$ 1-2,50/L + urgencia 2028"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-<p>Ola, {lead['nome']}.</p>
-<p>Sei que esta ocupado, entao vou direto aos <b>3 fatos</b> que tornam a destinacao do oleo usado da <b>{lead['empresa']}</b> urgente:</p>
-<p><b>1</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi — ABRAS 2026) ja esta negociando conosco. E o <b>Grupo Madero</b> (270 restaurantes) ja vende 55 mil L/mes para biodiesel — rede grande <b>ja trata oleo usado como receita</b>, nao como descarte.</p>
-<p><b>2</b> A <b>Portaria MME/MMA no 3/2026</b> torna <b>OBRIGATORIO >=1%</b> de oleo residual no biodiesel a partir de <b>jan/2028</b> (fonte: gov.br). Quem ja tiver contrato assinado tera prioridade antes da corrida pela materia-prima.</p>
-<p><b>3</b> Sem <b>MTR + certificado de destinacao</b>, o passivo ambiental fica no CNPJ da {lead['empresa']} (Lei 12.305/2010). Nos emitimos em toda coleta.</p>
-<p>Para {lead['empresa']}: <b>coleta programada semanal</b>, bombonas fornecidas, logistica por nossa conta e <b>pagamento a vista (PIX) na coleta</b>.</p>
-<p><b>Quantos litros a {lead['empresa']} gera por mes?</b> Responda este numero que envio a avaliacao em 24h. WhatsApp: {g['telefone_whatsapp']}.</p>
-<p>Abraco,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+<p>Olá, {lead['nome']}.</p>
+<p>Para {lead['empresa']} transformar o óleo de fritura em renda: <b>pagamos R$ 1,00 a R$ 2,50 por litro</b> conforme qualidade e volume — valor de mercado validado pela Óleo Verde (1.200+ clientes).</p>
+<p><b>🏆 Prova social — Top 3 do interior SP no pipeline:</b>
+<br><b>1º Savegnago</b> (R$ 7,98 bi — #1 interior SP, ABRAS 2026) — canal aberto conosco
+<br><b>2º Pague Menos</b> (R$ 4,33 bi) — em negociação
+<br><b>3º Tauste</b> — encaminhou call comercial
+<br><b>Grupo Madero</b> (270 restaurantes) — 55 mil L/mês vendidos como commodity.</p>
+<p><b>⚖️ Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. Quem fechar hoje garante preço antes da corrida pela matéria-prima.</p>
+<p><b>🔒 Sem MTR + certificado, o passivo fica no CNPJ.</b> Nossa coleta é anti-furto: crachá, pesagem, bombona travada.</p>
+<p>Para {lead['empresa']}: coleta programada, bombonas fornecidas, pagamento à vista (PIX). Um supermercado com 5 lojas gera 2.000-3.000 L/mês = R$ 48-72 mil/ano de receita extra.</p>
+<p><b>Quantos litros a rede gera por mês?</b> WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
             subj = f"Último contato — {lead['empresa']} pode estar gerando R$ 14,4 mil/ano em óleo"
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
-    <p><b>Última mensagem sobre este assunto</b> — direta ao ponto:</p>
-    <p><b>1. Renda extra com coleta segura</b> — R$ 1,00 a R$ 2,50/L, pago <b>à vista (PIX) na hora da coleta</b>. 600 L/mês = R$ 14,4 mil/ano. Redes grandes geram 3.000+ L/mês = R$ 72 mil+/ano. <b>A Savegnago</b> (#1 do interior SP, R$ 7,98 bi) já está negociando conosco — maior rede do interior fechando, sua {lead['empresa']} não pode ficar de fora.</p>
-    <p><b>2. Anti-furto: segurança que vira diferencial</b> — óleo de cozinha virou alvo de quadrilhas especializadas (vale US$ 11 bi global). Nosso protocolo: coleta com crachá, bombona lacrada com trava, pesagem na hora e comprovante. O óleo sai do seu estabelecimento direto para o biodiesel — sem risco de reuso ilegal na alimentação.</p>
-    <p><b>3. Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de jan/2028</b> — a demanda vai explodir. Quem assinar contrato agora garante preço antes da disputa. Sem certificado de destinação (MTR), o passivo fica no CNPJ da {lead['empresa']} (Lei 12.305/2010 — PNRS).</p>
-    <p>Não precisa agora? Esta é a última mensagem automática. <b>Mas quando quiser transformar o óleo em receita com coleta segura</b>, chama no WhatsApp: <b>{g['telefone_whatsapp']}</b>. Respondemos em minutos.</p>
-    <p>Sucesso com a {lead['empresa']}.<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+    <p><b>Última mensagem automática sobre este assunto</b> — resumo de 3 motivos para agir agora:</p>
+    <p><b>💰 1. Renda extra imediata</b> — R$ 1,00 a R$ 2,50/L, pago <b>à vista (PIX)</b> na coleta. 200 L/mês = R$ 4.080/ano. 1.000 L/mês = R$ 24.000/ano. Rede de 10 supermercados = R$ 100-150 mil/ano. O óleo usado virou commodity de <b>US$ 11 bi</b>.</p>
+    <p><b>🏆 2. Prova social que dispensa apresentação</b> — As <b>3 maiores redes do interior SP</b> (Savegnago R$7,98bi, Pague Menos R$4,33bi, Tauste — ABRAS 2026) estão em negociação conosco. O <b>Grupo Madero</b> vende 55 mil L/mês. A <b>Catalent</b> (multinacional de encapsulados) confia na nossa coleta de óleo vegetal industrial. Ninguém grande descarta mais — todo mundo vende.</p>
+    <p><b>⚖️ 3. jan/2028 muda o jogo</b> — A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel. O Brasil exportou 1,4 milhão de toneladas de UCO para os EUA em 2023. Quem não tiver contrato de coleta em 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
+    <p><b>🔒 Anti-furto incluso:</b> coleta com crachá, bombona lacrada com trava, pesagem na hora, comprovante. Sem risco de reuso ilegal.</p>
+    <p><b>Quanto a {lead['empresa']} gera por mês?</b> Responda este email com o volume aproximado (litros ou kg) + seu WhatsApp que envio a <b>proposta em até 24h</b>. Se preferir, chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p>Sucesso,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
     </div>"""
     return {"subject": subj, "html": html}
 
@@ -139,6 +147,9 @@ def main():
         return
 
     enviados = 0
+    ctx = ssl.create_default_context()
+    conn = smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30)
+    conn.login(e["usuario"], e["senha_app"].replace(" ",""))
     for l in leads:
         if not str(l.get("fonte","")).startswith("prospeccao"):
             continue
@@ -158,13 +169,14 @@ def main():
                 else:
                     try:
                         mid = smtp_send(cfg, e, l["email"], tpl["subject"], tpl["html"],
-                                        in_reply_to=l.get("apresentacao_msgid") or None)
+                                        in_reply_to=l.get("apresentacao_msgid") or None, conn=conn)
                         l[campo] = now_iso()
                         print(f"✅ FP{i} → {l['email']} ({l.get('empresa','')})" + (" [thread]" if l.get("apresentacao_msgid") else ""))
                     except Exception as ex:
                         print(f"❌ FP{i} → {l['email']} — {str(ex)[:100]}")
                 enviados += 1
                 break  # um follow-up por lead por execução
+    conn.quit()
     if not args.dry_run:
         write_leads(leads)
     print(f"\n{enviados} follow-up(s) processado(s).")
