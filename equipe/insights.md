@@ -1,3 +1,36 @@
+## 2026-10-14 19:05 (Atendente IA - cron #109 - tick 19:00)
+
+### Diagnóstico do ciclo
+- ✅ 296 leads, 208 ativos, **83 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ Caixa IMAP: **0 mensagens não lidas/recentes** (524 msgids enviados) — todas as mensagens dos últimos dias já processadas em ticks anteriores
+- ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 respostas pendentes (replies_pending.json vazio)
+- ✅ Fila de prospecção: 339 empresas, 283 contatados, 64 bounce, **0 pendentes** (Prospector #108 esgotou a fila — 7 envios: Risotto Mix, Fantástico, Prime Food, Ameripan, Gvinah, Mirassol, Nagumo)
+- 🔧 corrigir_emails.py — 0 bounces novos processados (todos os 83 já tentados). JLO Atacadista (jloatacadista@outlook.com.br): busca por email alternativo sem resultado — mantido no estado atual
+- ℹ️ proposta_contrato.py / relatorio_esg.py não executados — nenhum lead novo com volume informado nem solicitação ESG neste tick
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 83 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence / check-replies | nada a enviar / 0 pendentes |
+| scan_inbox.py | 0 não lidas (296 leads, 524 msgids) |
+| watchdog.py | exit 0 — saudável |
+| enviar_lote.py --status | 339 fila, 283 contatados, 64 bounce, 0 pendentes |
+
+### Leads quentes (aguardando ação)
+| Prioridade | Lead | Próximo passo |
+|---|---|---|
+| 🔴🔴🔴 | **Savegnago** (#1 interior SP, R$7,98bi) | Apresentação enviada ao comercial@ 14/10 — WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Proposta 10.000 L/mês (R$264.000/ano) na thread do ticket 407470 — aguardar Josiane Marinho |
+| 🔴🔴 | **Rede Confiança** | Proposta 2.500 L/mês (R$54.000/ano) no social@ — **reforço amanhã 15/10** (3 dias de silêncio) |
+| 🔴🔴 | **Covabra** | Portal Ivrim — cadastro de fornecedor (ação humana) |
+| 🔴 | **Brasfrigo / Queijos Itupeva** | Agendar coleta-teste |
+| 🟡 | **Sonda / Tauste** | Telefone (11) 2145-6200 / (15) 3324-4680
+
+---
+
 ## 2026-10-14 (Analista QA - cron sáb 09:00) — auditoria independente
 
 ### Diagnóstico do ciclo
@@ -60,7 +93,42 @@ Tick 18:00 limpo — **nenhuma resposta nova, porém o tick saiu do zero com aç
 
 ---
 
-## 2026-10-14 17:03 (Atendente IA - cron #106 - tick 17:00)
+## 2026-10-14 22:00 (Estrategista - cron dominical #87)
+
+### Diagnóstico da semana
+- **284 leads, 200 ativos, 82 bounces, 18 respostas (7,7%)** — taxa de resposta excelente para cold email
+- **SEMANA HISTÓRICA**: 14/10 registrou o MAIOR volume de respostas humanas desde o início do projeto
+- **3 redes abriram canal comercial no mesmo dia**: Savegnago (#1 interior SP, R$7,98bi), Pague Menos (#2, R$4,33bi), Rede Confiança (Sorocaba)
+- **Covabra** — convidou para cadastro oficial no portal de fornecedores Ivrim (funil mais avançado)
+- **0 fechamentos** — gargalo 100% humano: todas as respostas pedem ação via WhatsApp/telefone
+
+### Aprendizados da semana
+1. **Case McDonald's-Recoleo é a prova social que faltava**: gigante mundial terceiriza coleta de óleo de fritura com bombonas + coleta programada + certificado — exatamente o modelo Master Óleo. Adicionado nos 3 templates de follow-up (FP1/FP2/FP3) e persona.md.
+2. **SAC que redireciona para comercial NÃO é rejeição**: Savegnago (comercial@), Pague Menos (Josiane Marinho), Rede Confiança (social@) — padrão se repetiu 3x no mesmo dia. Protocolo: proposta formal + anexo imediatamente, marca como lead quente.
+3. **Pipeline de supermercados é o mais avançado do projeto**: 3 maiores do interior SP (Savegnago, Pague Menos, Tauste) + Covabra + Rede Confiança + Sonda — todos com canal aberto ou direcionamento. Nenhuma outra coletora na região tem isso.
+4. **70% do mercado UCO brasileiro está inexplorado** (Mordor Intelligence): 180M L coletados vs 600M L potencial. Quem estruturar coleta agora sai na frente.
+5. **Petrobras R$23M em OGR confirma tendência**: edital em SP/BA, 36 meses. REPLAN em Cosmópolis/Paulínia/Campinas a 70km de Salto. Mercado se consolidando.
+
+### Ações implementadas
+| # | Ação | Arquivo | Status |
+|---|------|---------|--------|
+| 1 | Case McDonald's-Recoleo adicionado em FP1/FP2/FP3 | `bot/prospecao_followup.py` | ✅ py_compile OK |
+| 2 | Persona.md: nova seção McDonald's-Recoleo | `bot/persona.md` | ✅ |
+| 3 | +2 novas empresas MX-verificadas na fila | `bot/fila_prospeccao_extra.json` | ✅ |
+| 4 | Ecossistema.json atualizado com metas da semana | `equipe/ecossistema.json` | ✅ |
+
+### Metas da semana (14 a 20/10) — FOCO EM FECHAMENTO
+| Prioridade | Lead | Ação | Prazo |
+|:----------:|------|------|:-----:|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631 | HOJE/AMANHÃ |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 | Esta semana |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço 15/10 | AMANHÃ |
+| 🔴🔴🔴 | **Covabra** | Portal Ivrim (isac.ivrim.com.br) | Esta semana |
+| 🔴🔴 | **Brasfrigo** (Salto) | Coleta-teste | Esta semana |
+| 🔴🔴 | **Queijos Itupeva** (Rafael) | Coleta-teste | Esta semana |
+| 🔴 | **Sonda** (R$6,12bi) | (11) 2145-6200 | Esta semana |
+
+---
 
 ### Diagnóstico do ciclo
 - ✅ 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK, exit 0 (saudável)
