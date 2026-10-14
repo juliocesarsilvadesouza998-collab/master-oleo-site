@@ -1735,5 +1735,33 @@
               "email": "contato@comlprimefood.com.br",
               "cidade": "Sorocaba/SP",
               "segmento": "distribuidora de alimentos (mercearia, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Locaweb valido 14/10"
-            }
-          ]
+                          },
+                          {
+                            "nome": "Ameripan Distribuidora",
+                            "empresa": "Ameripan Distribuidora de Produtos para Panificacao Ltda",
+                            "email": "atendimento@ameripan.com.br",
+                            "cidade": "Americana/Indaiatuba/Campinas-SP",
+                            "segmento": "distribuidora de produtos para panificacao, confeitaria e sorveteria (margarinas, gorduras vegetais e oleos - vencidos >40% gordura) - NICHO PRIORITARIO; MX mail.ameripan.com.br valido 14/10"
+                          },
+                          {
+                            "nome": "Gvinah",
+                            "empresa": "Gvinah Industria e Comercio de Alimentos Ltda",
+                            "email": "marketing@gvinah.com.br",
+                            "cidade": "Sao Paulo/SP (fabrica de manteiga no Bom Retiro)",
+                            "segmento": "industria de manteiga e laticinios (manteiga, queijos, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 14/10"
+                                                      },
+                                                      {
+                                                        "nome": "Mirassol Refeições",
+                                                        "empresa": "Mirassol Refeições Ltda (Indaiatuba/SP - opera em Salto, Indaiatuba, Cabreúva, Itu)",
+                                                        "email": "mirassol@mirassolrefeicoes.com.br",
+                                                        "cidade": "Indaiatuba/SP",
+                                                        "segmento": "refeicoes coletivas e cozinhas industriais (60k refeicoes/mes, fritura diaria em volume) - NICHO PRIORITARIO (oleo de fritura usado); MX Google valido 14/10"
+                                                      },
+                                                      {
+                                                        "nome": "Supermercados Nagumo",
+                                                        "empresa": "Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP)",
+                                                        "email": "relacionamento@nagumo.com.br",
+                                                        "cidade": "Guarulhos/SP (lojas na RM SP e interior)",
+                                                        "segmento": "supermercados (rede regional, padaria/rotisserie/acougue, fritura alto volume) - NICHO PRIORITARIO (oleo de fritura usado); MX Outlook valido 14/10"
+                                                      }
+                                                    ]

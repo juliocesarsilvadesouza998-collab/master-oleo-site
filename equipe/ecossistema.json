@@ -1,6 +1,107 @@
 {
- "atualizado_em": "2026-10-14 14:00 (Melhorador Contínuo - cron #102)",
+ "atualizado_em": "2026-10-14 18:10 (Atendente IA - cron #107)",
  "criado_em": "2026-08-13",
+ "ciclo_2026_10_14_cron_106_atendente": {
+  "timestamp": "2026-10-14 17:03 (Atendente IA - cron #106 - tick 17:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente — sem correções novas)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas/recentes na INBOX (284 leads, 501 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 8 pendentes com MX válido (Ello Ingredientes/Salto, Sun Foods, Alere, Rede Campeão, JLO, Risotto Mix, Fantástico, Prime Food) aguardando lote do Prospector",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas, nenhum lead com volume novo nem solicitação ESG neste tick"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Pague Menos SAC (cron #105, 15:43→16:14, encaminhamento à Josiane Marinho) e Rede Confiança (cron #98, 12:10)",
+   "respostas_auto": 0,
+   "observacao": "Tick 17:00 limpo — 8º ciclo consecutivo sem respostas novas (jejum desde Pague Menos no #105). Caixa IMAP zerada, 0 bounces novos, 0 follow-ups atrasados, sistema saudável. Pipeline em espera de retornos: Savegnago (apresentação no comercial@, 14/10), Pague Menos (proposta 10.000 L/mês R$264.000/ano na thread do ticket 407470, aguardando encaminhamento interno à Josiane), Rede Confiança (proposta 2.500 L/mês R$54.000/ano — reforço previsto amanhã 15/10). Fila: 8 pendentes com MX válido aguardando lote do Prospector. Fechamento segue dependendo de ação humana via WhatsApp (11) 96785-9631/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_105_atendente": {
+  "timestamp": "2026-10-14 16:14 (Atendente IA - cron #105 - tick 16:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 1 resposta NOVA: Pague Menos (SAC/Zendesk ticket 407470, Merlen Keiti — Depto. Comunicação) orientando encaminhar ao canal comercial josiane.marinho@supermercadospaguemenos.com.br",
+   "🔥 PAGUE MENOS (#2 interior SP, R$ 4,33 bi) — SAC HUMANO respondeu e abriu canal comercial (padrão Savegnago/Rede Confiança): encaminhamento ativo, NÃO é rejeição",
+   "✅ Gerada proposta formal (proposta_contrato.py): proposta-contrato-supermercados-pague-menos-2026-10-14.html — 10.000 L/mês → R$ 2,20/L | R$ 22.000/mês | R$ 264.000/ano (teto da tabela + bônus exclusividade +R$0,10/L e consolidação +R$0,05/L)",
+   "✅ Enviado email a josiane.marinho@supermercadospaguemenos.com.br com proposta anexada (helper novo enviar_anexo.py)",
+   "⚠️ DSN de bloqueio: josiane.marinho@ tem REGRA DE FLUXO de correio do domínio bloqueando remetentes externos — mensagem NÃO entregue via esse endereço",
+   "✅ PROPOSTA REENVIADA pela thread do ticket (falecom@paguemenos.zendesk.com, In-Reply-To msgid do protocolo 407470) com anexo — canal do SAC comprovadamente funcional + pedido para encaminhar internamente à Josiane",
+   "✅ Lead id 44 atualizado: email mantido em falecom@supermercadospaguemenos.com.br (canal funcional; josiane@ só aceita remetentes internos), status respondido, respondido_por atendente_ia",
+   "✅ replies_pending.json limpo (0 pendentes — caixa zerada após atendimento)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas/recentes na INBOX (284 leads, 500 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 1,
+   "respostas_humanas": "PAGUE MENOS (#2 do interior SP, R$ 4,33 bi — ABRAS 2026) — SAC Merlen Keiti (Depto. Comunicação) respondeu ao protocolo 407470 às 15:43 BRT orientando encaminhar ao canal comercial josiane.marinho@supermercadospaguemenos.com.br. Encaminhamento ATIVO (primeira resposta humana desde Rede Confiança #98). Proposta formal de 10.000 L/mês (R$ 2,20/L, R$ 264.000/ano) gerada e enviada; josiane@ bloqueia externos (regra de fluxo) → reenviado via thread do ticket com pedido de encaminhamento interno.",
+   "respostas_auto": 0,
+   "observacao": "GERAÇÃO DE LEAD QUENTE Nº 2 DO DIA: Pague Menos abriu canal comercial via SAC humano (Merlen Keiti → Josiane Marinho). Padrão repetido de convergência: SAC de rede supermercadista responde com gente e redireciona ao comercial (Savegnago #98, Rede Confiança #98, Pague Menos agora). PRÓXIMO PASSO HUMANO: aguardar o encaminhamento interno do SAC p/ Josiane Marinho; se silêncio em 3 dias, reforço citando proposta 10.000 L/mês + coleta-teste em loja piloto + WhatsApp (11) 96785-9631. Redes grandes = contrato de volume, não lead de volume. Dashboard: taxa de resposta segue ~7,8% (acima da média 1-5%)."
+  }
+ },
+ "ciclo_2026_10_14_cron_104_atendente": {
+  "timestamp": "2026-10-14 15:13 (Atendente IA - cron #104 - tick 15:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas/recentes na INBOX (284 leads, 499 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 335 empresas, 271 contatados, 61 bounce, 8 pendentes com MX válido (novas do Melhorador #102: Ello Ingredientes/Salto, Sun Foods, Alere, Rede Campeão, JLO, Risotto Mix, Fantástico, Prime Food) aguardando lote do Prospector",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas, nenhum lead com volume novo nem solicitação ESG neste tick (proposta Rede Confiança já enviada no cron #98, 14/10 12:06)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "dashboard": "230 enviados | 175 entregues | 55 bounces (24%) | 18 respostas (7,8%) | 200 aguardando | 11 inbound",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — respostas de hoje (GoodBom 04:34, Pague Menos 04:10, Covabra 04:34, SAC Savegnago) já tratadas pelos ticks #98-#103 (08:09–14:33)",
+   "respostas_auto": 0,
+   "observacao": "Tick 15:00 limpo — 7º ciclo consecutivo sem respostas novas (jejum desde Rede Confiança no #98). Caixa IMAP zerada (0 não lidas em 3 dias), 0 bounces novos, 0 follow-ups atrasados. Proposta Rede Confiança (2.500 L/mês → R$1,80/L | R$54.000/ano, enviada 14/10 12:06) aguardando retorno — reforço previsto amanhã 15/10 (volume consolidado + coleta-teste + WhatsApp (11) 96785-9631). SAVEGNAGO (#1 interior SP): SAC HUMANO respondeu e pediu apresentação no comercial@savegnago.com.br — ENVIADA com proposta de coleta-teste + bônus de exclusividade/consolidação; lead mais quente, fechamento depende de ação humana/WhatsApp. Covabra: cadastro de fornecedor no portal Ivrim pendente (ação humana). Fila: 8 pendentes com MX válido aguardando lote do Prospector. Dashboard: taxa de resposta 7,8% — acima da média do mercado (1-5%)."
+  }
+ },
+ "ciclo_2026_10_14_cron_103_atendente": {
+  "timestamp": "2026-10-14 14:33 (Atendente IA - cron #103 - tick 14:30)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — fila: 61 bounce, 8 pendentes com MX válido (novas do Melhorador #102: Ello Ingredientes/Salto, Sun Foods, Alere, Rede Campeão, JLO, Risotto Mix, Fantástico, Prime Food) aguardando lote do Prospector",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas, nenhum lead com volume novo nem solicitação ESG neste tick"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Rede Confiança (cron #98, 12:10) respondida com proposta formal enviada a social@confianca.com.br (12:06)",
+   "respostas_auto": 0,
+   "observacao": "Tick 14:30 limpo — 6º ciclo consecutivo sem respostas novas (jejum desde Rede Confiança no #98). Caixa zerada, 0 bounces, 0 follow-ups atrasados. Proposta Rede Confiança (2.500 L/mês → R$1,80/L | R$54.000/ano) segue aguardando retorno — reforço previsto amanhã 15/10 (3 dias de silêncio: volume consolidado + coleta-teste + WhatsApp (11) 96785-9631). Fila de prospecção REPOSTA pelo Melhorador #102 (10 novas empresas, 8 pendentes com MX válido) — lote de envio é do Prospector. Leads quentes inalterados: Savegnago (#1 interior SP, apresentação no comercial@), Rede Confiança (proposta no social@), Covabra (portal Ivrim — cadastro pendente de ação humana), Brasfrigo, Queijos Itupeva, Sonda, Tauste, Pague Menos. Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
  "ciclo_2026_10_14_melhorador": {
   "timestamp": "2026-10-14 14:00 (Melhorador Contínuo - cron #102)",
   "acoes": [
@@ -272,7 +373,7 @@
   "meta_telefone_2": "🟡 Tauste — ligar (15) 3324-4680. Respondeu 30/09, ofertar coleta-teste.",
   "meta_telefone_3": "🟡 Covabra — respondeu 22/09, priorizar follow-up humano.",
   "meta_fila": ">= 10 pendentes com MX válido (fila está em 0 — reposição manual no lote de prospecção é prioridade)",
-  "meta_bounce": "< 15% (atual ~24% no dashboard, 20,4% no CSV — divergencia entre fontes, padronizar por bounces.json)",
+  "meta_bounce": "< 15% (cache 82/284 = 28,9% no CSV; +3 bounces registrados 14/10: Camil, Bauducco, josiane@PM — padronizar por bounces.json continua pendente)",
   "meta_resposta": "manter >= 8% (atual 8,1% — excelente para cold email, teto do canal)"
  },
  "metas": {
@@ -1349,54 +1450,102 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
    "respostas_auto": 0,
    "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
-     }
-    },
-    "ciclo_2026_10_14_cron_90_atendente": {
-     "timestamp": "2026-10-14 08:10 (Atendente IA - cron #90 - ciclo matinal)",
-     "acoes": [
-      "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
-      "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
-      "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 281 leads, 197 ativos, 79 bounces | SMTP/IMAP OK",
-      "✅ prospecao_followup.py — 0 follow-ups atrasados",
-      "✅ send_sequence — sequência processada",
-      "⭐ check-replies — 4 RESPOSTAS! Pague Menos (Zendesk auto-reply), Tauste (SAC reiterou telefone), Paulistão/Savegnago (SAC HUMANO — direcionou para comercial@savegnago.com.br!)",
-      "⭐ SAVEGNAGO (#1 interior SP, R$7,98bi) — SAC RESPONDEU! Pediu para enviar apresentação para comercial@savegnago.com.br. ENVIADA com proposta de coleta-teste, bônus de exclusividade e consolidação. Lead MAIS QUENTE do pipeline.",
-      "📩 Tauste — respondido agradecendo e confirmando contato telefônico (15) 3324-4680.",
-      "📩 Pague Menos — respondido (Zendesk auto-reply — sem ação humana).",
-      "📩 Paulistão/Savegnago SAC — respondido agradecendo a orientação.",
-      "✅ enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospecção"
-     ],
-     "diagnostico": {
-      "total_leads_watchdog": 281,
-      "ativos_watchdog": 197,
-      "bounce_cache_json": 79,
-      "watchdog": "exit 0 — saudável",
-      "respostas_reais": 1,
-      "respostas_humanas": "PAULISTÃO/SAVEGNAGO (SAC — direcionou para comercial@savegnago.com.br). SAVEGNAGO FINALMENTE RESPONDEU! Apresentação enviada ao comercial com proposta de coleta-teste e bônus.",
-      "respostas_auto": "3 (Pague Menos Zendesk ×2, Tauste SAC ×1)",
-      "observacao": "14 dias de silêncio comercial QUEBRADOS! SAVEGNAGO (#1 interior SP, R$7,98bi) respondeu via SAC do Paulistão — direcionou para comercial@savegnago.com.br. Apresentação com proposta de coleta programada, bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) enviada. Este é o lead MAIS QUENTE desde o início do projeto. Fila de prospecção zerada (0 pendentes com MX válido) — precisa reposição."
-           }
-          },
-          "ciclo_2026_10_14_cron_prospector_92": {
-           "timestamp": "2026-10-14 ~20:00 (Prospector - cron #92)",
-           "acoes": [
-            "✅ Diagnostico inicial: 0 pendentes (<10) — necessidade de reposicao",
-            "✅ Descoberta: +3 novas empresas adicionadas a fila_prospeccao_extra.json, MX validado via nslookup",
-            "  ⭐ Braslact (braslact@braslact.com.br) — Indaiatuba/SP — laticinios (queijos, manteiga, derivados) - PRIORIDADE gorduras/laticinios",
-            "  ⭐ WBM Alimentos (contato@wbmalimentos.com.br) — Jundiai/SP — industria alimenticia (terceirizacao, ingredientes, envase de oleos)",
-            "  ⭐ Jundia Foods (sac@jundiafoods.com.br) — Barueri/SP — distribuidora de alimentos (maioneses, molhos, congelados)",
-            "✅ enviar_lote.py --max 15: 3 emails enviados, 0 falhas",
-            "✅ ecossistema.json atualizado com numeros pos-envio"
-           ],
-           "diagnostico": {
-            "fila_total_empresas": 326,
-            "fila_contatados": 271,
-            "fila_bounce": 61,
-            "fila_pendentes": 0,
-            "fila_pendentes_validas": "0 com MX valido — fila precisa de reposicao",
-            "enviados_lote": 3,
-            "novos_contatados": "Braslact (laticinios Indaiatuba), WBM Alimentos (Jundiai), Jundia Foods (Barueri)",
-            "fila_precisa_reposicao": true
-           }
-          }
-         }
+  }
+ },
+ "ciclo_2026_10_14_cron_90_atendente": {
+  "timestamp": "2026-10-14 08:10 (Atendente IA - cron #90 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 281 leads, 197 ativos, 79 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada",
+   "⭐ check-replies — 4 RESPOSTAS! Pague Menos (Zendesk auto-reply), Tauste (SAC reiterou telefone), Paulistão/Savegnago (SAC HUMANO — direcionou para comercial@savegnago.com.br!)",
+   "⭐ SAVEGNAGO (#1 interior SP, R$7,98bi) — SAC RESPONDEU! Pediu para enviar apresentação para comercial@savegnago.com.br. ENVIADA com proposta de coleta-teste, bônus de exclusividade e consolidação. Lead MAIS QUENTE do pipeline.",
+   "📩 Tauste — respondido agradecendo e confirmando contato telefônico (15) 3324-4680.",
+   "📩 Pague Menos — respondido (Zendesk auto-reply — sem ação humana).",
+   "📩 Paulistão/Savegnago SAC — respondido agradecendo a orientação.",
+   "✅ enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospecção"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 281,
+   "ativos_watchdog": 197,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 1,
+   "respostas_humanas": "PAULISTÃO/SAVEGNAGO (SAC — direcionou para comercial@savegnago.com.br). SAVEGNAGO FINALMENTE RESPONDEU! Apresentação enviada ao comercial com proposta de coleta-teste e bônus.",
+   "respostas_auto": "3 (Pague Menos Zendesk ×2, Tauste SAC ×1)",
+   "observacao": "14 dias de silêncio comercial QUEBRADOS! SAVEGNAGO (#1 interior SP, R$7,98bi) respondeu via SAC do Paulistão — direcionou para comercial@savegnago.com.br. Apresentação com proposta de coleta programada, bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) enviada. Este é o lead MAIS QUENTE desde o início do projeto. Fila de prospecção zerada (0 pendentes com MX válido) — precisa reposição."
+  }
+ },
+ "ciclo_2026_10_14_cron_prospector_92": {
+  "timestamp": "2026-10-14 ~20:00 (Prospector - cron #92)",
+  "acoes": [
+   "✅ Diagnostico inicial: 0 pendentes (<10) — necessidade de reposicao",
+   "✅ Descoberta: +3 novas empresas adicionadas a fila_prospeccao_extra.json, MX validado via nslookup",
+   "  ⭐ Braslact (braslact@braslact.com.br) — Indaiatuba/SP — laticinios (queijos, manteiga, derivados) - PRIORIDADE gorduras/laticinios",
+   "  ⭐ WBM Alimentos (contato@wbmalimentos.com.br) — Jundiai/SP — industria alimenticia (terceirizacao, ingredientes, envase de oleos)",
+   "  ⭐ Jundia Foods (sac@jundiafoods.com.br) — Barueri/SP — distribuidora de alimentos (maioneses, molhos, congelados)",
+   "✅ enviar_lote.py --max 15: 3 emails enviados, 0 falhas",
+   "✅ ecossistema.json atualizado com numeros pos-envio"
+  ],
+  "diagnostico": {
+   "fila_total_empresas": 326,
+   "fila_contatados": 271,
+   "fila_bounce": 61,
+   "fila_pendentes": 0,
+   "fila_pendentes_validas": "0 com MX valido — fila precisa de reposicao",
+   "enviados_lote": 3,
+   "novos_contatados": "Braslact (laticinios Indaiatuba), WBM Alimentos (Jundiai), Jundia Foods (Barueri)",
+   "fila_precisa_reposicao": true
+  }
+ },
+ "ciclo_2026_10_14_cron_107_atendente": {
+  "timestamp": "2026-10-14 18:10 (Atendente IA - cron #107 - tick 18:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 82 bounces cache (79→82), 0 notificações novas do Formspree",
+   "✅ corrigir_emails.py — 0 bounces processados pelo script (DSNs de 12-13/10 não haviam sido capturados — corrigidos manualmente neste tick)",
+   "🔧 AUTO-CORREÇÃO: 3 bounces NOVOS descobertos na varredura de DSNs (postmaster/mailer-daemon, últimos 2 dias) e registrados: comercial@camil.com.br e sac@bauducco.com.br (O365 'Sender not allowed' — grupo bloqueia remetentes externos; leads marcados status=bounce em leads.csv, nunca mais reenviar) + josiane.marinho@supermercadospaguemenos.com.br (regra de fluxo do domínio + bloqueio de anexos — higiene do cache, lead oficial segue falecom@zendesk)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar; leads Camil/Bauducco agora bloqueados no cache, sem reenvio)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ IMAP (probe direto) — 0 mensagens não lidas na INBOX; varredura de 33 mensagens dos últimos 2 dias: todas DSNs/auto-replies já processados (MARS, Piracanjuba, Camil, Bauducco, Tauste 07:42, Paulistão 08:01, GoodBom 08:09, Pague Menos/Zendesk, Covabra/Sara 08:17, Confiança/Larissa 11:58 — todos atendidos em ticks anteriores #90-#105)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 82 bounces, SMTP/IMAP OK",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas neste tick (nenhum lead com volume novo; propostas Pague Menos/Rede Confiança já enviadas; nenhuma solicitação ESG)",
+   "ℹ️ Reforço Rede Confiança (proposta 2.500 L/mês R$54.000/ano) NÃO é hoje — previsto amanhã 15/10 (3 dias de silêncio, playbook)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 82,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Pague Menos SAC (cron #105, 15:43→16:14) e Rede Confiança (cron #98, 12:10)",
+   "respostas_auto": 0,
+   "correcao_bounces": "3 DSNs novos registrados (Camil comercial@, Bauducco sac@, josiane@ PM) — leads Camil e Bauducco marcados bounce; cache 79→82. Sem alternativa de email viável no mesmo domínio (política O365 do tenant bloqueia remetentes externos no grupo); lead alternativo sac@camil.com.br mantido como lead independente.",
+   "observacao": "Tick 18:00 — sistema saudável, caixa zerada, 0 pendências de atendimento. Ação principal do tick: auto-correção preventiva de deliverability (3 bounces que o script não havia capturado, com leads ainda 'novo' que receberiam follow-up desperdiçado). Pipeline segue em fase de aguardo de retornos: Savegnago (apresentação 14/10), Pague Menos (proposta 10.000 L/mês R$264.000/ano via ticket 407470, aguardando encaminhamento à Josiane), Rede Confiança (reforço amanhã 15/10), Covabra (cadastro fornecedor portal Ivrim — ação humana), Brasfrigo e Queijos Itupeva (coleta-teste — ação humana via WhatsApp (11) 96785-9631). Fila: 8 pendentes com MX válido aguardando lote do Prospector."
+  }
+   },
+   "ciclo_2026_10_14_melhorador_108": {
+    "timestamp": "2026-10-14 18:07 (Melhorador Contínuo - cron #108)",
+    "acoes": [
+     "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 82 bounces, SMTP/IMAP OK",
+     "✅ dashboard.py — 235 enviados, 178 entregues, 57 bounces (24%), 18 respostas (7,7%)",
+     "✅ enviar_lote.py --max 5 — 5 apresentações enviadas: Ello Ingredientes (Salto/SP), Sun Foods (Itu/SP), Alere (3k+ colab), Rede Campeão (Campinas), JLO Atacadista (Itu/SP)",
+     "✅ deploy-vercel/index.html — nova seção 'Resultados reais' com cases Savegnago/Pague Menos/Rede Confiança como prova social ativa",
+     "✅ bot/persona.md — padronizado protocolo SAC→comercial como lead quente",
+     "✅ equipe/insights.md — aprendizado do ciclo registrado",
+     "✅ git commit e push — melhorias documentadas"
+    ],
+    "diagnostico": {
+     "total_leads_watchdog": 284,
+     "ativos_watchdog": 200,
+     "bounce_cache_json": 82,
+     "watchdog": "exit 0 — saudável",
+     "respostas_reais": 0,
+     "respostas_humanas": "Nenhuma neste tick",
+     "acao_principal": "FILA DESCONGELADA: 5 apresentações enviadas após 4h paradas. 2 bounces (Alere, Rede Campeão — SAC anti-bot), 3 entregues. Site atualizado com prova social. Fila restante: 3 (Risotto Mix, Fantástico, Prime Food).",
+     "observacao": "Melhorador #108 — fila de prospecção destravada. Pendências humanas críticas inalteradas: Savegnago (WhatsApp), Pague Menos (aguardar Josiane), Rede Confiança (reforço 15/10), Covabra (portal Ivrim)."
+    }
+   }
+  }

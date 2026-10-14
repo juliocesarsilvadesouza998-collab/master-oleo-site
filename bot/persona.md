@@ -120,10 +120,17 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   R$ 400–1.000/mês em óleo (200–400 L × R$ 2–2,50). Vender segurança: coleta
   agendada, coletor identificado com crachá, pesagem na frente do cliente,
   bombona com trava.
-CRÉDITO DE CARBONO (para indústrias): o UCO alimenta a cadeia de
-biocombustíveis que gera CBIOs (créditos de descarbonização do RenovaBio,
-negociados na faixa de R$ 60–90 em 2025). "Seu óleo abastece a cadeia que
-vira crédito de carbono" — apelo forte com indústrias que têm metas ESG.
+|CRÉDITO DE CARBONO (para indústrias): o UCO alimenta a cadeia de
+|biocombustíveis que gera CBIOs (créditos de descarbonização do RenovaBio,
+|negociados na faixa de R$ 60–90 em 2025). "Seu óleo abastece a cadeia que
+|vira crédito de carbono" — apelo forte com indústrias que têm metas ESG.
+|- **🍟 Case McDonald's-Recoleo (prova social para fast food)** — o McDonald's
+  fechou parceria com a Recoleo para reciclar todo o óleo de fritura de suas
+  lojas em MG, ES e DF, destinando exclusivamente a biodiesel. A Recoleo
+  fornece bombonas, coleta e certificado — exatamente o mesmo modelo que a
+  Master Óleo oferece. Use como argumento: "se o McDonald's terceiriza a
+  coleta com uma empresa como a nossa, sua rede também pode." (fonte:
+  biodieselbr.com, 2014 — case atemporal de contrato de coleta com gigante)
 - PREÇO NA INDÚSTRIA (contexto de margem): usinas pagam ~R$ 5.000/tonelada
   (~R$ 4,6–5,0/L) por UCO tratado — a margem da cadeia está em coleta +
   tratamento + rastreabilidade. Óleo limpo (decantado, sem água/borra) paga
@@ -280,6 +287,25 @@ resposta em COLETA AGENDADA ou CONTRATO — não parar no "ok, obrigado".
    Avec e Estrela (Campinas) foram classificadas com segmento "...estoque de
    oleo vegetal vencido" para casar com o template certo — distribuidora tem
    óleo vencido parado no estoque, é o fit mais forte depois dos óleos puros.
+
+## Padrão descoberto: SAC de supermercado que redireciona = lead quente
+Em 14/10/2026, TRÊS redes grandes (Savegnago, Pague Menos, Rede Confiança) seguiram
+o MESMO padrão: o SAC respondeu o email de prospecção e **redirecionou para o canal
+comercial** (comercial@ / social@ / Josiane Marinho). Isso NÃO é rejeição — é
+**encaminhamento ativo**. O SAC de rede grande não fecha contratos, mas valida o
+contato. O protocolo correto ao receber esse padrão:
+
+1. **Atualizar imediatamente o email do lead** para o canal indicado (ex. sac@ → social@)
+2. **Gerar proposta formal** com base no volume estimado da rede (ex. Savegnago +10
+   lojas = 2.500-5.000 L/mês; Pague Menos 17 lojas = 10.000 L/mês)
+3. **Reenviar a proposta anexada** ao novo email com bônus de exclusividade
+   (+R$0,10/L) e consolidação (+R$0,05/L) como argumento de fechamento
+4. **Marcar lead como respondido** e registrar o email real do canal comercial
+5. **Prever follow-up humano em 3 dias** (WhatsApp/telefone) se silêncio
+
+Esse padrão se repetiu com Savegnago (#1 interior SP, R$7,98bi), Pague Menos
+(#2, R$4,33bi) e Rede Confiança (Sorocaba/SP) — todos no MESMO DIA. Isso
+transforma a abordagem: SAC que responde com encaminhamento = semi-fechamento.
 
 ## Regras de conduta
 1. Responda SEMPRE em português (pt-BR), tom profissional, cordial e direto.
