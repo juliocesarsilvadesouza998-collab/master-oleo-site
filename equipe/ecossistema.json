@@ -1,8 +1,32 @@
 {
- "atualizado_em": "2026-10-13 19:34 (Atendente - cron #89)",
+ "atualizado_em": "2026-10-14 08:35 (Atendente - cron #91 - ciclo matinal)",
  "criado_em": "2026-08-13",
+ "ciclo_2026_10_14_cron_91_atendente": {
+  "timestamp": "2026-10-14 08:35 (Atendente IA - cron #91 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada",
+   "⭐ check-replies — 3 respostas: GoodBom (auto-ack proposta em análise), Pague Menos (Zendesk auto-reply do PROTOCOLO 407470 — eco da nossa própria msg, sem ação humana), COVABRA (RESPOSTA HUMANA — Sara convidou para cadastro de fornecedor no portal Ivrim!)",
+   "📩 COVABRA (Sara) — RESPONDIDO: confirmado cadastro de fornecedor no portal + oferta de coleta-teste de 1 mês + WhatsApp. Lead QUENTE — portal de fornecedores oficial.",
+   "📩 GoodBom (Patricia) — respondido mantendo canal aberto, disponibilidade para esclarecimentos, oferta de coleta-teste, WhatsApp.",
+   "📭 Pague Menos — sem resposta humana (eco Zendesk do nosso próprio envio — responder geraria loop). Marcado como tratado.",
+   "✅ Nenhuma nova proposta de contrato gerada (nenhum dos 3 informou volume novo — GoodBom e Covabra já receberam propostas em 13/10)",
+   "✅ Nenhum relatório ESG solicitado"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 281,
+   "ativos_watchdog": 197,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável (0 follow-ups atrasados)",
+   "respostas_reais": 1,
+   "respostas_humanas": "COVABRA (Sara, 14/10 08:17 BRT) — convite oficial para cadastro de fornecedor no portal Ivrim (isac.ivrim.com.br). Próximo passo concreto do funil: cadastro no portal + coleta-teste.",
+   "respostas_auto": "2 (GoodBom: proposta encaminhada ao dept. responsável, Patricia — é auto-ack mas com nome humano; Pague Menos: Zendesk protocolo 407470 = eco da nossa própria mensagem)"
+  }
+ },
  "metas_semana_13_10_a_19_10": {
-  "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
+  "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — SAC RESPONDEU 14/10! Direcionou para comercial@savegnago.com.br — apresentação enviada. PRIORIDADE ABSOLUTA.",
   "meta_contrato_2": "🔴 FECHAR Brasfrigo (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
   "meta_contrato_3": "🔴 Queijos Itupeva (Rafael) — agendar coleta-teste. Lead mais quente individual.",
   "meta_telefone_1": "🔴 Sonda Supermercados (R$ 6,12 bi) — ligar (11) 2145-6200. Retomar contato.",
@@ -1086,6 +1110,32 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
    "respostas_auto": 0,
    "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
-  }
- }
+     }
+    },
+    "ciclo_2026_10_14_cron_90_atendente": {
+     "timestamp": "2026-10-14 08:10 (Atendente IA - cron #90 - ciclo matinal)",
+     "acoes": [
+      "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+      "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados. 281 leads, 197 ativos, 79 bounces | SMTP/IMAP OK",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada",
+      "⭐ check-replies — 4 RESPOSTAS! Pague Menos (Zendesk auto-reply), Tauste (SAC reiterou telefone), Paulistão/Savegnago (SAC HUMANO — direcionou para comercial@savegnago.com.br!)",
+      "⭐ SAVEGNAGO (#1 interior SP, R$7,98bi) — SAC RESPONDEU! Pediu para enviar apresentação para comercial@savegnago.com.br. ENVIADA com proposta de coleta-teste, bônus de exclusividade e consolidação. Lead MAIS QUENTE do pipeline.",
+      "📩 Tauste — respondido agradecendo e confirmando contato telefônico (15) 3324-4680.",
+      "📩 Pague Menos — respondido (Zendesk auto-reply — sem ação humana).",
+      "📩 Paulistão/Savegnago SAC — respondido agradecendo a orientação.",
+      "✅ enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospecção"
+     ],
+     "diagnostico": {
+      "total_leads_watchdog": 281,
+      "ativos_watchdog": 197,
+      "bounce_cache_json": 79,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 1,
+      "respostas_humanas": "PAULISTÃO/SAVEGNAGO (SAC — direcionou para comercial@savegnago.com.br). SAVEGNAGO FINALMENTE RESPONDEU! Apresentação enviada ao comercial com proposta de coleta-teste e bônus.",
+      "respostas_auto": "3 (Pague Menos Zendesk ×2, Tauste SAC ×1)",
+      "observacao": "14 dias de silêncio comercial QUEBRADOS! SAVEGNAGO (#1 interior SP, R$7,98bi) respondeu via SAC do Paulistão — direcionou para comercial@savegnago.com.br. Apresentação com proposta de coleta programada, bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) enviada. Este é o lead MAIS QUENTE desde o início do projeto. Fila de prospecção zerada (0 pendentes com MX válido) — precisa reposição."
+     }
+    }
 }

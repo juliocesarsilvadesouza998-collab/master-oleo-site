@@ -1,3 +1,42 @@
+## 2026-10-14 08:35 (Atendente IA - cron #91 - ciclo matinal)
+
+### Diagnóstico do ciclo
+- 281 leads, 197 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ Fila de prospecção: 323 empresas, 0 pendentes
+- ⭐ **QUEBRA DO SILÊNCIO: COVABRA respondeu com ação humana (14/10 08:17 BRT)** — Sara convidou para cadastro de fornecedor no portal oficial (isac.ivrim.com.br). É o 1º lead com passo concreto de onboarding (não só "ok, obrigado").
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 3 respostas: GoodBom (auto-ack), Pague Menos (eco Zendesk), **Covabra (HUMANA)** |
+| reply GoodBom | canal mantido aberto + disponibilidade + coleta-teste + WhatsApp |
+| reply Covabra | confirmado cadastro no portal Ivrim + coleta-teste de 1 mês + WhatsApp |
+| Pague Menos | sem resposta (eco do nosso próprio envio — responder geraria loop) |
+| proposta_contrato.py | não executado — nenhum lead informou volume novo (GoodBom/Covabra já têm propostas de 13/10) |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi) — SAC respondeu 14/10, apresentação enviada a comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥🔥 **Covabra (NOVO: portal de fornecedores!)** — Sara respondeu 14/10 convidando para cadastro oficial de fornecedor no Ivrim. **AÇÃO HUMANA NECESSÁRIA: preencher o formulário de cadastro** (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor). Depois do cadastro, equipe do Covabra entra em contato. Coleta-teste de 1 mês ofertada como atalho.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — Zendesk só ecoa auto-replies; retomar por canal comercial/telefone.
+8. 🟡 **GoodBom** — proposta "em análise no departamento responsável" (Patricia) — auto-ack formal, acompanhar.
+
+### Observações
+- **Covabra é o funil mais avançado do pipeline**: 22/09 respondeu → 13/10 proposta formal (4.000 L/mês, R$ 86,4 mil/ano) → 14/10 convite para cadastro oficial de fornecedor. Próximo passo é o cadastro no portal (só humano consegue) e a coleta-teste.
+- **Pague Menos segue como eco de Zendesk**: as respostas são confirmações automáticas do protocolo 407470. O canal SAC/Zendesk não rende — insistir pelo comercial/telefone (Josiane Marinho).
+- Silêncio de 14 dias quebrado parcialmente: 1 resposta humana (Covabra) + 1 auto-ack formal (GoodBom).
+
+---
+
 ## 2026-10-13 19:34 (Analista de Qualidade - cron sábado)
 
 ### Diagnóstico do dia
