@@ -519,10 +519,10 @@
   },
   {
     "nome": "Rede Confianca Supermercados",
-    "empresa": "Rede Confianca Supermercados",
-    "email": "sac@confianca.com.br",
-    "cidade": "Sorocaba/SP (2 lojas: Pannunzio e Av. Sao Paulo 27mil m2; rede: Bauru, Marilia, Jau, Botucatu, Pederneiras)",
-    "segmento": "Supermercados (rede)"
+        "empresa": "Rede Confianca Supermercados",
+        "email": "social@confianca.com.br",
+        "cidade": "Sorocaba/SP (2 lojas: Pannunzio e Av. Sao Paulo 27mil m2; rede: Bauru, Marilia, Jau, Botucatu, Pederneiras)",
+        "segmento": "Supermercados (rede)"
   },
   {
     "nome": "Rede Bom Lugar Supermercados",
@@ -1651,5 +1651,89 @@
     "email": "sacc@casteloalimentos.com.br",
     "cidade": "Jundiai/SP",
     "segmento": "industria de alimentos (molhos, vinagres, conservas) - usa oleos vegetais em producao - NICHO PRIORITARIO (industria alimenticia)"
-  }
-]
+      },
+      {
+        "nome": "Braslact",
+        "empresa": "Braslact Produtos de Leite Ltda",
+        "email": "braslact@braslact.com.br",
+        "cidade": "Indaiatuba/SP",
+        "segmento": "industria de laticinios (queijos, manteiga, derivados) - PRIORIDADE (gorduras/laticinios, vencidos >40% gordura)"
+      },
+      {
+        "nome": "WBM Alimentos",
+        "empresa": "WBM Alimentos Ltda",
+        "email": "contato@wbmalimentos.com.br",
+        "cidade": "Jundiai/SP",
+        "segmento": "industria alimenticia (terceirizacao, ingredientes, envase de oleos e aromas) - usa oleos vegetais"
+      },
+      {
+              "nome": "Jundia Foods",
+              "empresa": "BRGMN Comercio de Alimentos Ltda (Jundia Foods)",
+              "email": "sac@jundiafoods.com.br",
+              "cidade": "Barueri/SP",
+              "segmento": "distribuidora de alimentos (maioneses, molhos, congelados) - possivel geracao de vencidos"
+            },
+            {
+              "nome": "Sorocaba Frios",
+              "empresa": "Sorocaba Frios Distribuidora de Alimentos Ltda",
+              "email": "contato@sorocabafrios.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "distribuidora de laticinios e frios (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Google valido 14/10"
+            },
+            {
+              "nome": "Ello Ingredientes",
+              "empresa": "Ello Ingredientes Alimenticios Ltda (Salto/SP - mesma cidade)",
+              "email": "marketing@elloingredientes.com.br",
+              "cidade": "Salto/SP",
+              "segmento": "industria de ingredientes alimenticios (gorduras, emulsificantes, estabilizantes - usa oleos vegetais e gorduras em producao) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
+            },
+            {
+              "nome": "Sun Foods Brasil",
+              "empresa": "Sun Foods Brasil Industria e Comercio Ltda",
+              "email": "vendas@sunfoods.com.br",
+              "cidade": "Itu/SP",
+              "segmento": "industria de especialidades alimenticias (ingredientes, congelados, conservas - usa gorduras vegetais) - NICHO PRIORITARIO (industria alimenticia); MX Locaweb valido 14/10"
+            },
+            {
+              "nome": "Alere Alimentacao",
+              "empresa": "Alere Alimentacao e Servicos Ltda (3000+ colaboradores)",
+              "email": "gerente.relacionamento@alerealimentacao.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "refeicoes coletivas e restaurantes corporativos (oleo de fritura alto volume em todas as cozinhas) - NICHO PRIORITARIO (oleo de fritura usado); MX Emailemnuvem valido 14/10"
+            },
+            {
+              "nome": "Rede Campeao",
+              "empresa": "Rede Campeao (4 postos na Rodovia Bandeirantes - Campinas/SP)",
+              "email": "redecampeao@redecampeao.com.br",
+              "cidade": "Campinas/SP",
+              "segmento": "rede de restaurantes em postos de combustivel (oleo de fritura alto volume - fritura continua em todas as lojas) - NICHO PRIORITARIO (oleo de fritura usado); MX Locaweb valido 14/10"
+            },
+            {
+              "nome": "JLO Atacadista",
+              "empresa": "JLO Comercio de Alimentos Ltda (atacadista - Itu/SP)",
+              "email": "jloatacadista@outlook.com.br",
+              "cidade": "Itu/SP",
+              "segmento": "atacadista de alimentos (mercadorias vencidas, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (vencidos); MX Outlook valido 14/10"
+            },
+            {
+              "nome": "Risotto Mix Gastronomia",
+              "empresa": "Risotto Mix Gastronomia Fast Food Franquias (Campinas/SP)",
+              "email": "sac@risottomix.com.br",
+              "cidade": "Campinas/SP",
+              "segmento": "rede de franquias de restaurantes (oleo de fritura usado em todas as lojas) - NICHO PRIORITARIO (oleo de fritura usado); MX self-hosted valido 14/10"
+            },
+            {
+              "nome": "Fantastico Alimentos",
+              "empresa": "Fantastico Alimentos Ltda (Jacarei/SP)",
+              "email": "faleconosco@fantasticoalimentos.com.br",
+              "cidade": "Jacarei/SP",
+              "segmento": "industria de alimentos (molhos, conservas, condimentos - usa oleos vegetais em producao, estoque de vencidos) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
+            },
+            {
+              "nome": "Prime Food",
+              "empresa": "Prime Food Comercial Ltda (Sorocaba/SP)",
+              "email": "contato@comlprimefood.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "distribuidora de alimentos (mercearia, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Locaweb valido 14/10"
+            }
+          ]

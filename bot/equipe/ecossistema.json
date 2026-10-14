@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-13 19:34 (Atendente - cron #89)",
+ "atualizado_em": "2026-10-14 14:02 (Atendente IA - cron #91 - ciclo vespertino)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1086,6 +1086,61 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
    "respostas_auto": 0,
    "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
+  }
+ },
+ "ciclo_2026_10_14_cron_90_atendente": {
+  "timestamp": "2026-10-14 09:03 (Atendente IA - cron #90 - ciclo matinal)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces em cache, 0 notificacoes novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 281 leads, 197 ativos, 79 bounces | SMTP/IMAP OK",
+   "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+   "✅ send_sequence — sequencia processada",
+   "✅ check-replies — 0 respostas NOVAS (as 3 respostas do dia ja foram respondidas pelo tick matinal 08:09-08:34 BRT; replies_pending.json regravado vazio)",
+   "✅ Verificacao na pasta Sent: confirmados os 3 replies enviados hoje (Pague Menos 04:10 PDT, GoodBom 04:34 PDT, Covabra 04:34 PDT)"
+  ],
+  "respostas_do_dia_tratadas": [
+   "GoodBom Supermercados (Patricia) — 'proposta encaminhada ao departamento responsavel para analise'. Respondido agradecendo + oferta coleta-teste 1 mes + WhatsApp.",
+   "Pague Menos (Zendesk) — eco do proprio ticket (canal SAC). Respondido com cortesia; canal comercial segue por outros meios.",
+   "Covabra (Sara) — ENCAMINHOU PORTAL DE CADASTRO DE FORNECEDOR (isac.ivrim.com.br fluxo cadastrar-fornecedor). Respondido confirmando cadastro + coleta-teste. ACAO PENDENTE: preencher formulario (requer navegador/humano)."
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 281,
+   "ativos_watchdog": 197,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": "0 novas neste tick (3 do dia ja respondidas 08:09-08:34 BRT)",
+   "respostas_humanas": "Covabra (Sara) — unica com acao real pendente: cadastro de fornecedor no portal ivrim",
+   "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)"
+  },
+  "pendente_humano_critico": [
+   "🔴 CADASTRO COVABRA: preencher formulario de fornecedor https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor — prometido no reply de hoje; porta de entrada para contrato com rede grande (Limeira).",
+   "🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 14+ dias sem acao.",
+   "🔴 BRASFRIGO (Salto/SP) — agendar coleta-teste. Local.",
+   "🔴 QUEIJOS ITUPEVA (Rafael) — agendar coleta-teste.",
+   "🟡 SONDA — ligar (11) 2145-6200. TAUSTE — (15) 3324-4680. PAGUE MENOS — retomar via canal comercial. MUFFATO — (43) 3371-1700."
+  ]
+ },
+ "ciclo_2026-10-14_cron_91_atendente": {
+  "timestamp": "2026-10-14 14:02 (Atendente IA - cron #91 - ciclo vespertino)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas (replies_pending.json vazio)",
+   "enviar_lote.py --status — 326 empresas, 0 pendentes na fila"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": "0 novas neste tick",
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
+   "observacao": "Pipeline estavel em 284 leads, 200 ativos, 79 bounces. Fila de prospeccao: 326 empresas, 0 pendentes. 3 novos leads hoje (Braslact, WBM Alimentos, Jundia Foods). 14 dias sem respostas humanas. Todos os leads quentes inalterados — fechamento continua dependendo de acao humana (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
   }
  }
 }

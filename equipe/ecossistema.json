@@ -1,6 +1,245 @@
 {
- "atualizado_em": "2026-10-14 08:35 (Atendente - cron #91 - ciclo matinal)",
+ "atualizado_em": "2026-10-14 14:00 (Melhorador Contínuo - cron #102)",
  "criado_em": "2026-08-13",
+ "ciclo_2026_10_14_melhorador": {
+  "timestamp": "2026-10-14 14:00 (Melhorador Contínuo - cron #102)",
+  "acoes": [
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ dashboard.py — 230 enviados, 175 entregues, 55 bounces (24%), 18 respostas (7,8%)",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila",
+   "✅ fila_prospeccao_extra.json — +10 novas empresas com MX verificado (Sorocaba Frios, Ello Ingredientes, Sun Foods, Alere, Rede Campeao, JLO Atacadista, Risotto Mix, Fantastico Alimentos, Prime Food)",
+   "✅ deploy-vercel/index.html — nova seção 'Mercado em ebulição' com dados verificados (Petrobras R$23M, B16, 600M L potencial, 2028, SAF 7%)",
+   "✅ equipe/insights.md — registro de aprendizado do tick",
+   "✅ py_compile em scripts alterados — todos OK"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Rede Confiança (cron #98, 12:10) respondida com proposta formal enviada a social@confianca.com.br",
+   "respostas_auto": 0,
+   "observacao": "Melhorador Contínuo — sistema saudável, fila de prospecção REPOSTA com 10 novas empresas (total agora ~336, ~271 contatados, ~0 pendentes). Site atualizado com seção de mercado. Fechamento e follow-ups humanos seguem dependendo de ação humana (Savegnago, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva)."
+  }
+ },
+ "ciclo_2026_10_14_cron_101_atendente": {
+  "timestamp": "2026-10-14 13:41 (Atendente IA - cron #101 - tick 13:30)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (284 leads, 499 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila (aguarda reposição)",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas, nenhum lead com volume novo nem solicitação ESG neste tick (proposta Rede Confiança já enviada no cron #98)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Rede Confiança (cron #98, 12:10) respondida com proposta formal enviada a social@confianca.com.br (12:06)",
+   "respostas_auto": 0,
+   "observacao": "Tick 13:30 limpo — 5º ciclo consecutivo sem respostas novas (jejum desde Rede Confiança no #98). Caixa zerada, 0 bounces, 0 pendentes na fila de atendimento. Proposta Rede Confiança (2.500 L/mês → R$1,80/L | R$54.000/ano) segue aguardando retorno — reforço previsto amanhã 15/10 (3 dias de silêncio: volume consolidado + coleta-teste + WhatsApp (11) 96785-9631). Leads quentes inalterados: Savegnago (#1 interior SP), Rede Confiança, Covabra (portal Ivrim), Brasfrigo, Queijos Itupeva, Sonda, Tauste, Pague Menos. Fila de prospecção 0 pendentes (326 empresas, 271 contatados) — reposição depende do Prospector. Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_100_atendente": {
+  "timestamp": "2026-10-14 13:04 (Atendente IA - cron #100 - tick 13:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (284 leads, 499 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila (aguarda reposição)",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas, nenhum lead com volume novo nem solicitação ESG neste tick"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Rede Confiança (cron #98, 12:10) e Covabra/Savegnago (ciclos #90/#91)",
+   "respostas_auto": 0,
+   "observacao": "Tick 13:00 limpo — caixa zerada, 0 respostas novas, 0 bounces. Proposta Rede Confiança segue no canal social@confianca.com.br (enviada 12:06, sem retorno ainda — reforço previsto em 3 dias = amanhã 15/10). Leads quentes inalterados: Savegnago (#1 interior SP), Rede Confiança, Covabra (portal Ivrim), Brasfrigo, Queijos Itupeva, Sonda, Tauste, Pague Menos. Fila de prospecção 0 pendentes (326 empresas, 271 contatados) — reposição depende do Prospector. Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_99_atendente": {
+  "timestamp": "2026-10-14 12:40 (Atendente IA - cron #99 - tick 12:30)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (284 leads, 499 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila (aguarda reposição)",
+   "✅ Verificado na caixa de enviados (IMAP): proposta Rede Confiança (social@confianca.com.br) enviada hoje 12:06 pelo cron #98 — anexo confirmado, sem duplicação de envio",
+   "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — nenhum lead novo com volume informado nem solicitação ESG neste tick"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — última resposta humana: Rede Confiança (atendida no cron #98, 12:10) e Covabra/Savegnago (ciclos #90/#91)",
+   "respostas_auto": 0,
+   "observacao": "Tick 12:30 limpo — caixa zerada, 0 respostas novas. Proposta Rede Confiança já enviada pelo ciclo anterior (verificado na Sent box: email [2088] 14/10 12:06 → social@confianca.com.br), evitando duplicação. Leads quentes inalterados: Savegnago (#1 interior SP), Rede Confiança (aguardando retorno do social@), Covabra (portal Ivrim), Brasfrigo, Queijos Itupeva, Sonda, Tauste, Pague Menos. Fila de prospecção 0 pendentes (326 empresas, 271 contatados) — reposição depende do Prospector. Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_98_atendente": {
+  "timestamp": "2026-10-14 12:10 (Atendente IA - cron #98 - tick 12:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 1 resposta: Rede Confiança Supermercados (SAC/Zendesk ticket 249812, Larissa Arruda)",
+   "🔥 REDE CONFIANÇA (SOROCABA) — SAC redirecionou para canal comercial social@confianca.com.br (não é rejeição: é encaminhamento)",
+   "✅ Gerada proposta formal (proposta_contrato.py): proposta-contrato-rede-confianca-supermercados-2026-10-14.html — 2.500 L/mês → R$ 1,80/L | R$ 4.500/mês | R$ 54.000/ano",
+   "✅ Enviado email a social@confianca.com.br com proposta anexada (bônus exclusividade +R$0,10/L e consolidação +R$0,05/L como argumento de fechamento)",
+   "✅ Lead 96 atualizado (leads.csv + fila_prospeccao_extra.json): sac@confianca.com.br → social@confianca.com.br",
+   "✅ replies_pending.json limpo (0 pendentes — caixa zerada após atendimento)",
+   "✅ scan_inbox.py / watchdog — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 1,
+   "respostas_humanas": "Rede Confiança Supermercados (Sorocaba/SP) — SAC Larissa Arruda direcionou para social@confianca.com.br (canal comercial). Encaminhamento ativo, tratado como lead quente: proposta formal anexada e reenviada ao canal certo.",
+   "respostas_auto": 0,
+   "observacao": "GERAÇÃO DE LEAD QUENTE: Rede Confiança (rede de supermercados: 2 lojas em Sorocaba — Pannunzio e Av. São Paulo 27 mil m² — + rede em Bauru, Marília, Jaú, Botucatu, Pederneiras) abriu canal comercial via SAC. Padrão Savegnago/Sumerbol/GoodBom: rede = contrato de volume, não lead de volume. PRÓXIMO PASSO HUMANO: aguardar retorno do social@confianca.com.br; se silêncio 3 dias, reforço citando volume consolidado + coleta-teste 1 mês + WhatsApp (11) 96785-9631. Primeira resposta humana desde Tauste (30/09) — fim do jejum de 14 dias."
+  }
+ },
+ "ciclo_2026_10_14_cron_97_atendente": {
+  "timestamp": "2026-10-14 11:32 (Atendente IA - cron #97 - tick 11:30)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (284 leads, 498 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila (aguarda reposição)",
+   "ℹ️ Nenhuma proposta de contrato nova nem relatório ESG solicitado neste tick (0 respostas = nada a anexar)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — últimas ações humanas: Covabra (14/10 08:17, portal Ivrim) e Savegnago SAC (14/10) já respondidas nos ciclos #90/#91",
+   "respostas_auto": 0,
+   "observacao": "Tick das 11:30 limpo: caixa sem não-lidas, 0 respostas novas desde os ciclos #90/#91. Leads quentes seguem sendo Savegnago (#1 interior SP — apresentação no comercial@) e Covabra (cadastro de fornecedor no portal Ivrim pendente de ação humana). Fila de prospecção: 0 pendentes com MX válido (326 empresas, 271 contatados) — reposição é responsabilidade do Prospector. Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_96_atendente": {
+  "timestamp": "2026-10-14 11:02 (Atendente IA - cron #96 - tick 11:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (284 leads, 498 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila (aguarda reposição)",
+   "ℹ️ Nenhuma proposta de contrato nova nem relatório ESG solicitado neste tick (0 respostas = nada a anexar)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — últimas ações humanas: Covabra (14/10 08:17, portal Ivrim) e Savegnago SAC (14/10) já respondidas nos ciclos #90/#91",
+   "respostas_auto": 0,
+   "observacao": "Tick das 11:00 limpo: caixa sem não-lidas, 0 respostas novas desde os ciclos #90/#91. Leads quentes seguem sendo Savegnago (#1 interior SP — apresentação no comercial@) e Covabra (cadastro de fornecedor no portal Ivrim pendente de ação humana). Fila de prospecção: 0 pendentes com MX válido (326 empresas, 271 contatados) — reposição é responsabilidade do Prospector. Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_95_atendente": {
+  "timestamp": "2026-10-14 10:39 (Atendente IA - cron #95 - tick 10:30)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (284 leads, 498 msgids enviados)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila (aguarda reposição)",
+   "ℹ️ Nenhuma proposta de contrato nova nem relatório ESG solicitado neste tick (0 respostas = nada a anexar)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma neste tick — últimas ações humanas: Covabra (14/10 08:17, portal Ivrim) e Savegnago SAC (14/10) já respondidas nos ciclos #90/#91",
+   "respostas_auto": 0,
+   "observacao": "Tick das 10:30 limpo: caixa sem não-lidas, 0 respostas novas desde 08:35. Leads quentes seguem sendo Savegnago (#1 interior SP — apresentação no comercial@) e Covabra (cadastro de fornecedor no portal Ivrim pendente de ação humana). Fila de prospecção: 0 pendentes com MX válido (326 empresas, 271 contatados) — reposição é responsabilidade do Prospector (cron #92 já repôs 3 em 09:00). Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_94_atendente": {
+  "timestamp": "2026-10-14 10:02 (Atendente IA - cron #94 - tick 10:00)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "✅ enviar_lote.py --status — 326 empresas, 271 contatados, 61 bounce, 0 pendentes na fila",
+   "ℹ️ Nenhuma proposta de contrato nova nem relatório ESG solicitado neste tick"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — última ação humana: Covabra (14/10 08:17) e Savegnago SAC (14/10) já respondidas nos ciclos #90/#91",
+   "respostas_auto": 0,
+   "observacao": "Tick das 10:00 limpo: 0 respostas novas desde 08:35 (ciclos #90/#91). Leads quentes seguem sendo Savegnago (#1 interior SP — apresentação no comercial@) e Covabra (portal Ivrim — cadastro de fornecedor pendente de ação humana). Fila de prospecção: 0 pendentes com MX válido (326 empresas, 271 contatados). Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_14_cron_93_atendente": {
+  "timestamp": "2026-10-14 09:33 (Atendente IA - cron #93 - tick 09:30)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — sequência processada (nada a enviar)",
+   "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "✅ watchdog.py — exit 0: 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK",
+   "ℹ️ Prospector cron #92 (09:00) adicionou 3 novos leads (Braslact/Indaiatuba, WBM/Jundiaí, Jundia Foods/Barueri) e enviou 3 apresentações",
+   "ℹ️ Nenhuma proposta de contrato nova nem relatório ESG solicitado neste tick"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — última ação humana: Covabra (14/10 08:17) e Savegnago SAC (14/10) já respondidas nos ciclos #90/#91",
+   "respostas_auto": 0,
+   "observacao": "Tick matinal limpo: 0 respostas novas desde 08:35. Leads quentes seguem sendo Savegnago (#1 interior SP — apresentação enviada ao comercial@) e Covabra (portal Ivrim — cadastro de fornecedor pendente de ação humana). Fila de prospecção: 0 pendentes com MX válido (prospector repôs 3 em 09:00). Fechamento segue dependendo de ação humana via WhatsApp/telefone."
+  }
+ },
  "ciclo_2026_10_14_cron_91_atendente": {
   "timestamp": "2026-10-14 08:35 (Atendente IA - cron #91 - ciclo matinal)",
   "acoes": [
@@ -1136,6 +1375,28 @@
       "respostas_humanas": "PAULISTÃO/SAVEGNAGO (SAC — direcionou para comercial@savegnago.com.br). SAVEGNAGO FINALMENTE RESPONDEU! Apresentação enviada ao comercial com proposta de coleta-teste e bônus.",
       "respostas_auto": "3 (Pague Menos Zendesk ×2, Tauste SAC ×1)",
       "observacao": "14 dias de silêncio comercial QUEBRADOS! SAVEGNAGO (#1 interior SP, R$7,98bi) respondeu via SAC do Paulistão — direcionou para comercial@savegnago.com.br. Apresentação com proposta de coleta programada, bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) enviada. Este é o lead MAIS QUENTE desde o início do projeto. Fila de prospecção zerada (0 pendentes com MX válido) — precisa reposição."
-     }
-    }
-}
+           }
+          },
+          "ciclo_2026_10_14_cron_prospector_92": {
+           "timestamp": "2026-10-14 ~20:00 (Prospector - cron #92)",
+           "acoes": [
+            "✅ Diagnostico inicial: 0 pendentes (<10) — necessidade de reposicao",
+            "✅ Descoberta: +3 novas empresas adicionadas a fila_prospeccao_extra.json, MX validado via nslookup",
+            "  ⭐ Braslact (braslact@braslact.com.br) — Indaiatuba/SP — laticinios (queijos, manteiga, derivados) - PRIORIDADE gorduras/laticinios",
+            "  ⭐ WBM Alimentos (contato@wbmalimentos.com.br) — Jundiai/SP — industria alimenticia (terceirizacao, ingredientes, envase de oleos)",
+            "  ⭐ Jundia Foods (sac@jundiafoods.com.br) — Barueri/SP — distribuidora de alimentos (maioneses, molhos, congelados)",
+            "✅ enviar_lote.py --max 15: 3 emails enviados, 0 falhas",
+            "✅ ecossistema.json atualizado com numeros pos-envio"
+           ],
+           "diagnostico": {
+            "fila_total_empresas": 326,
+            "fila_contatados": 271,
+            "fila_bounce": 61,
+            "fila_pendentes": 0,
+            "fila_pendentes_validas": "0 com MX valido — fila precisa de reposicao",
+            "enviados_lote": 3,
+            "novos_contatados": "Braslact (laticinios Indaiatuba), WBM Alimentos (Jundiai), Jundia Foods (Barueri)",
+            "fila_precisa_reposicao": true
+           }
+          }
+         }

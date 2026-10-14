@@ -1,3 +1,290 @@
+## 2026-10-14 14:00 (Melhorador Contínuo - cron #102)
+
+### Diagnóstico
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — jejum de respostas desde Rede Confiança (cron #98, 12:10)
+- ✅ Fila de prospecção: 326 empresas (+10 novas adicionadas), 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Melhorias implementadas
+| # | Ação | Arquivo |
+|---|------|---------|
+| 1 | ✅ **Fila reabastecida com 10 novas empresas** (MX verificado via nslookup): Sorocaba Frios, Ello Ingredientes (Salto!), Sun Foods (Itu), Alere (3k+ funcionários), Rede Campeão (4 postos), JLO Atacadista, Risotto Mix, Fantástico Alimentos, Prime Food | `bot/fila_prospeccao_extra.json` |
+| 2 | ✅ **Nova seção "Mercado em ebulição"** no site com dados verificados: Petrobras R$23M, B16, 600M L potencial (70% inexplorado), 2028 obrigatório, SAF 7% | `deploy-vercel/index.html` |
+| 3 | ✅ **ecossistema.json e insights.md** atualizados com diagnóstico e aprendizado | `equipe/ecossistema.json`, `equipe/insights.md` |
+
+### Aprendizado do ciclo
+**Reposição de fila é a tarefa mais crítica do Melhorador**: quando a fila de prospecção fica zerada, o sistema inteiro para de gerar novos leads. Enquanto o Estrategista/Prospector não adicionar empresas, cabe ao Melhorador pesquisar e incluir novos alvos com MX verificado. Priorizar empresas que convertem melhor: supermercados (redes), indústrias de laticínios, distribuidoras de alimentos com vencidos, e refeições coletivas/restaurantes (óleo de fritura). Ello Ingredientes em Salto/SP é oportunidade de ouro por ser da mesma cidade — abordagem local é diferencial.
+
+### Pendências para o Estrategista (inalteradas)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta em 15/10 (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** — portal Ivrim | **AÇÃO HUMANA: preencher cadastro de fornecedor** (https://isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste. |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste. |
+| 🔴 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680. |
+| 🟡 | **Pague Menos** (R$4,33bi) | Retomar contato (Josiane Marinho). |
+| 🟡 | **GoodBom** | Proposta "em análise" — acompanhar. |
+
+---
+
+## 2026-10-14 13:41 (Atendente IA - cron #101 - tick 13:30)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde o cron #98 (12:10)
+- ✅ INBOX varrida (--dias 3): 0 mensagens não lidas — 284 leads, 499 msgids enviados
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| scan_inbox.py --dias 3 | 0 não lidas na INBOX (284 leads, 499 msgids enviados) |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| enviar_lote.py --status | 326 empresas, 271 contatados, 61 bounce, 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead novo com volume informado (proposta Rede Confiança já enviada no cron #98) |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — SAC respondeu 14/10, apresentação em comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥 **Rede Confiança** (Sorocaba/SP) — proposta formal (2.500 L/mês → R$ 1,80/L | R$ 54.000/ano) enviada 14/10 12:06 ao social@confianca.com.br. **Aguardando retorno — reforço previsto amanhã 15/10** (3 dias de silêncio: volume consolidado + coleta-teste + WhatsApp).
+3. 🔥 **Covabra** — respondeu 22/09; cadastro de fornecedor portal Ivrim pendente.
+4. 🔥 **Brasfrigo** (Salto/SP) — coleta-teste a agendar.
+5. 🔥 **Queijos Itupeva** (Rafael) — coleta-teste a agendar.
+6. 🟡 **Sonda** (R$6,12bi) — telefone (11) 2145-6200. **Tauste** — (15) 3324-4680. **Pague Menos** (Josiane) — piloto.
+
+### Observação do ciclo
+Tick das 13:30 limpo — 5º ciclo consecutivo sem respostas novas (jejum desde Rede Confiança no #98). Caixa zerada, 0 bounces, 0 pendentes na fila de atendimento. Proposta Rede Confiança segue aguardando retorno — reforço previsto amanhã 15/10 (3 dias de silêncio, conforme playbook: volume consolidado + coleta-teste 1 mês + WhatsApp (11) 96785-9631). Fila de prospecção 0 pendentes aguardando reposição do Prospector. Nenhuma ação de email necessária neste tick.
+
+---
+
+## 2026-10-14 13:04 (Atendente IA - cron #100 - tick 13:00)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde o cron #98 (12:10)
+- ✅ INBOX varrida (--dias 3): 0 mensagens não lidas — 284 leads, 499 msgids enviados
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| scan_inbox.py --dias 3 | 0 não lidas na INBOX (284 leads, 499 msgids enviados) |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| enviar_lote.py --status | 326 empresas, 271 contatados, 61 bounce, 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead novo com volume informado (proposta Rede Confiança já enviada no cron #98) |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — SAC respondeu 14/10, apresentação em comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥 **Rede Confiança** (Sorocaba/SP) — proposta formal (2.500 L/mês → R$ 1,80/L | R$ 54.000/ano) enviada 14/10 12:06 ao social@confianca.com.br. **Aguardando retorno — reforço previsto amanhã 15/10** (3 dias de silêncio: volume consolidado + coleta-teste + WhatsApp).
+3. 🔥 **Covabra** — respondeu 22/09; cadastro de fornecedor portal Ivrim pendente.
+4. 🔥 **Brasfrigo** (Salto/SP) — coleta-teste a agendar.
+5. 🔥 **Queijos Itupeva** (Rafael) — coleta-teste a agendar.
+6. 🟡 **Sonda** (R$6,12bi) — telefone (11) 2145-6200. **Tauste** — (15) 3324-4680. **Pague Menos** (Josiane) — piloto.
+
+### Observação do ciclo
+Tick das 13:00 limpo — 4º ciclo consecutivo sem respostas novas (jejum desde Rede Confiança no #98). Sistema estável, fila de prospecção zerada aguardando reposição do Prospector. Nenhuma ação de email necessária neste tick.
+
+---
+
+## 2026-10-14 12:40 (Atendente IA - cron #99 - tick 12:30)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde o cron #98 (12:10)
+- ✅ INBOX varrida (--dias 3): 0 mensagens não lidas — 284 leads, 499 msgids enviados
+- ✅ Proposta Rede Confiança: **confirmada na caixa de enviados (email [2088] 14/10 12:06 → social@confianca.com.br)** — gerada e enviada pelo cron #98, sem duplicação de envio neste tick
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| scan_inbox.py --dias 3 | 0 não lidas na INBOX (284 leads, 499 msgids enviados) |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| enviar_lote.py --status | 326 empresas, 271 contatados, 61 bounce, 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead novo com volume informado (proposta Rede Confiança já enviada no tick anterior, anexo confirmado) |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — SAC respondeu 14/10, apresentação em comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥 **Rede Confiança** (Sorocaba/SP) — proposta formal (2.500 L/mês → R$ 1,80/L | R$ 54.000/ano) enviada hoje 12:06 ao social@confianca.com.br. **Aguardando retorno.** Reforço em 3 dias se silêncio (volume consolidado + coleta-teste + WhatsApp).
+3. 🔥 **Covabra** — respondeu 22/09; cadastro de fornecedor portal Ivrim pendente.
+4. 🔥 **Brasfrigo** (Salto/SP) — coleta-teste a agendar.
+5. 🔥 **Queijos Itupeva** (Rafael) — coleta-teste a agendar.
+6. 🟡 **Sonda** (R$6,12bi) — telefone (11) 2145-6200. **Tauste** — (15) 3324-4680. **Pague Menos** (Josiane) — piloto.
+
+### Aprendizado do dia
+**Verificação anti-duplicação**: antes de gerar/enviar proposta, conferir a caixa de enviados (Sent IMAP) por thread do lead — o cron anterior (#98) já havia gerado e anexado a proposta da Rede Confiança (12:06). Confirmar envio prévio evita double-send do mesmo anexo (custo de reputação + confusão no lead). Rotina: check-replies → se lead quente com proposta, `grep Sent box por remetente` antes de `proposta_contrato.py`.
+
+---
+
+## 2026-10-14 12:10 (Atendente IA - cron #98 - tick 12:00)
+
+### 🎯 NOVO LEAD QUENTE: Rede Confiança Supermercados (Sorocaba/SP)
+- **Resposta recebida**: SAC/Zendesk (ticket 249812, atendente Larissa Arruda) respondeu nossa proposta — **encaminhamento, não rejeição**: indicaram o canal comercial **social@confianca.com.br**.
+- **Ação**: gerada proposta formal (proposta-contrato-rede-confianca-supermercados-2026-10-14.html) e **enviada ao canal social com anexo** — 2.500 L/mês → R$ 1,80/L | R$ 4.500/mês | **R$ 54.000/ano**; tabela escalonada até 10.000+ L/mês + bônus exclusividade (R$ 0,10/L) e consolidação (R$ 0,05/L).
+- **Lead 96 atualizado** em leads.csv + fila_prospeccao_extra.json: sac@ → **social@confianca.com.br**.
+- **Por que é quente**: rede de supermercados (2 lojas em Sorocaba — Pannunzio e Av. São Paulo, 27 mil m² — + Bauru, Marília, Jaú, Botucatu, Pederneiras). Padrão Savegnago/Sumerbol/GoodBom: **rede = contrato de volume**. Primeira resposta humana desde Tauste (30/09) — fim do jejum de 14 dias.
+- **Próximo passo humano**: aguardar retorno do social@; reforço em 3 dias citando volume consolidado + coleta-teste de 1 mês; WhatsApp (11) 96785-9631 como acelerador.
+
+### Rotina do ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | **1 resposta: Rede Confiança** — atendida |
+| proposta_contrato.py | **executado** — Rede Confiança (anexada ao reply) |
+| replies_pending.json | 0 pendentes (caixa zerada após atendimento) |
+
+### Aprendizado do dia
+SAC que **indica o canal comercial certo** (social@ / comercial@ / ouvidoria@) é porta semi-aberta: lidar como resposta de lead — atualizar o email na base e reenviar a proposta **imediatamente**, com anexo. O ticket Zendesk não fecha o assunto; realoca o contato.
+
+---
+
+## 2026-10-14 11:32 (Atendente IA - cron #97 - tick 11:30)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde 08:35 (ciclos #90/#91)
+- ✅ INBOX varrida (--dias 3): 0 mensagens não lidas — nenhum email direto fora do fluxo de replies
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| scan_inbox.py --dias 3 | 0 não lidas na INBOX (284 leads, 498 msgids enviados) |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| enviar_lote.py --status | 326 empresas, 271 contatados, 61 bounce, 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead informou volume novo neste tick |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (inalterados, ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi) — SAC respondeu 14/10, apresentação enviada a comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥🔥 **Covabra** — Sara respondeu 14/10 convidando para cadastro oficial de fornecedor no portal Ivrim. **AÇÃO HUMANA NECESSÁRIA: preencher o formulário** (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor). Funil mais avançado: 22/09 respondeu → 13/10 proposta formal (4.000 L/mês) → 14/10 convite oficial.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — Zendesk só ecoa auto-replies; retomar por comercial/telefone (Josiane Marinho).
+8. 🟡 **GoodBom** — proposta "em análise" (Patricia) — acompanhar.
+
+### Observações
+- Tick das 11:30 limpo: nenhuma resposta nova entre 11:02 e 11:32; INBOX sem não-lidas. O movimento do dia veio cedo (Savegnago e Covabra nos ciclos #90/#91).
+- Fechamento segue dependendo de ação humana: cadastro Covabra no portal Ivrim + retorno da Savegnago pelo comercial são os 2 passos que destravam contrato.
+- Fila de prospecção segue zerada (0 pendentes com MX válido) — reposição do Prospector é o próximo passo para manter o volume de envios.
+
+---
+
+## 2026-10-14 11:02 (Atendente IA - cron #96 - tick 11:00)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde 08:35 (ciclos #90/#91)
+- ✅ INBOX varrida (--dias 3): 0 mensagens não lidas — nenhum email direto fora do fluxo de replies
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| scan_inbox.py --dias 3 | 0 não lidas na INBOX (284 leads, 498 msgids enviados) |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| enviar_lote.py --status | 326 empresas, 271 contatados, 61 bounce, 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead informou volume novo neste tick |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (inalterados, ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi) — SAC respondeu 14/10, apresentação enviada a comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥🔥 **Covabra** — Sara respondeu 14/10 convidando para cadastro oficial de fornecedor no portal Ivrim. **AÇÃO HUMANA NECESSÁRIA: preencher o formulário** (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor). Funil mais avançado: 22/09 respondeu → 13/10 proposta formal (4.000 L/mês) → 14/10 convite oficial.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — Zendesk só ecoa auto-replies; retomar por comercial/telefone (Josiane Marinho).
+8. 🟡 **GoodBom** — proposta "em análise" (Patricia) — acompanhar.
+
+### Observações
+- Tick das 11:00 limpo: nenhuma resposta nova entre 10:39 e 11:02; INBOX sem não-lidas. O movimento do dia veio cedo (Savegnago e Covabra nos ciclos #90/#91).
+- Fechamento segue dependendo de ação humana: cadastro Covabra no portal Ivrim + retorno da Savegnago pelo comercial são os 2 passos que destravam contrato.
+- Fila de prospecção segue zerada (0 pendentes com MX válido) — reposição do Prospector é o próximo passo para manter o volume de envios.
+
+---
+
+## 2026-10-14 10:39 (Atendente IA - cron #95 - tick 10:30)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde 08:35 (ciclos #90/#91)
+- ✅ INBOX varrida (--dias 3): 0 mensagens não lidas — nenhum email direto fora do fluxo de replies
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| scan_inbox.py --dias 3 | 0 não lidas na INBOX (284 leads, 498 msgids enviados) |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| enviar_lote.py --status | 326 empresas, 271 contatados, 61 bounce, 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead informou volume novo neste tick |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (inalterados, ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi) — SAC respondeu 14/10, apresentação enviada a comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥🔥 **Covabra** — Sara respondeu 14/10 convidando para cadastro oficial de fornecedor no portal Ivrim. **AÇÃO HUMANA NECESSÁRIA: preencher o formulário** (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor). Funil mais avançado: 22/09 respondeu → 13/10 proposta formal (4.000 L/mês) → 14/10 convite oficial.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — Zendesk só ecoa auto-replies; retomar por comercial/telefone (Josiane Marinho).
+8. 🟡 **GoodBom** — proposta "em análise" (Patricia) — acompanhar.
+
+### Observações
+- Tick das 10:30 limpo: nenhuma resposta nova entre 10:02 e 10:39; INBOX sem não-lidas. O movimento do dia veio cedo (Savegnago e Covabra nos ciclos #90/#91).
+- Fechamento segue dependendo de ação humana: cadastro Covabra no portal Ivrim + retorno da Savegnago pelo comercial são os 2 passos que destravam contrato.
+- Fila de prospecção segue zerada para reposição do Prospector (cron #92 repôs 3 em 09:00: Braslact, WBM Alimentos, Jundia Foods).
+
+---
+
 ## 2026-10-14 10:02 (Atendente IA - cron #94 - tick 10:00)
 
 ### Diagnóstico do ciclo

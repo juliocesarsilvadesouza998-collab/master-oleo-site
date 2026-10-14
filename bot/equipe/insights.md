@@ -1,3 +1,83 @@
+## 2026-10-14 (quarta-feira) — 14:02 (Atendente IA - cron #91 - ciclo vespertino)
+
+### Diagnóstico do ciclo
+- ✅ 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK, exit 0 (saudável)
+- ✅ 0 notificações Formspree, 0 bounces novos, 0 correções, 0 follow-ups atrasados
+- ✅ 0 respostas NOVAS neste tick — nenhum lead respondeu desde o ciclo matinal
+- 📊 Fila de prospecção: 326 empresas, 0 pendentes (zerada)
+- 📈 3 novos leads adicionados hoje (Braslact, WBM Alimentos, Jundia Foods)
+- 🔴 14 dias sem resposta humana NOVA (última: Tauste 30/09)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| enviar_lote.py --status | 326 empresas, 0 pendentes |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — WhatsApp (11) 96785-9631. 14+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09, portal de fornecedor pendente.
+7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato via canal comercial (Zendesk encerrado).
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+### Pendências para o Estrategista
+- 🔴🔴🔴 **Savegnago** — proposta formal de contrato. PRIORIDADE ABSOLUTA.
+- 🔴🔴🔴 **Queijos Itupeva (Rafael)** — agendar coleta-teste.
+- 🔴🔴 **Brasfrigo (Salto/SP)** — fechar contrato.
+- 🔴🔴 **Sonda** (R$6,12 bi) — ligar (11) 2145-6200.
+- 🟡 **Tauste** — ligar (15) 3324-4680.
+- 🟡 **Covabra** — cadastro de fornecedor no portal pendente.
+- 🟡 **Pague Menos (Josiane Marinho)** — retomar contato.
+- 🟡 **Fila de prospecção**: zerada — precisa de novos leads (reposição via web/busca de empresas).
+
+---
+
+## 2026-10-14 (quarta-feira) — 09:03 (Atendente IA - cron #90 - ciclo matinal)
+
+### Diagnóstico do ciclo
+- 281 leads, 197 ativos, 79 bounces (watchdog) — SMTP/IMAP OK, exit 0 (saudável)
+- ✅ 0 notificações Formspree, 0 bounces novos, 0 correções, 0 follow-ups atrasados
+- ✅ 0 respostas NOVAS neste tick — as 3 respostas de hoje (GoodBom, Pague Menos, Covabra) já foram respondidas pelo tick das 08:09–08:34 BRT (confirmado na pasta Enviados)
+- 🔴 14 dias sem resposta humana NOVA (última: Tauste 30/09)
+- ⭐ NOVA AÇÃO REAL: **Covabra encaminhou o portal de cadastro de fornecedor** — preencher (foi prometido no reply de hoje)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 novas (replies_pending.json vazio) |
+| verificação Sent | 3 replies de hoje confirmados (Pague Menos 04:10, GoodBom 04:34, Covabra 04:34 PDT) |
+
+### Respostas do dia (tratadas pelo tick matinal)
+1. **GoodBom (Patricia)** — "proposta encaminhada ao departamento responsável para análise". Respondido com oferta de coleta-teste 1 mês + WhatsApp. Aquecer em ~1 semana se não houver retorno.
+2. **Pague Menos (Zendesk)** — eco do próprio ticket (canal SAC). Encerrado com cortesia; contato comercial segue pelos canais apropriados.
+3. **Covabra (Sara)** — ⭐ **AÇÃO REAL**: portal de cadastro de fornecedor. Respondido confirmando cadastro + coleta-teste. **Preencher:** https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Covabra** — cadastro de fornecedor pendente no portal (porta de entrada para contrato de rede grande) + coleta-teste em loja piloto.
+2. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 14+ dias sem ação.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato via canal comercial (Zendesk encerrado).
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
+
 ## 2026-10-13 19:34 (Analista de Qualidade - cron sábado)
 
 ### Diagnóstico do dia
