@@ -1,3 +1,72 @@
+## 2026-10-14 (quarta-feira) — 17:35 (Atendente IA - cron #94 - ciclo noturno)
+
+### Diagnóstico do ciclo
+- ✅ 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK, exit 0 (saudável)
+- ✅ 0 notificações Formspree, 0 bounces novos, 0 correções, 0 follow-ups atrasados
+- ✅ 0 respostas NOVAS neste tick — replies_pending.json vazio e caixa IMAP 100% limpa (0 não lidas confirmado)
+- 📊 Fila de prospecção: 335 empresas, 8 pendentes com MX válido aguardando próximo lote
+- 📄 Propostas do dia já entregues: Rede Confiança (12:04) e Pague Menos (16:07, ticket Zendesk 407470) — sem retorno ainda
+- 🔴 14 dias sem resposta humana NOVA (última: Tauste 30/09)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --dias 3 | 0 não lidas na caixa (IMAP OK) |
+| enviar_lote.py --status | 335 empresas, 8 pendentes válidos |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — WhatsApp (11) 96785-9631. 14+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09, cadastro de fornecedor no portal ivrim pendente (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor).
+7. 🟡 **Pague Menos** (R$4,33bi) — proposta entregue via ticket Zendesk 407470. Aguardar retorno.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
+## 2026-10-14 (quarta-feira) — 16:35 (Atendente IA - cron #93 - ciclo vespertino)
+
+### Diagnóstico do ciclo
+- ✅ 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK, exit 0 (saudável)
+- ✅ 0 notificações Formspree, 0 bounces novos, 0 correções, 0 follow-ups atrasados
+- ✅ 1 pendência de check-replies = **ECO do próprio ticket Zendesk Pague Menos** (a proposta anexada às 16:17–16:18 BRT voltou pela thread — NÃO é resposta humana). Pendência limpa, nenhum email enviado.
+- 📊 Fila de prospecção extra: 246 empresas · Fila prioritária: 14
+- 🔴 14 dias sem resposta humana NOVA (última: Tauste 30/09)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 1 pendência = eco Zendesk (Pague Menos); descartada como não-resposta |
+| marcar_lidas.py | eco tratado; replies_pending.json zerado |
+
+### Fluxo Pague Menos (id 44) — encerramento do tick anterior
+- Proposta **proposta-contrato-supermercados-pague-menos-2026-10-14.html** gerada e **ANEXADA à thread do ticket Zendesk 407470** (16:17–16:18 BRT).
+- josiane.marinho@supermercadospaguemenos.com.br **bloqueada por regra de fluxo do domínio** (aceita só remetentes internos) → canal correto é o SAC Zendesk, que encaminha internamente.
+- `corrigir_lead_pague_menos.py` reverteu o email do lead para falecom@supermercadospaguemenos.com.br (canal funcional). Lead segue **respondido** desde 16:08.
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — WhatsApp (11) 96785-9631. 14+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09, cadastro de fornecedor no portal ivrim pendente (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor).
+7. 🟡 **Pague Menos** (R$4,33bi) — proposta entregue via ticket Zendesk 407470 (SAC encaminha à Josiane). Aguardar retorno.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
 ## 2026-10-14 (quarta-feira) — 14:02 (Atendente IA - cron #91 - ciclo vespertino)
 
 ### Diagnóstico do ciclo
@@ -764,6 +833,39 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 - 🟡 **Tauste** — ligar (15) 3324-4680.
 - 🟡 **Pague Menos (Josiane Marinho)** — retomar contato.
 - 🟡 **Fila de prospecção**: 5 pendentes sem MX válido (Nacional Inn Jundiai x2, Biazoto, Madero, Lactalis) — precisa limpeza manual para destravar contagem.
+## 2026-10-14 15:42 (Atendente IA - cron #92 - ciclo vespertino)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- **🔴 14 dias sem respostas humanas** — última resposta real: Tauste (30/09)
+- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+- ✅ Caixa IMAP completamente limpa: 0 mensagens não lidas (scan_inbox --dias 3)
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- ✅ Fila de prospecção com reposição: 335 empresas, 8 pendentes (prospector adicionou 9 novas)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --dias 3 | 0 não lidas — caixa limpa confirmada via IMAP |
+| enviar_lote.py --status | 335 empresas na fila, 8 pendentes |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 14+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09 (portal ivrim aguarda cadastro).
+7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
 ## 2026-10-13 19:32 (Atendente IA - cron #89 - ciclo noturno)
 
 ### Diagnóstico do ciclo
