@@ -1,3 +1,74 @@
+## 2026-10-14 10:02 (Atendente IA - cron #94 - tick 10:00)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde os ciclos #90/#91 (08:10/08:35)
+- ✅ Fila de prospecção: 326 empresas, 271 contatados, 61 bounce, 0 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| watchdog.py | exit 0 — 284 leads, 200 ativos, 79 bounces, SMTP/IMAP OK |
+| proposta_contrato.py | não executado — nenhum lead informou volume novo neste tick |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (inalterados, ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi) — SAC respondeu 14/10, apresentação enviada a comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥🔥 **Covabra** — Sara respondeu 14/10 convidando para cadastro oficial de fornecedor no portal Ivrim. **AÇÃO HUMANA NECESSÁRIA: preencher o formulário** (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor). Funil mais avançado: 22/09 respondeu → 13/10 proposta formal (4.000 L/mês) → 14/10 convite oficial.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — Zendesk só ecoa auto-replies; retomar por comercial/telefone (Josiane Marinho).
+8. 🟡 **GoodBom** — proposta "em análise" (Patricia) — acompanhar.
+
+### Observações
+- Tick das 10:00 limpo: nenhuma resposta nova entre 08:35 e 10:02. O movimento do dia veio cedo (Savegnago e Covabra nos ciclos #90/#91).
+- Fechamento segue dependendo de ação humana: cadastro Covabra no portal Ivrim + retorno da Savegnago pelo comercial são os 2 passos que destravam contrato.
+
+---
+
+## 2026-10-14 09:34 (Atendente IA - cron #93 - tick 09:30)
+
+### Diagnóstico do ciclo
+- 284 leads, 200 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, 0 follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — nada novo desde os ciclos #90/#91
+- ✅ Fila de prospecção: 326 empresas, 0 pendentes com MX válido (prospector #92 repôs 3 em 09:00: Braslact/Indaiatuba, WBM/Jundiaí, Jundia Foods/Barueri — 3 apresentações enviadas)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas — fila de atendimento vazia |
+| proposta_contrato.py | não executado — nenhum lead informou volume novo neste tick |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES — prioridade de fechamento (inalterados, ação humana)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi) — SAC respondeu 14/10, apresentação enviada a comercial@savegnago.com.br. PRIORIDADE ABSOLUTA.
+2. 🔥🔥🔥 **Covabra** — Sara respondeu 14/10 convidando para cadastro oficial de fornecedor no portal Ivrim. **AÇÃO HUMANA NECESSÁRIA: preencher o formulário** (https://isac.ivrim.com.br/#/public/fluxo/6a1089b4a7748da04e12cc59/cadastrar-fornecedor). Funil mais avançado: 22/09 respondeu → 13/10 proposta formal (4.000 L/mês) → 14/10 convite oficial.
+3. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+4. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — Zendesk só ecoa auto-replies; retomar por comercial/telefone (Josiane Marinho).
+8. 🟡 **GoodBom** — proposta "em análise" (Patricia) — acompanhar.
+
+### Observações
+- Tick matinal limpo: nenhuma resposta nova entre 08:35 e 09:30. O movimento do dia veio cedo (Savegnago e Covabra nos ciclos #90/#91).
+- Fechamento segue dependendo de ação humana: cadastro Covabra no portal Ivrim + retorno da Savegnago pelo comercial são os 2 passos que destravam contrato.
+
+---
+
 ## 2026-10-14 08:35 (Atendente IA - cron #91 - ciclo matinal)
 
 ### Diagnóstico do ciclo
@@ -755,3 +826,11 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
 
 ---
+
+## SEO — tick 14/10/2026 (bot de SEO)
+- **Ranking Bing**: SEO geral OK; NENHUMA keyword no top 20 (todas "ainda não indexadas") — normal para site novo, precisa de semanas. 23 keywords presentes no conteúdo.
+- **Melhorias aplicadas**:
+  1. `deploy-vercel/blog/quem-compra-margarina-vencida.html` — eliminada canibalização: title/meta/h1 focados só em "margarina vencida" + links internos para as páginas irmãs de manteiga e maionese.
+  2. `deploy-vercel/sitemap.xml` — adicionada `calculadora.html` (URL real que faltava; sitemap agora com 18 URLs, todas válidas).
+  3. IndexNow enviado (HTTP 200) p/ calculadora.html e quem-compra-margarina-vencida.html.
+- **Schema.org**: LocalBusiness + FAQPage presentes em index, descaracterizacao e industrias (verificado).
