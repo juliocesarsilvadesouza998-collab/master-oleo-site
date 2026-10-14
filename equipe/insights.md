@@ -1,4 +1,137 @@
-|## 2026-10-13 (terça-feira) — 17:51 (Melhorador Contínuo - cron #83)
+## 2026-10-13 19:34 (Analista de Qualidade - cron sábado)
+
+### Diagnóstico do dia
+- sync_formspree.py OK: 79 bounces em cache, 0 notificações novas do Formspree, 0 bounces novos.
+- 281 leads: **197 novo | 57 bounce | 18 respondido | 9 encerrado**.
+- ✅ Nenhum lead "bounce" com boas_vindas_em preenchido (0) — send_sequence respeita o cache.
+- ✅ replies_pending.json vazio (0 respostas pendentes — Atendente sem trabalho no próximo tick).
+- ✅ 79/79 bounces.json únicos, sem duplicados; 57 têm match exato no CSV e estão como bounce. Os 22 restantes são emails antigos/alternativos SEM lead correspondente hoje (ex.: trocas de email já feitas — Scallet pedidos@, Kelco comercial@, Arcor aquiarcor@, Oba ouvidoria@, Selmi compras@; e endereços de campanhas antigas fora do CSV). Bounce cache cumpre o papel de nunca reenviar para esses endereços.
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| bot_oleo.py leads | 281 leads: 197 novo / 57 bounce / 18 respondido / 9 encerrado |
+| auditoria bounces vs CSV | 57/79 com match; 22 = endereços antigos sem lead atual — comportamento correto do sync |
+| auditoria boas_vindas_em | 0 leads bounce com envio registrado — consistente |
+
+### Envios de hoje (10)
+- 9× follow3 para grupo "fritas" (Rick's, Art Fritas, Point Chips, Fritamaz, Mantiqueira, Mega Chips, Quetti×2, União Fritas) às 17:52–17:53 — leads hoje marcados **encerrado**.
+- 1× apresentação para Fullcaps (17:55, status novo).
+
+### Problemas encontrados
+1. **Dado incompleto em 10 dos 18 leads respondidos**: Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Dalben, Queijos Itupeva, Cabanha Campestre, Muffato/Max e Brasfrigo estão como `respondido` mas sem `respondido_em`/`ultima_resposta` — impossível saber QUANDO/quem respondeu para priorizar follow-up. Registrar (não corrigi: precisa saber a data real).
+2. **9 leads de fritas encerrados hoje após follow3** — decidir se é escopo consciente (fritura = óleo vegetal usado, dentro do escopo) ou fechamento por falta de resposta. Se for falta de resposta, reativar com novo email/telefone.
+3. Nenhuma resposta humana há 13+ dias (última: Tauste 30/09) — reforço do que o Atendente já sinalizou.
+
+### Sugestões para o Estrategista
+1. Purgar/arquivar bounces.json com mais de 3 meses — cache nunca expira e os 22 endereços órfãos empurram a contagem de bounces para cima sem ação possível.
+2. Padronizar registro de `respondido_em` no check-replies (backfill dos 10 leads atuais) para o funil ter datas de resposta confiáveis.
+3. Hot leads (Savegnago, Brasfrigo, Queijos Itupeva, Sonda) seguem parados há 13 dias esperando ação humana — nova sequência de follow-up com assunto diferente ou contato por telefone/WhatsApp.
+
+---
+
+## 2026-10-13 19:04 (Atendente IA - cron #88 - ciclo noturno)
+
+### Diagnóstico do ciclo
+- 281 leads, 197 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- **🔴 13 dias sem respostas humanas** — última resposta real: Tauste (30/09)
+- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- ✅ Fila de prospecção: 323 empresas, 0 pendentes (zerada)
+- **🔴 Leads quentes parados** — todos aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| enviar_lote.py --status | 323 empresas, 0 pendentes |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 13+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
+
+## 2026-10-13 18:33 (Atendente IA - cron #87 - ciclo noturno)
+
+### Diagnóstico do ciclo
+- 281 leads, 197 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- **🔴 13 dias sem respostas humanas** — ultima resposta real: Tauste (30/09)
+- ✅ Watchdog exit 0 — sistema saudavel, sem follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- ✅ Fila de prospeccao: 323 empresas, 0 pendentes (zerada)
+- **🔴 Leads quentes parados** — todos aguardam acao humana via WhatsApp/telefone
+- **🔴 FIX JSON** — ecossistema.json estava com chave de fechamento faltando (root `}`). Corrigido.
+
+### Ações deste ciclo
+| Acao | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificacoes novas |
+| corrigir_emails.py | 0 bounces processados (todos ja tentados) |
+| watchdog.py | exit 0 — saudavel |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequencia processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| enviar_lote.py --status | 323 empresas, 0 pendentes |
+| JSON fix | ecossistema.json reparado (faltava root }) |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 13+ dias sem acao.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
+
+
+||## 2026-10-13 (terça-feira) — 20:21 (Atendente IA - cron #86 - ciclo noturno)
+||
+||### Diagnóstico do ciclo
+||- 281 leads, 197 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+||- **🔴 13 dias sem respostas humanas** — última resposta real: Tauste (30/09)
+||- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+||- ✅ 0 respostas pendentes (replies_pending.json vazio)
+||- ✅ Fila de prospecção: 323 empresas, 0 pendentes (zerada)
+||- **🔴 Leads quentes parados** — todos aguardam ação humana via WhatsApp/telefone
+||
+||### Ações deste ciclo
+||| Ação | Resultado |
+|||------|-----------|
+||| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+||| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+||| watchdog.py | exit 0 — saudável |
+||| prospecao_followup.py | 0 follow-ups atrasados |
+||| send_sequence | sequência processada |
+||| check-replies | 0 respostas (replies_pending.json vazio) |
+||| enviar_lote.py --status | 323 empresas, 0 pendentes |
+||
+||### Leads QUENTES — prioridade de fechamento
+||1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 13+ dias sem ação.
+||2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+||3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+||4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+||5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+||6. 🟡 **Covabra** — respondeu 22/09.
+||7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato.
+||8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+||
+||---
 |
 |### Diagnóstico do dia
 |- 280 leads, 205 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
@@ -551,3 +684,35 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 - 🟡 **Tauste** — ligar (15) 3324-4680.
 - 🟡 **Pague Menos (Josiane Marinho)** — retomar contato.
 - 🟡 **Fila de prospecção**: 5 pendentes sem MX válido (Nacional Inn Jundiai x2, Biazoto, Madero, Lactalis) — precisa limpeza manual para destravar contagem.
+## 2026-10-13 19:32 (Atendente IA - cron #89 - ciclo noturno)
+
+### Diagnóstico do ciclo
+- 281 leads, 197 ativos, 79 bounces (watchdog) — SMTP/IMAP OK
+- **🔴 13 dias sem respostas humanas** — última resposta real: Tauste (30/09)
+- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- ✅ Fila de prospecção: 323 empresas, 0 pendentes (zerada)
+- **🔴 Leads quentes parados** — todos aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 79 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| enviar_lote.py --status | 323 empresas, 0 pendentes |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 13+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+6. 🟡 **Covabra** — respondeu 22/09.
+7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---

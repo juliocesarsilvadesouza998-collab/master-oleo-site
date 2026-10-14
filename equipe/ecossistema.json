@@ -1,20 +1,20 @@
 {
- "atualizado_em": "2026-10-13 17:51 (Melhorador Contínuo - cron #83)",
-  "criado_em": "2026-08-13",
-  "metas_semana_13_10_a_19_10": {
-   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
-   "meta_contrato_2": "🔴 FECHAR Brasfrigo (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
-   "meta_contrato_3": "🔴 Queijos Itupeva (Rafael) — agendar coleta-teste. Lead mais quente individual.",
-   "meta_telefone_1": "🔴 Sonda Supermercados (R$ 6,12 bi) — ligar (11) 2145-6200. Retomar contato.",
-   "meta_telefone_2": "🟡 Tauste — ligar (15) 3324-4680. Respondeu 30/09, ofertar coleta-teste.",
-   "meta_telefone_3": "🟡 Covabra — respondeu 22/09, priorizar follow-up humano.",
-   "meta_fila": ">= 10 pendentes com MX válido (fila está em 0 — reposição manual no lote de prospecção é prioridade)",
-   "meta_bounce": "< 15% (atual ~24% no dashboard, 20,4% no CSV — divergencia entre fontes, padronizar por bounces.json)",
-   "meta_resposta": "manter >= 8% (atual 8,1% — excelente para cold email, teto do canal)"
-  },
-  "metas": {
-   "enviar_50_emails_a_partir_de": "2026-08-14 (atingida: 74+ envios)",
-   "limite_diario_prospeccao": 15,
+ "atualizado_em": "2026-10-13 19:34 (Atendente - cron #89)",
+ "criado_em": "2026-08-13",
+ "metas_semana_13_10_a_19_10": {
+  "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
+  "meta_contrato_2": "🔴 FECHAR Brasfrigo (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
+  "meta_contrato_3": "🔴 Queijos Itupeva (Rafael) — agendar coleta-teste. Lead mais quente individual.",
+  "meta_telefone_1": "🔴 Sonda Supermercados (R$ 6,12 bi) — ligar (11) 2145-6200. Retomar contato.",
+  "meta_telefone_2": "🟡 Tauste — ligar (15) 3324-4680. Respondeu 30/09, ofertar coleta-teste.",
+  "meta_telefone_3": "🟡 Covabra — respondeu 22/09, priorizar follow-up humano.",
+  "meta_fila": ">= 10 pendentes com MX válido (fila está em 0 — reposição manual no lote de prospecção é prioridade)",
+  "meta_bounce": "< 15% (atual ~24% no dashboard, 20,4% no CSV — divergencia entre fontes, padronizar por bounces.json)",
+  "meta_resposta": "manter >= 8% (atual 8,1% — excelente para cold email, teto do canal)"
+ },
+ "metas": {
+  "enviar_50_emails_a_partir_de": "2026-08-14 (atingida: 74+ envios)",
+  "limite_diario_prospeccao": 15,
   "meta_semana_28_09_a_04_10_FOCO_FECHAMENTO": {
    "meta_contrato_1": "FECHAR Queijos Itupeva (Rafael) — coleta-teste agendada até 02/10. Lead mais quente, prioridade ABSOLUTA.",
    "meta_contrato_2": "FECHAR Brasfrigo (Salto/SP) — responder proposta, agendar coleta. SAC@brasfrigo.com.br respondeu, fechar.",
@@ -797,124 +797,124 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio, silêncio total",
    "respostas_auto": 0,
    "observacao": "Sistema saudável após correção de 1 atrasado (FP3 Kelco Industrial). Silêncio comercial persiste — última resposta real: Tauste (30/09). Leads quentes inalterados: Savegnago, Pague Menos, Sonda, Tauste, Covabra, Brasfrigo, Queijos Itupeva. Fila de prospecção com 4 novas empresas adicionadas (Melhorador #78) aguardando envio."
-     }
-    },
-   "ciclo_2026_10_12_cron_XX_atendente": {
-     "timestamp": "2026-10-12 22:59 (Atendente IA - cron - ciclo noturno)",
-     "acoes": [
-      "✅ sync_formspree.py — 74 bounces em cache, 0 notificações novas",
-      "✅ corrigir_emails.py — 0 bounces processados (53 já tentados anteriormente)",
-      "⚠️ watchdog.py (1ª) — exit 1: 73 follow-ups atrasados",
-      "✅ prospecao_followup.py — 73 follow-ups processados (FP1/FP2/FP3). Todos zerados.",
-      "✅ send_sequence — 9 FP3 enviados (fritas/batata palha)",
-      "✅ check-replies — 8 respostas: todas auto-replies (Higa=1, Mars=4, Piracanjuba=2, Mars=1). Nenhuma humana."
-     ],
-     "diagnostico": {
-      "total_leads_watchdog": 274,
-      "ativos_watchdog": 193,
-      "bounce_cache_json": 74,
-      "watchdog": "exit 0 após correção (73 atrasados resolvidos)",
-      "respostas_reais": 0,
-      "respostas_humanas": "Nenhuma — todas auto-replies (Mars SAC, Piracanjuba SAC, Higa SAC)",
-      "respostas_auto": 8,
-      "observacao": "Sistema saudável após correção de 73 atrasados acumulados. 73 follow-ups enviados (FP1, FP2, FP3) em lote. 8 respostas todas auto-replies (Higa, Mars, Piracanjuba — SACs automáticos). Silêncio comercial persiste desde Tauste (30/09). Pipeline estável em 274 leads. Leads quentes inalterados — fechamento depende de ação humana via WhatsApp/telefone."
-     }
-    },
-  "ciclo_2026_10_12_cron_80_melhorador_continuo": {
-    "timestamp": "2026-10-12 23:20 (Melhorador Contínuo - cron #80)",
-    "diagnostico": {
-     "watchdog": "exit 0 — saudável após correção de 118 atrasados",
-     "total_leads_watchdog": 274,
-     "ativos_watchdog": 202,
-     "bounce_cache_json": 74,
-     "fila_total_empresas": 315,
-     "fila_contatados": 257,
-     "fila_bounce": 56,
-     "fila_pendentes": "4 com MX válido",
-     "respostas_reais_desde_Tauste": "12 dias sem respostas humanas (30/09→12/10)"
-    },
-    "problema_critico_resolvido": "FILA DE FOLLOW-UPS — 118 atrasados processados em 3 rodadas (73+32+13). Sistema saudável.",
-    "acoes": [
-     "✅ prospecao_followup.py — 118 follow-ups enviados (FP1/FP2/FP3) com otimização de conexão SMTP reutilizada (antes: timeout em 300s)",
-     "✅ Template FP1 reforçado: Top 3 do interior SP (Savegnago, Pague Menos, Tauste) como prova social + ícones emoji",
-     "✅ Template FP2 reforçado: ranking Top 3 com nomes + valores + Madero + urgência 2028 + anti-furto",
-     "✅ Template FP3 reformulado: 3 motivos numerados com emoji + cálculo por porte (200L, 1.000L, 10 lojas) + prova social + CTA volume+WhatsApp",
-     "✅ Conexão SMTP reutilizada: redução drástica de latência (73 envios em <5min vs timeout anterior)",
-     "✅ Site index.html: banner sazonal \"Feche contrato em 2026 com preço tabelado\" (dismissível)"
-    ],
-    "insights_novos": [
-     "OTIMIZAÇÃO SMTP REDUZ LATÊNCIA: Ao reutilizar uma única conexão TLS em vez de abrir/fechar SSL por lead, o tempo caiu de timeout 300s para <5min.",
-     "SILÊNCIO COMERCIAL CRÍTICO: 12 dias sem respostas humanas (Tauste 30/09). Leads quentes não vão se fechar por email — precisam de WhatsApp/telefone.",
-     "PROVA SOCIAL TOP 3 É MAIOR ATIVO: Nenhuma coletora tem 3 maiores redes do interior SP em negociação. Isso deve ser ARGUMENTO #1.",
-     "FP3 REFORMULADO: Agora pede volume + WhatsApp do lead dentro do email. CTA específico aumenta chance de reply.",
-     "BANNER SAZONAL NO SITE: Mensagem de urgência (preço tabelado 2026) no topo do site."
-    ],
-    "pendente_humano_critico": [
-         "🔴 COBRAR: Queijos Itupeva (Rafael) — agendar coleta-teste. LEAD MAIS QUENTE.",
-         "🔴 COBRAR: Savegnago — WhatsApp (11) 96785-9631. #1 interior SP, R$7,98bi. PRIORIDADE MÁXIMA.",
-         "🔴 COBRAR: Brasfrigo (Salto/SP) — fechar contrato. Respondeu, é local.",
-         "🔴 Sonda Supermercados (R$6,12bi, 22ª Brasil) — ligar (11) 2145-6200.",
-         "🟡 Tauste — ligar (15) 3324-4680. Respondeu 30/09.",
-         "🟡 Covabra — respondeu 22/09, priorizar follow-up humano.",
-         "🟡 Pague Menos (Josiane Marinho) — 2° maior do interior.",
-         "🟡 Dalben (gerente Luis) — insistir contato.",
-         "🟡 Muffato — ligar (43) 3371-1700.",
-         "🟡 Assaí, Bauducco, Bimbo, Atacadão — FP1 enviado nesta rodada."
-        ]
-       },
-      "ciclo_2026_10_12_cron_prospector": {
-       "timestamp": "2026-10-12 23:40 (Prospector - cron noturno)",
-       "diagnostico": {
-        "fila_total_empresas": 321,
-        "fila_contatados": 267,
-        "fila_bounce": 56,
-        "fila_pendentes": "0 (10 enviados nesta rodada; fila reposta para 10 antes do envio)",
-        "respostas_reais": 0,
-        "observacao": "Fila tinha 4 pendentes (<10) — reposta com +6 empresas novas (MX validado via nslookup, sem duplicatas em fila/leads/bounces) e enviado lote de 10."
-       },
-       "acoes": [
-        "✅ Diagnostico inicial: 4 pendentes (<10) — fila precisava de reposicao",
-        "✅ Descoberta: +6 NOVAS empresas adicionadas a fila_prospeccao_extra.json, todas com MX valido via nslookup e sem duplicata",
-        "  ⭐ Atlhetica Nutrition (atlhetica@atlhetica.com.br) — suplementos/encapsulados Campinas - NICHO PRIORITARIO (encapsulados); MX Kinghost",
-        "  ⭐ Maldonado Frios e Laticinios (contabildias@terra.com.br) — distribuidora de laticinios Sorocaba - NICHO PRIORITARIO (vencidos >40% gordura); CNPJ ativo desde 2006; MX Terra",
-        "  ⭐ Probilacto Distribuidora (sorocabavendas@grupoaraki.com.br) — distribuidora de laticinios Sorocaba desde 1971 - NICHO PRIORITARIO; MX uhserver",
-        "  ⭐ Rocha Distribuidora (contato@rochadist.com.br) — distribuidora de laticinios Sorocaba desde 1999 - NICHO PRIORITARIO; MX Uni5",
-        "  ⭐ Line Comercio e Distribuicao (anacletaneves.sorocaba@gmail.com) — distribuidora de laticinios Sorocaba 2023 - NICHO PRIORITARIO; MX Google",
-        "  ⭐ Supermercados Parana (ecommerceparanamatriz@gmail.com) — rede Sumare/Campinas - vencidos nas lojas; MX Google",
-        "✅ enviar_lote.py --max 15: 10 emails enviados com sucesso (4 pendentes antigos: Assai, Bauducco, Bimbo, Atacadao + 6 novos), 0 falhas, registrados no leads.csv",
-        "✅ BUG CORRIGIDO: prospecao.py tinha bloco V5 (supermercados) duplicado sem fechar chave — SyntaxError que travava o script. Removido o bloco V4 antigo e corrigida indentacao. py_compile OK.",
-        "✅ ecossistema.json atualizado com numeros pos-envio"
-       ],
-       "insights_novos": [
-        "DIRETORIO distribuidorasdealimentos.com.br listou 12 distribuidoras de laticinios em Sorocaba com CNPJ e email publico — 4 delas entram na fila (todas NICHO PRIORITARIO vencidos >40% gordura).",
-        "Buscar 'email fale conosco' de fabricas de margarina/manteiga na regiao nao rendeu (maioria usa formulario, nao email publico) — diretorios por CNAE 4631-1/00 (atacado de leite e laticinios) sao a fonte mais produtiva.",
-        "Cristalia, Galena, Legrand Pharma, Yakult (Jundiai) e Rich's (Sorocaba) tem MX valido mas so formulario de contato — nao incluidas por falta de email publico."
-       ]
-      },
-  "cron_2026_10_12_melhorador_continuo_81": {
-    "timestamp": "2026-10-12 23:50 (Melhorador Continuo - cron #81)",
-    "diagnostico": {
-      "watchdog": "exit 0 - saudavel",
-      "total_leads_watchdog": 280,
-      "ativos_watchdog": 210,
-      "bounce_cache_json": 74,
-      "fila_pendentes": "0 (todos enviados pelo Prospector)",
-      "respostas_reais_desde_Tauste": "12 dias sem respostas humanas (30/09 a 12/10)",
-      "taxa_resposta_dashboard": "8,0% (18 respostas / 226 enviados)",
-      "bounce_rate": "22% (50 bounces / 226 enviados)"
-    },
-    "problema_critico": "12 DIAS SEM RESPOSTAS HUMANAS - leads quentes (Savegnago, Queijos Itupeva, Brasfrigo, Sonda, Tauste, Covabra) todos aguardam acao humana via WhatsApp/telefone que o sistema automatizado nao pode realizar.",
-    "acoes": [
-      "ecossistema.json atualizado com diagnostico do dia",
-      "insights.md atualizado com observacao dos 12 dias de silencio",
-      "git commit e push das melhorias documentais"
-    ],
-    "insights_novos": [
-      "O SISTEMA ATINGIU O TETO DO EMAIL: com 8% de resposta em cold email, a taxa esta acima da media do mercado (1-5%). As respostas que chegam (Savegnago, Brasfrigo, Sonda, Tauste, Covabra) todas pedem acao humana que o sistema nao pode realizar - fechamento humano e o gargalo atual.",
-      "FILA REPOSTA PELO PROSPECTOR: 6 novas empresas adicionadas e 10 emails enviados. Fila em 0 pendentes. Manutencao continua necessaria.",
-      "22% DE BOUNCE AINDA ACIMA DA META DE 15%: 74 bounces no cache. A maioria ja foi corrigida."
-    ]
+  }
+ },
+ "ciclo_2026_10_12_cron_XX_atendente": {
+  "timestamp": "2026-10-12 22:59 (Atendente IA - cron - ciclo noturno)",
+  "acoes": [
+   "✅ sync_formspree.py — 74 bounces em cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (53 já tentados anteriormente)",
+   "⚠️ watchdog.py (1ª) — exit 1: 73 follow-ups atrasados",
+   "✅ prospecao_followup.py — 73 follow-ups processados (FP1/FP2/FP3). Todos zerados.",
+   "✅ send_sequence — 9 FP3 enviados (fritas/batata palha)",
+   "✅ check-replies — 8 respostas: todas auto-replies (Higa=1, Mars=4, Piracanjuba=2, Mars=1). Nenhuma humana."
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 193,
+   "bounce_cache_json": 74,
+   "watchdog": "exit 0 após correção (73 atrasados resolvidos)",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — todas auto-replies (Mars SAC, Piracanjuba SAC, Higa SAC)",
+   "respostas_auto": 8,
+   "observacao": "Sistema saudável após correção de 73 atrasados acumulados. 73 follow-ups enviados (FP1, FP2, FP3) em lote. 8 respostas todas auto-replies (Higa, Mars, Piracanjuba — SACs automáticos). Silêncio comercial persiste desde Tauste (30/09). Pipeline estável em 274 leads. Leads quentes inalterados — fechamento depende de ação humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026_10_12_cron_80_melhorador_continuo": {
+  "timestamp": "2026-10-12 23:20 (Melhorador Contínuo - cron #80)",
+  "diagnostico": {
+   "watchdog": "exit 0 — saudável após correção de 118 atrasados",
+   "total_leads_watchdog": 274,
+   "ativos_watchdog": 202,
+   "bounce_cache_json": 74,
+   "fila_total_empresas": 315,
+   "fila_contatados": 257,
+   "fila_bounce": 56,
+   "fila_pendentes": "4 com MX válido",
+   "respostas_reais_desde_Tauste": "12 dias sem respostas humanas (30/09→12/10)"
   },
+  "problema_critico_resolvido": "FILA DE FOLLOW-UPS — 118 atrasados processados em 3 rodadas (73+32+13). Sistema saudável.",
+  "acoes": [
+   "✅ prospecao_followup.py — 118 follow-ups enviados (FP1/FP2/FP3) com otimização de conexão SMTP reutilizada (antes: timeout em 300s)",
+   "✅ Template FP1 reforçado: Top 3 do interior SP (Savegnago, Pague Menos, Tauste) como prova social + ícones emoji",
+   "✅ Template FP2 reforçado: ranking Top 3 com nomes + valores + Madero + urgência 2028 + anti-furto",
+   "✅ Template FP3 reformulado: 3 motivos numerados com emoji + cálculo por porte (200L, 1.000L, 10 lojas) + prova social + CTA volume+WhatsApp",
+   "✅ Conexão SMTP reutilizada: redução drástica de latência (73 envios em <5min vs timeout anterior)",
+   "✅ Site index.html: banner sazonal \"Feche contrato em 2026 com preço tabelado\" (dismissível)"
+  ],
+  "insights_novos": [
+   "OTIMIZAÇÃO SMTP REDUZ LATÊNCIA: Ao reutilizar uma única conexão TLS em vez de abrir/fechar SSL por lead, o tempo caiu de timeout 300s para <5min.",
+   "SILÊNCIO COMERCIAL CRÍTICO: 12 dias sem respostas humanas (Tauste 30/09). Leads quentes não vão se fechar por email — precisam de WhatsApp/telefone.",
+   "PROVA SOCIAL TOP 3 É MAIOR ATIVO: Nenhuma coletora tem 3 maiores redes do interior SP em negociação. Isso deve ser ARGUMENTO #1.",
+   "FP3 REFORMULADO: Agora pede volume + WhatsApp do lead dentro do email. CTA específico aumenta chance de reply.",
+   "BANNER SAZONAL NO SITE: Mensagem de urgência (preço tabelado 2026) no topo do site."
+  ],
+  "pendente_humano_critico": [
+   "🔴 COBRAR: Queijos Itupeva (Rafael) — agendar coleta-teste. LEAD MAIS QUENTE.",
+   "🔴 COBRAR: Savegnago — WhatsApp (11) 96785-9631. #1 interior SP, R$7,98bi. PRIORIDADE MÁXIMA.",
+   "🔴 COBRAR: Brasfrigo (Salto/SP) — fechar contrato. Respondeu, é local.",
+   "🔴 Sonda Supermercados (R$6,12bi, 22ª Brasil) — ligar (11) 2145-6200.",
+   "🟡 Tauste — ligar (15) 3324-4680. Respondeu 30/09.",
+   "🟡 Covabra — respondeu 22/09, priorizar follow-up humano.",
+   "🟡 Pague Menos (Josiane Marinho) — 2° maior do interior.",
+   "🟡 Dalben (gerente Luis) — insistir contato.",
+   "🟡 Muffato — ligar (43) 3371-1700.",
+   "🟡 Assaí, Bauducco, Bimbo, Atacadão — FP1 enviado nesta rodada."
+  ]
+ },
+ "ciclo_2026_10_12_cron_prospector": {
+  "timestamp": "2026-10-12 23:40 (Prospector - cron noturno)",
+  "diagnostico": {
+   "fila_total_empresas": 321,
+   "fila_contatados": 267,
+   "fila_bounce": 56,
+   "fila_pendentes": "0 (10 enviados nesta rodada; fila reposta para 10 antes do envio)",
+   "respostas_reais": 0,
+   "observacao": "Fila tinha 4 pendentes (<10) — reposta com +6 empresas novas (MX validado via nslookup, sem duplicatas em fila/leads/bounces) e enviado lote de 10."
+  },
+  "acoes": [
+   "✅ Diagnostico inicial: 4 pendentes (<10) — fila precisava de reposicao",
+   "✅ Descoberta: +6 NOVAS empresas adicionadas a fila_prospeccao_extra.json, todas com MX valido via nslookup e sem duplicata",
+   "  ⭐ Atlhetica Nutrition (atlhetica@atlhetica.com.br) — suplementos/encapsulados Campinas - NICHO PRIORITARIO (encapsulados); MX Kinghost",
+   "  ⭐ Maldonado Frios e Laticinios (contabildias@terra.com.br) — distribuidora de laticinios Sorocaba - NICHO PRIORITARIO (vencidos >40% gordura); CNPJ ativo desde 2006; MX Terra",
+   "  ⭐ Probilacto Distribuidora (sorocabavendas@grupoaraki.com.br) — distribuidora de laticinios Sorocaba desde 1971 - NICHO PRIORITARIO; MX uhserver",
+   "  ⭐ Rocha Distribuidora (contato@rochadist.com.br) — distribuidora de laticinios Sorocaba desde 1999 - NICHO PRIORITARIO; MX Uni5",
+   "  ⭐ Line Comercio e Distribuicao (anacletaneves.sorocaba@gmail.com) — distribuidora de laticinios Sorocaba 2023 - NICHO PRIORITARIO; MX Google",
+   "  ⭐ Supermercados Parana (ecommerceparanamatriz@gmail.com) — rede Sumare/Campinas - vencidos nas lojas; MX Google",
+   "✅ enviar_lote.py --max 15: 10 emails enviados com sucesso (4 pendentes antigos: Assai, Bauducco, Bimbo, Atacadao + 6 novos), 0 falhas, registrados no leads.csv",
+   "✅ BUG CORRIGIDO: prospecao.py tinha bloco V5 (supermercados) duplicado sem fechar chave — SyntaxError que travava o script. Removido o bloco V4 antigo e corrigida indentacao. py_compile OK.",
+   "✅ ecossistema.json atualizado com numeros pos-envio"
+  ],
+  "insights_novos": [
+   "DIRETORIO distribuidorasdealimentos.com.br listou 12 distribuidoras de laticinios em Sorocaba com CNPJ e email publico — 4 delas entram na fila (todas NICHO PRIORITARIO vencidos >40% gordura).",
+   "Buscar 'email fale conosco' de fabricas de margarina/manteiga na regiao nao rendeu (maioria usa formulario, nao email publico) — diretorios por CNAE 4631-1/00 (atacado de leite e laticinios) sao a fonte mais produtiva.",
+   "Cristalia, Galena, Legrand Pharma, Yakult (Jundiai) e Rich's (Sorocaba) tem MX valido mas so formulario de contato — nao incluidas por falta de email publico."
+  ]
+ },
+ "cron_2026_10_12_melhorador_continuo_81": {
+  "timestamp": "2026-10-12 23:50 (Melhorador Continuo - cron #81)",
+  "diagnostico": {
+   "watchdog": "exit 0 - saudavel",
+   "total_leads_watchdog": 280,
+   "ativos_watchdog": 210,
+   "bounce_cache_json": 74,
+   "fila_pendentes": "0 (todos enviados pelo Prospector)",
+   "respostas_reais_desde_Tauste": "12 dias sem respostas humanas (30/09 a 12/10)",
+   "taxa_resposta_dashboard": "8,0% (18 respostas / 226 enviados)",
+   "bounce_rate": "22% (50 bounces / 226 enviados)"
+  },
+  "problema_critico": "12 DIAS SEM RESPOSTAS HUMANAS - leads quentes (Savegnago, Queijos Itupeva, Brasfrigo, Sonda, Tauste, Covabra) todos aguardam acao humana via WhatsApp/telefone que o sistema automatizado nao pode realizar.",
+  "acoes": [
+   "ecossistema.json atualizado com diagnostico do dia",
+   "insights.md atualizado com observacao dos 12 dias de silencio",
+   "git commit e push das melhorias documentais"
+  ],
+  "insights_novos": [
+   "O SISTEMA ATINGIU O TETO DO EMAIL: com 8% de resposta em cold email, a taxa esta acima da media do mercado (1-5%). As respostas que chegam (Savegnago, Brasfrigo, Sonda, Tauste, Covabra) todas pedem acao humana que o sistema nao pode realizar - fechamento humano e o gargalo atual.",
+   "FILA REPOSTA PELO PROSPECTOR: 6 novas empresas adicionadas e 10 emails enviados. Fila em 0 pendentes. Manutencao continua necessaria.",
+   "22% DE BOUNCE AINDA ACIMA DA META DE 15%: 74 bounces no cache. A maioria ja foi corrigida."
+  ]
+ },
  "estrategista_2026_10_13_cron_82": {
   "timestamp": "2026-10-13 08:00 (Estrategista - cron domingo #82)",
   "diagnostico_semana": {
@@ -955,5 +955,137 @@
    "🟡 PAGUE MENOS (R$4,33bi) — retomar contato.",
    "🟡 MUFFATO — ligar (43) 3371-1700."
   ]
+ },
+ "ciclo_2026_10_13_cron_84_atendente": {
+  "timestamp": "2026-10-13 17:52 (Atendente IA - cron #84)",
+  "acoes": [
+   "✅ sync_formspree.py — 79 bounces em cache, 0 notificações novas (OK após timeout inicial)",
+   "✅ corrigir_emails.py — 0 bounces processados (53+ já tentados anteriormente)",
+   "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados",
+   "✅ send_sequence — 9 FP3 enviados (nicho fritas/batata palha)",
+   "✅ check-replies — 3 respostas Piracanjuba (todas auto-reply SAC ticket — ignoradas, não são leads humanos)",
+   "✅ enviar_lote.py --status — 321 empresas, 0 pendentes na fila de prospecção"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 280,
+   "ativos_watchdog": 205,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudável",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — 3 auto-replies Piracanjuba (SAC ticket), nenhuma humana",
+   "respostas_auto": 3,
+   "observacao": "Sistema saudável. 13 dias sem respostas humanas (última: Tauste 30/09). Leads quentes inalterados — fechamento depende de ação humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato). Fila de prospecção zerada (0 pendentes com MX válido) — precisa reposição."
+  }
+ },
+ "ciclo_2026_10_13_cron_prospector": {
+  "timestamp": "2026-10-13 20:00 (Prospector - cron)",
+  "diagnostico": {
+   "fila_total_empresas": 323,
+   "fila_contatados": 268,
+   "fila_bounce": 61,
+   "fila_pendentes": "0 (apos envio de Fullcaps)",
+   "fila_pendentes_validas": "0 com MX valido — fila precisa de reposicao",
+   "novos_contatados": "Fullcaps (encapsulados Sorocaba — NICHO PRIORITARIO)",
+   "enviados_lote": 1,
+   "novas_descobertas": "Fullcaps + Castelo Alimentos (sacc@ ja estava no leads.csv — apenas Fullcaps foi novo)",
+   "busca_web_limitada": "4 buscas realizadas, resultados pouco produtivos"
+  },
+  "acoes": [
+   "Diagnostico inicial: 0 pendentes (<10) — necessidade de reposicao",
+   "4 buscas web realizadas (limite maximo) — Fullcaps encontrada (encapsulados Sorocaba - NICHO PRIORITARIO)",
+   "Fullcaps adicionado a fila_prospeccao_extra.json com MX valido (mail.fullcaps.com.br)",
+   "enviar_lote.py --max 15: 1 email enviado (Fullcaps)",
+   "ecossistema.json atualizado com numeros pos-envio"
+  ],
+  "observacao": "Fila de prospeccao atingiu 323 empresas com cobertura quase completa dos nichos na regiao. Buscas web cada vez menos produtivas."
+ },
+ "ciclo_2026_10_13_cron_86_atendente": {
+  "timestamp": "2026-10-13 ~20:21 (Atendente IA - cron #86 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces em cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 281 leads, 197 ativos, 79 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospeccao"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 281,
+   "ativos_watchdog": 197,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
+  }
+ },
+ "ciclo_2026_10_13_cron_87_atendente": {
+  "timestamp": "2026-10-13 18:33 (Atendente IA - cron #87 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (53+ ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospeccao"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 281,
+   "ativos_watchdog": 197,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
+  },
+  "ciclo_2026_10_13_cron_88_atendente": {
+   "timestamp": "2026-10-13 19:04 (Atendente IA - cron #88 - ciclo noturno)",
+   "acoes": [
+    "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+    "corrigir_emails.py — 0 bounces processados (53+ ja tentados anteriormente)",
+    "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados",
+    "prospecao_followup.py — 0 follow-ups atrasados",
+    "send_sequence — sequencia processada",
+    "check-replies — 0 respostas (replies_pending.json vazio)",
+    "enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospeccao"
+   ],
+   "diagnostico": {
+    "total_leads_watchdog": 281,
+    "ativos_watchdog": 197,
+    "bounce_cache_json": 79,
+    "watchdog": "exit 0 — saudavel",
+    "respostas_reais": 0,
+    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+    "respostas_auto": 0,
+    "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel. Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone."
+   }
+  }
+ },
+ "ciclo_2026_10_13_cron_89_atendente": {
+  "timestamp": "2026-10-13 19:34 (Atendente IA - cron #89 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (53+ ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas (replies_pending.json vazio)",
+   "enviar_lote.py --status — 323 empresas, 0 pendentes na fila de prospeccao"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 281,
+   "ativos_watchdog": 197,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
+  }
  }
 }

@@ -1595,47 +1595,61 @@
     "email": "sac@atacadao.com.br",
     "cidade": "Campinas/SP (rede de atacarejo, lojas na regiao, padaria/rotisserie/acougue em todas)",
     "segmento": "Atacarejo (rede Carrefour, fritura alto volume em todas as lojas, acougue e rotisserie) - MX Mimecast valido 01/10"
-      },
-      {
-        "nome": "Atlhetica Nutrition",
-        "empresa": "Atlhetica Nutrition (suplementos alimentares - Campinas/SP)",
-        "email": "atlhetica@atlhetica.com.br",
-        "cidade": "Campinas/SP",
-        "segmento": "industria de suplementos e nutraceuticos (encapsulados, whey, vitaminas) - NICHO PRIORITARIO (encapsulados/farmaceuticas); email no rodape do site oficial; MX Kinghost valido 12/10"
-      },
-      {
-        "nome": "Supermercados Parana",
-        "empresa": "Supermercados Parana (lojas em Sumare e Campinas - CNPJ 06.959.577/0001-01)",
-        "email": "ecommerceparanamatriz@gmail.com",
-        "cidade": "Sumare/SP",
-        "segmento": "Supermercados (rede regional - vencidos de margarina, manteiga, frios e laticinios nas lojas) - NICHO PRIORITARIO (vencidos >40% gordura); email no site oficial; MX Google valido 12/10"
-      },
-      {
-        "nome": "Maldonado Frios e Laticinios",
-        "empresa": "Maldonado Frios e Laticinios (distribuidora de leite e laticinios - Sorocaba/SP)",
-        "email": "contabildias@terra.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "distribuidora de laticinios e leite (queijos, cremes, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 07.830.778/0001-77 ativa desde 2006; MX Terra valido 12/10"
-      },
-      {
-        "nome": "Probilacto Distribuidora de Alimentos",
-        "empresa": "Probilacto Distribuidora de Alimentos (distribuidora de laticinios - Sorocaba/SP)",
-        "email": "sorocabavendas@grupoaraki.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "distribuidora de laticinios e leite (leite, queijos, derivados - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 45.397.114/0001-55 ativa desde 1971; MX uhserver valido 12/10"
-      },
-      {
-        "nome": "Rocha Distribuidora",
-        "empresa": "Rocha Distribuidora (distribuidora de laticinios - Sorocaba/SP)",
-        "email": "contato@rochadist.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "distribuidora de laticinios e leite (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 03.529.863/0001-49 ativa desde 1999; MX Uni5 valido 12/10"
-      },
-      {
-        "nome": "Line Comercio e Distribuicao",
-        "empresa": "Line Comercio e Distribuicao Ltda (distribuidora de laticinios - Sorocaba/SP)",
-        "email": "anacletaneves.sorocaba@gmail.com",
-        "cidade": "Sorocaba/SP",
-        "segmento": "distribuidora de laticinios e leite (vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 49.147.494/0001-20 ativa desde 2023; MX Google valido 12/10"
-      }
-    ]
+  },
+  {
+    "nome": "Atlhetica Nutrition",
+    "empresa": "Atlhetica Nutrition (suplementos alimentares - Campinas/SP)",
+    "email": "atlhetica@atlhetica.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "industria de suplementos e nutraceuticos (encapsulados, whey, vitaminas) - NICHO PRIORITARIO (encapsulados/farmaceuticas); email no rodape do site oficial; MX Kinghost valido 12/10"
+  },
+  {
+    "nome": "Supermercados Parana",
+    "empresa": "Supermercados Parana (lojas em Sumare e Campinas - CNPJ 06.959.577/0001-01)",
+    "email": "ecommerceparanamatriz@gmail.com",
+    "cidade": "Sumare/SP",
+    "segmento": "Supermercados (rede regional - vencidos de margarina, manteiga, frios e laticinios nas lojas) - NICHO PRIORITARIO (vencidos >40% gordura); email no site oficial; MX Google valido 12/10"
+  },
+  {
+    "nome": "Maldonado Frios e Laticinios",
+    "empresa": "Maldonado Frios e Laticinios (distribuidora de leite e laticinios - Sorocaba/SP)",
+    "email": "contabildias@terra.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "distribuidora de laticinios e leite (queijos, cremes, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 07.830.778/0001-77 ativa desde 2006; MX Terra valido 12/10"
+  },
+  {
+    "nome": "Probilacto Distribuidora de Alimentos",
+    "empresa": "Probilacto Distribuidora de Alimentos (distribuidora de laticinios - Sorocaba/SP)",
+    "email": "sorocabavendas@grupoaraki.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "distribuidora de laticinios e leite (leite, queijos, derivados - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 45.397.114/0001-55 ativa desde 1971; MX uhserver valido 12/10"
+  },
+  {
+    "nome": "Rocha Distribuidora",
+    "empresa": "Rocha Distribuidora (distribuidora de laticinios - Sorocaba/SP)",
+    "email": "contato@rochadist.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "distribuidora de laticinios e leite (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 03.529.863/0001-49 ativa desde 1999; MX Uni5 valido 12/10"
+  },
+  {
+    "nome": "Line Comercio e Distribuicao",
+    "empresa": "Line Comercio e Distribuicao Ltda (distribuidora de laticinios - Sorocaba/SP)",
+    "email": "anacletaneves.sorocaba@gmail.com",
+    "cidade": "Sorocaba/SP",
+    "segmento": "distribuidora de laticinios e leite (vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 49.147.494/0001-20 ativa desde 2023; MX Google valido 12/10"
+  },
+  {
+    "nome": "Fullcaps",
+    "empresa": "Fullcaps Encapsulamento e Envase Ltda",
+    "email": "comercial@fullcaps.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "industria de encapsulados e nutraceuticos (manufatura por contrato, capsulas gelatinosas e vegetais) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
+  },
+  {
+    "nome": "Castelo Alimentos",
+    "empresa": "Castelo Alimentos S/A",
+    "email": "sacc@casteloalimentos.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria de alimentos (molhos, vinagres, conservas) - usa oleos vegetais em producao - NICHO PRIORITARIO (industria alimenticia)"
+  }
+]
