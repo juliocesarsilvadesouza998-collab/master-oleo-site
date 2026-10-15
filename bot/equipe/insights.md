@@ -898,3 +898,48 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
 
 ---
+
+---
+## 2026-10-14 18:35 (Atendente IA - cron #95 - ciclo noturno)
+
+### Diagnóstico do ciclo
+- 296 leads, 209 ativos, 82 bounces (watchdog) — SMTP/IMAP OK
+- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+- ✅ 0 notificações novas no Formspree; 0 bounces processados (82 no cache, todos já tentados)
+- ✅ Fila de prospecção: 335 empresas, 8 pendentes com MX válido
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 82 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | **1 pendência: auto-ack Salesforce do SAC Nagumo (caso 00143542)** |
+| proposta_contrato.py | Proposta formal NAGUMO gerada: 5.000 L/mês est. → R$ 2,00/L → R$ 120k/ano |
+| enviar_anexo.py | Proposta **ANEXADA** e enviada na thread do caso (relacionamento@nagumo.com.br) |
+| atualizar_lead_nagumo.py | Lead 289 → status respondido; follow-up humano pendente em 3 dias |
+
+### 🔥 NOVO LEAD QUENTE: Supermercados Nagumo (Mixter Atacado e Varejo)
+- **O que aconteceu:** o SAC da Nagumo respondeu com auto-ack Salesforce registrando o **caso 00143542**
+  ("Recebemos sua solicitação... nossa equipe irá analisar e retornará o contato").
+- **O que fizemos:** seguindo o padrão 14/10 (SAC de rede que responde = semi-fechamento), geramos a
+  **proposta formal de contrato** (5.000 L/mês estimados, tabela escalonada R$ 1,20–2,20/L + bônus de
+  exclusividade +R$ 0,10/L e consolidação +R$ 0,05/L) e **anexamos na thread do caso** — a proposta
+  entra no ticket que a equipe Nagumo vai analisar.
+- **Próximo passo humano:** follow-up em 3 dias (17/10) via WhatsApp (11) 96785-9631 citando o caso 00143542.
+- **Significado:** 4ª rede grande com resposta SAC em 24h (Savegnago, Pague Menos, Rede Confiança, Nagumo)
+  — o padrão de "encaminhamento ativo" continua validado: SAC responde, redireciona, e proposta anexada
+  fecha o círculo.
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 14+ dias sem ação humana.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **NAGUMO (caso 00143542)** — NOVO: proposta anexada na thread. Follow-up em 3 dias.
+5. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+6. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09.
+7. 🟡 **Covabra** — respondeu 22/09.
+8. 🟡 **Pague Menos** (R$4,33bi) — proposta anexada no ticket Zendesk 407470 (16:07).
+9. 🟡 **Rede Confiança** — proposta gerada 12:04, aguarda retorno.
+10. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.

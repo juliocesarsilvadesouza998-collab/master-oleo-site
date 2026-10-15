@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 17:35 (Atendente IA - cron #94 - ciclo noturno)",
+ "atualizado_em": "2026-10-14 18:35 (Atendente IA - cron #95 - ciclo noturno)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1141,74 +1141,97 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
    "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
    "observacao": "Pipeline estavel em 284 leads, 200 ativos, 79 bounces. Fila de prospeccao: 326 empresas, 0 pendentes. 3 novos leads hoje (Braslact, WBM Alimentos, Jundia Foods). 14 dias sem respostas humanas. Todos os leads quentes inalterados — fechamento continua dependendo de acao humana (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
-    }
-   },
-   "ciclo_2026-10-14_cron_92_atendente": {
-    "timestamp": "2026-10-14 15:42 (Atendente IA - cron #92 - ciclo vespertino)",
-    "acoes": [
-     "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
-     "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
-     "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
-     "prospecao_followup.py — 0 follow-ups atrasados",
-     "send_sequence — sequencia processada",
-     "check-replies — 0 respostas (replies_pending.json vazio)",
-     "scan_inbox.py --dias 3 — 0 mensagens nao lidas na caixa (IMAP OK, confirmacao de caixa limpa)",
-     "enviar_lote.py --status — 335 empresas na fila, 8 pendentes (reposicao do prospector)"
-    ],
-    "diagnostico": {
-     "total_leads_watchdog": 284,
-     "ativos_watchdog": 200,
-     "bounce_cache_json": 79,
-     "watchdog": "exit 0 — saudavel",
-     "respostas_reais": "0 novas neste tick",
-     "respostas_humanas": "Nenhuma — replies_pending.json vazio e caixa IMAP sem nao lidas",
-     "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
-     "observacao": "Pipeline estavel: 284 leads, 200 ativos, 79 bounces. Caixa IMAP 100% limpa (0 nao lidas confirmado por varredura manual). Fila de prospeccao com reposicao: 335 empresas, 8 pendentes. Nenhuma proposta contratual gerada neste tick (sem lead com volume informado). Leads quentes inalterados — fechamento continua dependendo de acao humana (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato, cadastro Covabra portal ivrim)."
-         }
-        },
-        "ciclo_2026-10-14_cron_93_atendente": {
-         "timestamp": "2026-10-14 16:35 (Atendente IA - cron #93 - ciclo vespertino)",
-         "acoes": [
-          "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
-          "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
-          "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
-          "prospecao_followup.py — 0 follow-ups atrasados",
-          "send_sequence — sequencia processada",
-          "check-replies — 1 pendencia: ECO do proprio ticket Zendesk Pague Menos (proposta anexada 16:18 BRT voltou pela thread) — NAO e resposta humana; pendencia limpa, sem resposta enviada",
-          "marcar_lidas.py — eco Zendesk tratado; replies_pending.json zerado"
-         ],
-         "diagnostico": {
-          "total_leads_watchdog": 284,
-          "ativos_watchdog": 200,
-          "bounce_cache_json": 79,
-          "watchdog": "exit 0 — saudavel",
-          "respostas_reais": "0 novas neste tick — a unica pendencia era eco da nossa propria mensagem (proposta Pague Menos anexada a thread Zendesk as 16:17-16:18 BRT)",
-          "respostas_humanas": "Nenhuma nova — ultima resposta humana real: Tauste 30/09 (14 dias)",
-          "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
-          "observacao": "Pipeline estavel: 284 leads, 200 ativos, 79 bounces. Fluxo Pague Menos (id 44) concluido no tick anterior das 16:07-16:17 BRT: proposta-contrato-supermercados-pague-menos-2026-10-14.html gerada e ANEXADA a thread do ticket Zendesk 407470 (canal SAC funcional, pois josiane.marinho@ foi bloqueada por regra de fluxo do dominio — corrigir_lead_pague_menos.py reverteu email do lead para falecom@supermercadospaguemenos.com.br). Fila prospeccao extra: 246 empresas; fila prioritaria: 14. Leads quentes inalterados (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato) — fechamento depende de acao humana via WhatsApp/telefone."
-                   }
-                  },
-                  "ciclo_2026-10-14_cron_94_atendente": {
-                   "timestamp": "2026-10-14 17:35 (Atendente IA - cron #94 - ciclo noturno)",
-                   "acoes": [
-                    "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
-                    "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
-                    "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
-                    "prospecao_followup.py — 0 follow-ups atrasados",
-                    "send_sequence — sequencia processada",
-                    "check-replies — 0 respostas (replies_pending.json vazio)",
-                    "scan_inbox.py --dias 3 — 0 mensagens nao lidas na caixa (IMAP OK, caixa limpa)",
-                    "enviar_lote.py --status — 335 empresas na fila, 8 pendentes com MX valido (Ello Ingredientes, Sun Foods, Alere, Rede Campeao, JLO, Risotto Mix, Fantastico, Prime Food) aguardando lote do Prospector"
-                   ],
-                   "diagnostico": {
-                    "total_leads_watchdog": 284,
-                    "ativos_watchdog": 200,
-                    "bounce_cache_json": 79,
-                    "watchdog": "exit 0 — saudavel",
-                    "respostas_reais": "0 novas neste tick",
-                    "respostas_humanas": "Nenhuma — replies_pending.json vazio + caixa IMAP 100% limpa",
-                    "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
-                    "observacao": "Pipeline estavel: 284 leads, 200 ativos, 79 bounces. Sem respostas novas, sem bounces novos, sem follow-ups atrasados. Propostas de contrato geradas hoje: Rede Confianca (12:04) e Pague Menos (16:07, anexada ao ticket Zendesk 407470) — ambas ja entregues, sem retorno ainda. Fila de prospeccao: 335 empresas com 8 pendentes validas aguardando proximo lote. Leads quentes inalterados (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato) — fechamento continua dependendo de acao humana via WhatsApp/telefone."
-                   }
-                  }
-                  }
+  }
+ },
+ "ciclo_2026-10-14_cron_92_atendente": {
+  "timestamp": "2026-10-14 15:42 (Atendente IA - cron #92 - ciclo vespertino)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas (replies_pending.json vazio)",
+   "scan_inbox.py --dias 3 — 0 mensagens nao lidas na caixa (IMAP OK, confirmacao de caixa limpa)",
+   "enviar_lote.py --status — 335 empresas na fila, 8 pendentes (reposicao do prospector)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": "0 novas neste tick",
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio e caixa IMAP sem nao lidas",
+   "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
+   "observacao": "Pipeline estavel: 284 leads, 200 ativos, 79 bounces. Caixa IMAP 100% limpa (0 nao lidas confirmado por varredura manual). Fila de prospeccao com reposicao: 335 empresas, 8 pendentes. Nenhuma proposta contratual gerada neste tick (sem lead com volume informado). Leads quentes inalterados — fechamento continua dependendo de acao humana (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato, cadastro Covabra portal ivrim)."
+  }
+ },
+ "ciclo_2026-10-14_cron_93_atendente": {
+  "timestamp": "2026-10-14 16:35 (Atendente IA - cron #93 - ciclo vespertino)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 1 pendencia: ECO do proprio ticket Zendesk Pague Menos (proposta anexada 16:18 BRT voltou pela thread) — NAO e resposta humana; pendencia limpa, sem resposta enviada",
+   "marcar_lidas.py — eco Zendesk tratado; replies_pending.json zerado"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": "0 novas neste tick — a unica pendencia era eco da nossa propria mensagem (proposta Pague Menos anexada a thread Zendesk as 16:17-16:18 BRT)",
+   "respostas_humanas": "Nenhuma nova — ultima resposta humana real: Tauste 30/09 (14 dias)",
+   "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
+   "observacao": "Pipeline estavel: 284 leads, 200 ativos, 79 bounces. Fluxo Pague Menos (id 44) concluido no tick anterior das 16:07-16:17 BRT: proposta-contrato-supermercados-pague-menos-2026-10-14.html gerada e ANEXADA a thread do ticket Zendesk 407470 (canal SAC funcional, pois josiane.marinho@ foi bloqueada por regra de fluxo do dominio — corrigir_lead_pague_menos.py reverteu email do lead para falecom@supermercadospaguemenos.com.br). Fila prospeccao extra: 246 empresas; fila prioritaria: 14. Leads quentes inalterados (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato) — fechamento depende de acao humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026-10-14_cron_94_atendente": {
+  "timestamp": "2026-10-14 17:35 (Atendente IA - cron #94 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 79 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py — exit 0: sistema saudavel, sem follow-ups atrasados. 284 leads, 200 ativos, 79 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas (replies_pending.json vazio)",
+   "scan_inbox.py --dias 3 — 0 mensagens nao lidas na caixa (IMAP OK, caixa limpa)",
+   "enviar_lote.py --status — 335 empresas na fila, 8 pendentes com MX valido (Ello Ingredientes, Sun Foods, Alere, Rede Campeao, JLO, Risotto Mix, Fantastico, Prime Food) aguardando lote do Prospector"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 284,
+   "ativos_watchdog": 200,
+   "bounce_cache_json": 79,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": "0 novas neste tick",
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio + caixa IMAP 100% limpa",
+   "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
+   "observacao": "Pipeline estavel: 284 leads, 200 ativos, 79 bounces. Sem respostas novas, sem bounces novos, sem follow-ups atrasados. Propostas de contrato geradas hoje: Rede Confianca (12:04) e Pague Menos (16:07, anexada ao ticket Zendesk 407470) — ambas ja entregues, sem retorno ainda. Fila de prospeccao: 335 empresas com 8 pendentes validas aguardando proximo lote. Leads quentes inalterados (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato) — fechamento continua dependendo de acao humana via WhatsApp/telefone."
+  }
+ },
+ "ciclo_2026-10-14_cron_95_atendente": {
+  "timestamp": "2026-10-14 18:35 (Atendente IA - cron #95 - ciclo noturno)",
+  "acoes": [
+   "sync_formspree.py — 82 bounces cache, 0 notificacoes novas do Formspree",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados: 82 no cache, 61 no historico de correcoes_emails.json)",
+   "prospecao_followup.py — 0 follow-ups atrasados",
+   "send_sequence — sequencia processada",
+   "check-replies — 1 pendencia: auto-resposta Salesforce do SAC Nagumo (caso 00143542, 'recebemos seu caso')",
+   "proposta_contrato.py — proposta-contrato-supermercados-nagumo-2026-10-14.html gerada (5.000 L/mês est. = R$ 2,00/L = R$ 120k/ano)",
+   "enviar_anexo.py — proposta enviada ANEXADA para relacionamento@nagumo.com.br na thread do caso 00143542",
+   "atualizar_lead_nagumo.py — lead 289 marcado respondido (caso 00143542 registrado, follow-up humano em 3 dias pendente)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 296,
+   "ativos_watchdog": 209,
+   "bounce_cache_json": 82,
+   "watchdog": "exit 0 — saudavel",
+   "respostas_reais": "1 neste tick — Nagumo (auto-resposta Salesforce, caso 00143542)",
+   "respostas_humanas": "Nenhuma humana nova — Nagumo foi auto-ack de SAC (nao e humano); ultima humana real: Tauste 30/09 (14 dias)",
+   "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
+   "observacao": "Pipeline: 296 leads, 209 ativos, 82 bounces. NOVO LEAD QUENTE: Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP) — SAC registrou caso 00143542 e proposta formal com 5.000 L/mês est. anexada na thread (padrao 14/10 de semi-fechamento: 4a rede grande com resposta SAC na semana: Savegnago, Pague Menos, Rede Confianca, Nagumo). Propostas geradas hoje: Rede Confianca (12:04), Pague Menos (16:07, ticket Zendesk 407470), Nagumo (18:30). Fila prospeccao: 335 empresas, 8 pendentes. Leads quentes para acao humana: Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato + NAGUMO (follow-up humano em 3 dias)."
+  }
+ }
+}

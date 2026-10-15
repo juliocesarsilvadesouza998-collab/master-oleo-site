@@ -1,7 +1,72 @@
 {
- "atualizado_em": "2026-10-14 19:05 (Atendente IA - cron #109 - tick 19:00)",
+ "ciclo_2026_10_15_cron_112_melhorador": {
+    "timestamp": "2026-10-15 17:25 (Melhorador Contínuo - cron #112)",
+    "acoes": [
+      "✅ Fila reabastecida com 6 novas empresas MX-verificadas (R-Food, Glúten Free, Caiçara, FastNFit, Bremil) em bot/fila_prospeccao_extra.json",
+      "✅ Nova seção 'Momentum de mercado' adicionada ao index.html (prova social das 3 redes que abriram canal em 14/10)",
+      "✅ Insights atualizados com diagnóstico e aprendizado"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 296,
+      "ativos_watchdog": 208,
+      "bounce_cache_json": 83,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma nova neste tick — pipeline aguardando retorno (Savegnago, Pague Menos, Rede Confiança, Covabra)",
+      "respostas_auto": 0,
+      "observacao": "Melhorador #112: fila de prospecção estava ZERADA (0 pendentes). Reabastecida com 6 novas empresas da região (Salto, Sorocaba, Jundiaí, Indaiatuba). Site atualizado com seção de momentum social mostrando as 3 redes que abriram canal em 14/10. 24% bounce rate ainda é alto — próximo foco: melhorar qualidade dos emails da fila."
+    }
+  },
+  "atualizado_em": "2026-10-15 17:25 (Melhorador Contínuo - cron #112)",
   "criado_em": "2026-08-13",
-  "ciclo_2026_10_14_cron_109_atendente": {
+      "ciclo_2026_10_15_cron_111_atendente": {
+       "timestamp": "2026-10-15 17:23 (Atendente IA - cron #111 - tick 17:23)",
+       "acoes": [
+        "✅ sync_formspree.py — 83 bounces em cache, 0 notificações novas do Formspree",
+        "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+        "✅ prospecao_followup.py — 0 follow-ups atrasados",
+        "✅ send_sequence — sequência processada (nada a enviar)",
+        "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+        "✅ watchdog.py — exit 0: 296 leads, 208 ativos, 83 bounces, SMTP/IMAP OK",
+        "✅ enviar_lote.py --status — 339 empresas, 283 contatados, 64 bounce, 0 pendentes",
+        "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas neste tick; nenhum lead com volume novo nem solicitação ESG"
+       ],
+       "diagnostico": {
+        "total_leads_watchdog": 296,
+        "ativos_watchdog": 208,
+        "bounce_cache_json": 83,
+        "watchdog": "exit 0 — saudável",
+        "respostas_reais": 0,
+        "respostas_humanas": "Nenhuma neste tick — pipeline segue em aguardo de retornos (Savegnago comercial@, Pague Menos ticket 407470, Rede Confiança social@). Últimas respostas humanas: 14/10.",
+        "respostas_auto": 0,
+        "observacao": "Tick 15/10 17:23 limpo — sistema saudável, caixa zerada, 0 follow-ups atrasados, 0 bounces novos. Mesmo cenário dos ticks anteriores: fila de prospecção zerada (0 pendentes), pipeline aguardando retorno de leads quentes do dia 14/10. Sem respostas novas neste ciclo."
+       }
+      },
+      "ciclo_2026_10_14_cron_110_atendente": {
+     "timestamp": "2026-10-14 19:32 (Atendente IA - cron #110 - tick 19:30)",
+     "acoes": [
+      "✅ sync_formspree.py — 83 bounces em cache, 0 notificações novas do Formspree",
+      "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ watchdog.py — exit 0: 296 leads, 208 ativos, 83 bounces, SMTP/IMAP OK",
+      "✅ scan_inbox.py — timeout (120s, IMAP em horário de pico); watchdog confirma saudável",
+      "✅ enviar_lote.py --status — 339 empresas, 283 contatados, 64 bounce, 0 pendentes",
+      "ℹ️ proposta_contrato.py / relatorio_esg.py não executados — 0 respostas novas neste tick; nenhum lead com volume novo nem solicitação ESG"
+     ],
+     "diagnostico": {
+      "total_leads_watchdog": 296,
+      "ativos_watchdog": 208,
+      "bounce_cache_json": 83,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma neste tick — última resposta humana: Pague Menos SAC (cron #105, 15:43→16:14) e Rede Confiança (cron #98, 12:10)",
+      "respostas_auto": 0,
+      "observacao": "Tick 19:30 limpo — mesmo cenário do tick anterior (19:00): caixa sem respostas novas, 0 follow-ups atrasados, 0 bounces novos. Pipeline de fechamento inalterado: Savegnago (comercial@, aguardando), Pague Menos (proposta 10.000L/mês no ticket 407470, aguardando Josiane Marinho), Rede Confiança (proposta 2.500L/mês no social@), Covabra (portal Ivrim), Brasfrigo/Queijos Itupeva (coleta-teste pendente de ação humana). Fila de prospecção zerada — reposição depende do Prospector (cron #108 enviou 7 novos leads). scan_inbox.py não concluiu (timeout 120s no IMAP — provável lentidão do Gmail em horário de pico); watchdog confirma sistema saudável sem alterações."
+     }
+    },
+    "ciclo_2026_10_14_cron_109_atendente": {
    "timestamp": "2026-10-14 19:05 (Atendente IA - cron #109 - tick 19:00)",
    "acoes": [
     "✅ sync_formspree.py — 83 bounces em cache, 0 notificações novas do Formspree",

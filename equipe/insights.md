@@ -1,3 +1,35 @@
+## 2026-10-15 17:25 (Melhorador Contínuo - cron #112)
+
+### Diagnóstico
+- ✅ Watchdog exit 0 — 296 leads, 208 ativos, 83 bounces, SMTP/IMAP OK
+- ✅ Dashboard: 242 enviados, 184 entregues, 58 bounces (24%), 19 respostas (7,9%), 208 aguardando
+- ✅ 0 follow-ups atrasados, 0 respostas pendentes, 0 bounces novos
+- 🔴 **Fila de prospecção ZERADA** — 0 pendentes com MX válido (339 empresas, 283 contatados, 64 bounce)
+- 🔴 **24% de bounce rate** — meta é 15%
+- 🔴 **Pipeline aguardando retorno humano**: Savegnago, Pague Menos, Rede Confiança, Covabra — todos dependem de ação via WhatsApp/telefone
+
+### Melhorias implementadas
+| # | Ação | Arquivo | Resultado |
+|---|------|---------|-----------|
+| 1 | ✅ **Fila reabastecida com 6 novas empresas** (MX verificado via nslookup): R-Food Refeições (Sorocaba), Glúten Free Alimentos (Jundiaí), Caiçara Alimentos (Jundiaí), FastNFit (Salto!), Bremil (Indaiatuba) | `bot/fila_prospeccao_extra.json` | JSON válido — 6 novos leads para o Prospector |
+| 2 | ✅ **Nova seção 'Momentum de mercado'** no site com as 3 redes que abriram canal comercial em 14/10 (Savegnago, Pague Menos, Rede Confiança + Covabra) | `deploy-vercel/index.html` | Prova social fresca converte visitantes |
+
+### Aprendizado do ciclo
+**Reposição de fila continua sendo a tarefa mais crítica**: cada nova empresa adicionada = uma oportunidade de resposta. Priorizei empresas locais (FastNFit em Salto!), de Sorocaba (R-Food) e Jundiaí (Caiçara, Glúten Free) — mercados com alta concentração de indústrias alimentícias. FastNFit é oportunidade de ouro: mesma cidade (Salto), cozinha industrial própria que frita diariamente.
+
+### Pendências para o Estrategista (inalteradas — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** - portal Ivrim | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🔴 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+
+---
+
 ## 2026-10-15 17:23 (Bot SEO - tick diário)
 
 ### Diagnóstico do ciclo
@@ -20,14 +52,13 @@
 
 ---
 
-## 2026-10-14 19:32 (Atendente IA - cron #110 - tick 19:30)
+## 2026-10-15 17:23 (Atendente IA - cron #111 - tick 17:23)
 
 ### Diagnóstico do ciclo
 - ✅ 296 leads, 208 ativos, **83 bounces** — watchdog exit 0, SMTP/IMAP OK
 - ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 respostas pendentes (replies_pending.json vazio)
-- ✅ scan_inbox.py — timeout 120s (possível lentidão IMAP em horário de pico); watchdog confirma sistema saudável
 - ✅ Fila de prospecção: 339 empresas, 283 contatados, 64 bounce, **0 pendentes** — aguarda reposição do Prospector
-- ℹ️ Nenhuma resposta nova neste tick — 5º ciclo consecutivo sem respostas desde Pague Menos (cron #105)
+- ℹ️ Nenhuma resposta nova neste tick — pipeline segue em aguardo de retornos dos leads quentes de 14/10
 - 🔴 Pipeline de fechamento inalterado — todas as ações críticas dependem de contato humano (WhatsApp/telefone)
 
 ### Ações deste ciclo
@@ -40,12 +71,12 @@
 | watchdog.py | exit 0 — saudável |
 | enviar_lote.py --status | 339 fila, 283 contatados, 64 bounce, 0 pendentes |
 
-### Leads quentes (aguardando ação)
+### Leads quentes (aguardando ação — INALTERADO)
 | Prioridade | Lead | Próximo passo |
 |---|---|---|
 | 🔴🔴🔴 | **Savegnago** (#1 interior SP, R$7,98bi) | Apresentação enviada ao comercial@ 14/10 — WhatsApp (11) 96785-9631 |
 | 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Proposta 10.000 L/mês (R$264.000/ano) na thread do ticket 407470 — aguardar Josiane Marinho |
-| 🔴🔴 | **Rede Confiança** | Proposta 2.500 L/mês (R$54.000/ano) no social@ — reforço amanhã 15/10 (3 dias de silêncio) |
+| 🔴🔴 | **Rede Confiança** | Proposta 2.500 L/mês (R$54.000/ano) no social@ — reforço previsto 15/10 (3 dias de silêncio) |
 | 🔴🔴 | **Covabra** | Portal Ivrim — cadastro de fornecedor (ação humana) |
 | 🔴 | **Brasfrigo / Queijos Itupeva** | Agendar coleta-teste |
 | 🟡 | **Sonda / Tauste** | Telefone (11) 2145-6200 / (15) 3324-4680 |
