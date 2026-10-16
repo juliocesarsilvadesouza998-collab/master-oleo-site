@@ -519,10 +519,10 @@
   },
   {
     "nome": "Rede Confianca Supermercados",
-        "empresa": "Rede Confianca Supermercados",
-        "email": "social@confianca.com.br",
-        "cidade": "Sorocaba/SP (2 lojas: Pannunzio e Av. Sao Paulo 27mil m2; rede: Bauru, Marilia, Jau, Botucatu, Pederneiras)",
-        "segmento": "Supermercados (rede)"
+    "empresa": "Rede Confianca Supermercados",
+    "email": "social@confianca.com.br",
+    "cidade": "Sorocaba/SP (2 lojas: Pannunzio e Av. Sao Paulo 27mil m2; rede: Bauru, Marilia, Jau, Botucatu, Pederneiras)",
+    "segmento": "Supermercados (rede)"
   },
   {
     "nome": "Rede Bom Lugar Supermercados",
@@ -1651,181 +1651,222 @@
     "email": "sacc@casteloalimentos.com.br",
     "cidade": "Jundiai/SP",
     "segmento": "industria de alimentos (molhos, vinagres, conservas) - usa oleos vegetais em producao - NICHO PRIORITARIO (industria alimenticia)"
-      },
-      {
-        "nome": "Braslact",
-        "empresa": "Braslact Produtos de Leite Ltda",
-        "email": "braslact@braslact.com.br",
-        "cidade": "Indaiatuba/SP",
-        "segmento": "industria de laticinios (queijos, manteiga, derivados) - PRIORIDADE (gorduras/laticinios, vencidos >40% gordura)"
-      },
-      {
-        "nome": "WBM Alimentos",
-        "empresa": "WBM Alimentos Ltda",
-        "email": "contato@wbmalimentos.com.br",
-        "cidade": "Jundiai/SP",
-        "segmento": "industria alimenticia (terceirizacao, ingredientes, envase de oleos e aromas) - usa oleos vegetais"
-      },
-      {
-              "nome": "Jundia Foods",
-              "empresa": "BRGMN Comercio de Alimentos Ltda (Jundia Foods)",
-              "email": "sac@jundiafoods.com.br",
-              "cidade": "Barueri/SP",
-              "segmento": "distribuidora de alimentos (maioneses, molhos, congelados) - possivel geracao de vencidos"
-            },
-            {
-              "nome": "Sorocaba Frios",
-              "empresa": "Sorocaba Frios Distribuidora de Alimentos Ltda",
-              "email": "contato@sorocabafrios.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "distribuidora de laticinios e frios (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Google valido 14/10"
-            },
-            {
-              "nome": "Ello Ingredientes",
-              "empresa": "Ello Ingredientes Alimenticios Ltda (Salto/SP - mesma cidade)",
-              "email": "marketing@elloingredientes.com.br",
-              "cidade": "Salto/SP",
-              "segmento": "industria de ingredientes alimenticios (gorduras, emulsificantes, estabilizantes - usa oleos vegetais e gorduras em producao) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
-            },
-            {
-              "nome": "Sun Foods Brasil",
-              "empresa": "Sun Foods Brasil Industria e Comercio Ltda",
-              "email": "vendas@sunfoods.com.br",
-              "cidade": "Itu/SP",
-              "segmento": "industria de especialidades alimenticias (ingredientes, congelados, conservas - usa gorduras vegetais) - NICHO PRIORITARIO (industria alimenticia); MX Locaweb valido 14/10"
-            },
-            {
-              "nome": "Alere Alimentacao",
-              "empresa": "Alere Alimentacao e Servicos Ltda (3000+ colaboradores)",
-              "email": "gerente.relacionamento@alerealimentacao.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "refeicoes coletivas e restaurantes corporativos (oleo de fritura alto volume em todas as cozinhas) - NICHO PRIORITARIO (oleo de fritura usado); MX Emailemnuvem valido 14/10"
-            },
-            {
-              "nome": "Rede Campeao",
-              "empresa": "Rede Campeao (4 postos na Rodovia Bandeirantes - Campinas/SP)",
-              "email": "redecampeao@redecampeao.com.br",
-              "cidade": "Campinas/SP",
-              "segmento": "rede de restaurantes em postos de combustivel (oleo de fritura alto volume - fritura continua em todas as lojas) - NICHO PRIORITARIO (oleo de fritura usado); MX Locaweb valido 14/10"
-            },
-            {
-              "nome": "JLO Atacadista",
-              "empresa": "JLO Comercio de Alimentos Ltda (atacadista - Itu/SP)",
-              "email": "jloatacadista@outlook.com.br",
-              "cidade": "Itu/SP",
-              "segmento": "atacadista de alimentos (mercadorias vencidas, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (vencidos); MX Outlook valido 14/10"
-            },
-            {
-              "nome": "Risotto Mix Gastronomia",
-              "empresa": "Risotto Mix Gastronomia Fast Food Franquias (Campinas/SP)",
-              "email": "sac@risottomix.com.br",
-              "cidade": "Campinas/SP",
-              "segmento": "rede de franquias de restaurantes (oleo de fritura usado em todas as lojas) - NICHO PRIORITARIO (oleo de fritura usado); MX self-hosted valido 14/10"
-            },
-            {
-              "nome": "Fantastico Alimentos",
-              "empresa": "Fantastico Alimentos Ltda (Jacarei/SP)",
-              "email": "faleconosco@fantasticoalimentos.com.br",
-              "cidade": "Jacarei/SP",
-              "segmento": "industria de alimentos (molhos, conservas, condimentos - usa oleos vegetais em producao, estoque de vencidos) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
-            },
-            {
-              "nome": "Prime Food",
-              "empresa": "Prime Food Comercial Ltda (Sorocaba/SP)",
-              "email": "contato@comlprimefood.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "distribuidora de alimentos (mercearia, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Locaweb valido 14/10"
-                          },
-                          {
-                            "nome": "Ameripan Distribuidora",
-                            "empresa": "Ameripan Distribuidora de Produtos para Panificacao Ltda",
-                            "email": "atendimento@ameripan.com.br",
-                            "cidade": "Americana/Indaiatuba/Campinas-SP",
-                            "segmento": "distribuidora de produtos para panificacao, confeitaria e sorveteria (margarinas, gorduras vegetais e oleos - vencidos >40% gordura) - NICHO PRIORITARIO; MX mail.ameripan.com.br valido 14/10"
-                          },
-                          {
-                            "nome": "Gvinah",
-                            "empresa": "Gvinah Industria e Comercio de Alimentos Ltda",
-                            "email": "marketing@gvinah.com.br",
-                            "cidade": "Sao Paulo/SP (fabrica de manteiga no Bom Retiro)",
-                            "segmento": "industria de manteiga e laticinios (manteiga, queijos, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 14/10"
-                                                      },
-                                                      {
-                                                        "nome": "Mirassol Refeições",
-                                                        "empresa": "Mirassol Refeições Ltda (Indaiatuba/SP - opera em Salto, Indaiatuba, Cabreúva, Itu)",
-                                                        "email": "mirassol@mirassolrefeicoes.com.br",
-                                                        "cidade": "Indaiatuba/SP",
-                                                        "segmento": "refeicoes coletivas e cozinhas industriais (60k refeicoes/mes, fritura diaria em volume) - NICHO PRIORITARIO (oleo de fritura usado); MX Google valido 14/10"
-                                                      },
-                                                      {
-                                                                                                              "nome": "Supermercados Nagumo",
-                                                                                                              "empresa": "Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP)",
-                                                                                                              "email": "relacionamento@nagumo.com.br",
-                                                                                                              "cidade": "Guarulhos/SP (lojas na RM SP e interior)",
-                                                                                                              "segmento": "supermercados (rede regional, padaria/rotisserie/acougue, fritura alto volume) - NICHO PRIORITARIO (oleo de fritura usado); MX Outlook valido 14/10"
-                                                                                                            },
-                                                                                                            {
-                                                                                                              "nome": "Bioactive",
-                                                                                                              "empresa": "Bioactive Suplementos Alimentares Ltda",
-                                                                                                              "email": "sac@bioactive.com.br",
-                                                                                                              "cidade": "Indaiatuba/SP",
-                                                                                                              "segmento": "industria de suplementos e encapsulados - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 15/10"
-                                                                                                            },
-                                                                                                            {
-                                                                                                              "nome": "Menegon Alimentos",
-                                                                                                              "empresa": "Menegon Alimentos Ltda",
-                                                                                                              "email": "contato@menegonalimentos.com.br",
-                                                                                                              "cidade": "Maua/SP",
-                                                                                                              "segmento": "industria de alimentos (pellets para salgadinhos e lasanhas - oleo de fritura em volume); MX SpamExperts valido 15/10"
-                                                                                                            },
-                                                                                                            {
-                                                                                                              "nome": "Athos Farma",
-                                                                                                              "empresa": "Athos Farma Industria Farmaceutica Ltda",
-                                                                                                              "email": "comercial@athosfarma.ind.br",
-                                                                                                              "cidade": "Indaiatuba/SP",
-                                                                                                              "segmento": "industria farmaceutica (medicamentos alopaticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX self-hosted valido 15/10"
-                                                                                                            }
-                                                                                                                                                                ,
-                                                                                                                                                                {
-                                                                                                                                                                  "nome": "R-Food Refeicoes",
-                                                                                                                                                                  "empresa": "R-Food Refeicoes Ltda (refeicoes coletivas Sorocaba/SP)",
-                                                                                                                                                                  "email": "contato@rfoodrefeicoes.com.br",
-                                                                                                                                                                  "cidade": "Sorocaba/SP",
-                                                                                                                                                                  "segmento": "refeicoes coletivas e cozinhas industriais (oleo de fritura alto volume em todas as cozinhas) - NICHO PRIORITARIO"
-                                                                                                                                                                },
-                                                                                                                                                                {
-                                                                                                                                                                  "nome": "Gluten Free Alimentos",
-                                                                                                                                                                  "empresa": "Gluten Free Alimentos Ltda (Jundiai/SP)",
-                                                                                                                                                                  "email": "comercial@gfree.com.br",
-                                                                                                                                                                  "cidade": "Jundiai/SP",
-                                                                                                                                                                  "segmento": "industria de alimentos (terceirizacao de producao - glúten free, oleos vegetais e gorduras) - NICHO PRIORITARIO"
-                                                                                                                                                                },
-                                                                                                                                                                {
-                                                                                                                                                                  "nome": "Caicara Alimentos",
-                                                                                                                                                                  "empresa": "Caicara Alimentos Ltda (industria de cafe - Jundiai/SP)",
-                                                                                                                                                                  "email": "comercial@caicaraalimentos.com.br",
-                                                                                                                                                                  "cidade": "Jundiai/SP",
-                                                                                                                                                                  "segmento": "industria de alimentos (cafe, torrefacao, 1000t/mes - oleo e gordura vegetal de maquinas) - NICHO PRIORITARIO (industria alimenticia)"
-                                                                                                                                                                },
-                                                                                                                                                                {
-                                                                                                                                                                  "nome": "FastNFit",
-                                                                                                                                                                  "empresa": "FastNFit Restaurante e Lanchonete Ltda (Salto/SP)",
-                                                                                                                                                                  "email": "sac@fastnfit.com.br",
-                                                                                                                                                                  "cidade": "Salto/SP",
-                                                                                                                                                                  "segmento": "restaurante e cozinha industrial (marmitas congeladas, fritura diaria em cozinha industrial) - NICHO PRIORITARIO (mesma cidade da Master Oleo)"
-                                                                                                                                                                },
-                                                                                                                                                                {
-                                                                                                                                                                  "nome": "Bremil",
-                                                                                                                                                                  "empresa": "Bremil Industria de Produtos Alimenticios Ltda",
-                                                                                                                                                                  "email": "comercial@bremil.com.br",
-                                                                                                                                                                  "cidade": "Indaiatuba/SP",
-                                                                                                                                                                  "segmento": "industria de alimentos (proteinas de soja e ingredientes carneos - oleos e gorduras vegetais em producao) - NICHO PRIORITARIO (industria alimenticia)"
-                                                                                                                                                                },
-                                                                                                                                                                {
-                                                                                                                                                                  "nome": "Bom Recheio",
-                                                                                                                                                                  "empresa": "Bom Recheio Alimentos (Jundiai/SP)",
-                                                                                                                                                                  "email": "comercial@bomrecheio.com.br",
-                                                                                                                                                                  "cidade": "Jundiai/SP",
-                                                                                                                                                                  "segmento": "industria de alimentos (margarinas e gorduras vegetais) - NICHO PRIORITARIO (oleos e gorduras)"
-                                                                                                                                                                }
-                                                                                                                                                              ]
+  },
+  {
+    "nome": "Braslact",
+    "empresa": "Braslact Produtos de Leite Ltda",
+    "email": "braslact@braslact.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria de laticinios (queijos, manteiga, derivados) - PRIORIDADE (gorduras/laticinios, vencidos >40% gordura)"
+  },
+  {
+    "nome": "WBM Alimentos",
+    "empresa": "WBM Alimentos Ltda",
+    "email": "contato@wbmalimentos.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria alimenticia (terceirizacao, ingredientes, envase de oleos e aromas) - usa oleos vegetais"
+  },
+  {
+    "nome": "Jundia Foods",
+    "empresa": "BRGMN Comercio de Alimentos Ltda (Jundia Foods)",
+    "email": "sac@jundiafoods.com.br",
+    "cidade": "Barueri/SP",
+    "segmento": "distribuidora de alimentos (maioneses, molhos, congelados) - possivel geracao de vencidos"
+  },
+  {
+    "nome": "Sorocaba Frios",
+    "empresa": "Sorocaba Frios Distribuidora de Alimentos Ltda",
+    "email": "contato@sorocabafrios.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "distribuidora de laticinios e frios (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Google valido 14/10"
+  },
+  {
+    "nome": "Ello Ingredientes",
+    "empresa": "Ello Ingredientes Alimenticios Ltda (Salto/SP - mesma cidade)",
+    "email": "marketing@elloingredientes.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "industria de ingredientes alimenticios (gorduras, emulsificantes, estabilizantes - usa oleos vegetais e gorduras em producao) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
+  },
+  {
+    "nome": "Sun Foods Brasil",
+    "empresa": "Sun Foods Brasil Industria e Comercio Ltda",
+    "email": "vendas@sunfoods.com.br",
+    "cidade": "Itu/SP",
+    "segmento": "industria de especialidades alimenticias (ingredientes, congelados, conservas - usa gorduras vegetais) - NICHO PRIORITARIO (industria alimenticia); MX Locaweb valido 14/10"
+  },
+  {
+    "nome": "Alere Alimentacao",
+    "empresa": "Alere Alimentacao e Servicos Ltda (3000+ colaboradores)",
+    "email": "gerente.relacionamento@alerealimentacao.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "refeicoes coletivas e restaurantes corporativos (oleo de fritura alto volume em todas as cozinhas) - NICHO PRIORITARIO (oleo de fritura usado); MX Emailemnuvem valido 14/10"
+  },
+  {
+    "nome": "Rede Campeao",
+    "empresa": "Rede Campeao (4 postos na Rodovia Bandeirantes - Campinas/SP)",
+    "email": "redecampeao@redecampeao.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "rede de restaurantes em postos de combustivel (oleo de fritura alto volume - fritura continua em todas as lojas) - NICHO PRIORITARIO (oleo de fritura usado); MX Locaweb valido 14/10"
+  },
+  {
+    "nome": "JLO Atacadista",
+    "empresa": "JLO Comercio de Alimentos Ltda (atacadista - Itu/SP)",
+    "email": "jloatacadista@outlook.com.br",
+    "cidade": "Itu/SP",
+    "segmento": "atacadista de alimentos (mercadorias vencidas, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (vencidos); MX Outlook valido 14/10"
+  },
+  {
+    "nome": "Risotto Mix Gastronomia",
+    "empresa": "Risotto Mix Gastronomia Fast Food Franquias (Campinas/SP)",
+    "email": "sac@risottomix.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "rede de franquias de restaurantes (oleo de fritura usado em todas as lojas) - NICHO PRIORITARIO (oleo de fritura usado); MX self-hosted valido 14/10"
+  },
+  {
+    "nome": "Fantastico Alimentos",
+    "empresa": "Fantastico Alimentos Ltda (Jacarei/SP)",
+    "email": "faleconosco@fantasticoalimentos.com.br",
+    "cidade": "Jacarei/SP",
+    "segmento": "industria de alimentos (molhos, conservas, condimentos - usa oleos vegetais em producao, estoque de vencidos) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
+  },
+  {
+    "nome": "Prime Food",
+    "empresa": "Prime Food Comercial Ltda (Sorocaba/SP)",
+    "email": "contato@comlprimefood.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "distribuidora de alimentos (mercearia, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Locaweb valido 14/10"
+  },
+  {
+    "nome": "Ameripan Distribuidora",
+    "empresa": "Ameripan Distribuidora de Produtos para Panificacao Ltda",
+    "email": "atendimento@ameripan.com.br",
+    "cidade": "Americana/Indaiatuba/Campinas-SP",
+    "segmento": "distribuidora de produtos para panificacao, confeitaria e sorveteria (margarinas, gorduras vegetais e oleos - vencidos >40% gordura) - NICHO PRIORITARIO; MX mail.ameripan.com.br valido 14/10"
+  },
+  {
+    "nome": "Gvinah",
+    "empresa": "Gvinah Industria e Comercio de Alimentos Ltda",
+    "email": "marketing@gvinah.com.br",
+    "cidade": "Sao Paulo/SP (fabrica de manteiga no Bom Retiro)",
+    "segmento": "industria de manteiga e laticinios (manteiga, queijos, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 14/10"
+  },
+  {
+    "nome": "Mirassol Refeições",
+    "empresa": "Mirassol Refeições Ltda (Indaiatuba/SP - opera em Salto, Indaiatuba, Cabreúva, Itu)",
+    "email": "mirassol@mirassolrefeicoes.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "refeicoes coletivas e cozinhas industriais (60k refeicoes/mes, fritura diaria em volume) - NICHO PRIORITARIO (oleo de fritura usado); MX Google valido 14/10"
+  },
+  {
+    "nome": "Supermercados Nagumo",
+    "empresa": "Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP)",
+    "email": "relacionamento@nagumo.com.br",
+    "cidade": "Guarulhos/SP (lojas na RM SP e interior)",
+    "segmento": "supermercados (rede regional, padaria/rotisserie/acougue, fritura alto volume) - NICHO PRIORITARIO (oleo de fritura usado); MX Outlook valido 14/10"
+  },
+  {
+    "nome": "Bioactive",
+    "empresa": "Bioactive Suplementos Alimentares Ltda",
+    "email": "sac@bioactive.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria de suplementos e encapsulados - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 15/10"
+  },
+  {
+    "nome": "Menegon Alimentos",
+    "empresa": "Menegon Alimentos Ltda",
+    "email": "contato@menegonalimentos.com.br",
+    "cidade": "Maua/SP",
+    "segmento": "industria de alimentos (pellets para salgadinhos e lasanhas - oleo de fritura em volume); MX SpamExperts valido 15/10"
+  },
+  {
+    "nome": "Athos Farma",
+    "empresa": "Athos Farma Industria Farmaceutica Ltda",
+    "email": "comercial@athosfarma.ind.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria farmaceutica (medicamentos alopaticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX self-hosted valido 15/10"
+  },
+  {
+    "nome": "R-Food Refeicoes",
+    "empresa": "R-Food Refeicoes Ltda (refeicoes coletivas Sorocaba/SP)",
+    "email": "contato@rfoodrefeicoes.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "refeicoes coletivas e cozinhas industriais (oleo de fritura alto volume em todas as cozinhas) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Gluten Free Alimentos",
+    "empresa": "Gluten Free Alimentos Ltda (Jundiai/SP)",
+    "email": "comercial@gfree.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria de alimentos (terceirizacao de producao - glúten free, oleos vegetais e gorduras) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Caicara Alimentos",
+    "empresa": "Caicara Alimentos Ltda (industria de cafe - Jundiai/SP)",
+    "email": "comercial@caicaraalimentos.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria de alimentos (cafe, torrefacao, 1000t/mes - oleo e gordura vegetal de maquinas) - NICHO PRIORITARIO (industria alimenticia)"
+  },
+  {
+    "nome": "FastNFit",
+    "empresa": "FastNFit Restaurante e Lanchonete Ltda (Salto/SP)",
+    "email": "sac@fastnfit.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "restaurante e cozinha industrial (marmitas congeladas, fritura diaria em cozinha industrial) - NICHO PRIORITARIO (mesma cidade da Master Oleo)"
+  },
+  {
+    "nome": "Bremil",
+    "empresa": "Bremil Industria de Produtos Alimenticios Ltda",
+    "email": "comercial@bremil.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria de alimentos (proteinas de soja e ingredientes carneos - oleos e gorduras vegetais em producao) - NICHO PRIORITARIO (industria alimenticia)"
+  },
+  {
+    "nome": "Bom Recheio",
+    "empresa": "Bom Recheio Alimentos (Jundiai/SP)",
+    "email": "comercial@bomrecheio.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria de alimentos (margarinas e gorduras vegetais) - NICHO PRIORITARIO (oleos e gorduras)"
+  },
+  {
+    "nome": "Sao Roque Supermercados",
+    "empresa": "Super Mercado Sao Roque Ltda (18 lojas: Sao Roque, Salto, Mairinque, Tatuí, Boituva, Avaré, Cotia, Ibiúna, Salto de Pirapora)",
+    "email": "convenio@smsr.com.br",
+    "cidade": "Sao Roque/SP (2 lojas em Salto)",
+    "segmento": "SUPERMERCADOS (rede) - 18 lojas em 10 municipios - email de CONVENIOS/PARCERIAS - PRIORIDADE MAXIMA"
+  },
+  {
+    "nome": "AVEC Jundiai",
+    "empresa": "AVEC Jundiai Distribuidora de Produtos Alimenticios Ltda (33 cidades, 115km raio)",
+    "email": "contato.fornecedor@avecjundiai.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "DISTRIBUIDORA de alimentos e limpeza - EMAIL DE FORNECEDORES (canal direto comercial) - PRIORIDADE ALTA"
+  },
+  {
+    "nome": "Sandeleh Alimentos",
+    "empresa": "Sandeleh Alimentos Ltda (industria de conservas, 250 funcionarios, 5k clientes)",
+    "email": "vendas@sandeleh.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "INDUSTRIA de conservas, azeites e vinagres - email de VENDAS/COMERCIAL - oleos e gorduras na producao"
+  },
+  {
+    "nome": "SweetMix",
+    "empresa": "Sweetmix Industria Comercio Importacao e Exportacao Ltda (ingredientes - Sorocaba/SP)",
+    "email": "carolina.toledo@sweetmix.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "INDUSTRIA de edulcorantes e ingredientes alimenticios - contato direto COMERCIAL - oleos e gorduras em producao"
+  },
+  {
+    "nome": "Level Indústria Comércio e Distribuição de Alimentos",
+    "empresa": "Level Industria Comercio e Distribuicao de Alimentos Ltda",
+    "email": "ocastelan@terra.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "laticinios (fabricacao de laticinios CNAE 1052-0/00) - NICHO PRIORITARIO (vencidos >40% gordura); Indaiatuba a ~20km de Salto; MX Terra valido 16/10"
+  },
+  {
+    "nome": "Farinolio Comercio e Industria",
+    "empresa": "Farinolio Comercio e Industria Ltda",
+    "email": "contato@farinolio.com.br",
+    "cidade": "Varzea Paulista/SP",
+    "segmento": "industria de oleos e gorduras vegetais (margarinas e gorduras comestiveis) - NICHO PRIORITARIO (oleos e gorduras); Varzea Paulista a ~60km de Salto"
+  }
+]

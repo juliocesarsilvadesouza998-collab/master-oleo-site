@@ -1,5 +1,66 @@
 {
- "ciclo_2026_10_15_cron_116_atendente": {
+ "ciclo_2026_10_16_cron_120_melhorador": {
+     "timestamp": "2026-10-16 18:06 (Melhorador Contínuo - cron #120)",
+     "acoes": [
+       "✅ Fila reabastecida com 5 novas empresas MX-verificadas (Sao Roque, AVEC, Sandeleh, SweetMix, Bella)",
+       "✅ Nova seção 'Momentum de Mercado' no site (index.html + site.css)",
+       "✅ 1 follow-up atrasado resolvido (Fullcaps FP1)"
+     ],
+     "diagnostico": {
+       "total_leads_watchdog": 305,
+       "ativos_watchdog": 213,
+       "bounce_cache_json": 87,
+       "watchdog": "exit 0 — saudavel",
+       "respostas_reais": 0,
+       "respostas_humanas": "Nenhuma — pipeline aguardando retorno (Savegnago, Pague Menos, Rede Confianca, Covabra)",
+       "respostas_auto": 0,
+       "observacao": "Melhorador #120: fila reabastecida com 5 leads MX-verificados de alto valor (Sao Roque = 18 lojas em Salto!). Seção Momentum no site. Pipeline de fechamento parado — todos os leads quentes aguardam acao humana."
+     }
+   },
+ "ciclo_2026_10_16_cron_119_atendente": {
+     "timestamp": "2026-10-16 18:04 (Atendente IA - cron #119 - tick 18:00)",
+     "acoes": [
+       "✅ sync_formspree.py — 87 bounces em cache, 0 notificações novas do Formspree",
+       "✅ corrigir_emails.py — 0 processados (todos já tentados)",
+       "✅ prospecao_followup.py — 0 follow-ups atrasados",
+       "✅ send_sequence — sequência processada (nada a enviar)",
+       "✅ check-replies — 0 respostas (replies_pending.json vazio)",
+       "ℹ️ proposta_contrato.py / relatorio_esg.py — não executados (nenhum lead com volume novo nem solicitação ESG)"
+     ],
+     "diagnostico": {
+       "total_leads_watchdog": 305,
+       "ativos_watchdog": 213,
+       "fila_prospeccao": "354 empresas, 297 contatados, 68 bounce, 1 pendente (Farinolio sem MX)",
+       "bounce_cache_json": 87,
+       "watchdog": "exit 0 — saudável",
+       "respostas_reais": 0,
+       "respostas_humanas": "Nenhuma nova neste tick — pipeline aguardando retorno (Savegnago, Pague Menos, Rede Confiança, Covabra)",
+       "respostas_auto": 0,
+       "observacao": "Cron #119: tick vespertino silencioso — 87 bounces, 0 notificações Formspree, 0 follow-ups, 0 respostas. Pipeline segue inalterado pelo 2º dia consecutivo sem respostas novas. Todos os leads quentes (Savegnago, Pague Menos, Rede Confiança, Covabra) aguardam ação humana via WhatsApp/telefone. Fila de prospecção esgotada (0 pendentes) — reposição necessária para manter fluxo de envios."
+     }
+       },
+     "ciclo_2026_10_16_cron_prospector_XX": {
+       "timestamp": "2026-10-16 ~20:30 (Prospector - cron #XX)",
+       "diagnostico": {
+         "fila_total_empresas": 354,
+         "fila_contatados": 297,
+         "fila_bounce": 68,
+         "fila_pendentes": "1 (Farinolio sem MX — invalido)",
+         "fila_pendentes_validas": "0 com MX valido — fila precisa de reposicao",
+         "novos_contatados": "Super Mercado Sao Roque (convenio@smsr.com.br), AVEC Jundiai (contato.fornecedor@avecjundiai.com.br), Sandeleh Alimentos (vendas@sandeleh.com.br), Sweetmix (carolina.toledo@sweetmix.com.br), Level Industria (ocastelan@terra.com.br)",
+         "enviados_lote": 5,
+         "observacao": "Fila estava com 0 pendentes. 2 novas empresas descobertas e adicionadas (Level Industria/Indaiatuba - laticinios NICHO PRIORITARIO, Farinolio/Varzea Paulista - oleos e gorduras NICHO PRIORITARIO). 1 sem MX (Farinolio). Lote enviado com 5 emails. Fila praticamente zerada novamente."
+       },
+       "acoes": [
+         "Diagnostico inicial: 0 pendentes — necessidade de reposicao",
+         "Descoberta: 2 novas empresas adicionadas a fila_prospeccao_extra.json",
+         "  ⭐ Level Industria Comercio e Distribuicao de Alimentos (ocastelan@terra.com.br) — Indaiatuba/SP — fabricacao de laticinios - NICHO PRIORITARIO (vencidos >40% gordura); MX Terra valido",
+         "  ⭐ Farinolio Comercio e Industria (contato@farinolio.com.br) — Varzea Paulista/SP — industria de oleos e gorduras vegetais - NICHO PRIORITARIO; SEM MX",
+         "enviar_lote.py --max 15: 5 emails enviados com sucesso, 1 pulado (Farinolio sem MX)",
+         "ecossistema.json atualizado com numeros pos-envio"
+       ]
+     },
+     "ciclo_2026_10_15_cron_116_atendente": {
      "timestamp": "2026-10-15 20:27 (Atendente IA - cron #116 - tick 20:27)",
      "acoes": [
        "✅ sync_formspree.py — 87 bounces em cache, 0 notificações novas do Formspree",
@@ -59,7 +120,28 @@
       "observacao": "Melhorador #112: fila de prospecção estava ZERADA (0 pendentes). Reabastecida com 6 novas empresas da região (Salto, Sorocaba, Jundiaí, Indaiatuba). Site atualizado com seção de momentum social mostrando as 3 redes que abriram canal em 14/10. 24% bounce rate ainda é alto — próximo foco: melhorar qualidade dos emails da fila."
     }
   },
-  "atualizado_em": "2026-10-15 18:00 (Atendente IA - cron #114)",
+  "ciclo_2026_10_15_cron_117_atendente": {
+    "timestamp": "2026-10-15 19:33 (Atendente IA - cron #117 - tick 19:30)",
+    "acoes": [
+      "sync_formspree.py - 87 bounces em cache, 0 notificacoes novas do Formspree",
+      "corrigir_emails.py - 0 processados (todos ja tentados anteriormente)",
+      "prospecao_followup.py - 0 follow-ups atrasados",
+      "send_sequence - sequencia processada (nada a enviar)",
+      "check-replies - 0 respostas (replies_pending.json vazio)",
+      "proposta_contrato.py / relatorio_esg.py - nao executados (nenhum lead com volume novo nem solicitacao ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 305,
+      "ativos_watchdog": 213,
+      "bounce_cache_json": 87,
+      "watchdog": "exit 0 - saudavel",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma nova neste tick - pipeline aguardando retorno (Savegnago, Pague Menos, Rede Confianca, Covabra)",
+      "respostas_auto": 0,
+      "observacao": "Cron #117: tick 19:30 silencioso - sistema saudavel, 87 bounces em cache, 0 notificacoes Formspree, 0 follow-ups, 0 respostas. Fila de prospeccao 0 pendentes (348 empresas, 292 contatados, 68 bounce). Pipeline segue inalterado desde 14/10 - todos os leads quentes (Savegnago, Pague Menos, Rede Confianca, Covabra) aguardam acao humana via WhatsApp/telefone."
+    }
+  },
+  "atualizado_em": "2026-10-15 19:33 (Atendente IA - cron #117)",
   "criado_em": "2026-08-13",
       "ciclo_2026_10_15_cron_111_atendente": {
        "timestamp": "2026-10-15 17:23 (Atendente IA - cron #111 - tick 17:23)",
@@ -1797,5 +1879,26 @@
                   "respostas_auto": 0,
                   "observacao": "Atendente #115: ciclo limpo, sem respostas novas. Sistema saudável: 305 leads (213 ativos, 87 bounces). 16º dia sem respostas humanas reais (última: Tauste 30/09). Fila de prospecção em 0 pendentes — precisa reposição de leads MX válidos. Pipeline de fechamento inalterado — todas as ações críticas dependem de contato humano via WhatsApp/telefone. Savegnago (#1 interior SP, R$7,98bi), Brasfrigo, Queijos Itupeva, Sonda (R$6,12bi), Tauste, Covabra, Pague Menos (R$4,33bi) e Rede Confiança seguem como leads quentes aguardando ação humana."
                  }
-                }
-               }
+  },
+  "ciclo_2026_10_16_cron_118_atendente": {
+    "timestamp": "2026-10-16 08:51 (Atendente IA - cron #118 - tick 08:00)",
+    "acoes": [
+      "sync_formspree.py - 87 bounces em cache, 0 notificacoes novas do Formspree",
+      "corrigir_emails.py - 0 processados (todos ja tentados)",
+      "prospecao_followup.py - 4 FP1 enviados (Atlhetica, Supermercados Parana, Probilacto, Line Comercio)",
+      "send_sequence - sequencia processada",
+      "check-replies - 0 respostas (replies_pending.json vazio)",
+      "proposta_contrato.py / relatorio_esg.py - nao executados"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 305,
+      "ativos_watchdog": 213,
+      "bounce_cache_json": 87,
+      "watchdog": "exit 0 saudavel",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma - 16 dias sem respostas humanas (desde Tauste 30/09). Pipeline de fechamento inalterado.",
+      "respostas_auto": 0,
+      "observacao": "Cron #118: tick matinal - 4 FP1 enviados, 0 respostas. Pipeline aguardando acao humana (Savegnago, Pague Menos, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva). Fila de prospeccao precisa reposicao."
+    }
+  }
+}
