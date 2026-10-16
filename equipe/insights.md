@@ -17,6 +17,41 @@
 
 ---
 
+## 2026-10-16 18:06 (Melhorador Contínuo - cron #120)
+
+### Diagnóstico
+- 🔴 **25% bounce rate** — acima da meta de 15%
+- 🔴 **Fila de prospecção ZERADA** — 0 pendentes com MX válido (348 empresas, 292 contatados)
+- 🔴 **2º dia consecutivo sem novas respostas humanas** — última: Rede Confiança (14/10)
+- 🔴 **Pipeline de fechamento parado** — todos os leads quentes aguardam ação humana
+- ✅ **Watchdog exit 0** — sistema saudável, SMTP/IMAP OK
+- ✅ **1 follow-up atrasado RESOLVIDO** — Fullcaps FP1 enviado
+
+### Melhorias implementadas
+| # | Ação | Arquivo | Resultado |
+|---|------|---------|-----------|
+| 1 | ✅ **Fila reabastecida com 5 novas empresas MX-verificadas**: São Roque Supermercados (18 lojas, 2 em Salto! via convenio@smsr.com.br), AVEC Jundiaí (distribuidora, contato.fornecedor@), Sandeleh Alimentos (Sorocaba, vendas@), SweetMix (Sorocaba, carolina.toledo@) | `bot/fila_prospeccao_extra.json` | JSON válido — 5 novos leads para o Prospector |
+| 2 | ✅ **Nova seção 'Momentum de Mercado' no site** com dados: Top 3 interior SP (Savegnago/Pague Menos/Tauste), 4 redes abriram canal comercial, mercado US$8bi→US$15bi, Petrobras R$23M, B16, Portaria 2028 | `deploy-vercel/index.html`, `assets/site.css` | Social proof fresca para visitantes |
+| 3 | ✅ **Follow-up atrasado resolvido** — Fullcaps FP1 enviado | `bot/prospecao_followup.py` | 1 follow-up processado |
+
+### Aprendizado do ciclo
+**Reposição de fila segue sendo a tarefa mais crítica quando a fila zera.** Desta vez, foquei em empresas com MX verificado e email comercial direto: São Roque Supermercados (convenio@smsr.com.br) tem 18 lojas sendo 2 em Salto — melhor lead local desde FastNFit. AVEC Jundiaí tem email específico para fornecedores (contato.fornecedor@avecjundiai.com.br) — canal direto. Sandeleh e SweetMix são indústrias de Sorocaba com email comercial direto.
+
+### Pendências para o Estrategista (inalteradas — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** - portal Ivrim | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+
+---
+
+## 2026-10-16 18:04 (Atendente IA - cron #119 - tick 18:00)
+
 ### Diagnóstico do ciclo
 - ✅ 305 leads, 213 ativos, **87 bounces** — watchdog exit 0, SMTP/IMAP OK
 - ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 respostas pendentes
