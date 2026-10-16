@@ -1,3 +1,113 @@
+## 2026-10-16 (Bot de SEO - cron SEO - tick diário)
+
+### Ranking real no Bing (--max-rank 10, scraping b_algo)
+- **Todas as keywords fora do top 20** — site indexado mas ainda sem posição (normal para domínio jovem; precisa de semanas de acumulação de conteúdo)
+- Cobertura de conteúdo: 16/24 keywords presentes na página (check do Bot no HTML do site)
+
+### Ações deste ciclo (3 mudanças)
+| Mudança | Arquivo |
+|---------|---------|
+| Novo artigo otimizado "Quem compra manteiga vencida?" (1.153 palavras, canonical, CTA WhatsApp, links internos "Continue a leitura") — cobre o gap de keyword "manteiga vencida" / "quem compra manteiga vencida" | deploy-vercel/blog/quem-compra-manteiga-vencida.html |
+| Seção #blog criada na home com 3 cards de artigo (home NÃO tinha nenhum link para blog — gap de link equity corrigido) | deploy-vercel/index.html |
+| Sitemap atualizado com a URL nova | deploy-vercel/sitemap.xml |
+
+### Indexação
+- IndexNow POST ok (HTTP 200/202 aceito) para o artigo novo + home
+- Verificação ad-hoc (verify-seo-tick.py): tags balanceadas OK (artigo + index), sitemap well-formed (25 URLs), canonical/meta/CTA OK. 2 checks de template fora do padrão do site (usa "Continue a leitura", não "Leia também"; sem tabela de preço por Regra de Ouro Master Óleo)
+
+---
+
+### Diagnóstico do ciclo
+- ✅ 305 leads, 213 ativos, **87 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 respostas pendentes
+- ✅ Fila de prospecção: 348 empresas, 292 contatados, 68 bounce, **0 pendentes** — aguarda reposição
+- ℹ️ Nenhuma resposta nova neste tick — **2º dia consecutivo sem respostas**
+- 🔴 Pipeline de fechamento inalterado — todas as ações críticas dependem de contato humano (WhatsApp/telefone)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 87 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads quentes (INALTERADO — aguardam ação humana)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (#1 interior SP, R$7,98bi) | Apresentação enviada ao comercial@ 14/10 — **WhatsApp (11) 96785-9631** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Proposta 10.000 L/mês (R$264.000/ano) na thread do ticket 407470 — aguardar Josiane Marinho |
+| 🔴🔴 | **Rede Confiança** | Proposta 2.500 L/mês (R$54.000/ano) no social@ — aguardando retorno |
+| 🔴🔴 | **Covabra** | Portal Ivrim — cadastro de fornecedor (ação humana) |
+| 🔴 | **Brasfrigo / Queijos Itupeva** | Agendar coleta-teste |
+| 🟡 | **Sonda / Tauste** | Telefone (11) 2145-6200 / (15) 3324-4680 |
+
+---
+
+## 2026-10-16 08:51 (Atendente IA - cron #118 - tick 08:00)
+
+### Diagnóstico do ciclo
+- ✅ 305 leads, 213 ativos, **87 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 respostas pendentes
+- ✅ **4 FP1 enviados**: Atlhetica Nutrition (Campinas), Supermercados Parana (Sumaré), Probilacto (Sorocaba), Line Comercio (Sorocaba) — seguiu com lead qualificado de distribuidoras de laticínios (nicho prioritário vencidos >40% gordura)
+- ℹ️ Nenhuma resposta nova neste tick — pipeline segue silencioso pelo 16º dia (última resposta humana: Tauste 30/09)
+- 🔴 Pipeline de fechamento inalterado — todas as ações críticas dependem de contato humano (WhatsApp/telefone)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 87 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **4 FP1 enviados** (Atlhetica, Supermercados Parana, Probilacto, Line) |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads quentes (INALTERADO — aguardam ação humana)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (#1 interior SP, R$7,98bi) | Apresentação enviada ao comercial@ 14/10 — **WhatsApp (11) 96785-9631** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Proposta 10.000 L/mês (R$264.000/ano) na thread do ticket 407470 — aguardar Josiane Marinho |
+| 🔴🔴 | **Rede Confiança** | Proposta 2.500 L/mês (R$54.000/ano) no social@ — aguardando retorno |
+| 🔴🔴 | **Covabra** | Portal Ivrim — cadastro de fornecedor (ação humana) |
+| 🔴 | **Brasfrigo / Queijos Itupeva** | Agendar coleta-teste |
+| 🟡 | **Sonda / Tauste** | Telefone (11) 2145-6200 / (15) 3324-4680 |
+
+---
+## 2026-10-15 19:33 (Atendente IA - cron #117 - tick 19:30)
+
+### Diagnóstico do ciclo
+- ✅ 305 leads, 213 ativos, **87 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 respostas pendentes
+- ✅ Fila de prospecção: 348 empresas, 292 contatados, 68 bounce, 0 pendentes
+- ℹ️ Nenhuma resposta nova neste tick — pipeline segue silencioso
+- 🔴 Pipeline de fechamento inalterado — todas as ações críticas dependem de contato humano (WhatsApp/telefone)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 87 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence / check-replies | nada a enviar / 0 pendentes |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads quentes (INALTERADO — aguardam ação humana)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (#1 interior SP, R$7,98bi) | Apresentação enviada ao comercial@ 14/10 — **WhatsApp (11) 96785-9631** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Proposta 10.000 L/mês (R$264.000/ano) na thread do ticket 407470 — aguardar Josiane Marinho |
+| 🔴🔴 | **Rede Confiança** | Proposta 2.500 L/mês (R$54.000/ano) no social@ — aguardando retorno |
+| 🔴🔴 | **Covabra** | Portal Ivrim — cadastro de fornecedor (ação humana) |
+| 🔴 | **Brasfrigo / Queijos Itupeva** | Agendar coleta-teste |
+| 🟡 | **Sonda / Tauste** | Telefone (11) 2145-6200 / (15) 3324-4680 |
+
+---
 ## 2026-10-15 20:27 (Atendente IA - cron #116 - tick noturno)
 
 ### Diagnóstico do ciclo
@@ -1673,5 +1783,25 @@ Todos com respondido_em registrado hoje:
 | 🟡 | **Tauste** | Ligar (15) 3324-4680 — respondeu 30/09 |
 | 🟡 | **Covabra** | Portal Ivrim / follow-up humano |
 | 🟡 | **Pague Menos** (R$4,33bi) | Josiane Marinho — proposta enviada |
-| 🟡 | **Rede Confiança** | Retomar contato |
-| 🟡 | **Muffato/Max Atacadista** | Ligar (43) 3371-1700 |
+|| 🟡 | **Rede Confiança** | Retomar contato |
+|| 🟡 | **Muffato/Max Atacadista** | Ligar (43) 3371-1700 |
+
+---
+
+## 2026-10-15 20:30 (Analista QA - cron #117 — auditoria independente)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py: 87 bounces em cache, 0 notificações Formspree novas
+- ✅ 305 leads (213 novo, 64 bounce CSV, 19 respondido, 9 encerrado)
+- ✅ replies_pending.json: vazio — 0 respostas pendentes
+- ✅ 0 leads bounce com boas_vindas_em preenchido (consistência OK)
+- ✅ bounces.json (88 emails) consistente com leads marcados como bounce no CSV
+- 🔴 **16 dias consecutivos sem resposta humana** (desde Tauste em 30/09)
+
+### Observações da QA
+Sistema estável. Bounce cache estabilizou em 87 — não cresceu hoje, indicando melhora na qualidade da lista. 0 bounces novos detectados no sync de hoje. O gargalo principal continua sendo a falta de ação humana nos leads quentes (Savegnago, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Pague Menos, Rede Confiança). Fila de prospecção zerada — sem novos alvos para o Prospector.
+
+### Sugestões para o Estrategista
+1. 🔴 **Prioridade máxima: ação humana nos 8 leads quentes**. Savegnago (WhatsApp (11) 96785-9631) e Covabra (portal Ivrim isac.ivrim.com.br) são os únicos com passos concretos de onboarding — parados há 16 dias e 1 dia.
+2. 🟡 **Repor fila de prospecção**: fila zerada, funil estagnado em captura. Adicionar 10-15 novas empresas com MX válido nesta semana.
+3. 🟡 **Bounce rate ~21%** (64/305) acima da meta de 15%. Priorizar canais comerciais/compras em vez de SAC@ nas próximas prospecções.
