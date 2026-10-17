@@ -9,6 +9,8 @@ bot/leads.csv
 bot/replies_pending.json
 bot/config.local.json
 bot/leads.csv.bak-*
+bot/bounces.json
+bot/correcoes_emails.json
 
 # Histórico de monitoramento do SEO (log de runtime, muda a cada execução)
 equipe/seo.json

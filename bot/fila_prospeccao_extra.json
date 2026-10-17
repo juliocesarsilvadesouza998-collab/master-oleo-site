@@ -1863,10 +1863,24 @@
     "segmento": "laticinios (fabricacao de laticinios CNAE 1052-0/00) - NICHO PRIORITARIO (vencidos >40% gordura); Indaiatuba a ~20km de Salto; MX Terra valido 16/10"
   },
   {
-    "nome": "Farinolio Comercio e Industria",
-    "empresa": "Farinolio Comercio e Industria Ltda",
-    "email": "contato@farinolio.com.br",
-    "cidade": "Varzea Paulista/SP",
-    "segmento": "industria de oleos e gorduras vegetais (margarinas e gorduras comestiveis) - NICHO PRIORITARIO (oleos e gorduras); Varzea Paulista a ~60km de Salto"
-  }
-]
+          "nome": "Laticinios Modelo",
+        "empresa": "Laticinios Modelo",
+        "email": "atendimento@laticiniosmodelo.com.br",
+        "cidade": "Sao Paulo/SP (sede; entrega nacional)",
+        "segmento": "laticinios (manteiga, queijos, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 17/10"
+      },
+      {
+          "nome": "Martins Carnes",
+          "empresa": "Supermercado Martins Carnes LTDA",
+          "email": "martins@martinscarnes.com",
+          "cidade": "Salto/SP",
+          "segmento": "supermercado/acougue (carne, fritura, oleo usado em volume) - NICHO PRIORITARIO (oleo de fritura); Google MX valido 17/10; mesma cidade da Master Oleo"
+      },
+      {
+          "nome": "Alimentos Dallas",
+          "empresa": "Alimentos Dallas Industria e Comercio Ltda",
+          "email": "sac@alimentosdallas.com.br",
+          "cidade": "Cabreuva/SP",
+          "segmento": "industria de massas e alimentos (massas alimenticias, oleo de producao e limpeza) - NICHO PRIORITARIO; Locaweb MX valido 17/10"
+      }
+    ]

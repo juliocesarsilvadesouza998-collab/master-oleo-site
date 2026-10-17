@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-13 19:34 (Atendente - cron #89)",
+ "atualizado_em": "2026-10-16 19:13 (Atendente IA - cron #96 - ciclo noturno)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1086,6 +1086,48 @@
    "respostas_humanas": "Nenhuma — replies_pending.json vazio",
    "respostas_auto": 0,
    "observacao": "13 dias sem respostas humanas (ultima: Tauste 30/09). Pipeline estavel em 281 leads, 197 ativos, 79 bounces. Fila de prospeccao zerada (0 pendentes com MX valido). Leads quentes inalterados — fechamento depende de acao humana via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato)."
+  }
+ },
+ "ciclo_2026_10_16_cron_120_atendente": {
+  "timestamp": "2026-10-16 18:33 (Atendente IA - cron #120 - tick noturno)",
+  "acoes": [
+   "sync_formspree.py — 88 bounces cache, 0 notificacoes novas",
+   "corrigir_emails.py — 0 bounces processados (todos ja tentados; Level Industria sem email alternativo encontrado)",
+   "prospecao_followup.py — 0 follow-ups atrasados (caixa zerada)",
+   "send_sequence — sequencia processada",
+   "check-replies — 0 respostas (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 305,
+   "ativos_watchdog": 213,
+   "bounce_cache_json": 88,
+   "watchdog": "exit 0 — sistema saudavel, SMTP/IMAP OK",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+   "respostas_auto": 0,
+   "observacao": "3º dia consecutivo sem respostas humanas (ultima: Rede Confianca 14/10). Fila de prospeccao com 14 prioridades (fila_prioritaria.json) + 265 na fila_prospeccao_extra aguardando envio. Pipeline de fechamento travado em acao humana — Savegnago, Brasfrigo, Queijos Itupeva, Pague Menos, Covabra, Tauste, Sonda seguem como leads quentes aguardando contato telefonico/WhatsApp."
      }
-    }
+   },
+   "ciclo_2026_10_16_cron_121_atendente": {
+     "timestamp": "2026-10-16 19:33 (Atendente IA - cron #121 - tick noturno)",
+     "acoes": [
+       "sync_formspree.py — 88 bounces cache, 0 notificacoes novas do Formspree",
+       "corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+       "prospecao_followup.py — 0 follow-ups atrasados (caixa zerada)",
+       "send_sequence — sequencia processada (nada a enviar)",
+       "check-replies — 0 respostas (replies_pending.json vazio)",
+       "watchdog.py — exit 0: sistema saudavel, SMTP/IMAP OK. 310 leads, 217 ativos, 88 bounces",
+       "proposta_contrato.py/relatorio_esg.py — nao executados (sem lead com volume novo/solicitacao ESG)"
+     ],
+     "diagnostico": {
+       "total_leads_watchdog": 310,
+       "ativos_watchdog": 217,
+       "bounce_cache_json": 88,
+       "watchdog": "exit 0 — sistema saudavel, SMTP/IMAP OK",
+       "respostas_reais": 0,
+       "respostas_humanas": "Nenhuma — replies_pending.json vazio",
+       "respostas_auto": 0,
+       "observacao": "3º dia consecutivo sem respostas humanas (ultima: Rede Confianca 14/10). Fila de prospeccao com 14 prioridades aguardando envio. Pipeline de fechamento travado em acao humana — Savegnago (#1 interior SP, R$7,98bi), Pague Menos (#2, R$4,33bi), Brasfrigo (Salto), Queijos Itupeva (Rafael), Tauste (#3), Covabra, Sonda (R$6,12bi) seguem como leads quentes aguardando contato telefonico/WhatsApp. Sistema saudavel — bounce estavel em 88, watchdog OK."
+     }
    }
+}

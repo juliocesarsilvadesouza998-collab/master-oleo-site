@@ -1,5 +1,45 @@
 {
- "ciclo_2026_10_16_cron_120_melhorador": {
+  "ciclo_2026_10_17_cron_prospector": {
+     "timestamp": "2026-10-17 19:10 (Prospector - cron sabado)",
+     "acoes": [
+       "Diagnostico inicial: 1 pendente (Farinolio) — fila critica",
+       "4 buscas web realizadas (margarina Sorocaba, manteiga Jundiai, maionese Campinas, gordura vegetal Itu/Salto)",
+       "1 nova empresa descoberta e adicionada: Laticinios Modelo (atendimento@laticiniosmodelo.com.br) — laticinios NICHO PRIORITARIO",
+       "Laticinios Modelo com MX valido — email enviado com discurso de vencidos + descaracterizacao",
+       "enviar_lote.py --max 15: 1 email enviado, 1 descartado (Farinolio — email sem segmento viavel)"
+     ],
+     "diagnostico": {
+       "fila_total_empresas": 354,
+       "fila_contatados": 298,
+       "fila_bounce": 69,
+       "fila_pendentes": 0,
+       "fila_pendentes_validas": "0 — fila completamente zerada",
+       "novos_contatados": "Laticinios Modelo — NICHO PRIORITARIO (laticinios/vencidos)",
+       "enviados_lote": 1,
+       "observacao": "Fila zerada apos envio. Buscas web esgotadas (4/4). Nenhuma nova empresa de encapsulados/farmaceuticas encontrada nas buscas. Proximo prospector precisara de novas estrategias de descoberta (possivel: lista CNPJ de laticinios da regiao, ou prospeccao telefonica)"
+           }
+         },
+         "ciclo_2026_10_17_cron_121_melhorador": {
+            "timestamp": "2026-10-17 19:12 (Melhorador Contínuo - cron #121)",
+            "acoes": [
+              "✅ 13 follow-ups atrasados resolvidos (FP1: Braslact, WBM, Jundia Foods, Ello Ingredientes, Sun Foods, Alere, Rede Campeao, Risotto Mix, Fantastico, Prime Food, Ameripan, Gvinah, Mirassol Refeicoes)",
+              "✅ Farinolio removido da fila (sem MX — confirmado via nslookup; nao existia mais)",
+              "✅ 2 novas empresas MX-verificadas adicionadas: Martins Carnes (Salto/SP), Alimentos Dallas (Cabreuva/SP)",
+              "✅ Watchdog saudavel — 311 leads, 218 ativos, 0 atrasados"
+            ],
+            "diagnostico": {
+              "total_leads_watchdog": 311,
+              "ativos_watchdog": 218,
+              "bounce_cache_json": 88,
+              "watchdog": "exit 0 — saudavel (0 atrasados)",
+              "dashboard": "256 enviados | 193 entregues | 63 bounces (25%) | 19 respostas (7,4%) | 217 ativos",
+              "fila_status": "356 empresas, 298 contatados, 69 bounce, 2 pendentes MX validos (Martins Carnes, Alimentos Dallas)",
+              "respostas_reais": 0,
+              "respostas_humanas": "Nenhuma desde Pague Menos (14/10) — 3 dias de silencio",
+              "observacao": "Melhorador #121: 13 atrasados resolvidos. Farinolio removido. 2 novos leads locais adicionados. Fila destravada com 2 pendentes MX validos. Pipeline de fechamento continua parado — todos os leads quentes (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Pague Menos, Rede Confianca, Covabra) aguardam acao humana via WhatsApp/telefone."
+            }
+          },
+        "ciclo_2026_10_16_cron_120_melhorador": {
      "timestamp": "2026-10-16 18:06 (Melhorador Contínuo - cron #120)",
      "acoes": [
        "✅ Fila reabastecida com 5 novas empresas MX-verificadas (Sao Roque, AVEC, Sandeleh, SweetMix, Bella)",
@@ -1899,6 +1939,54 @@
       "respostas_humanas": "Nenhuma - 16 dias sem respostas humanas (desde Tauste 30/09). Pipeline de fechamento inalterado.",
       "respostas_auto": 0,
       "observacao": "Cron #118: tick matinal - 4 FP1 enviados, 0 respostas. Pipeline aguardando acao humana (Savegnago, Pague Menos, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva). Fila de prospeccao precisa reposicao."
+    }
+  },
+  "ciclo_2026_10_16_cron_121_atendente": {
+    "timestamp": "2026-10-16 ~19:00 (Atendente IA - cron #121 - tick 19:00)",
+    "acoes": [
+      "✅ sync_formspree.py — 88 bounces em cache, 0 notificações novas do Formspree",
+      "✅ corrigir_emails.py — 0 processados (todos já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 mensagens não lidas (310 leads, 194 msgids enviados)",
+      "✅ watchdog.py — exit 0: 310 leads, 217 ativos, 88 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — 354 empresas, 297 contatados, 69 bounce, 1 pendente (Farinolio sem MX)",
+      "ℹ️ proposta_contrato.py / relatorio_esg.py — não executados (nenhum lead com volume novo nem solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 310,
+      "ativos_watchdog": 217,
+      "bounce_cache_json": 88,
+      "watchdog": "exit 0 — saudável",
+      "fila_prospeccao": "354 empresas, 297 contatados, 69 bounce, 1 pendente (Farinolio sem MX)",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma neste tick — pipeline aguardando retorno (Savegnago, Pague Menos, Rede Confiança, Covabra)",
+      "respostas_auto": 0,
+      "observacao": "Cron #121: tick vespertino — 88 bounces (subiu de 87), 0 notificações Formspree, 0 follow-ups, 0 respostas. 17º dia sem respostas humanas (desde Tauste 30/09). Fila de prospecção praticamente exaurida (1 pendente inválido). Pipeline de fechamento segue inalterado — todos os leads quentes (Savegnago #1 interior R$7,98bi, Pague Menos #2 R$4,33bi, Rede Confiança, Covabra) aguardam ação humana via WhatsApp/telefone. Leads watchdog cresceu de 305 para 310 (novos do Melhorador/Prospector)."
+    }
+  },
+  "ciclo_2026_10_16_cron_122_atendente": {
+    "timestamp": "2026-10-16 19:33 (Atendente IA - cron #122 - tick noturno)",
+    "acoes": [
+      "sync_formspree.py — 88 bounces cache, 0 notificações novas do Formspree",
+      "corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+      "prospecao_followup.py — 0 follow-ups atrasados (caixa zerada)",
+      "send_sequence — sequência processada (nada a enviar)",
+      "check-replies — 0 respostas (replies_pending.json vazio)",
+      "watchdog.py — exit 0: sistema saudável, SMTP/IMAP OK. 310 leads, 217 ativos, 88 bounces",
+      "proposta_contrato.py/relatorio_esg.py — não executados (sem lead com volume novo nem solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 310,
+      "ativos_watchdog": 217,
+      "bounce_cache_json": 88,
+      "watchdog": "exit 0 — saudável",
+      "fila_prospeccao": "354 empresas, 297 contatados, 69 bounce, 1 pendente (Farinolio sem MX)",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma neste tick — pipeline aguardando retorno (Savegnago, Pague Menos, Rede Confiança, Covabra)",
+      "respostas_auto": 0,
+      "observacao": "Cron #122: tick noturno — 88 bounces, 0 Formspree, 0 follow-ups, 0 respostas. 17º dia sem respostas humanas (desde Tauste 30/09). Pipeline de fechamento segue inalterado — todos os leads quentes (Savegnago #1 interior R$7,98bi, Pague Menos #2 R$4,33bi, Brasfrigo Salto, Queijos Itupeva, Rede Confiança, Covabra) aguardam ação humana via WhatsApp/telefone. Watchdog OK — sistema saudável."
     }
   }
 }
