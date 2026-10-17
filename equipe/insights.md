@@ -1994,3 +1994,23 @@ Sistema estável. Bounce cache estabilizou em 87 — não cresceu hoje, indicand
 1. 🔴 **Ação humana nos leads quentes**: Savegnago (WhatsApp (11) 96785-9631 — 17 dias parado), Covabra (portal Ivrim isac.ivrim.com.br), Pague Menos (ticket 407470), Rede Confiança (reforço proposta). Nenhuma resposta humana nova há 17 dias — o funil não fecha sozinho.
 2. 🟡 **Repor fila de prospecção** com 10-15 novas empresas MX-verificadas. Sem reposição, o ecossistema para de gerar oportunidades.
 3. 🟡 **Manter estratégia de canais comerciais (compras@) em vez de SAC@** — bounces continuam concentrados em endereços de SAC de grandes empresas.
+
+## 2026-10-17 (Bot SEO - cron)
+
+### Ranking Bing (posição real, top 20)
+- Todas as 10 keywords monitoradas: **fora do top 20 (ainda não indexado)** — site novo, normal; precisa de semanas.
+- Site no ar HTTP 200, sitemap presente, sem problemas técnicos.
+
+### Mudanças aplicadas (3)
+1. **Artigo novo** `deploy-vercel/blog/maionese-vencida.html` — cobre "maionese vencida" (antes AUSENTE). Title/description otimizados, canonical, Schema.org, CTA WhatsApp, links internos "Continue a leitura", ~1.000 palavras.
+2. **Frases-chave exatas** em `oleo-limpeza-maquinas.html` — "óleo vegetal usado em limpeza de máquinas" e "óleo de limpeza de máquinas farmacêuticas" (antes AUSENTES).
+3. **Publicação**: card no `blog/index.html` + seção #blog da home, sitemap.xml atualizado, IndexNow enviado (HTTP 200) para as 2 URLs.
+
+### Resultado pós-melhoria
+- ✅ "maionese vencida": AUSENTE → **presente**
+- ✅ "óleo vegetal limpeza de máquinas": AUSENTE → **presente**
+- ✅ "óleo de limpeza de máquinas farmacêuticas": AUSENTE → **presente**
+- ⚠️ Ainda AUSENTES (fora do escopo das 10-alvo): preço do óleo usado por litro, vender óleo de cozinha usado, destruição de produtos vencidos, óleo vegetal usado industrial.
+
+### Próximos passos
+- Manter cadência de 1 artigo/semana; próximas candidatas: "preço do óleo usado por litro" (dedicada) e "vender óleo de cozinha usado".
