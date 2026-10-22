@@ -1,3 +1,23 @@
+## 2026-10-22 (Bot SEO - cron diário)
+
+### Ranking real no Bing (top 20)
+- **Todas as 10 keywords-alvo fora do top 20** — site jovem, sem posição ainda (normal; acumular conteúdo é o caminho).
+- Presença no conteúdo subiu de 16/23 → **20/23** keywords monitoradas.
+
+### Melhorias aplicadas (3 mudanças)
+1. **deploy-vercel/index.html** — Schema.org LocalBusiness (endereço R. Rússia 803, Salto/SP, geo, areaServed, telefone) + **FAQPage com 5 perguntas** adicionados ao JSON-LD (antes só Organization/WebSite). Rich snippets + sinal de negócio local.
+2. **deploy-vercel/index.html** — 6 cards adicionados no #blog: restaurações, onde descartar em Salto, biodiesel, máquinas, descaracterização, gordura vegetal usada (antes 4/10 artigos tinham card no home).
+3. **blog/quanto-vale-oleo-usado.html** + **blog/onde-descartar-oleo-salto.html** — frases exatas inseridas no copy: "preço do óleo usado por litro", "vender óleo de cozinha usado", "descarte de óleo de cozinha em Salto" (fecharam 3 gaps AUSENTE do monitor); dateModified/`Atualizado em` → 2026-10-22.
+
+### Indexação
+- IndexNow enviado (HTTP 200) para `/`, `/blog/quanto-vale-oleo-usado.html`, `/blog/onde-descartar-oleo-salto.html`.
+- Sitemap já listava as 26 URLs (sem página nova, sem update).
+
+### Pendências p/ próximos ticks
+- 3 keywords AUSENTE no conteúdo: "compra de gordura vegetal usada", "destruição de produtos vencidos", "óleo vegetal usado industrial" (+lacuna nicho "máquinas encapsulados") — adicionar frases nos artigos dedicados existentes.
+
+---
+
 ## 2026-10-19 19:32 (Atendente IA - cron #124b - domingo - tick vespertino)
 
 ### Diagnóstico do ciclo
@@ -2329,4 +2349,39 @@ Sistema estável. Bounce cache estabilizou em 87 — não cresceu hoje, indicand
 ### Aprendizado do tick
 - **Panificação industrial é nicho subexplorado na região de Jundiaí**: padarias industriais e congelados de panificação usam margarina/gordura vegetal em volume e geram óleo de fritura — 3 empresas de um único segmento encontradas em uma busca. O template "fritura" de prospecao.py cobre o discurso.
 - **Fila zerada = prospecção morta**: quando `enviar_lote.py --status` mostra 0 pendentes, a reposição é a ação de maior retorno do tick (mais valiosa que mexer em template).
-- Bounce 25% segue o gargalo nº 1 de custo: cada 4 emails, 1 volta. Próximo foco: validar mais agressivamente antes de inserir na fila (já feito via nslookup, mas conferir domínios de hospedagem barata tipo uhserver/locaweb pode reduzir ainda mais).
+|- Bounce 25% segue o gargalo nº 1 de custo: cada 4 emails, 1 volta. Próximo foco: validar mais agressivamente antes de inserir na fila (já feito via nslookup, mas conferir domínios de hospedagem barata tipo uhserver/locaweb pode reduzir ainda mais).
+
+## 2026-10-22 09:00 (Analista de Qualidade - cron)
+
+### Números do dia
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | 314 |
+| `novo` | 220 |
+| `respondido` | 19 |
+| `bounce` | 66 |
+| `encerrado` | 9 |
+| Emails em bounce cache (bounces.json) | 89 |
+| Bounces no cache **não** encontrados no CSV | 23 (emails antigos/de prospecção, sem lead correspondente) |
+| Respostas pendentes (replies_pending.json) | 0 |
+| Leads em sequência ativa (boas_vindas_em preenchido) | **0** |
+| Notificações Formspree processadas | 0 |
+
+### Problemas encontrados
+1. **🔴 NENHUM lead em sequência ativa** — 220 leads "novo" parados, sem boas_vindas_em. O send_sequence não está processando novos leads. Pode ser que a fila esteja pausada ou o bot não está rodando a sequência para status "novo". Verificar no tick do Redator se `send_sequence` está sendo executado.
+2. **✅ Nenhum lead bounce com boas_vindas_em** — consistência mantida.
+3. **✅ Nenhum lead respondido no bounces.json** — proteção de leads com conversa viva.
+4. **ℹ️ 23 emails extras no bounce cache** — são endereços que já deram bounce em campanhas passadas mas não pertencem a nenhum lead atualmente cadastrado. O cache serve como bloqueio para reenvio; nenhuma ação necessária.
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 89 bounces cache, 0 notificações novas |
+| Auditoria cruzada bounces.json × leads.csv | OK — sync já protege leads respondido/encerrado |
+| Verificação boas_vindas_em em bounces | Nenhum — consistente |
+| replies_pending.json | Vazio — sem respostas a processar |
+
+### Sugestões para o Estrategista
+1. **Reativar sequência automática** — 220 leads "novo" aguardam o primeiro email. Se o send_sequence está configurado para processar apenas status específicos, verificar se "novo" está incluído. Cada dia parado = oportunidade perdida.
+2. **Estratégia para os 23 bounces órfãos** — alguns desses emails (ex.: contato@selmi.com.br, contato@scallet.com.br) são endereços genéricos de empresas que já estão na base com outro email. Vale considerar adicioná-los como email secundário ou tentar o contato alternativo já registrado (compras@selmi.com.br, pedidos@scallet.com.br) que ainda está como "novo".
+3. **Follow-up humano nos 19 respondidos** — último lead que respondeu foi Rede Confiança (14/10). Covabra e Pague Menos estão quentes há semanas sem ação humana. Sugiro priorizar ao menos 1 ligação por dia útil.
