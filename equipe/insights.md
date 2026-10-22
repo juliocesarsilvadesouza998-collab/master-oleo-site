@@ -1,3 +1,39 @@
+## 2026-10-22 18:24 (Melhorador Contínuo - cron vespertino)
+
+### Diagnóstico
+- ✅ Watchdog exit 0 — 322 leads, 224 ativos, 93 bounces, SMTP/IMAP OK
+- ✅ Dashboard: 268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando
+- ✅ **4 FP2 enviados** com sucesso (watchdog reportava 4 atrasados)
+- ✅ Fila reabastecida: 5 novas empresas MX-verificadas adicionadas
+- 🔴 **8º dia sem respostas humanas** (última: Pague Menos 14/10; última real: Tauste 30/09 = 22 dias)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+- 🔴 Bounce rate 25% continua acima da meta de 15%
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| prospecao_followup.py | **4 FP2 enviados**: São Roque (18 lojas, 2 em Salto!), AVEC Jundiaí (33 cidades), Sandeleh (Sorocaba), SweetMix (Sorocaba) |
+| Fila de prospecção | 5 novas empresas MX-verificadas: Bella Alimentos/Jundiaí, Nutrassim/Indaiatuba, Dellys/Sorocaba, Santo Óleo/Jundiaí, Máximo Alimentos/Campinas |
+| py_compile | OK — prospecao_followup.py e prospecao.py sem erros |
+| Fila status | 370 empresas, 309 contatados, 74 bounce, 5 pendentes |
+
+### Aprendizado do ciclo
+**Follow-ups FP2 são a melhor ferramenta automática disponível quando a fila de prospecção está zerada.** São Roque Supermercados (18 lojas com 2 em Salto!) recebeu FP2 — é o lead local mais promissor desde FastNFit. AVEC Jundiaí tem email de fornecedores, canal direto. Ambos têm alto potencial de resposta. O pipeline de fechamento, porém, continua 100% dependente de ação humana — 22 dias sem que ninguém ligue para Savegnago ou preencha o cadastro da Covabra é um custo de oportunidade crescente.
+
+### Pendências para o Estrategista (inalteradas — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** - portal Ivrim | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680 |
+
+---
+
 ## 2026-10-22 (Bot SEO - tick 2)
 
 ### Ranking real no Bing (top 20)
@@ -2450,3 +2486,45 @@ Sistema estável. Bounce cache estabilizou em 87 — não cresceu hoje, indicand
 1. **Reativar sequência automática** — 220 leads "novo" aguardam o primeiro email. Se o send_sequence está configurado para processar apenas status específicos, verificar se "novo" está incluído. Cada dia parado = oportunidade perdida.
 2. **Estratégia para os 23 bounces órfãos** — alguns desses emails (ex.: contato@selmi.com.br, contato@scallet.com.br) são endereços genéricos de empresas que já estão na base com outro email. Vale considerar adicioná-los como email secundário ou tentar o contato alternativo já registrado (compras@selmi.com.br, pedidos@scallet.com.br) que ainda está como "novo".
 3. **Follow-up humano nos 19 respondidos** — último lead que respondeu foi Rede Confiança (14/10). Covabra e Pague Menos estão quentes há semanas sem ação humana. Sugiro priorizar ao menos 1 ligação por dia útil.
+
+---
+
+## 2026-10-22 18:28 (Atendente IA — cron tick)
+
+### Diagnóstico do ciclo
+- ✅ **322 leads, 224 ativos, 93 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ Sync & auto-correção: 0 notificações Formspree, 0 bounces novos corrigidos
+- ✅ Follow-ups: 0 atrasados (prospecao_followup.py)
+- ✅ Sequência: nada a enviar (send_sequence)
+- ✅ Respostas: 0 pendentes (replies_pending.json vazio)
+- 🔴 **8º dia sem respostas humanas** (última: Pague Menos 14/10; antes Tauste 30/09 = 22 dias)
+- 🔴 **Pipeline de fechamento parado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 93 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+- **8 dias sem respostas humanas** — último lead real: Pague Menos (14/10). Tauste (30/09) foi a última resposta humana REAL = 22 dias.
+- **Fila de prospecção ZERADA** — 0 pendentes com MX válido. Prospector já reportou esgotamento da base regional.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+- **Pipeline de fechamento parado** — todas as ações de alto impacto (Savegnago WhatsApp, Covabra portal, coleta-teste) dependem de ação humana.

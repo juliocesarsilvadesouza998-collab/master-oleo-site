@@ -1945,5 +1945,40 @@
       "email": "marketing@matilat.com.br",
       "cidade": "Catanduva/SP",
       "segmento": "laticinios (manteiga, queijos, iogurtes, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 22/10"
-    }
-  ]
+          },
+              {
+                "nome": "Bella Alimentos",
+                "empresa": "Bella Alimentos Ltda",
+                "email": "sac@bellalimentos.com.br",
+                "cidade": "Jundiai/SP",
+                "segmento": "industria de alimentos (paes congelados, salgados, confeitaria) - usa oleos e gorduras; MX mail.bellalimentos valido 22/10"
+              },
+              {
+                "nome": "Nutrassim Alimentos",
+                "empresa": "Nutrassim Alimentos Ltda",
+                "email": "contato@nutrassim.com.br",
+                "cidade": "Indaiatuba/SP",
+                "segmento": "industria de alimentos (suplementos e ingredientes) - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX Google valido 22/10"
+              },
+              {
+                "nome": "Dellys Alimentos",
+                "empresa": "Dellys Alimentos Ltda",
+                "email": "contato@dellys.com.br",
+                "cidade": "Sorocaba/SP",
+                "segmento": "industria de alimentos (massas, biscoitos, paes) - usa oleos e gorduras em producao; MX Outlook valido 22/10"
+              },
+              {
+                "nome": "Santo Oleo",
+                "empresa": "Santo Oleo Industria de Alimentos Ltda",
+                "email": "sac@santooleo.com.br",
+                "cidade": "Jundiai/SP",
+                "segmento": "industria de oleos e gorduras especiais - NICHO PRIORITARIO (oleos e gorduras); MX valido 22/10"
+              },
+              {
+                "nome": "Maximo Alimentos",
+                "empresa": "Maximo Alimentos Ltda",
+                "email": "sac@maximoalimentos.com.br",
+                "cidade": "Campinas/SP",
+                "segmento": "industria de alimentos (temperos, molhos, condimentos) - usa oleos vegetais em producao; MX valido 22/10"
+              }
+            ]
