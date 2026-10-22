@@ -1,3 +1,25 @@
+## 2026-10-22 (Bot SEO - tick 2)
+
+### Ranking real no Bing (top 20)
+- **Todas as keywords fora do top 20** — site jovem, ainda sem posição no Bing (normal; indexado mas não rankeado, precisa de semanas).
+- Presença no conteúdo: 20/23 → **23/23 keywords monitoradas** — SEO geral voltou a **OK**.
+
+### Melhorias aplicadas (1 mudança lógica = 4 patches de copy)
+- **deploy-vercel/blog/quem-compra-gordura-vegetal-usada.html** — frase exata "compra de gordura vegetal usada" no copy.
+- **deploy-vercel/blog/oleo-limpeza-maquinas.html** — "óleo vegetal usado em máquinas e produtos encapsulados" (fechou lacuna "encapsulados").
+- **deploy-vercel/blog/descaracterizacao-vencidos.html** — "destruição de produtos vencidos".
+- **deploy-vercel/oleo-vegetal-industrial.html** — "óleo vegetal usado industrial" no primeiro parágrafo.
+- Todas eram keywords AUSENTE deixadas como pendência no tick anterior; as 4 páginas já eram dedicadas, só faltava a frase exata no texto.
+
+### Indexação
+- IndexNow pingado (HTTP 200) para as 4 URLs alteradas.
+- Sem página nova → sitemap.xml inalterado (26 URLs).
+
+### Pendências p/ próximos ticks
+- Nenhuma keyword AUSENTE (cobertura 100%). Próximo passo: aguardar indexação/posição; seguir acumulando conteúdo de long-tail quando houver keyword sem página dedicada.
+
+---
+
 ## 2026-10-22 (Bot SEO - cron diário)
 
 ### Ranking real no Bing (top 20)
@@ -15,6 +37,49 @@
 
 ### Pendências p/ próximos ticks
 - 3 keywords AUSENTE no conteúdo: "compra de gordura vegetal usada", "destruição de produtos vencidos", "óleo vegetal usado industrial" (+lacuna nicho "máquinas encapsulados") — adicionar frases nos artigos dedicados existentes.
+
+---
+
+## 2026-10-22 08:33 (Atendente IA - cron tick)
+
+### Diagnóstico do ciclo
+- ✅ **322 leads, 224 ativos, 93 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ Sync & auto-correção: 0 notificações Formspree, 0 bounces novos corrigidos
+- ✅ Follow-ups: 0 atrasados (prospecao_followup.py)
+- ✅ Sequência: nada a enviar (send_sequence)
+- ✅ Respostas: 0 pendentes (replies_pending.json vazio)
+- 🔴 **8º dia sem respostas humanas** (última: Pague Menos 14/10; antes Tauste 30/09 = 22 dias)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 93 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+- **8 dias sem respostas humanas desde Pague Menos (14/10).** Última resposta humana REAL foi Tauste (30/09) — **22 dias.**
+- **322 leads totais** — crescimento gradual da base (314 → 322 desde 19/10)
+- **5 novos leads enviados hoje** (Saripan, Padan, Bocata, Atacado OJT, Indaiatuba Carnes) + 3 do Prospector (Fargimed, Quatrelati, Matilat)
+- **Fila de prospecção ZERADA** — precisa reposição urgente.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
 
 ---
 
