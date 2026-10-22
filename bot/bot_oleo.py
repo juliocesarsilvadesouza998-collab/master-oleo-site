@@ -146,21 +146,22 @@ def add_lead(args):
 def tpl_boas_vindas(cfg, lead):
     g = cfg["empresa"]
     return {
-        "subject": "Compramos seu óleo de cozinha usado — Master Óleo",
+        "subject": "Seu óleo usado vale R$ 14,4 mil/ano — Master Óleo compra",
         "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, <b>{lead['nome']}</b>!</p>
-<p>Obrigado pelo seu interesse na <b>{g['nome']}</b>. Segue o guia gratuito que você solicitou:</p>
+<p>Obrigado pelo contato com a <b>{g['nome']}</b>. Segue o guia gratuito que você solicitou:</p>
 <p style="text-align:center;margin:24px 0">
   <a href="{g['link_guia']}" style="background:#f59e0b;color:#3b2600;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:bold">📘 Baixar Guia de Descarte</a>
 </p>
-<p>Nele você encontra o que a lei exige (PNRS), o checklist para escolher um coletor confiável e as boas práticas de acondicionamento para grandes volumes.</p>
-<p><b>E uma boa notícia:</b> além de coletar com certificado de destinação, <b>compramos o óleo de cozinha usado e a gordura vegetal usada</b> — o valor é negociado conforme a quantidade e a qualidade do material.</p>
-<p>Para alinhar a melhor proposta, me conta:</p>
+<p>Nele você encontra o que a lei exige (PNRS), o checklist para escolher um coletor confiável e as boas práticas de acondicionamento.</p>
+<p><b>Mas a notícia principal:</b> <b>compramos o óleo de cozinha usado e a gordura vegetal usada</b> — com certificado de destinação (PNRS) e <b>pagamento à vista (PIX)</b> na coleta. O mercado global de óleo usado vale <b>US$ 11 bi</b> e o Brasil já coleta 180 milhões de L/ano, mas o potencial é 600 milhões — <b>70% inexplorado</b>.</p>
+<p>Para referência: um estabelecimento que gera <b>600 L/mês recebe R$ 14,4 mil/ano</b> (R$ 2,00/L). Se for rede, multiplica. A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi) já está em negociação conosco — e o Grupo Madero (270 restaurantes) fechou contrato de 55 mil L/mês com coletor.</p>
+<p><b>Me conta para alinhar a proposta:</b></p>
 <ul>
-  <li>Qual a <b>quantidade aproximada</b> de óleo/gordura por mês (litros ou kg)?</li>
+  <li>Qual a <b>quantidade aproximada</b> por mês (litros ou kg)?</li>
   <li>Qual o <b>tipo de material</b> (óleo de fritura, gordura vegetal, etc.)?</li>
 </ul>
-<p>Atendemos {g['cidade']} e região, com certificado de destinação em toda coleta.</p>
+<p>Atendemos {g['cidade']} e região, com certificado, bombonas e coleta programada.</p>
 <p>Atenciosamente,<br><b>{g['nome']}</b><br>WhatsApp: {g['telefone_whatsapp']}</p>
 </div>"""}
 

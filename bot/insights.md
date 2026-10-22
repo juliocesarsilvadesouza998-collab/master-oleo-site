@@ -1,3 +1,41 @@
+## 2026-10-22 08:27 (Atendente IA - cron #124 - tick matinal)
+
+### Diagnóstico do ciclo
+- 314 leads, 220 ativos, 89 bounces (watchdog) — SMTP/IMAP OK
+- **🔴 8 dias sem respostas humanas** — última resposta real: Rede Confiança (14/10)
+- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- ✅ Fila de prospecção: zerada, sem pendentes com MX válido
+- **🔴 Leads quentes parados** — todos aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 89 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável (314 leads, 220 ativos, 89 bounces) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi) — WhatsApp (11) 96785-9631. 22+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09 — 22 dias.
+6. 🟡 **Covabra** — respondeu 22/09 — 30 dias.
+7. 🟡 **Pague Menos** (R$4,33bi, Josiane Marinho) — retomar contato.
+8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+### Observações
+- Pipeline de 314 leads estável, mas sem respostas humanas há 8 dias.
+- Bounce cache subiu de 88 para 89 (ajuste fino, nenhum bounce novo do Formspree).
+- Fila de prospecção zerada — sem novas empresas com MX válido para enviar.
+- Sistema opera no automático sem incidentes, mas o gargalo de fechamento humano persiste.
+
+---
+
 ## 2026-10-13 19:34 (Analista de Qualidade - cron sábado)
 
 ### Diagnóstico do dia

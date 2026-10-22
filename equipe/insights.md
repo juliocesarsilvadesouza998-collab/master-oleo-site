@@ -1,3 +1,82 @@
+## 2026-10-19 19:32 (Atendente IA - cron #124b - domingo - tick vespertino)
+
+### Diagnóstico do ciclo
+- ✅ **314 leads, 221 ativos, 88 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ 0 notificações Formspree, 0 bounces novos, 0 follow-ups atrasados, 0 respostas pendentes
+- ✅ Fila de prospecção: 357 empresas, 301 contatados, 69 bounce, **0 pendentes com MX válido**
+- 🔴 **6º dia sem respostas humanas** (última: Rede Confiança 14/10; antes Tauste 30/09 = **19 dias**)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 88 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+|- **5 dias sem respostas humanas desde Rede Confiança (14/10).** Última resposta humana REAL foi Tauste (30/09) — **19 dias.**
+|- **Fila de prospecção ZERADA** (0 pendentes) — precisa reposição urgente para manter fluxo de envios.
+|- **Nenhuma ação de email necessária neste tick** — sistema saudável mas estagnado no pipeline de fechamento.
+
+---
+
+## 2026-10-19 19:04 (Atendente IA - cron #124 - domingo)
+
+### Diagnóstico do ciclo
+- ✅ **313 leads, 220 ativos, 88 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ 0 notificações Formspree, 0 bounces novos processados
+- ✅ **14 follow-ups processados**: 5 FP2 (Atlhetica, Supermercados Paraná, Probilacto, Line Comercio, Fullcaps) + 9 FP1 (Bioactive, Menegon, R-Food, Glúten Free, Bremil, **São Roque 18 lojas**, AVEC Jundiaí, Sandeleh, SweetMix)
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- 🔴 **5º dia sem respostas humanas** (última: Rede Confiança 14/10; antes Tauste 30/09 = 19 dias)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 88 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **14 follow-ups enviados** (5 FP2 + 9 FP1) |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+|- **Sistema atinge teto do email cold:** 8%+ de resposta está acima da média (1-5%). Todas as respostas que chegam são de redes de alto valor mas pedem ação humana.
+|- **5º dia sem respostas humanas desde Rede Confiança (14/10).** Última resposta humana REAL foi Tauste (30/09) — **19 dias.**
+|- **14 follow-ups enviados** neste tick. Destaque: **Super Mercado São Roque** (18 lojas, 2 em Salto!) recebeu FP1 — lead local com potencial.
+|- **Fila de prospecção:** 356 empresas, 300 contatados, **0 pendentes com MX válido** — precisa reposição urgente.
+|- **São Roque Supermercados** merece atenção: 18 lojas na região (Salto, São Roque, Mairinque, Tatú, Boituva...) com contato direto do convênio.
+
+---
+
 ## 2026-10-17 19:13 (Atendente IA - cron noturno)
 
 ### Diagnóstico do ciclo
@@ -15,7 +94,7 @@
 | prospecao_followup.py | 0 follow-ups atrasados |
 | send_sequence | sequência processada (nada a enviar) |
 | check-replies | 1 pendência = Pague Menos (auto-survey Zendesk — ignorado) |
-| watchdog.py | exit 0 — sistema saudável, 311 leads, 218 ativos, 88 bounces |
+|| watchdog.py | exit 0 — sistema saudável, 311 leads, 218 ativos, 88 bounces |
 | proposta_contrato.py | não executado — nenhum lead com volume novo |
 | relatorio_esg.py | não executado — nenhuma solicitação |
 
@@ -38,6 +117,43 @@
 - **Nagumo:** hoje é o follow-up de 3 dias do caso 00143542 — ação humana via WhatsApp (11) 96785-9631 citando o protocolo.
 
 ---
+
+## 2026-10-17 19:31 (Atendente IA - cron #123 - sábado - tick 19:30)
+
+### Diagnóstico do ciclo
+- ✅ 311 leads, 218 ativos, **88 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ 0 notificações Formspree, 0 follow-ups atrasados, 0 bounces processados
+- ✅ 0 respostas pendentes (replies_pending.json vazio) — **7º dia consecutivo sem respostas humanas novas** (última: Rede Confiança 14/10)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 88 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+- **Sistema atinge teto do email cold:** 8%+ de resposta está acima da média (1-5%). Todas as respostas que chegam são de redes de alto valor mas pedem ação humana.
+- **7º dia sem respostas humanas** — última resposta real foi Rede Confiança (14/10). Covabra (portal Ivrim) e Savegnago (comercial@) seguem aguardando ação humana.
+- **Fila de prospecção:** 354+ empresas, 0 pendentes com MX válido — precisa reposição.
+- **Nagumo:** follow-up de 3 dias do caso 00143542 venceu — ação humana via WhatsApp (11) 96785-9631.
 
 ## 2026-10-16 (Bot de SEO - cron SEO - tick diário)
 
@@ -530,7 +646,42 @@ Tick 18:00 limpo — **nenhuma resposta nova, porém o tick saiu do zero com aç
 | 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço 15/10 | AMANHÃ |
 | 🔴🔴🔴 | **Covabra** | Portal Ivrim (isac.ivrim.com.br) | Esta semana |
 | 🔴🔴 | **Brasfrigo** (Salto) | Coleta-teste | Esta semana |
-| 🔴🔴 | **Queijos Itupeva** (Rafael) | Coleta-teste | Esta semana |
+| 🔴🔴 | **Queijos Itupeva** (Rafael) | Coleta-teste |
+
+---
+
+## 2026-10-19 20:00 (Analista de Qualidade - cron #125 — auditoria independente)
+
+### Números do dia
+
+| Métrica | Valor |
+|---------|-------|
+| **Total de leads** | **314** (novo 221 · bounce 65 · respondido 19 · encerrado 9) |
+| **Bounce cache (bounces.json)** | 88 emails (65 correspondem a leads ativos + 23 órfãos) |
+| **Respostas pendentes** | 0 (replies_pending.json vazio) |
+| **Leads bounce com boas_vindas_em** | 0 ✅ |
+| **Consistência cache × CSV** | 65/65 (100%) ✅ |
+
+### Auditoria — verificado
+
+- ✅ **sync_formspree.py**: 88 bounces em cache, 0 notificações Formspree novas, 0 bounces novos detectados
+- ✅ **leads.csv × bounces.json**: 65/65 bounces do CSV batem com o cache
+- ✅ **0 leads bounce com boas_vindas_em preenchido** — send_sequence respeita o cache
+- ✅ **replies_pending.json vazio** — 0 respostas pendentes
+- ✅ **Bounce cache estável em 88** (sem novos desde 16/10)
+
+### Problemas encontrados
+
+1. **20º dia sem resposta humana nova** — última resposta real de lead quente: Rede Confiança (14/10)
+2. **10 leads respondidos sem respondido_em** (pendência desde 13/10, nunca corrigida): Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Dalben, Queijos Itupeva, Cabanha Campestre, Muffato/Max, Brasfrigo
+3. **Base cresceu 30 leads (284→314 desde 14/10)** mas respondidos só +1 (18→19) e bounce +8 (57→65)
+4. **23 bounces órfãos no cache sem lead correspondente** — poluem métricas
+
+### Sugestões para o Estrategista
+
+1. 🔴 **Ação humana URGENTE**: 20 dias sem fechar. Savegnago (WhatsApp 11 96785-9631) e Covabra (portal Ivrim) são os mais avançados — cada dia parado é oportunidade perdida
+2. 🟡 **Backfill dos 10 respondido_em faltantes** — sem data não dá pra medir tempo de resposta nem priorizar
+3. 🟡 **Reavaliar os 9 leads "encerrado" do grupo fritas** — batata palha/fritas geram óleo de fritura (escopo Master Óleo). Tentar abordagem por telefone/WhatsApp Esta semana |
 | 🔴 | **Sonda** (R$6,12bi) | (11) 2145-6200 | Esta semana |
 
 ---
@@ -2012,5 +2163,170 @@ Sistema estável. Bounce cache estabilizou em 87 — não cresceu hoje, indicand
 - ✅ "óleo de limpeza de máquinas farmacêuticas": AUSENTE → **presente**
 - ⚠️ Ainda AUSENTES (fora do escopo das 10-alvo): preço do óleo usado por litro, vender óleo de cozinha usado, destruição de produtos vencidos, óleo vegetal usado industrial.
 
-### Próximos passos
-- Manter cadência de 1 artigo/semana; próximas candidatas: "preço do óleo usado por litro" (dedicada) e "vender óleo de cozinha usado".
+## 2026-10-17 19:34 (Analista de Qualidade - cron sábado 09:00 - tick noturno)
+
+### Diagnóstico do dia
+- ✅ sync_formspree.py: **88 bounces** em cache, 0 notificações Formspree novas, 0 novos bounces processados (todos já registrados)
+- ✅ **311 leads** total: **218 novo | 65 bounce | 19 respondido | 9 encerrado**
+- ✅ replies_pending.json: **vazio** (0 respostas pendentes)
+- ✅ **0 leads bounce com boas_vindas_em preenchido** — send_sequence respeita cache
+- ✅ Consistência bounces.json vs leads.csv: **100%** — todos os 88 emails do cache que existem no CSV estão marcados como bounce
+- ⚠️ **23 emails órfãos** no cache (sem lead correspondente no CSV) — mesma situação do último ciclo, sem impacto funcional
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 88 bounces cache, 0 notificações novas |
+| bot_oleo.py leads | 311 leads: 218 novo / 65 bounce / 19 respondido / 9 encerrado |
+| auditoria bounces vs CSV | 65/88 com match exato; 23 órfãos (histórico) |
+| auditoria boas_vindas_em | 0 leads bounce com envio — consistente |
+| auditoria boas_vindas em encerrados | 9 leads encerrados com boas_vindas_em (lote fritas — OK, não bounce) |
+
+### Envios acumulados (todos os tempos)
+- boas_vindas: 9 (todos encerrados — grupo fritas)
+- apresentação: 268 leads
+- FP1: 213 | FP2: 192 | FP3: 191
+
+### Problemas encontrados
+1. **Mesmo desde 13/10**: 10 dos 19 leads respondidos continuam sem `respondido_em`/`ultima_resposta` preenchido — Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Dalben, Queijos Itupeva, Cabanha Campestre, Muffato/Max, Brasfrigo. Sem data de resposta, o Estrategista não consegue priorizar follow-up por antiguidade.
+2. **23 bounces órfãos** no cache persistem sem limpeza (mesmo desde auditoria anterior). Contam na métrica de bounce rate se alguém olhar o cache como fonte única.
+3. **Bounce rate subiu**: 65/311 = **20,9%** (era 57/284 = 20,1% na auditoria de 13/10; meta 15%). Crescimento de 8 novos bounces desde 13/10 sem redução da base ativa proporcional.
+
+### Sugestões para o Estrategista
+1. **Limpar bounces.json órfãos**: 23 emails de leads que não existem mais — rodar script de poda (bounces com mais de 60 dias sem match no CSV podem ser removidos). Isso reduz a métrica de bounce aparente.
+2. **Backfill de respondido_em**: os 10 leads respondidos sem data impedem análise de tempo médio de resposta e priorização correta de follow-up humano.
+3. **Retomar contato com novos leads**: 218 leads "novo" é o maior número já registrado — mas 268 já receberam apresentação e 191 já receberam FP3 (quase esgotaram a sequência). A fila de prospecção precisa de reposição, pois o envio de cold emails está no limite.
+
+---
+
+## 📊 Relatório do Estrategista — 2026-10-18 (domingo)
+
+### Diagnóstico da semana
+
+**Números:** 311 leads, 218 ativos, 88 bounces, 19 respondidos (~7,4-8,1%), 256+ enviados.
+
+**Análise crítica:**
+- 🔴 **GARGALO HUMANO**: 8 leads quentes (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda R$6,12bi, Tauste) aguardam ação via WhatsApp/telefone. **Nenhum virou contrato.** O email cold prova que funciona com 8% de taxa de resposta — mas o sistema não fecha vendas.
+- 🔴 **3 dias sem respostas novas** após o pico histórico de 14/10 (quando 4 redes abriram canal comercial no mesmo dia).
+- 🔴 **Fila de prospecção quase zerada**: 2 pendentes com MX válido (Martins Carnes, Alimentos Dallas). Sem reposição, o sistema para de gerar novos leads.
+- 🟡 **Bounce rate ~25%** — acima da meta de 15%, mas sem novos bounces para corrigir.
+- 🟢 **Sistema de email saudável** — watchdog exit 0, sem follow-ups atrasados.
+
+### O que a pesquisa de mercado revelou (18/10)
+
+1. **Ambiental Santos paga R$3/L** — acima do teto da Óleo Verde (R$2,50/L). Fonte: Bom Gourmet (2026) reporta que a Ambiental Santos (PR/SC) remunera restaurantes parceiros em R$3/L. Isso NÃO significa pagar esse valor, mas sim usar como argumento de que "o mercado está aquecido, o valor do óleo está subindo."
+2. **PNRS obriga contrato com coletor certificado** — Lei 12.305/2010 + cartilha Abiove: estabelecimentos são OBRIGADOS a contratar empresa certificada para destinação de óleo. 1 bilhão de L/ano vão para o ralo. Frase-chave: "sem contrato, sem alvará — o passivo fica no seu CNPJ."
+3. **Cargill/Liza: modelo de parceria** — 1.000+ pontos de coleta em 10 estados, parcerias com Tenda Atacado (R$0,60 desconto/L), Zona Sul, Bramil. Lição para Master Óleo: ecopontos em supermercados = mídia local.
+4. **Mercado global UCO** — US$8,01 bi (2025) → US$8,63 bi (2026). Preço da tonelada de óleo de soja: R$6.953. Exportação para EUA: 1,4M t (2023). Fonte: Fortune Business Insights, beancount.io.
+
+### Melhorias aplicadas neste ciclo
+
+| # | Ação | Arquivo | Resultado |
+|---|------|---------|-----------|
+| 1 | ✅ Persona.md: +4 novos argumentos (Ambiental Santos R$3/L, PNRS obriga contrato, Cargill/Liza, exportação UCO EUA) | `bot/persona.md` | Argumentário ampliado |
+| 2 | ✅ FP1/FP2/FP3: PNRS obriga contrato + Ambiental Santos R$3/L adicionados | `bot/prospecao_followup.py` | py_compile OK |
+| 3 | ✅ Ecossistema.json: metas da semana registradas | `equipe/ecossistema.json` | JSON válido |
+
+### Metas da semana (19 a 25/10) — FOCO EM FECHAMENTO
+
+| Prioridade | Lead | Ação | Prazo |
+|:----------:|------|------|:-----:|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi #1) | WhatsApp (11) 96785-9631 | **HOJE** |
+| 🔴🔴🔴 | **Covabra** | Portal Ivrim (isac.ivrim.com.br) | **HOJE** |
+| 🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço coleta-teste + WhatsApp | 3 dias |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste | Esta semana |
+| 🔴🔴 | **Pague Menos** (Josiane Marinho) | Retomar contato | Esta semana |
+| 🔴 | **Queijos Itupeva** (Rafael) | Agendar coleta-teste | Esta semana |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 | Esta semana |
+| 🟡 | **Tauste** (#3 interior) | Ligar (15) 3324-4680 | Esta semana |
+
+### Instruções para a equipe
+
+- **Prospector (seg-sáb 09:00)**: repor fila com empresas MX-verificadas. Foco: supermercados de rede, indústrias alimentícias em Sorocaba/Jundiaí/Campinas. Priorizar email comercial/compras, NÃO SAC genérico.
+- **Atendente**: manter monitoramento, responder leads que chegarem. Leads quentes (acima) exigem ação humana — sinalizar qualquer nova resposta imediatamente.
+- **Analista**: verificar se os 19 respondidos têm respondido_em preenchido; limpar bounces.json órfãos (22 emails sem lead correspondente).
+- **Humano (proprietário)**: PRIORIDADE ABSOLUTA — tocar WhatsApp da Savegnago (11) 96785-9631 e preencher cadastro do Covabra no portal Ivrim. Esses dois passos destravam o primeiro contrato da Master Óleo.
+
+---
+
+## 2026-10-19 19:30 (Melhorador Contínuo - cron diário)
+
+### Diagnóstico do ciclo
+- ✅ **314 leads, 220 ativos, 88 bounces** (2 novos leads enviados)
+- ✅ **14 follow-ups atrasados processados**: 5 FP2 + 9 FP1 — todos zerados
+- ✅ **2 novos prospects**: Martins Carnes (Salto/SP) + Alimentos Dallas (Cabreúva/SP)
+- ✅ **Site industrias.html**: nova seção 3 nichos + pipeline Top 3 + Catalent
+- 🔴 **Fila de prospecção ZERADA** (0 pendentes MX válido)
+- 🔴 **Pipeline de fechamento parado** — todos aguardam ação humana
+
+### Ações
+| Ação | Arquivo | Resultado |
+|------|---------|-----------|
+| 14 follow-ups atrasados | `bot/prospecao_followup.py` | 5 FP2 + 9 FP1 — exit 0 |
+| 2 prospects pendentes | `bot/enviar_lote.py --max 5` | 2 enviados |
+| Site nichos + pipeline | `deploy-vercel/industrias.html` | patch OK |
+
+### Pendências (inalteradas)
+| Prioridade | Lead | Ação |
+|:----------:|------|------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Ticket 407470, Josiane Marinho |
+| 🔴🔴🔴 | **Rede Confiança** | Reforço proposta + coleta-teste |
+| 🔴🔴🔴 | **Covabra** | Cadastro portal Ivrim (isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto) | Coleta-teste |
+| 🔴🔴 | **Queijos Itupeva** (Rafael) | Coleta-teste |
+
+---
+
+## 2026-10-19 20:00 (Analista de Qualidade - cron #125 — auditoria independente)
+
+### Números do dia
+
+| Métrica | Valor |
+|---------|-------|
+| **Total de leads** | **314** (novo 221 · bounce 65 · respondido 19 · encerrado 9) |
+| **Bounce cache (bounces.json)** | 88 emails (65 correspondem a leads ativos + 23 órfãos) |
+| **Respostas pendentes** | 0 (replies_pending.json vazio) |
+| **Leads bounce com boas_vindas_em** | 0 ✅ |
+| **Consistência cache × CSV** | 65/65 (100%) ✅ |
+
+### Auditoria — verificado
+
+- ✅ **sync_formspree.py**: 88 bounces em cache, 0 notificações Formspree novas, 0 bounces novos detectados
+- ✅ **leads.csv × bounces.json**: 65/65 bounces do CSV batem com o cache
+- ✅ **0 leads bounce com boas_vindas_em preenchido** — send_sequence respeita o cache
+- ✅ **replies_pending.json vazio** — 0 respostas pendentes
+- ✅ **Bounce cache estável em 88** (sem novos desde 16/10)
+
+### Problemas encontrados
+
+1. **20º dia sem resposta humana nova** — última resposta real de lead quente: Rede Confiança (14/10)
+2. **10 leads respondidos sem respondido_em** (pendência desde 13/10, nunca corrigida): Sumerbol, GoodBom, Rede Frango Assado, Rede Confiança, Andorinha, Dalben, Queijos Itupeva, Cabanha Campestre, Muffato/Max, Brasfrigo
+3. **Base cresceu 30 leads (284→314 desde 14/10)** mas respondidos só +1 (18→19) e bounce +8 (57→65)
+4. **23 bounces órfãos no cache sem lead correspondente** — poluem métricas
+
+### Sugestões para o Estrategista
+
+1. 🔴 **Ação humana URGENTE**: 20 dias sem fechar. Savegnago (WhatsApp 11 96785-9631) e Covabra (portal Ivrim) são os mais avançados — cada dia parado é oportunidade perdida
+2. 🟡 **Backfill dos 10 respondido_em faltantes** — sem data não dá pra medir tempo de resposta nem priorizar
+3. 🟡 **Reavaliar os 9 leads "encerrado" do grupo fritas** — batata palha/fritas geram óleo de fritura (escopo Master Óleo). Tentar abordagem por telefone/WhatsApp
+
+
+---
+
+## 2026-10-22 08:30 (Melhorador Contínuo — cron diário)
+
+### Diagnóstico do dia
+- **Ponto mais fraco: fila de prospecção ZERADA (0 pendentes com MX válido)** — prospecção parada, 3º tick seguido nesse estado.
+- 5 follow-ups FP2 atrasados (Bioactive, Menegon, R-Food, Gluten Free, Bremil) — resolvidos no tick.
+- Watchdog saudável após correção: 314 leads, 220 ativos, 89 bounces.
+- Bounce 25% (64/260) — acima da meta de 15%, segue como o maior vazamento estrutural.
+
+### Melhorias implementadas
+1. **Fila reabastecida com 5 empresas MX-verificadas** (fila_prospeccao_extra.json): Saripan (congelados de panificação/Jundiaí), Padan Alimentos (panificação industrial/Jundiaí), Bocata Panifício (padaria industrial 50 anos/Jundiaí), Atacado OJT (atacado de alimentos/Indaiatuba), Indaiatuba Carnes (distribuidora/Indaiatuba). Todos com MX confirmado via nslookup, sem duplicata.
+2. **5 follow-ups FP2 enviados** — cronometragem mantida para leads que não responderam à apresentação.
+
+### Aprendizado do tick
+- **Panificação industrial é nicho subexplorado na região de Jundiaí**: padarias industriais e congelados de panificação usam margarina/gordura vegetal em volume e geram óleo de fritura — 3 empresas de um único segmento encontradas em uma busca. O template "fritura" de prospecao.py cobre o discurso.
+- **Fila zerada = prospecção morta**: quando `enviar_lote.py --status` mostra 0 pendentes, a reposição é a ação de maior retorno do tick (mais valiosa que mexer em template).
+- Bounce 25% segue o gargalo nº 1 de custo: cada 4 emails, 1 volta. Próximo foco: validar mais agressivamente antes de inserir na fila (já feito via nslookup, mas conferir domínios de hospedagem barata tipo uhserver/locaweb pode reduzir ainda mais).

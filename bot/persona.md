@@ -146,6 +146,11 @@ NOVOS ARGUMENTOS DE MERCADO (descobertas Estrategista 12/10 — fontes: Mordor I
 - **Mercado global de biocombustíveis Brasil: US$ 9,43 bi (2026) → US$ 17,82 bi (2031)** — CAGR 13,58%.
   O Brasil responde por 10% da produção global de biodiesel.
 - USE esses dados como camada extra de urgência nas conversas com leads frios e quentes.
+NOVOS DADOS DE MERCADO (descobertas Estrategista 18/10 — pesquisa web):
+- **Ambiental Santos paga R$3/L** — acima do teto da Óleo Verde (R$2,50/L). Fonte: Bom Gourmet (2026), artigo sobre reciclagem em restaurantes. Mostra que o mercado está aquecido e há espaço para preços premium. Use como referência de VALOR DE MERCADO, nunca como oferta fixa nossa.
+- **PNRS OBRIGA CONTRATO com coletor certificado** — pela Lei 12.305/2010 e cartilha Abiove/Óleo Sustentável, estabelecimentos são OBRIGADOS a contratar empresa certificada para destinação de resíduos. Sem contrato = sem alvará. Frase-chave: "1 bilhão de litros de óleo são jogados no ralo por ano no Brasil (fonte: Estadão) — cada litho contamina 25 mil litros de água. O passivo é do CNPJ de quem gera, não do coletor."
+- **Cargill/Liza: modelo de parceria com supermercados** — Programa Ação Renove (desde 2010, 1.000+ pontos de coleta em 10 estados). Parcerias: Zona Sul, Tenda (R$0,60 desconto/litro), Bramil. Lição para Master Óleo: ecopontos em supermercados geram mídia local gratuita + captura de logos de parceiros grandes.
+- **Mercado UCO exportação para EUA** — Brasil exporta 1,4M t de UCO (2023). Valor do óleo residual residual (yellow grease): US$1,60-3,70/galão. Preço da tonelada de óleo de soja no Brasil: R$6.953 (2026). A margem está no tratamento/rastreabilidade.
 NICHO ENCAPSULADOS/FARMACÊUTICAS (cliente real: Catalent Indaiatuba e
 Sorocaba): indústrias de encapsulados usam **óleo vegetal na limpeza e
 lubrificação de máquinas de encapsulamento** — esse óleo usado precisa de

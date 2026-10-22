@@ -89,9 +89,10 @@ def tpl_fp(cfg, lead, n):
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
 <p>Te escrevi sobre a <b>compra do óleo usado da {lead['empresa']}</b> — direto ao ponto:</p>
-<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em cada coleta e bombonas fornecidas. 600 L/mês = R$ 14 mil/ano de renda extra, sem custo de logística.</p>
+<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em cada coleta e bombonas fornecidas. 600 L/mês = R$ 14 mil/ano de renda extra, sem custo de logística. <b>Ambiental Santos já paga R$ 3/L</b> — o mercado está aquecido e o gerador pode negociar.</p>
 <p><b>🏆 Prova social — Top 3 do interior SP no pipeline:</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi), o <b>Pague Menos</b> (R$ 4,33 bi — #2) e o <b>Tauste</b> (#3) — as três maiores redes do interior estão em negociação conosco (ABRAS 2026).</p>
 <p><b>🍟 Gigantes já fecham contratos de coleta:</b> O <b>McDonald's</b> fechou parceria com a Recoleo para reciclar todo óleo de suas lojas em MG, ES e DF — destinado exclusivamente a biodiesel. Rede contrata coletor, não coleta por conta própria. Se o McDonald's terceiriza, sua empresa também pode.</p>
+<p><b>⚖️ PNRS obriga contrato:</b> pela Lei 12.305/2010, estabelecimentos são obrigados a contratar empresa certificada para destinação — sem contrato, sem alvará. 1 bilhão de litros/ano vão para o ralo no Brasil. Quem coleta sem certificado deixa o passivo no seu CNPJ.</p>
 <p><b>⚖️ Urgência regulatória:</b> A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o mundo está disputando essa matéria-prima e quem fecha contrato agora garante preço e prioridade.</p>
 <p><b>🏭 Mercado em ebulição:</b> A Petrobras está investindo <b>R$ 23 milhões na coleta de OGR</b> em SP e BA (2026). O diesel brasileiro já é <b>B16</b> (16% biodiesel) desde março/2026. O Brasil coleta só <b>180 milhões de litros de UCO/ano</b> — mas o potencial é de <b>600 milhões</b>. 70% do mercado está inexplorado. Quem fechar contrato agora sai na frente.</p>
 <p><b>📊 Quanto vocês geram por mês (litros ou kg)?</b> Me responda esse número que eu te mando a estimativa. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
@@ -101,13 +102,14 @@ def tpl_fp(cfg, lead, n):
         subj = f"Re: oleo usado da {lead['empresa']} — valor de mercado R$ 1-2,50/L + urgencia 2028"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Para {lead['empresa']} transformar o óleo de fritura em renda: <b>pagamos R$ 1,00 a R$ 2,50 por litro</b> conforme qualidade e volume — valor de mercado validado pela Óleo Verde (1.200+ clientes).</p>
+<p>Para {lead['empresa']} transformar o óleo de fritura em renda: <b>pagamos R$ 1,00 a R$ 2,50 por litro</b> conforme qualidade e volume — valor de mercado validado pela Óleo Verde (1.200+ clientes). <b>A Ambiental Santos já paga R$ 3/L</b> — mercado em alta.</p>
 <p><b>🏆 Prova social — Top 3 do interior SP no pipeline:</b>
 <br><b>1º Savegnago</b> (R$ 7,98 bi — #1 interior SP, ABRAS 2026) — canal aberto conosco
 <br><b>2º Pague Menos</b> (R$ 4,33 bi) — em negociação
 <br><b>3º Tauste</b> — encaminhou call comercial
 <br><b>Grupo Madero</b> (270 restaurantes) — 55 mil L/mês vendidos como commodity
 <br><b>🍟 McDonald's</b> fechou com a Recoleo para reciclar óleo de todas as lojas em MG, ES e DF — prova de que até gigantes terceirizam a coleta.</p>
+<p><b>⚖️ PNRS obriga contrato:</b> pela Lei 12.305/2010, sem contrato com coletor certificado, sem alvará. 1 bilhão de L/ano vão para o ralo. O passivo fica no seu CNPJ se o coletor não emitir certificado.</p>
 <p><b>⚖️ Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. Quem fechar hoje garante preço antes da corrida pela matéria-prima.</p>
 <p><b>🔒 Sem MTR + certificado, o passivo fica no CNPJ.</b> Nossa coleta é anti-furto: crachá, pesagem, bombona travada.</p>
 <p>Para {lead['empresa']}: coleta programada, bombonas fornecidas, pagamento à vista (PIX). Um supermercado com 5 lojas gera 2.000-3.000 L/mês = R$ 48-72 mil/ano de receita extra.</p>
@@ -119,8 +121,9 @@ def tpl_fp(cfg, lead, n):
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
     <p><b>Última mensagem automática sobre este assunto</b> — resumo de 3 motivos para agir agora:</p>
-    <p><b>💰 1. Renda extra imediata</b> — R$ 1,00 a R$ 2,50/L, pago <b>à vista (PIX)</b> na coleta. 200 L/mês = R$ 4.080/ano. 1.000 L/mês = R$ 24.000/ano. Rede de 10 supermercados = R$ 100-150 mil/ano. O óleo usado virou commodity de <b>US$ 11 bi</b>.</p>
-    <p><b>🏆 2. Prova social que dispensa apresentação</b> — As <b>3 maiores redes do interior SP</b> (Savegnago R$7,98bi, Pague Menos R$4,33bi, Tauste — ABRAS 2026) estão em negociação conosco. O <b>Grupo Madero</b> vende 55 mil L/mês. O <b>McDonald's</b> fechou com a Recoleo para reciclar todo óleo de suas lojas em MG, ES e DF. A <b>Catalent</b> (multinacional de encapsulados) confia na nossa coleta de óleo vegetal industrial. Ninguém grande descarta mais — todo mundo vende.</p>
+    <p><b>💰 1. Renda extra imediata</b> — R$ 1,00 a R$ 2,50/L, pago <b>à vista (PIX)</b> na coleta. 200 L/mês = R$ 4.080/ano. 1.000 L/mês = R$ 24.000/ano. Rede de 10 supermercados dá R$ 100-150 mil/ano. <b>Ambiental Santos paga R$ 3/L — mercado aquecido. O óleo usado virou commodity de U$ 11 bi.</p>
+    <p><b>⚖️ 0. PNRS obriga contrato</b> — pela Lei 12.305/2010, todo estabelecimento é OBRIGADO a contratar coletor certificado. Sem contrato sem alvará. 1 bilhão de L vão para o ralo/ano. O passivo fica no seu CNPJ.</p>
+    <p><b>🏆 2. Prova social que dispensa apresentação</b> — As <b>3 maiores redes do interior</b> (Savegnago R$7,98bi, Pague Menos R$4,33bi, Tauste — ABRAS 2026) em negociação conosco. <b>GR Madero</b> vende 55 mil L/mês. McDonald's fechou com Recoleo. O Catalent confia na coleta de óleo industrial.</p>
     <p><b>⚖️ 3. jan/2028 muda o jogo</b> — A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel. O Brasil exportou 1,4 milhão de toneladas de UCO para os EUA em 2023. A <b>Petrobras está investindo R$ 23 milhões na coleta de OGR</b> em SP e BA. O diesel brasileiro subiu para <b>B16</b> em 2026. O Brasil coleta 180 milhões de litros de UCO/ano mas o potencial é 600 milhões — 70% inexplorado. Quem não tiver contrato de coleta em 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
     <p><b>🔒 Anti-furto incluso:</b> coleta com crachá, bombona lacrada com trava, pesagem na hora, comprovante. Sem risco de reuso ilegal.</p>
     <p><b>Quanto a {lead['empresa']} gera por mês?</b> Responda este email com o volume aproximado (litros ou kg) + seu WhatsApp que envio a <b>proposta em até 24h</b>. Se preferir, chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
