@@ -1975,10 +1975,45 @@
                 "segmento": "industria de oleos e gorduras especiais - NICHO PRIORITARIO (oleos e gorduras); MX valido 22/10"
               },
               {
-                "nome": "Maximo Alimentos",
-                "empresa": "Maximo Alimentos Ltda",
-                "email": "sac@maximoalimentos.com.br",
-                "cidade": "Campinas/SP",
-                "segmento": "industria de alimentos (temperos, molhos, condimentos) - usa oleos vegetais em producao; MX valido 22/10"
-              }
-            ]
+                              "nome": "Maximo Alimentos",
+                              "empresa": "Maximo Alimentos Ltda",
+                              "email": "sac@maximoalimentos.com.br",
+                              "cidade": "Campinas/SP",
+                              "segmento": "industria de alimentos (temperos, molhos, condimentos) - usa oleos vegetais em producao; MX valido 22/10"
+                            },
+                            {
+                              "nome": "Mastercook Refeicoes",
+                              "empresa": "Mastercook Servicos de Alimentacao Ltda",
+                              "email": "contato@mastercook.com.br",
+                              "cidade": "Jundiai/SP",
+                              "segmento": "Refeicoes coletivas e cozinhas industriais (fritura alto volume, dezenas de clientes corporativos) - MX mail.bdl.com.br valido 23/10"
+                            },
+                            {
+                              "nome": "Nutriex Nutraceuticos",
+                              "empresa": "Nutriex Industria de Nutraceuticos e Alimentos Ltda",
+                              "email": "contato@nutriex.com.br",
+                              "cidade": "Itatiba/SP",
+                              "segmento": "Industria de suplementos e nutraceuticos (encapsulados, capsulas, gomas) - NICHO PRIORITARIO (oleo vegetal limpeza maquinas); MX Outlook valido 23/10"
+                            },
+                            {
+                              "nome": "Supermaxi Supermercados",
+                              "empresa": "Supermaxi Supermercados Ltda (rede 3+ lojas)",
+                              "email": "sac@supermaxi.com.br",
+                              "cidade": "Ourinhos/SP",
+                              "segmento": "Supermercados (rede, padaria/rotisserie/acougue - fritura continua) - MX valido 23/10"
+                            },
+                            {
+                              "nome": "Dori Alimentos",
+                              "empresa": "Dori Comercio de Alimentos Ltda",
+                              "email": "sac@dori.com.br",
+                              "cidade": "Jundiai/SP",
+                              "segmento": "Industria de balas e guloseimas (fritura continua, oleo de fritura) - MX valido 23/10"
+                            },
+                            {
+                              "nome": "Rasip Supermercados",
+                              "empresa": "Rasip Supermercados Ltda (rede regional)",
+                              "email": "sac@rasip.com.br",
+                              "cidade": "Indaiatuba/SP",
+                              "segmento": "Supermercados (rede, padaria/rotisserie/acougue - fritura continua) - MX Outlook valido 23/10"
+                            }
+                          ]

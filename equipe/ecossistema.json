@@ -1,4 +1,25 @@
 {
+  "ciclo_2026_10_23_cron_melhorador_vespertino": {
+    "timestamp": "2026-10-23 17:30 (Melhorador Continuo - cron vespertino)",
+    "acoes": [
+      "✅ prospecao_followup.py — 4 FP3 enviados: Atlhetica Nutrition (Campinas), Supermercados Parana (Sumare), Probilacto (Sorocaba), Line Comercio (Sorocaba) — ultimo follow-up automatico",
+      "✅ Fila de prospeccao: 5 novas empresas MX-verificadas (Mastercook/Jundiai, Nutriex/Itatiba NICHO PRIORITARIO encapsulados, Supermaxi/Ourinhos, Dori/Jundiai, Rasip/Indaiatuba)",
+      "✅ FP3 template corrigido (numeracao 1-2-3, removido item 0 duplicado)",
+      "✅ py_compile OK em prospecao_followup.py e prospecao.py"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 322,
+      "ativos_watchdog": 224,
+      "bounce_cache_json": 93,
+      "watchdog": "exit 0 — saudavel",
+      "dashboard": "268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando",
+      "fila_status": "375+ empresas (5 novas adicionadas), +309 contatados, ~74 bounce, 5 novas pendentes (Mastercook, Nutriex, Supermaxi, Dori, Rasip)",
+      "respostas_reais": 0,
+      "respostas_humanas": "9 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 23 dias)",
+      "respostas_auto": 0,
+      "observacao": "9 dias sem respostas humanas. Pipeline de fechamento parado — leads quentes (Savegnago, Pague Menos, Covabra, Rede Confianca, Brasfrigo, Queijos Itupeva) aguardam acao humana. 4 FP3 enviados como ultimo follow-up automatico para leads frios. Fila reabastecida com 5 novas empresas MX-verificadas. Bounce rate 25% continua acima da meta de 15%."
+    }
+  },
   "ciclo_2026_10_22_cron_melhorador_vespertino": {
     "timestamp": "2026-10-22 18:24 (Melhorador Continuo - cron vespertino)",
     "acoes": [
@@ -2255,9 +2276,35 @@
       "respostas_auto": 0,
       "observacao": "8º dia sem respostas humanas. Sistema saudável mas pipeline de fechamento parado — todos os leads quentes (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva) aguardam ação humana via WhatsApp/telefone. Nenhuma resposta pendente. Fila de prospecção zerada (0 pendentes). Nada a enviar.",
       "dias_sem_resposta_humana": 8,
-      "ultimo_lead_quente": "Pague Menos (14/10)"
-    }
-  },
-  "atualizado_em": "2026-10-22 18:28 (Atendente IA - cron tick)",
-    "criado_em": "2026-08-13"
-  }
+          "ultimo_lead_quente": "Pague Menos (14/10)"
+          }
+        },
+        "ciclo_2026_10_22_cron_atendente_vespertino": {
+          "timestamp": "2026-10-22 19:35 (Atendente IA - cron tick)",
+          "acoes": [
+            "✅ sync_formspree.py — 93 bounces cache, 0 notificações Formspree novas",
+            "✅ corrigir_emails.py — 0 processados (todos já tentados anteriormente)",
+            "✅ prospecao_followup.py — 2 FP1 enviados: Supermercado Martins Carnes LTDA, Blanver do Brasil (IFA Indaiatuba)",
+            "✅ bot_oleo.py send_sequence — sequência processada",
+            "✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+            "ℹ️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+            "ℹ️ relatorio_esg.py — não executado (nenhuma solicitação)"
+          ],
+          "diagnostico": {
+            "total_leads_watchdog": 322,
+            "ativos_watchdog": 224,
+            "bounce_cache_json": 93,
+            "watchdog": "exit 0 — saudável",
+            "dashboard": "268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando",
+            "fila_status": "370 empresas, 309 contatados, 74 bounce, 0 pendentes (fila zerada)",
+            "respostas_reais": 0,
+            "respostas_humanas": "Nenhuma desde Pague Menos (14/10) — 8 dias. Última resposta real: Tauste (30/09) — 22 dias.",
+            "respostas_auto": 0,
+            "observacao": "8 dias sem respostas humanas. Pipeline de fechamento parado — todos os leads quentes aguardam ação humana. 2 FP1 enviados (Martins Carnes, Blanver IFA). Nenhuma resposta nova. Sistema saudável, fila zerada.",
+            "dias_sem_resposta_humana": 8,
+            "ultimo_lead_quente": "Pague Menos (14/10)"
+          }
+        },
+        "atualizado_em": "2026-10-22 19:35 (Atendente IA - cron tick)",
+        "criado_em": "2026-08-13"
+      }

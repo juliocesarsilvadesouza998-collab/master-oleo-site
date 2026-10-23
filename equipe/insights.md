@@ -1,3 +1,82 @@
+## 2026-10-23 17:30 (Melhorador Contínuo - cron vespertino)
+
+### Diagnóstico
+- ✅ Watchdog exit 0 — 322 leads, 224 ativos, 93 bounces, SMTP/IMAP OK
+- ✅ Dashboard: 268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando
+- ✅ **4 FP3 enviados** (Atlhetica Nutrition, Supermercados Parana, Probilacto, Line Comercio) — ultimo follow-up automatico para leads que nao responderam
+- ✅ Fila reabastecida: 5 novas empresas MX-verificadas (Mastercook/Jundiai, Nutriex/Itatiba, Supermaxi/Ourinhos, Dori/Jundiai, Rasip/Indaiatuba)
+- ✅ Template FP3 corrigido: numeracao 1-2-3 (removido item 0 duplicado apos item 1)
+- 🔴 **9° dia sem respostas humanas** (última: Pague Menos 14/10; última real: Tauste 30/09 = 23 dias)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| prospecao_followup.py | **4 FP3 enviados** — encerramento do ciclo de follow-ups para 4 leads frios |
+| Fila de prospecção | +5 novas empresas MX-verificadas (Mastercook, Nutriex/NICHO PRIORITARIO, Supermaxi, Dori, Rasip) |
+| prospecao_followup.py — template | FP3: numeracao corrigida (era 1-0-2-3, agora 1-2-3) e texto mais coeso |
+| py_compile | OK — prospecao_followup.py e prospecao.py sem erros |
+
+### Aprendizado do ciclo
+**FP3 é o último tiro automático para leads que não responderam ao ciclo completo de follow-ups.** Os 4 leads que receberam FP3 hoje (Atlhetica Nutrition, Supermercados Parana, Probilacto, Line Comercio) tiveram apresentacao em 12/10 — 11 dias sem resposta. Após o FP3, o lead fica no limbo: sem ação automática disponível, restando apenas ação humana (WhatsApp/telefone) ou o lead morre na base. A adição de 5 novas empresas MX-verificadas mantém o funil de entrada aquecido mesmo sem respostas. **O gargalo real continua sendo o fechamento humano** — 9 dias sem respostas novas e 8 leads quentes parados.
+
+### Pendências para o Estrategista (inalteradas — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** - portal Ivrim | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680 |
+
+---
+
+## 2026-10-22 19:35 (Atendente IA - cron tick)
+
+### Diagnóstico do ciclo
+- ✅ **322 leads, 224 ativos, 93 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ Sync & auto-correção: 0 notificações Formspree, 0 bounces novos corrigidos
+- ✅ **2 FP1 enviados**: Supermercado Martins Carnes LTDA, Blanver do Brasil (IFA Indaiatuba)
+- ✅ Sequência processada (send_sequence) — nada adicional a enviar
+- ✅ Respostas: 0 pendentes (replies_pending.json vazio)
+- 🔴 **8º dia sem respostas humanas** (última: Pague Menos 14/10; antes Tauste 30/09 = 22 dias)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 93 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **2 FP1 enviados** (Martins Carnes, Blanver) |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+- **8 dias sem respostas humanas desde Pague Menos (14/10).** Última resposta humana REAL foi Tauste (30/09) — **22 dias.**
+- **2 FP1 enviados** neste tick: Supermercado Martins Carnes LTDA (contato direto de supermercado) e Blanver do Brasil (IFA farmacêutica em Indaiatuba — nicho encapsulados).
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+- **Fila de prospecção ZERADA** (0 pendentes com MX válido) — precisa reposição urgente.
+- Pipeline de fechamento continua parado — 8 leads quentes aguardando ação humana.
+
+---
+
 ## 2026-10-22 18:24 (Melhorador Contínuo - cron vespertino)
 
 ### Diagnóstico
@@ -2527,4 +2606,46 @@ Sistema estável. Bounce cache estabilizou em 87 — não cresceu hoje, indicand
 - **8 dias sem respostas humanas** — último lead real: Pague Menos (14/10). Tauste (30/09) foi a última resposta humana REAL = 22 dias.
 - **Fila de prospecção ZERADA** — 0 pendentes com MX válido. Prospector já reportou esgotamento da base regional.
 - **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
-- **Pipeline de fechamento parado** — todas as ações de alto impacto (Savegnago WhatsApp, Covabra portal, coleta-teste) dependem de ação humana.
+|- **Pipeline de fechamento parado** — todas as ações de alto impacto (Savegnago WhatsApp, Covabra portal, coleta-teste) dependem de ação humana.
+
+---
+
+## 2026-10-23 17:30 (Atendente IA - cron tick)
+
+### Diagnóstico do ciclo
+- ✅ **322 leads, 224 ativos, 93 bounces** — watchdog exit 0, SMTP/IMAP OK
+- ✅ Sync & auto-correção: 0 notificações Formspree, 0 bounces novos corrigidos
+- ✅ **4 FP3 enviados**: Atlhetica Nutrition (Campinas), Supermercados Paraná (Sumaré), Probilacto (Sorocaba), Line Comércio (Sorocaba) — último follow-up automático da sequência
+- ✅ Sequência processada (send_sequence) — nada adicional a enviar
+- ✅ Respostas: 0 pendentes (replies_pending.json vazio)
+- 🔴 **9º dia sem respostas humanas** (última: Pague Menos 14/10; antes Tauste 30/09 = 23 dias)
+- 🔴 Pipeline de fechamento parado — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 93 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **4 FP3 enviados** (Atlhetica, Supermercados Paraná, Probilacto, Line Comércio) |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680 |
+
+### Observações
+- **9 dias sem respostas humanas desde Pague Menos (14/10).** Última resposta humana REAL foi Tauste (30/09) — **23 dias.**
+- **4 FP3 enviados** neste tick: Atlhetica Nutrition (Campinas, suplementos), Supermercados Paraná (Sumaré/Campinas, varejo), Probilacto (Sorocaba, laticínios), Line Comércio (Sorocaba, laticínios) — estes receberam o último follow-up automático (FP3).
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+- **Pipeline de fechamento parado** — 8 leads quentes aguardando ação humana há 9+ dias. Savegnago (#1 interior SP) segue sem contato WhatsApp, Covabra com portal de fornecedores pendente.
