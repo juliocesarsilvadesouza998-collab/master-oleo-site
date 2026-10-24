@@ -1,4 +1,50 @@
 {
+  "ciclo_2026_10_23_cron_atendente_tick": {
+      "timestamp": "2026-10-23 19:01 (Atendente IA - cron tick)",
+      "acoes": [
+        "✅ sync_formspree.py — 94 bounces cache, 0 notificacoes Formspree novas",
+        "✅ corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+        "✅ prospecao_followup.py — 0 follow-ups processados (nada a enviar)",
+        "✅ send_sequence — sequencia processada (nada a enviar)",
+        "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+        "✅ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+        "✅ relatorio_esg.py — não executado (nenhuma solicitação)"
+      ],
+    "diagnostico": {
+      "total_leads_watchdog": 322,
+      "ativos_watchdog": 223,
+      "bounce_cache_json": 94,
+      "watchdog": "exit 0 — saudavel",
+      "dashboard": "268 enviados | 199 entregues | 69 bounces (26%) | 19 respostas (7,1%) | 223 aguardando",
+      "fila_status": "375+ empresas, +309 contatados, ~74 bounce, 0 pendentes com MX valido",
+      "respostas_reais": 0,
+      "respostas_humanas": "9 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 23 dias)",
+      "respostas_auto": 0,
+      "observacao": "9 dias sem respostas humanas. Pipeline de fechamento parado — leads quentes (Savegnago, Pague Menos, Covabra, Rede Confianca, Brasfrigo, Queijos Itupeva, Sonda, Tauste) aguardam acao humana. Nenhum follow-up enviado neste tick. Bounce rate 26% continua acima da meta de 15%. Fila de prospeccao com 0 pendentes MX-valido — precisa reposicao."
+    }
+  },
+  "ciclo_2026_10_23_cron_atendente_vespertino": {
+    "timestamp": "2026-10-23 18:04 (Atendente IA - cron tick)",
+    "acoes": [
+      "✅ sync_formspree.py — 93 bounces cache, 0 notificacoes Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
+      "✅ prospecao_followup.py — 1 FP3 enviado: Fullcaps Encapsulamento e Envase Ltda (comercial@fullcaps.com.br)",
+      "✅ send_sequence — sequencia processada (nada adicional a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 322,
+      "ativos_watchdog": 224,
+      "bounce_cache_json": 93,
+      "watchdog": "exit 0 — saudavel",
+      "dashboard": "268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando",
+      "fila_status": "375+ empresas, +309 contatados, ~74 bounce, 0 pendentes com MX valido",
+      "respostas_reais": 0,
+      "respostas_humanas": "9 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 23 dias)",
+      "respostas_auto": 0,
+      "observacao": "9 dias sem respostas humanas. Pipeline de fechamento parado — leads quentes (Savegnago, Pague Menos, Covabra, Rede Confianca, Brasfrigo, Queijos Itupeva, Sonda, Tauste) aguardam acao humana. 1 FP3 enviado como ultimo follow-up automatico para Fullcaps. Fila de prospeccao com 0 pendentes MX-valido — precisa reposicao. Bounce rate 25% continua acima da meta de 15%."
+    }
+  },
   "ciclo_2026_10_23_cron_melhorador_vespertino": {
     "timestamp": "2026-10-23 17:30 (Melhorador Continuo - cron vespertino)",
     "acoes": [
@@ -54,11 +100,11 @@
       "bounce_cache_json": 89,
       "watchdog": "exit 0 — saudavel (0 atrasados)",
       "dashboard": "269 enviados | ~199 entregues | 70 bounces (26%) | 19 respostas (7,1%) | 228 aguardando",
-            "fila_status": "365 empresas, 309 contatados, 70 bounce, 0 pendentes — lote de 8 enviado (Saripan, Padan, Bocata, Atacado OJT, Indaiatuba Carnes, Fargimed, Quatrelati, Matilat)",
-            "respostas_reais": 0,
-            "respostas_humanas": "Nenhuma desde Pague Menos (14/10) — 8 dias de silencio. Ultima resposta humana real: Tauste (30/09)",
-            "respostas_auto": 0,
-            "observacao": "Fila zerada apos envio do lote. Prospector descobriu 3 novas empresas de nicho no cron de 22/10: ⭐ Fargimed (Indaiatuba/SP) — industria farmaceutica, NICHO PRIORITARIO encapsulados; ⭐ Quatrelati Alimentos (Itapeva/SP) — industria de manteiga, NICHO PRIORITARIO gorduras/laticinios; ⭐ Matilat (Catanduva/SP) — laticinios (manteiga, queijos), NICHO PRIORITARIO. Todos com MX validado + email enviado. Pipeline de fechamento continua parado — todos os leads quentes (Savegnago, Pague Menos, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva) aguardam acao humana via WhatsApp/telefone."
+      "fila_status": "365 empresas, 309 contatados, 70 bounce, 0 pendentes — lote de 8 enviado (Saripan, Padan, Bocata, Atacado OJT, Indaiatuba Carnes, Fargimed, Quatrelati, Matilat)",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma desde Pague Menos (14/10) — 8 dias de silencio. Ultima resposta humana real: Tauste (30/09)",
+      "respostas_auto": 0,
+      "observacao": "Fila zerada apos envio do lote. Prospector descobriu 3 novas empresas de nicho no cron de 22/10: ⭐ Fargimed (Indaiatuba/SP) — industria farmaceutica, NICHO PRIORITARIO encapsulados; ⭐ Quatrelati Alimentos (Itapeva/SP) — industria de manteiga, NICHO PRIORITARIO gorduras/laticinios; ⭐ Matilat (Catanduva/SP) — laticinios (manteiga, queijos), NICHO PRIORITARIO. Todos com MX validado + email enviado. Pipeline de fechamento continua parado — todos os leads quentes (Savegnago, Pague Menos, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva) aguardam acao humana via WhatsApp/telefone."
     }
   },
   "ciclo_2026_10_19_cron_atendente_124_domingo": {
@@ -2238,25 +2284,25 @@
     }
   },
   "ciclo_2026_10_22_cron_prospector": {
-      "timestamp": "2026-10-22 19:00 (Prospector - cron quinta-feira)",
-      "acoes": [
-        "Diagnostico inicial: fila zerada (365 empresas, 309 contatados, 74 bounce, 0 pendentes) — abaixo do minimo 10",
-        "4 buscas web realizadas em nichos prioritarios: (1) 'fabrica margarina Sorocaba' — TTF Alimentos (distribuidora, sem email publico), (2) 'industria manteiga Jundiaí' — Laticinios Econata (site offline, sem contato), (3) 'fabrica maionese Campinas' — Maionese da Casa (sem email), Indisa (industrial nao alimenticia), (4) 'farmaceutica encapsulados Indaiatuba Sorocaba' — Pharmapele (farmacia, nao industrial). Nenhuma empresa nova viavel com email publico encontrada.",
-        "enviar_lote.py --max 15: 0 emails enviados — fila completamente zerada",
-        "ecossistema.json atualizado com numeros reais"
-      ],
-      "diagnostico": {
-        "fila_total_empresas": 365,
-        "fila_contatados": 309,
-        "fila_bounce": 74,
-        "fila_pendentes": 0,
-        "fila_pendentes_validas": "0 — fila completamente zerada",
-        "novos_contatados": "Nenhum — fila vazia, sem novas empresas encontradas nas 4 buscas",
-        "enviados_lote": 0,
-        "observacao": "Fila de prospeccao zerada ha varios dias consecutivos. A cobertura dos 4 nichos prioritarios (gorduras/laticinios, encapsulados/farmaceuticas, industrias alimenticias, supermercados/restaurantes) na regiao de ~80km ao redor de Salto esta praticamente completa (~365 empresas base + 268 extra). As 4 buscas web realizadas nao retornaram nenhuma empresa nova com email publico valido — TTF Alimentos e distribuidora (sem email), Laticinios Econata (site offline), Maionese da Casa (formulario), Pharmapele (farmacia de manipulacao, escala pequena). A fila de prospeccao NAO FOI REABASTECIDA. Proximo prospector precisa de estrategia radicalmente diferente — recomenda-se: lista de CNPJs de CNAE 1052-0 (laticinios) via Receita Federal, prospeccao telefonica, ou expansao geografica para cidades >80km (ex: Piracicaba, Limeira, Araras, Rio Claro, Mogi Guacu, Sao Carlos). Pipeline de fechamento: Savegnago, Pague Menos, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva aguardam acao humana."
-      }
-    },
-    "ciclo_2026_10_22_cron_atendente_tarde": {
+    "timestamp": "2026-10-22 19:00 (Prospector - cron quinta-feira)",
+    "acoes": [
+      "Diagnostico inicial: fila zerada (365 empresas, 309 contatados, 74 bounce, 0 pendentes) — abaixo do minimo 10",
+      "4 buscas web realizadas em nichos prioritarios: (1) 'fabrica margarina Sorocaba' — TTF Alimentos (distribuidora, sem email publico), (2) 'industria manteiga Jundiaí' — Laticinios Econata (site offline, sem contato), (3) 'fabrica maionese Campinas' — Maionese da Casa (sem email), Indisa (industrial nao alimenticia), (4) 'farmaceutica encapsulados Indaiatuba Sorocaba' — Pharmapele (farmacia, nao industrial). Nenhuma empresa nova viavel com email publico encontrada.",
+      "enviar_lote.py --max 15: 0 emails enviados — fila completamente zerada",
+      "ecossistema.json atualizado com numeros reais"
+    ],
+    "diagnostico": {
+      "fila_total_empresas": 365,
+      "fila_contatados": 309,
+      "fila_bounce": 74,
+      "fila_pendentes": 0,
+      "fila_pendentes_validas": "0 — fila completamente zerada",
+      "novos_contatados": "Nenhum — fila vazia, sem novas empresas encontradas nas 4 buscas",
+      "enviados_lote": 0,
+      "observacao": "Fila de prospeccao zerada ha varios dias consecutivos. A cobertura dos 4 nichos prioritarios (gorduras/laticinios, encapsulados/farmaceuticas, industrias alimenticias, supermercados/restaurantes) na regiao de ~80km ao redor de Salto esta praticamente completa (~365 empresas base + 268 extra). As 4 buscas web realizadas nao retornaram nenhuma empresa nova com email publico valido — TTF Alimentos e distribuidora (sem email), Laticinios Econata (site offline), Maionese da Casa (formulario), Pharmapele (farmacia de manipulacao, escala pequena). A fila de prospeccao NAO FOI REABASTECIDA. Proximo prospector precisa de estrategia radicalmente diferente — recomenda-se: lista de CNPJs de CNAE 1052-0 (laticinios) via Receita Federal, prospeccao telefonica, ou expansao geografica para cidades >80km (ex: Piracicaba, Limeira, Araras, Rio Claro, Mogi Guacu, Sao Carlos). Pipeline de fechamento: Savegnago, Pague Menos, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva aguardam acao humana."
+    }
+  },
+  "ciclo_2026_10_22_cron_atendente_tarde": {
     "timestamp": "2026-10-22 18:28 (Atendente IA - cron tick)",
     "acoes": [
       "✅ sync_formspree.py — 93 bounces cache, 0 notificações novas do Formspree (IMAP lento mas processou)",
@@ -2276,35 +2322,61 @@
       "respostas_auto": 0,
       "observacao": "8º dia sem respostas humanas. Sistema saudável mas pipeline de fechamento parado — todos os leads quentes (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva) aguardam ação humana via WhatsApp/telefone. Nenhuma resposta pendente. Fila de prospecção zerada (0 pendentes). Nada a enviar.",
       "dias_sem_resposta_humana": 8,
-          "ultimo_lead_quente": "Pague Menos (14/10)"
-          }
-        },
-        "ciclo_2026_10_22_cron_atendente_vespertino": {
-          "timestamp": "2026-10-22 19:35 (Atendente IA - cron tick)",
-          "acoes": [
-            "✅ sync_formspree.py — 93 bounces cache, 0 notificações Formspree novas",
-            "✅ corrigir_emails.py — 0 processados (todos já tentados anteriormente)",
-            "✅ prospecao_followup.py — 2 FP1 enviados: Supermercado Martins Carnes LTDA, Blanver do Brasil (IFA Indaiatuba)",
-            "✅ bot_oleo.py send_sequence — sequência processada",
-            "✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-            "ℹ️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
-            "ℹ️ relatorio_esg.py — não executado (nenhuma solicitação)"
-          ],
-          "diagnostico": {
-            "total_leads_watchdog": 322,
-            "ativos_watchdog": 224,
-            "bounce_cache_json": 93,
-            "watchdog": "exit 0 — saudável",
-            "dashboard": "268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando",
-            "fila_status": "370 empresas, 309 contatados, 74 bounce, 0 pendentes (fila zerada)",
-            "respostas_reais": 0,
-            "respostas_humanas": "Nenhuma desde Pague Menos (14/10) — 8 dias. Última resposta real: Tauste (30/09) — 22 dias.",
-            "respostas_auto": 0,
-            "observacao": "8 dias sem respostas humanas. Pipeline de fechamento parado — todos os leads quentes aguardam ação humana. 2 FP1 enviados (Martins Carnes, Blanver IFA). Nenhuma resposta nova. Sistema saudável, fila zerada.",
-            "dias_sem_resposta_humana": 8,
-            "ultimo_lead_quente": "Pague Menos (14/10)"
-          }
-        },
-        "atualizado_em": "2026-10-22 19:35 (Atendente IA - cron tick)",
-        "criado_em": "2026-08-13"
-      }
+      "ultimo_lead_quente": "Pague Menos (14/10)"
+    }
+  },
+  "ciclo_2026_10_22_cron_atendente_vespertino": {
+    "timestamp": "2026-10-22 19:35 (Atendente IA - cron tick)",
+    "acoes": [
+      "✅ sync_formspree.py — 93 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos já tentados anteriormente)",
+      "✅ prospecao_followup.py — 2 FP1 enviados: Supermercado Martins Carnes LTDA, Blanver do Brasil (IFA Indaiatuba)",
+      "✅ bot_oleo.py send_sequence — sequência processada",
+      "✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "ℹ️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "ℹ️ relatorio_esg.py — não executado (nenhuma solicitação)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 322,
+      "ativos_watchdog": 224,
+      "bounce_cache_json": 93,
+      "watchdog": "exit 0 — saudável",
+      "dashboard": "268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando",
+      "fila_status": "370 empresas, 309 contatados, 74 bounce, 0 pendentes (fila zerada)",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma desde Pague Menos (14/10) — 8 dias. Última resposta real: Tauste (30/09) — 22 dias.",
+      "respostas_auto": 0,
+      "observacao": "8 dias sem respostas humanas. Pipeline de fechamento parado — todos os leads quentes aguardam ação humana. 2 FP1 enviados (Martins Carnes, Blanver IFA). Nenhuma resposta nova. Sistema saudável, fila zerada.",
+      "dias_sem_resposta_humana": 8,
+      "ultimo_lead_quente": "Pague Menos (14/10)"
+    }
+  },
+  "ciclo_2026_10_23_cron_atendente_tick": {
+    "timestamp": "2026-10-23 17:30 (Atendente IA - cron tick)",
+    "acoes": [
+      "✅ sync_formspree.py — 93 bounces cache, 0 notificacoes novas",
+      "✅ corrigir_emails.py — 0 processados (todos ja tentados)",
+      "✅ prospecao_followup.py — 4 FP3 enviados: Atlhetica Nutrition (Campinas), Supermercados Parana (Sumare), Probilacto (Sorocaba), Line Comercio (Sorocaba) — ultimo follow-up automatico",
+      "✅ send_sequence — sequencia processada (nada a enviar)",
+      "✅ check-replies — 0 respostas (replies_pending.json vazio)",
+      "✅ proposta_contrato.py — nao executado (sem lead com volume novo)",
+      "✅ relatorio_esg.py — nao executado (sem solicitacao)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 322,
+      "ativos_watchdog": 224,
+      "bounce_cache_json": 93,
+      "watchdog": "exit 0 — saudavel",
+      "dashboard": "268 enviados | 200 entregues | 68 bounces (25%) | 19 respostas (7,1%) | 224 aguardando",
+      "fila_status": "375+ empresas, 309+ contatados, ~74 bounce, fila com 5+ pendentes MX-verificadas",
+      "respostas_reais": 0,
+      "respostas_humanas": "9 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 23 dias)",
+      "respostas_auto": 0,
+      "observacao": "9 dias sem respostas humanas. Pipeline de fechamento parado — leads quentes (Savegnago, Pague Menos, Covabra, Rede Confianca, Brasfrigo, Queijos Itupeva) aguardam acao humana. 4 FP3 enviados como ultimo follow-up automatico. Bounce rate 25% continua acima da meta de 15%.",
+      "dias_sem_resposta_humana": 9,
+      "ultimo_lead_quente": "Pague Menos (14/10)"
+    }
+  },
+  "atualizado_em": "2026-10-23 19:01 (Atendente IA - cron tick)",
+  "criado_em": "2026-08-13"
+}
