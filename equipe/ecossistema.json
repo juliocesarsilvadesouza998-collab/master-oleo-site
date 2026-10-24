@@ -1,29 +1,30 @@
 {
-  "ciclo_2026_10_23_cron_atendente_tick": {
-      "timestamp": "2026-10-23 19:01 (Atendente IA - cron tick)",
+  "ciclo_2026_10_24_melhorador_continuo": {
+      "timestamp": "2026-10-24 17:24 (Melhorador Contínuo - cron sabado)",
       "acoes": [
-        "✅ sync_formspree.py — 94 bounces cache, 0 notificacoes Formspree novas",
-        "✅ corrigir_emails.py — 0 bounces processados (todos ja tentados anteriormente)",
-        "✅ prospecao_followup.py — 0 follow-ups processados (nada a enviar)",
-        "✅ send_sequence — sequencia processada (nada a enviar)",
-        "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-        "✅ proposta_contrato.py — não executado (nenhum lead com volume novo)",
-        "✅ relatorio_esg.py — não executado (nenhuma solicitação)"
+        "✅ prospecao_followup.py — 3 FP3 enviados: Braslact, WBM, Jundia Foods (atrasados resolvidos)",
+        "✅ scan_inbox.py — 0 mensagens; 2 DSNs (Bella Alimentos, Maximo Alimentos — ja em bounces.json)",
+        "✅ Fila reabastecida: 4 novas MX-verificadas (Volca Alimentos/Sorocaba, Supermercados Caetano/Valinhos, FRS Oleos e Gorduras/Barueri, Unialimentar/Campinas)",
+        "✅ Fila: 379 empresas, 318 contatados, 78 bounce, 4 pendentes (antes 0)",
+        "✅ Dashboard: 277 enviados, 205 entregues, 72 bounces (26%), 19 respostas (6,9%)",
+        "✅ Watchdog — exit 0 apos correcao dos 3 atrasados"
       ],
     "diagnostico": {
-      "total_leads_watchdog": 322,
-      "ativos_watchdog": 223,
+      "total_leads_watchdog": 331,
+      "ativos_watchdog": 229,
       "bounce_cache_json": 94,
-      "watchdog": "exit 0 — saudavel",
-      "dashboard": "268 enviados | 199 entregues | 69 bounces (26%) | 19 respostas (7,1%) | 223 aguardando",
-      "fila_status": "375+ empresas, +309 contatados, ~74 bounce, 0 pendentes com MX valido",
+      "fila_total": 379,
+      "fila_contatados": 318,
+      "fila_bounce": 78,
+      "fila_pendentes_validas": 4,
+      "watchdog": "exit 0 — saudavel apos correcao",
+      "dashboard": "277 enviados | 205 entregues | 72 bounces (26%) | 19 respostas (6,9%) | 229 aguardando",
       "respostas_reais": 0,
-      "respostas_humanas": "9 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 23 dias)",
-      "respostas_auto": 0,
-      "observacao": "9 dias sem respostas humanas. Pipeline de fechamento parado — leads quentes (Savegnago, Pague Menos, Covabra, Rede Confianca, Brasfrigo, Queijos Itupeva, Sonda, Tauste) aguardam acao humana. Nenhum follow-up enviado neste tick. Bounce rate 26% continua acima da meta de 15%. Fila de prospeccao com 0 pendentes MX-valido — precisa reposicao."
+      "respostas_humanas": "10 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 24 dias)",
+      "observacao": "10 dias sem respostas humanas. Pipeline parado — 8 leads quentes aguardam acao humana. Fila reabastecida de 0 para 4 pendentes MX-valido. Bounce rate 26% acima da meta de 15%."
     }
   },
-  "ciclo_2026_10_23_cron_atendente_vespertino": {
+  "ciclo_2026_10_23_cron_atendente_tick": {
     "timestamp": "2026-10-23 18:04 (Atendente IA - cron tick)",
     "acoes": [
       "✅ sync_formspree.py — 93 bounces cache, 0 notificacoes Formspree novas",

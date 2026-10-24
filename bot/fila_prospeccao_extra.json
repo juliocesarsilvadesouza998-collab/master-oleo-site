@@ -1919,101 +1919,129 @@
     "segmento": "Atacado de alimentos - estoque de oleo vegetal vencido"
   },
   {
-      "nome": "Indaiatuba Carnes",
-      "empresa": "Indaiatuba Carnes Distribuidora",
-      "email": "vendas@indaiatubacarnes.com.br",
-      "cidade": "Indaiatuba/SP",
-      "segmento": "Distribuidora de carnes (refeicoes industriais e frituras)"
-    },
-    {
-      "nome": "Fargimed",
-      "empresa": "Fargimed Industria de Medicamentos Ltda",
-      "email": "fargimed@fargimed.com.br",
-      "cidade": "Indaiatuba/SP",
-      "segmento": "industria farmaceutica (medicamentos alopaticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Locaweb valido 22/10"
-    },
-    {
-      "nome": "Quatrelati Alimentos",
-      "empresa": "Quatrelati Alimentos Ltda (Grupo Tres Marias)",
-      "email": "comercial@quatrelati.com.br",
-      "cidade": "Itapeva/SP (escritorio Sao Paulo/SP)",
-      "segmento": "industria de manteiga e derivados lacteos - NICHO PRIORITARIO (vencidos >40% gordura); MX Umbler valido 22/10"
-    },
-    {
-      "nome": "Matilat (Laticinios Matinal)",
-      "empresa": "Laticinios Matinal (Marca Matilat) - Grupo BRQ",
-      "email": "marketing@matilat.com.br",
-      "cidade": "Catanduva/SP",
-      "segmento": "laticinios (manteiga, queijos, iogurtes, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 22/10"
-          },
-              {
-                "nome": "Bella Alimentos",
-                "empresa": "Bella Alimentos Ltda",
-                "email": "sac@bellalimentos.com.br",
-                "cidade": "Jundiai/SP",
-                "segmento": "industria de alimentos (paes congelados, salgados, confeitaria) - usa oleos e gorduras; MX mail.bellalimentos valido 22/10"
-              },
-              {
-                "nome": "Nutrassim Alimentos",
-                "empresa": "Nutrassim Alimentos Ltda",
-                "email": "contato@nutrassim.com.br",
-                "cidade": "Indaiatuba/SP",
-                "segmento": "industria de alimentos (suplementos e ingredientes) - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX Google valido 22/10"
-              },
-              {
-                "nome": "Dellys Alimentos",
-                "empresa": "Dellys Alimentos Ltda",
-                "email": "contato@dellys.com.br",
-                "cidade": "Sorocaba/SP",
-                "segmento": "industria de alimentos (massas, biscoitos, paes) - usa oleos e gorduras em producao; MX Outlook valido 22/10"
-              },
-              {
-                "nome": "Santo Oleo",
-                "empresa": "Santo Oleo Industria de Alimentos Ltda",
-                "email": "sac@santooleo.com.br",
-                "cidade": "Jundiai/SP",
-                "segmento": "industria de oleos e gorduras especiais - NICHO PRIORITARIO (oleos e gorduras); MX valido 22/10"
-              },
-              {
-                              "nome": "Maximo Alimentos",
-                              "empresa": "Maximo Alimentos Ltda",
-                              "email": "sac@maximoalimentos.com.br",
-                              "cidade": "Campinas/SP",
-                              "segmento": "industria de alimentos (temperos, molhos, condimentos) - usa oleos vegetais em producao; MX valido 22/10"
-                            },
-                            {
-                              "nome": "Mastercook Refeicoes",
-                              "empresa": "Mastercook Servicos de Alimentacao Ltda",
-                              "email": "contato@mastercook.com.br",
-                              "cidade": "Jundiai/SP",
-                              "segmento": "Refeicoes coletivas e cozinhas industriais (fritura alto volume, dezenas de clientes corporativos) - MX mail.bdl.com.br valido 23/10"
-                            },
-                            {
-                              "nome": "Nutriex Nutraceuticos",
-                              "empresa": "Nutriex Industria de Nutraceuticos e Alimentos Ltda",
-                              "email": "contato@nutriex.com.br",
-                              "cidade": "Itatiba/SP",
-                              "segmento": "Industria de suplementos e nutraceuticos (encapsulados, capsulas, gomas) - NICHO PRIORITARIO (oleo vegetal limpeza maquinas); MX Outlook valido 23/10"
-                            },
-                            {
-                              "nome": "Supermaxi Supermercados",
-                              "empresa": "Supermaxi Supermercados Ltda (rede 3+ lojas)",
-                              "email": "sac@supermaxi.com.br",
-                              "cidade": "Ourinhos/SP",
-                              "segmento": "Supermercados (rede, padaria/rotisserie/acougue - fritura continua) - MX valido 23/10"
-                            },
-                            {
-                              "nome": "Dori Alimentos",
-                              "empresa": "Dori Comercio de Alimentos Ltda",
-                              "email": "sac@dori.com.br",
-                              "cidade": "Jundiai/SP",
-                              "segmento": "Industria de balas e guloseimas (fritura continua, oleo de fritura) - MX valido 23/10"
-                            },
-                            {
-                              "nome": "Rasip Supermercados",
-                              "empresa": "Rasip Supermercados Ltda (rede regional)",
-                              "email": "sac@rasip.com.br",
-                              "cidade": "Indaiatuba/SP",
-                              "segmento": "Supermercados (rede, padaria/rotisserie/acougue - fritura continua) - MX Outlook valido 23/10"
-                            }
-                          ]
+    "nome": "Indaiatuba Carnes",
+    "empresa": "Indaiatuba Carnes Distribuidora",
+    "email": "vendas@indaiatubacarnes.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Distribuidora de carnes (refeicoes industriais e frituras)"
+  },
+  {
+    "nome": "Fargimed",
+    "empresa": "Fargimed Industria de Medicamentos Ltda",
+    "email": "fargimed@fargimed.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria farmaceutica (medicamentos alopaticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Locaweb valido 22/10"
+  },
+  {
+    "nome": "Quatrelati Alimentos",
+    "empresa": "Quatrelati Alimentos Ltda (Grupo Tres Marias)",
+    "email": "comercial@quatrelati.com.br",
+    "cidade": "Itapeva/SP (escritorio Sao Paulo/SP)",
+    "segmento": "industria de manteiga e derivados lacteos - NICHO PRIORITARIO (vencidos >40% gordura); MX Umbler valido 22/10"
+  },
+  {
+    "nome": "Matilat (Laticinios Matinal)",
+    "empresa": "Laticinios Matinal (Marca Matilat) - Grupo BRQ",
+    "email": "marketing@matilat.com.br",
+    "cidade": "Catanduva/SP",
+    "segmento": "laticinios (manteiga, queijos, iogurtes, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 22/10"
+  },
+  {
+    "nome": "Bella Alimentos",
+    "empresa": "Bella Alimentos Ltda",
+    "email": "sac@bellalimentos.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria de alimentos (paes congelados, salgados, confeitaria) - usa oleos e gorduras; MX mail.bellalimentos valido 22/10"
+  },
+  {
+    "nome": "Nutrassim Alimentos",
+    "empresa": "Nutrassim Alimentos Ltda",
+    "email": "contato@nutrassim.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "industria de alimentos (suplementos e ingredientes) - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX Google valido 22/10"
+  },
+  {
+    "nome": "Dellys Alimentos",
+    "empresa": "Dellys Alimentos Ltda",
+    "email": "contato@dellys.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "industria de alimentos (massas, biscoitos, paes) - usa oleos e gorduras em producao; MX Outlook valido 22/10"
+  },
+  {
+    "nome": "Santo Oleo",
+    "empresa": "Santo Oleo Industria de Alimentos Ltda",
+    "email": "sac@santooleo.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "industria de oleos e gorduras especiais - NICHO PRIORITARIO (oleos e gorduras); MX valido 22/10"
+  },
+  {
+    "nome": "Maximo Alimentos",
+    "empresa": "Maximo Alimentos Ltda",
+    "email": "sac@maximoalimentos.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "industria de alimentos (temperos, molhos, condimentos) - usa oleos vegetais em producao; MX valido 22/10"
+  },
+  {
+    "nome": "Mastercook Refeicoes",
+    "empresa": "Mastercook Servicos de Alimentacao Ltda",
+    "email": "contato@mastercook.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Refeicoes coletivas e cozinhas industriais (fritura alto volume, dezenas de clientes corporativos) - MX mail.bdl.com.br valido 23/10"
+  },
+  {
+    "nome": "Nutriex Nutraceuticos",
+    "empresa": "Nutriex Industria de Nutraceuticos e Alimentos Ltda",
+    "email": "contato@nutriex.com.br",
+    "cidade": "Itatiba/SP",
+    "segmento": "Industria de suplementos e nutraceuticos (encapsulados, capsulas, gomas) - NICHO PRIORITARIO (oleo vegetal limpeza maquinas); MX Outlook valido 23/10"
+  },
+  {
+    "nome": "Supermaxi Supermercados",
+    "empresa": "Supermaxi Supermercados Ltda (rede 3+ lojas)",
+    "email": "sac@supermaxi.com.br",
+    "cidade": "Ourinhos/SP",
+    "segmento": "Supermercados (rede, padaria/rotisserie/acougue - fritura continua) - MX valido 23/10"
+  },
+  {
+    "nome": "Dori Alimentos",
+    "empresa": "Dori Comercio de Alimentos Ltda",
+    "email": "sac@dori.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de balas e guloseimas (fritura continua, oleo de fritura) - MX valido 23/10"
+  },
+  {
+    "nome": "Rasip Supermercados",
+    "empresa": "Rasip Supermercados Ltda (rede regional)",
+    "email": "sac@rasip.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Supermercados (rede, padaria/rotisserie/acougue - fritura continua) - MX Outlook valido 23/10"
+  },
+  {
+    "nome": "Volca Alimentos",
+    "empresa": "Volca Alimentos Ltda (Volcà Foods)",
+    "email": "contato@volcafoods.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de alimentos (oleos, gorduras, temperos) - MX verificado 24/10"
+  },
+  {
+    "nome": "Supermercados Caetano",
+    "empresa": "Supermercado Caetano Ltda (rede Valinhos/Vinhedo)",
+    "email": "sac@smcaetano.com.br",
+    "cidade": "Valinhos/SP",
+    "segmento": "Supermercados (fritura continua, 4 lojas na regiao) - MX verificado 24/10"
+  },
+  {
+    "nome": "FRS Oleos e Gorduras",
+    "empresa": "FRS Industria e Comercio de Oleos e Gorduras Ltda",
+    "email": "vendas@frsalimentos.com.br",
+    "cidade": "Barueri/SP",
+    "segmento": "Industria de oleos e gorduras vegetais (B2B) - NICHO PRIORITARIO - MX verificado 24/10"
+  },
+  {
+    "nome": "Unialimentar Campinas",
+    "empresa": "Unialimentar Comercio e Servicos de Alimentos Ltda",
+    "email": "comercial@unialimentar.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Comercio de alimentos (refeicoes coletivas, fritura continua) - MX verificado 24/10"
+  }
+]

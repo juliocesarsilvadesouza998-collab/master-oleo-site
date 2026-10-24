@@ -1,3 +1,41 @@
+## 2026-10-24 17:24 (Melhorador Contínuo - cron sabado)
+
+### Diagnóstico do ciclo
+- ✅ **3 FP3 enviados** (Braslact, WBM Alimentos, Jundia Foods) — follow-ups atrasados resolvidos
+- ✅ **Fila reabastecida**: 4 novas empresas MX-verificadas (Volca Alimentos/Sorocaba, Supermercados Caetano/Valinhos, FRS Oleos e Gorduras/Barueri NICHO PRIORITARIO, Unialimentar/Campinas)
+- ✅ **Fila**: 379 empresas, 318 contatados, 78 bounce, **4 pendentes** (antes 0!)
+- ✅ Dashboard: 277 enviados, 205 entregues, 72 bounces (26%), 19 respostas (6,9%)
+- ✅ Caixa IMAP: 0 não lidas — 2 DSNs (Bella Alimentos, Maximo Alimentos) já registradas em bounces.json
+- 🔴 **10º dia sem respostas humanas** (última: Pague Menos 14/10; última real: Tauste 30/09 — **24 dias**)
+- 🔴 Pipeline de fechamento parado — todos os 8 leads quentes aguardam ação humana via WhatsApp/telefone
+- 🔴 Bounce rate 26% continua acima da meta de 15%
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| prospecao_followup.py | **3 FP3 enviados** (Braslact, WBM, Jundia Foods) — encerramento do ciclo de follow-ups |
+| scan_inbox.py --dias 7 | 0 mensagens não lidas; 2 DSNs (Bella Alimentos, Maximo Alimentos — já em cache) |
+| Fila reabastecida | +4 novas empresas MX-verificadas: Volca Alimentos (Sorocaba, indústria de alimentos/gorduras), Supermercados Caetano (Valinhos, 4 lojas), FRS Oleos e Gorduras (Barueri, B2B óleos vegetais), Unialimentar (Campinas, refeições coletivas) |
+| enviar_lote.py --status | 379 empresas, 318 contatados, 78 bounce, **4 pendentes** (antes 0) |
+| watchdog.py | exit 0 — sistema saudável após correção |
+
+### Aprendizado do ciclo
+**A fila de prospecção estava ZERADA e foi reabastecida para 4 pendentes.** Cada nova empresa adicionada = uma nova chance de resposta. Priorizei empresas com presença digital e email comercial verificável. **Volca Alimentos (Sorocaba)** é indústria de alimentos que processa óleos e gorduras — nicho prioritário. **Supermercados Caetano (Valinhos)** tem 4 lojas na região e é rede local com fritura contínua. **FRS Oleos e Gorduras (Barueri)** é indústria B2B de óleos vegetais — conversa direta com nosso serviço de compra de óleo industrial. **Unialimentar (Campinas)** atende refeições coletivas (fritura em volume). Todas com MX verificado. O bounce rate de 26% continua sendo o calcanhar de Aquiles — 1 em cada 4 emails não chega ao destino.
+
+### Pendências para o Estrategista (inalteradas — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. **24 dias parado.** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** - portal Ivrim | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680 |
+
+---
+
 ## 2026-10-24 (Bot SEO - cron diário)
 
 ### Ranking real no Bing (top 20)
