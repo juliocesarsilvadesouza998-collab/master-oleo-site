@@ -1,6 +1,46 @@
 {
- "atualizado_em": "2026-10-23 19:32 (Atendente IA - cron #126 - sexta-feira - retorno após 9 dias)",
-  "ciclo_2026_10_23_cron_126_atendente": {
+ "atualizado_em": "2026-10-24 18:04 (Atendente IA - cron tick - sábado)",
+   "ciclo_2026_10_24_cron_atendente_18_04": {
+       "timestamp": "2026-10-24 18:04 (Atendente IA - cron tick - sábado)",
+       "acoes": [
+         "sync_formspree.py — 97 bounces cache, 0 notificações Formspree novas",
+         "corrigir_emails.py — 0 processados (todos os 97 bounces já tentados anteriormente)",
+         "prospecao_followup.py — 0 follow-ups atrasados",
+         "send_sequence — sequência processada (nada a enviar)",
+         "check-replies — 0 respostas (replies_pending.json vazio)",
+         "watchdog.py — exit 0: 337 leads, 235 ativos, 97 bounces, SMTP/IMAP OK",
+         "scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX",
+         "enviar_lote.py --status — 382 empresas, 324 contatados, 78 bounce, 1 pendente (Unialimentar)"
+       ],
+     "diagnostico": {
+       "total_leads_watchdog": 337,
+       "ativos_watchdog": 235,
+       "bounce_cache_json": 97,
+       "watchdog": "exit 0 — saudável, SMTP/IMAP OK",
+       "fila_total": 382,
+       "fila_contatados": 324,
+       "fila_bounce": 78,
+       "fila_pendentes_validas": "1 — Unialimentar (MX válido)",
+       "dias_sem_resposta_humana": "10 dias desde Pague Menos (14/10); última humana real: Tauste 30/09 = 24 dias",
+       "respostas_reais": 0,
+       "respostas_humanas": "Nenhuma — caixa IMAP zerada (scan_inbox --dias 3: 0 não lidas)",
+       "respostas_auto": 0,
+       "propostas_contrato_geradas": 0,
+       "relatorios_esg_gerados": 0,
+       "observacao": "Sistema saudável, porém 10º dia sem respostas humanas novas. 24 dias desde a última resposta humana real (Tauste 30/09). Pipeline de fechamento 100% parado — todos os 8 leads quentes (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste) aguardam ação humana via WhatsApp/telefone. Fila de prospecção com 1 pendente (Unialimentar com MX válido). Nenhuma resposta para processar, nenhum lead informou volume."
+     },
+     "leads_quentes": [
+       "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 24+ dias sem ação.",
+       "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 10 dias sem retorno.",
+       "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+       "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 10+ dias sem ação.",
+       "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+       "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+       "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+       "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09."
+     ]
+   },
+   "ciclo_2026_10_23_cron_126_atendente": {
    "timestamp": "2026-10-23 19:32 (Atendente IA - cron #126 - retorno após 9 dias de inatividade do sistema)",
    "acoes": [
     "sync_formspree.py — 94 bounces cache, 0 notificações novas do Formspree",

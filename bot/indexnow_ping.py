@@ -6,8 +6,7 @@ import urllib.request
 KEY = open(r"C:/Users/julio/master-oleo-site/deploy-vercel/indexnow-key.txt", encoding="utf-8").read().strip()
 HOST = "masteroleo.eco.br"
 URLS = [
-    "https://masteroleo.eco.br/blog/maionese-vencida.html",
-    "https://masteroleo.eco.br/blog/oleo-limpeza-maquinas.html",
+    "https://masteroleo.eco.br/blog/vender-oleo-cozinha-usado.html",
 ]
 
 payload = {

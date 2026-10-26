@@ -2043,5 +2043,82 @@
     "email": "comercial@unialimentar.com.br",
     "cidade": "Campinas/SP",
     "segmento": "Comercio de alimentos (refeicoes coletivas, fritura continua) - MX verificado 24/10"
+  },
+  {
+    "nome": "Halipar Holding (Griletto/Montana Grill/Croasonho)",
+    "empresa": "Halipar Holding de Alimentacao e Participacoes Ltda (400+ unidades, ~2M clientes/mes)",
+    "email": "faleconosco@halipar.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Holding de redes de restaurantes (Griletto, Montana Grill, Jin Jin, Croasonho, Cosela) - fritura alto volume em todas as unidades; sede a ~15km de Salto; MX verificado 24/10"
+  },
+  {
+    "nome": "AgroFoods",
+    "empresa": "Agrofoods Industria e Comercio de Produtos Alimenticios",
+    "email": "sac@agrofoods.ind.br",
+    "cidade": "Orlandia/SP (fabrica; escritorio Sao Paulo/SP)",
+    "segmento": "industria de margarinas, gorduras vegetais e oleos (esmagamento de graos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook verificado 24/10"
+  },
+  {
+    "nome": "Bomy Laticinios",
+    "empresa": "Agropecuaria Bomy Ltda (Laticinios Bomy, desde 1965)",
+    "email": "comercial@bomy.com.br",
+    "cidade": "Jambeiro/SP (Vale do Paraiba)",
+    "segmento": "laticinios (queijos, manteiga, requeijao, creme de leite, doce de leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX Locaweb verificado 24/10"
+  },
+  {
+    "nome": "Sorocaps",
+    "empresa": "Sorocaps Industria Farmaceutica Ltda",
+    "email": "sorocaps@sorocaps.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria farmaceutica (capsulas gelatinosas)"
+  },
+  {
+    "nome": "American Factory",
+    "empresa": "American Factory LTDA",
+    "email": "atendimento@afactory.com.br",
+    "cidade": "Bauru/SP",
+    "segmento": "Industria nutraceutica (capsulas, comprimidos, pos)"
+  },
+  {
+    "nome": "Conduz Laticinios",
+    "empresa": "Conduz Laticinios",
+    "email": "contato@conduzlaticinios.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Laticinios e derivados (queijos, manteiga)"
+  },
+  {
+    "nome": "Laticinios PJ",
+    "empresa": "Laticinios PJ",
+    "email": "sac@laticiniospj.com.br",
+    "cidade": "Minas Gerais",
+    "segmento": "Laticinios (queijos)"
+  },
+  {
+    "nome": "Laticinios Piramide",
+    "empresa": "Laticinios Piramide",
+    "email": "latpiramide@gmail.com",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Laticinios"
+  },
+  {
+    "nome": "Nutrielen",
+    "empresa": "Nutrielen Solucoes em Terceirizacao",
+    "email": "nutrielen@nutrielen.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Terceirizacao de encapsulados e nutraceuticos"
+  },
+  {
+    "nome": "NUF Farmaceutica",
+    "empresa": "NUF Farmaceutica Ltda",
+    "email": "suporte@nuffarmaceutica.com.br",
+    "cidade": "Cravinhos/SP",
+    "segmento": "Industria de capsulas nutraceuticas e suplementos"
+  },
+  {
+    "nome": "Alemed Nutraceutica",
+    "empresa": "Alemed Nutraceutica Ltda",
+    "email": "orcamento@alemednutraceutica.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria nutraceutica (capsulas, pos, liquidos)"
   }
 ]
