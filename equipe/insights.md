@@ -1,3 +1,53 @@
+## 2026-10-27 18:55 (Atendente IA - cron terça-feira - tick noturno)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 359 leads, 250 ativos, 81 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 104 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups — bug datetime (tz naive vs aware) corrigido
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: **2 respostas detectadas** — Organutech mudou email para organupar.com.br
+- ✅ **LEAD 342 CORRIGIDO**: contato@organalimentos.com.br → contato@organupar.com.br — apresentação reenviada com sucesso
+- ✅ **replies_pending.json**: limpo
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 104 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | 0 follow-ups — bug de datetime corrigido (naive vs aware) |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | **2 respostas: Organutech** → email mudou para contato@organupar.com.br |
+| UPDATE LEAD 342 | Email corrigido + apresentação reenviada com sucesso |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 27+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 13 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 13+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. Respondeu 30/09. |
+
+### Observações
+- **13 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **27 dias**, o período mais longo de silêncio do projeto.
+- **1 lead corrigido e reaquecido**: Organutech tinha email desativado, agora contato@organupar.com.br com apresentação reenviada.
+- **Bug corrigido**: prospecao_followup.py quebrava com `TypeError: can't subtract offset-naive and offset-aware datetimes` — adicionado fallback tzinfo.
+- **0 novos envios** neste ciclo — fila de prospecção sem pendentes MX-válidos.
+- **Fila de prospecção**: 398 empresas, 339 contatados, 80 bounce, **0 pendentes**.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana via WhatsApp/telefone.
+- **Bounce rate ~23%** (81/359) — abaixo do pico de 29%, mas ainda acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
 ## 2026-10-27 18:47 (Melhorador Contínuo - cron terça-feira)
 
 ### Diagnóstico do ciclo
