@@ -35,3 +35,6 @@ bot/_seo_tmp/
 bot/bounces.json
 # Dados sensíveis: correções de email contêm endereços de leads
 bot/correcoes_emails.json
+config_desmoldante.json
+fila_desmoldante.json
+leads_desmoldante.csv
