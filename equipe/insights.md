@@ -1,3 +1,202 @@
+## 2026-10-27 18:47 (Melhorador Contínuo - cron terça-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK (mesmo estado de ontem)
+- ✅ **16 follow-ups atrasados RESOLVIDOS** (4 FP3 + 12 FP1) — todos processados com sucesso
+- ✅ **Fila reabastecida**: +9 novas empresas MX-verificadas adicionadas à fila_prospeccao_extra.json (Liofoods, Eurogerm, Poly Blends, Solo Snacks, Organ Alimentos, Roldão Supermercados, Portobello Alimentos, Soolis Nutraceutica)
+- ✅ **Template de fallback melhorado**: preço spot SP R$2,00/L + Ambiental Santos R$3,00/L + Petrobras R$23M + B16 + potencial 600M L/ano (70% inexplorado) — argumentos que convertem
+- 🔴 **Fila de prospecção**: 390 empresas, 331 contatados, 80 bounce, 2 pendentes sem MX (Unialimentar, NUF) — fila ativa ZERADA para envio imediato
+- 🔴 **Bounce rate ~26%** (74 de 290) — acima da meta de 15%
+- 🔴 **13 dias sem resposta humana REAL** — último: Pague Menos 14/10; última real: Tauste 30/09 = **27 dias**, o período mais longo de silêncio do projeto
+- 🔴 **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| prospecao_followup.py | **16 follow-ups processados** (4 FP3 para leads frios + 12 FP1 para leads recentes) |
+| Fila reabastecida | +9 novas empresas MX-verificadas (nicho Itupeva + Roldão Indaiatuba + Soolis Nutraceutica) |
+| Template fallback V6 | Preço spot SP R$2,00/L + Ambiental Santos R$3,00/L + escassez global + prova social Petrobras R$23M + B16 |
+| py_compile prospecao.py | ✅ OK |
+| JSON fila_prospeccao_extra | ✅ Válido |
+
+### Aprendizado do ciclo
+**A fila de prospecção continua sendo o gargalo #1.** Mesmo reabastecendo com 9 novas empresas, a fila ativa de MX-verificados para envio imediato está zerada (2 pendentes sem MX). O caminho mais rápido para destravar o funil de entrada é o Prospector buscar empresas de **Itupeva** (distrito industrial forte: Eurogerm, Poliblends, Solo Snacks, Portobello, Liofoods) — 5 empresas novas de uma única cidade. **Roldão Supermercados** (sheila.ferrari@roldao.com.br) tem 50+ lojas e é rede grande de Indaiatuba que não estava na fila. O template V6 agora tem **6 gatilhos de conversão** no lugar de 3: (1) mercado US$11bi, (2) preço spot SP R$2,00/L, (3) Ambiental Santos R$3,00/L, (4) prova social Savegnago+Madero+Petrobras, (5) urgência Portaria 2028, (6) B16 escassez global. Isso deve aumentar a taxa de resposta dos próximos envios.
+
+### Pendências para o Estrategista (INALTERADO — aguardam ação humana)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. **27 dias parado.** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) — 13 dias sem retorno |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) — 13+ dias sem ação |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680 |
+
+---
+
+## 2026-10-26 12:33 (Atendente IA - cron tick #7 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 99 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os 99 já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (344 leads, 212 msgids)
+- ✅ **enviar_lote.py --status**: 390 empresas, 331 contatados, 80 bounce, 2 pendentes sem MX
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 26+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 12 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 12+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **12 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **27 dias**, o período mais longo de silêncio do projeto.
+- **0 emails enviados** neste ciclo — fila com 2 pendentes (Unialimentar, NUF) ambos sem MX confirmado.
+- **Fila de prospecção**: 390 empresas, 331 contatados, **2 pendentes inválidos** — fila efetivamente zerada para envio.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes (incluindo #1 do interior SP, R$7,98bi) aguardam ação humana via WhatsApp/telefone. Cada dia sem ação é oportunidade perdida.
+- **Bounce rate ~29%** (99/344) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
+## 2026-10-26 12:03 (Atendente IA - cron tick #6 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 99 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os 99 já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (344 leads, 212 msgids)
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 26+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 12 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 12+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **12 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **26 dias**, o período mais longo de silêncio do projeto.
+- **0 emails enviados** neste ciclo — fila com 2 pendentes (Unialimentar, NUF) mas ambos sem MX confirmado.
+- **Fila de prospecção**: 390 empresas, 331 contatados, **2 pendentes inválidos** — fila efetivamente zerada para envio.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes (incluindo #1 do interior SP, R$7,98bi) aguardam ação humana via WhatsApp/telefone. Cada dia sem ação é oportunidade perdida.
+- **Bounce rate ~29%** (99/344) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
+## 2026-10-26 11:02 (Atendente IA - cron tick #4 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 99 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os 99 já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **watchdog.py**: exit 0 — sistema saudável
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 26+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 12 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 12+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **12 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **26 dias**, o período mais longo de silêncio do projeto.
+- **0 emails enviados** neste ciclo — fila com 2 pendentes (Unialimentar, NUF) mas ambos sem MX confirmado.
+- **Fila de prospecção**: 390 empresas, 331 contatados, **2 pendentes inválidos** — fila efetivamente zerada para envio.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes (incluindo #1 do interior SP, R$7,98bi) aguardam ação humana via WhatsApp/telefone. Cada dia sem ação é oportunidade perdida.
+- **Bounce rate ~29%** (99/344) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
+## 2026-10-26 10:34 (Atendente IA - cron tick #3 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK
+- ✅ **Sync & auto-correção**: 99 bounces cache, 0 notificações Formspree; 0 bounces novos
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 7**: 0 não lidas — caixa zerada
+- ✅ **enviar_lote.py --status**: 390 fila, 331 contatados, 80 bounce, 2 pendentes (sem MX)
+- ✅ **watchdog.py**: exit 0 — sistema saudável
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+- 🔴 **12º dia sem respostas humanas** (última: Pague Menos 14/10; última real: Tauste 30/09 — **26 dias**)
+- 🔴 **Pipeline de fechamento parado** — 8 leads quentes aguardam ação humana
+- 🔴 **Bounce rate ~29%** acima da meta de 15%
+- 🔴 **Fila de prospecção com 2 pendentes sem MX** — fila efetivamente zerada
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 99 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados — todos os 99 já tentados |
+| prospecao_followup.py | 0 follow-ups — nada pendente para segunda |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --dias 7 | 0 não lidas — caixa zerada |
+| enviar_lote.py --status | 390 fila, 331 contatados, 80 bounce, 2 pendentes sem MX |
+| watchdog.py | exit 0 — sistema saudável |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 26+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 12 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 12+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **12 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **26 dias**, o período mais longo de silêncio do projeto.
+- **0 emails enviados** neste ciclo — fila com 2 pendentes (Unialimentar, NUF) mas ambos sem MX confirmado.
+- **Fila de prospecção**: 390 empresas, 331 contatados, **2 pendentes inválidos** — fila efetivamente zerada para envio.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes (incluindo #1 do interior SP, R$7,98bi) aguardam ação humana via WhatsApp/telefone. Cada dia sem ação é oportunidade perdida.
+- **Bounce rate ~29%** (99/344) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+- **Caixa de entrada zerada** — 0 mensagens não lidas em 7 dias.
+
+---
+
 ## 2026-10-26 09:34 (Atendente IA - cron tick #2 - segunda-feira)
 
 ### Diagnóstico do ciclo
@@ -3391,3 +3590,37 @@ O sistema de email atingiu o **teto do canal**: 8,1% de resposta (acima da médi
 - **Validação**: tags equilibradas no artigo novo + JSON-LD parseável (python -m json.tool OK).
 
 ---
+---
+## 2026-10-26 11:33 (Atendente IA - cron tick #5 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 99 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os 99 já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada
+- ✅ **watchdog.py**: exit 0 — sistema saudável
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|---------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 26+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 12 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 12+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **12 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **26 dias**, o período mais longo de silêncio do projeto.
+- **Fila de prospecção**: 390 empresas, 331 contatados, **2 pendentes inválidos (sem MX)** — fila efetivamente zerada para envio.
+- **Bounce rate ~29%** (99/344) — acima da meta de 15%.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+

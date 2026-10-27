@@ -1,54 +1,140 @@
 {
-  "ciclo_2026_10_26_cron_atendente_tick2": {
-      "timestamp": "2026-10-26 09:34 (Atendente IA - cron tick #2 - segunda-feira)",
-      "acoes": [
-        "✅ sync_formspree.py — 99 bounces cache, 0 notificacoes Formspree novas",
-        "✅ corrigir_emails.py — 0 bounces processados (todos os 99 ja tentados anteriormente)",
-        "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
-        "✅ send_sequence — sequencia processada (nada a enviar)",
-        "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-        "✅ scan_inbox.py --dias 7 — 0 nao lidas — caixa zerada",
-        "✅ enviar_lote.py --max 3 — 0 enviados (2 sem MX: Unialimentar, NUF Farmaceutica)",
-        "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
-        "⏭️ proposta_contrato.py — nao executado (nenhum lead com volume novo)",
-        "⏭️ relatorio_esg.py — nao executado (nenhuma solicitacao ESG)"
-      ],
-      "diagnostico": {
-        "total_leads_watchdog": 344,
-        "ativos_watchdog": 240,
-        "bounce_cache_json": 99,
-        "fila_pendentes_validas": 0,
-        "watchdog": "exit 0 — saudavel",
-        "respostas_reais": 0,
-        "respostas_humanas": "12 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 26 dias)",
-        "observacao": "12 dias sem respostas humanas — periodo mais longo de silencio do projeto. 8 leads quentes aguardam acao humana (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Fila zerada (0 pendentes MX-valido). Nenhuma resposta nova para processar. Base cresceu 7 leads (337→344). Bounce rate ~29% (99/344)."
-      }
-    },
-    "ciclo_2026_10_26_cron_atendente_tick": {
-      "timestamp": "2026-10-26 09:04 (Atendente IA - cron tick - segunda-feira)",
+  "ciclo_2026_10_26_cron_atendente_tick7": {
+    "timestamp": "2026-10-26 12:33 (Atendente IA - cron tick #7 - segunda-feira)",
     "acoes": [
-      "✅ sync_formspree.py — 98 bounces cache, 0 notificacoes Formspree novas",
-      "✅ corrigir_emails.py — 0 bounces processados (todos os 97 ja tentados anteriormente)",
-      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente para segunda)",
-      "✅ send_sequence — sequencia processada (nada a enviar)",
+      "✅ sync_formspree.py — 99 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 99 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
       "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "✅ scan_inbox.py — 0 nao lidas em 7 dias — caixa zerada",
-      "✅ enviar_lote.py --max 5 — 5 enviados (Sorocaps, American Factory, Conduz Laticinios, Laticinios PJ, Laticinios Piramide); 2 pulados sem MX (Unialimentar, NUF Farmaceutica)",
-      "✅ watchdog.py — exit 0 — 337 leads, 234 ativos, 98 bounces, SMTP/IMAP OK"
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (344 leads, 212 msgids)",
+      "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — 390 empresas, 331 contatados, 80 bounce, 2 pendentes (sem MX: Unialimentar, NUF Farmaceutica)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
     ],
     "diagnostico": {
-      "total_leads_watchdog": 337,
-      "ativos_watchdog": 234,
-      "bounce_cache_json": 98,
-      "fila_total": 382,
-      "fila_contatados": 329,
-      "fila_bounce": 79,
+      "total_leads_watchdog": 344,
+      "ativos_watchdog": 240,
+      "bounce_cache_json": 99,
+      "fila_total": 390,
+      "fila_contatados": 331,
+      "fila_bounce": 80,
+      "fila_pendentes_validas": 0,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "12 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 26 dias)",
+      "observacao": "12 dias sem respostas humanas — período mais longo de silêncio do projeto. 8 leads quentes aguardam ação humana (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Fila efetivamente zerada (2 pendentes sem MX). Nenhuma resposta nova para processar. Bounce rate ~29% (99/344). Nenhum lead informou volume novo — proposta_contrato.py e relatorio_esg.py não executados."
+    }
+  },
+  "ciclo_2026_10_26_cron_atendente_tick6": {
+    "timestamp": "2026-10-26 12:03 (Atendente IA - cron tick #6 - segunda-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 99 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 99 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (344 leads, 212 msgids)",
+      "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — 390 empresas, 331 contatados, 80 bounce, 2 pendentes (sem MX)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 344,
+      "ativos_watchdog": 240,
+      "bounce_cache_json": 99,
+      "fila_total": 390,
+      "fila_contatados": 331,
+      "fila_bounce": 80,
+      "fila_pendentes_validas": 0,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "12 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 26 dias)",
+      "observacao": "12 dias sem respostas humanas — período mais longo de silêncio do projeto. 8 leads quentes aguardam ação humana (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Fila efetivamente zerada (2 pendentes sem MX). Nenhuma resposta nova para processar. Bounce rate ~29% (99/344). Nenhum lead informou volume novo — proposta_contrato.py e relatorio_esg.py não executados."
+    }
+  },
+  "ciclo_2026_10_26_cron_atendente_tick5": {
+    "timestamp": "2026-10-26 11:33 (Atendente IA - cron tick #5 - segunda-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 99 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 99 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada",
+      "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)",
+      "📊 enviar_lote.py --status — 390 empresas, 331 contatados, 80 bounce, 2 pendentes (ambos sem MX)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 344,
+      "ativos_watchdog": 240,
+      "bounce_cache_json": 99,
+      "fila_total": 390,
+      "fila_contatados": 331,
+      "fila_bounce": 80,
+      "fila_pendentes_validas": 0,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "12 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 26 dias)",
+      "observacao": "12 dias sem respostas humanas — período mais longo de silêncio do projeto. 8 leads quentes aguardam ação humana (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Fila efetivamente zerada (2 pendentes sem MX). Nenhuma resposta nova para processar. Bounce rate ~29% (99/344). Nenhum lead informou volume novo — proposta_contrato.py e relatorio_esg.py não executados."
+    }
+  },
+  "ciclo_2026_10_26_cron_atendente_tick2": {
+    "timestamp": "2026-10-26 09:34 (Atendente IA - cron tick #2 - segunda-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 99 bounces cache, 0 notificacoes Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 99 ja tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequencia processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 7 — 0 nao lidas — caixa zerada",
+      "✅ enviar_lote.py --max 3 — 0 enviados (2 sem MX: Unialimentar, NUF Farmaceutica)",
+      "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
+      "⏭️ proposta_contrato.py — nao executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — nao executado (nenhuma solicitacao ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 344,
+      "ativos_watchdog": 240,
+      "bounce_cache_json": 99,
       "fila_pendentes_validas": 0,
       "watchdog": "exit 0 — saudavel",
       "respostas_reais": 0,
       "respostas_humanas": "12 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 26 dias)",
-      "observacao": "12 dias sem respostas humanas — periodo mais longo de silencio do projeto. 8 leads quentes aguardam acao humana (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). 5 novos emails enviados hoje (laticinios/farmaceuticas). Fila zerada de pendentes. Bounce rate ~24%."
+      "observacao": "12 dias sem respostas humanas — periodo mais longo de silencio do projeto. 8 leads quentes aguardam acao humana (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Fila zerada (0 pendentes MX-valido). Nenhuma resposta nova para processar. Base cresceu 7 leads (337→344). Bounce rate ~29% (99/344)."
     }
+  },
+  "ciclo_2026_10_26_cron_atendente_tick": {
+    "timestamp": "2026-10-26 08:30 (Atendente IA - cron tick)",
+    "acoes": [
+      "✅ sync_formspree.py — 97 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos (todos os 97 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 11 follow-ups enviados (FP3: Bioactive, Menegon, R-Food, G Free, Bremil; FP2: Martins Carnes, Blanver; FP1: Saripan, Bocata, Atacado OJT, Indaiatuba Carnes)",
+      "✅ send_sequence — sequência processada",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py — 0 mensagens não lidas; 3 DSNs (Maximo, Mastercook já em bounces; Locaweb = Braslact)",
+      "🔧 Auto-correção: Braslact (braslact@braslact.com.br) movido para bounce — DSN Locaweb confirmado",
+      "ℹ️ proposta_contrato.py / relatorio_esg.py — não executados (sem leads com volume novo nem solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 337,
+      "ativos_watchdog": 235,
+      "bounce_cache_json": 98,
+      "fila_total": 382,
+      "fila_contatados": 324,
+      "fila_bounce": 79,
+      "fila_pendentes_validas": 1,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "12 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 26 dias)",
+      "observacao": "11 follow-ups automáticos enviados (sequência normal). Braslact corrigido como bounce (DSN Locaweb). Nenhuma resposta nova de leads. Fila com 1 pendente (Unialimentar sem MX). Pipeline de fechamento continua parado — 8 leads quentes aguardam ação humana (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Bounce rate ~24%."
+    },
+    "dias_sem_resposta_humana": 12,
+    "ultimo_lead_quente": "Pague Menos (14/10)"
   },
   "ciclo_2026_10_24_cron_atendente_tick4": {
     "timestamp": "2026-10-24 19:33 (Atendente IA - cron tick #4 - sábado)",
@@ -2596,34 +2682,6 @@
     },
     "decisao_central": "Projeto precisa de salto: (A) acao humana nos 8 leads quentes, ou (B) automacao WhatsApp. Email sozinho nao fecha. Fila de prospeccao no limite - sem listas CNPJ, fluxo seca. Recomendacao: priorizar (A) imediato e (B) curto prazo."
   },
-  "ciclo_2026_10_26_cron_atendente_tick": {
-    "timestamp": "2026-10-26 08:30 (Atendente IA - cron tick)",
-    "acoes": [
-      "✅ sync_formspree.py — 97 bounces cache, 0 notificações Formspree novas",
-      "✅ corrigir_emails.py — 0 bounces novos (todos os 97 já tentados anteriormente)",
-      "✅ prospecao_followup.py — 11 follow-ups enviados (FP3: Bioactive, Menegon, R-Food, G Free, Bremil; FP2: Martins Carnes, Blanver; FP1: Saripan, Bocata, Atacado OJT, Indaiatuba Carnes)",
-      "✅ send_sequence — sequência processada",
-      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "✅ scan_inbox.py — 0 mensagens não lidas; 3 DSNs (Maximo, Mastercook já em bounces; Locaweb = Braslact)",
-      "🔧 Auto-correção: Braslact (braslact@braslact.com.br) movido para bounce — DSN Locaweb confirmado",
-      "ℹ️ proposta_contrato.py / relatorio_esg.py — não executados (sem leads com volume novo nem solicitação ESG)"
-    ],
-    "diagnostico": {
-      "total_leads_watchdog": 337,
-      "ativos_watchdog": 235,
-      "bounce_cache_json": 98,
-      "fila_total": 382,
-      "fila_contatados": 324,
-      "fila_bounce": 79,
-      "fila_pendentes_validas": 1,
-      "watchdog": "exit 0 — saudável",
-      "respostas_reais": 0,
-      "respostas_humanas": "12 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 26 dias)",
-      "observacao": "11 follow-ups automáticos enviados (sequência normal). Braslact corrigido como bounce (DSN Locaweb). Nenhuma resposta nova de leads. Fila com 1 pendente (Unialimentar sem MX). Pipeline de fechamento continua parado — 8 leads quentes aguardam ação humana (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). Bounce rate ~24%."
-    },
-    "dias_sem_resposta_humana": 12,
-    "ultimo_lead_quente": "Pague Menos (14/10)"
-  },
   "ciclo_2026_10_26_cron_prospector": {
     "timestamp": "2026-10-26 09:08 (Prospector IA - cron segunda)",
     "acoes": [
@@ -2656,30 +2714,31 @@
       "observacao": "Prospecção reabastecida com 8 empresas novas, 7 enviadas. Foco forte em ENCAPSULADOS (Sorocaps, American Factory, Nutrielen, Alemed — 4 empresas deste nicho) + 3 laticínios. NUF descartado por falta de MX. Fila agora com 1 pendente (sem MX). Bounce rate ~24%."
     },
     "dias_sem_resposta_humana": 12,
-        "ultimo_lead_quente": "Pague Menos (14/10)"
-      },
-      "ciclo_2026_10_26_cron_atendente_tick3": {
-        "timestamp": "2026-10-26 10:04 (Atendente IA - cron tick #3 - segunda-feira)",
-        "acoes": [
-          "✅ sync_formspree.py — 99 bounces cache, 0 notificações Formspree novas",
-          "✅ corrigir_emails.py — 0 bounces processados (todos os 99 já tentados anteriormente)",
-          "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
-          "✅ send_sequence — sequência processada (nada a enviar)",
-          "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-          "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
-          "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
-          "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
-        ],
-        "diagnostico": {
-          "total_leads_watchdog": 344,
-          "ativos_watchdog": 240,
-          "bounce_cache_json": 99,
-          "watchdog": "exit 0 — saudável",
-          "respostas_reais": 0,
-          "respostas_humanas": "12 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 26 dias)",
-          "observacao": "12 dias sem respostas humanas. 344 leads, 240 ativos, 99 bounces (29%). Sistema saudável mas pipeline de fechamento parado — 8 leads quentes aguardam ação humana (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste)."
-        },
-        "dias_sem_resposta_humana": 12,
-        "ultimo_lead_quente": "Pague Menos (14/10)"
-      }
-    }
+    "ultimo_lead_quente": "Pague Menos (14/10)"
+  },
+  "ciclo_2026_10_26_cron_atendente_tick4": {
+    "timestamp": "2026-10-26 11:02 (Atendente IA - cron tick #4 - segunda-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 99 bounces cache, 0 notificacoes Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 99 ja tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequencia processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
+      "⏭️ proposta_contrato.py — nao executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — nao executado (nenhuma solicitacao ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 344,
+      "ativos_watchdog": 240,
+      "bounce_cache_json": 99,
+      "fila_pendentes_validas": 0,
+      "watchdog": "exit 0 — saudavel",
+      "respostas_reais": 0,
+      "respostas_humanas": "12 dias sem respostas humanas (ultima: Pague Menos 14/10; ultima real: Tauste 30/09 — 26 dias)",
+      "observacao": "12 dias sem respostas humanas. 344 leads, 240 ativos, 99 bounces (29%). Sistema saudavel mas pipeline de fechamento parado — 8 leads quentes aguardam acao humana (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste)."
+    },
+    "dias_sem_resposta_humana": 12,
+    "ultimo_lead_quente": "Pague Menos (14/10)"
+  }
+}
