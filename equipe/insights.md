@@ -1,3 +1,106 @@
+## 2026-10-27 23:15 (Atendente IA - cron terça-feira - tick noturno #2)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 359 leads, 248 ativos, 83 bounces CSV, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 108 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — 2 sem alternativa (Tecnobloc, Fábrica Bloco Forte)
+- ✅ **prospecao_followup.py**: **1 FP3 enviado** (Laticinios Modelo) — último follow-up automático
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (359 leads, 245 msgids)
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 108 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | **1 FP3 enviado** (Laticinios Modelo) — follow-up de encerramento |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --dias 3 | 0 não lidas — caixa zerada |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 28+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 13 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 14+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **14 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **28 dias**, o período mais longo de silêncio do projeto.
+- **1 FP3 enviado**: Laticinios Modelo recebeu o último follow-up automático.
+- **Fila de prospecção**: 399 empresas, 338 contatados, 86 bounce, **3 pendentes** (Unialimentar, NUF Farmacêutica, Dacoli Alimentos).
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana via WhatsApp/telefone.
+- **Bounce rate ~23%** (83/359) — abaixo do pico de 29%, mas ainda acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+- **Bounce cache cresceu para 108** (era 106 no ciclo anterior +2 novos: Tecnobloc e Fábrica Bloco Forte do nicho desmoldante, verificados sem alternativa de email).
+
+---
+
+## 2026-10-27 19:33 (Analista de Qualidade - cron)
+
+### Números do dia
+
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | 359 |
+| `novo` | 248 |
+| `respondido` | 19 |
+| `bounce` | 83 |
+| `encerrado` | 9 |
+| `sequencia` | 0 |
+| Emails em bounce cache (bounces.json) | **108** |
+| Bounces no cache **não** encontrados no CSV | 25 (históricos/alternativos, sem lead correspondente) |
+| Respostas pendentes (replies_pending.json) | **0** |
+| Notificações Formspree processadas | 0 |
+| Leads com envio hoje (boas_vindas_em = 27/10) | **7** (todos da campanha Desmoldante) |
+| Bounces novos detectados hoje | **2** |
+
+### Diagnóstico da auditoria
+
+- ✅ **sync_formspree.py**: 108 emails em bounce cache (era 104 às 18:55 → +4 desde o ciclo anterior), 0 notificações Formspree novas.
+- ✅ **bounces.json × leads.csv**: consistência **100%** — 83/83 emails do cache presentes no CSV estão marcados `bounce`; 0 emails do cache com lead não-bounce; 0 leads `bounce` sem entrada no cache. O sync corrige corretamente.
+- ⚠️ **2 leads `bounce` com `boas_vindas_em` preenchido** (registrado, não corrigido — conforme instrução):
+  - **Tecnobloc** (falecom@tecnobloc.com.br) — criado+enviado 19:03:02
+  - **Fábrica Bloco Forte** (contato@fabricablocoforte.com.br) — criado+enviado 19:03:29
+  - Causa: corrida normal — o fluxo `prospeccao_desmoldante` insere o lead e envia no mesmo instante (`criado_em == boas_vindas_em`); o bounce só passou a ser conhecido quando o sync rodou (19:31). Não é falha do send_sequence (o email não estava no cache no momento do envio), mas o fluxo desmoldante não valida o email antes de disparar.
+- ✅ **replies_pending.json**: `[]` — nada pendente, o Atendente não tem resposta a dar no próximo tick.
+- ✅ **Nenhum lead novo entrou para `respondido`** — 19 respondidos, inalterado desde 24/10.
+
+### Ações deste ciclo
+
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 108 bounces cache, 0 notificações Formspree novas |
+| auditoria conjuntos (bounces.json × leads.csv) | 100% consistente, 0 correções necessárias |
+| auditoria boas_vindas_em × bounce | 2 anomalias registradas (Tecnobloc, Bloco Forte) |
+| insights.md | atualizado |
+
+### Observações
+
+- **7 envios hoje, todos da nova campanha Desmoldante** (prospeccao_desmoldante): Tecnobloc, Tecnoblock, Precon Pré-Fabricados, Fábrica Bloco Forte, Armando Pré-Moldados, Scirocco Artefatos, Tubos Tradição. **2 rebateram = 28,5% de bounce neste lote** — amostra pequena, mas sinal de alerta: emails genéricos `falecom@`/`contato@` de fábricas pequenas de artefatos frequentemente não existem.
+- **Bounce rate global ~23%** (83/359) — estável, acima da meta de 15%.
+- **13 dias sem resposta humana real** (última semi-humana: Pague Menos 14/10; última humana real: Tauste 30/09 = **27 dias** — o período mais longo do projeto).
+- **Possível duplicata**: `Tecnobloc` (falecom@tecnobloc.com.br — bounce) × `Tecnoblock` (contato@tecnoblock.com.br — novo) parecem ser a MESMA fábrica de artefatos; `tecnobloc.com.br` provavelmente é typo do domínio real `tecnoblock.com.br`. Confirmar e deduplicar.
+- **25 emails órfãos no cache** (ex: contato@scallet.com.br, contato@selmi.com.br, marcfortblocos@terra.com.br) — pendência do ciclo 24/10 permanece: mapear contra emails secundários da base.
+
+### Sugestões para o Estrategista
+
+1. 🔴 **Campanha Desmoldante sem validação de email**: o fluxo insere+envia imediatamente e 2/7 lote bateu bounce. Antes de escalar a fila de fábricas de artefatos de cimento, validar MX/domínio (ou conferir site oficial) dos `falecom@`/`contato@` — ou aceitar a taxa e compensar com volume maior.
+2. 🟡 **Deduplicar Tecnobloc × Tecnoblock** (provável typo de domínio) — evitar enviar 2x para a mesma fábrica e não queimar o lead com email quebrado.
+3. 🟢 **Pipeline humano segue 27 dias parado** — Savegnago, Pague Menos e Covabra (cadastro Ivrim) continuam aguardando ação humana. Meta de 1 ligação/WhatsApp por dia útil destravaria o funil de fechamento.
+
+---
+
 ## 2026-10-27 18:55 (Atendente IA - cron terça-feira - tick noturno)
 
 ### Diagnóstico do ciclo

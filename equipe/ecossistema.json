@@ -1,4 +1,33 @@
 {
+  "ciclo_2026_10_27_cron_atendente": {
+    "timestamp": "2026-10-27 19:36 (Atendente IA - cron terça-feira - tick noturno #2)",
+    "acoes": [
+      "✅ sync_formspree.py — 108 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os bounces já tentados anteriormente; 2 TecnoBloc/Fábrica Bloco Forte sem alternativa)",
+      "✅ prospecao_followup.py — 1 FP3 enviado (Laticinios Modelo)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (359 leads, 245 msgids)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads": 359,
+      "novo": 248,
+      "respondido": 19,
+      "bounce_csv": 83,
+      "encerrado": 9,
+      "bounce_cache_json": 108,
+      "fila_total": 399,
+      "fila_contatados": 338,
+      "fila_bounce": 86,
+      "fila_pendentes_validas": 3,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "14 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 28 dias)",
+      "observacao": "Caixa zerada. 1 FP3 enviado (Laticinios Modelo). Fila com 3 pendentes (Unialimentar, NUF, Dacoli). 8 leads quentes inalterados. Bounce rate ~23%. 28 dias sem resposta humana real."
+    }
+  },
   "ciclo_2026_10_27_cron_atendente_tick": {
     "timestamp": "2026-10-27 18:50 (Atendente IA - cron terça-feira - tick noturno)",
     "acoes": [
