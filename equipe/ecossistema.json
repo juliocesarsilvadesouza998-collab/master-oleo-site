@@ -1,4 +1,82 @@
 {
+  "ciclo_2026_10_27_melhorador_continuo": {
+    "timestamp": "2026-10-27 20:12 (Melhorador Contínuo - cron noturno)",
+    "acoes": [
+      "✅ prospecao_followup.py — FP3 template reforçado com urgência final (Portaria 2028 + concorrentes fechando + anti-furto MTR + 70% mercado inexplorado)",
+      "✅ fila_prospeccao_extra.json — +5 novas empresas MX-verificadas: Induscamp/Campineira (Campinas/SP, ácidos graxos/óleos hidrogenados NICHO PRIORITARIO), Padaria Real (Sorocaba, 201-500 funcionários), SB Foods (Sorocaba, óleos/gorduras NICHO PRIORITARIO), Rede Correia Supermercados (Itu/Sorocaba, rede local), Conecta (óleos/gorduras B2B, SP)",
+      "✅ py_compile prospecao_followup.py — OK (sem erros)",
+      "✅ MX verificado via nslookup para todas as 5 novas empresas (induscamp.com.br mx Titan, sbfoods.com.br OK, padariareal.com.br OK, redecorreia.com.br OK, conectaind.com.br OK)",
+      "✅ insights.md atualizado com aprendizado do ciclo",
+      "✅ ecossistema.json atualizado"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 359,
+      "ativos_watchdog": 248,
+      "bounce_csv": 83,
+      "bounce_cache_json": 108,
+      "fila_extra_total": 399,
+      "fila_novas_hoje": 5,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "14 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 28 dias)",
+      "observacao": "FP3 template atualizado com escassez + urgencia. Fila reabastecida com 5 novas empresas de NICHO PRIORITARIO (oleos/gorduras, supermercados, padaria industrial). Bounce rate ~23% ainda acima da meta."
+    }
+  },
+  "ciclo_2026_10_27_cron_atendente": {
+    "timestamp": "2026-10-27 03:00 (Estrategista - cron dominical #27/10)",
+    "diagnostico_semana": {
+      "total_leads": 359,
+      "novo": 248,
+      "respondido": 19,
+      "bounce_csv": 83,
+      "encerrado": 9,
+      "bounce_cache_json": 108,
+      "taxa_resposta": "19/359 = 5,3% (excelente para cold email, mas teto do canal)",
+      "taxa_bounce": "83/359 = 23,1% (acima da meta 15%)",
+      "dias_sem_resposta_humana": 28,
+      "ultima_resposta_real": "Tauste 30/09/2026",
+      "fila_total_empresas": 399,
+      "fila_contatados": 338,
+      "fila_bounce": 86,
+      "fila_pendentes_validas": 3,
+      "watchdog_status": "exit 0 — saudável",
+      "diagnostico": "CRISE DOS 28 DIAS — sistema de cold email atingiu o teto. 8 leads quentes (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda R$6,12bi, Tauste) aguardam ação humana. Gargalo mudou de prospecção para fechamento.",
+      "leads_quentes": {
+        "savegnago": "R$7,98bi - #1 interior SP - 28 dias parado - aguarda WhatsApp/ligação",
+        "pague_menos": "R$4,33bi - #2 interior SP - 13 dias desde ticket 407470 - Josiane Marinho",
+        "rede_confianca": "Sorocaba - proposta 2.500L/mês R$54k/ano - aguarda retorno",
+        "covabra": "portal Ivrim isac.ivrim.com.br - 14+ dias sem cadastro preenchido",
+        "brasfrigo": "Salto/SP - local - aguarda coleta-teste",
+        "queijos_itupeva": "Rafael - aguarda coleta-teste",
+        "sonda": "R$6,12bi - 22ª Brasil - ligar (11) 2145-6200",
+        "tauste": "#3 interior SP - ligar (15) 3324-4680 - respondeu 30/09"
+      },
+      "observacao": "Sistema fez tudo que podia via email. 359 leads gerados, 19 respostas, 8 oportunidades maduras. O fechamento agora depende de ação humana (WhatsApp/telefone/cadastro portal) que o sistema não pode automatizar. Prospecção web gratuita esgotada — próxima fronteira: listas CNPJ pagas (Leadjet CNAE 1052-0, ~R$197, ~50-100 novos leads na região)."
+    },
+    "acoes_implementadas": [
+      "1. Persona.md: adicionada seção 'PROTOCOLO DE REENGAJAMENTO' com scripts de WhatsApp prontos para cada lead quente + protocolo semanal de 1 ação humana/dia",
+      "2. Persona.md: dados de mercado atualizados (Mobility Foresights, MF Rural) — US$9,4bi→US$15,7bi, preço spot SP R$2,00/L, margem biodiesel comprimida, Petrobras R$23M",
+      "3. Persona.md: roteiro de prospecção via listas CNPJ pagas (CNAE 1052-0/1041-4/1043-1)",
+      "4. Insights.md: diagnóstico completo da crise dos 28 dias, aprendizado crítico documentado",
+      "5. Ecossistema.json: metas da semana redirecionadas de prospecção para FECHAMENTO"
+    ],
+    "metas_semana_27_10_a_02_11": {
+      "meta_contrato_1": "🔴 FECHAR SAVEGNAGO (#1 interior SP R$7,98bi) — WhatsApp + ligação. Estimar 2.500-5.000 L/mês → R$60-120k/ano. PRIORIDADE ABSOLUTA.",
+      "meta_contrato_2": "🔴 FECHAR COVABRA — PREENCHER CADASTRO ivrim (isac.ivrim.com.br). Única ação 100% manual que destrava contrato de rede.",
+      "meta_contrato_3": "🔴 FECHAR BRASFRIGO ou QUEIJOS ITUPEVA — coleta-teste agendada na semana.",
+      "meta_contrato_4": "🟡 REENGAJAR PAGUE MENOS + REDE CONFIANÇA — 1 WhatsApp cada (scripts na persona.md). Contra-proposta com bônus exclusividade se silêncio.",
+      "meta_fila": "🟢 Adicionar 5-10 empresas da fila_prospeccao_extra.json com MX verificado (se sobrar tempo após ações de fechamento)",
+      "meta_bounce": "< 15% (atual 23% — estável, sem ações corretivas novas possíveis sem listas pagas)",
+      "meta_infra": "Pesquisar viabilidade WhatsApp API (Z-API/Twilio ~R$100-200/mês) para automatizar primeiro contato em 2027"
+    },
+    "aprendizados": [
+      "1. Cold email tem teto — batemos nele em 28 dias. Taxa 5,3% é excelente mas 100% das respostas exigem ação humana.",
+      "2. Redes de supermercado seguem padrão SAC → comercial → espera humana. Savegnago, Pague Menos, Rede Confiança e Covabra repetiram o mesmo padrão.",
+      "3. Próxima fronteira de prospecção: listas CNPJ pagas. Web gratuita esgotada na região de 80km de Salto.",
+      "4. WhatsApp API (Z-API/Twilio) eliminaria o gargalo humano para primeiros contatos. Custo estimado: R$100-200/mês.",
+      "5. Bounce rate 23% estável — sem fontes novas de email, não há como reduzir sem filtrar por listas CNPJ pagas com telefone."
+    ]
+  },
   "ciclo_2026_10_27_cron_atendente": {
     "timestamp": "2026-10-27 19:36 (Atendente IA - cron terça-feira - tick noturno #2)",
     "acoes": [

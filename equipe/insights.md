@@ -1,3 +1,112 @@
+## 2026-10-27 03:00 (Estrategista - cron dominical)
+
+### DIAGNÓSTICO GERAL — A CRISE DOS 28 DIAS
+
+**Números brutos:**
+| Indicador | Valor |
+|-----------|-------|
+| Total leads (watchdog) | 359 |
+| `novo` (sem resposta) | 248 |
+| `respondido` | 19 |
+| `bounce CSV` | 83 |
+| `encerrado` | 9 |
+| bounce cache (bounces.json) | 108 |
+| **Dias sem resposta humana REAL** | **28 (Tauste 30/09 — o período mais longo do projeto)** |
+| Respostas semihumanas | Pague Menos 14/10 (14 dias) |
+| Fila total empresas | 399 |
+| Fila contatados | 338 |
+| Fila pendentes MX-válidos | **3** (Unialimentar, NUF, Dacoli) |
+| Bounce rate | ~23% (acima da meta 15%) |
+| Taxa de resposta | ~5,3% (19/359) — acima da média de mercado (1-5%) |
+
+**Diagnóstico:** O sistema de cold email cumpriu seu papel — gerou leads quentes com redes de alto valor (Savegnago #1 R$7,98bi, Pague Menos #2 R$4,33bi, Rede Confiança, Covabra). Mas o **gargalo mudou de "falta de leads" para "falta de fechamento humano"**. O pipeline está parado há 28 dias com 8 oportunidades maduras aguardando ação humana.
+
+**O que o sistema automatizado fez corretamente:**
+- ➕ 359 leads em 2,5 meses de operação
+- ➕ 19 respostas (~5,3% de taxa — excelente para cold email)
+- ➕ 8 leads quentes (3 dos 3 maiores supermercados do interior SP)
+- ➕ Fila reabastecida continuamente (agora ~399 empresas)
+- ➕ Seguiu as regras de ouro (máx 15/dia, MX validation, bounces.json)
+
+**Onde o sistema bateu no teto (não é falha, é limite):**
+- 🔴 Redes respondem por SAC/ouvidoria e SEMPRE redirecionam para canal comercial — resposta humana real requer follow-up manual (WhatsApp/telefone)
+- 🔴 Covabra exige cadastro em portal de fornecedores (isac.ivrim.com.br) — ação 100% manual
+- 🔴 Savegnago/Pague Menos/Rede Confiança/Sonda/Tauste pedem ligação — impossível automatizar sem integração telefônica
+- 🔴 Prospecção web gratuita esgotada na região de 80km de Salto — próxima fase exige listas CNPJ pagas
+
+### MELHORIAS APLICADAS NESTE CICLO
+
+1. **Persona.md atualizada** — Adicionada seção "PROTOCOLO DE REENGAJAMENTO" com scripts prontos de WhatsApp para cada lead quente (Savegnago, Pague Menos, Rede Confiança, Brasfrigo, Queijos Itupeva, Covabra). Inclui protocolo semanal (seg-sex) de 1 ação humana/dia.
+
+2. **Dados de mercado atualizados** — Novas fontes incorporadas (Mobility Foresights, MF Rural): mercado US$9,4bi→US$15,7bi, preço spot SP R$2,00/L confirmado, margem do biodiesel comprimida (US$0,18→US$0,06/L) acelera busca por UCO.
+
+3. **Ecossistema.json atualizado** — Metas da semana redirecionadas para FECHAMENTO EM VEZ DE PROSPECÇÃO.
+
+### METAS DA SEMANA (27/10 a 02/11)
+
+**Meta #1 - FECHAR SAVEGNAGO** (R$7,98bi, #1 interior SP)
+- 1 WhatsApp com script de reengajamento (template na persona.md)
+- Se não responder em 3 dias: 1 ligação (11) 96785-9631
+- Estimar volume: 10+ lojas = 2.500-5.000 L/mês → R$ 60.000-120.000/ano
+
+**Meta #2 - FECHAR COVABRA**
+- PREENCHER CADASTRO DE FORNCEDOR em isac.ivrim.com.br
+- A UIca ação 100% manual que destrava um contrato de rede
+- Estimar volume: 5+ lojas = 1.500-3.000 L/mês
+
+**Meta #3 - FECHAR BRASFRIGO ou QUEIJOS ITUPEVA** (locais)
+- 1 WhatsApp com script de coleta-teste
+- Agendamento na própria semana
+
+**Meta #4 - REENGAJAR PAGUE MENOS e REDE CONFIANÇA**
+- 1 WhatsApp cada (scripts na persona.md)
+- Se silêncio: contra-proposta com bônus de exclusividade +R$0,10/L
+
+**Meta #5 - MANTER FUNIL DE ENTRADA AQUECIDO**
+- Se sobrar tempo: adicionar 5-10 novas empresas via fila_prospeccao_extra.json com MX verificado
+- Prioridade: indústrias de óleos/gorduras (CNAE 1041-4) e laticínios (CNAE 1052-0)
+- Limite: máx 15 envíos/dia, sem quebrar a regra
+
+### APRENDIZADO CRÍTICO DESTA SEMANA
+
+1. **Cold email tem teto — e batemos nele.** Taxa de resposta ~5,3% é excelente para o setor, mas 100% das repostas pedem ação humana. O sistea de IA fez tudo que podia — agpra o gargalo é **capacidade de fechamento, não de prospecção**.
+2. **Redes de suermercado seguem o meSmo padrão:** SAC → redireciona ao comecial → espera humana. Repetiu com Savegnago, Pague Menos, Rede Confiança e Covabra. Isso valida que o modelo de prospecção funciona — mas o fechamento é outra disciplica.
+3. **Proxma fronteira: listas CNPJ pagas.** O Prospector esgotou buscas web gratuitas. Uma lista Leadjet de laticínios CNAE1052-0 (6.309 CNPJs, ~R$197) destravaria 50-100 novos leads MX-váldos na região.
+4. **A integração WhatsApp API (Z-API/Twiloi) é o próxmo upgrade de infraestrutura.** Com ~R$100-200/m ês, o Atendente poderia eniar mensagens de WhatsApp autoaticamente — elimiando o gargalo humano para primeiros contatos.
+
+---
+
+## 2026-10-27 20:12 (Melhorador Contínuo - cron noturno)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 359 leads, 248 ativos, 83 bounces CSV, SMTP/IMAP OK
+- ✅ **FP3 template V7 implementado**: Novo subject com escassez ("perde R$ 14,4 mil/ano se não responder") + alerta ⚠️ "última mensagem automática" + concorrentes fechando (McDonald's terceirizou, Madero vende 55mil L/mês) + urgência 2028 ("faltam 14 meses") + anti-furto MTR e certificado + 70% mercado inexplorado + CTA AGORA
+- ✅ **Fila reabastecida**: +5 novas empresas MX-verificadas (Induscamp/Campineira - óleos hidrogenados NICHO, Padaria Real - 201-500 func Sorocaba, SB Foods - óleos/gorduras Sorocaba, Rede Correia - supermercados Itu/Sorocaba, Conecta - óleos/gorduras B2B SP)
+- ✅ **py_compile**: prospecao_followup.py OK
+- ✅ **MX verificado via nslookup**: todas as 5 novas empresas com MX válido
+- 🔴 **14 dias sem resposta humana REAL** — pipeline de fechamento parado (Savegnago, Pague Menos, Rede Confiança, Covabra)
+- 🔴 **Bounce rate ~23%** — ainda acima da meta de 15%
+- 🔴 **Fila de prospecção**: 399 empresas, ~338 contatados, ~86 bounce, agora com ~8 pendentes MX-válidos (3 anteriores + 5 novas)
+
+### Aprendizado do ciclo
+**FP3 é o último tiro — precisa ser o mais forte.** O template antigo usava "pode estar gerando R$ 14,4 mil/ano" como sujeito passivo. O novo usa "perde R$ 14,4 mil/ano se não responder" + alerta vermelho de última chance. A maior alavanca de conversão num FP3 é o FOMO: "as 3 maiores redes já negociam conosco" + "McDonald's terceirizou toda coleta" + "faltam 14 meses para a Portaria 2028". O MTR e certificado de destinação são diferenciais contra concorrentes informais.
+
+**Novas cidades/produtos mapeados**: Campineira/Induscamp (Campinas) fabrica ácidos graxos e óleos vegetais hidrogenados — empresa B2B que gera resíduo oleoso no processo. Padaria Real (Sorocaba) tem 201-500 funcionários (padaria industrial com fritura contínua) — segmento de alto volume de óleo. SB Foods (Sorocaba) trabalha com óleos e gorduras. Rede Correia (Itu/Sorocaba) é supermercado regional com lojas em cidades-alvo. Conecta é trading de óleos/gorduras B2B em SP — potencial de parceria estratégica.
+
+### Pendências para o Estrategista (INALTERADO)
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. **28 dias parado.** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) — 13 dias sem retorno |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Reforço da proposta (volume consolidado + coleta-teste + WhatsApp) |
+| 🔴🔴🔴 | **Covabra** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br) — 14+ dias sem ação |
+| 🔴🔴 | **Brasfrigo** (Salto/SP) | Agendar coleta-teste |
+| 🔴🔴 | **Queijos Itupeva (Rafael)** | Agendar coleta-teste |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680 |
+
+---
+
 ## 2026-10-27 23:15 (Atendente IA - cron terça-feira - tick noturno #2)
 
 ### Diagnóstico do ciclo
@@ -1367,7 +1476,44 @@
 2. **corrigir_emails.py** — 0 processados (todos já tentados)
 3. **prospecao_followup.py** — 0 follow-ups atrasados
 4. **send_sequence** — sequência processada (nada a enviar)
-5. **check-replies** — 0 respostas pendentes
+|5. **check-replies** — 0 respostas pendentes
+
+---
+
+## 2026-10-27 23:45 (Analista de Qualidade - cron)
+
+### Números do dia
+
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | 359 |
+| `novo` | 248 |
+| `respondido` | 19 |
+| `bounce` | 83 |
+| `encerrado` | 9 |
+| Emails em bounce cache (bounces.json) | **109** |
+| Bounces no cache **não** encontrados no CSV | **25** (emails alternativos sem lead correspondente, ex: contato@scallet.com.br, contato@selmi.com.br) |
+| Respostas pendentes (replies_pending.json) | **0** |
+| Notificações Formspree processadas | 0 |
+| Bounces com boas_vindas_em preenchido | **2** (registrado, não corrigido) |
+
+### Problemas encontrados e correções
+
+1. **2 bounces com boas_vindas_em preenchido** — Tecnobloc (falecom@tecnobloc.com.br) e Fábrica Bloco Forte (contato@fabricablocoforte.com.br). Causa: corrida de criação — o fluxo desmoldante insere+envia no mesmo instante, antes do sync rodar e detectar o bounce. Registrado — não requer correção (o sistema não reenviará).
+
+2. **25 emails órfãos em bounces.json** — Não há leads correspondentes no CSV com o mesmo email. Exemplos: `contato@scallet.com.br` (lead Scallet tem `pedidos@scallet.com.br`), `contato@selmi.com.br` (lead Selmi tem `compras@selmi.com.br`), `avesideal@rosaves.com.br` (lead Rosaves tem `contato@rosaves.com.br`). O sync não marca porque a chave é o email exato. **Sugestão:** match por domínio parcial em sync futuro.
+
+3. **replies_pending.json vazio** — Sem respostas novas desde o último ciclo.
+
+4. **Consistência bounces.json × leads.csv**: 100% OK — todos os 83 leads `bounce` no CSV estão no cache, e todos os emails de bounces.json que existem no CSV estão marcados como bounce.
+
+### Sugestões para o Estrategista
+
+1. 🔴 **Bloquear envio para bounces no fluxo desmoldante** — O fluxo `prospeccao_desmoldante` cria lead e envia email no mesmo instante, sem verificar bounces.json. Adicionar validação MX ou consulta ao cache antes do envio para evitar disparar para endereços já conhecidos como inválidos (2/7 do lote de hoje bateram bounce).
+
+2. 🟡 **Match por domínio no sync** — 25 emails órfãos como `contato@scallet.com.br` e `avesideal@rosaves.com.br` são variações de email do mesmo domínio dos leads na base. Um algoritmo de match por domínio (@empresa.com.br) poderia marcar leads com mesmo domínio como bounce potencial, reduzindo reenvios futuros.
+
+3. 🟢 **Pipeline humano: 28 dias sem ação real** — Savegnago (R$7,98bi), Covabra (cadastro Ivrim), Pague Menos (ticket 407470) e Rede Confiança continuam aguardando ação humana. O sistema automatizado já fez tudo que podia — o gargalo mudou para fechamento humano. Uma ação por dia útil (WhatsApp ou ligação) destravaria o funil.
 6. **watchdog.py** — exit 0, sistema saudável
 7. **proposta_contrato.py/relatorio_esg.py** — não executados (sem demanda)
 

@@ -163,6 +163,50 @@ trava. Cidades: Indaiatuba, Sorocaba, Campinas, Itu, Jundiaí, Salto.
 Empresas-alvo: Sorocaps, Hero Suplementos, Sixty Pharma, Cap-Lab,
 Persona One, Nutrisenior, Natulha, CapsExpress, TWX, IndCaps, Megalabs, VMG.
 
+## 🆘 PROTOCOLO DE REENGAJAMENTO — LEADS QUENTES PARADOS (+28 DIAS)
+
+**Contexto:** Em 27/10/2026, o projeto atingiu 28 dias sem resposta humana REAL. As 8 maiores oportunidades (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda R$6,12bi, Tauste) receberam apresentação + proposta + follow-ups automáticos e **não retornaram**. O cold email atingiu o teto — agora a única alavanca é reengajamento via canais diretos.
+
+### Script de WhatsApp para reengajamento (enviar manualmente)
+
+**Lead SAVEGNAGO** (#1 interior SP, R$7,98bi — contato via comercial@savegnago.com.br, 28+ dias parado):
+"Olá, equipe Savegnago! Sou o Júlio da Master Óleo. Em outubro encaminhamos proposta de coleta de óleo de fritura para a rede — protocolo com a Ivone do SAC. O mercado de biodiesel está aquecido (B16 + obrigatoriedade OGR 2028) e queremos garantir prioridade para a Savegnago. Podemos agendar uma rápida conversa de 5 min para alinhar uma coleta-teste em uma loja piloto? Meu WhatsApp (11) 96785-9631. Obrigado!"
+
+**Lead COVABRA** — preencher cadastro portal Ivrim (isac.ivrim.com.br):
+**AÇÃO NECESSÁRIA: preencher cadastro de fornecedor no portal isac.ivrim.com.br** — impossível automatizar. Sem essa ação, o lead morre. A Sara (SAC) já direcionou para o portal — é o lead mais maduro para fechamento.
+
+**Lead PAGUE MENOS** (#2 interior SP, R$4,33bi — Josiane Marinho, ticket 407470):
+"Olá Josiane! Sou o Júlio da Master Óleo. Em outubro a Merlen (SAC) encaminhou nossa proposta de coleta de óleo para 10.000 L/mês (R$264.000/ano). O mercado está em expansão (B16 + demanda de biodiesel) e gostaríamos de garantir um piloto para a rede. Podemos conversar 5 min? WhatsApp (11) 96785-9631."
+
+**Lead REDE CONFIANÇA** (Sorocaba — social@confianca.com.br, proposta 2.500 L/mês):
+"Olá! Aqui é o Júlio da Master Óleo. Em outubro encaminhamos proposta de coleta de óleo para as lojas de Sorocaba — 2.500 L/mês estimados, R$54.000/ano de retorno para a rede. Com a obrigatoriedade OGR a partir de 2028 (Portaria MME/MMA nº 3/2026), fechar contrato agora garante preço e prioridade. Posso ligar rapidamente? (11) 96785-9631."
+
+**Leads locais BRASFRIGO e QUEIJOS ITUPEVA** (Salto/SP e Itupeva):
+"Olá! Júlio da Master Óleo. Falamos em outubro sobre a coleta do óleo/gordura. Somos da região (Salto) e podemos agendar uma coleta-teste essa semana, sem compromisso. Funciona para vocês? WhatsApp (11) 96785-9631."
+
+### Protocolo de reengajamento semanal
+1. **Segunda-feira**: enviar 1 WhatsApp para o lead mais quente (prioridade: Savegnago)
+2. **Quarta-feira**: enviar 1 WhatsApp para o 2º lead mais quente
+3. **Sexta-feira**: enviar 1 WhatsApp para lead local (Brasfrigo ou Queijos Itupeva)
+4. **AÇÃO HUMANA COVABRA**: preencher cadastro Ivrim (1 vez, no dia que tiver 15 min)
+
+## Dados de mercado atualizados (27/10/2026)
+- Mercado UCO Brasil: US$9,4bi (2025) → US$15,7bi (2031), CAGR 9,1% (fonte: Mobility Foresights)
+- B16 em vigor desde março/2026 (CNPE pode elevar para B25)
+- Brasil coleta 180M L/ano, potencial de 600M L — **70% do mercado inexplorado**
+- Portaria MME/MMA nº 3/2026: ≥1% OGR obrigatório a partir de 01/01/2028 (voluntário 2026-2027)
+- Preço spot SP confirmado: R$2,00/L (MF Rural, Óleo Verde 2026)
+- Ambiental Santos paga R$3/L (acima do teto — sinal de aquecimento do mercado)
+- Petrobras investindo R$23M na coleta de OGR em SP e BA
+- **Margem do biodiesel comprimida** (óleo de soja US$1.100-1.580/ton 2024-2025 → margem caiu de US$0,18 para US$0,06/L) — isso acelera a busca por UCO como matéria-prima de menor custo
+
+### Próxima fronteira: prospecção via listas CNPJ
+O Prospector esgotou as buscas web gratuitas na região de 80km de Salto. Próxima fase:
+- Comprar lista Leadjet de laticínios (CNAE 1052-0) — 6.309 CNPJs ativos no Brasil, filtrável por estado/cidade, pagamento único sem mensalidade (~R$197)
+- Comprar lista de indústrias de óleos/gorduras (CNAE 1041-4 e 1043-1)
+- Cruzar com região: Campinas, Sorocaba, Jundiaí, Piracicaba, São José dos Campos
+- Estimar volume: ~50-100 novas empresas MX-válidas na região de 80km
+
 PROVA SOCIAL: SAVEGNAGO #1 NO INTERIOR SP (descoberta Estrategista 27/09 — ABRAS Ranking 2026):
 - Savegnago Supermercados é a **MAIOR rede de supermercados do interior de São Paulo**
   com faturamento de **R$ 7,98 bilhões** (Ranking ABRAS 2026, 15ª maior do Brasil).

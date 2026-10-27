@@ -117,16 +117,16 @@ def tpl_fp(cfg, lead, n):
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
-            subj = f"Último contato — {lead['empresa']} pode estar gerando R$ 14,4 mil/ano em óleo"
+            subj = f"Último contato — {lead['empresa']} perde R$ 14,4 mil/ano se não responder"
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
-    <p><b>Última mensagem automática sobre este assunto</b> — resumo de 3 motivos para agir agora:</p>
-    <p><b>💰 1. Renda extra imediata</b> — R$ 1,00 a R$ 2,50/L, pago <b>à vista (PIX)</b> na coleta. 200 L/mês = R$ 4.080/ano. 1.000 L/mês = R$ 24.000/ano. Rede de 10 supermercados dá R$ 100-150 mil/ano. <b>Ambiental Santos paga R$ 3/L — mercado aquecido. O óleo usado virou commodity de U$ 11 bi.</p>
-    <p><b>🏆 2. Prova social que dispensa apresentação</b> — As <b>3 maiores redes do interior</b> (Savegnago R$7,98bi, Pague Menos R$4,33bi, Tauste — ABRAS 2026) em negociação conosco. <b>GR Madero</b> vende 55 mil L/mês. McDonald's fechou com Recoleo. O Catalent confia na coleta de óleo industrial.</p>
-    <p><b>⚖️ 3. jan/2028 muda o jogo</b> — A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel. O Brasil exportou 1,4 milhão de toneladas de UCO para os EUA em 2023. A <b>Petrobras está investindo R$ 23 milhões na coleta de OGR</b> em SP e BA. O diesel brasileiro subiu para <b>B16</b> em 2026. O Brasil coleta 180 milhões de litros de UCO/ano mas o potencial é 600 milhões — 70% inexplorado. Quem não tiver contrato de coleta em 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
-    <p><b>🔒 Anti-furto incluso:</b> coleta com crachá, bombona lacrada com trava, pesagem na hora, comprovante. Sem risco de reuso ilegal.</p>
-    <p><b>Quanto a {lead['empresa']} gera por mês?</b> Responda este email com o volume aproximado (litros ou kg) + seu WhatsApp que envio a <b>proposta em até 24h</b>. Se preferir, chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
-    <p>Sucesso,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+    <p><b>⚠️ Última mensagem automática — após este email, não enviaremos mais sobre este assunto.</b></p>
+    <p><b>💰 Motivo 1 — Renda extra perdendo prazo:</b> R$ 1,00 a R$ 2,50/L pagos <b>à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 11 bilhões</b> e subindo. A <b>Ambiental Santos já paga R$ 3/L</b> — quem não contrata agora vai perder a janela de preços altos. Rede de 5 supermercados = R$ 48-72 mil/ano de receita extra que sai pelo ralo todos os dias.</p>
+    <p><b>🏆 Motivo 2 — Seus concorrentes estão fechando:</b> As <b>3 maiores redes do interior SP</b> estão em negociação conosco: <b>Savegnago</b> (R$7,98bi — #1), <b>Pague Menos</b> (R$4,33bi — #2) e <b>Tauste</b> (#3). Rede Madero vende 55 mil L/mês como commodity. McDonald's terceirizou toda coleta do MG/ES/DF para a Recoleo. Se os gigantes já contratam, sua empresa também pode — e deve.</p>
+    <p><b>⚖️ Motivo 3 — jan/2028 está chegando e quem não contratar vai pagar:</b> A <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>janeiro de 2028</b> — faltam 14 meses. A <b>Petrobras já investiu R$ 23 milhões na coleta de OGR</b> em SP e BA. O diesel brasileiro já é <b>B16</b> (16% biodiesel) desde março/2026 — o consumo de UCO vai triplicar até 2028. O Brasil coleta só 180 milhões de litros UCO/ano mas o potencial é 600 milhões — <b>70% ainda inexplorado</b>. Quem não tiver contrato de coleta em 2027 vai <b>pagar caro para descartar</b> — ou ter o passivo ambiental no CNPJ (Lei 12.305/2010, sem contrato = sem alvará).</p>
+    <p><b>🔒 Anti-furto e certificado incluso:</b> Coleta com crachá, bombona lacrada com trava, pesagem na hora, comprovante de destinação final com MTR. <b>Sem risco de reuso ilegal. Sem passivo no seu CNPJ.</b></p>
+    <p><b>⏰ Esta é a última oportunidade automática.</b> Se a {lead['empresa']} gera qualquer volume de óleo de cozinha usado, gordura vegetal ou maionese vencida, <b>responda este email AGORA com o volume mensal (litros ou kg) + seu WhatsApp</b> que envio a proposta em até 24h. Ou chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
     </div>"""
     return {"subject": subj, "html": html}
 

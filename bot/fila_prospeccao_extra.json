@@ -2120,68 +2120,110 @@
     "email": "orcamento@alemednutraceutica.com.br",
     "cidade": "Sao Paulo/SP",
     "segmento": "Industria nutraceutica (capsulas, pos, liquidos)"
+  },
+  {
+    "nome": "Liofoods",
+    "empresa": "Liofoods Alimentos Ltda",
+    "email": "sac@liofoods.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de alimentos liofilizados"
+  },
+  {
+    "nome": "Eurogerm Brasil",
+    "empresa": "Eurogerm Brasil Produtos Alimenticios Ltda",
+    "email": "contato@eurogerm-brasil.com",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de ingredientes alimenticios"
+  },
+  {
+    "nome": "Poly Blends",
+    "empresa": "Poly Blends Ingredientes Alimenticios Ltda",
+    "email": "contato@polyblends.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de ingredientes alimenticios (blends)"
+  },
+  {
+    "nome": "Solo Snacks",
+    "empresa": "Solo Snacks Industria e Comercio de Alimentos Ltda",
+    "email": "contato@solosnacks.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de salgadinhos e snacks (fritura alto volume)"
+  },
+  {
+    "nome": "Organ Alimentos",
+    "empresa": "Organutech Industria de Alimentos Ltda",
+    "email": "contato@organalimentos.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de alimentos organicos e saudaveis"
+  },
+  {
+    "nome": "Roldao Supermercados",
+    "empresa": "Supermercados Roldao Ltda",
+    "email": "sheila.ferrari@roldao.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Supermercados (rede grande, 50+ lojas, padaria/rotisserie/acougue)"
+  },
+  {
+    "nome": "Portobello Alimentos",
+    "empresa": "Portobello Industria e Comercio de Alimentos Ltda",
+    "email": "contato@portobellofoods.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de alimentos"
+  },
+  {
+    "nome": "Soolis Nutraceutica",
+    "empresa": "Soolis Nutraceutica Industria e Comercio Ltda",
+    "email": "contato@soolis.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria nutraceutica (encapsulados e suplementos) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Dacoli Alimentos",
+    "empresa": "Dacoli Alimentos (Fecularia Coli Ltda)",
+    "email": "comercial@dacolialimentos.com.br",
+    "cidade": "Porto Feliz/SP",
+    "segmento": "industria de alimentos (fecularia, amidos, derivados) - estoque de oleos e gorduras"
+  },
+  {
+    "nome": "Crista Indústria (Grupo Lins)",
+    "empresa": "Crista Indústria (Grupo Lins)",
+    "email": "faleconosco@cristamargarina.com.br",
+    "cidade": "Indaiatuba/SP (fábrica: Marginal Norte, Indaiatuba - ~20km de Salto)",
+    "segmento": "industria de oleos vegetais, margarinas e gorduras vegetais (70 anos, Grupo Lins) - NICHO PRIORITARIO (vencidos >40% gordura); MX Locaweb valido 27/10"
       },
       {
-        "nome": "Liofoods",
-        "empresa": "Liofoods Alimentos Ltda",
-        "email": "sac@liofoods.com.br",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria de alimentos liofilizados"
+        "nome": "Induscamp (Campineira)",
+        "empresa": "Induscamp Industria Campineira Ltda",
+        "email": "contato@induscamp.com.br",
+        "cidade": "Campinas/SP",
+        "segmento": "Industria de acidos graxos, oleos vegetais hidrogenados e estearina - NICHO PRIORITARIO"
       },
       {
-        "nome": "Eurogerm Brasil",
-        "empresa": "Eurogerm Brasil Produtos Alimenticios Ltda",
-        "email": "contato@eurogerm-brasil.com",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria de ingredientes alimenticios"
+        "nome": "Padaria Real",
+        "empresa": "Padaria Real (201-500 funcionarios, Sorocaba)",
+        "email": "contato@padariareal.com.br",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Padaria e confeitaria industrial (fritura alto volume, salgados, massas)"
       },
       {
-        "nome": "Poly Blends",
-        "empresa": "Poly Blends Ingredientes Alimenticios Ltda",
-        "email": "contato@polyblends.com.br",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria de ingredientes alimenticios (blends)"
+        "nome": "SB Foods",
+        "empresa": "SB Foods Industria de Alimentos Ltda",
+        "email": "contato@sbfoods.com.br",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Industria de alimentos (oleos, gorduras, condimentos) - NICHO PRIORITARIO"
       },
       {
-        "nome": "Solo Snacks",
-        "empresa": "Solo Snacks Industria e Comercio de Alimentos Ltda",
-        "email": "contato@solosnacks.com.br",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria de salgadinhos e snacks (fritura alto volume)"
+        "nome": "Rede Correia Supermercados",
+        "empresa": "Supermercados Correia Ltda (lojas em Itu e Sorocaba)",
+        "email": "sac@redecorreia.com.br",
+        "cidade": "Itu/Sorocaba/SP",
+        "segmento": "Supermercados (rede local, padaria/rotisserie/acougue, fritura continua)"
       },
       {
-        "nome": "Organ Alimentos",
-        "empresa": "Organutech Industria de Alimentos Ltda",
-        "email": "contato@organalimentos.com.br",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria de alimentos organicos e saudaveis"
-      },
-      {
-        "nome": "Roldao Supermercados",
-        "empresa": "Supermercados Roldao Ltda",
-        "email": "sheila.ferrari@roldao.com.br",
-        "cidade": "Indaiatuba/SP",
-        "segmento": "Supermercados (rede grande, 50+ lojas, padaria/rotisserie/acougue)"
-      },
-      {
-        "nome": "Portobello Alimentos",
-        "empresa": "Portobello Industria e Comercio de Alimentos Ltda",
-        "email": "contato@portobellofoods.com.br",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria de alimentos"
-      },
-      {
-        "nome": "Soolis Nutraceutica",
-        "empresa": "Soolis Nutraceutica Industria e Comercio Ltda",
-        "email": "contato@soolis.com.br",
-        "cidade": "Itupeva/SP",
-        "segmento": "Industria nutraceutica (encapsulados e suplementos) - NICHO PRIORITARIO"
-      },
-            {
-              "nome": "Dacoli Alimentos",
-              "empresa": "Dacoli Alimentos (Fecularia Coli Ltda)",
-              "email": "comercial@dacolialimentos.com.br",
-              "cidade": "Porto Feliz/SP",
-              "segmento": "industria de alimentos (fecularia, amidos, derivados) - estoque de oleos e gorduras"
-            }
-          ]
+        "nome": "Conecta Industria e Comercio",
+        "empresa": "Conecta Industria e Comercio Ltda",
+        "email": "vendas@conectaind.com.br",
+        "cidade": "Sao Paulo/SP",
+        "segmento": "Comercializacao de oleos, gorduras e produtos oleo-quimicos p/ industrias alimenticias - NICHO PRIORITARIO"
+      }
+    ]
