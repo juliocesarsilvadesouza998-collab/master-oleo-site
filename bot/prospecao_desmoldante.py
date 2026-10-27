@@ -26,32 +26,25 @@ FILA = os.path.join(ROOT, "fila_desmoldante.json")
 CONFIG = os.path.join(ROOT, "config_desmoldante.json")
 LEADS = os.path.join(ROOT, "leads_desmoldante.csv")
 
-TEMPLATE = """Prezados, boa tarde!
+TEMPLATE = """Fala, tudo bem?
 
-Meu nome é {nome}, representante da {marca} (Salto/SP).
+Sou o Julio, da Master Óleo (Salto/SP). A gente desenvolveu um desmoldante que sai do óleo vegetal — e ele funciona muito bem pra concreto pré-moldado, artefatos de cimento e formas metálicas. Bloco, tubo, laje, mourão, manilha, tudo isso.
 
-Produzimos um DESMOLDANTE à base de óleo vegetal para a produção de concreto pré-moldado, artefatos de cimento e formas metálicas — ideal para blocos, tubos, lajes, mourões, manilhas, postes e peças em geral.
+O que ele entrega:
+- Base vegetal (mais limpo, mais leve pro meio ambiente)
+- Rendimento que vale a pena
+- Peça limpa, sem mancha, sem porosidade
+- Protege a forma metálica contra ferrugem
+- Aplica com trincha, pano, pistola ou automático — sem mistério
 
-Vantagens do produto:
-- Base vegetal: renovável e de menor impacto ambiental
-- Alto rendimento: cobertura eficiente com baixo consumo por peça
-- Acabamento superior: peças limpas, sem manchas ou porosidades
-- Proteção das formas: reduz oxidação e desgaste das formas metálicas
-- Fácil aplicação: trincha, pano, pistola ou sistema automático
+A gente vende em galão de 50 L (mínimo 4), e mando amostra grátis pra qualquer lugar do Brasil — é sem compromisso, só pra vocês testarem e verem se encaixa.
 
-Apresentação:
-- Galão de 50 litros
-- Quantidade mínima: 4 galões (200 litros)
-- Amostra grátis: enviamos para avaliação em todo o Brasil, sem compromisso
-- Entrega: todo o território nacional, via transportadora
+Me chama aqui ou responde esse e-mail que a gente alinha. Se quiser, já mando uma amostra amanhã.
 
-Gostaria de enviar uma amostra para avaliação na sua empresa. Podemos conversar?
-
-Atenciosamente,
-{nome}
-{marca} · Salto/SP
-WhatsApp: {whatsapp}
-{site}
+Julio
+Master Óleo · Salto/SP
+(11) 96785-9631
+https://masteroleo.eco.br/desmoldante.html
 """
 
 
@@ -66,10 +59,7 @@ def enviar(destino, empresa):
     email = cfg["email"]
     marca = cfg["empresa"]
 
-    msg = MIMEText(TEMPLATE.format(
-        nome=marca["nome"], marca=marca["marca"],
-        whatsapp=marca["whatsapp"], site=marca["site"]
-    ), "plain", "utf-8")
+    msg = MIMEText(TEMPLATE, "plain", "utf-8")
     msg["From"] = formataddr((str(Header(marca["nome"], "utf-8")), email["usuario"]))
     msg["To"] = destino
     msg["Subject"] = str(Header("Desmoldante vegetal para concreto pré-moldado — " + marca["marca"], "utf-8"))
