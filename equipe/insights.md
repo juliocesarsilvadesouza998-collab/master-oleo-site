@@ -36,6 +36,43 @@
 
 ---
 
+## 2026-10-27 18:51 (Atendente IA - cron tick - terça-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 99 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os 99 já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 7**: 0 não lidas — caixa zerada (344 leads, 277 msgids)
+- ✅ **enviar_lote.py --max 5**: **5 enviados** (Liofoods, Eurogerm, Poly Blends, Solo Snacks, Organutech); 2 pulados sem MX
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 27+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 13 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 13+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **13 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **27 dias**, o período mais longo de silêncio do projeto.
+- **5 novos emails enviados** para reaquecer o funil: Liofoods, Eurogerm, Poly Blends, Solo Snacks, Organutech — nichos alimentícios com potencial de óleo vencido e gordura.
+- **2 leads pulados** por ausência de MX: Unialimentar e NUF Farmacêutica — evitando bounce.
+- **Fila de prospecção**: 398 empresas, 336 contatados, **5 pendentes MX-válidos** — fila reabastecida.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana via WhatsApp/telefone.
+- **Bounce rate ~29%** (99/344) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
 ## 2026-10-26 12:33 (Atendente IA - cron tick #7 - segunda-feira)
 
 ### Diagnóstico do ciclo

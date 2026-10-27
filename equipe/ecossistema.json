@@ -1,4 +1,22 @@
 {
+  "ciclo_2026_10_27_cron_prospector": {
+    "timestamp": "2026-10-27 (Prospector IA - cron semanal - terça-feira)",
+    "acoes": [
+      "✅ enviar_lote.py --status — 390 empresas, 331 contatados, 80 bounce, 2 pendentes (ambos sem MX)",
+      "✅ Web searches ×4 — tentativa de descobrir novas empresas em nichos gorduras/laticínios e encapsulados",
+      "✅ Descoberta: Dacoli Alimentos (Porto Feliz/SP, comercial@dacolialimentos.com.br, MX válido) — adicionado à fila",
+      "✅ enviar_lote.py --max 15 — 8 emails enviados (2 pulados sem MX)\n✅ Descoberta: Dacoli Alimentos (Porto Feliz/SP) — adicionado à fila\n✅ Fila pós-envio: 399 empresas, 339 contatados, 80 bounce, 3 pendentes (Dacoli com MX)",
+      "✅ Fila pós-envio: 398 empresas, 339 contatados, 80 bounce, 2 pendentes (sem MX)"
+    ],
+    "diagnostico": {
+      "fila_total": 398,
+      "fila_contatados": 339,
+      "fila_bounce": 80,
+      "fila_pendentes_validas": 0,
+      "enviados_hoje": 8,
+      "observacao": "Nenhuma empresa nova de gorduras/laticínios/encapsulados encontrada via busca web que já não estivesse na base. Web searches limitadas a 4+ e sem resultados inéditos. Fila mantida pelas adições recentes de Itupeva (Liofoods, Eurogerm, Poly Blends, Solo Snacks, Organutech, Portobello, Soolis) + Roldão. Dacoli Alimentos adicionada manualmente. Fila volta a ficar crítica — apenas 2 pendentes sem MX válido. Próxima prospecção precisa de fontes alternativas (catálogos municipais, listas setoriais pagas, prospecção manual em sites de prefeituras)."
+    }
+  },
   "ciclo_2026_10_26_cron_atendente_tick7": {
     "timestamp": "2026-10-26 12:33 (Atendente IA - cron tick #7 - segunda-feira)",
     "acoes": [
@@ -2739,6 +2757,34 @@
       "observacao": "12 dias sem respostas humanas. 344 leads, 240 ativos, 99 bounces (29%). Sistema saudavel mas pipeline de fechamento parado — 8 leads quentes aguardam acao humana (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confianca, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste)."
     },
     "dias_sem_resposta_humana": 12,
+    "ultimo_lead_quente": "Pague Menos (14/10)"
+  },
+  "ciclo_2026_10_27_cron_atendente_tick1": {
+    "timestamp": "2026-10-27 18:51 (Atendente IA - cron tick - terça-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 99 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 7 — 0 não lidas — caixa zerada (344 leads, 277 msgids)",
+      "✅ watchdog.py — exit 0 — 344 leads, 240 ativos, 99 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --max 5 — 5 enviados (Liofoods, Eurogerm, Poly Blends, Solo Snacks, Organutech); 2 pulados sem MX (Unialimentar, NUF)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 344,
+      "ativos_watchdog": 240,
+      "bounce_cache_json": 99,
+      "fila_total": 398,
+      "fila_contatados": 336,
+      "fila_bounce": 80,
+      "fila_pendentes_validas": 5,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 0,
+      "respostas_humanas": "13 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 27 dias)",
+      "observacao": "13 dias sem respostas humanas. 344 leads, 240 ativos, 99 bounces (29%). Sistema saudável mas pipeline de fechamento continua parado — 8 leads quentes aguardam ação humana (Savegnago R$7,98bi, Pague Menos R$4,33bi, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste). 5 novos emails enviados para reaquecer funil (Liofoods, Eurogerm, Poly Blends, Solo Snacks, Organutech). Fila de prospecção com 5 pendentes MX-válidos."
+    },
+    "dias_sem_resposta_humana": 13,
     "ultimo_lead_quente": "Pague Menos (14/10)"
   }
 }

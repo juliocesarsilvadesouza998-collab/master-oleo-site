@@ -163,6 +163,8 @@ def main():
         ap_em = l.get("apresentacao_em") or l.get("criado_em")
         try:
             ap_dt = datetime.datetime.fromisoformat(ap_em)
+            if ap_dt.tzinfo is None:
+                ap_dt = ap_dt.replace(tzinfo=now.tzinfo)
         except Exception:
             continue
         dias = (now - ap_dt).days

@@ -2176,5 +2176,12 @@
         "email": "contato@soolis.com.br",
         "cidade": "Itupeva/SP",
         "segmento": "Industria nutraceutica (encapsulados e suplementos) - NICHO PRIORITARIO"
-      }
-    ]
+      },
+            {
+              "nome": "Dacoli Alimentos",
+              "empresa": "Dacoli Alimentos (Fecularia Coli Ltda)",
+              "email": "comercial@dacolialimentos.com.br",
+              "cidade": "Porto Feliz/SP",
+              "segmento": "industria de alimentos (fecularia, amidos, derivados) - estoque de oleos e gorduras"
+            }
+          ]
