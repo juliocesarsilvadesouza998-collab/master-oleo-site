@@ -1,4 +1,193 @@
 {
+  "ciclo_2026_10_28_melhorador_tick_1400": {
+    "timestamp": "2026-10-28 14:00 (Melhorador Continuo - cron diario)",
+    "acoes": [
+      "✅ Diagnóstico: fila de prospecção ZERADA (421 empresas, 359 contatados, 89 bounce, 2 pendentes AMBOS sem MX) — pipeline de envio parado",
+      "✅ _reabastecer_fila.py — corrigiu Unialimentar para unialimentar@gmail.com (email publicado no site oficial; domínio .com.br sem MX)",
+      "✅ _reabastecer_fila.py — removeu NUF Farmacêutica (domínio sem MX, inenviável, segmento farma fora do core)",
+      "✅ _reabastecer_fila.py — adicionou 10 empresas novas com MX validado via nslookup: Supermercado Stabilê, M&M, Tiãozinho, Tiba, Potiguara, Ponto Certo, TBS (Tietê), Mercado Atual (Itu), Boi na Brasa (Sorocaba), União Supermercados 14 lojas (Itu)",
+      "✅ enviar_lote.py --status — fila 430, 359 contatados, 89 bounce, 11 PENDENTES ENVIÁVEIS (era 2 inenviáveis)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_enviáveis": 11,
+      "fila_pendentes_antes": 2,
+      "respostas": 20,
+      "taxa_resposta": "6.3% (meta >3% — OK)",
+      "bounce_rate": "~26-29% (acima da meta 15% — atenção)",
+      "observacao": "Fila REABASTECIDA. Aprendizado do dia: emails com MX verificados 15+ dias antes podem perder MX (caso Unialimentar/NUF — domínio saiu do ar ou nunca teve servidor de email). Sempre revalidar MX na hora do envio (enviar_lote já faz). Segmentos novos: churrascarias (Boi na Brasa) e supermercados locais de Tietê/Cerquilho/Itu — municípios vizinhos ainda pouco explorados."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. AÇÃO HUMANA pendente ~29 dias.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA — WhatsApp em 3 dias se silêncio."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1402": {
+    "timestamp": "2026-10-28 14:02 (Atendente IA - cron quarta-feira - tick diurno #8)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (380 leads, 279 msgids)",
+      "✅ watchdog.py — exit 0: sistema saudável, SMTP/IMAP OK, 380 leads, 265 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX (Unialimentar, NUF Farmac.)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "enviados_hoje": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 29 dias)",
+      "observacao": "Sistema saudável. 0 respostas novas desde o tick 13:32. 29 dias sem resposta humana real — período mais longo do projeto. Fila com 2 pendentes, ambos SEM MX (Unialimentar, NUF Farmac.) — fila de envio zerada. Bounce rate ~29% (112/380) acima da meta de 15%. Pipeline de fechamento continua dependendo de ação humana via WhatsApp/telefone (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra portal Ivrim, Brasfrigo, Queijos Itupeva, Sonda, Tauste, ICT Farmacêutica)."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 29+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 ICT FARMACÊUTICA (Votorantim) — Protocolo SAC 1173 (28/10). Aguardar setor compras — se silêncio em 3 dias, reengajar via WhatsApp."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1332": {
+    "timestamp": "2026-10-28 13:32 (Atendente IA - cron quarta-feira - tick diurno #7)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (380 leads, 279 msgids)",
+      "✅ watchdog.py — exit 0: sistema saudável, SMTP/IMAP OK, 380 leads, 265 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX (Unialimentar, NUF Farmac.)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "enviados_hoje": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 29 dias)",
+      "observacao": "Sistema saudável. 0 respostas novas desde o tick 13:04. 29 dias sem resposta humana real — período mais longo do projeto. Fila com 2 pendentes, ambos SEM MX (Unialimentar, NUF Farmac.) — fila de envio zerada. Bounce rate ~29% (112/380) acima da meta de 15%. Pipeline de fechamento continua dependendo de ação humana via WhatsApp/telefone (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra portal Ivrim, Brasfrigo, Queijos Itupeva, Sonda, Tauste, ICT Farmacêutica)."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 29+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 ICT FARMACÊUTICA (Votorantim) — Protocolo SAC 1173 (28/10). Aguardar setor compras — se silêncio em 3 dias, reengajar via WhatsApp."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1304": {
+    "timestamp": "2026-10-28 13:04 (Atendente IA - cron quarta-feira - tick diurno #6)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (380 leads, 279 msgids)",
+      "✅ watchdog.py — exit 0: sistema saudável, SMTP/IMAP OK, 380 leads, 265 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX (Unialimentar, NUF Farmac.)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "enviados_hoje": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 29 dias)",
+      "observacao": "Sistema saudável. 0 respostas novas desde o tick 12:33. 29 dias sem resposta humana real — período mais longo do projeto. Fila com 2 pendentes, ambos SEM MX (Unialimentar, NUF Farmac.) — fila de envio zerada. Bounce rate ~29% (112/380) acima da meta de 15%. Pipeline de fechamento continua dependendo de ação humana via WhatsApp/telefone (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra portal Ivrim, Brasfrigo, Queijos Itupeva, Sonda, Tauste, ICT Farmacêutica)."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 29+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 ICT FARMACÊUTICA (Votorantim) — Protocolo SAC 1173 (28/10). Aguardar setor compras — se silêncio em 3 dias, reengajar via WhatsApp."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1233": {
+    "timestamp": "2026-10-28 12:33 (Atendente IA - cron quarta-feira - tick diurno #5)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (380 leads, 279 msgids)",
+      "✅ watchdog.py — exit 0: sistema saudável, SMTP/IMAP OK, 380 leads, 265 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX (Unialimentar, NUF Farmac.)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "enviados_hoje": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 29 dias)",
+      "observacao": "Sistema saudável. 0 respostas novas desde o tick 12:10. 29 dias sem resposta humana real — período mais longo do projeto. Fila com 2 pendentes, ambos SEM MX (Unialimentar, NUF Farmac.) — fila de envio zerada. Bounce rate ~29% (112/380) acima da meta de 15%. Pipeline de fechamento continua dependendo de ação humana via WhatsApp/telefone (Savegnago R$7,98bi #1, Pague Menos R$4,33bi #2, Rede Confiança, Covabra portal Ivrim, Brasfrigo, Queijos Itupeva, Sonda, Tauste, ICT Farmacêutica)."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 29+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 ICT FARMACÊUTICA (Votorantim) — Protocolo SAC 1173 (28/10). Aguardar setor compras — se silêncio em 3 dias, reengajar via WhatsApp."
+    ]
+  },
   "ciclo_2026_10_28_atendente_tick_1134": {
     "timestamp": "2026-10-28 11:34 (Atendente IA - cron quarta-feira - tick diurno #3)",
     "acoes": [

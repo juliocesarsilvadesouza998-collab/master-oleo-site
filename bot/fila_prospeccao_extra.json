@@ -2040,9 +2040,9 @@
   {
     "nome": "Unialimentar Campinas",
     "empresa": "Unialimentar Comercio e Servicos de Alimentos Ltda",
-    "email": "comercial@unialimentar.com.br",
+    "email": "unialimentar@gmail.com",
     "cidade": "Campinas/SP",
-    "segmento": "Comercio de alimentos (refeicoes coletivas, fritura continua) - MX verificado 24/10"
+    "segmento": "Comercio de alimentos (refeicoes coletivas, fritura continua) - MX verificado 24/10 (email corrigido 28/10 via site oficial)"
   },
   {
     "nome": "Halipar Holding (Griletto/Montana Grill/Croasonho)",
@@ -2106,13 +2106,6 @@
     "email": "nutrielen@nutrielen.com.br",
     "cidade": "Sao Paulo/SP",
     "segmento": "Terceirizacao de encapsulados e nutraceuticos"
-  },
-  {
-    "nome": "NUF Farmaceutica",
-    "empresa": "NUF Farmaceutica Ltda",
-    "email": "suporte@nuffarmaceutica.com.br",
-    "cidade": "Cravinhos/SP",
-    "segmento": "Industria de capsulas nutraceuticas e suplementos"
   },
   {
     "nome": "Alemed Nutraceutica",
@@ -2218,124 +2211,194 @@
     "email": "vendas@conectaind.com.br",
     "cidade": "Sao Paulo/SP",
     "segmento": "Comercializacao de oleos, gorduras e produtos oleo-quimicos p/ industrias alimenticias - NICHO PRIORITARIO"
-      },
-      {
-        "nome": "Lopes Supermercados",
-        "empresa": "Lopes Supermercados Ltda (30 lojas, Sorocaba/SP a Sao Paulo/SP)",
-        "email": "fornecedores@lopes.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Supermercados (rede 30+ lojas, padaria/rotisserie/acougue - email fornecedor direto)"
-      },
-            {
-              "nome": "Sacco Brasil",
-              "empresa": "Sacco Comercio, Importacao e Exportacao de Alimentos Ltda",
-              "email": "saccobrasil@saccobrasil.com.br",
-              "cidade": "Campinas/SP",
-              "segmento": "Industria de ingredientes e biotecnologia para laticinios - oleos/gorduras no processo"
-            },
-            {
-              "nome": "Nha Benta Industria de Alimentos",
-              "empresa": "Nha Benta Industria de Alimentos Ltda",
-              "email": "mario@nhabenta.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "Industria de alimentos - massas e pratos prontos"
-            },
-            {
-              "nome": "Chemyunion",
-              "empresa": "Chemyunion Ltda",
-              "email": "contato@chemyunion.com",
-              "cidade": "Sorocaba/SP",
-              "segmento": "Industria de oleos essenciais e cosmeticos - oleos vegetais especiais"
-            },
-            {
-                          "nome": "Vitalle Sorvetes",
-                          "empresa": "Vitalle Sorvetes Ltda",
-                          "email": "contato@vitallesorvetes.com.br",
-                          "cidade": "Indaiatuba/SP",
-                          "segmento": "Industria de sorvetes e picoles - laticinios/gorduras vegetais NICHO PRIORITARIO"
-                        },
-                        {
-                          "nome": "Castelo Alimentos",
-                          "empresa": "Castelo Alimentos S/A",
-                          "email": "lojavirtual@casteloalimentos.com.br",
-                          "cidade": "Jundiai/SP",
-                          "segmento": "Industria de maionese, molhos e condimentos - margarinas/gorduras vegetais NICHO PRIORITARIO"
-                        },
-                        {
-                          "nome": "EPN Brasil",
-                          "empresa": "EPNB Produtos Nutraceuticos do Brasil LTDA",
-                          "email": "contato@epnbrasil.com.br",
-                          "cidade": "Sao Paulo/SP",
-                          "segmento": "Industria de nutraceuticos e encapsulados (softgel, comprimidos) - oleo vegetal em maquinas NICHO ENCAPSULADOS"
-                        },
-                        {
-                                      "nome": "Armazem da Maria",
-                                      "empresa": "Armazem da Maria - Mercearia Gourmet",
-                                      "email": "falecom@armazemdamaria.com.br",
-                                      "cidade": "Campinas/SP",
-                                      "segmento": "Mercearias gourmet (rede) - frituras, rotisserie e oleos vencidos"
-                                    },
-                                    {
-                                      "nome": "Laticinios Frizzo",
-                                      "empresa": "Laticinios Frizzo",
-                                      "email": "contato@laticiniosfrizzo.com.br",
-                                      "cidade": "Tuiuti/SP",
-                                      "segmento": "Laticinios e manteiga - NICHO PRIORITARIO (vencidos >40% gordura)"
-                                    },
-                                    {
-                                      "nome": "Reino Alimentos",
-                                      "empresa": "Reino Alimentos",
-                                      "email": "contato@reinoalimentos.com.br",
-                                      "cidade": "Sao Paulo/SP",
-                                      "segmento": "Industria de maionese e molhos - NICHO PRIORITARIO"
-                                    },
-                                    {
-                                      "nome": "Goldy Alimentos",
-                                      "empresa": "Goldy Alimentos",
-                                      "email": "goldy@goldy.com.br",
-                                      "cidade": "Sao Paulo/SP",
-                                      "segmento": "Industria de gordura vegetal e alimentos - NICHO PRIORITARIO"
-                                    },
-                                    {
-                                      "nome": "Natulha",
-                                      "empresa": "Natulha",
-                                      "email": "atendimento@natulha.com.br",
-                                      "cidade": "Jundiai/SP",
-                                      "segmento": "Terceirizacao de encapsulados e suplementos - NICHO ENCAPSULADOS"
-                                    },
-                                    {
-                                      "nome": "CapsExpress",
-                                      "empresa": "CapsExpress",
-                                      "email": "contato@capsexpress.com.br",
-                                      "cidade": "Salto/SP",
-                                      "segmento": "Laboratorio de encapsulados - NICHO ENCAPSULADOS"
-                                    },
-                                    {
-                                      "nome": "Megalabs Brasil",
-                                      "empresa": "Megalabs Brasil",
-                                      "email": "sac@megalabsbrasil.com.br",
-                                      "cidade": "Jundiai/SP",
-                                      "segmento": "Industria farmaceutica e nutraceuticos - NICHO ENCAPSULADOS"
-                                    },
-                                    {
-                                      "nome": "ICT Farmaceutica",
-                                      "empresa": "ICT Farmaceutica",
-                                      "email": "suporte@ictfarmaceutica.com.br",
-                                      "cidade": "Votorantim/SP",
-                                      "segmento": "Industria farmaceutica - oleo vegetal em limpeza de maquinas NICHO ENCAPSULADOS"
-                                    },
-                                    {
-                                      "nome": "Ashland Brasil",
-                                      "empresa": "Ashland Brasil",
-                                      "email": "Contato.nutrition@ashland.com",
-                                      "cidade": "Jundiai/SP",
-                                      "segmento": "Industria de ingredientes e aditivos alimentares/farmaceuticos - NICHO ENCAPSULADOS"
-                                    },
-                                    {
-                                      "nome": "Sanofi Medley",
-                                      "empresa": "Sanofi Medley",
-                                      "email": "sac.brasil@sanofi.com",
-                                      "cidade": "Hortolandia/SP",
-                                      "segmento": "Industria farmaceutica (gigante) - oleo vegetal em limpeza de maquinas NICHO ENCAPSULADOS"
-                                    }
-                                  ]
+  },
+  {
+    "nome": "Lopes Supermercados",
+    "empresa": "Lopes Supermercados Ltda (30 lojas, Sorocaba/SP a Sao Paulo/SP)",
+    "email": "fornecedores@lopes.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Supermercados (rede 30+ lojas, padaria/rotisserie/acougue - email fornecedor direto)"
+  },
+  {
+    "nome": "Sacco Brasil",
+    "empresa": "Sacco Comercio, Importacao e Exportacao de Alimentos Ltda",
+    "email": "saccobrasil@saccobrasil.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Industria de ingredientes e biotecnologia para laticinios - oleos/gorduras no processo"
+  },
+  {
+    "nome": "Nha Benta Industria de Alimentos",
+    "empresa": "Nha Benta Industria de Alimentos Ltda",
+    "email": "mario@nhabenta.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de alimentos - massas e pratos prontos"
+  },
+  {
+    "nome": "Chemyunion",
+    "empresa": "Chemyunion Ltda",
+    "email": "contato@chemyunion.com",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de oleos essenciais e cosmeticos - oleos vegetais especiais"
+  },
+  {
+    "nome": "Vitalle Sorvetes",
+    "empresa": "Vitalle Sorvetes Ltda",
+    "email": "contato@vitallesorvetes.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Industria de sorvetes e picoles - laticinios/gorduras vegetais NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Castelo Alimentos",
+    "empresa": "Castelo Alimentos S/A",
+    "email": "lojavirtual@casteloalimentos.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de maionese, molhos e condimentos - margarinas/gorduras vegetais NICHO PRIORITARIO"
+  },
+  {
+    "nome": "EPN Brasil",
+    "empresa": "EPNB Produtos Nutraceuticos do Brasil LTDA",
+    "email": "contato@epnbrasil.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de nutraceuticos e encapsulados (softgel, comprimidos) - oleo vegetal em maquinas NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "Armazem da Maria",
+    "empresa": "Armazem da Maria - Mercearia Gourmet",
+    "email": "falecom@armazemdamaria.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Mercearias gourmet (rede) - frituras, rotisserie e oleos vencidos"
+  },
+  {
+    "nome": "Laticinios Frizzo",
+    "empresa": "Laticinios Frizzo",
+    "email": "contato@laticiniosfrizzo.com.br",
+    "cidade": "Tuiuti/SP",
+    "segmento": "Laticinios e manteiga - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Reino Alimentos",
+    "empresa": "Reino Alimentos",
+    "email": "contato@reinoalimentos.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de maionese e molhos - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Goldy Alimentos",
+    "empresa": "Goldy Alimentos",
+    "email": "goldy@goldy.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de gordura vegetal e alimentos - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Natulha",
+    "empresa": "Natulha",
+    "email": "atendimento@natulha.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Terceirizacao de encapsulados e suplementos - NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "CapsExpress",
+    "empresa": "CapsExpress",
+    "email": "contato@capsexpress.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "Laboratorio de encapsulados - NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "Megalabs Brasil",
+    "empresa": "Megalabs Brasil",
+    "email": "sac@megalabsbrasil.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria farmaceutica e nutraceuticos - NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "ICT Farmaceutica",
+    "empresa": "ICT Farmaceutica",
+    "email": "suporte@ictfarmaceutica.com.br",
+    "cidade": "Votorantim/SP",
+    "segmento": "Industria farmaceutica - oleo vegetal em limpeza de maquinas NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "Ashland Brasil",
+    "empresa": "Ashland Brasil",
+    "email": "Contato.nutrition@ashland.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de ingredientes e aditivos alimentares/farmaceuticos - NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "Sanofi Medley",
+    "empresa": "Sanofi Medley",
+    "email": "sac.brasil@sanofi.com",
+    "cidade": "Hortolandia/SP",
+    "segmento": "Industria farmaceutica (gigante) - oleo vegetal em limpeza de maquinas NICHO ENCAPSULADOS"
+  },
+  {
+    "nome": "Supermercado Stabile",
+    "empresa": "Supermercado Stabile Ltda",
+    "email": "supermercadostabile@gmail.com",
+    "cidade": "Tiete/SP",
+    "segmento": "Supermercado local (padaria/rotisserie/acougue - fritura continua, oleo vencido de prateleira)"
+  },
+  {
+    "nome": "Supermercado M&M",
+    "empresa": "Supermercado M M Ltda",
+    "email": "contato@mmsupermercado.com.br",
+    "cidade": "Tiete/SP",
+    "segmento": "Supermercado local (padaria/rotisserie - fritura continua)"
+  },
+  {
+    "nome": "Supermercado Tiaozinho",
+    "empresa": "Supermercado Elias Moreira Ltda",
+    "email": "cartoes@supermercadostiaozinho.com.br",
+    "cidade": "Tiete/SP",
+    "segmento": "Supermercado local (padaria/rotisserie - fritura continua)"
+  },
+  {
+    "nome": "Supermercado Tiba",
+    "empresa": "Supermercados Tiba Ltda",
+    "email": "suptiba@yahoo.com.br",
+    "cidade": "Tiete/SP",
+    "segmento": "Supermercado local (padaria/rotisserie - fritura continua)"
+  },
+  {
+    "nome": "Mercado Potiguara",
+    "empresa": "Mercado Potiguara",
+    "email": "mercado.potiguara@bol.com.br",
+    "cidade": "Tiete/SP",
+    "segmento": "Mercado local (rotisserie - fritura continua)"
+  },
+  {
+    "nome": "Mercado Ponto Certo",
+    "empresa": "Mercado Ponto Certo",
+    "email": "mercado.pontocertotiete@gmail.com",
+    "cidade": "Tiete/SP",
+    "segmento": "Mercado local (rotisserie - fritura continua)"
+  },
+  {
+    "nome": "TBS Minimercado",
+    "empresa": "TBS Minimercado Ltda",
+    "email": "tbminimercado@gmail.com",
+    "cidade": "Tiete/SP",
+    "segmento": "Minimercado local (rotisserie - fritura)"
+  },
+  {
+    "nome": "Mercado Atual",
+    "empresa": "Mercado Atual Ltda",
+    "email": "atualsupermercado@gmail.com",
+    "cidade": "Itu/SP",
+    "segmento": "Supermercado local (padaria/rotisserie - fritura continua, oleo vencido de prateleira)"
+  },
+  {
+    "nome": "Boi na Brasa Sorocaba",
+    "empresa": "Churrascaria Boi na Brasa Sorocaba",
+    "email": "reserva@boinabrasasorocaba.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Churrascaria (fritura alto volume - batata frita, pasteis, coxinhas, mandioca frita)"
+  },
+  {
+    "nome": "Uniao Supermercados",
+    "empresa": "Uniao Supermercados (14 lojas, 30+ anos)",
+    "email": "sac@uniaosupermercados.com",
+    "cidade": "Itu/SP",
+    "segmento": "Supermercados (rede 14+ lojas - padaria/rotisserie/acougue, fritura continua, oleo vencido)"
+  }
+]
