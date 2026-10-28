@@ -33,9 +33,15 @@ usado e gordura vegetal usada — Salto/SP e região).
 ## 🎯 Metas atuais
 
 - Meta 50 emails de prospecção (iniciada 2026-08-14): **atingida** (74 envios)
-- Meta da semana (18–24/08): esgotar os **13 pendentes** da fila (84 empresas,
-  foco Jundiaí: ingredientes/panificação) e manter fila ≥ 30 com reposição
-  contínua pelo Prospector
+- **Meta da semana (28/10–03/11) — FECHAMENTO (não mais volume):**
+  1. 🔴 **FECHAR SAVEGNAGO** (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 28+ dias parado. PRIORIDADE ABSOLUTA.
+  2. 🔴 **COVABRA** — preencher cadastro de fornecedor (isac.ivrim.com.br) — única ação 100% manual que destrava contrato de rede.
+  3. 🔴 **PAGUE MENOS** (#2, R$4,33bi) — acompanhar ticket 407470 (Josiane Marinho).
+  4. 🔴 **REDE CONFIANÇA** — reforçar proposta 2.500 L/mês com bônus de exclusividade +R$0,10/L.
+  5. 🟠 **BRASFRIGO e QUEIJOS ITUPEVA** — agendar coleta-teste (locais, já responderam).
+  6. 🟡 **SONDA e TAUSTE** — ligar (11) 2145-6200 / (15) 3324-4680.
+  7. 🟢 **Manter funil aquecido**: +5-10 empresas via fila_prospeccao_extra.json com MX verificado (prioridade: supermercados regionais e indústrias de óleos/gorduras).
+- **NOVO LEAD ESTRATÉGICO**: Lopes Supermercados (fornecedores@lopes.com.br — email direto de fornecedores, página "seja um fornecedor" no site)
 - Foco: empresas grandes (porte Arcor) em Campinas, Indaiatuba, Itu, Sorocaba,
   Jundiaí, Louveira, Valinhos, Piracicaba e Salto/SP; novos segmentos:
   ingredientes/aditivos (Jundiaí), refeições coletivas (Salto), suplementos

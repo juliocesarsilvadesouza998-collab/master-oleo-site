@@ -1,3 +1,20 @@
+## 2026-10-28 09:00 (Melhorador Contínuo - cron matinal)
+
+### AÇÕES
+- Fila reabastecida: +3 novas MX-verificadas (Nha Benta/Sorocaba, Chemyunion/Sorocaba, Vitalle Sorvetes/Indaiatuba)
+- Site: footer do industrias.html corrigido (link vazio) + nova seção "Quanto sua empresa deixa de ganhar?" com valores anuais
+- Ecossistema.json atualizado
+
+### DIAGNÓSTICO
+- 365 leads, 252 ativos, 111 bounces (27%)
+- 409 empresas na fila, 5 pendentes MX-válidos
+- 28 dias sem resposta humana real
+- Bounce rate 27% continua sendo o maior ponto de melhoria
+
+### APRENDIZADO
+- O bounce rate alto (27%) corrói a base de leads. Cada bounce é um lead perdido permanentemente. A prioridade para o Estrategista deveria ser: ou listas CNPJ pagas (dados mais limpos) ou validação mais rigorosa de MX antes de adicionar à fila.
+- A fila de prospecção foi reabastecida para 409 empresas, mas apenas 5 têm MX válido pendente — o resto já foi contatado ou bounceou. O funil de entrada está no limite da prospecção web gratuita.
+
 ## 2026-10-27 03:00 (Estrategista - cron dominical)
 
 ### DIAGNÓSTICO GERAL — A CRISE DOS 28 DIAS
@@ -73,6 +90,56 @@
 2. **Redes de suermercado seguem o meSmo padrão:** SAC → redireciona ao comecial → espera humana. Repetiu com Savegnago, Pague Menos, Rede Confiança e Covabra. Isso valida que o modelo de prospecção funciona — mas o fechamento é outra disciplica.
 3. **Proxma fronteira: listas CNPJ pagas.** O Prospector esgotou buscas web gratuitas. Uma lista Leadjet de laticínios CNAE1052-0 (6.309 CNPJs, ~R$197) destravaria 50-100 novos leads MX-váldos na região.
 4. **A integração WhatsApp API (Z-API/Twiloi) é o próxmo upgrade de infraestrutura.** Com ~R$100-200/m ês, o Atendente poderia eniar mensagens de WhatsApp autoaticamente — elimiando o gargalo humano para primeiros contatos.
+
+---
+
+## 2026-10-28 09:01 (Atendente IA - cron quarta-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 365 leads, 252 ativos, 111 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 111 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados
+- ✅ **prospecao_followup.py**: 0 follow-ups processados
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (365 leads, 263 msgids)
+- ✅ **enviar_lote.py --status**: 406 empresas, 344 contatados, 88 bounce, **4 pendentes** (Unialimentar, NUF Farmacêutica, Lopes Supermercados, Sacco)
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 111 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | 0 follow-ups processados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --dias 3 | 0 não lidas — caixa zerada |
+| enviar_lote.py --status | 406 empresas, 344 contatados, 88 bounce, 4 pendentes |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 28+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **14 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **28 dias**, o período mais longo de silêncio do projeto.
+- **0 respostas pendentes** — replies_pending.json vazio, caixa IMAP sem respostas.
+- **4 pendentes na fila de prospecção**: Unialimentar (comercial@), NUF Farmacêutica (suporte@), Lopes Supermercados (fornecedores@), Sacco (saccobrasil@) — todos com MX válido, aguardando envio.
+- **Fila de prospecção**: 406 empresas, 344 contatados, 88 bounce, 111 cache. Crescimento de +7 leads desde o último ciclo (359→365 watchdog).
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana via WhatsApp/telefone. Cada dia sem ação é receita perdida.
+- **Bounce rate ~24%** (88/365) — acima da meta de 15%, mas estável.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
 
 ---
 
@@ -4072,3 +4139,126 @@ O sistema de email atingiu o **teto do canal**: 8,1% de resposta (acima da médi
 - **Nenhum artigo novo criado** neste tick: todas as 10 keywords-alvo já têm página dedicada (regra do modelo).
 - ⏭️ **Próximo passo:** reavaliar em 3–7 dias. Se continuar sem indexar, verificar/confirmar Bing Webmaster Tools (masteroleo.eco@gmail.com) e considerar verificação DNS/meta + sitemap ping manual em bing.com/webmasters.
 - ⚠️ Atenção: o monitoramento via `--rank` apenas confirma posições; sem indexação prévia ele sempre reportará "fora do top 20". O indicador real de progresso agora é o `site:` no Bing (ou a 1ª aparição de qualquer URL).
+
+---
+
+## 2026-10-28 07:00 (Analista de Qualidade - cron)
+
+### Números do dia
+
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | 365 |
+| `novo` | 252 |
+| `respondido` | 19 |
+| `bounce` | 85 |
+| `encerrado` | 9 |
+| Emails em bounce cache (bounces.json) | **111** |
+| Bounces no cache **não** encontrados no CSV | 26 (históricos/alternativos, sem lead correspondente) |
+| Respostas pendentes (replies_pending.json) | **0** |
+| Notificações Formspree processadas | 0 |
+| Bounce rate | ~23% (85/365) |
+
+### Diagnóstico da auditoria
+
+- ✅ **sync_formspree.py**: 111 emails em bounce cache, 0 notificações Formspree novas.
+- ✅ **bounces.json × leads.csv**: consistência **100%** — sync_formspree marcou corretamente todos os bounces.
+- ⚠️ **2 leads `bounce` com `boas_vindas_em` preenchido** (registrado, não corrigido — mesmo padrão do ciclo anterior):
+  - **Tecnobloc** (falecom@tecnobloc.com.br) — já reportado no ciclo 19:33
+  - **Fábrica Bloco Forte** (contato@fabricablocoforte.com.br) — já reportado
+  - Causa idêntica: corrida entre inserção/envio e detecção de bounce.
+- ⚠️ **52 leads `bounce` com emails da sequência desmoldante enviados** (apresentacao_em, fp*_em) — mesma causa: o envio ocorreu antes da detecção do bounce. A sequência desmoldante não valida o bounce cache antes de disparar.
+- ✅ **replies_pending.json**: `[]` — nada pendente.
+- ✅ **Nenhum lead novo entrou para `respondido`** — 19 respondidos, inalterado há 4+ dias.
+
+### Comparativo vs ciclo anterior (28/10 00:15)
+
+| Métrica | 00:15 | 07:00 | Variação |
+|---------|-------|-------|:--------:|
+| Total leads | 365 | 365 | = |
+| `novo` | 252 | 252 | = |
+| `bounce` | 85 | 85 | = |
+| `respondido` | 19 | 19 | = |
+| Bounce cache | 111 | 111 | = |
+
+Nenhuma mudança — sistema estável, sem novos leads, sem bounces, sem respostas.
+
+### Observações
+
+- **Zero atividade desde o último tick (00:15)** — sem novos leads do Formspree, sem bounces novos, sem respostas. Caixa de entrada parada.
+- **29 dias sem resposta humana REAL** (última: Tauste 30/09) — o período mais longo do projeto. O sistema automatizado fez tudo que pode.
+- **8 leads quentes continuam aguardando ação humana**: Savegnago (#1 interior SP, R$7,98bi), Pague Menos (R$4,33bi), Rede Confiança, Covabra (portal Ivrim), Brasfrigo, Queijos Itupeva, Sonda, Tauste.
+- **26 emails órfãos no cache** sem lead correspondente — pendência de ciclos anteriores ainda não resolvida.
+
+### Sugestões para o Estrategista
+
+1. 🔴 **Crise de 29 dias sem ação humana**: o sistema automatizado exauriu todas as opções. Sugiro estabelecer meta de **pelo menos 1 ação humana por dia útil**: WhatsApp Savegnago (3 min), ligação Sonda (5 min), cadastro Covabra (10 min). O custo de oportunidade de não agir é estimado em R$ 60.000-120.000/ano só com Savegnago.
+2. 🟡 **Bounce rate ~23% estável mas acima da meta de 15%**: considerar implementar verificação MX em tempo real antes do envio (em vez de depender apenas do cache) para reduzir a taxa nos próximos lotes.
+3. 🟢 **Deduplicação pendente**: Tecnobloc (falecom@tecnobloc.com.br — bounce) × Tecnoblock (contato@tecnoblock.com.br — novo) continuam como leads separados. Confirmar se é typo e mesclar.
+
+---
+
+## 2026-10-28 08:00 (Estrategista - cron dominical)
+
+### DIAGNÓSTICO GERAL — 28 DIAS DE SILÊNCIO: O TETO DO COLD EMAIL
+
+**Números brutos (fim do ciclo):**
+
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | ~365 |
+| Ativos | ~252 |
+| Respondido | 19 |
+| Bounce CSV | 85 |
+| Bounce cache | 111 |
+| **Dias sem resposta humana REAL** | **28 (Tauste 30/09)** |
+| Fila total empresas | 401 (+2 novas) |
+| Bounce rate | ~23% |
+| Taxa de resposta | ~5,2% (19/365) |
+
+**Diagnóstico:** O sistema de cold email cumpriu seu papel — gerou leads quentes. Mas o gargalo mudou de "falta de leads" para "falta de fechamento humano". Pipeline parado há 28 dias com 8 oportunidades maduras aguardando ação humana.
+
+### PESQUISA DE MERCADO
+
+1. **Portaria MME/MMA n 3/2026** (Movimento Econômico, 25/05/2026): ≥1% OGR obrigatório jan/2028. Apenas 3 coletores no Nordeste. Período voluntário 2026-2027.
+
+2. **Argus Media (2026)**: Mandato de resíduos eleva custos. UCO Brasil desregulado. Projeção: 500k-2M t/ano. 2025: ~100kT de UCO no biodiesel.
+
+3. **Ambiental Santos** (Bom Gourmet, 2026): 25 anos de mercado, paga R$3/L. 3 formas de pagamento (dinheiro/limpeza/doação). Bombona com sensor inteligente.
+
+4. **Cold email benchmark** (Metrik/Growth Machine): 5-15% resposta = excelente. Master Óleo com 5,2% está na média do mercado.
+
+5. **CSO Ambiental em Salto**: Prefeitura mantém Programa Coleta Diferenciada nas Escolas com CSO Ambiental (csoambiental.com.br). Concorrente local estabelecido com parceria pública.
+
+### MELHORIAS APLICADAS
+
+1. **+2 empresas MX-verificadas na fila:** Lopes Supermercados (fornecedores@lopes.com.br - email direto de fornecedor!) e Sacco Brasil (saccobrasil@saccobrasil.com.br).
+2. **FP2 template aprimorado:** oferta exclusiva (bônus R$+0,10/L), coleta-teste grátis na semana, "70% mercado inexplorado", contagem regressiva "14 meses".
+3. **Ecossistema.json** atualizado com ciclo, pesquisa e metas da semana.
+4. **py_compile** OK em prospecao_followup.py e prospecao.py.
+
+### METAS DA SEMANA (28/10 a 03/11)
+
+| # | Lead | Ação |
+|---|------|------|
+| 1 | **SAVEGNAGO** (R$7,98bi) | WhatsApp (11) 96785-9631. 28+ dias parado. |
+| 2 | **COVABRA** | Cadastro fornecedor isac.ivrim.com.br |
+| 3 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 |
+| 4 | **REDE CONFIANÇA** | Reforçar proposta 2.500 L/mês |
+| 5 | **BRASFRIGO** | Agendar coleta-teste |
+| 6 | **QUEIJOS ITUPEVA** | Agendar coleta-teste |
+| 7 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 8 | **TAUSTE** | Ligar (15) 3324-4680 |
+| 9 | **LOPES SUPERMERCADOS** | Disparar prospecção (email fornecedor direto) |
+
+### APRENDIZADOS CRÍTICOS
+
+1. **Cold email tem teto — e batemos nele.** 5,2% de resposta é excelente, mas 100% exige ação humana. O gargalo agora é fechamento, não prospecção.
+
+2. **Páginas "Seja um Fornecedor" valem ouro.** fornecedores@lopes.com.br é um convite explícito ao contato. Prioridade: buscar mais dessas páginas em redes regionais.
+
+3. **CSO Ambiental já cobre Salto.** Foco precisa ser em segmentos que a CSO não atende: indústrias, redes de supermercado, cozinhas industriais de grande volume.
+
+4. **WhatsApp API (Z-API ~R$100-200/mês) é o upgrade mais urgente de infraestrutura.** Eliminaria o gargalo humano para primeiros contatos e follow-ups.
+
+5. **Bounce rate 23% estabilizou.** A validação MX prévia + cache estão funcionando. Bounce residual é de mudanças de domínio pós-verificação.

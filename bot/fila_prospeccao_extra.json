@@ -2218,5 +2218,68 @@
     "email": "vendas@conectaind.com.br",
     "cidade": "Sao Paulo/SP",
     "segmento": "Comercializacao de oleos, gorduras e produtos oleo-quimicos p/ industrias alimenticias - NICHO PRIORITARIO"
-  }
-]
+      },
+      {
+        "nome": "Lopes Supermercados",
+        "empresa": "Lopes Supermercados Ltda (30 lojas, Sorocaba/SP a Sao Paulo/SP)",
+        "email": "fornecedores@lopes.com.br",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Supermercados (rede 30+ lojas, padaria/rotisserie/acougue - email fornecedor direto)"
+      },
+            {
+              "nome": "Sacco Brasil",
+              "empresa": "Sacco Comercio, Importacao e Exportacao de Alimentos Ltda",
+              "email": "saccobrasil@saccobrasil.com.br",
+              "cidade": "Campinas/SP",
+              "segmento": "Industria de ingredientes e biotecnologia para laticinios - oleos/gorduras no processo"
+            },
+            {
+              "nome": "Nha Benta Industria de Alimentos",
+              "empresa": "Nha Benta Industria de Alimentos Ltda",
+              "email": "mario@nhabenta.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "Industria de alimentos - massas e pratos prontos"
+            },
+            {
+              "nome": "Chemyunion",
+              "empresa": "Chemyunion Ltda",
+              "email": "contato@chemyunion.com",
+              "cidade": "Sorocaba/SP",
+              "segmento": "Industria de oleos essenciais e cosmeticos - oleos vegetais especiais"
+            },
+            {
+                          "nome": "Vitalle Sorvetes",
+                          "empresa": "Vitalle Sorvetes Ltda",
+                          "email": "contato@vitallesorvetes.com.br",
+                          "cidade": "Indaiatuba/SP",
+                          "segmento": "Industria de sorvetes e picoles - laticinios/gorduras vegetais NICHO PRIORITARIO"
+                        },
+                        {
+                          "nome": "Castelo Alimentos",
+                          "empresa": "Castelo Alimentos S/A",
+                          "email": "lojavirtual@casteloalimentos.com.br",
+                          "cidade": "Jundiai/SP",
+                          "segmento": "Industria de maionese, molhos e condimentos - margarinas/gorduras vegetais NICHO PRIORITARIO"
+                        },
+                        {
+                          "nome": "EPN Brasil",
+                          "empresa": "EPNB Produtos Nutraceuticos do Brasil LTDA",
+                          "email": "contato@epnbrasil.com.br",
+                          "cidade": "Sao Paulo/SP",
+                          "segmento": "Industria de nutraceuticos e encapsulados (softgel, comprimidos) - oleo vegetal em maquinas NICHO ENCAPSULADOS"
+                        },
+                        {
+                          "nome": "Pronutrition",
+                          "empresa": "Pronutrition Fabricacao de Suplementos",
+                          "email": "compras@pronutrition.com.br",
+                          "cidade": "Valinhos/SP",
+                          "segmento": "Fabrica de suplementos e terceirizacao de encapsulados - oleo vegetal em maquinas NICHO ENCAPSULADOS"
+                        },
+                        {
+                          "nome": "Armazem da Maria",
+                          "empresa": "Armazem da Maria - Mercearia Gourmet",
+                          "email": "falecom@armazemdamaria.com.br",
+                          "cidade": "Campinas/SP",
+                          "segmento": "Mercearias gourmet (rede) - frituras, rotisserie e oleos vencidos"
+                        }
+                      ]

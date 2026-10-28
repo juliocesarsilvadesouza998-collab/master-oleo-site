@@ -1,5 +1,45 @@
 {
- "atualizado_em": "2026-10-24 18:04 (Atendente IA - cron tick - sábado)",
+ "atualizado_em": "2026-10-28 09:01 (Atendente IA - cron quarta-feira)",
+   "ciclo_2026_10_28_cron_atendente_09_01": {
+       "timestamp": "2026-10-28 09:01 (Atendente IA - cron quarta-feira)",
+       "acoes": [
+         "sync_formspree.py — 111 bounces cache, 0 notificações Formspree novas",
+         "corrigir_emails.py — 0 processados (todos os 111 bounces já tentados anteriormente)",
+         "prospecao_followup.py — 0 follow-ups atrasados",
+         "send_sequence — sequência processada (nada a enviar)",
+         "check-replies — 0 respostas (replies_pending.json vazio)",
+         "watchdog.py — exit 0: 365 leads, 252 ativos, 111 bounces, SMTP/IMAP OK",
+         "scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX",
+         "enviar_lote.py --status — 406 empresas, 344 contatados, 88 bounce, 4 pendentes (Unialimentar, NUF Farmacêutica, Lopes Supermercados, Sacco)"
+       ],
+     "diagnostico": {
+       "total_leads_watchdog": 365,
+       "ativos_watchdog": 252,
+       "bounce_cache_json": 111,
+       "watchdog": "exit 0 — saudável, SMTP/IMAP OK",
+       "fila_total": 406,
+       "fila_contatados": 344,
+       "fila_bounce": 88,
+       "fila_pendentes_validas": "4 — Unialimentar, NUF Farmacêutica, Lopes Supermercados, Sacco (MX válido)",
+       "dias_sem_resposta_humana": "14 dias desde Pague Menos (14/10); última humana real: Tauste 30/09 = 28 dias",
+       "respostas_reais": 0,
+       "respostas_humanas": "Nenhuma — caixa IMAP zerada (scan_inbox --dias 3: 0 não lidas)",
+       "respostas_auto": 0,
+       "propostas_contrato_geradas": 0,
+       "relatorios_esg_gerados": 0,
+       "observacao": "Sistema saudável, porém 14º dia sem respostas humanas novas. 28 dias desde a última resposta humana real (Tauste 30/09). Pipeline de fechamento 100% parado — todos os 8 leads quentes (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste) aguardam ação humana via WhatsApp/telefone. Fila de prospecção com 4 pendentes MX-válidos (Unialimentar, NUF, Lopes, Sacco). Nenhuma resposta para processar, nenhum lead informou volume."
+     },
+     "leads_quentes": [
+       "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 28+ dias sem ação.",
+       "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+       "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+       "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação.",
+       "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+       "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+       "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+       "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09."
+     ]
+   },
    "ciclo_2026_10_24_cron_atendente_18_04": {
        "timestamp": "2026-10-24 18:04 (Atendente IA - cron tick - sábado)",
        "acoes": [

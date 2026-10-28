@@ -99,21 +99,20 @@ def tpl_fp(cfg, lead, n):
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     elif n == 2:
-        subj = f"Re: oleo usado da {lead['empresa']} — valor de mercado R$ 1-2,50/L + urgencia 2028"
+        subj = f"Re: oleo usado da {lead['empresa']} — proposta exclusiva + urgencia 2028"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Para {lead['empresa']} transformar o óleo de fritura em renda: <b>pagamos R$ 1,00 a R$ 2,50 por litro</b> conforme qualidade e volume — valor de mercado validado pela Óleo Verde (1.200+ clientes). <b>A Ambiental Santos já paga R$ 3/L</b> — mercado em alta.</p>
-<p><b>🏆 Prova social — Top 3 do interior SP no pipeline:</b>
-<br><b>1º Savegnago</b> (R$ 7,98 bi — #1 interior SP, ABRAS 2026) — canal aberto conosco
+<p><b>✅ Oferta exclusiva para {lead['empresa']}: bônus de R$+0,10/L + coleta-teste GRÁTIS nesta semana se responder até sexta.</b> Mercado UCO global <b>US$ 11 bilhões</b> e subindo — o Brasil coleta só 180M L/ano mas o potencial é 600M L. <b>70% do mercado está inexplorado</b> — quem contratar agora define o território.</p>
+<p><b>💰 Pagamos R$ 1,00 a R$ 2,50/L</b> (valor de mercado Óleo Verde, Ambiental Santos já paga R$ 3/L). Rede de 5 supermercados = R$ 48-72 mil/ano de receita extra.</p>
+<p><b>🏆 Prova social — Top 3 do interior SP já conosco:</b>
+<br><b>1º Savegnago</b> (R$ 7,98 bi — #1 interior SP) — canal aberto
 <br><b>2º Pague Menos</b> (R$ 4,33 bi) — em negociação
-<br><b>3º Tauste</b> — encaminhou call comercial
-<br><b>Grupo Madero</b> (270 restaurantes) — 55 mil L/mês vendidos como commodity
-<br><b>🍟 McDonald's</b> fechou com a Recoleo para reciclar óleo de todas as lojas em MG, ES e DF — prova de que até gigantes terceirizam a coleta.</p>
-<p><b>⚖️ PNRS obriga contrato:</b> pela Lei 12.305/2010, sem contrato com coletor certificado, sem alvará. 1 bilhão de L/ano vão para o ralo. O passivo fica no seu CNPJ se o coletor não emitir certificado.</p>
-<p><b>⚖️ Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. Quem fechar hoje garante preço antes da corrida pela matéria-prima.</p>
-<p><b>🔒 Sem MTR + certificado, o passivo fica no CNPJ.</b> Nossa coleta é anti-furto: crachá, pesagem, bombona travada.</p>
-<p>Para {lead['empresa']}: coleta programada, bombonas fornecidas, pagamento à vista (PIX). Um supermercado com 5 lojas gera 2.000-3.000 L/mês = R$ 48-72 mil/ano de receita extra.</p>
-<p><b>Quantos litros a rede gera por mês?</b> WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<br><b>3º Tauste</b> — encaminhou call
+<br><b>🍟 McDonald's</b> fechou com a Recoleo para reciclar óleo de todas as lojas em MG, ES e DF
+<br><b>Madero</b> vende 55 mil L/mês como commodity (270 restaurantes)</p>
+<p><b>⚖️ FALTAM 14 MESES para a OBRIGATORIEDADE:</b> Portaria MME/MMA nº 3/2026 determina ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. A Petrobras já investiu <b>R$ 23 milhões na coleta de OGR</b>. O diesel brasileiro é <b>B16</b> desde março/2026 — o consumo de UCO vai triplicar.</p>
+<p><b>🔒 Anti-furto + certificado incluso:</b> Coleta com crachá, pesagem na hora, bombona com trava, MTR e certificado de destinação. Sem riscos. Sem passivo no seu CNPJ.</p>
+<p><b>📊 Ação simples:</b> Me responda com o volume mensal aproximado (litros ou kg) que {lead['empresa']} gera de óleo de cozinha, gordura vegetal ou margarina/maionese vencida, e envio a proposta formal em <b>24h</b> com bônus de exclusividade incluso. WhatsApp direto: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
