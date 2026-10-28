@@ -15,7 +15,7 @@ import argparse, csv, datetime, json, os, re, ssl, smtplib, subprocess, sys, tim
 from email.header import Header
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.utils import formataddr, make_msgid
+from email.utils import formataddr, make_msgid, formatdate
 
 # Reutiliza o template otimizado do prospecao.py (fonte única de verdade)
 from prospecao import tpl_apresentacao as tpl_apresentacao_novo, _plain_from_html
@@ -137,6 +137,11 @@ def smtp_send(cfg, e, to_addr, subject, html):
     msg["To"] = to_addr
     msg["Subject"] = Header(subject, "utf-8")
     msg["Message-ID"] = make_msgid()
+    msg["Reply-To"] = e["usuario"]
+    msg["List-Unsubscribe"] = f"<mailto:{e['usuario']}?subject=unsubscribe>"
+    msg["X-Mailer"] = "Master Oleo Enterprise System"
+    msg["X-Priority"] = "3"
+    msg["Date"] = formatdate(localtime=True)
     msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
     smtp.sendmail(e["usuario"], [to_addr], msg.as_string())
