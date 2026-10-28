@@ -1,4 +1,25 @@
 {
+  "ciclo_2026_10_28_prospector": {
+    "timestamp": "2026-10-28 09:15 (Prospector - cron matinal)",
+    "acoes": [
+      "✅ Diagnóstico: fila 404 empresas / 344 contatados / 88 bounces / 2 pendentes (ambos sem MX — fila de envio zerada)",
+      "✅ +3 novas MX-verificadas via web: Castelo Alimentos (Jundiaí, maionese/molhos NICHO PRIORITARIO), EPN Brasil (nutracêuticos/encapsulados NICHO ENCAPSULADOS), Armazém da Maria (Campinas, mercearia gourmet)",
+      "✅ Recuperadas 9 empresas pendentes de arquivos de nicho (vencidos_validas + nicho3 + nicho4), todas MX-verificadas via nslookup e sem duplicata: Laticínios Frizzo (Tuiuti), Reino Alimentos (maionese), Goldy Alimentos (gordura vegetal), Natulha (encapsulados Jundiaí), CapsExpress (Salto!), Megalabs (Jundiaí), ICT Farmacêutica (Votorantim), Ashland (Jundiaí), Sanofi Medley (Hortolândia)",
+      "✅ fila_prioritaria.json revisado: emails especulativos descartados (Ex.: pontofrio.com.br é eletrônicos, não supermercado — evita bounce)",
+      "✅ Lote enviado: 15 emails (6 + 9), todos registrados no leads.csv com lock"
+    ],
+    "diagnostico": {
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 88,
+      "fila_pendentes": 2,
+      "fila_pendentes_com_mx": 0,
+      "enviados_hoje": 15,
+      "bounces_novos": 0,
+      "respostas_reais": 0,
+      "observacao": "15 emails enviados (record do dia). Nichos cobertos: 4 gorduras/laticínios (Castelo, Frizzo, Reino, Goldy) + 6 encapsulados/farmacêuticas (EPN, Natulha, CapsExpress, Megalabs, ICT, Ashland, Sanofi). Fila precisa de reposição urgente: 0 pendentes com MX válido."
+    }
+  },
   "ciclo_2026_10_28_melhorador_continuo": {
     "timestamp": "2026-10-28 09:00 (Melhorador Continuo - cron matinal)",
     "acoes": [
@@ -2996,6 +3017,33 @@
         "total_respondidos": 19,
         "bounce_rate": "~23%",
         "dias_sem_resposta_humana": 28,
-        "ultimo_lead_quente": "Tauste (30/09)"
-      }
-    }
+                "ultimo_lead_quente": "Tauste (30/09)"
+              },
+              "ciclo_2026_10_28_atendente_tick_0934": {
+                "timestamp": "2026-10-28 09:34 (Atendente IA - cron quarta-feira - tick diurno)",
+                "acoes": [
+                  "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+                  "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+                  "✅ prospecao_followup.py — 0 follow-ups processados",
+                  "✅ bot_oleo.py send_sequence — sequência processada (nada a enviar)",
+                  "✅ bot_oleo.py check-replies — 1 resposta detectada: ICT Farmacêutica (suporte@ictfarmaceutica.com.br)",
+                  "✅ RESPOSTA ENVIADA à ICT Farmacêutica — auto-resposta SAC com protocolo 1173 (\"em breve entraremos em contato\"); respondido agradecendo, pedindo volume (litros/kg) do óleo vencido e oferecendo WhatsApp (11) 96785-9631; lead marcado como respondido, replies_pending.json limpo",
+                  "⏭️ proposta_contrato.py — não executado (ICT não informou volume; auto-resposta de SAC não qualifica para proposta formal)",
+                  "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+                ],
+                "diagnostico": {
+                  "total_leads_watchdog": 380,
+                  "ativos_watchdog": 265,
+                  "bounce_csv": 86,
+                  "bounce_cache_json": 112,
+                  "respondido": 20,
+                  "encerrado": 9,
+                  "watchdog": "exit 0 — saudável",
+                  "respostas_reais": 1,
+                  "respostas_humanas": "28 dias sem resposta humana REAL (última: Tauste 30/09). ICT Farmacêutica respondeu via SAC auto (protocolo 1173) — primeiro movimento de lead em 14 dias.",
+                  "observacao": "ICT Farmacêutica (Votorantim, indústria farmacêutica — nicho encapsulados/farmacêuticas) respondeu a apresentação de hoje com auto-resposta de SAC registrando protocolo 1173. Não é interesse explícito, mas é o primeiro retorno desde 14/10 — SAC que registra protocolo é sinal de encaminhamento ativo (padrão Savegnago/Pague Menos/Rede Confiança). Respondido e aguardando contato do setor de compras/qualidade."
+                },
+                "dias_sem_resposta_humana": 28,
+                "ultimo_lead_quente": "ICT Farmacêutica (protocolo 1173, 28/10)"
+              }
+            }

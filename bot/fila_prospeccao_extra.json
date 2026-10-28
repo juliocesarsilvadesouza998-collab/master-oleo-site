@@ -2269,17 +2269,73 @@
                           "segmento": "Industria de nutraceuticos e encapsulados (softgel, comprimidos) - oleo vegetal em maquinas NICHO ENCAPSULADOS"
                         },
                         {
-                          "nome": "Pronutrition",
-                          "empresa": "Pronutrition Fabricacao de Suplementos",
-                          "email": "compras@pronutrition.com.br",
-                          "cidade": "Valinhos/SP",
-                          "segmento": "Fabrica de suplementos e terceirizacao de encapsulados - oleo vegetal em maquinas NICHO ENCAPSULADOS"
-                        },
-                        {
-                          "nome": "Armazem da Maria",
-                          "empresa": "Armazem da Maria - Mercearia Gourmet",
-                          "email": "falecom@armazemdamaria.com.br",
-                          "cidade": "Campinas/SP",
-                          "segmento": "Mercearias gourmet (rede) - frituras, rotisserie e oleos vencidos"
-                        }
-                      ]
+                                      "nome": "Armazem da Maria",
+                                      "empresa": "Armazem da Maria - Mercearia Gourmet",
+                                      "email": "falecom@armazemdamaria.com.br",
+                                      "cidade": "Campinas/SP",
+                                      "segmento": "Mercearias gourmet (rede) - frituras, rotisserie e oleos vencidos"
+                                    },
+                                    {
+                                      "nome": "Laticinios Frizzo",
+                                      "empresa": "Laticinios Frizzo",
+                                      "email": "contato@laticiniosfrizzo.com.br",
+                                      "cidade": "Tuiuti/SP",
+                                      "segmento": "Laticinios e manteiga - NICHO PRIORITARIO (vencidos >40% gordura)"
+                                    },
+                                    {
+                                      "nome": "Reino Alimentos",
+                                      "empresa": "Reino Alimentos",
+                                      "email": "contato@reinoalimentos.com.br",
+                                      "cidade": "Sao Paulo/SP",
+                                      "segmento": "Industria de maionese e molhos - NICHO PRIORITARIO"
+                                    },
+                                    {
+                                      "nome": "Goldy Alimentos",
+                                      "empresa": "Goldy Alimentos",
+                                      "email": "goldy@goldy.com.br",
+                                      "cidade": "Sao Paulo/SP",
+                                      "segmento": "Industria de gordura vegetal e alimentos - NICHO PRIORITARIO"
+                                    },
+                                    {
+                                      "nome": "Natulha",
+                                      "empresa": "Natulha",
+                                      "email": "atendimento@natulha.com.br",
+                                      "cidade": "Jundiai/SP",
+                                      "segmento": "Terceirizacao de encapsulados e suplementos - NICHO ENCAPSULADOS"
+                                    },
+                                    {
+                                      "nome": "CapsExpress",
+                                      "empresa": "CapsExpress",
+                                      "email": "contato@capsexpress.com.br",
+                                      "cidade": "Salto/SP",
+                                      "segmento": "Laboratorio de encapsulados - NICHO ENCAPSULADOS"
+                                    },
+                                    {
+                                      "nome": "Megalabs Brasil",
+                                      "empresa": "Megalabs Brasil",
+                                      "email": "sac@megalabsbrasil.com.br",
+                                      "cidade": "Jundiai/SP",
+                                      "segmento": "Industria farmaceutica e nutraceuticos - NICHO ENCAPSULADOS"
+                                    },
+                                    {
+                                      "nome": "ICT Farmaceutica",
+                                      "empresa": "ICT Farmaceutica",
+                                      "email": "suporte@ictfarmaceutica.com.br",
+                                      "cidade": "Votorantim/SP",
+                                      "segmento": "Industria farmaceutica - oleo vegetal em limpeza de maquinas NICHO ENCAPSULADOS"
+                                    },
+                                    {
+                                      "nome": "Ashland Brasil",
+                                      "empresa": "Ashland Brasil",
+                                      "email": "Contato.nutrition@ashland.com",
+                                      "cidade": "Jundiai/SP",
+                                      "segmento": "Industria de ingredientes e aditivos alimentares/farmaceuticos - NICHO ENCAPSULADOS"
+                                    },
+                                    {
+                                      "nome": "Sanofi Medley",
+                                      "empresa": "Sanofi Medley",
+                                      "email": "sac.brasil@sanofi.com",
+                                      "cidade": "Hortolandia/SP",
+                                      "segmento": "Industria farmaceutica (gigante) - oleo vegetal em limpeza de maquinas NICHO ENCAPSULADOS"
+                                    }
+                                  ]

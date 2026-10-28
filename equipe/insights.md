@@ -1,3 +1,52 @@
+## 2026-10-28 09:34 (Atendente IA - cron quarta-feira - tick diurno)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 380 leads, 265 ativos, 112 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 112 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados
+- ✅ **prospecao_followup.py**: 0 follow-ups processados
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: **1 resposta detectada** — ICT Farmacêutica (suporte@ictfarmaceutica.com.br), via direto
+- ✅ **RESPOSTA ENVIADA** a suporte@ictfarmaceutica.com.br (in-reply-to do protocolo 1173) — lead marcado `respondido` (20º), replies_pending.json limpo
+- ⏭️ **proposta_contrato.py**: não executado — ICT não informou volume (auto-resposta de SAC não qualifica para proposta formal)
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 112 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | 0 follow-ups processados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | **1 resposta: ICT Farmacêutica** (protocolo SAC 1173) |
+| reply → ICT Farmacêutica | Respondido agradecendo, pedindo volume (litros/kg) do óleo vencido + oferta WhatsApp (11) 96785-9631; lead → `respondido` |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO, +1 novo)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 28+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+| 🆕🟡 | **ICT FARMACÊUTICA** (Votorantim — indústria farmacêutica, nicho encapsulados) | Respondeu HOJE via SAC auto (protocolo 1173) após apresentação da manhã. Aguardar contato do setor de compras/qualidade. Se silêncio em 3 dias, reengajar via WhatsApp. |
+
+### Observações
+- **NOVO MOVIMENTO DE LEAD** — ICT Farmacêutica (Votorantim, indústria farmacêutica) respondeu em ~2h à apresentação enviada hoje 09:13 pelo Prospector. A resposta é auto-ack de SAC ("recebemos sua solicitação, protocolo Nº 1173, em breve entraremos em contato") — NÃO é interesse explícito, mas é o **primeiro retorno desde 14/10** (14 dias). SAC que registra protocolo segue o padrão de encaminhamento ativo visto em Savegnago/Pague Menos/Rede Confiança — vale monitorar.
+- **28 dias sem resposta humana REAL** (Tauste 30/09 — o período mais longo do projeto). O movimento da ICT é semi-humano, ainda não quebra a sequência.
+- **20 leads respondidos** (+1 ICT). Base: 380 leads (265 novo, 86 bounce, 9 encerrado).
+- **Resposta enviada** agradecendo o protocolo, pedindo volume de óleo vencido parado (litros/kg) e oferecendo WhatsApp direto — CTA de coleta-teste para quando o setor certo responder.
+- **Fila de prospecção**: 421 empresas, 359 contatados, 88 bounce, 2 pendentes sem MX — precisa reposição (Prospector já adicionou 3 novas MX-verificadas hoje).
+- **Bounce rate ~23%** (86/380 CSV; 112 cache) — acima da meta de 15%, estável.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
 ## 2026-10-28 09:00 (Melhorador Contínuo - cron matinal)
 
 ### AÇÕES
@@ -4262,3 +4311,19 @@ Nenhuma mudança — sistema estável, sem novos leads, sem bounces, sem respost
 4. **WhatsApp API (Z-API ~R$100-200/mês) é o upgrade mais urgente de infraestrutura.** Eliminaria o gargalo humano para primeiros contatos e follow-ups.
 
 5. **Bounce rate 23% estabilizou.** A validação MX prévia + cache estão funcionando. Bounce residual é de mudanças de domínio pós-verificação.
+
+---
+
+## 2026-10-28 (Bot SEO - cron diário)
+
+### Ranking real no Bing (top 20)
+- **Todas as keywords-alvo fora do top 20** — site indexado mas sem posição ainda (normal para domínio jovem; precisa de semanas para acumular autoridade).
+- SEO geral: **OK** — HTTP 200, sitemap presente, **23/23 keywords monitoradas presentes no conteúdo** (cobertura 100%).
+- 61 registros salvos em equipe/seo.json.
+
+### Diagnóstico
+Resultado do PASSO 1 bateu a condição de parada (SEO OK + nenhuma keyword rankeada) → sem melhorias forçadas neste tick, conforme instrução. Todas as keywords já têm páginas dedicadas e estão presentes no conteúdo. O próximo salto depende de tempo de indexação e backlinks.
+
+### Pendências p/ próximos ticks
+- Aguardar indexação/posição no Bing.
+- Quando alguma keyword long-tail surgir sem página dedicada, criar artigo novo.
