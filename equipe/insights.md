@@ -1,3 +1,74 @@
+## 2026-10-28 11:03 (Atendente IA - cron quarta-feira - tick matinal)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 380 leads, 265 ativos, 112 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 112 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os 112 bounces já tentados anteriormente
+- ✅ **prospecao_followup.py**: 0 follow-ups — nada atrasado
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas — replies_pending.json vazio
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (380 leads, 279 msgids)
+- ✅ **enviar_lote.py --status**: fila 421 / 359 contatados / 89 bounce / 2 pendentes (Unialimentar, NUF Farmacêutica)
+- ✅ **enviar_lote.py --max 2**: 0 enviados — Unialimentar e NUF sem MX, pulados corretamente (evita bounce)
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (inalterado — aguardam ação humana)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. 29 dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 14 dias. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. |
+| 🔴🔴🔴 | **COVABRA** | Ação humana: portal Ivrim (isac.ivrim.com.br). |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+| 🟡 | **ICT FARMACÊUTICA** (Votorantim) | Protocolo SAC 1173 (28/10) — se silêncio em 3 dias, reengajar via WhatsApp. |
+
+### Observações
+- **29 dias sem resposta humana real** (Tauste 30/09) — continua o maior período do projeto.
+- Fila de prospecção com **0 pendentes MX-válidos** (Unialimentar e NUF sem MX — envio pulado na tentativa deste tick). Prospector precisa reabastecer.
+- 0 bounces novos, 0 mensagens na caixa, 0 follow-ups atrasados — sistema 100% saudável, nenhum problema para resolver neste tick.
+- Nenhum lead informou volume novo nem pediu relatório ESG — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
+## 2026-10-28 10:33 (Atendente IA - cron quarta-feira - tick #3)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 380 leads, 265 ativos, 112 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 112 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados
+- ✅ **prospecao_followup.py**: 0 follow-ups — nada pendente
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas — replies_pending.json limpo
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (380 leads, 279 msgids)
+- ✅ **enviar_lote.py --status**: fila 421 / 359 contatados / 89 bounce / 2 pendentes sem MX
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Leads QUENTES (inalterado)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. 29 dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 14 dias. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. |
+| 🔴🔴🔴 | **COVABRA** | Ação humana: portal Ivrim (isac.ivrim.com.br). |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+| 🟡 | **ICT FARMACÊUTICA** (Votorantim) | Aguardar setor compras (protocolo SAC 1173). |
+
+### Observações
+- **29 dias sem resposta humana real** (Tauste 30/09) — maior período do projeto.
+- Fila de envio zerada (0 pendentes MX-válido). Prospector precisa reabastecer.
+- Última resposta: ICT Farmacêutica (protocolo SAC, sem ação humana de fato).
+- 9 leads quentes bloqueados por gargalo humano — todos aguardam WhatsApp/telefone.
+
+---
+
 ## 2026-10-28 09:34 (Atendente IA - cron quarta-feira - tick diurno)
 
 ### Diagnóstico do ciclo
@@ -4327,3 +4398,52 @@ Resultado do PASSO 1 bateu a condição de parada (SEO OK + nenhuma keyword rank
 ### Pendências p/ próximos ticks
 - Aguardar indexação/posição no Bing.
 - Quando alguma keyword long-tail surgir sem página dedicada, criar artigo novo.
+
+## 2026-10-28 10:02 (Atendente IA - cron quarta-feira - tick diurno #2)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 380 leads, 265 ativos, 112 bounces, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 112 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: **0 respostas** — replies_pending.json vazio
+- ✅ **scan_inbox.py**: 0 não lidas — caixa zerada
+- ✅ **enviar_lote.py --status**: 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 112 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | 0 follow-ups processados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | **0 respostas** — nenhuma resposta desde o tick 09:34 |
+| scan_inbox.py | 0 não lidas — caixa zerada |
+| enviar_lote.py --status | 421 empresas, 359 contatados, 89 bounce, 2 pendentes s/MX |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (inalterados — mesmo do tick 09:34)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 29+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+| 🆕🟡 | **ICT FARMACÊUTICA** (Votorantim) | Auto-ack SAC (protocolo 1173). Aguardar contato do setor de compras. |
+
+### Observações
+- **29 dias sem resposta humana REAL** (Tauste 30/09) — período mais longo do projeto. Pipeline de fechamento parado.
+- **Fila de prospecção**: 421 empresas, 359 contatados, 89 bounce, **0 pendentes MX-válido** — reposição necessária.
+- **Bounce rate ~29%** (112/380 cache) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+- Pipeline de fechamento continua bloqueado em ação humana (WhatsApp/telefone) para os 8 leads quentes.
+
+---

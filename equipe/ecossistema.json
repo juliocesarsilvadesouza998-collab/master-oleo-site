@@ -1,4 +1,33 @@
 {
+  "ciclo_2026_10_28_atendente_tick_1002": {
+    "timestamp": "2026-10-28 10:02 (Atendente IA - cron quarta-feira - tick diurno #2)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (380 leads, 279 msgids)",
+      "✅ watchdog.py — exit 0: sistema saudável, sem follow-ups atrasados",
+      "✅ enviar_lote.py --status — 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX (Unialimentar, NUF Farmac.)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "enviados_hoje": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 29 dias)",
+      "observacao": "Sistema saudável. 0 respostas novas desde o tick matinal (09:34). ICT Farmacêutica (auto-ack SAC) já registrado. 29 dias sem resposta humana real — período mais longo. Fila com 0 pendentes MX-válido. Bounce rate ~29%. Pipeline de fechamento continua dependendo de ação humana via WhatsApp/telefone (Savegnago R$ 7,98bi #1, Pague Menos R$ 4,33bi #2, Rede Confiança, Covabra portal Ivrim, Brasfrigo, Queijos Itupeva, Sonda, Tauste)."
+    }
+  },
   "ciclo_2026_10_28_prospector": {
     "timestamp": "2026-10-28 09:15 (Prospector - cron matinal)",
     "acoes": [
@@ -2741,7 +2770,7 @@
       "ultimo_lead_quente": "Pague Menos (14/10)"
     }
   },
-  "atualizado_em": "2026-10-26 08:30 (Atendente IA - cron tick)",
+  "atualizado_em": "2026-10-28 11:03 (Atendente IA - cron quarta-feira - tick matinal)",
   "criado_em": "2026-08-13",
   "ciclo_2026_10_24_cron_atendente_tick_19h": {
     "timestamp": "2026-10-24 19:03 (Atendente IA - cron tick #3 - sábado)",
@@ -2967,83 +2996,152 @@
     },
     "dias_sem_resposta_humana": 15,
     "ultimo_lead_quente": "Pague Menos (14/10)"
-      },
-      "ciclo_2026_10_28_estrategista": {
-        "timestamp": "2026-10-28 (Estrategista - cron dominical)",
-        "acoes": [
-          "Fila reabastecida: +2 novas empresas MX-verificadas (Lopes Supermercados - fornecedores@lopes.com.br, Sacco Brasil - saccobrasil@saccobrasil.com.br)",
-          "FP2 template aprimorado com oferta exclusiva + bonus R$+0,10/L + coleta-teste + 70% mercado inexplorado + urgencia 14 meses",
-          "py_compile: prospecao_followup.py e prospecao.py OK",
-          "JSON fila_prospeccao_extra valido",
-          "insights.md atualizado com aprendizado do ciclo"
-        ],
-        "diagnostico": {
-          "total_leads_watchdog": 365,
-          "ativos_watchdog": 252,
-          "bounce_csv": 85,
-          "bounce_cache_json": 111,
-          "fila_extra_total": 401,
-          "fila_novas_hoje": 2,
-          "watchdog": "exit 0 - saudavel",
-          "respostas_reais": 0,
-          "respostas_humanas": "28 dias sem resposta humana REAL (Tauste 30/09). Pipeline de fechamento parado.",
-          "observacao": "Gargalo mudou de prospeccao para fechamento humano. Sistema automatizado fez tudo que pode: 365 leads, 19 respostas (5.2%), 8 leads quentes. Proxima fronteira: acao humana (WhatsApp/telefone/cadastro Covabra) ou integracao WhatsApp API."
-        },
-        "pesquisa_mercado": {
-          "fonte_1": "Portaria MME/MMA n 3/2026 confirma obrigatoriedade >=1% OGR partir jan/2028. Periodo voluntario 2026-2027. Apenas 3 coletores de OGR registrados no Nordeste (Movimento Economico 25/05/2026).",
-          "fonte_2": "Mandato de residuos no biodiesel deve elevar custos. Mercado UCO Brasil desregulado. Projecoes coleta: 500kT a 2M t/ano (Argus Media 2026).",
-          "fonte_3": "Ambiental Santos paga R$3/L e opera ha 25 anos. Estabelecimentos obrigados a contratar empresa certificada para alvara. 3 formas de pagamento (Bom Gourmet 2026).",
-          "fonte_4": "Cold email B2B: taxa de resposta 5-15% = excelente; abaixo 3% = problema (Metrik, Growth Machine 2026).",
-          "descoberta_chave": "Salto/SP ja tem programa Coleta Diferenciada nas Escolas com CSO Ambiental para oleo de cozinha. Master Oleo pode buscar parceria complementar com prefeitura ou ecopontos."
-        },
-        "metas_semana_28_10_a_03_11": {
-          "meta_1": "FECHAR SAVEGNAGO - WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. R$7,98bi #1 interior SP. 28+ dias parado.",
-          "meta_2": "COVABRA - PREENCHER CADASTRO FORNECEDOR isac.ivrim.com.br. Acao 100% manual que destrava contrato de rede.",
-          "meta_3": "PAGUE MENOS - Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
-          "meta_4": "REDE CONFIANCA - Reforcar proposta 2.500 L/mes com bonus exclusividade +R$0,10/L",
-          "meta_5": "BRASFRIGO E QUEIJOS ITUPEVA - Agendar coleta-teste. Locais, ja responderam.",
-          "meta_6": "MANTER FUNIL DE ENTRADA - Adicionar mais 5-10 empresas via fila_prospeccao_extra.json com MX verificado. Prioridade: supermercados regionais e industrias de oleos/gorduras.",
-          "meta_7": "TESTAR LOPES SUPERMERCADOS (fornecedores@lopes.com.br) - EMAIL DIRETO DE FORNECEDOR encontrado no site oficial. Enviar prospeccao piloto."
-        },
-        "aprendizados_ciclo": [
-          "COLD EMAIL TEM TETO - 5.2% de resposta com 28 dias sem acao humana. O sistema automatizado fez tudo que podia. O gargalo AGORA e fechamento humano.",
-          "REDES DE SUPERMERCADO SEGUEM O MESMO PADRAO: SAC redireciona ao comercial. Isso valida o modelo de prospeccao - mas fechamento e outra disciplina.",
-          "NOVA FERRAMENTA DE PROSPECCAO: fornecedores@lopes.com.br e o tipo de email mais valioso para cold email porque e explicitamente para fornecedores. Buscar mais paginas 'seja um fornecedor' de redes.",
-          "CSO Ambiental e parceiro da Prefeitura de Salto para coleta de oleo nas escolas. Master Oleo deve mapear se ha espaco para parceria complementar ou focar fora do segmento escolar em Salto.",
-          "NOVA FRONTEIRA: listas CNPJ pagas (Leadjet) para CNAE 1052-0 (laticinios), 1041-4 (oleos vegetais), 1043-1 (margarinas/gorduras). Prospector esgotou buscas web gratuitas na regiao de 80km de Salto.",
-          "WhatsApp API (Z-API/Twilio) e o upgrade de infraestrutura mais urgente - permitiria ao Atendente enviar mensagens de WhatsApp automaticamente, eliminando o gargalo humano."
-        ],
-        "total_leads_fim_ciclo": 365,
-        "total_respondidos": 19,
-        "bounce_rate": "~23%",
-        "dias_sem_resposta_humana": 28,
-                "ultimo_lead_quente": "Tauste (30/09)"
-              },
-              "ciclo_2026_10_28_atendente_tick_0934": {
-                "timestamp": "2026-10-28 09:34 (Atendente IA - cron quarta-feira - tick diurno)",
-                "acoes": [
-                  "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
-                  "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
-                  "✅ prospecao_followup.py — 0 follow-ups processados",
-                  "✅ bot_oleo.py send_sequence — sequência processada (nada a enviar)",
-                  "✅ bot_oleo.py check-replies — 1 resposta detectada: ICT Farmacêutica (suporte@ictfarmaceutica.com.br)",
-                  "✅ RESPOSTA ENVIADA à ICT Farmacêutica — auto-resposta SAC com protocolo 1173 (\"em breve entraremos em contato\"); respondido agradecendo, pedindo volume (litros/kg) do óleo vencido e oferecendo WhatsApp (11) 96785-9631; lead marcado como respondido, replies_pending.json limpo",
-                  "⏭️ proposta_contrato.py — não executado (ICT não informou volume; auto-resposta de SAC não qualifica para proposta formal)",
-                  "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
-                ],
-                "diagnostico": {
-                  "total_leads_watchdog": 380,
-                  "ativos_watchdog": 265,
-                  "bounce_csv": 86,
-                  "bounce_cache_json": 112,
-                  "respondido": 20,
-                  "encerrado": 9,
-                  "watchdog": "exit 0 — saudável",
-                  "respostas_reais": 1,
-                  "respostas_humanas": "28 dias sem resposta humana REAL (última: Tauste 30/09). ICT Farmacêutica respondeu via SAC auto (protocolo 1173) — primeiro movimento de lead em 14 dias.",
-                  "observacao": "ICT Farmacêutica (Votorantim, indústria farmacêutica — nicho encapsulados/farmacêuticas) respondeu a apresentação de hoje com auto-resposta de SAC registrando protocolo 1173. Não é interesse explícito, mas é o primeiro retorno desde 14/10 — SAC que registra protocolo é sinal de encaminhamento ativo (padrão Savegnago/Pague Menos/Rede Confiança). Respondido e aguardando contato do setor de compras/qualidade."
-                },
-                "dias_sem_resposta_humana": 28,
-                "ultimo_lead_quente": "ICT Farmacêutica (protocolo 1173, 28/10)"
-              }
-            }
+  },
+  "ciclo_2026_10_28_estrategista": {
+    "timestamp": "2026-10-28 (Estrategista - cron dominical)",
+    "acoes": [
+      "Fila reabastecida: +2 novas empresas MX-verificadas (Lopes Supermercados - fornecedores@lopes.com.br, Sacco Brasil - saccobrasil@saccobrasil.com.br)",
+      "FP2 template aprimorado com oferta exclusiva + bonus R$+0,10/L + coleta-teste + 70% mercado inexplorado + urgencia 14 meses",
+      "py_compile: prospecao_followup.py e prospecao.py OK",
+      "JSON fila_prospeccao_extra valido",
+      "insights.md atualizado com aprendizado do ciclo"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 365,
+      "ativos_watchdog": 252,
+      "bounce_csv": 85,
+      "bounce_cache_json": 111,
+      "fila_extra_total": 401,
+      "fila_novas_hoje": 2,
+      "watchdog": "exit 0 - saudavel",
+      "respostas_reais": 0,
+      "respostas_humanas": "28 dias sem resposta humana REAL (Tauste 30/09). Pipeline de fechamento parado.",
+      "observacao": "Gargalo mudou de prospeccao para fechamento humano. Sistema automatizado fez tudo que pode: 365 leads, 19 respostas (5.2%), 8 leads quentes. Proxima fronteira: acao humana (WhatsApp/telefone/cadastro Covabra) ou integracao WhatsApp API."
+    },
+    "pesquisa_mercado": {
+      "fonte_1": "Portaria MME/MMA n 3/2026 confirma obrigatoriedade >=1% OGR partir jan/2028. Periodo voluntario 2026-2027. Apenas 3 coletores de OGR registrados no Nordeste (Movimento Economico 25/05/2026).",
+      "fonte_2": "Mandato de residuos no biodiesel deve elevar custos. Mercado UCO Brasil desregulado. Projecoes coleta: 500kT a 2M t/ano (Argus Media 2026).",
+      "fonte_3": "Ambiental Santos paga R$3/L e opera ha 25 anos. Estabelecimentos obrigados a contratar empresa certificada para alvara. 3 formas de pagamento (Bom Gourmet 2026).",
+      "fonte_4": "Cold email B2B: taxa de resposta 5-15% = excelente; abaixo 3% = problema (Metrik, Growth Machine 2026).",
+      "descoberta_chave": "Salto/SP ja tem programa Coleta Diferenciada nas Escolas com CSO Ambiental para oleo de cozinha. Master Oleo pode buscar parceria complementar com prefeitura ou ecopontos."
+    },
+    "metas_semana_28_10_a_03_11": {
+      "meta_1": "FECHAR SAVEGNAGO - WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. R$7,98bi #1 interior SP. 28+ dias parado.",
+      "meta_2": "COVABRA - PREENCHER CADASTRO FORNECEDOR isac.ivrim.com.br. Acao 100% manual que destrava contrato de rede.",
+      "meta_3": "PAGUE MENOS - Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "meta_4": "REDE CONFIANCA - Reforcar proposta 2.500 L/mes com bonus exclusividade +R$0,10/L",
+      "meta_5": "BRASFRIGO E QUEIJOS ITUPEVA - Agendar coleta-teste. Locais, ja responderam.",
+      "meta_6": "MANTER FUNIL DE ENTRADA - Adicionar mais 5-10 empresas via fila_prospeccao_extra.json com MX verificado. Prioridade: supermercados regionais e industrias de oleos/gorduras.",
+      "meta_7": "TESTAR LOPES SUPERMERCADOS (fornecedores@lopes.com.br) - EMAIL DIRETO DE FORNECEDOR encontrado no site oficial. Enviar prospeccao piloto."
+    },
+    "aprendizados_ciclo": [
+      "COLD EMAIL TEM TETO - 5.2% de resposta com 28 dias sem acao humana. O sistema automatizado fez tudo que podia. O gargalo AGORA e fechamento humano.",
+      "REDES DE SUPERMERCADO SEGUEM O MESMO PADRAO: SAC redireciona ao comercial. Isso valida o modelo de prospeccao - mas fechamento e outra disciplina.",
+      "NOVA FERRAMENTA DE PROSPECCAO: fornecedores@lopes.com.br e o tipo de email mais valioso para cold email porque e explicitamente para fornecedores. Buscar mais paginas 'seja um fornecedor' de redes.",
+      "CSO Ambiental e parceiro da Prefeitura de Salto para coleta de oleo nas escolas. Master Oleo deve mapear se ha espaco para parceria complementar ou focar fora do segmento escolar em Salto.",
+      "NOVA FRONTEIRA: listas CNPJ pagas (Leadjet) para CNAE 1052-0 (laticinios), 1041-4 (oleos vegetais), 1043-1 (margarinas/gorduras). Prospector esgotou buscas web gratuitas na regiao de 80km de Salto.",
+      "WhatsApp API (Z-API/Twilio) e o upgrade de infraestrutura mais urgente - permitiria ao Atendente enviar mensagens de WhatsApp automaticamente, eliminando o gargalo humano."
+    ],
+    "total_leads_fim_ciclo": 365,
+    "total_respondidos": 19,
+    "bounce_rate": "~23%",
+    "dias_sem_resposta_humana": 28,
+    "ultimo_lead_quente": "Tauste (30/09)"
+  },
+  "ciclo_2026_10_28_atendente_tick_0934": {
+    "timestamp": "2026-10-28 09:34 (Atendente IA - cron quarta-feira - tick diurno)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados",
+      "✅ bot_oleo.py send_sequence — sequência processada (nada a enviar)",
+      "✅ bot_oleo.py check-replies — 1 resposta detectada: ICT Farmacêutica (suporte@ictfarmaceutica.com.br)",
+      "✅ RESPOSTA ENVIADA à ICT Farmacêutica — auto-resposta SAC com protocolo 1173 (\"em breve entraremos em contato\"); respondido agradecendo, pedindo volume (litros/kg) do óleo vencido e oferecendo WhatsApp (11) 96785-9631; lead marcado como respondido, replies_pending.json limpo",
+      "⏭️ proposta_contrato.py — não executado (ICT não informou volume; auto-resposta de SAC não qualifica para proposta formal)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_csv": 86,
+      "bounce_cache_json": 112,
+      "respondido": 20,
+      "encerrado": 9,
+      "watchdog": "exit 0 — saudável",
+      "respostas_reais": 1,
+      "respostas_humanas": "28 dias sem resposta humana REAL (última: Tauste 30/09). ICT Farmacêutica respondeu via SAC auto (protocolo 1173) — primeiro movimento de lead em 14 dias.",
+      "observacao": "ICT Farmacêutica (Votorantim, indústria farmacêutica — nicho encapsulados/farmacêuticas) respondeu a apresentação de hoje com auto-resposta de SAC registrando protocolo 1173. Não é interesse explícito, mas é o primeiro retorno desde 14/10 — SAC que registra protocolo é sinal de encaminhamento ativo (padrão Savegnago/Pague Menos/Rede Confiança). Respondido e aguardando contato do setor de compras/qualidade."
+    },
+    "dias_sem_resposta_humana": 28,
+    "ultimo_lead_quente": "ICT Farmacêutica (protocolo 1173, 28/10)"
+  },
+  "ciclo_2026_10_28_atendente_tick_1033": {
+    "timestamp": "2026-10-28 10:33 (Atendente IA - cron quarta-feira - tick #3 - 10:33)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio — limpo)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas — caixa zerada (380 leads, 279 msgids)",
+      "✅ watchdog.py — exit 0: sistema saudável (380 leads, 265 ativos, 112 bounces)",
+      "✅ enviar_lote.py --status — fila: 421 empresas, 359 contatados, 89 bounce, 2 pendentes sem MX",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Tauste 30/09 — 28 dias)",
+      "observacao": "Cron 10:33 — sistema saudável. 0 respostas novas desde o tick anterior (10:02). Nenhum movimento. Fila com 0 pendentes MX-válido. Pipeline de fechamento segue dependente de ação humana (WhatsApp/telefone) para 9 leads quentes. 29 dias sem resposta humana real — recorde de silêncio."
+    }
+  },
+  "ciclo_2026_10_28_cron_atendente_11_03": {
+    "timestamp": "2026-10-28 11:03 (Atendente IA - cron quarta-feira - tick matinal)",
+    "acoes": [
+      "sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "prospecao_followup.py — 0 follow-ups atrasados",
+      "send_sequence — sequência processada (nada a enviar)",
+      "check-replies — 0 respostas (replies_pending.json vazio)",
+      "watchdog.py — exit 0: 380 leads, 265 ativos, 112 bounces, SMTP/IMAP OK",
+      "scan_inbox.py --dias 3 — 0 mensagens não lidas na INBOX (380 leads, 279 msgids)",
+      "enviar_lote.py --status — 421 empresas, 359 contatados, 89 bounce, 2 pendentes (Unialimentar, NUF Farmacêutica) — enviar_lote --max 2 tentou, ambos sem MX (pulados, evita bounce)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 380,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável, SMTP/IMAP OK",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": "0 com MX válido (2 pendentes sem MX: Unialimentar, NUF Farmacêutica)",
+      "dias_sem_resposta_humana": "29 dias desde Tauste (30/09); última resposta semi-humana: ICT Farmacêutica (28/10, protocolo SAC 1173)",
+      "respostas_reais": 0,
+      "respostas_humanas": "Nenhuma — caixa IMAP zerada (scan_inbox --dias 3: 0 não lidas)",
+      "respostas_auto": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "observacao": "Terceiro tick do dia; sistema saudável e estável. 0 respostas, 0 follow-ups, 0 bounces novos, 0 mensagens na caixa. Fila de prospecção com 2 pendentes sem MX (Unialimentar, NUF) — tentativa de envio pulada corretamente para evitar bounce. Pipeline de fechamento segue 100% dependente de ação humana (29 dias sem resposta humana real): Savegnago, Pague Menos, Rede Confiança, Covabra (cadastro Ivrim), Brasfrigo, Queijos Itupeva, Sonda, Tauste. ICT Farmacêutica (protocolo SAC 1173) segue em observação."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 29+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 ICT FARMACÊUTICA (Votorantim) — Protocolo SAC 1173 (28/10). Aguardar setor compras — se silêncio em 3 dias, reengajar via WhatsApp."
+    ]
+  }
+}
