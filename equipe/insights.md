@@ -76,6 +76,52 @@
 
 ---
 
+## 2026-10-28 00:15 (Atendente IA - cron quarta-feira - tick noturno)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 365 leads, 252 ativos, 85 bounces CSV, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 111 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados
+- ✅ **prospecao_followup.py**: **4 FP2 enviados** (Saripan Alimentos, Bocata Panificio, Atacado OJT, Indaiatuba Carnes)
+- ✅ **send_sequence**: sequência processada
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 111 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | **4 FP2 enviados** (Saripan, Bocata, Atacado OJT, Indaiatuba Carnes) |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 28+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 14 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **15 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **28 dias**, o período mais longo de silêncio do projeto.
+- **4 FP2 enviados**: Saripan Alimentos (congelados panificação), Bocata Panificio (padaria industrial 50 anos), Atacado OJT (comércio alimentos), Indaiatuba Carnes (distribuidora) — follow-ups de meio de ciclo.
+- **0 respostas pendentes** — replies_pending.json vazio, caixa IMAP sem respostas.
+- **Fila de prospecção**: 365 leads, 252 ativos, 85 bounces CSV, 111 cache. Fila extra: 315 empresas.
+- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana via WhatsApp/telefone.
+- **Bounce rate ~23%** (85/365) — acima da meta de 15%.
+- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
 ## 2026-10-27 20:12 (Melhorador Contínuo - cron noturno)
 
 ### Diagnóstico do ciclo
@@ -3957,6 +4003,72 @@ O sistema de email atingiu o **teto do canal**: 8,1% de resposta (acima da médi
 - **12 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **26 dias**, o período mais longo de silêncio do projeto.
 - **Fila de prospecção**: 390 empresas, 331 contatados, **2 pendentes inválidos (sem MX)** — fila efetivamente zerada para envio.
 - **Bounce rate ~29%** (99/344) — acima da meta de 15%.
-- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana.
+|- **Pipeline de fechamento continua parado** — 8 oportunidades quentes aguardam ação humana.
+|- **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
+
+---
+
+## 2026-10-27 23:45 (Atendente IA - cron noturno - terça-feira)
+
+### Diagnóstico do ciclo
+- ✅ **Watchdog exit 0** — 359 leads, 248 ativos, SMTP/IMAP OK
+- ✅ **sync_formspree.py**: 108 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py**: 0 processados — todos os bounces já tentados
+- ✅ **prospecao_followup.py**: 0 follow-ups processados (nada pendente)
+- ✅ **send_sequence**: sequência processada (nada a enviar)
+- ✅ **check-replies**: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ **scan_inbox.py --dias 3**: 0 não lidas — caixa zerada (359 leads)
+- ✅ **enviar_lote.py --max 5**: **5 novos leads enviados** (Dacoli Alimentos, Induscamp, Padaria Real, SB Foods, Supermercados Correia); 2 pulados sem MX (Unialimentar, NUF); 1 pendente restante (Conecta)
+- ⏭️ **proposta_contrato.py**: não executado — nenhum lead com volume novo
+- ⏭️ **relatorio_esg.py**: não executado — nenhuma solicitação ESG
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 108 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 processados — todos os bounces já tentados |
+| prospecao_followup.py | 0 follow-ups (nada pendente) |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --dias 3 | 0 não lidas — caixa zerada |
+| enviar_lote.py --max 5 | **5 enviados**: Dacoli Alimentos, Induscamp, Padaria Real, SB Foods, Supermercados Correia |
+| proposta_contrato.py | não executado — nenhum lead com volume novo |
+| relatorio_esg.py | não executado — nenhuma solicitação ESG |
+
+### Leads QUENTES (pendentes de ação humana — INALTERADO)
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|---------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 28+ dias sem ação. |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 13 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: preencher cadastro de fornecedor (isac.ivrim.com.br). 14+ dias sem ação. |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
+| 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
+| 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
+| 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
+
+### Observações
+- **14 dias sem resposta humana REAL** desde Pague Menos (14/10). Última resposta humana real: Tauste 30/09 — **28 dias**, o período mais longo de silêncio do projeto.
+- **5 novos leads enviados** para reaquecer funil: Dacoli Alimentos (Campinas, fecularia), Induscamp (Campinas, ácidos graxos/óleos hidrogenados — nicho prioritário), Padaria Real (Sorocaba, 201-500 funcionários), SB Foods (Sorocaba, óleos/gorduras — nicho prioritário), Supermercados Correia (Itu/Sorocaba, rede local).
+- **2 pulados** (Unialimentar, NUF Farmacêutica — sem MX) — evitando bounce.
+- **1 pendente** na fila: Conecta Indústria (vendas@conectaind.com.br).
+- **Bounce cache estável em 108** — sem novos bounces neste ciclo.
+- **Fila de prospecção**: 405 empresas, 343 contatados, 86 bounce, 3 pendentes.
+- **Pipeline de fechamento continua 28 dias parado** — 8 oportunidades quentes (incluindo #1 do interior SP, R$7,98bi) aguardam ação humana via WhatsApp/telefone. Cada dia sem ação é oportunidade perdida.
 - **Nenhum lead informou volume novo** — proposta_contrato.py e relatorio_esg.py não executados.
 
+
+
+---
+
+## 2026-10-28 (BOT SEO — tick diário)
+
+### DIAGNÓSTICO HONESTO — SITE NÃO ESTÁ INDEXADO NO BING
+
+- ✅ Site no ar (HTTP 200), SEO técnico OK, sitemap presente, 22 keywords presentes no conteúdo.
+- ⏳ **Posições no Bing: ZERO.** 60 execuções do `seo_bot.py --rank` desde 09/09 (7 semanas) sem NENHUMA keyword no top 20.
+- 🚨 **Causa raiz identificada hoje:** verificação direta no Bing (`site:masteroleo.eco.br` e busca pelo domínio exato) retorna **0 resultados do site** — o Bing NUNCA indexou masteroleo.eco.br. Não é "aguardar semanas", é falta de indexação.
+- **Ação aplicada:** **ping IndexNow ativo com 28 URLs** (todas as páginas do sitemap) via api.indexnow.org — HTTP 200 (aceito). Primeira submissão ativa ao Bing desde o lançamento do site.
+- **Nenhum artigo novo criado** neste tick: todas as 10 keywords-alvo já têm página dedicada (regra do modelo).
+- ⏭️ **Próximo passo:** reavaliar em 3–7 dias. Se continuar sem indexar, verificar/confirmar Bing Webmaster Tools (masteroleo.eco@gmail.com) e considerar verificação DNS/meta + sitemap ping manual em bing.com/webmasters.
+- ⚠️ Atenção: o monitoramento via `--rank` apenas confirma posições; sem indexação prévia ele sempre reportará "fora do top 20". O indicador real de progresso agora é o `site:` no Bing (ou a 1ª aparição de qualquer URL).

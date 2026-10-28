@@ -2185,45 +2185,38 @@
     "segmento": "industria de alimentos (fecularia, amidos, derivados) - estoque de oleos e gorduras"
   },
   {
-    "nome": "Crista Indústria (Grupo Lins)",
-    "empresa": "Crista Indústria (Grupo Lins)",
-    "email": "faleconosco@cristamargarina.com.br",
-    "cidade": "Indaiatuba/SP (fábrica: Marginal Norte, Indaiatuba - ~20km de Salto)",
-    "segmento": "industria de oleos vegetais, margarinas e gorduras vegetais (70 anos, Grupo Lins) - NICHO PRIORITARIO (vencidos >40% gordura); MX Locaweb valido 27/10"
-      },
-      {
-        "nome": "Induscamp (Campineira)",
-        "empresa": "Induscamp Industria Campineira Ltda",
-        "email": "contato@induscamp.com.br",
-        "cidade": "Campinas/SP",
-        "segmento": "Industria de acidos graxos, oleos vegetais hidrogenados e estearina - NICHO PRIORITARIO"
-      },
-      {
-        "nome": "Padaria Real",
-        "empresa": "Padaria Real (201-500 funcionarios, Sorocaba)",
-        "email": "contato@padariareal.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Padaria e confeitaria industrial (fritura alto volume, salgados, massas)"
-      },
-      {
-        "nome": "SB Foods",
-        "empresa": "SB Foods Industria de Alimentos Ltda",
-        "email": "contato@sbfoods.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Industria de alimentos (oleos, gorduras, condimentos) - NICHO PRIORITARIO"
-      },
-      {
-        "nome": "Rede Correia Supermercados",
-        "empresa": "Supermercados Correia Ltda (lojas em Itu e Sorocaba)",
-        "email": "sac@redecorreia.com.br",
-        "cidade": "Itu/Sorocaba/SP",
-        "segmento": "Supermercados (rede local, padaria/rotisserie/acougue, fritura continua)"
-      },
-      {
-        "nome": "Conecta Industria e Comercio",
-        "empresa": "Conecta Industria e Comercio Ltda",
-        "email": "vendas@conectaind.com.br",
-        "cidade": "Sao Paulo/SP",
-        "segmento": "Comercializacao de oleos, gorduras e produtos oleo-quimicos p/ industrias alimenticias - NICHO PRIORITARIO"
-      }
-    ]
+    "nome": "Induscamp (Campineira)",
+    "empresa": "Induscamp Industria Campineira Ltda",
+    "email": "contato@induscamp.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Industria de acidos graxos, oleos vegetais hidrogenados e estearina - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Padaria Real",
+    "empresa": "Padaria Real (201-500 funcionarios, Sorocaba)",
+    "email": "contato@padariareal.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Padaria e confeitaria industrial (fritura alto volume, salgados, massas)"
+  },
+  {
+    "nome": "SB Foods",
+    "empresa": "SB Foods Industria de Alimentos Ltda",
+    "email": "contato@sbfoods.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de alimentos (oleos, gorduras, condimentos) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Rede Correia Supermercados",
+    "empresa": "Supermercados Correia Ltda (lojas em Itu e Sorocaba)",
+    "email": "sac@redecorreia.com.br",
+    "cidade": "Itu/Sorocaba/SP",
+    "segmento": "Supermercados (rede local, padaria/rotisserie/acougue, fritura continua)"
+  },
+  {
+    "nome": "Conecta Industria e Comercio",
+    "empresa": "Conecta Industria e Comercio Ltda",
+    "email": "vendas@conectaind.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Comercializacao de oleos, gorduras e produtos oleo-quimicos p/ industrias alimenticias - NICHO PRIORITARIO"
+  }
+]
