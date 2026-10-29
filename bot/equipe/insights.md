@@ -1,3 +1,42 @@
+## 2026-10-28 (quarta-feira) — 14:35 (Atendente IA - ciclo da tarde)
+
+### Diagnóstico do ciclo
+- ✅ 380 leads, 265 ativos, 112 bounces (watchdog) — SMTP/IMAP OK, exit 0 (saudável)
+- ✅ 0 notificações Formspree, 0 bounces novos processados (todos já tentados), 0 follow-ups atrasados
+- ✅ 0 respostas para o fluxo de COMPRA de óleo (replies_pending.json vazio)
+- 🔥 **RESPOSTA HUMANA REAL HOJE**: Artema Pré-Moldados (Paranaguá/PR) respondeu às 08:19 pedindo **amostra grátis + valores do desmoldante** — é do fluxo **Master EcoDesmold** (venda de produto), NÃO do fluxo de compra de óleo
+- 🪲 Bug corrigido no scan_inbox.py (quebrava com Assunto codificado — AttributeError: Header object)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 112 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| watchdog.py | exit 0 — saudável |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py --tudo | **Artema Pré-Moldados (humana!) + ICT Farmaceutica (auto-ack SAC) + bounces 26-27/10 já tratados** |
+| bot_oleo.py reply | ✅ **Resposta enviada à Artema**: amostra confirmada + pedido de consumo mensal + CTA WhatsApp |
+| leads.csv | Artema Pré-Moldados adicionada (id ARTEMA20261028, status respondido, fonte desmoldante) |
+| scan_inbox.py fix | Corrigido AttributeError em subject codificado — varredura passa a funcionar integralmente |
+
+### 🔥 LEAD QUENTE DO DIA: Artema Pré-Moldados (Paranaguá/PR)
+- **O que pediu:** "poderia enviar a amostra grátis para avaliação? e se possível responder esse e-mail com valores para analise financeira" — endereço completo fornecido (PR 407, KM 2,5 N 2091, Jardim Ouro Fino, Paranaguá-PR, CEP 83218-860).
+- **O que foi respondido (tom Julio, 1ª pessoa):** amostra confirmada aguardando confirmação de endereço; galão 50 L (mín. 4) com preço conforme volume mensal + frete; pergunta de quantos galões/mês e tipo de peça; CTA WhatsApp (11) 96785-9631.
+- **Próximo passo:** aguardar retorno com volume mensal → enviar valores + despachar amostra. Ação manual necessária: **enviar fisicamente a amostra** (embalagem e postagem — o bot não faz isso).
+
+### Leads QUENTES (fluxo de compra de óleo — inalterados, fechamento depende de ação humana)
+1. 🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — WhatsApp (11) 96785-9631. 28+ dias sem ação.
+2. 🔥🔥 **Brasfrigo (Salto/SP)** — agendar coleta-teste. Local.
+3. 🔥🔥 **Queijos Itupeva (Rafael)** — agendar coleta-teste. Lead +quente individual.
+4. 🔥 **Sonda** (R$6,12bi) — ligar (11) 2145-6200.
+5. 🟡 **Tauste** — ligar (15) 3324-4680. Respondeu 30/09 (28 dias atrás).
+6. 🟡 **Covabra** — cadastro de fornecedor no portal ivrim pendente.
+7. 🟡 **Pague Menos** (R$4,33bi) — proposta entregue via ticket Zendesk 407470.
+8. 🟡 **Nagumo** — proposta anexada no caso 00143542 (14/10).
+
+---
 ## 2026-10-14 (quarta-feira) — 17:35 (Atendente IA - cron #94 - ciclo noturno)
 
 ### Diagnóstico do ciclo
@@ -943,3 +982,20 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 8. 🟡 **Pague Menos** (R$4,33bi) — proposta anexada no ticket Zendesk 407470 (16:07).
 9. 🟡 **Rede Confiança** — proposta gerada 12:04, aguarda retorno.
 10. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
+
+---
+## 2026-10-29 (quinta-feira) — SEO Bot
+
+### Diagnóstico de rankeamento (Bing)
+- ✅ Site no ar (HTTP 200) e todas as 22 keywords alvo estão PRESENTES no conteúdo
+- 📉 NENHUMA keyword no top 20 do Bing ainda — comportamento normal, site precisa de semanas para ranquear
+- ✅ sitemap.xml, robots.txt, indexnow-key.txt presentes
+
+### Ações
+| Ação | Resultado |
+|------|-----------|
+| seo_bot.py --rank | 22/22 keywords presentes no conteúdo; 0 no top 20 |
+
+### Próximos passos (próximo tick)
+- Quando alguma keyword começar a aparecer no top 20, começar a criar artigos no blog/ direcionados
+- Monitorar semanalmente

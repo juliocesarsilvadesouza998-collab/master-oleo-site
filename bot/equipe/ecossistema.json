@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 18:35 (Atendente IA - cron #95 - ciclo noturno)",
+ "atualizado_em": "2026-10-28 14:45 (Atendente IA - cron tick 28/10)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1232,6 +1232,33 @@
    "respostas_humanas": "Nenhuma humana nova — Nagumo foi auto-ack de SAC (nao e humano); ultima humana real: Tauste 30/09 (14 dias)",
    "dias_sem_resposta_humana_nova": "14 (ultima: Tauste 30/09)",
    "observacao": "Pipeline: 296 leads, 209 ativos, 82 bounces. NOVO LEAD QUENTE: Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP) — SAC registrou caso 00143542 e proposta formal com 5.000 L/mês est. anexada na thread (padrao 14/10 de semi-fechamento: 4a rede grande com resposta SAC na semana: Savegnago, Pague Menos, Rede Confianca, Nagumo). Propostas geradas hoje: Rede Confianca (12:04), Pague Menos (16:07, ticket Zendesk 407470), Nagumo (18:30). Fila prospeccao: 335 empresas, 8 pendentes. Leads quentes para acao humana: Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Covabra, Pague Menos, Muffato + NAGUMO (follow-up humano em 3 dias)."
+  }
+ },
+ "ciclo_2026_10_28_cron_atendente": {
+  "timestamp": "2026-10-28 14:45 (Atendente IA - ciclo da tarde 28/10)",
+  "acoes": [
+   "sync_formspree.py - 112 bounces cache, 0 notificacoes novas do Formspree",
+   "corrigir_emails.py - 0 bounces processados (todos ja tentados anteriormente)",
+   "watchdog.py - exit 0: 380 leads, 265 ativos, 112 bounces | SMTP/IMAP OK",
+   "prospecao_followup.py - 0 follow-ups atrasados (nada pendente)",
+   "send_sequence - sequencia processada",
+   "check-replies - 0 respostas para fluxo de compra (replies_pending.json vazio)",
+   "scan_inbox.py - caixa varrida: Artema Pre-Moldados (resposta humana desmoldante) + ICT Farmaceutica (auto-ack SAC) + bounces 26-27/10 ja tratados em ticks anteriores (leads marcados bounce no CSV)",
+   "BUG CORRIGIDO: scan_inbox.py quebrava com Assunto codificado (AttributeError: Header object) - conversao para str antes de .lower()",
+   "ARTEMA PRE-MOLDADOS (Paranagua/PR) - RESPOSTA HUMANA 08:19: pediu amostra gratis + valores do desmoldante. Lead adicionado ao leads.csv (id ARTEMA20261028) e RESPONDIDO via bot_oleo reply com In-Reply-To: amostra confirmada + pergunta de consumo mensal (galoes/mes) + CTA WhatsApp (11) 96785-9631",
+   "ICT FARMACEUTICA - 2 auto-acks de ticket (protocolos 1173 e 1174) - NAO e resposta humana; ja tratado as 09:33 pelo cron matinal"
+  ],
+  "diagnostico": {
+   "total_leads_csv": 380,
+   "status_distribuicao": "novo 265 · bounce 86 · respondido 20 · encerrado 9",
+   "bounce_cache_json": 112,
+   "watchdog": "exit 0 - saudavel",
+   "respostas_reais": "2 no dia: ICT Farmaceutica (auto-ack SAC, nao humana) + ARTEMA PRE-MOLDADOS (HUMANA, fluxo desmoldante)",
+   "respostas_humanas": "1 - ARTEMA PRE-MOLDADOS (fabrica de pre-moldados de concreto, Paranagua/PR). Respondeu pedindo amostra gratis + valores. LEAD QUENTE do negocio Master EcoDesmold/desmoldante.",
+   "dias_sem_resposta_humana_fluxo_oleo": "28 (ultima resposta humana real de COMPRA de oleo: Tauste 30/09)",
+   "fila_prospeccao_pendentes": 11,
+   "fila_desmoldante": "12 empresas (Artema nao estava na fila atual - veio de lote anterior de prospeccao desmoldante)",
+   "observacao": "Sistema saudavel. Pipeline de compra de oleo: 380 leads, sem resposta humana desde Tauste 30/09 (28 dias). Gargalos: (1) fechamento humano via WhatsApp/telefone (Savegnago, Brasfrigo, Queijos Itupeva, Sonda, Tauste); (2) fila de prospeccao do oleo com apenas 11 pendentes. DESTAQUE do dia: Artema Pre-Moldados (desmoldante) respondeu com interesse real - amostra + valores solicitados, respondida com tom Julio 1a pessoa."
   }
  }
 }

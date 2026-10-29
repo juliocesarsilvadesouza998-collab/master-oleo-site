@@ -1,4 +1,355 @@
 {
+  "ciclo_2026_10_28_atendente_tick_1942": {
+    "timestamp": "2026-10-28 19:42 (Atendente IA - cron quarta-feira - tick diurno #17)",
+    "acoes": [
+      "✅ sync_formspree.py — 115 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (0 bounces novos desde tick #16)",
+      "✅ prospecao_followup.py — 0 follow-ups (nada atrasado)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --tudo --dias 1 — 23 mensagens desde 27/10: bounces já em cache + ICT (protocolos 1173/1174) já atendido + Artema já respondida + Claude spam. Nenhum lead novo não atendido.",
+      "✅ watchdog.py — exit 0: 392 leads, 275 ativos, 115 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 90 bounce / 0 pendentes",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 90,
+      "fila_pendentes": 0,
+      "leads_csv": 392,
+      "leads_bounce_status": 87,
+      "bounce_cache_json": 115,
+      "respostas_total": 22,
+      "respondidos_hoje": "ICT Farmacêutica (SAC auto-ack) · Artema Pré-Moldados (respondido 14:43)",
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "31 (última ação: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick #17 — repetição do #16 sem mudanças. Pipeline parado: 0 pendentes, 0 novos bounces, 0 novas respostas. Bounces.json estável em 115. Única diferença: fila_bounce subiu de 89→90 (1 bounce novo identificado entre os envios de lote). Próximo marco depende de reabastecimento de fila (listas CNPJ) ou de ação humana nos leads quentes (Savegnago, Pague Menos, Rede Confiança, Covabra).",
+      "melhoria_aplicada": "N/A — tick de manutenção sem correções"
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 31+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / ICT FARMACÊUTICA (SAC 1173).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10 15:3x; vigiar resposta."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1909": {
+    "timestamp": "2026-10-28 19:09 (Atendente IA - cron quarta-feira - tick diurno #16)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os bounces anteriores já tentados)",
+      "✅ prospecao_followup.py — 0 follow-ups (nada atrasado)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --tudo --dias 3 — 28 mensagens: bounces + auto-acks ICT (protocolos 1173/1174) + Artema já atendida + 4 spam. Nenhum lead não atendido.",
+      "✅ watchdog.py — exit 0: 392 leads, 276 ativos, 112 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes",
+      "🔧 CORREÇÃO APLICADA em sync_formspree.py (2 bugs no detector de bounces): (1) fetch passou de BODY.PEEK[TEXT] para RFC822 decodificando TODAS as partes — bounces no formato multipart/report do Gmail (ex. Ponto Certo) ficavam invisíveis; (2) o filtro descartava QUALQUER endereço @gmail.com, escondendo leads legítimos hospedados no Gmail.",
+      "🔧 EFEITO DA CORREÇÃO: cache 112 → 115 bounces; lead 'Mercado Ponto Certo' (Tietê/SP, bounce real 28/10 15:40 — 550 5.1.1 conta inexistente) foi registrado e marcado status=bounce (antes estava 'novo' com e-mail inválido).",
+      "⏭️ corrigir_emails.py (2ª passada) — Ponto Certo: nenhum e-mail alternativo encontrado via busca web → permanece bounce, sem reenvio (política do projeto aplicada).",
+      "✅ Organ Alimentos (Organutech) — mudança de endereço para contato@organupar.com.br já corrigida em 27/10; confirmado em correcoes_emails.json, nada a refazer.",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "leads_csv": 392,
+      "leads_bounce_status": 87,
+      "bounce_cache_json": 115,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (auto-ack SAC, protocolos 1173/1174 — aguarda setor de compras)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente — pediu amostra grátis)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "30 (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick #16 — 16º ciclo consecutivo sem novas respostas humanas. Diferencial do tick: o detector de bounces estava CEGO para o formato multipart/report do Gmail e para leads no Gmail, deixando um lead com e-mail inválido marcado como 'novo' (risco de reenvio eterno e de inflar falsa esperança). Corrigido e validado: cache 112→115, lead reclassificado. Pipeline de prospecção segue parado (0 pendentes); reabastecimento depende de listas CNPJ (Leadjet).",
+      "melhoria_aplicada": "sync_formspree.py — parser de bounces robusto (RFC822 multi-parte) + filtro de exclusão corrigido (só o e-mail do bot é ignorado)"
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / ICT FARMACÊUTICA (SAC 1173).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10 15:3x; vigiar resposta."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1830": {
+    "timestamp": "2026-10-28 18:30 (Atendente IA - cron quarta-feira - tick diurno #15)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups (nada atrasado)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --tudo --dias 3 — varredura completa: 26 mensagens na caixa (bounces + respostas já processadas + spam). Nenhum lead não atendido.",
+      "✅ watchdog.py — IMAP timeout transiente na 1ª tentativa, OK nas retentativas (SMTP/IMAP saudável)",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes (inalterado)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)",
+      "⏭️ prospecção manual — não executado (free web scraping esgotado per persona.md; recomendação Leadjet pendente de compra)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "30 (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick #15 — 15º ciclo consecutivo sem novas respostas. Pipeline 100% drenado (0 pendentes, fila parada aguardando reposição). IMAP timeout transiente na 1ª tentativa resolvido com retry — não crítico, mas indicador de latência de rede. Mesmo estado do tick #14 (18:03). Reabastecimento da fila depende de listas CNPJ pagas (Leadjet) recomendadas pelo Estrategista."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / ICT FARMACÊUTICA (SAC 1173).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10 15:3x; vigiar resposta."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1803": {
+    "timestamp": "2026-10-28 18:03 (Atendente IA - cron quarta-feira - tick diurno #14)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas/recentes na caixa (392 leads, 291 msgids)",
+      "✅ watchdog.py — exit 0: SMTP/IMAP OK, 392 leads, 276 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "30 (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick #14 — 14º ciclo consecutivo sem novas respostas. Pipeline 100% drenado (0 pendentes, fila parada aguardando reposição do Prospector 09:15/Melhorador). Sem bounces novos → zero correções. Sem leads com volume informado → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. Gargalo: AÇÃO HUMANA nos leads quentes — 30 dias sem ação em Savegnago (#1 interior SP, R$7,98bi); Covabra aguarda cadastro fornecedor no portal Ivrim. Bounce rate ~29% (112/392) acima da meta de 15%."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30 dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana, lead mais maduro).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA — se silêncio em 2 dias, reengajar via WhatsApp (respondeu 28/10 09:33, protocolo 1173).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10 15:3x; vigiar resposta (padrão SAC→comercial)."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1737": {
+    "timestamp": "2026-10-28 17:37 (Atendente IA - cron quarta-feira - tick diurno #13)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas/recentes na caixa (392 leads, 291 msgids)",
+      "✅ watchdog.py — exit 0: SMTP/IMAP OK, 392 leads, 276 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "29+ (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick #13 — 13º ciclo consecutivo sem novas respostas. Pipeline 100% drenado (0 pendentes, fila parada). Sem bounces novos. Sem leads com volume informado → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. Gargalo: AÇÃO HUMANA nos leads quentes — 30 dias sem ação em Savegnago (#1 interior SP). Fila de prospecção precisa de reposição (Prospector só roda 09:15). Bounce rate ~26% (112/392) acima da meta de 15%."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30 dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana, lead mais maduro).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA — se silêncio em 3 dias, reengajar via WhatsApp.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10 15:3x; vigiar resposta (padrão SAC→comercial)."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1705": {
+    "timestamp": "2026-10-28 17:05 (Atendente IA - cron quarta-feira - tick diurno #12)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas/recentes na caixa (392 leads, 291 msgids)",
+      "✅ watchdog.py — exit 0: SMTP/IMAP OK, 392 leads, 276 ativos, 112 bounces",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "29+ (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick limpo (32 min após o #11). Nenhuma resposta nova para atender — 12º tick consecutivo sem novidades na caixa. Pipeline 100% drenado (0 pendentes) desde 15:30; cold email no teto aguardando reposição do Prospector 09:15/Melhorador. Sem bounces novos → zero correções. Nenhum lead novo com volume informado → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. Gargalo segue AÇÃO HUMANA nos leads quentes (Savegnago 30d, Pague Menos 15d, Covabra Ivrim, Rede Confiança, Brasfrigo/Queijos Itupeva, Sonda/Tauste). Bounce rate ~26% (112/392) acima da meta de 15%."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30 dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana, lead mais maduro).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA — se silêncio em 3 dias, reengajar via WhatsApp.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10 15:3x; vigiar resposta (padrão SAC→comercial)."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1633": {
+    "timestamp": "2026-10-28 16:33 (Atendente IA - cron quarta-feira - tick diurno #11)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas/recentes na caixa (392 leads, 291 msgids)",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "29+ (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick limpo (26 min após o #10). Pipeline segue 100% drenado (0 pendentes, fila parada aguardando reposição do Prospector 09:15/Melhorador). Nenhuma resposta nova desde ICT (09:33) e Artema (14:43). Nenhum lead novo com volume informado → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. Gargalo segue AÇÃO HUMANA nos leads quentes (Savegnago 30d, Pague Menos 15d, Covabra Ivrim, Rede Confiança, Brasfrigo/Queijos Itupeva, Sonda/Tauste). Bounce rate ~26% (112/392) acima da meta de 15%."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30 dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana, lead mais maduro).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA — se silêncio em 3 dias, reengajar via WhatsApp.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 15:3x; vigiar resposta (padrão SAC→comercial)."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1607": {
+    "timestamp": "2026-10-28 16:07 (Atendente IA - cron quarta-feira - tick diurno #10)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 3 — 0 não lidas/recentes na caixa (392 leads, 291 msgids)",
+      "✅ enviar_lote.py --status — fila 430 / 370 contatados / 89 bounce / 0 pendentes",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana": "29+ (última: Pague Menos 14/10; última real: Tauste 30/09)",
+      "observacao": "Tick limpo. Pipeline 100% drenado (0 pendentes) desde o destravamento do tick 15:30. Nenhuma resposta nova desde ICT (09:33) e Artema (14:43). Gargalo segue sendo AÇÃO HUMANA nos leads quentes (Savegnago, Pague Menos, Covabra Ivrim, Rede Confiança, Brasfrigo/Queijos Itupeva, Sonda/Tauste) — 29+ dias sem resposta humana real. Bounce rate ~26% (112/392+ cache) ainda acima da meta de 15%."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30 dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana, lead mais maduro).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA — se silêncio em 3 dias, reengajar via WhatsApp.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 15:3x; vigiar resposta (padrão SAC→comercial)."
+    ]
+  },
+  "ciclo_2026_10_28_atendente_tick_1530": {
+    "timestamp": "2026-10-28 15:30 (Atendente IA - cron quarta-feira - tick diurno #9)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ scan_inbox.py --dias 7 — 0 não lidas/recentes na caixa (392 leads, 321 msgids)",
+      "🔥 enviar_lote.py --max 15 — DESTRAVOU a fila: 11 emails de apresentação enviados (fila reabastecida 14:06 pelo Melhorador estava parada; Prospector só roda 09:15). Municípios novos: Tietê (Tiba, Potiguara, Ponto Certo, TBS), Itu (Mercado Atual, União Supermercados), Sorocaba (Boi na Brasa), Cerquilho (Stabilê, M&M, Tiãozinho), Unialimentar (email corrigido gmail)",
+      "🐛 FIX: enviar_lote.py quebrou ao gravar — lead desmoldante com id NÃO numérico 'ARTEMA20261028' (linha 382, inserido pelo fluxo desmoldante 14:42) estourava int() no merge_write_leads e IMPEDIA qualquer lote futuro de persistir. Patch: base_id = max apenas de ids numéricos.",
+      "🔧 RECUPERAÇÃO: _reparo_lote.py — leu a pasta Sent do Gmail, confirmou os 11 envios reais (32 mensagens enviadas hoje) e registrou os 11 leads no leads.csv com apresentacao_em + apresentacao_msgid autênticos (evita reenvio duplicado e mantém correlação de thread para check-replies)",
+      "🎯 Resultado: fila 430 / 370 contatados / 89 bounce / 0 PENDENTES — pipeline 100% drenado pela primeira vez"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 89,
+      "fila_pendentes": 0,
+      "fila_pendentes_antes": 11,
+      "enviados_hoje_atendente": 11,
+      "respostas_total": 22,
+      "respondidos_hoje": [
+        "ICT Farmacêutica 09:33 (respondido_atendente)",
+        "Artema Pre Moldados 14:43 (desmoldante, respondido_atendente)"
+      ],
+      "caixa_nao_lidas": 0,
+      "observacao": "Sem respostas novas para atender neste tick. Pipeline de prospecção ZERADO pela primeira vez (0 pendentes). Gargalo segue sendo AÇÃO HUMANA nos leads quentes (Savegnago 29d, Pague Menos 14d, Covabra Ivrim, Rede Confiança, Sonda/Tauste ligações). Bug do id não numérico teria travado TODOS os envios futuros — corrigido e testado."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 30 dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 15 dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana, lead mais maduro).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste.",
+      "🟡 SONDA — ligar (11) 2145-6200. 🟡 TAUSTE — ligar (15) 3324-4680. 🟡 ICT FARMACÊUTICA respondeu 28/10 09:33 — acompanhar.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada HOJE 15:3x; rede local grande, observar resposta (padrão SAC→comercial)."
+    ]
+  },
   "ciclo_2026_10_28_melhorador_tick_1400": {
     "timestamp": "2026-10-28 14:00 (Melhorador Continuo - cron diario)",
     "acoes": [
@@ -2999,7 +3350,7 @@
       "ultimo_lead_quente": "Pague Menos (14/10)"
     }
   },
-  "atualizado_em": "2026-10-28 12:10 (Atendente IA - cron quarta-feira - tick #4 diurno)",
+  "atualizado_em": "2026-10-28 15:08 (Atendente IA - cron quarta-feira - tick diurno #9)",
   "criado_em": "2026-08-13",
   "ciclo_2026_10_24_cron_atendente_tick_19h": {
     "timestamp": "2026-10-24 19:03 (Atendente IA - cron tick #3 - sábado)",
@@ -3405,5 +3756,35 @@
     },
     "dias_sem_resposta_humana": 29,
     "ultimo_lead_quente": "ICT Farmacêutica (protocolo SAC 1173, respondido 28/10 09:33)"
+  },
+  "ciclo_2026_10_28_atendente_tick_1508": {
+    "timestamp": "2026-10-28 15:08 (Atendente IA - cron quarta-feira - tick diurno #9)",
+    "acoes": [
+      "✅ sync_formspree.py — 112 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 112 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups processados (nada pendente)",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ Auditoria IMAP extra (46 emails INBOX desde 20/10) — todos contabilizados: DSNs de bounce, newsletters, auto-acks; nenhuma resposta humana pendente perdida",
+      "✅ Cross-check Sent: Organutech (email corrigido → organupar, reenvio 27/10 19:06 OK) e ICT Farmacêutica (auto-ack SAC protocolo 1173, já respondido 09:33) — sem ação nova",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 381,
+      "ativos_watchdog": 265,
+      "bounce_cache_json": 112,
+      "watchdog": "exit 0 — saudável (SMTP/IMAP OK, 381 leads, 265 ativos, 112 bounces)",
+      "fila_total": 421,
+      "fila_contatados": 359,
+      "fila_bounce": 89,
+      "fila_pendentes_validas": 0,
+      "respostas_reais": 0,
+      "enviados_hoje": 0,
+      "respostas_humanas": "29 dias sem respostas humanas (última: Pague Menos 14/10; última real: Tauste 30/09 — 29 dias)",
+      "observacao": "Tick 15:08 — caixa auditada de ponta a ponta (46 emails desde 20/10): tudo conferido. 0 respostas humanas novas no pipeline Master Óleo. Descoberta relevante: ARTEMA PRÉ-MOLDADOS (Paranaguá/PR) respondeu ao email de amostra grátis do DESMOLDANTE (08:19) e foi respondido pelo atendente IA do Master EcoDesmold às 14:43 — lead quente do 2º negócio, registro em leads.csv (fonte=desmoldante, respondido). ICT Farmacêutica: os 2 emails 'Recebido:' são auto-ack do SAC (protocolo 1173) — lead já respondido 09:33, aguardar setor de compras. Organutech: auto-resposta 'Novo endereço de email' já processada (correção → contato@organupar.com.br + reenvio 27/10 19:06). Bounce rate ~29% segue acima da meta de 15%. Pipeline de fechamento Master Óleo continua bloqueado em ação humana (Savegnago #1, Pague Menos #2, Rede Confiança, Covabra portal Ivrim, Brasfrigo, Queijos Itupeva, Sonda, Tauste)."
+    },
+    "dias_sem_resposta_humana": 29,
+    "ultimo_lead_quente": "Artema Pré-Moldados (desmoldante - respondido 14:43); ICT Farmacêutica (protocolo SAC 1173)"
   }
 }

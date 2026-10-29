@@ -115,10 +115,37 @@ def process_notifications(args):
         typ, data = m.search(None, '(FROM "mailer-daemon@googlemail.com")')
         bounce_ids = data[0].split() if typ == "OK" and data[0] else []
         for i in bounce_ids:
-            typ2, msg_data = m.fetch(i, "(BODY.PEEK[TEXT])")
+            typ2, msg_data = m.fetch(i, "(RFC822)")
             if typ2 != "OK" or not msg_data or not msg_data[0]:
                 continue
-            body = msg_data[0][1].decode("utf-8","replace")
+            # CORREÇÃO 28/10 (Atendente): bounces multipart/report (formato novo do
+            # Gmail, ex. "mercado.pontocertotiete@gmail.com" em 28/10) traziam o
+            # endereço numa parte que o BODY.PEEK[TEXT] NÃO expõe — o bounce ficava
+            # invisível ao pipeline (cache parado em 112). Agora decodificamos
+            # TODAS as partes do RFC822 e juntamos o texto antes do regex.
+            try:
+                msg = email.message_from_bytes(msg_data[0][1])
+            except Exception:
+                continue
+            textos = []
+            if msg.is_multipart():
+                for part in msg.walk():
+                    if part.get_content_maintype() == "multipart":
+                        continue
+                    try:
+                        raw = part.get_payload(decode=True)
+                    except Exception:
+                        raw = None
+                    if raw:
+                        textos.append(raw.decode(part.get_content_charset() or "utf-8", "replace"))
+            else:
+                try:
+                    raw = msg.get_payload(decode=True)
+                    if raw:
+                        textos.append(raw.decode(msg.get_content_charset() or "utf-8", "replace"))
+                except Exception:
+                    pass
+            body = "\n".join(textos)
             for em in re.findall(r"[\w.+-]+@[\w-]+\.[\w.]+", body):
                 el = em.lower().strip()
                 # Normaliza lixo de parsing: remove ponto final/espacos capturados
@@ -126,8 +153,16 @@ def process_notifications(args):
                 while el.endswith("."):
                     el = el[:-1]
                 el = el.strip()
-                if "masteroleo" not in el and "gmail.com" not in el and "@" in el:
-                    bounces.add(el)
+                proprio = str(e.get("usuario", "")).strip().lower()
+                if "@" not in el:
+                    continue
+                # CORREÇÃO 28/10: antes o filtro descartava QUALQUER endereço
+                # "@gmail.com" — o que escondia leads legítimos hospedados no Gmail
+                # (ex. mercado.pontocertotiete@gmail.com). Agora só excluímos o
+                # próprio e-mail do bot.
+                if el == proprio or "masteroleo" in el:
+                    continue
+                bounces.add(el)
         if bounces:
             save_bounces(bounces)
             # marca leads existentes com email que deu bounce

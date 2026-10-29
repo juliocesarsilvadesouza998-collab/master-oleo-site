@@ -137,9 +137,17 @@ def main():
         thread_hit = any(mid in refs for mid in sent_msgids if mid)
         # correlação 3: assunto menciona empresa do lead
         subj_hit = None
+        raw_subject = msg["subject"]
+        if not isinstance(raw_subject, str):
+            # subject pode chegar como objeto email.header.Header quando tem encoding
+            try:
+                raw_subject = str(raw_subject)
+            except Exception:
+                raw_subject = ""
+        subj_low = (raw_subject or "").lower()
         for l in leads:
             emp = l.get("empresa", "")
-            if emp and emp.lower() in msg["subject"].lower():
+            if emp and emp.lower() in subj_low:
                 subj_hit = l
                 break
         status = []

@@ -117,7 +117,7 @@ def merge_write_leads(novos_em_memoria):
             for l in novos_em_memoria:
                 if l.get("email", "").strip().lower() not in existentes:
                     a_adicionar.append(l)
-            base_id = max((int(l.get("id") or 0) for l in atuais), default=0)
+            base_id = max((int(l.get("id")) for l in atuais if str(l.get("id") or "").strip().isdigit()), default=0)
             for i, l in enumerate(a_adicionar, start=base_id + 1):
                 l["id"] = str(i)
             write_leads(atuais + a_adicionar)
