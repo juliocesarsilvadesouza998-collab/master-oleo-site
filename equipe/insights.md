@@ -1,3 +1,41 @@
+## 2026-10-29 17:45 (Melhorador Contínuo — cron diário)
+
+### Diagnóstico do dia
+- ✅ **Watchdog**: 392 leads / 275 ativos / 115 bounces / SMTP+IMAP OK
+- ✅ **6 FP1 follow-ups enviados** (watchdog apontava 6 atrasados — resolvido)
+- ✅ **Fila reabastecida**: +8 novas empresas MX-validadas (Capivari, Itu, Porto Feliz)
+- ✅ **Sanofi Medley**: 21º respondido (SAC protocolo 03065348 — auto-ack encaminhado ao compras)
+- 🔴 **30 dias sem resposta humana REAL** (Tauste 30/09 — período recorde)
+- 🔴 **Pipeline de fechamento parado**: Savegnago, Pague Menos, Covabra (Ivrim), Rede Confiança
+- 🔴 **Fila de prospecção**: 430 base + 341 extra → 8 pendentes MX-válidos
+
+### Melhorias implementadas
+| Ação | Resultado |
+|------|-----------|
+| `prospecao_followup.py` | **6 FP1 enviados** com thread (Sorocaps, American Factory, Conduz Laticínios, Laticínios Pirâmide, Nutrielen, Alemed Nutracêutica) |
+| `_add_leads.py` | **8 novos leads MX-verificados** adicionados à `fila_prospeccao_extra.json` |
+| Fonte | PDF da rede credenciada Mega Vale Card (Prefeitura de Tietê) — emails reais de supermercados |
+| ecossistema.json | Atualizado com ciclo do Melhorador |
+
+### Aprendizado do ciclo
+1. **PDFs de rede credenciada das prefeituras continuam sendo a melhor fonte gratuita de leads.** O PDF da Mega Vale Card (Prefeitura de Tietê) revelou 8 empresas de Capivari, Itu e Porto Feliz com emails verificados que não estavam na fila. É uma mina de ouro repetível — buscar `site:tiete.sp.gov.br rede credenciada mega` + `site:tiete.sp.gov.br rede credenciada up` + similares nas prefeituras de Porto Feliz, Capivari, Cerquilho, Elias Fausto.
+2. **Sanofi Medley segue o padrão ICT/Savegnago/Pague Menos/Rede Confiança:** SAC encaminha ao compras. A cada nova resposta deste padrão, reforça-se que emails chegam ao destino certo — o gargalo de fechamento é 100% humano (WhatsApp/telefone).
+3. **Follow-ups mantêm o funil aquecido:** os 6 FP1 enviados hoje dão continuidade a leads que receberam apresentação recentemente. Sem isso, o lead esfria e a taxa de resposta cai.
+
+### Pendências para o Estrategista
+| Prioridade | Lead | Ação necessária |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **Savegnago** (R$7,98bi) | WhatsApp (11) 96785-9631 — **30 dias parado** |
+| 🔴🔴🔴 | **Pague Menos** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho) — 15 dias |
+| 🔴🔴🔴 | **Covabra** | Cadastro fornecedor Ivrim (isac.ivrim.com.br) |
+| 🔴🔴🔴 | **Rede Confiança** (Sorocaba) | Proposta 2.500 L/mês; reforço WhatsApp |
+| 🔴🔴 | **Brasfrigo / Queijos Itupeva** | Agendar coleta-teste (Salto/região) |
+| 🟡 | **Sonda** (R$6,12bi) | Ligar (11) 2145-6200 |
+| 🟡 | **Tauste** | Ligar (15) 3324-4680 |
+| 🟢 | **União Supermercados / Sanofi Medley** | Vigiar resposta (SAC→compras) |
+
+---
+
 ## 2026-10-28 19:42 (Atendente IA — tick diurno #17)
 
 ### Números do tick
@@ -169,7 +207,52 @@
 | 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 15+ dias sem ação. |
 | 🔴🔴 | **BRASFRIGO** (Salto/SP) | Agendar coleta-teste. Local, respondeu. |
 | 🔴🔴 | **QUEIJOS ITUPEVA (Rafael)** | Agendar coleta-teste. |
-| 🔴 | **ARTEMA PRÉ-MOLDADOS** (Paranaguá/PR — desmoldante) | Pediu amostra grátis; respondido 14:43. Acompanhar envio + follow-up. |
+| 🟢 | **ARTEMA PRÉ-MOLDADOS** (Paranaguá/PR — desmoldante) | Pediu amostra grátis; respondido 28/10 14:43. |
+
+---
+
+## 2026-10-29 17:48 (Atendente IA — cron quinta-feira #1)
+
+### Números do tick
+
+| Indicador | Valor |
+|-----------|-------|
+| Bounces no cache (bounces.json) | **116** (estável — era 115) |
+| Bounces processados (corrigir_emails) | **0** — todos já tentados |
+| Notificações Formspree novas | 0 |
+| Follow-ups de prospecção enviados | 0 |
+| Respostas pendentes (replies_pending.json) | **0** (`[]`) |
+| Watchdog | exit 0 — 392 leads / 275 ativos / 116 bounces, SMTP+IMAP OK |
+| Fila de prospecção | 430 total / 370 contatados / **90 bounce** / 0 pendentes |
+
+### Diagnóstico
+- **Tick 100% manutenção**: todos os scripts rodaram limpos. Nenhum novo lead, nenhuma resposta, nenhum bounce novo detectado.
+- Única variação: bounces.json subiu de 115→116 (+1 assimilado do histórico do cache que já estava no CSV).
+- Fila de prospecção zerada (0 pendentes MX-válidos) — mesmo estado do tick #17 ontem.
+
+### Ações do Atendente neste tick
+- Nenhuma resposta enviada (sem replies pendentes).
+- Proposta de contrato: **não executada** — nenhum lead com volume novo.
+- Relatório ESG: **não executado** — nenhuma solicitação.
+
+### Leads QUENTES (inalterados — aguardando ação humana — **31º dia**)
+
+| Prioridade | Lead | Próximo passo |
+|:----------:|------|----------------|
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | WhatsApp (11) 96785-9631. **31 dias sem ação.** |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Acompanhar ticket 407470 (Josiane Marinho). 15 dias sem retorno. |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada. Aguardando retorno. |
+| 🔴🔴🔴 | **COVABRA** | **AÇÃO HUMANA: cadastro de fornecedor** (isac.ivrim.com.br). |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) · **QUEIJOS ITUPEVA** | Agendar coleta-teste (local, responderam). |
+| 🟡 | **SONDA** (ligar 11-2145-6200) · **TAUSTE** (ligar 15-3324-4680) | Ligar. |
+| 🟡 | **ICT FARMACÊUTICA** (Votorantim) | Protocolo SAC 1173 (28/10). Aguardar setor de compras. |
+| 🟢 | **UNIÃO SUPERMERCADOS** (14 lojas, Itu) | Apresentação enviada 28/10; vigiar resposta. |
+| 🟢 | **ARTEMA PRÉ-MOLDADOS** (Paranaguá/PR — desmoldante) | Pediu amostra grátis; respondido 28/10 14:43. |
+
+### Observações
+- **31 dias sem resposta humana REAL** no pipeline Master Óleo (Tauste 30/09) — o fechamento continua bloqueado em ação humana. O protocolo de reengajamento (persona.md, seção 🆘) permanece a única alavanca ativa; os scripts de WhatsApp estão prontos para os 5 principais.
+- Reabastecimento da fila depende da compra de listas CNPJ (Leadjet, CNAEs 1041-4/1043-1/1052-0) — 0 pendentes MX-válidos restantes.
+- Nenhum lead com volume novo → sem proposta de contrato; nenhuma solicitação ESG → sem relatório gerado.
 | 🟡 | **SONDA** (R$6,12bi) | Ligar (11) 2145-6200. |
 | 🟡 | **TAUSTE** | Ligar (15) 3324-4680. |
 | 🟡 | **ICT FARMACÊUTICA** (Votorantim) | Auto-ack SAC (protocolo 1173). Se silêncio em 2 dias, reengajar via WhatsApp. |

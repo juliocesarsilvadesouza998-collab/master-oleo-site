@@ -2400,5 +2400,61 @@
     "email": "sac@uniaosupermercados.com",
     "cidade": "Itu/SP",
     "segmento": "Supermercados (rede 14+ lojas - padaria/rotisserie/acougue, fritura continua, oleo vencido)"
+  },
+  {
+    "nome": "Supermercado Bresciani",
+    "empresa": "Supermercado Irmãos Bresciani LTDA",
+    "email": "sbresciani@supermercadobresciani.com.br",
+    "cidade": "Capivari/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "Supermercado CopeBe",
+    "empresa": "Supermercado CopeBe LTDA",
+    "email": "rodrigo@copebesupermercado.com.br",
+    "cidade": "Itu/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "Supermercado Armelin",
+    "empresa": "Supermercado Armelin LTDA",
+    "email": "contato@supermercadoarmelin.com.br",
+    "cidade": "Capivari/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "Supermercado Ituano",
+    "empresa": "Supermercado Ituano LTDA",
+    "email": "supermercadoituano@gmail.com",
+    "cidade": "Itu/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "Açougue Cassaniga",
+    "empresa": "Açougue Cassaniga LTDA",
+    "email": "acouguecassaniga@gmail.com",
+    "cidade": "Capivari/SP",
+    "segmento": ""
+  },
+  {
+    "nome": "Mercado Feitosa",
+    "empresa": "Minimercado Feitosa Itu LTDA",
+    "email": "mercadofeitosa@gmail.com",
+    "cidade": "Itu/SP",
+    "segmento": "Mini mercado"
+  },
+  {
+    "nome": "Supermercado Serve Bem",
+    "empresa": "Supermercado Serve Bem Capivari LTDA",
+    "email": "supermercadopareaqui@yahoo.com.br",
+    "cidade": "Capivari/SP",
+    "segmento": "Supermercado"
+  },
+  {
+    "nome": "Flor da Agua Fria",
+    "empresa": "Flor da Agua Fria Padaria ME",
+    "email": "valbertoteixeiraalves@gmail.com",
+    "cidade": "Porto Feliz/SP",
+    "segmento": "Padaria"
   }
 ]

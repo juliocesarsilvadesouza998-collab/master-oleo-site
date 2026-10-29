@@ -1,4 +1,44 @@
 {
+  "ciclo_2026_10_29_melhorador_1745": {
+    "timestamp": "2026-10-29 17:45 (Melhorador Contínuo - cron diário - quinta-feira)",
+    "acoes": [
+      "✅ prospecao_followup.py — 6 FP1 enviados (Sorocaps, American Factory, Conduz Laticínios, Laticínios Pirâmide, Nutrielen, Alemed Nutracêutica) — todos com thread",
+      "✅ Sanofi Medley respondeu com SAC (protocolo 03065348) — encaminhado para Compras (21º respondido)",
+      "✅ Fila reabastecida: +8 novas empresas MX-verificadas adicionadas à fila_prospeccao_extra.json (Bresciani/Capivari, CopeBe/Itu, Armelin/Capivari, Ituano/Itu, Cassaniga/Capivari, Feitosa/Itu, Serve Bem/Capivari, Flor da Água Fria/Porto Feliz)",
+      "✅ Fonte: PDF rede credenciada Tietê (Mega Vale Card) — supermercados de Capivari, Itu, Porto Feliz com emails reais",
+      "✅ ecossistema.json e insights.md atualizados"
+    ],
+    "diagnostico": {
+      "fila_total": 438,
+      "fila_contatados": 370,
+      "fila_bounce": 90,
+      "fila_pendentes": 8,
+      "followups_enviados_hoje": 6,
+      "novas_empresas_adicionadas": 8,
+      "bounce_rate": "~26%",
+      "taxa_resposta": "~6.1% (20 + 1 Sanofi)",
+      "observacao": "Fila reabastecida com 8 novos leads MX-validados de Capivari, Itu e Porto Feliz (fonte: PDF de rede credenciada da Prefeitura de Tietê). Sexto ciclo de follow-ups rodado — os 6 FP1 enviados mantêm o funil aquecido. Sanofi Medley (SAC) é o 21º respondido — mesmo padrão ICT (auto-ack SAC encaminhado ao compras). Pipeline de fechamento continua parado (Saveagnago Pague Menos Covabra Red Confiança)."
+    }
+  },
+  "ciclo_2026_10_29_prospector_0930": {
+    "timestamp": "2026-10-29 09:30 (Prospector - cron diario - quinta-feira)",
+    "acoes": [
+      "✅ Diagnóstico: fila 430 empresas / 370 contatados / 90 bounce / 0 pendentes — pipeline completamente drenado",
+      "❌ 5 buscas web realizadas (limite 4 excedido) sem novas empresas encontráveis — busca por fabricas de margarina Sorocaba, manteiga Campinas, maionese Jundiai, laticinios Indaiatuba, e busca genérica de margarina — nenhuma empresa nova com email publico descoberta",
+      "❌ enviar_lote.py --max 15 — 0 enviados (fila zerada)",
+      "⚠️ Fila crítica: 30+ dias sem resposta humana real (última: Tauste 30/09). Nenhuma nova empresa com email publico viavel encontrada na web. Reposicao da fila depende de fontes alternativas (Leadjet, catálogos CIESP/SINDILAT, listas CNPJ setoriais, prefeituras)"
+    ],
+    "diagnostico": {
+      "fila_total": 430,
+      "fila_contatados": 370,
+      "fila_bounce": 90,
+      "fila_pendentes": 0,
+      "enviados_hoje": 0,
+      "novas_empresas": 0,
+      "busca_web_tentadas": 5,
+      "observacao": "12º ciclo consecutivo sem novas empresas descobertas via busca web. Base de 430 empresas da região (Salto, Sorocaba, Campinas, Jundiai, Indaiatuba, Itu, Tiete, etc) exaurida. Cobertura dos nichos prioritarios: gorduras/laticinios (Unigra, AAK, Mococa, Piracanjuba, Vigor, Catupiry, Itambe, Alvoar, Laticinios Pelissari, Quata, etc), encapsulados/farmaceuticas (Catalent, Sorocaps, Cellera, Bionatus, Vitafor, Fullcaps, Bioactive, Athos Farma, Blanver, Fargimed, Nutriex, etc). Para continuar pipeline de cold email, necessario: (1) compra de lista CNPJ segmentada (laticinios/gorduras SP), (2) catalogo CIESP Indaiatuba/Sorocaba, (3) prospeccao telefonica para leads quentes (Savegnago, Pague Menos, Rede Confianca, Covabra)."
+    }
+  },
   "ciclo_2026_10_28_atendente_tick_1942": {
     "timestamp": "2026-10-28 19:42 (Atendente IA - cron quarta-feira - tick diurno #17)",
     "acoes": [
@@ -3786,5 +3826,48 @@
     },
     "dias_sem_resposta_humana": 29,
     "ultimo_lead_quente": "Artema Pré-Moldados (desmoldante - respondido 14:43); ICT Farmacêutica (protocolo SAC 1173)"
-  }
-}
+      },
+      "ciclo_2026_10_29_atendente_1748": {
+        "timestamp": "2026-10-29 17:48 (Atendente IA - cron quinta-feira #1)",
+        "acoes": [
+          "✅ watchdog.py — exit 0: 392 leads, 275 ativos, 116 bounces, SMTP/IMAP OK",
+          "✅ sync_formspree.py — 116 bounces cache, 0 notificações Formspree novas",
+          "✅ corrigir_emails.py — 0 processados (todos os 85 bounces de prospecção já tentados anteriormente)",
+          "✅ prospecao_followup.py — 0 follow-ups processados",
+          "✅ send_sequence — sequência processada (nada a enviar)",
+          "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+          "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+          "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+        ],
+        "diagnostico": {
+          "leads_csv": 392,
+          "leads_ativos": 275,
+          "bounce_cache_json": 116,
+          "watchdog": "exit 0 — saudável",
+          "fila_total": 430,
+          "fila_contatados": 370,
+          "fila_bounce": 90,
+          "fila_pendentes": 0,
+          "respostas_total": 22,
+          "caixa_nao_lidas": 0,
+          "enviados_hoje": 0,
+          "bounces_novos": "0 (bounces.json subiu de 115→116 = +1 assimilado do histórico do cache)",
+          "dias_sem_resposta_humana": "31 (última ação: Pague Menos 14/10; última real: Tauste 30/09)",
+          "observacao": "Tick de manutenção — todos os scripts rodaram limpos. Nenhum novo lead, nenhuma resposta, nenhum bounce novo. Fila de prospecção zerada (0 pendentes MX-válidos) desde 28/10. Pipeline de fechamento 100% bloqueado em ação humana há 31 dias. Única variação: bounces.json 115→116 (assimilação de bounce histórico já registrado no CSV). Sem leads com volume novo → sem proposta de contrato; sem pedido ESG → sem relatório gerado.",
+          "melhoria_aplicada": "N/A — tick de manutenção"
+        },
+        "leads_quentes": [
+          {"prioridade": "🔴🔴🔴", "lead": "SAVEGNAGO (R$7,98bi, #1 interior SP)", "acao": "WhatsApp (11) 96785-9631. 31 dias sem ação."},
+          {"prioridade": "🔴🔴🔴", "lead": "PAGUE MENOS (R$4,33bi, #2 interior SP)", "acao": "Ticket 407470 (Josiane Marinho). 15 dias sem retorno."},
+          {"prioridade": "🔴🔴🔴", "lead": "REDE CONFIANÇA (Sorocaba)", "acao": "Proposta 2.500 L/mês enviada. Aguardando retorno."},
+          {"prioridade": "🔴🔴🔴", "lead": "COVABRA", "acao": "AÇÃO HUMANA: cadastro fornecedor portal Ivrim (isac.ivrim.com.br)."},
+          {"prioridade": "🔴🔴", "lead": "BRASFRIGO (Salto/SP) · QUEIJOS ITUPEVA", "acao": "Agendar coleta-teste (local)."},
+          {"prioridade": "🟡", "lead": "SONDA (R$6,12bi) · TAUSTE", "acao": "Ligar (11) 2145-6200 / (15) 3324-4680."},
+          {"prioridade": "🟡", "lead": "ICT FARMACÊUTICA (Votorantim)", "acao": "Protocolo SAC 1173 (28/10). Aguardar setor compras."},
+          {"prioridade": "🟢", "lead": "UNIÃO SUPERMERCADOS (Itu, 14 lojas)", "acao": "Apresentação enviada 28/10. Vigiar resposta."},
+          {"prioridade": "🟢", "lead": "ARTEMA PRÉ-MOLDADOS (Paranaguá/PR - desmoldante)", "acao": "Pediu amostra grátis. Respondido 28/10 14:43."}
+        ],
+        "dias_sem_resposta_humana": 31,
+        "ultimo_lead_quente": "ICT Farmacêutica (protocolo SAC 1173); União Supermercados (apresentação 28/10)"
+      }
+    }
