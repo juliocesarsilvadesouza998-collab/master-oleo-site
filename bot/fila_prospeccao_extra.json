@@ -2456,5 +2456,215 @@
     "email": "valbertoteixeiraalves@gmail.com",
     "cidade": "Porto Feliz/SP",
     "segmento": "Padaria"
-  }
-]
+  },
+  {
+    "nome": "Crista Industria e Comercio LTDA",
+    "empresa": "Crista Industria e Comercio LTDA",
+    "email": "faleconosco@cristamargarina.com.br",
+    "cidade": "Indaiatuba/SP",
+    "segmento": "Industria de margarina e gorduras vegetais"
+  },
+  {
+    "nome": "Festpan Alimentos LTDA",
+    "empresa": "Festpan Alimentos LTDA",
+    "email": "ecommerce@festpan.com.br",
+    "cidade": "Maua/SP",
+    "segmento": "Comercio de margarinas e produtos de panificacao"
+  },
+  {
+    "nome": "Pastificio Selmi S/A",
+    "empresa": "Pastificio Selmi S/A",
+    "email": "sac@selmi.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "Industria de massas alimenticias (fritura em volume)"
+  },
+  {
+    "nome": "Supermercado Infanger",
+    "empresa": "Supermercado Infanger",
+    "email": "supermercado@infanger.com.br",
+    "cidade": "SP",
+    "segmento": "Supermercado (fritura continua)"
+  },
+  {
+    "nome": "Real Distribuidora",
+    "empresa": "Real Distribuidora",
+    "email": "paulo@realdist.com.br",
+    "cidade": "SP",
+    "segmento": "Distribuidora de alimentos"
+  },
+  {
+    "nome": "Frigorifico Cowpig",
+    "empresa": "Frigorifico Cowpig",
+    "email": "atendimento@cowpig.com.br",
+    "cidade": "SP",
+    "segmento": "Frigorifico (gordura animal)"
+  },
+  {
+    "nome": "Laticinios Uniao do Brasil",
+    "empresa": "Laticinios Uniao do Brasil",
+    "email": "gerentecomercial@laticiniosuniaodobrasil.com.br",
+    "cidade": "SP",
+    "segmento": "Industria de laticinios (manteiga, cremes)"
+  },
+  {
+    "nome": "Schreiber Foods Brasil",
+    "empresa": "Schreiber Foods Brasil",
+    "email": "portofeliz@schreiberfoods.com",
+    "cidade": "Porto Feliz/SP",
+    "segmento": "Laticinios e queijos (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Lider Alimentos",
+    "empresa": "Lider Alimentos",
+    "email": "marketing.gold@lideralimentos.com.br",
+    "cidade": "SP",
+    "segmento": "Industria alimenticia (gorduras)"
+  },
+  {
+    "nome": "Confeitaria Dama",
+    "empresa": "Confeitaria Dama",
+    "email": "marketing@confeitariadama.com.br",
+    "cidade": "SP",
+    "segmento": "Confeitaria industrial (manteiga, cremes)"
+  },
+  {
+    "nome": "FS Alimentos",
+    "empresa": "FS Alimentos",
+    "email": "contato@fsalimentos.com.br",
+    "cidade": "SP",
+    "segmento": "Industria alimenticia"
+  },
+  {
+    "nome": "Goldy Alimentos",
+    "empresa": "Goldy Alimentos",
+    "email": "administrativo@goldy.com.br",
+    "cidade": "SP",
+    "segmento": "Alimentos (gordura vegetal)"
+  },
+  {
+    "nome": "Infinity Pharma",
+    "empresa": "Infinity Pharma",
+    "email": "farmaceutica@infinitypharma.com.br",
+    "cidade": "SP",
+    "segmento": "Industria farmaceutica (oleo vegetal limpeza maquinas)"
+  },
+  {
+    "nome": "Veridi Nutrition",
+    "empresa": "Veridi Nutrition",
+    "email": "contato@veridinutrition.com.br",
+    "cidade": "SP",
+    "segmento": "Nutraceuticos e encapsulados"
+  },
+  {
+    "nome": "Blis Farma",
+    "empresa": "Blis Farma",
+    "email": "comercial@blisfarma.com.br",
+    "cidade": "SP",
+    "segmento": "Industria farmaceutica"
+  },
+  {
+    "nome": "Farmaviva",
+    "empresa": "Farmaviva",
+    "email": "contato@farmaviva.com.br",
+    "cidade": "SP",
+    "segmento": "Farmacia e manipulados"
+  },
+  {
+    "nome": "IndCaps",
+    "empresa": "IndCaps",
+    "email": "edilson.silva@indcaps.com.br",
+    "cidade": "SP",
+    "segmento": "Fabricante de capsulas oleosas (softgel)"
+  },
+  {
+    "nome": "Grupo Oba Hortifruti",
+    "empresa": "Grupo Oba Hortifruti",
+    "email": "atendimento@redeoba.com.br",
+    "cidade": "SP",
+    "segmento": "Rede de hortifrutis (vencidos de prateleira)"
+  },
+  {
+    "nome": "Savegnago Supermercados",
+    "empresa": "Savegnago Supermercados",
+    "email": "comercial@savegnago.com.br",
+    "cidade": "SP",
+    "segmento": "Supermercados (rede - fritura e vencidos)"
+  },
+  {
+    "nome": "Supermercados Natario",
+    "empresa": "Supermercados Natario",
+    "email": "contato@natario.com.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Supermercados (rede regional)"
+  },
+  {
+    "nome": "Supermercados Extra",
+    "empresa": "Supermercados Extra",
+    "email": "sac@extra.com.br",
+    "cidade": "SP",
+    "segmento": "Supermercados (rede nacional)"
+  },
+  {
+    "nome": "Supermercado Confianca",
+    "empresa": "Supermercado Confianca",
+    "email": "sac@confianca.com.br",
+    "cidade": "SP",
+    "segmento": "Supermercados (fritura continua)"
+  },
+  {
+    "nome": "Supermercados SM Boa",
+    "empresa": "Supermercados SM Boa",
+    "email": "produtos.novos@smboa.com.br",
+    "cidade": "SP",
+    "segmento": "Supermercados (fritura continua)"
+  },
+  {
+    "nome": "Supermercados Frisa",
+    "empresa": "Supermercados Frisa",
+    "email": "frisaeco@frisa.com.br",
+    "cidade": "SP",
+    "segmento": "Supermercados (fritura e vencidos)"
+  },
+  {
+    "nome": "Frigorifico Verdi",
+    "empresa": "Frigorifico Verdi",
+    "email": "atendimento@frigorificoverdi.com.br",
+    "cidade": "SP",
+    "segmento": "Frigorifico (gordura animal)"
+  },
+  {
+    "nome": "Frigorifico do Sul",
+    "empresa": "Frigorifico do Sul",
+    "email": "comercial@frigorificodosul.com.br",
+    "cidade": "SP",
+    "segmento": "Frigorifico (gordura animal)"
+  },
+  {
+    "nome": "Frigorifico 3R",
+    "empresa": "Frigorifico 3R",
+    "email": "contato@frigorifico3r.com.br",
+    "cidade": "SP",
+    "segmento": "Frigorifico (gordura animal)"
+  },
+  {
+    "nome": "Maxxi Ovos",
+    "empresa": "Maxxi Ovos",
+    "email": "contato@maxxiovos.com.br",
+    "cidade": "SP",
+    "segmento": "Granja de ovos (frituras e gorduras)"
+      },
+      {
+        "nome": "Rod & Raf Supermercados",
+        "empresa": "Rod & Raf Supermercados de Sorocaba LTDA",
+        "email": "introducao@rodraf.com.br",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Supermercados (rede)"
+      },
+      {
+        "nome": "Juvis",
+        "empresa": "Juvis Alimentos LTDA",
+        "email": "comercial@juvis.com.br",
+        "cidade": "Sorocaba/SP",
+        "segmento": "Distribuidora de alimentos"
+      }
+    ]
