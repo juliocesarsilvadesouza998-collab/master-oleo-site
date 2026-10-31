@@ -157,23 +157,59 @@ def _kw_presente(kw, textos):
                 return True
     return False
 
-def checar_posicao_bing(kw, timeout=20):
-    """Consulta o Bing e retorna a posição (1-based) de masteroleo.eco.br para a keyword.
-    Retorna None se não estiver no top 20; 'erro' se a consulta falhar."""
+def _bing_resultados(kw, timeout=25):
+    """Top 20 do Bing via RSS (mais limpo que raspar o HTML: o HTML devolve
+    blocos genéricos quando o Bing detecta acesso automatizado).
+    Retorna lista de tuplas (url, titulo)."""
     import urllib.parse as _up
-    url = f"https://www.bing.com/search?q={_up.quote(kw)}&count=20"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"})
+    url = ("https://www.bing.com/search?q=" + _up.quote(kw)
+           + "&format=rss&count=20&setlang=pt-BR&cc=BR")
+    req = urllib.request.Request(url, headers={
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+        "Accept-Language": "pt-BR,pt;q=0.9",
+    })
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        raw = resp.read().decode("utf-8", "replace")
+    itens = []
+    for it in re.findall(r"<item>(.*?)</item>", raw, re.S):
+        link = re.search(r"<link>(.*?)</link>", it, re.S)
+        titulo = re.search(r"<title>(.*?)</title>", it, re.S)
+        if link:
+            itens.append((link.group(1).strip(), titulo.group(1).strip() if titulo else ""))
+    return itens
+
+
+def _relevante(kw, itens):
+    """True se a SERP parece corresponder à keyword (evita falso 'não ranqueia'
+    quando o Bing devolve uma SERP genérica)."""
+    import unicodedata
+    def norm(s):
+        s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
+        return s.lower()
+    tokens = [t for t in re.findall(r"[a-z0-9]{4,}", norm(kw))]
+    if not tokens:
+        return True
+    texto = norm(" ".join(t for _, t in itens))
+    return sum(1 for t in tokens if t in texto) >= max(1, len(tokens) // 2)
+
+
+def checar_posicao_bing(kw, timeout=25):
+    """Retorna dict: pos (1-based ou None), resultados (nº), relevante (bool),
+    erro (bool). 'relevante=False' significa SERP suspeita -> inconclusivo."""
+    itens = []
+    erro = False
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            html = resp.read().decode("utf-8", "replace")
+        itens = _bing_resultados(kw, timeout)
     except Exception:
-        return "erro"
-    # Bing lista resultados em <li class="b_algo">
-    blocos = re.split(r'class="b_algo"', html)
-    for i, bloco in enumerate(blocos[1:], 1):
-        if "masteroleo" in bloco or "masteroleo.eco.br" in bloco:
-            return i
-    return None
+        erro = True
+    if not itens:
+        return {"pos": None, "resultados": 0, "relevante": False, "erro": erro}
+    pos = None
+    for i, (link, _t) in enumerate(itens, 1):
+        if "masteroleo.eco.br" in link:
+            pos = i
+            break
+    return {"pos": pos, "resultados": len(itens), "relevante": _relevante(kw, itens), "erro": erro}
 
 def main():
     ap = argparse.ArgumentParser(description="Bot de SEO Master Óleo")
@@ -197,14 +233,16 @@ def main():
         relatorio["ranking_bing"] = {}
         alvo = PALAVRAS_CHAVE[:args.max_rank]
         for kw in alvo:
-            pos = checar_posicao_bing(kw)
-            relatorio["ranking_bing"][kw] = pos
-            if pos == "erro":
-                print(f"  ⚠️  '{kw}': erro na consulta")
-            elif pos is None:
-                print(f"  ⏳ '{kw}': fora do top 20 (ainda não indexado)")
+            r = checar_posicao_bing(kw)
+            relatorio["ranking_bing"][kw] = r
+            if r["erro"] and r["resultados"] == 0:
+                print(f"  ⚠️  '{kw}': erro na consulta ao Bing")
+            elif r["pos"] is not None:
+                print(f"  🏆 '{kw}': POSIÇÃO {r['pos']} de {r['resultados']} resultados")
+            elif not r["relevante"]:
+                print(f"  ❔ '{kw}': INCONCLUSIVO (Bing devolveu SERP genérica — não confirma nem descarta)")
             else:
-                print(f"  🏆 '{kw}': POSIÇÃO {pos}")
+                print(f"  ⏳ '{kw}': fora do top {r['resultados']} (medido no Bing, SERP relevante)")
             time.sleep(1)
         print()
 
