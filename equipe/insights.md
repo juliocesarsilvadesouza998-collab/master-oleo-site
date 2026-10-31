@@ -1,18 +1,42 @@
-## 2026-10-31 10:06 (Atendente IA — cron #149, sábado)
+## 2026-10-31 14:10 (Melhorador Contínuo — cron diário, sábado)
+
+### Diagnóstico do dia
+- **438 leads** (310 novo, 120 bounce, 21 respondido, 14 encerrado) — pipeline inalterado.
+- **Fila de prospecção 100% drenada**: 471 empresas, 410 contatadas, 94 bounce, **0 pendentes MX-válidos**.
+- **Auditoria de reposição**: fila_prospeccao_extra.json tem 382 entradas, mas **todas já estão nos leads.csv ou bounces** — 0 candidatas novas disponíveis (sábado 14:00). A fonte de leads gratuitos está esgotada: próximas reposições dependem de listas CNPJ pagas (Leadjet) ou do ciclo do Prospector.
+- Watchdog: SMTP/IMAP OK, 1 alerta menor (bounce sem correção tentada — não-prospecção).
+
+### Melhorias implementadas
+1. **📄 Novo artigo no site — "Obrigatoriedade OGR 2028"** (`deploy-vercel/blog/obrigatoriedade-ogr-2028.html`): página completa com cenários (agir agora / esperar 2027 / ignorar), dados de mercado (B16, US$ 8-15 bi, exportação EUA, SAF), CTA de calculadora e avaliação. Linkada na página do blog (primeira da lista), no sitemap.xml (lastmod 2026-10-31) e na home (seção momentum + grid de artigos). Objetivo: capturar busca orgânica por "obrigatoriedade OGR 2028", "óleo residual biodiesel 2028" e converter em inbound (formulário/WhatsApp).
+2. **🔗 Link de contexto na home** (`deploy-vercel/index.html`): card "Corrida pela matéria-prima" da seção momentum agora aponta para o artigo (ância de autoridade + rastreio de crawlers).
+
+### Aprendizado do ciclo
+1. **A fila extra de prospecção não é fonte infinita**: mesmo com 382 empresas listadas, a interseção com leads.csv e bounces.json dá 0 empresas novas — a maioria das entradas da fila extra foi consumida nos ciclos anteriores (agosto–outubro). Repor fila AGORA exige compra de lista (Leadjet ~R$197, CNAEs 1041-4/1043-1/1052-0) ou esperar o Prospector de sábado 09:00.
+2. **Conteúdo regulatório é o melhor investimento do site neste momento**: a página de OGR 2028 ataca a intenção de busca com maior potencial de funil (quem pesquisa "2028 óleo residual" é gerador ou indústria — exatamente o público B2B da Master Óleo). O padrão "cenários + dados + CTA de avaliação" pode ser replicado em "quem compra gordura vegetal", "biodiesel B16" etc.
+3. **Sem reposição da fila, o funil de resposta fica à mercê do inbound**: os 14 insights do Formspree são a única fonte viva. Manter o site com conteudo fresco (artigos novos + sitemap atualizado) é a alavanca inbound de custo zero.
+
+### Pendências para o Estrategista (domingo)
+- Leads quentes seguem bloqueados em ação humana: Savegnago (WhatsApp), Pague Menos (ticket 407470), Rede Confiança (proposta 2.500 L/mês), Covabra (cadastro Ivrim), Brasfrigo/Queijos Itupeva (coleta-teste), Sonda/Tauste (ligações), Sanofi Medley (follow-up 03/11).
+- **Decisão de compra pendente**: lista CNPJ Leadjet (~R$197) para repor fila de prospecção — sem isso o cold email fica parado até o Prospector achar mais empresas via busca web.
+
+---
+
+## 2026-10-31 13:33 (Atendente IA — cron #155, sábado)
 
 ### Números do tick
-- **436 leads** (310 novo, 90 bounce, 22 respondido, 14 encerrado) — inalterado desde tick #148.
-- 119 bounces em cache, 0 notificações Formspree novas, 0 bounces novos, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
-- SMTP/IMAP OK (watchdog exit 0).
+- **438 leads** (310 novo, 120 bounce, 21 respondido, 14 encerrado) — inalterado desde tick #154 (13:04).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 bounces novos processados, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- Caixa IMAP zerada (0 não lidas, 438 leads, 301 msgids). Watchdog exit 1 (alerta menor conhecido: 1 bounce sem correção).
 
 ### O que foi feito
-- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — timeout transiente (IMAP acesso direto OK: 0 UNSEEN, 411 msgs INBOX). `corrigir_emails.py` — 0 bounces novos (todos os 119 já tentados anteriormente; histórico inalterado).
-- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — processada sem nada a enviar; `check-replies` — 0 respostas pendentes. **Nenhum lead para atender neste tick.**
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, 0 notificações Formspree novas. `corrigir_emails.py` — 0 bounces novos (todos já tentados anteriormente).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — fila 100% drenada; `check-replies` — 0 respostas pendentes. **Nenhum lead para atender.**
 - **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
-- **watchdog.py** — confirmou sistema saudável (436 leads, 310 ativos, 119 bounces, SMTP/IMAP OK).
 
 ### Problemas resolvidos
-- Nenhum — tick de manutenção sem correções. Mesmo estado do tick #148 (30 min atrás).
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 32º dia sem resposta humana REAL (Tauste 30/09).
 
 ### Leads quentes (destaques — inalterados)
 1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
@@ -21,12 +45,207 @@
 4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
 5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
 6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
-7. 🟡 **SONDA/R TAUSTR** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
 8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
-9. ⚫ **GRUPO OBA HORTIFRUTI** — encerrado 30/10 (SAC recusou via Salesforce).
 
 ### Diagnóstico
-Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção. Nenhuma nova resposta de lead há 32 dias (última ação real: Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** SMTP/IMAP saudável. Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações).
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção. 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações). Fila de entrada drenada — reposição depende do Prospector (próximo sábado 09:00) ou compra de listas CNPJ (Leadjet). Watchdog reporta 1 alerta menor conhecido (bounce cache com 1 entrada sem correção tentada — não-prospecção).
+
+---
+
+## 2026-10-31 13:04 (Atendente IA — cron #154, sábado)
+
+### Números do tick
+- **438 leads** (309 novo, 92 bounce, 22 respondido, 14 encerrado, 1 sequencia) — inalterado desde tick #153 (12:05).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 bounces novos processados, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- Fila: 471 empresas, 410 contatados, 94 bounce, **0 pendentes MX-válidos**.
+- Caixa IMAP zerada, Watchdog exit 1 (1 bounce sem correção — alerta menor).
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, 0 notificações Formspree novas. `corrigir_emails.py` — 0 bounces novos.
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — fila 100% drenada; `check-replies` — 0 respostas pendentes. **Nenhum lead para atender.**
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 32º dia sem resposta humana REAL (Tauste 30/09).
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
+2. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).
+3. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.
+4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
+5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
+6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
+
+### Diagnóstico
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção. 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações). Fila de entrada drenada — reposição depende do Prospector (próximo sábado 09:00) ou compra de listas CNPJ (Leadjet). Watchdog reporta 1 alerta menor: bounce cache tem 1 entrada sem correção tentada.
+
+---
+
+## 2026-10-31 12:34 (Atendente IA — cron #153, sábado)
+
+### Números do tick
+- **438 leads** (309 novo, 92 bounce, 22 respondido, 14 encerrado, 1 sequencia) — inalterado desde tick #152 (11:35).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 bounces novos processados, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- Caixa IMAP zerada, SMTP/IMAP OK.
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, 0 notificações Formspree novas. `corrigir_emails.py` — 0 bounces novos (todos os 89 já tentados anteriormente; histórico inalterado).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — sequência processada (nada a enviar; fila 100% drenada); `check-replies` — 0 respostas pendentes. **Nenhum lead para atender neste tick.**
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 32º dia sem resposta humana REAL (Tauste 30/09).
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
+2. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).
+3. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.
+4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
+5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
+6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
+
+### Diagnóstico
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção. 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações). Fila de entrada drenada — reposição depende do Prospector (próximo sábado 09:00) ou compra de listas CNPJ (Leadjet).
+
+---
+
+## 2026-10-31 12:05 (Atendente IA — cron #153, sábado)
+
+### Números do tick
+- **438 leads** (310 novo, 120 bounce, 21 respondido, 14 encerrado) — +0 desde o tick #152 (11:35).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 bounces novos processados, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- Caixa IMAP zerada (0 não lidas, 438 leads, 309 msgids enviados). SMTP/IMAP OK. Watchdog exit 1 (alerta: 1 bounce sem correção tentada — não-prospecção histórico).
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, 0 notificações Formspree novas. `corrigir_emails.py` — 0 bounces novos (todos os 89 já tentados anteriormente; histórico inalterado).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — sequência processada (nada a enviar; fila 100% drenada); `check-replies` — 0 respostas pendentes. **Nenhum lead para atender neste tick.**
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 32º dia sem resposta humana REAL (Tauste 30/09).
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
+2. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).
+3. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.
+4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
+5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
+6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
+9. 🟢 **Essência Portuguesa, Du Porto, Yesfoods** — prospecção indústria (31/10); vigiar resposta.
+
+### Diagnóstico
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção (fila: 471 empresas, 410 contatados, 94 bounce). 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações). Fila de entrada drenada — reposição depende do Prospector (próximo sábado 09:00) ou compra de listas CNPJ (Leadjet). Watchdog reporta 1 alerta menor: bounce cache tem 1 entrada sem correção tentada (não é da prospecção).
+
+---
+
+## 2026-10-31 11:35 (Atendente IA — cron #152, sábado)
+
+### Números do tick
+- **438 leads** (310 novo, 120 bounce, 21 respondido, 14 encerrado) — +0 desde o tick #151 (11:06).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 bounces novos processados, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- Caixa IMAP zerada (0 não lidas), SMTP/IMAP OK.
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, 0 notificações Formspree novas. `corrigir_emails.py` — 0 bounces novos (todos os 89 já tentados anteriormente; histórico inalterado).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — sequência processada (nada a enviar; fila 100% drenada); `check-replies` — 0 respostas pendentes. **Nenhum lead para atender neste tick.**
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 32º dia sem resposta humana REAL (Tauste 30/09).
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
+2. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).
+3. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.
+4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
+5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
+6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
+9. 🟢 **Essência Portuguesa, Du Porto, Yesfoods** — prospecção indústria (31/10); vigiar resposta.
+
+### Diagnóstico
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção (fila: 471 empresas, 410 contatados, 94 bounce). 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações). Fila de entrada drenada — reposição depende do Prospector (próximo sábado 09:00) ou compra de listas CNPJ (Leadjet). Watchdog reporta 1 alerta menor: bounce cache tem 1 entrada sem correção tentada (não é da prospecção).
+
+---
+
+## 2026-10-31 11:06 (Atendente IA — cron #151, sábado)
+
+### Números do tick
+- **438 leads** (310 novo, 120 bounce, 21 respondido, 14 encerrado) — +0 desde o tick #150 (10:36).
+- **120 bounces em cache** (+1 em relação ao tick #150), 0 notificações Formspree novas, 0 bounces novos processados, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- Caixa IMAP zerada (0 não lidas), SMTP/IMAP OK.
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, **0 notificações Formspree novas**. `corrigir_emails.py` — 0 bounces novos (todos os 120 já tentados; histórico inalterado).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — sequência processada (nada a enviar; fila 100% drenada); `check-replies` — 0 respostas pendentes. **Nenhum lead para atender neste tick.**
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 32º dia sem resposta humana REAL (Tauste 30/09).
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
+2. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).
+3. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.
+4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
+5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
+6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
+9. 🟢 **Essência Portuguesa, Du Porto, Yesfoods** — prospecção indústria (31/10); vigiar resposta.
+
+### Diagnóstico
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção (fila: 471 empresas, 410 contatados, 94 bounce). 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações). Fila de entrada drenada — reposição depende do Prospector (próximo sábado 09:00) ou compra de listas CNPJ (Leadjet).
+
+---
+
+## 2026-10-31 10:36 (Atendente IA — cron #150, sábado)
+
+### Números do tick
+- **438 leads** (290 novo, 84 bounce, 21 respondido, 13 encerrado) — +2 leads do Formspree em relação ao tick #149.
+- 119 bounces em cache, **2 notificações Formspree processadas**, 0 bounces novos, 0 follow-ups atrasados, 0 respostas pendentes (`replies_pending.json` = `[]`).
+- 2 boas-vindas enviadas, SMTP/IMAP OK.
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 119 bounces cache; **2 novos leads do Formspree** (Cliente Teste Formspree, Julio Cesar). `corrigir_emails.py` — 0 bounces novos (todos os 119 já tentados; histórico inalterado).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados; `send_sequence` — **2 boas-vindas enviadas** (teste.formspree@gmail.com, juliocesarsilvadesouza998@gmail.com); `check-replies` — 0 respostas pendentes. **Nenhum lead para atender neste tick.**
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead respondeu com volume e nenhum cliente solicitou relatório.
+
+### Problemas resolvidos
+- 2 novos leads inbound do Formspree integrados e já recebendo sequência (boas-vindas enviadas).
+- Nenhum bounce novo — zero correções de email na fila.
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. **Follow-up humano recomendado para 03/11.**
+2. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).
+3. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.
+4. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.
+5. 🔴🔴🔴 **COVABRA** — cadastro fornecedor no portal Ivrim (isac.ivrim.com.br) — ação humana necessária.
+6. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar (Salto/região).
+7. 🟡 **SONDA / TAUSTE** — ligações pendentes (11) 2145-6200 / (15) 3324-4680.
+8. 🟢 **UNIÃO SUPERMERCADOS** (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.
+9. 🟢 **Essência Portuguesa, Du Porto, Yesfoods** — prospecção indústria (31/10); vigiar resposta.
+
+### Diagnóstico
+Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prospecção. 32º dia sem resposta humana REAL (Tauste 30/09). **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone).** 2 leads inbound do Formspree integrados com boas-vindas. SMTP/IMAP saudável. Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações).
 
 ---
 

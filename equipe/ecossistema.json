@@ -1,4 +1,543 @@
 {
+  "ciclo_2026_10_31_melhorador_contínuo": {
+    "timestamp": "2026-10-31 14:10 (Melhorador Contínuo — cron diário, sábado)",
+    "acoes": [
+      "✅ Auditoria de reposição — fila_prospeccao_extra.json: 382 entradas, 0 candidatas novas (todas já em leads.csv ou bounces)", 
+      "✅ Novo artigo no site — blog/obrigatoriedade-ogr-2028.html (Portaria MME/MMA 3/2026, cenários, dados de mercado, CTA)",
+      "✅ Sitemap.xml atualizado com nova URL (lastmod 2026-10-31)",
+      "✅ Home atualizada: card 'Corrida pela matéria-prima' aponta para o artigo + novo card no grid de artigos",
+      "⏭️ Nenhum email enviado (fila 0 pendentes; NUNCA enviar em massa)",
+      "⏭️ Nenhum lead adicionado (fonte gratuita de leads esgotada)"
+    ],
+    "diagnostico": {
+      "total_leads": 438,
+      "status_leads": {
+        "novo": 310,
+        "bounce": 120,
+        "respondido": 21,
+        "encerrado": 14
+      },
+      "fila_total": 471,
+      "fila_contatados": 410,
+      "fila_bounce": 94,
+      "fila_pendentes": 0,
+      "bounce_cache": 120,
+      "bounce_rate": "~20% (94/471 fila)",
+      "taxa_resposta": "~4.8% (21/438)",
+      "observacao": "Melhorador 31/10 14:10. Fila 100% drenada (0 pendentes MX-válidos). Auditoria: fila extra 382 entradas = 0 novas (todas consumidas). Fonte gratuita de leads esgotada — reposição depende de lista paga (Leadjet) ou Prospector. Site melhorado com artigo OGR 2028 (inbound SEO). 32º dia sem resposta humana REAL (Tauste 30/09). SMTP/IMAP OK."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — follow-up humano recomendado para 03/11",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 17+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada, aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana necessária).",
+      "🔴🔴 BRASFRIGO (Salto) / QUEIJOS ITUPEVA — coleta-teste a agendar.",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10."
+    ]
+  },
+  "ciclo_2026_10_31_atendente_tick_152": {
+    "timestamp": "2026-10-31 11:35 (Atendente IA - cron #152 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — 120 bounces cache, 0 notificações Formspree novas (caixa zerada, 438 leads)",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 89 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar; fila 100% drenada)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "✅ scan_inbox.py — 0 não lidas na caixa (caixa zerada)",
+      "✅ watchdog — exit 0: SMTP/IMAP OK, 438 leads, 310 ativos, 120 bounces",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 438,
+      "status_leads": {
+        "novo": 310,
+        "bounce": 120,
+        "respondido": 21,
+        "encerrado": 14
+      },
+      "fila_total": 471,
+      "fila_contatados": 410,
+      "fila_bounce": 94,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 120,
+      "bounce_rate": "~20% (94/471 fila)",
+      "taxa_resposta": "~4.8% (21/438)",
+      "observacao": "Tick #152 — sábado 11:35. Caixa zerada, 0 respostas pendentes, 0 follow-ups. 32º dia sem resposta humana REAL (Tauste 30/09). Fila 100% drenada (0 pendentes MX-válidos). SMTP/IMAP OK. 1 alerta watchdog: bounce cache com 120 entradas, 1 das quais sem correção tentada (não-prospecção)."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10 10:55. Follow-up humano recomendado para 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi, #2 interior SP) — ticket 407470 (Josiane Marinho). 17+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — ação humana: cadastro fornecedor portal Ivrim (isac.ivrim.com.br).",
+      "🔴🔴 BRASFRIGO (Salto/SP) — coleta-teste a agendar.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — coleta-teste a agendar.",
+      "🟡 SONDA (R$6,12bi) — ligar (11) 2145-6200.",
+      "🟡 TAUSTE (R$3º maior interior SP) — ligar (15) 3324-4680.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "🟢 Essência Portuguesa, Du Porto, Yesfoods — prospecção indústria 31/10; vigiar resposta."
+    ]
+  },
+  "ciclo_2026_10_31_atendente_tick_151": {
+    "timestamp": "2026-10-31 11:06 (Atendente IA - cron #151 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — 120 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "✅ _miniscan_inbox.py — 0 não lidas na caixa (caixa zerada)",
+      "✅ watchdog.py — exit 0: 438 leads, 310 ativos, 120 bounces, SMTP/IMAP OK",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 438,
+      "status_leads": {
+        "novo": 310,
+        "bounce": 120,
+        "respondido": 21,
+        "encerrado": 14
+      },
+      "fila_total": 471,
+      "fila_contatados": 410,
+      "fila_bounce": 94,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 120,
+      "bounce_rate": "~20% (94/471 fila)",
+      "taxa_resposta": "~4.8% (21/438)",
+      "observacao": "Tick #151 — sábado 11:06. Caixa zerada, 0 respostas pendentes, 0 follow-ups. 32 dia sem resposta humana REAL (Tauste 30/09). Fila 100% drenada (0 pendentes). SMTP/IMAP OK."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10. Follow-up humano recomendado 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 17+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "🟢 Essência Portuguesa, Du Porto, Yesfoods — prospecção indústria (31/10); vigiar resposta."
+    ]
+  },
+  "ciclo_2026_10_31_atendente_tick_149": {
+    "timestamp": "2026-10-31 10:06 (Atendente IA - cron #149 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — timeout transiente (IMAP test OK: 0 UNSEEN, 411 msgs INBOX)",
+      "✅ corrigir_emails.py — 0 bounces novos (todos os 119 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar; fila 100% drenada)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "✅ watchdog.py — exit 0: 436 leads, 310 ativos, 119 bounces, SMTP/IMAP OK",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads": 436,
+      "status_leads": {
+        "novo": 310,
+        "bounce": 90,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "bounce_cache": 119,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "observacao": "Tick #149 — 30 min após #148. Mesmo estado estável: caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32 dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção sem pendentes MX-válidos — depende de reposição do Prospector (próximo ciclo já passou). SMTP/IMAP OK. Pipeline de fechamento bloqueado em ação humana (WhatsApp/telefone) — leads quentes inalterados."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10; respondido 30/10 10:55. Follow-up humano em 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 17+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / NAGUMO (caso 00143542).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "⚫ GRUPO OBA HORTIFRUTI — ENCERRADO 30/10 (caso recusado pelo SAC/Salesforce)."
+    ]
+  },
+  "ciclo_2026_10_31_atendente_tick_148": {
+    "timestamp": "2026-10-31 09:30 (Atendente IA - cron #148 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas (IMAP timeout no 1º teste, OK na 2ª tentativa)",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 119 já tentados em ciclos anteriores)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo; 0 leads COM VOLUME no CSV)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 436,
+      "status_leads": {
+        "novo": 310,
+        "bounce": 90,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "bounce_cache": 119,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "observacao": "Tick #148 — primeiro do sábado 31/10. 3 novos leads adicionados pelo Prospector (Essência Portuguesa, Du Porto, Yesfoods — todos indústrias, envio automático 09:19). Caixa limpa, 0 respostas pendentes, 0 follow-ups atrasados. 32º dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção sem pendentes MX-válidos — depende de reposição. SMTP/IMAP OK."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10 (protocolo 03065348); respondido 30/10 10:55. Follow-up humano em 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 17+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / NAGUMO (caso 00143542).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "⚫ GRUPO OBA HORTIFRUTI — ENCERRADO 30/10 (caso recusado pelo SAC/Salesforce)."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1832": {
+    "timestamp": "2026-10-30 18:32 (Atendente IA - cron #147 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 119 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar; fila 100% drenada)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "✅ watchdog.py — exit 0: 433 leads, 307 ativos, 119 bounces, SMTP/IMAP OK",
+      "✅ scan_inbox.py --dias 2 — 0 mensagens não lidas/recentes (433 leads, 286 msgids)",
+      "✅ enviar_lote.py --status — fila 468 / 407 contatados / 93 bounce / 0 pendentes (fila 100% processada)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo; 0 leads COM VOLUME no CSV)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "status_leads": {
+        "novo": 307,
+        "bounce": 90,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 119,
+      "bounce_rate": "~20% (93/468 fila)",
+      "taxa_resposta": "~5.1% (22/433)",
+      "observacao": "Tick #147 — 29 min após #146. Mesmo estado estável: caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32º dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção 100% drenada (0 pendentes MX-válidos). Nenhum lead informou volume (0 registros COM VOLUME no CSV) → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. SMTP/IMAP OK. Fechamento segue bloqueado em ação humana (WhatsApp/telefone) — leads quentes inalterados. Sanofi Medley segue como lead quente (respondido 30/10 10:55, follow-up humano recomendado 03/11). Último tick do dia — pipeline sem mudanças."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10 (protocolo 03065348); respondido 30/10 10:55. Follow-up humano em 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / NAGUMO (caso 00143542).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "⚫ GRUPO OBA HORTIFRUTI — ENCERRADO 30/10 (caso recusado pelo SAC/Salesforce)."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1803": {
+    "timestamp": "2026-10-30 18:03 (Atendente IA - cron #146 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 119 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [], varredura IMAP scan_inbox.py --dias 2 confirmou caixa limpa)",
+      "✅ watchdog.py — exit 0: 433 leads, 307 ativos, 119 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — fila 468 / 407 contatados / 93 bounce / 0 pendentes (fila 100% processada)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo; 0 leads COM VOLUME no CSV)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "status_leads": {
+        "novo": 307,
+        "bounce": 90,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 119,
+      "bounce_rate": "~20% (93/468 fila)",
+      "taxa_resposta": "~5.1% (22/433)",
+      "observacao": "Tick #146 — mesmo estado estável dos ticks anteriores: caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32º dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção 100% drenada (0 pendentes MX-válidos). Nenhum lead informou volume (0 registros COM VOLUME no CSV) → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. SMTP/IMAP OK. Fechamento segue bloqueado em ação humana (WhatsApp/telefone) — leads quentes inalterados. Sanofi Medley segue como lead quente novo (encaminhado a Compras em 29/10, follow-up humano recomendado 03/11)."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10 (protocolo 03065348); respondido 30/10 10:55. Follow-up humano em 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / NAGUMO (caso 00143542).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "⚫ GRUPO OBA HORTIFRUTI — ENCERRADO 30/10 (caso recusado pelo SAC/Salesforce)."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1632": {
+    "timestamp": "2026-10-30 16:32 (Atendente IA - cron #145 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 119 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio, varredura IMAP ao vivo sem hits)",
+      "✅ watchdog.py — exit 0: 433 leads, 307 ativos, 119 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — fila 468 / 407 contatados / 93 bounce / 0 pendentes (fila 100% processada)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "status_leads": {
+        "novo": 287,
+        "bounce": 84,
+        "respondido": 21,
+        "encerrado": 13,
+        "outros_prospeccao": 28
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 119,
+      "bounce_rate": "~20% (93/468 fila)",
+      "taxa_resposta": "~4.8% (21/433)",
+      "observacao": "Tick #145 — 27 min após o #144. Mesmo estado estável: caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32º dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção 100% drenada (0 pendentes MX-válidos) — funil de entrada parado até o Prospector repor (sábado 09:00). SMTP/IMAP OK. Sem resposta de lead com volume → sem proposta de contrato; sem solicitação ESG → sem relatório. Fechamento segue bloqueado em ação humana (WhatsApp/telefone) — 5ª rodada de ticks do dia sem mudanças."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10 (protocolo 03065348); respondido 30/10 10:55. Follow-up humano em 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / NAGUMO (caso 00143542).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "⚫ GRUPO OBA HORTIFRUTI — ENCERRADO 30/10 (caso recusado pelo SAC/Salesforce)."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1605": {
+    "timestamp": "2026-10-30 16:05 (Atendente IA - cron #144 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 119 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio, varredura IMAP ao vivo UNSEEN sem hits)",
+      "✅ watchdog.py — exit 0: 433 leads, 307 ativos, 119 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — fila 468 / 407 contatados / 93 bounce / 0 pendentes (fila 100% processada)",
+      "✅ scan_inbox.py --dias 2 — 0 mensagens não lidas/recentes (433 leads, 280 msgids)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "status_leads": {
+        "novo": 287,
+        "bounce": 84,
+        "respondido": 21,
+        "encerrado": 13,
+        "outros_prospeccao": 28
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 119,
+      "bounce_rate": "~20% (93/468 fila)",
+      "taxa_resposta": "~4.8% (21/433)",
+      "observacao": "Tick de manutenção limpo — mesmo estado estável dos ticks anteriores: caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32º dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção zerou os 7 pendentes MX-válidos (agora 0) — o ciclo do Prospector contatou tudo; +9 leads no CSV (424→433) e +2 empresas na fila (466→468). Nenhuma resposta de lead com volume → sem proposta de contrato; nenhuma solicitação ESG → sem relatório. SMTP/IMAP OK. Leads quentes inalterados — fechamento segue bloqueado em ação humana (WhatsApp/telefone)."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10 (protocolo 03065348); respondido 30/10 10:55. Follow-up humano em 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / NAGUMO (caso 00143542).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "⚫ GRUPO OBA HORTIFRUTI — ENCERRADO 30/10 (caso recusado pelo SAC/Salesforce)."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1532": {
+    "timestamp": "2026-10-30 15:32 (Atendente IA - tick #143 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 119 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ enviar_lote.py --status — fila 468 / 407 contatados / 93 bounce / 0 pendentes MX-válidos",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "status_leads": {
+        "novo": 307,
+        "bounce": 90,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 119,
+      "bounce_rate": "~21% (93/468 fila)",
+      "taxa_resposta": "~5.1% (22/433)",
+      "observacao": "Tick #143 — sexta-feira 30/10 (1h após #142). Caixa zerada (0 respostas pendentes, 0 não lidas). 31º dia sem resposta humana REAL no fluxo óleo (última: Tauste 30/09). Fila de prospecção 100% drenada (0 pendentes MX-válidos) — funil de entrada parado até o Prospector repor (sábado 09:00). Bounce rate ~21% estável, acima da meta de 15%. Últimas respostas registradas: Sanofi Medley (30/10 10:53, SAC encaminhado ao compras) e Artema Pré-Moldados (28/10, canal desmoldante). Sistema saudável — pipeline travado em ação humana (WhatsApp/telefone)."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 31+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando retorno.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor portal Ivrim (isac.ivrim.com.br) — ação humana necessária.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — agendar coleta-teste.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — ligar (11) 2145-6200.",
+      "🟡 TAUSTE — ligar (15) 3324-4680. Respondeu 30/09 (31 dias).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "🟢 ROD & RAF + JUVIS (Sorocaba) — 1º contato enviado 30/10 14:08; vigiar resposta."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1522": {
+    "timestamp": "2026-10-30 15:22 (Atendente IA - tick #142 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 processados (todos os 119 bounces já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar; fila 100% drenada)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ watchdog.py — exit 0: 433 leads, 307 ativos, 119 bounces, SMTP/IMAP OK",
+      "✅ scan_inbox.py --dias 45 — 0 mensagens não lidas na caixa (433 leads, 1731 msgids na Sent; IMAP lento ~11 min, varredura completa)",
+      "✅ enviar_lote.py --status — fila 468 empresas: 407 contatados, 93 bounce, 0 pendentes MX-válidos",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)",
+      "🔍 10 leads da fila_prioritaria nunca contatados verificados: só 2 c/ MX de provedor (pontofrio.com.br=Outlook, verona.com.br=self) — risco alto de bounce; não adicionados sem validação do Prospector"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "status_leads": {
+        "novo": 307,
+        "bounce": 90,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 90,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 90,
+      "bounce_rate": "~20.8% (90/433)",
+      "taxa_resposta": "~5.1% (22/433)",
+      "observacao": "Tick #142 — sexta-feira 30/10. Caixa zerada (0 não lidas, 0 respostas pendentes). 31º dia sem resposta humana REAL no fluxo óleo (última: Tauste 30/09). Fila de prospecção 100% drenada (0 pendentes MX-válidos) — funil de entrada parado até o Prospector repor. Bounce rate ~21% estável mas acima da meta de 15%. Nenhum lead respondeu; nenhum volume informado para proposta de contrato. Sistema saudável — pipeline travado em ação humana (WhatsApp/telefone)."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 31+ dias sem ação.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando retorno.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor portal Ivrim (isac.ivrim.com.br) — ação humana necessária.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — agendar coleta-teste.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — agendar coleta-teste.",
+      "🟡 SONDA (R$6,12bi) — ligar (11) 2145-6200.",
+      "🟡 TAUSTE — ligar (15) 3324-4680. Respondeu 30/09 (31 dias).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta.",
+      "🟢 ROD & RAF + JUVIS (Sorocaba) — 1º contato enviado 30/10 14:08; aguardando."
+    ]
+  },
+  "ciclo_2026_10_30_atendente_tick_1432": {
+    "timestamp": "2026-10-30 14:32 (Atendente IA - cron #141 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 118 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 118 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "✅ watchdog.py — exit 0: 431 leads (7 novos desde #140), 306 ativos, 118 bounces, SMTP/IMAP OK",
+      "✅ scan_inbox.py --dias 2 — 0 mensagens não lidas/recentes (431 leads, 278 msgids)",
+      "✅ enviar_lote.py — fila 468 / 407 contatados / 92 bounce: lote de 2 enviados (Rod & Raf Supermercados Sorocaba introducao@rodraf.com.br MX Locaweb; Juvis Alimentos comercial@juvis.com.br MX Terra) — fila 100% DRENADA (0 pendentes)",
+      "ℹ️ os 7 pendentes do tick #140 foram enviados pelo Melhorador 14:08 (Confianca, SM Boa, Frisa, Verdi, do Sul, 3R, Maxxi Ovos); Rod & Raf e Juvis adicionados por ele e enviados neste tick",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 431,
+      "status_leads": {
+        "novo": 306,
+        "bounce": 118,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 92,
+      "fila_pendentes": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "bounce_cache": 118,
+      "bounce_rate": "~19,7% (92/468 fila)",
+      "taxa_resposta": "~5.2% (22/424)",
+      "observacao": "Tick de manutenção limpo — caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32º dia sem resposta humana REAL (Tauste 30/09). Ação positiva: fila de prospecção 100% drenada — enviei os 2 últimos pendentes MX-válidos (Rod & Raf, Juvis) deixados pelo Melhorador 14:08, fechando o ciclo de 9 novos contatados hoje (7 do Melhorador + 2 meus). Base de leads cresceu de 424 para 431 (+7 leads novos). SMTP/IMAP OK. Sem resposta de lead com volume → sem proposta de contrato; sem solicitação ESG → sem relatório."
+    },
+    "leads_quentes": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 32+ dias sem ação humana.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho). 16+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — agendar coleta-teste (Salto/região).",
+      "🟡 SONDA (ligar 11-2145-6200) / TAUSTE (ligar 15-3324-4680) / ICT FARMACÊUTICA (SAC 1173).",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta (padrão SAC→comercial).",
+      "🟢 ROD & RAF (Sorocaba, canal fornecedores) + JUVIS (Sorocaba, distribuidora) — 1º contato enviado HOJE 14:33; vigiar resposta."
+    ]
+  },
   "ciclo_2026_10_30_atendente_tick_1333": {
     "timestamp": "2026-10-30 13:33 (Atendente IA - cron #139 - sexta-feira)",
     "acoes": [
@@ -4272,7 +4811,6 @@
       "observacao": "Pipeline 100% drenado. 0 respostas pendentes. 8 novos leads MX-válidos na fila (Bresciani, CopeBe, Armelin, Ituano, Cassaniga, Feitosa, Serve Bem, Flor da Água Fria). Nenhum lead informou volume novo. 32+ dias sem ação humana nos leads quentes."
     }
   },
-  "atualizado_em": "2026-10-30 14:03 (Atendente IA - cron #140 - sexta-feira)",
   "ciclo_2026_10_30_atendente_tick_140": {
     "timestamp": "2026-10-30 14:03 (Atendente IA - cron #140 - sexta-feira)",
     "acoes": [
@@ -4308,5 +4846,143 @@
       "taxa_resposta": "~5.2% (22/424)",
       "observacao": "Tick de manutenção limpo — mesmas condições do #139 (13:33): caixa zerada, 0 bounces novos, 0 follow-ups atrasados, 0 respostas para atender. 32º dia sem resposta humana REAL (Tauste 30/09). Fila segue com 7 pendentes MX-válidos aguardando ciclo do Prospector. Gargalo de fechamento permanece 100% em ação humana (Savegnago, Pague Menos, Rede Confiança, Covabra)."
     }
-  }
-}
+  },
+  "ciclo_2026_10_30_atendente_tick_1942": {
+    "timestamp": "2026-10-30 19:42 (Atendente IA - cron #148 - sexta-feira)",
+    "acoes": [
+      "✅ sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces novos processados (119 já tentados; histórico inalterado)",
+      "✅ prospecao_followup.py — 8 FP1 enviados (Liofoods, Poly Blends, Organutech, Tecnoblock, Precon, Armando, Scirocco, Tubos Tradição)",
+      "✅ send_sequence — sequência processada (nada a enviar no fluxo principal)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "✅ watchdog — exit 0: 433 leads, 307 ativos/novo, 119 bounces, SMTP/IMAP OK",
+      "✅ enviar_lote.py --status — fila 468 (407 contatados, 93 bounce, 0 pendentes — fila 100% drenada)",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead respondeu com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 433,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes": 0,
+      "bounce_cache": 119,
+      "ultima_resposta_humana_dias": 32,
+      "observacao": "Tick #148 — 29 min após #147. 8 FP1 follow-ups enviados para leads de prospecção desmoldante/B2B. Nenhuma resposta nova, caixa zerada, fila 100% drenada. Pipeline automático saudável; fechamento segue bloqueado em ação humana."
+    }
+  },
+  "ciclo_2026_10_31_atendente_tick_150": {
+    "timestamp": "2026-10-31 10:36 (Atendente IA - cron #150 - sábado)",
+    "acoes": [
+      "sync_formspree.py — 119 bounces cache; 2 novos leads do Formspree (teste.formspree + julio@gmail)",
+      "corrigir_emails.py — 0 bounces novos (todos os 119 já tentados)",
+      "prospecao_followup.py — 0 follow-ups atrasados",
+      "send_sequence — 2 boas-vindas enviadas (teste.formspree + julio@gmail)",
+      "check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "proposta_contrato.py — não executado (sem lead com volume novo)",
+      "relatorio_esg.py — não executado (nenhuma solicitação ESG)"
+    ],
+    "diagnostico": {
+      "total_leads": 438,
+      "status_leads": {
+        "novo": 290,
+        "bounce": 84,
+        "respondido": 21,
+        "encerrado": 13,
+        "prospeccao-lote": 13,
+        "sequencia": 2
+      },
+      "bounce_cache": 119,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "boas_vindas_enviadas": 2,
+      "observacao": "Tick #150 — sábado 10:36. 2 leads inbound receberam boas-vindas. Caixa zerada. 32 dia sem resposta humana REAL (Tauste 30/09)."
+    }
+  },
+  "ciclo_2026_10_31_atendente_tick_153": {
+    "timestamp": "2026-10-31 12:34 (Atendente IA - cron #153 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — 120 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 89 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ send_sequence — sequência processada (nada a enviar; fila 100% drenada)",
+      "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 438,
+      "status_leads": {
+        "novo": 309,
+        "bounce": 92,
+        "respondido": 22,
+        "encerrado": 14,
+        "sequencia": 1
+      },
+      "bounce_cache": 120,
+      "replies_pending": 0,
+      "followups_enviados_hoje": 0,
+      "respostas_processadas": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "caixa_imap": "zerada",
+      "smtp_imap": "OK"
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10. Follow-up humano recomendado para 03/11.",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana necessária).",
+      "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar (Salto/região).",
+      "🟡 SONDA / TAUSTE — ligações pendentes (11) 2145-6200 / (15) 3324-4680.",
+      "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta."
+    ],
+    "gargalo": "Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila. 32º dia sem resposta humana REAL (Tauste 30/09). Fechamento bloqueado em ação humana (WhatsApp/telefone)."
+      },
+      "ciclo_2026_10_31_atendente_tick_155": {
+        "timestamp": "2026-10-31 13:33 (Atendente IA - cron #155 - sábado)",
+        "acoes": [
+          "✅ sync_formspree.py — 120 bounces cache, 0 notificações Formspree novas",
+          "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+          "✅ prospecao_followup.py — 0 follow-ups atrasados",
+          "✅ send_sequence — sequência processada (nada a enviar; fila 100% drenada)",
+          "✅ check-replies — 0 respostas pendentes (replies_pending.json = [])",
+          "✅ scan_inbox.py — 0 não lidas na caixa (438 leads, 301 msgids)",
+          "✅ watchdog — exit 1 (alerta menor: 1 bounce sem correção - conhecido)",
+          "⏭️ proposta_contrato.py — não executado (nenhum lead com volume novo)",
+          "⏭️ relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+        ],
+        "diagnostico": {
+          "total_leads": 438,
+          "status_leads": {
+            "novo": 310,
+            "bounce": 120,
+            "respondido": 21,
+            "encerrado": 14
+          },
+          "bounce_cache": 120,
+          "replies_pending": 0,
+          "followups_enviados_hoje": 0,
+          "respostas_processadas": 0,
+          "propostas_contrato_geradas": 0,
+          "relatorios_esg_gerados": 0,
+          "caixa_imap": "zerada",
+          "smtp_imap": "OK",
+          "observacao": "Tick #155 — sábado 13:33. Caixa zerada, 0 respostas pendentes, 0 follow-ups. 32º dia sem resposta humana REAL (Tauste 30/09). Fila 100% drenada. SMTP/IMAP OK. Watchdog alerta menor (1 bounce sem correção - conhecido)."
+        },
+        "leads_quentes": [
+          "🍀 SANOFI MEDLEY (SAC 03065348) — encaminhado a Compras 29/10; follow-up humano recomendado 03/11.",
+          "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — 32+ dias sem ação humana (WhatsApp 11 96785-9631).",
+          "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470 (Josiane Marinho), 17+ dias sem retorno.",
+          "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada; aguardando.",
+          "🔴🔴🔴 COVABRA — cadastro fornecedor no portal Ivrim (ação humana necessária).",
+          "🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar (Salto/região).",
+          "🟡 SONDA / TAUSTE — ligações pendentes (11) 2145-6200 / (15) 3324-4680.",
+          "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — apresentação enviada 28/10; vigiar resposta."
+        ],
+        "gargalo": "Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila. 32º dia sem resposta humana REAL (Tauste 30/09). Fechamento bloqueado em ação humana (WhatsApp/telefone)."
+      },
+      "atualizado_em": "2026-10-31 13:33 (Atendente IA - cron #155)"
+      }

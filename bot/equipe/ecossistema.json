@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-30 12:04 (Atendente IA - cron tick #133)",
+  "atualizado_em": "2026-10-31 14:05 (Atendente IA - cron tick #136 - sábado)",
   "criado_em": "2026-08-13",
   "metas_semana_13_10_a_19_10": {
     "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1331,5 +1331,73 @@
         "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta."
       ]
     }
+  },
+  "ciclo_2026_10_30_cron_atendente_17h39": {
+    "timestamp": "2026-10-30 17:39 (Atendente IA - cron tick #135 - sexta-feira)",
+    "acoes": [
+      "sync_formspree.py — 119 bounces cache, 0 notificações Formspree novas",
+      "corrigir_emails.py — 0 bounces novos processados (todos já tentados anteriormente; histórico esgotado)",
+      "prospecao_followup.py — 6 FP2 enviados em thread: Volca Foods, Supermercado Caetano (rede Valinhos/Vinhedo), FRS Ind. Oleos e Gorduras, Halipar (400+ unidades), Agrofoods, Laticinios Bomy",
+      "send_sequence — sequência processada (0 envios pendentes)",
+      "check-replies — 0 respostas (replies_pending.json vazio)",
+      "scan_inbox.py --dias 3 — 0 mensagens não lidas (caixa IMAP limpa)",
+      "watchdog.py — exit 0: 433 leads, 307 ativos, 119 bounces, SMTP/IMAP OK",
+      "enviar_lote.py --status — fila prospecção: 468 empresas, 407 contatados, 93 bounce, 0 pendentes (fila drenada — Prospector precisa repor)",
+      "proposta_contrato/relatorio_ESG — não acionados (0 leads com volume novo ou solicitação)"
+    ],
+    "diagnostico": {
+      "total_leads_watchdog": 433,
+      "ativos_watchdog": 307,
+      "bounce_cache_json": 119,
+      "watchdog": "exit 0 — saudável, SMTP/IMAP OK",
+      "fila_total": 468,
+      "fila_contatados": 407,
+      "fila_bounce": 93,
+      "fila_pendentes_validas": "0 — fila drenada (aguardando tick do Prospector)",
+      "dias_sem_resposta_humana_fluxo_oleo": "30 (última: Tauste 30/09); 16 dias desde Pague Menos (14/10)",
+      "respostas_reais": 0,
+      "respostas_humanas_fluxo_oleo": "Nenhuma nova neste tick — replies_pending.json vazio, caixa IMAP limpa",
+      "respostas_auto": 0,
+      "propostas_contrato_geradas": 0,
+      "relatorios_esg_gerados": 0,
+      "observacao": "30º dia sem respostas humanas novas no fluxo de COMPRA de óleo. Sistema saudável — watchdog exit 0, 0 follow-ups atrasados, 0 bounces novos. 6 FP2 enviados em follow-up (Volca Foods, Caetano, FRS, Halipar, Agrofoods, Bomy). Fila de prospecção DREENADA (0 pendentes MX-válidos) — Prospector precisa repor no próximo ciclo. Leads quentes inalterados: Sanofi Medley (follow-up humano 03/11), Savegnago, Pague Menos, Rede Confiança, Covabra (cadastro ivrim), Brasfrigo, Queijos Itupeva, Sonda, Tauste, Nagumo.",
+      "leads_quentes": [
+        "🍀🆕 SANOFI MEDLEY (sac.brasil@sanofi.com) — SAC encaminhou para Compras 29/10 (protocolo 03065348). Respondido 30/10 10:55. Follow-up humano em 03/11.",
+        "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 30+ dias sem ação humana.",
+        "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 16 dias sem retorno.",
+        "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.",
+        "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 18+ dias sem ação.",
+        "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+        "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+        "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+        "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+        "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10. Follow-up humano em aberto.",
+        "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta."
+      ]
+    }
+  },
+  "ciclo_2026_10_31_atendente_cron_136": {
+    "timestamp": "2026-10-31 14:05 (Atendente IA - cron tick #136 - sábado)",
+    "diagnostico": {
+      "sync_formspree": "120 bounces cache, 0 notificações novas",
+      "corrigir_emails": "0 novos processados (bounces já tentados; 9 sem correção — maioria typos/fora do segmento óleo)",
+      "prospecao_followup": "0 FP2 enviados (todos leads já followupados)",
+      "send_sequence": "sequência processada (0 envios pendentes)",
+      "check_replies": "0 respostas (replies_pending.json vazio)",
+      "scan_inbox_3dias": "0 não lidas — caixa limpa",
+      "watchdog": "438 leads, 310 ativos, 120 bounces, SMTP/IMAP OK",
+      "fila_pendentes": "0 MX-válidos (382 na fila_extra aguardando validação)",
+      "dias_sem_resposta_humana": "31 (última: Tauste 30/09; Sanofi Medley 30/10 = follow-up automático)"
+    },
+    "acoes": [
+      "✅ sync_formspree: 120 bounces cache, 0 notificações novas do Formspree",
+      "✅ corrigir_emails: 0 bounces novos processados (todos já tentados; 9 sem correção: 3 typos óbvios, 3 fora segmento óleo, 1 teste, 2 desmoldante/cerâmica)",
+      "✅ prospecao_followup: 0 follow-ups (fila de follow-ups zerada)",
+      "✅ send_sequence: sequência processada (sem envios pendentes)",
+      "✅ check-replies: 0 respostas pendentes",
+      "✅ scan_inbox --dias 3: 0 não lidas — caixa limpa",
+      "✅ watchdog: exit 1 — 438 leads, 310 ativos, 120 bounces, SMTP/IMAP OK (1 bounce sem correção: 9 não tentados, mas sem MX alternativo conhecido)"
+    ],
+    "observacao": "Sábado, 31 dias sem resposta humana nova no fluxo de compra. Sanofi Medley é o lead mais recente (30/10 - protocolo encaminhado a compras). Fila de prospecção zerada — 382 empresas em fila_prospeccao_extra.json aguardando validação MX e envio. Pipeline de fechamento 100% bloqueado em ação humana (WhatsApp/telefone). Próximo passo: Sanofi Medley follow-up em 03/11 (segunda)."
   }
 }

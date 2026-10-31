@@ -2661,10 +2661,31 @@
         "segmento": "Supermercados (rede)"
       },
       {
-        "nome": "Juvis",
-        "empresa": "Juvis Alimentos LTDA",
-        "email": "comercial@juvis.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Distribuidora de alimentos"
-      }
-    ]
+              "nome": "Juvis",
+              "empresa": "Juvis Alimentos LTDA",
+              "email": "comercial@juvis.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "Distribuidora de alimentos"
+            },
+            {
+              "nome": "Essência Portuguesa",
+              "empresa": "Essência Portuguesa Ind Com de Óleos Vegetais Ltda",
+              "email": "comercial@essenciaportuguesa.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "Industria de oleos vegetais e azeites (oleos compostos) - NICHO PRIORITARIO"
+            },
+            {
+              "nome": "Du Porto",
+              "empresa": "Du Porto Industria Alimenticia Ltda",
+              "email": "sac@duporto.com.br",
+              "cidade": "Sorocaba/SP",
+              "segmento": "Industria de coberturas para sorveteria e confeitaria (usa gorduras vegetais) - NICHO PRIORITARIO"
+            },
+            {
+              "nome": "Yesfoods",
+              "empresa": "Yesfoods Industria de Alimentos Ltda",
+              "email": "sac@yesfoods.com.br",
+              "cidade": "Sao Paulo/SP",
+              "segmento": "Industria de alimentos (saudaveis, food service)"
+            }
+          ]

@@ -1,4 +1,47 @@
-## 2026-10-28 12:10 (Atendente IA - cron #131 - tick quarta-feira)
+## 2026-10-31 09:16 (Atendente IA - cron #135 - sábado)
+
+### Diagnóstico do ciclo
+- 433 leads, 307 ativos, 119 bounces (watchdog) — SMTP/IMAP OK
+- **🔴 31 dias sem respostas humanas** — última resposta: Tauste (30/09); Pague Menos (14/10)
+- ✅ Watchdog exit 0 — sistema saudável, sem follow-ups atrasados
+- ✅ 0 respostas pendentes (replies_pending.json vazio)
+- ✅ 16 follow-ups FP1 enviados (lote de prospecção)
+- **🔴 Leads quentes parados** — todos aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 119 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 bounces processados (todos os 119 já tentados) |
+| prospecao_followup.py | 16 follow-ups FP1 enviados |
+| send_sequence | sequência processada (lote FP1) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| _miniscan_inbox.py | INBOX: 0 não lidas |
+| watchdog | exit 0 — saudável (433 leads, 307 ativos, 119 bounces) |
+| proposta_contrato/relatorio_ESG | não acionados (0 leads com volume novo ou solicitação) |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🍀 **Sanofi Medley** — SAC encaminhou a Compras 29/10 (protocolo 03065348); resposta enviada 30/10 10:55. Follow-up humano em 03/11.
+2. 🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 31+ dias sem ação humana.
+3. 🔥🔥 **Pague Menos** (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 17 dias sem retorno.
+4. 🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês enviada.
+5. 🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br). 18+ dias.
+6. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+7. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+8. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+9. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09.
+10. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+11. 🟢 **União Supermercados** (14 lojas, Itu) — Apresentação enviada 28/10.
+12. 🟢 **16 novos follow-ups FP1** — Dacoli, SB Foods, Rede Correia, Conecta Ind, Lopes Supermercados, Sacco, Chemyunion, Castelo, EPNB, Frizzo, Reino Alimentos, Goldy, Natulha, CapsExpress, Megalabs, Ashland.
+
+### Observações
+- 31º dia sem respostas humanas novas. Sistema 100% saudável.
+- 16 follow-ups FP1 foram para leads que nunca responderam — possível última tentativa antes de arquivamento.
+- Fila de prospecção drenada (0 pendentes MX-válidos); aguardando nova leva do Prospector.
+- Pipeline de fechamento totalmente bloqueado em ação humana (WhatsApp/telefone).
+- Nenhum lead informou volume para proposta de contrato ou relatório ESG.
+
+---
 
 ### Diagnóstico do ciclo
 - 380 leads, 265 ativos, 112 bounces (watchdog) — SMTP/IMAP OK
