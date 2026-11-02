@@ -873,3 +873,53 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 13. 🟢 **União Supermercados** (14 lojas, Itu) — Apresentação enviada 28/10.
 
 ---
+## 2026-11-02 (segunda) — Tick Atendente IA: caixa limpa, fila seca e o fim das buscas grátis
+
+### Execução
+| Script | Resultado |
+|--------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 bounces processados (todos os 120 já tentados) |
+| prospecao_followup.py | 0 devidos — FP1 em massa saiu hoje 11:34 / 14:02 / 18:56; próximo FP2 vence 05/11 |
+| bot_oleo.py send_sequence | sequência processada, nada a enviar |
+| bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| scan_inbox.py / _miniscan_inbox.py | INBOX: 0 não lidas (confirmado nos dois) |
+| proposta_contrato / relatorio_esg | não acionados — nenhum lead informou volume, nenhum pedido de ESG |
+
+### Números reais do dia
+- 438 leads no leads.csv: **novo 308 · bounce 92 · respondido 23 · encerrado 15**
+- 374 apresentações enviadas · 285 entregues · 89 bounces · 22 respostas · **taxa 5,9%**
+- 471 empresas na fila total · 438 contatadas · **0 pendentes**
+- Último envio de prospecção: **31/10 (3 e-mails)** — o lote de 41 de 30/10 drenou a fila
+- **Nenhum dos 23 respondidos informou volume** → 0 propostas de contrato possíveis
+- 33º dia sem resposta humana real no fluxo de óleo (última: Tauste, 30/09)
+
+### Correções feitas neste tick
+1. **`scan_inbox.py` travava** na varredura da pasta Sent (estourava 300s de timeout e nunca terminava — falha silenciosa na vigilância de respostas/bounces). A varredura da Sent agora é opt-in (`--sent`) e o script roda em **3,3s**. A correlação por thread continua funcionando via `apresentacao_msgid` do leads.csv (261 msgids carregados).
+2. **Novo `prospectar_novos.py`** — pipeline completo de reposição de fila: busca → crawl do site (home + /contato + /fale-conosco) → extração de e-mail → filtro de prefixo comercial → **confirmação de que a cidade-alvo aparece no site** → validação de MX com rejeição de self-hosted → dedupe contra leads/bounces. Não grava duplicata nem empresa fora da região.
+
+### Descoberta importante: as buscas web gratuitas acabaram
+Tentei reabrir a descoberta de leads e o resultado foi diagnóstico, não lead:
+- **DuckDuckGo** (`html.duckduckgo.com` e `lite.duckduckgo.com`): página de bloqueio/CAPTCHA (14 KB, 0 resultados).
+- **Mojeek**: bloqueio (5,5 KB).
+- **Bing**: devolve cache geograficamente errado — para "supermercado Taubaté" retornou redes de **Belo Horizonte** (Supermercados BH, EPA BH, Villefort); para "supermercados em Limeira" retornou **poki.com**. Inútil como fonte.
+
+Isso confirma e explica o que vinha sendo registrado como "buscas cada vez menos produtivas": não é escassez de empresas na região, é **o IP não recebe mais índice de busca**. Enquanto isso não for resolvido, a fila não repõe sozinha e a prospecção fica congelada em 0 pendentes.
+
+**Recomendação única:** criar a chave gratuita do **Serper.dev** (2.500 buscas sem custo, sem cartão) e colocar em `config.json` como `"serper_api_key"`. O `prospectar_novos.py` já está implementado para usar essa chave como fonte primária — no primeiro tick com ela a reposição volta a rodar sozinha, sem mexer em código.
+
+### Estado comercial
+O canal e-mail está em fim de fôlego: 5,9% de resposta (acima da média de cold email, 1–5%), mas **todas as 23 respostas são SAC com auto-ack ou encaminhamento para canal comercial** — nenhuma chegou a informar litros/kg. O funil trava no mesmo ponto há 33 dias: falta a ligação/WhatsApp humano para transformar encaminhamento em coleta-teste.
+
+### Leads QUENTES — prioridade de fechamento
+1. 🍀 **SANOFI MEDLEY** — SAC encaminhou a Compras 29/10 (protocolo 03065348). **Follow-up humano amanhã, 03/11.**
+2. 🔴🔴🔴 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 33 dias sem ação.
+3. 🔴🔴🔴 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). Sem retorno desde 14/10.
+4. 🔴🔴🔴 **Rede Confiança** (Sorocaba) — proposta 2.500 L/mês na mesa.
+5. 🔴🔴🔴 **Covabra** — cadastro de fornecedor em isac.ivrim.com.br (15 min de ação humana; é o mais perto de fechar).
+6. 🔴🔴 **Brasfrigo** (Salto/SP) — agendar coleta-teste.
+7. 🔴🔴 **Queijos Itupeva** (Rafael) — agendar coleta-teste.
+8. 🟡 **Sonda** (R$6,12bi) — (11) 2145-6200.
+9. 🟡 **Tauste** — (15) 3324-4680.
+
+---

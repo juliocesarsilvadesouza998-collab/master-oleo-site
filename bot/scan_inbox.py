@@ -74,6 +74,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tudo", action="store_true", help="varrer todas as mensagens (não só não lidas)")
     ap.add_argument("--dias", type=int, default=45)
+    ap.add_argument("--sent", action="store_true",
+                    help="também varre a pasta Sent (lento; pode travar em caixas grandes — "
+                         "a correlação por thread já funciona com apresentacao_msgid do leads.csv)")
     args = ap.parse_args()
 
     cfg = load_config()
@@ -97,7 +100,10 @@ def main():
         ids = data[0].split() if typ == "OK" and data[0] else []
         msgs = fetch_msgs(m, ids)
         # também busca msgids enviados na pasta Sent para correlação de thread
+        # (SÓ com --sent: a varredura da Sent trava em caixa grande e derrubava o script)
         try:
+            if not args.sent:
+                raise RuntimeError("pulado (use --sent para varrer)")
             typf, folders = m.list()
             sent_folder = None
             for f in (folders or []):
@@ -118,7 +124,8 @@ def main():
             else:
                 print("(aviso: pasta Sent/Enviados não encontrada)")
         except Exception as exc:
-            print(f"(aviso: não foi possível ler Sent Mail: {exc})")
+            if args.sent:
+                print(f"(aviso: não foi possível ler Sent Mail: {exc})")
         m.select("INBOX")
     finally:
         m.logout()
