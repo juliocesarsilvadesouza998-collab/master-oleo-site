@@ -836,4 +836,40 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 7. 🟡 **Pague Menos** (R$4,33bi) — retomar contato.
 8. 🟡 **Muffato/Max Atacadista** — ligar (43) 3371-1700.
 
+## 2026-10-31 18:00 (Atendente IA - cron tick #136 - sábado)
+
+### Diagnóstico do ciclo
+- 438 leads no CSV: 309 novo, 22 respondido, 92 bounce, 14 encerrado, 1 sequencia
+- **🔴 31 dias sem respostas humanas novas** — última resposta real: Tauste (30/09)
+- ✅ Sistema saudável — INBOX limpa, replies_pending.json vazio, sem novos leads do Formspree
+- ✅ 0 follow-ups atrasados, 0 emails para enviar
+- ✅ 120 bounces no cache (nenhum novo)
+- **🔴 Pipeline de fechamento bloqueado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados |
+| send_sequence | sequência processada (nada a enviar) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| _miniscan_inbox.py | INBOX: 0 não lidas |
+| proposta_contrato/relatorio_ESG | não acionados |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🍀 **SANOFI MEDLEY** — SAC encaminhou a Compras 29/10. Follow-up humano em 03/11.
+2. 🍀 **ARTEMA PRÉ-MOLDADOS** — respondeu 28/10 (desmoldante).
+3. 🍀 **ICT FARMACÊUTICA** — respondeu 28/10.
+4. 🔴🔴🔴 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 31+ dias sem ação.
+5. 🔴🔴🔴 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 17 dias sem retorno.
+6. 🔴🔴🔴 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+7. 🔴🔴🔴 **Covabra** — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br.
+8. 🔴🔴 **Brasfrigo** (Salto/SP) — Agendar coleta-teste.
+9. 🔴🔴 **Queijos Itupeva** (Rafael) — Agendar coleta-teste.
+10. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+11. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09.
+12. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+13. 🟢 **União Supermercados** (14 lojas, Itu) — Apresentação enviada 28/10.
+
 ---

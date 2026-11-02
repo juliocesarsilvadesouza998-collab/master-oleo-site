@@ -1,3 +1,89 @@
+## 2026-11-02 (segunda-feira) — 12:34 (Atendente IA - cron tick #159)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 120 bounces cache, 0 notificações Formspree novas (timeout na 1ª tentativa, OK na 2ª)
+- ✅ corrigir_emails: 0 bounces novos processados (todos 89 já tentados — histórico esgotado)
+- ✅ prospecao_followup: 0 follow-ups atrasados (fila zerada)
+- ✅ send_sequence: sequência processada (0 envios pendentes)
+- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+- ✅ watchdog: exit 1 — **438 leads, 309 ativos, 120 bounces, SMTP/IMAP OK** (1 bounce sem correção: 9 não tentados sem MX alternativo)
+- 🔴 **33 dias sem resposta humana nova no fluxo de COMPRA de óleo** (última: Tauste 30/09; Sanofi Medley 30/10 = encaminhado a Compras, não conta como resposta de aceitação)
+- 🔴 **Fila de prospecção ZERADA** — 0 MX-válidos pendentes; 382 na fila_extra (6 ainda não no leads.csv)
+- 🔴 **Pipeline de fechamento 100% bloqueado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos 89 já tentados) |
+| prospecao_followup.py | **0 FP** (fila de follow-ups zerada) |
+| send_sequence | sequência processada (0 envios) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| watchdog.py | exit 1 — 438 leads, 309 ativos, 120 bounces, SMTP/IMAP OK |
+
+### Leads QUENTES (fluxo de compra de óleo — fechamento depende de ação humana)
+0. 🍀 **Sanofi Medley** (sac.brasil@sanofi.com) — encaminhado a Compras 29/10 (protocolo 03065348). Respondido 30/10. **Follow-up humano em 03/11 (segunda) — HOJE.**
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 33+ dias sem ação humana. WhatsApp (11) 96785-9631.
+2. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 19 dias sem retorno.
+3. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+4. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 41+ dias sem ação.
+5. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+6. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+8. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (33 dias).
+9. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+10. 🟢 **União Supermercados** (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta.
+
+### Observações
+- **33 dias sem resposta humana nova** no fluxo de compra. Sanofi Medley (protocolo 03065348, encaminhado a compras em 30/10) é o único canal aberto recente — **follow-up humano programado para HOJE (03/11)**.
+- **Fila de prospecção zerada** — 382 empresas em fila_prospeccao_extra.json aguardando validação MX pelo Prospector (6 ainda não entraram no leads.csv).
+- **Pipeline de fechamento 100% parado** em ação humana — scripts de reengajamento WhatsApp prontos no persona.md para uso manual.
+- Nenhuma resposta nova para processar, nenhum lead informou volume para gerar proposta de contrato ou relatório ESG.
+
+---
+
+## 2026-10-31 (sábado) — 18:00 (Atendente IA - cron tick #137)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 120 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces novos processados (todos 89 já tentados — histórico esgotado)
+- ✅ prospecao_followup: 0 follow-ups (fila zerada)
+- ✅ send_sequence: sequência processada (0 envios pendentes)
+- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+- 🔴 **31 dias sem resposta humana nova no fluxo de COMPRA de óleo** (última: Tauste 30/09; Sanofi Medley 30/10 = encaminhado a Compras, não conta como resposta de aceitação)
+- 🔴 **Fila de prospecção ZERADA** — 0 MX-válidos pendentes; 471 na fila extra (469 já contatados/bounce)
+- 🔴 **Pipeline de fechamento 100% bloqueado** — todos os leads quentes aguardam ação humana
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos 89 já tentados) |
+| prospecao_followup.py | **0 FP** (fila de follow-ups zerada) |
+| send_sequence | sequência processada (0 envios) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+
+### Leads QUENTES (fluxo de compra de óleo — fechamento depende de ação humana)
+0. 🍀 **Sanofi Medley** (sac.brasil@sanofi.com) — encaminhado a Compras 29/10 (protocolo 03065348). Respondido 30/10. **Follow-up humano em 03/11 (segunda)**.
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 31+ dias sem ação humana. WhatsApp (11) 96785-9631.
+2. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 17 dias sem retorno.
+3. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+4. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 39+ dias sem ação.
+5. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+6. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+8. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (31 dias).
+9. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+10. 🟢 **União Supermercados** (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta.
+
+### Observações
+- **31 dias sem resposta humana nova** no fluxo de compra. Sanofi Medley é a única luz no fim do túnel (protocolo 03065348, encaminhado a compras em 30/10), mas ainda não é resposta de aceitação.
+- **Fila de prospecção zerada** — Prospector rodou hoje (09:50, +3 empresas, +3 envios), mas a fila esgotou rapidamente.
+- **Pipeline de fechamento 100% parado** em ação humana — scripts de reengajamento WhatsApp prontos no persona.md para uso manual.
+- Prospector já cobriu 471 empresas na região de 80km de Salto — cobertura regional quase completa.
+
+---
+
 ## 2026-10-31 (sábado) — 14:05 (Atendente IA - cron tick #136)
 
 ### Diagnóstico do ciclo
@@ -1307,3 +1393,44 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 ### Próximos passos (próximo tick)
 - Quando alguma keyword começar a aparecer no top 20, começar a criar artigos no blog/ direcionados
 - Monitorar semanalmente
+
+---
+## 2026-11-02 (segunda-feira) — Atendente IA (cron #160 — 13:38)
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | 438 |
+| Ativos (novo+respondido+sequencia) | 332 |
+| Bounce (CSV) | 92 |
+| Bounce cache (bounces.json) | 120 |
+| Respondido | 23 |
+| Encerrado | 14 |
+| Sequência | 1 |
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 0 notificações novas |
+| corrigir_emails.py | 0 bounces novos (todos já tentados) |
+| prospecao_followup.py | 0 follow-ups (fila zerada) |
+| bot_oleo.py send_sequence | Sequência processada (0 envios) |
+| bot_oleo.py check-replies | 0 respostas pendentes |
+| miniscan_inbox | 0 não lidas na INBOX |
+| ecossistema.json | Atualizado (tick #160) |
+| insights.md | Atualizado |
+
+### Observação
+33 dias sem resposta humana NOVA. Fila zerada. Pipeline bloqueado em ação humana — todas as grandes oportunidades (Savegnago, Pague Menos, Nagumo, Covabra, Sonda, Tauste) aguardam follow-up via WhatsApp/telefone.
+
+### Leads QUENTES (prioridade de follow-up humano)
+1. 🔥🔥 **SAVEGNAGO** (#1 interior SP, R$7,98bi) — WhatsApp ativo com Pâmela (protocolo 00136403). Proposta R$2,00/L rede consolidada, 8.000L/mês. Aguarda direcionamento ao setor de compras.
+2. 🔥🔥 **PAULISTÃO ATACADISTA** (Grupo Savegnago) — mesma thread do Savegnago.
+3. 🔥 **NAGUMO** (caso Salesforce 00143542) — proposta enviada 14/10 (5.000L/mês = R$120k/ano). Mais de 2 semanas sem retorno.
+4. 🔥 **SONDA** (R$6,12bi) — ligar (11) 2145-6200. Respondeu 29/09.
+5. 🟡 **TAUSTE** (#3 interior SP) — ligar (15) 3324-4680.
+6. 🟡 **COVABRA** — respondeu 22/09. Prioridade portal IVRIM (isac.ivrim.com.br).
+7. 🟡 **PAGUE MENOS** (#2 interior SP, R$4,33bi) — proposta anexada ticket 407470.
+8. 🔵 **ICT Farmacêutica** — respondeu 28/10, follow-up possível.
+9. 🔵 **Sanofi Medley** — respondeu 30/10, follow-up possível.
+10. 🔵 **Artema Pré Moldados** — respondeu 28/10 com interesse.

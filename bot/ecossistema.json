@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-31 09:51 (Prospector IA - cron job - sábado)",
+  "atualizado_em": "2026-10-31 18:00 (Atendente IA - cron tick #136 - sábado)",
     "ciclo_2026_10_31_prospector_cron": {
     "timestamp": "2026-10-31 09:50 (Prospector IA - cron job - sábado)",
     "diagnostico": {
@@ -1492,9 +1492,52 @@
                           "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
                           "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
                           "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10.",
-                          "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta.",
-                          "🟢 16 novos follow-ups FP1 enviados hoje: Dacoli, SB Foods, Rede Correia, Conecta Ind, Lopes, Sacco, Chemyunion, Castelo, EPNB, Frizzo, Reino Alimentos, Goldy, Natulha, CapsExpress, Megalabs, Ashland — aguardar retorno."
-                        ]
-                      }
-                    }
-                  }
+                          "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta."
+                                                  ]
+                                                }
+                                              },
+                                              "ciclo_2026_10_31_cron_atendente_1800": {
+                                                "timestamp": "2026-10-31 18:00 (Atendente IA - cron tick #136 - sábado)",
+                                                "acoes": [
+                                                  "sync_formspree.py — 120 bounces cache, 0 notificações Formspree novas",
+                                                  "corrigir_emails.py — 0 bounces processados (todos os 120 já tentados; nenhum novo bounce)",
+                                                  "prospecao_followup.py — 0 follow-ups atrasados",
+                                                  "send_sequence — sequência processada (nada a enviar — fila sem leads pendentes)",
+                                                  "check-replies — 0 respostas (replies_pending.json vazio)",
+                                                  "_miniscan_inbox.py — INBOX: 0 não lidas",
+                                                  "proposta_contrato/relatorio_ESG — não acionados (0 leads com volume novo ou solicitação)",
+                                                  "NÃO houveram novas respostas de leads para atender"
+                                                ],
+                                                "diagnostico": {
+                                                  "total_leads_csv": 438,
+                                                  "novo": 309,
+                                                  "respondido": 22,
+                                                  "bounce": 92,
+                                                  "encerrado": 14,
+                                                  "sequencia": 1,
+                                                  "bounce_cache_json": 120,
+                                                  "watchdog": "não executado (intervalo curto desde último tick 09:16)",
+                                                  "dias_sem_resposta_humana_fluxo_oleo": "31 (última: Tauste 30/09); 17 dias desde Pague Menos (14/10)",
+                                                  "respostas_reais": 0,
+                                                  "respostas_auto": 0,
+                                                  "propostas_contrato_geradas": 0,
+                                                  "relatorios_esg_gerados": 0,
+                                                  "observacao": "31º dia sem respostas humanas novas no fluxo de COMPRA de óleo. Sistema saudável. INBOX limpa (0 não lidas), replies_pending.json vazio, sem novos leads do Formspree. 120 bounces no cache. Pipeline de fechamento segue bloqueado em ação humana (Savegnago/Pague Menos/Covabra/Rede Confiança/Brasfrigo/Queijos Itupeva aguardam WhatsApp/telefone). Nenhum lead informou volume novo para proposta de contrato ou relatório ESG.",
+                                                  "leads_quentes": [
+                                                    "🍀 SANOFI MEDLEY — SAC encaminhou a Compras 29/10 (protocolo 03065348); resposta enviada 30/10 10:55. Follow-up humano em 03/11.",
+                                                    "🍀 ARTEMA PRÉ-MOLDADOS — respondeu 28/10 (desmoldante).",
+                                                    "🍀 ICT FARMACÊUTICA — respondeu 28/10.",
+                                                    "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. PRIORIDADE ABSOLUTA. 31+ dias sem ação humana.",
+                                                    "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Acompanhar ticket 407470 (Josiane Marinho). 17 dias sem retorno.",
+                                                    "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
+                                                    "🔴🔴🔴 COVABRA — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 18+ dias sem ação.",
+                                                    "🔴🔴 BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+                                                    "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+                                                    "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+                                                    "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+                                                    "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10.",
+                                                    "🟢 UNIÃO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; vigiar resposta."
+                                                  ]
+                                                }
+                                              }
+                                            }
