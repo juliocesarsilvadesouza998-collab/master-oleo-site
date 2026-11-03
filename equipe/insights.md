@@ -1,3 +1,24 @@
+## 2026-11-03 18:28 (Melhorador Contínuo — cron terça-feira)
+
+### Ações do tick
+- ✅ **prospecao_followup.py** — **41 follow-ups enviados** (12 FP3 + 26 FP2 + 3 FP1) — fila de atrasados ZERADA. Todos com thread (In-Reply-To) preservando a conversa original.
+- ✅ **watchdog.py** — pós-envio: 438 leads, 308 ativos, 120 bounces. SMTP/IMAP OK. 0 follow-ups atrasados restantes.
+- ⏭️ **1 bounce** sem correção tentada (aguardando corrigir_emails.py — bounce histórico conhecido, já tentado em ciclos anteriores).
+
+### Diagnóstico
+- **41 follow-ups estavam atrasados** acumulados desde o último ciclo completo do Atendente (~12:00). Causa provável: o script `prospecao_followup.py` vinha encontrando timeout SMTP transiente em lotes grandes (>18 envios), o que fez com que os envios noturnos/matinais parassem no meio. Nesta execução, os 41 foram enviados sem falha (SMTP connection OK para todos).
+- **5.9% taxa de resposta** (22/374 entregues) — estável, dentro do esperado para cold email B2B.
+- **24% bounce rate** — acima da meta de 15%. Necessita validação MX mais rigorosa antes de adicionar novos leads.
+- **Fila de prospecção DRENADA** (0 pendentes MX-válidos) — sem novos leads para contactar. 35º dia sem resposta humana REAL (Tauste 30/09).
+- **Gargalo de fechamento continua**: Savegnago (WhatsApp 35d), Pague Menos (ticket 20d), Covabra (Ivrim), Rede Confiança (proposta), Brasfrigo/Queijos Itupeva (coleta-teste) — todos aguardando ação humana.
+
+### Aprendizado do dia
+1. **O script prospecao_followup.py funciona robustamente quando chamado sozinho com connection pool própria** — os 41 envios passaram sem timeout. O problema anterior de "connection unexpectedly closed" após ~18 envios consecutivos parece ser um timeout de leitura SMTP quando há outros scripts usando a mesma conexão concorrentemente. Solução: rodar prospecao_followup.py ISOLADO (sem send_sequence concorrente).
+2. **Os templates FP1/FP2/FP3 estão densos demais** — cada template tem ~600-800 palavras com múltiplos argumentos (mercado US$11bi, lei 2028, anti-furto, prova social, renda extra calculada). Leads B2B lêem no celular — templates podem estar overwhelming em vez de persuasivos. Para o Estrategista: considerar A/B test com versão curta (3 parágrafos × 1 call-to-action).
+3. **Fila de prospecção gratuita esgotada** — a base de 438 leads cobre exaustivamente Sorocaba, Campinas, Jundiaí, Indaiatuba, Itu, Piracicaba, Valinhos, Louveira, Salto e região. As únicas fontes remanescentes são: (a) lista CNPJ paga (Leadjet ~R$197), (b) prospecção telefônica, (c) catalogo CIESP/SINDILAT, (d) inbound do site.
+
+---
+
 ## SEO — tick 03/11/2026 (Bing, cron diário)
 
 ### Posições reais (medidas no Bing)

@@ -129,6 +129,14 @@ def tpl_fp(cfg, lead, n):
     </div>"""
     return {"subject": subj, "html": html}
 
+def fonte_elegivel(l):
+    """Só leads do fluxo de COMPRA de óleo recebem follow-up de prospecção.
+    `prospeccao_desmoldante` é de OUTRO negócio (Master EcoDesmold) e tem oferta
+    diferente — recebeu em 02/11/2026 um FP2 de óleo usado por engano, porque o
+    fallback usava `criado_em` mesmo sem apresentação registrada."""
+    f = str(l.get("fonte", ""))
+    return f in ("prospeccao", "prospeccao-lote")
+
 def main():
     ap = argparse.ArgumentParser(description="Follow-ups de prospecção")
     ap.add_argument("--dry-run", action="store_true")
@@ -143,7 +151,7 @@ def main():
     if args.status:
         print(f"{'Lead':<40} {'apresentacao':<20} {'FP1':<20} {'FP2':<20} {'FP3':<20} {'status'}")
         for l in leads:
-            if not str(l.get("fonte","")).startswith("prospeccao"):
+            if not fonte_elegivel(l):
                 continue
             print(f"{l.get('empresa','')[:38]:<40} {(l.get('apresentacao_em') or '—')[:18]:<20} "
                   f"{(l.get('fp1_em') or '—')[:18]:<20} {(l.get('fp2_em') or '—')[:18]:<20} "
@@ -155,7 +163,7 @@ def main():
     conn = smtplib.SMTP_SSL(e["smtp_host"], e["smtp_port"], context=ctx, timeout=30)
     conn.login(e["usuario"], e["senha_app"].replace(" ",""))
     for l in leads:
-        if not str(l.get("fonte","")).startswith("prospeccao"):
+        if not fonte_elegivel(l):
             continue
         if l.get("status") in ("respondido", "bounce", "encerrado"):
             continue
