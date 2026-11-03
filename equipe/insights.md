@@ -1,3 +1,89 @@
+## SEO — tick 03/11/2026 (Bing, cron diário)
+
+### Posições reais (medidas no Bing)
+- ⏳ **Fora do top 10** (SERP relevante confirmada): compra de óleo usado · margarina vencida · manteiga vencida · óleo usado biodiesel
+- ❔ **Inconclusivo** (Bing devolveu SERP genérica — não confirma nem descarta): coleta de óleo usado salto sp · coleta de óleo de cozinha usado salto · descaracterização de alimentos vencidos · maionese vencida · compra de gordura vegetal usada · descarte de óleo de cozinha salto
+- ❌ **Nenhuma keyword com posição numérica registrada neste tick** (0/23 ranqueadas no top 10).
+
+### Verificação independente (HTML do Bing, fora do monitor)
+- Bing está servindo **SERP genérica a consultas automatizadas** — até query controle ("pizza em sao paulo") devolveu pizzerias de **Teresina**; "coleta de óleo usado salto sp" devolveu Roblox/WhatsApp (irrelevante). OU seja: os INCONCLUSIVOS de hoje são **wall anti-bot do Bing**, não queda de posição comprovada.
+- A **POSIÇÃO 1 registrada em 31/10** (coleta de óleo usado salto sp / coleta de óleo de cozinha usado salto) **não pôde ser revalidada nem negada hoje** — a medição automatizada está bloqueada pelo Bing. Quando o wall cair, revalidar.
+
+### Diagnóstico
+- ✅ Site no ar (HTTP 200), SEO geral OK, sitemap presente, **23/23 keywords monitoradas presentes no conteúdo** (cobertura 100%).
+- ✅ Todas as keywords-alvo têm página dedicada no blog — **nenhum artigo novo necessário neste tick** (evita canibalização e trabalho inventado).
+- Condição de parada do PASSO 1 atingida (SEO OK + nenhuma keyword ranqueada) → **nenhuma melhoria forçada neste tick**, conforme instrução.
+- Gargalo real segue sendo **tempo de indexação/autoridade do domínio jovem** + cobertura de indexação do Bing (site: retorna poucas páginas). Próximo salto depende de maturação e backlinks.
+
+---
+## 2026-11-02 19:33 (Analista de Qualidade — cron)
+
+### Números do dia
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **438** |
+| `novo` | 308 |
+| `respondido` | 23 |
+| `bounce` | 92 |
+| `encerrado` | 15 |
+| Emails em bounce cache (bounces.json) | **120** |
+| Bounces no cache sem lead correspondente | 28 (órfãos históricos/alternativos — normal) |
+| Respostas pendentes (replies_pending.json) | **0** |
+| Notificações Formspree processadas | 0 |
+
+### Diagnóstico da auditoria
+- ✅ **sync_formspree.py**: 120 bounces em cache, **0 notificações Formspree novas**. Cache estável.
+- ✅ **bounces.json × leads.csv — consistência**: todos os 92 leads `bounce` têm entrada no cache. 28 emails órfãos no cache são endereços históricos/alternativos sem lead ativo — comportamento esperado (cache nunca é limpo para evitar reenvio).
+- ⚠️ **3 leads `bounce` com `boas_vindas_em` preenchido** — MESMA anomalia de ciclos anteriores (Tecnobloc, Fábrica Bloco Forte, teste.formspree@gmail.com). Nenhum caso novo. Anomalia conhecida: fluxo desmoldante insere e envia antes do sync detectar o bounce.
+- ✅ **replies_pending.json**: `[]` — 0 respostas pendentes.
+- ✅ **0 follow-ups atrasados**, fila de prospecção drenada (0 pendentes MX-válidos).
+
+### Problemas encontrados e correções
+1. **Nenhum problema de integridade novo neste ciclo** — sync e cache consistentes, zero correção de dados necessária.
+2. **Anomalia recorrente (3 leads bounce com boas-vindas enviadas)**: Tecnobloc, Fábrica Bloco Forte e teste.formspree continuam como casos conhecidos — o script `send_sequence` já pula bounces, então não há reenvio; é apenas um registro de timing race condition que não causa dano.
+3. **Fila de prospecção 100% drenada**: 0 pendentes MX-válidos. Pipeline de cold email parado até reposição.
+
+### Sugestões para o Estrategista
+1. 🔴 **Compra de lista CNPJ (Leadjet ~R$197) ou busca ativa do Prospector**: a fila está zerada há dias. Sem novos leads, o funil de entrada não gira — a única alavanca de receita é ação humana nos leads quentes.
+2. 🔴 **Ação humana urgente nos leads quentes**: Savegnago (WhatsApp), Pague Menos (ticket), Covabra (cadastro Ivrim), Rede Confiança (proposta), Brasfrigo e Queijos Itupeva (coleta-teste) — 36º dia sem ação real.
+3. 🟡 **Validação MX no fluxo desmoldante**: a anomalia Tecnobloc/Fábrica Bloco Forte se repete há 6 dias. Validar MX/domínio no insert ou migrar o disparo para `enviar_lote.py` resolveria de vez.
+
+---
+
+## 2026-11-03 12:00 (Atendente IA — cron segunda-feira #165)
+
+### Números do tick
+- **438 leads** (308 novo, 92 bounce, 23 respondido, 14 encerrado, 1 sequencia) — inalterado.
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 bounces novos processados.
+- **0 follow-ups enviados** (fila zerada — 0 atrasados).
+- **0 respostas pendentes** (replies_pending.json = []).
+- INBOX: 0 não lidas. Fila 100% drenada (0 pendentes MX-válidos). SMTP/IMAP OK.
+
+### O que foi feito
+- **PASSO 0 (sync + auto-correção):** `sync_formspree.py` — 120 bounces cache, 0 notificações Formspree novas. `corrigir_emails.py` — 0 bounces novos (todos os 120 já tentados).
+- **PASSO 1 (sequência + respostas):** `prospecao_followup.py` — 0 follow-ups atrasados. `send_sequence` — sequência processada (nada a enviar; fila 100% drenada). `check-replies` — 0 respostas pendentes.
+- **Proposta de contrato / relatório ESG:** não executados — nenhum lead informou volume; nenhuma solicitação ESG.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas **sem novidades** — 35º dia sem resposta humana REAL (Tauste 30/09).
+
+### Leads quentes (destaques — inalterados)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — respondido 30/10 10:55. **Follow-up humano hoje (03/11)!**
+2. 🍀 **PASTIFICIO SELMI** (Zendesk ticket 91322, 02/11) — SAC abriu ticket, aguardar contato comercial.
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 35+ dias sem ação humana (WhatsApp pendente).
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 20+ dias.
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada.
+6. 🔴🔴🔴 **COVABRA** — cadastro portal Ivrim (ação humana).
+7. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste a agendar.
+8. 🟡 **SONDA / TAUSTE** — ligações pendentes.
+
+### Diagnóstico
+35º dia sem resposta humana REAL (Tauste 30/09). Fila de prospecção 100% drenada (0 pendentes MX-válidos). SMTP/IMAP OK. **Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone/cadastro Ivrim).** Sem contrato gerado (0 leads informaram volume). Sem relatório ESG (0 solicitações).
+
+---
+
 ## 2026-11-03 08:00 (Atendente IA — cron segunda-feira #164)
 
 ### Números do tick
@@ -6624,5 +6710,30 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 | 🟡 | **Tauste** | Ligar (15) 3324-4680 |
 | 🟢 | **Sanofi Medley / União Supermercados** | Vigiar resposta (SAC→compras) |
 | 🟢 | **Compra Leadjet** | R$197 CNAEs 1041-4/1043-1/1052-0 |
+
+---
+## Ciclo 02/11/2026 18:57 — Atendente IA (tick #166)
+
+### O que rodou
+| Ação | Resultado |
+|------|-----------|
+| `sync_formspree.py` | 120 bounces em cache, **0 notificação nova** do Formspree |
+| `corrigir_emails.py` | **0 bounce novo** — todos os 120 já tentados |
+| `prospecao_followup.py` | **3 follow-ups** com thread: Liofoods (FP2), Poly Blends (FP2), Juvis (FP1) |
+| `bot_oleo.py send_sequence` | Sequência processada — nenhum envio pendente |
+| `bot_oleo.py check-replies` | **0 resposta pendente** |
+| `scan_inbox.py --dias 2` | 0 mensagem não lida (438 leads, 356 msgids) |
+| `proposta_contrato.py` / `relatorio_esg.py` | Não executados — nenhum lead informou volume, nenhum pedido ESG |
+
+### Diagnóstico
+- Base: **438 leads** — 308 novo, 92 bounce, 23 respondido, 14 encerrado, 1 sequência.
+- Bounce rate ~21% (92/438), taxa de resposta ~5,3%.
+- Caixa zerada: nenhuma resposta humana nova. **33 dias sem resposta humana real** (última: Tauste, 30/09).
+- Fila de prospecção continua sem pendentes MX-válidos — o cold email está no teto até repor leads (lista CNPJ/Leadjet ou catálogo CIESP).
+
+### Leitura do ciclo
+1. O motor automático está saudável (SMTP/IMAP OK, follow-ups saindo no prazo), mas **não há nada para responder** — o funil de entrada está seco.
+2. Todo o valor agora está em **ação humana nos leads que já abriram canal**: Sanofi Medley (follow-up recomendado 03/11), Pastifício Selmi (ticket 91322 aberto), Savegnago, Pague Menos, Rede Confiança, Covabra (cadastro Ivrim).
+3. Nenhuma proposta de contrato gerada: para emitir a tabela escalonada (R$1,20→R$2,20/L) é preciso um lead informar volume — nenhum informou neste ciclo.
 
 ---
