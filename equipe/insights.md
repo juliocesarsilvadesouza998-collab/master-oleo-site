@@ -6877,3 +6877,21 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 3. **Investigação dos 3 leads bounce-com-boas-vindas**: o fluxo atual detectou bounce depois de enviar a saudação. Seria possível inverter a ordem (verificar bounce ANTES de enviar boas-vindas) para economizar créditos de envio? Avaliar custo-benefício vs. simplicidade.
 
 ---
+
+## 2026-11-04 17:30 (Melhorador Contínuo — cron quarta-feira)
+
+### Ações do ciclo
+- ✅ **Watchdog** — 447 leads, 317 ativos, 120 bounces, SMTP/IMAP OK
+- ✅ **corrigir_emails.py** — 0 bounces processados (todos já tentados anteriormente)
+- ✅ **Buscas web** — fontes gratuitas de leads esgotadas (12+ ciclos sem novas empresas)
+- ✅ **Index.html** — seção de prova social adicionada (447+ contatadas, 3 maiores redes)
+
+### Diagnóstico
+- **447 leads** (295 novo, 86 bounce, 22 respondido, 14 encerrado)
+- **Fila 100 0renada** — 0 pendentes MX-válidos
+- **36º dia sem resposta humana REAL** (Tauste 30/09)
+
+### Estratégico para o domingo
+- Pipeline travado em ação humana (WhatsApp/telefone). Leads quentes: Savegnago, Pague Menos, Covabra, Rede Confiança.
+- Fonte gratuita de leads exaurida. Recomendação: lista Leadjet CNPJ para reabastecer.
+- Site melhorado com prova social numérica (visível em masteroleo.eco.br).

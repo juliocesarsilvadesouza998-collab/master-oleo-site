@@ -1,3 +1,39 @@
+## 2026-11-04 17:27 (Atendente IA - cron tick - quarta-feira)
+
+### Diagnóstico do ciclo
+- **447 leads, 24 respondidos (+1: Du Porto)**
+- ✅ sync_formspree.py: 120 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py: 0 bounces processados (todos já tentados)
+- ✅ prospecao_followup.py: 0 follow-ups atrasados
+- ✅ bot_oleo.py send_sequence: sequência processada
+- **📬 1 resposta: Du Porto** — disse que não gera óleo de fritura; respondido com oferta de vencidos >40% gordura
+- **🔴 35 dias sem resposta humana com volume** — última: Tauste (30/09)
+- **🔴 Pipeline de fechamento bloqueado** — todos os leads quentes (Savegnago, Pague Menos, Covabra, etc) aguardam ação humana
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações Formspree novas (2 timeouts, 3ª OK) |
+| corrigir_emails.py | 0 bounces processados (todos os 120 já tentados) |
+| prospecao_followup.py | 0 follow-ups devidos |
+| bot_oleo.py send_sequence | sequência processada, nada a enviar |
+| bot_oleo.py check-replies | 1 resposta: Du Porto — informou que não gera óleo |
+| ✅ Reply enviado para Du Porto | ofertado compra de vencidos >40% gordura com descaracterização |
+| proposta_contrato/relatorio_ESG | não acionados (0 leads com volume ou solicitação) |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🍀 **Du Porto (Sorocaba)** — respondeu 04/11 informando que não gera óleo; ofertado vencidos >40%; aguardar retorno.
+2. 🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 35+ dias sem ação humana.
+3. 🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 21 dias sem retorno.
+4. 🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês enviada.
+5. 🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br).
+6. 🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local.
+7. 🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+8. 🟡 **Sonda** (R$6,12bi) — (11) 2145-6200.
+9. 🟡 **Tauste** — (15) 3324-4680.
+
+---
+
 ## 2026-10-31 09:16 (Atendente IA - cron #135 - sábado)
 
 ### Diagnóstico do ciclo

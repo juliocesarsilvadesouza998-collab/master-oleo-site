@@ -1630,6 +1630,42 @@
       ],
       "emails_correcao_enviados": 5,
       "verificacao_envio": "IMAP Sent: 5 emails \"Desmoldante vegetal para pré-moldados\" de 02/11 19:10-19:11 confirmados"
-    }
-  }
-}
+          }
+        },
+        "ciclo_2026_11_04_cron_atendente": {
+          "timestamp": "2026-11-04 17:27 (Atendente IA - cron tick - quarta-feira)",
+          "acoes": [
+            "sync_formspree.py — 120 bounces cache, 0 notificações Formspree novas (1ª tentativa timeout, 2ª timeout, 3ª OK)",
+            "corrigir_emails.py — 0 bounces processados (todos os 120 já tentados; nenhum bounce novo)",
+            "prospecao_followup.py — 0 follow-ups devidos (fila de follow-ups em dia)",
+            "bot_oleo.py send_sequence — sequência processada, nada a enviar",
+            "bot_oleo.py check-replies — 1 resposta: Du Porto (sac@duporto.com.br) — disse que não produz sorvete nem gera resíduo de óleo",
+            "✅ Respondido Du Porto: agradecido, ofertado compra de vencidos >40% gordura (margarina/manteiga/gordura vegetal) com descaracterização; lead marcado como respondido",
+            "proposta_contrato/relatorio_ESG — não acionados (nenhum lead informou volume; nenhum pedido de relatório)"
+          ],
+          "diagnostico": {
+            "total_leads_csv": 447,
+            "status_csv": "novo 316 | bounce 92 | respondido 24 | encerrado 15",
+            "bounce_cache_json": 120,
+            "watchdog": "saudável — SMTP/IMAP OK",
+            "fila_total": "~450 empresas (prospecção: 0 pendentes MX-válidos)",
+            "dias_sem_resposta_humana_fluxo_oleo": "35 (última: Tauste 30/09); Du Porto 04/11 respondeu mas não é lead de volume",
+            "respostas_reais": 1,
+            "respostas_humanas_fluxo_oleo": "Du Porto — informou que não gera resíduo de óleo; ofertado nicho de vencidos >40%, aguardando retorno",
+            "propostas_contrato_geradas": 0,
+            "relatorios_esg_gerados": 0,
+            "observacao": "35º dia sem respostas humanas com volume para negociação (última: Tauste 30/09). Du Porto respondeu hoje mas informou que não gera óleo de fritura — repliquei com oferta de compra de vencidos >40% gordura com descaracterização. Sistema saudável. Fila de prospecção drenada (0 pendentes MX-válidos). Pipeline de fechamento continua bloqueado em ação humana — Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva, Sonda, Tauste aguardam WhatsApp/telefone."
+          },
+          "leads_quentes": [
+            "🍀 DU PORTO (Sorocaba) — respondeu 04/11 informando que não gera óleo; ofertado vencidos >40%; aguardar retorno.",
+            "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 35 dias sem ação humana.",
+            "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). Sem retorno desde 14/10.",
+            "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês na mesa, sem resposta.",
+            "🔴🔴🔴 COVABRA — cadastro de fornecedor no portal isac.ivrim.com.br (ação humana, 15 min). Lead mais maduro para fechar.",
+            "🔴🔴 BRASFRIGO (Salto/SP) — local, agendar coleta-teste.",
+            "🔴🔴 QUEIJOS ITUPEVA (Rafael) — agendar coleta-teste.",
+            "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
+            "🟡 TAUSTE — (15) 3324-4680."
+          ]
+        }
+      }

@@ -5690,5 +5690,29 @@
         "🟡 SONDA (R$6,12bi) / TAUSTE — ligações pendentes."
       ]
     }
+  },
+  "ciclo_2026_11_04_melhorador_continuo": {
+    "timestamp": "2026-11-04 17:30 (Melhorador Continuo)",
+    "acoes": [
+      "Watchdog: 447 leads, 317 ativos, 120 bounces, SMTP/IMAP OK",
+      "corrigir_emails.py: 0 bounces processados (todos ja tentados)",
+      "Buscas web: sem novas empresas publicas (fonte exaurida)",
+      "Index.html: secao de prova social com dados reais (447+ contatadas, 3 maiores redes)"
+    ],
+    "diagnostico": {
+      "total_leads": 447,
+      "status_leads": {
+        "novo": 295,
+        "bounce": 86,
+        "respondido": 22,
+        "encerrado": 14
+      },
+      "bounce_cache": 120,
+      "bounce_rate": "~19%",
+      "taxa_resposta": "~4.9%",
+      "fila_pendentes": 0,
+      "dias_sem_resposta_humana": 36,
+      "observacao": "36o dia sem resposta humana (Tauste 30/09). Fila 100% drenada. Site melhorado."
+    }
   }
 }
