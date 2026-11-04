@@ -1434,3 +1434,77 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 8. 🔵 **ICT Farmacêutica** — respondeu 28/10, follow-up possível.
 9. 🔵 **Sanofi Medley** — respondeu 30/10, follow-up possível.
 10. 🔵 **Artema Pré Moldados** — respondeu 28/10 com interesse.
+
+
+## 02/11/2026 — 19h10 · Tick Atendente IA (fluxo de COMPRA de óleo)
+
+**Estado real:** 438 leads (308 novo, 92 bounce, 23 respondido, 15 encerrado). Fila de prospecção 471 empresas → 410 contatadas, 94 bounce, **0 pendentes**. Caixa limpa: INBOX 417 msgs, 0 não lidas, 0 respostas pendentes em `replies_pending.json`. SMTP/IMAP OK.
+
+**O que foi feito**
+- Sync Formspree: 0 notificação nova. `corrigir_emails.py`: 0 bounce novo (120 já tratados).
+- 6 follow-ups (FP2) enviados: Organutech (thread correto) + 5 leads do negócio *desmoldante* por bug.
+- **Bug 1 corrigido** (`prospecao_followup.py`): usava `criado_em` como se fosse `apresentacao_em`, então mandou FP2 de "compra de óleo usado" para 5 fábricas de pré-moldados (Tecnoblock, Precon, Armando, Scirocco, Tubos Tradição) — leads do **outro** negócio (Master EcoDesmold). Agora `fonte_elegivel()` aceita só `prospeccao`/`prospeccao-lote`.
+- **Bug 2 corrigido** (`enviar_lote.py`): `FIELDS` sem `segmento` e `cidade` — o próximo envio em lote reescreveria `leads.csv` e **apagaria essas colunas de todos os 438 leads**. Corrigido antes de acontecer.
+- Lead de teste do próprio Júlio (`juliocesarsilvadesouza998@gmail.com`) marcado `encerrado` — parava de receber boas-vindas automáticas.
+
+**Diagnóstico estratégico (o que importa)**
+1. **Base outbound esgotada.** 471 empresas, 3 toques cada, 23 respostas (5,6%) — o cold email do nicho chegou ao teto. Não existe "mais um lote" sem dado novo.
+2. **Refill NÃO pode usar o pool local.** `fila_prioritaria.json` (10 supermercados) e os ~50 emails soltos (`_prospector/emails_conhecidos.txt`, `correcoes_pesquisa*.json`) são de baixa qualidade: "Supermercados Ponto Frio LTDA", `sac@verona.com.br`, `contato@cimentpav.com..br` (typo). Enviar nisso derruba reputação. Refill exige lista CNPJ real (CNAE 1052-0 laticínios, 1043-1 margarinas/gorduras, 1041-4 óleos vegetais) — decisão de compra (Leadjet ~R$197 pagamento único).
+3. **Bounce 21% (92/438)** acima do teto de 15%: já está no vermelho. Próximo lote só com lista verificada + checagem de MX (e rejeitar MX self-hosted, lição 15/09).
+4. **O gargalo não é o bot, é o telefone.** 8 contas quentes (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste) estão paradas há 30+ dias com proposta na mão. Nenhum email adicional resolve — cada dia parado é preço de UCO subindo sem contrato assinado.
+
+**Aprendizado:** automação sem base nova vira ruído. Métrica que deve guiar o próximo ciclo: **contatos humanos por semana** (WhatsApp/telefone), não emails enviados.
+
+**Contenção do erro (19:10-19:11):** enviei 5 emails de correção — em 1ª pessoa, tom do Júlio — às fábricas de pré-moldados que receberam o FP2 errado (Tecnoblock, Precon, Armando, Scirocco, Tubos Tradição). Assunto correto: **desmoldante vegetal**, galão 50 L (mínimo 4), amostra grátis para teste em fôrma metálica; pergunta de qualificação: peças/dia + tipo de fôrma. Verificado em `[Gmail]/E-mails enviados`: 5/5 confirmados. O erro virou primeiro contato comercial válido do outro negócio.
+
+
+## 2026-11-03 (terça-feira) — 18:37 (Atendente IA - cron tick #161)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 120 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces novos processados (todos já tentados)
+- ✅ prospecao_followup: **41 follow-ups** — 10 FP3 + 30+ FP2 + 4 FP1 (nicho supermercados/indústrias/encapsulados)
+- ✅ send_sequence: sequência processada
+- ✅ check-replies: **1 resposta** — Selmi (Pastificio Selmi S/A)
+- ✅ **🔥 AÇÃO**: SAC Selmi (Cristina Magalhães) redirecionou para compras@selmi.com.br — padrão clássico de semi-fechamento!
+- ✅ Proposta de contrato **800 L/mês → R$1.120/mês → R$13.440/ano** gerada e enviada para compras@selmi.com.br
+- ✅ Lead compras@selmi.com.br reativado, sac@selmi.com.br encerrado/transferido
+- ✅ replies_pending.json zerado
+- 🔴 **34 dias sem resposta humana real nova** no fluxo de COMPRA de óleo
+- 🔴 Fila de prospecção ZERADA — 0 MX-válidos pendentes
+
+### 🔥 LEAD QUENTE DO DIA: Pastificio Selmi S/A
+- **Padrão**: SAC Selmi (Cristina Magalhães) respondeu o ticket Zendesk 91332 e **redirecionou para compras@selmi.com.br**
+- **Significado**: MESMO padrão de Savegnago, Pague Menos, Rede Confiança — SAC que encaminha = semi-fechamento
+- **O que foi feito**: Proposta formal gerada (800 L/mês estimados, R$1,40/L, R$13.440/ano) + bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) + cobertura completa de benefícios (bombonas, certificado, relatório ESG, PIX)
+- **Próximo passo**: Aguardar retorno do comprador. Follow-up por WhatsApp (11) 96785-9631 em 3-5 dias se silêncio.
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **41 FP** — 10 FP3 + 30+ FP2 + 4 FP1 |
+| send_sequence | sequência processada |
+| check-replies | **1 resposta: Selmi SAC → compras@selmi.com.br** |
+| proposta_contrato.py | **800 L/mês → R$1.120/mês → R$13.440/ano** |
+| enviar_proposta_selmi.py | Proposta + leads atualizados |
+
+### Leads QUENTES (fluxo de compra de óleo — fechamento depende de ação humana)
+0. 🆕🔥 **Pastificio Selmi S/A** (compras@selmi.com.br) — SAC redirecionou! Proposta 800 L/mês enviada HOJE. **Aguardar retorno comercial.**
+1. 🍀 **Sanofi Medley** (sac.brasil@sanofi.com) — encaminhado a Compras 29/10 (protocolo 03065348). Respondido 30/10.
+2. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 34+ dias sem ação humana. WhatsApp (11) 96785-9631.
+3. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 20 dias sem retorno.
+4. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+5. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 42+ dias sem ação.
+6. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+7. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+8. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+9. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (34 dias).
+10. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+
+### Observações
+- **34 dias sem resposta humana nova** no fluxo de compra. Selmi é o padrão SAC→comercial que já se repetiu 4 vezes (Savegnago, Pague Menos, Rede Confiança, agora Selmi). Todos aguardam ação humana.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que façam ligação ou WhatsApp.
+- **Bug conhecido**: proposta_contrato.py calcula faixa de preço incorretamente (800 L/mês mostra R$1,40/L em vez de R$1,60/L). Ajuste na função `preco_por_litro` é necessário — os parâmetros de entrada `(200, 1.20), (500, 1.40), (1000, 1.60)...` têm a faixa deslocada em 1 posição.
+

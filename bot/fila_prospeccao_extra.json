@@ -2652,40 +2652,103 @@
     "email": "contato@maxxiovos.com.br",
     "cidade": "SP",
     "segmento": "Granja de ovos (frituras e gorduras)"
-      },
-      {
-        "nome": "Rod & Raf Supermercados",
-        "empresa": "Rod & Raf Supermercados de Sorocaba LTDA",
-        "email": "introducao@rodraf.com.br",
-        "cidade": "Sorocaba/SP",
-        "segmento": "Supermercados (rede)"
-      },
-      {
-              "nome": "Juvis",
-              "empresa": "Juvis Alimentos LTDA",
-              "email": "comercial@juvis.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "Distribuidora de alimentos"
-            },
-            {
-              "nome": "Essência Portuguesa",
-              "empresa": "Essência Portuguesa Ind Com de Óleos Vegetais Ltda",
-              "email": "comercial@essenciaportuguesa.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "Industria de oleos vegetais e azeites (oleos compostos) - NICHO PRIORITARIO"
-            },
-            {
-              "nome": "Du Porto",
-              "empresa": "Du Porto Industria Alimenticia Ltda",
-              "email": "sac@duporto.com.br",
-              "cidade": "Sorocaba/SP",
-              "segmento": "Industria de coberturas para sorveteria e confeitaria (usa gorduras vegetais) - NICHO PRIORITARIO"
-            },
-            {
-              "nome": "Yesfoods",
-              "empresa": "Yesfoods Industria de Alimentos Ltda",
-              "email": "sac@yesfoods.com.br",
-              "cidade": "Sao Paulo/SP",
-              "segmento": "Industria de alimentos (saudaveis, food service)"
-            }
-          ]
+  },
+  {
+    "nome": "Rod & Raf Supermercados",
+    "empresa": "Rod & Raf Supermercados de Sorocaba LTDA",
+    "email": "introducao@rodraf.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Supermercados (rede)"
+  },
+  {
+    "nome": "Juvis",
+    "empresa": "Juvis Alimentos LTDA",
+    "email": "comercial@juvis.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Distribuidora de alimentos"
+  },
+  {
+    "nome": "Essência Portuguesa",
+    "empresa": "Essência Portuguesa Ind Com de Óleos Vegetais Ltda",
+    "email": "comercial@essenciaportuguesa.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de oleos vegetais e azeites (oleos compostos) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Du Porto",
+    "empresa": "Du Porto Industria Alimenticia Ltda",
+    "email": "sac@duporto.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Industria de coberturas para sorveteria e confeitaria (usa gorduras vegetais) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "Yesfoods",
+    "empresa": "Yesfoods Industria de Alimentos Ltda",
+    "email": "sac@yesfoods.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de alimentos (saudaveis, food service)"
+  },
+  {
+    "nome": "Agropalma",
+    "empresa": "Agropalma S.A. (Companhia Refinadora da Amazonia / Grupo Agropalma)",
+    "email": "comercial@agropalma.com.br",
+    "cidade": "Sao Paulo/SP (escritorio; plantas no PA)",
+    "segmento": "Industria de oleos e gorduras vegetais (oleo de palma, gorduras especiais) - NICHO PRIORITARIO (gorduras/laticinios); email oficial do site; MX Outlook valido 03/11"
+  },
+  {
+    "nome": "Globalfood",
+    "empresa": "Globalfood Importacao e Comercio de Alimentos Ltda",
+    "email": "globalfood@globalfood.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria/importacao de laticinios e queijos especiais (40 anos no mercado queijeiro) - NICHO PRIORITARIO (laticinios); email oficial do site; MX Outlook valido 03/11"
+  },
+  {
+    "nome": "Primer Labs",
+    "empresa": "Primer Labs Industria de Encapsulados Ltda (Sorocaba/SP)",
+    "email": "contato@primerlabs.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Terceirizacao de encapsulados e nutraceuticos (capsulas gelatinosas; oleo vegetal em maquinas) - NICHO PRIORITARIO (encapsulados/farmaceuticas); email oficial do site; MX valido 03/11"
+  },
+  {
+    "nome": "Naturinni",
+    "empresa": "Naturinni Alimentos Ltda (maioneses veganas)",
+    "email": "contato@naturinni.com.br",
+    "cidade": "Florianopolis/SC (DDD 48)",
+    "segmento": "Industria de maionese vegana e molhos (vencidos >40% gordura) - NICHO PRIORITARIO (maionese/gorduras); email oficial do site; MX Zoho valido 03/11"
+  },
+  {
+    "nome": "Hemmer",
+    "empresa": "Hemmer Alimentos Ltda",
+    "email": "atendimento@hemmer.com.br",
+    "cidade": "Blumenau/SC",
+    "segmento": "Industria alimenticia (conservas, condimentos; linha de maionese e molhos) - NICHO PRIORITARIO (gorduras/alimentos); email oficial; MX valido 03/11"
+  },
+  {
+    "nome": "Imcopa",
+    "empresa": "Imcopa Importacao, Exportacao e Industria de Oleos S.A.",
+    "email": "sac@imcopa.com.br",
+    "cidade": "Araucaria/PR",
+    "segmento": "Industria de oleo de soja e ingredientes (oleos vegetais, fritura industrial) - NICHO PRIORITARIO (oleos/gorduras); email oficial do site; MX Outlook valido 03/11"
+  },
+  {
+    "nome": "Jaguacy Brasil",
+    "empresa": "Jaguacy Brasil Avocado Oil (oleo de abacate)",
+    "email": "comercial@jaguacy.com.br",
+    "cidade": "Interior de SP (DDD 14)",
+    "segmento": "Industria de oleo de abacate (oleos vegetais; limpeza de maquinas) - NICHO PRIORITARIO (oleos/gorduras); email oficial do site; MX valido 03/11"
+  },
+  {
+    "nome": "Select Amendoim",
+    "empresa": "Select Amendoim Industria e Comercio Ltda",
+    "email": "contato@selectamendoim.com.br",
+    "cidade": "Tupassi/PR",
+    "segmento": "Industria de amendoim (torra/fritura - oleo de fritura em volume) - NICHO 3 (fritura); email oficial do site; MX valido 03/11"
+  },
+  {
+    "nome": "Deliart Brasil",
+    "empresa": "Deliart - Delicias Artesanais do Brasil (queijos, manteigas e laticinios especiais)",
+    "email": "contato@deliartbrasil.com.br",
+    "cidade": "Rio de Janeiro/RJ (vendas nacionais; DDD 21)",
+    "segmento": "Comercio/industria de laticinios especiais (queijos, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios/gorduras); email oficial do site; MX Hostinger valido 03/11"
+  }
+]

@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-02 13:38 (Atendente IA - cron tick #160 - segunda-feira)",
+ "atualizado_em": "2026-11-03 18:37 (Atendente IA - cron tick - terça-feira)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1469,5 +1469,31 @@
    "miniscan_inbox: 0 não lidas"
   ],
   "observacao": "Sem alterações desde tick #159 (12:34). Fila zerada. Nenhum novo lead respondeu com interesse. Selmi registrou ticket Zendesk 91322 (auto-ack via plataforma) na caixa hoje — resposta automática, não humana. Pipeline bloqueado em ação humana (Savegnago, Pague Menos, Nagumo, Covabra todos aguardando follow-up humano via WhatsApp/telefone)."
+ },
+ "ciclo_2026_11_03_atendente_cron_161": {
+  "timestamp": "2026-11-03 18:37 (Atendente IA - cron tick - terça-feira)",
+  "acoes": [
+   "✅ sync_formspree.py — 120 bounces cache, 0 notificações novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
+   "✅ prospecao_followup.py — 41 follow-ups processados (FP1/FP2/FP3)",
+   "✅ send_sequence — sequência processada",
+   "✅ check-replies — 1 pendência: Selmi SAC redirecionou p/ compras@selmi.com.br",
+   "✅ proposta_contrato.py --empresa 'Pastificio Selmi S/A' --volume 800 — proposta HTML gerada (R$1.120/mês, R$13.440/ano)",
+   "✅ enviar_proposta_selmi.py — proposta enviada + leads atualizados (compras@selmi.com.br reativado, sac@ encerrado)",
+   "✅ replies_pending.json zerado"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 438,
+   "ativos_watchdog": 308,
+   "bounce_cache_json": 120,
+   "watchdog": "exit 0 — saudável",
+   "fila_extra": "0 pendentes MX-válidos (precisa reposição)",
+   "dias_sem_resposta_humana_nova": "34 (última: Tauste 30/09; Selmi 03/11 = SAC redirect para compras, não é resposta de aceitação)",
+   "respostas_reais": 1,
+   "respostas_humanas": "Selmi (Pastificio Selmi S/A) — SAC redirecionou para compras@selmi.com.br. Clássico padrão de semi-fechamento (como Savegnago, Pague Menos, Rede Confiança). Proposta de 800 L/mês enviada para o canal comercial.",
+   "respostas_auto": 0,
+   "propostas_contrato_geradas": "1 (Selmi — Pastificio Selmi S/A, 800 L/mês)",
+   "relatorios_esg_gerados": 0
+  }
  }
 }

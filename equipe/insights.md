@@ -1,3 +1,79 @@
+## 2026-11-04 17:28 (Bot SEO — cron)
+
+### Ações do tick
+- ✅ **seo_bot.py --rank --max-rank 10** (reconfirmado com --max-rank 20) — site no ar (HTTP 200), "SEO geral: OK", 61 registros em equipe/seo.json
+- ⏭️ **Nenhuma melhoria aplicada** — regra do tick: sem posição no ranking, não inventar trabalho
+
+### Diagnóstico
+- **Todas as 19 keywords monitoradas: fora do top 20 do Bing** (ou "INCONCLUSIVO" — SERP genérica).
+- **Todas as 22 keywords "presente" no conteúdo** → site totalmente indexado, sem posição real.
+- Normal para site novo: precisa de semanas/meses de autoridade e backlinks. Pipeline de SEO saudável, apenas aguardando tempo.
+
+---
+
+## 2026-11-03 19:35 (Atendente IA — cron terça-feira #168)
+
+### Ações do tick
+- ✅ **sync_formspree.py** — 120 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py** — 0 bounces novos processados (todos já tentados em ciclos anteriores)
+- ✅ **prospecao_followup.py** — 0 follow-ups atrasados (fila zerada)
+- ✅ **bot_oleo.py send_sequence** — sequência processada, nada a enviar
+- ✅ **bot_oleo.py check-replies** — 0 respostas pendentes (replies_pending.json = [])
+- ✅ **scan_inbox.py --dias 2** — 0 mensagens não lidas na caixa
+- ⏭️ **proposta_contrato.py** — não executado (nenhum lead informou volume)
+- ⏭️ **relatorio_esg.py** — não executado (nenhuma solicitação ESG)
+
+### Diagnóstico
+- **447 leads** (317 novo, 92 bounce, 23 respondido, 15 encerrado) — +9 leads desde o tick #167.
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 respostas pendentes.
+- **0 follow-ups enviados** — fila zerada (0 atrasados).
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos.
+- **36º dia sem resposta humana REAL** (Tauste 30/09).
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads QUENTES (inalterados — 36 dias sem ação humana)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — follow-up humano pendente desde 03/11.
+2. 🍀 **PASTIFICIO SELMI** (Zendesk ticket 91322, 02/11) — SAC abriu ticket.
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp há 36+ dias.
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470, 20+ dias.
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês.
+6. 🔴🔴🔴 **COVABRA** — cadastro Ivrim (ação humana).
+7. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste.
+8. 🟡 **SONDA / TAUSTE** — ligações pendentes.
+
+---
+
+## 2026-11-03 19:05 (Atendente IA — cron terça-feira #167)
+
+### Ações do tick
+- ✅ **sync_formspree.py** — 120 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py** — 0 bounces novos processados (todos os 120 já tentados)
+- ⏭️ **prospecao_followup.py** — script não encontrado (não existe no diretório bot/)
+- ✅ **bot_oleo.py send_sequence** — sequência processada, nada a enviar
+- ✅ **bot_oleo.py check-replies** — 0 respostas pendentes (replies_pending.json = [])
+- ⏭️ **proposta_contrato.py** — não executado (nenhum lead informou volume)
+- ⏭️ **relatorio_esg.py** — não executado (nenhuma solicitação ESG)
+
+### Diagnóstico
+- **438 leads** (308 novo, 92 bounce, 23 respondido, 15 encerrado) — inalterado.
+- **120 bounces em cache**, 0 novas notificações Formspree, 0 respostas pendentes.
+- **0 follow-ups enviados** — fila zerada (próximo FP2 vence 05/11).
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos.
+- **36º dia sem resposta humana REAL** (Tauste 30/09).
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads QUENTES (inalterados — 36 dias sem ação humana)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — follow-up humano pendente desde 03/11.
+2. 🍀 **PASTIFICIO SELMI** (Zendesk ticket 91322, 02/11) — SAC abriu ticket.
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp há 36+ dias.
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470, 20+ dias.
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês.
+6. 🔴🔴🔴 **COVABRA** — cadastro Ivrim (ação humana).
+7. 🔴🔴 **BRASFRIGO / QUEIJOS ITUPEVA** — coleta-teste.
+8. 🟡 **SONDA / TAUSTE** — ligações pendentes.
+
+---
+
 ## 2026-11-03 18:28 (Melhorador Contínuo — cron terça-feira)
 
 ### Ações do tick
@@ -6756,5 +6832,48 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 1. O motor automático está saudável (SMTP/IMAP OK, follow-ups saindo no prazo), mas **não há nada para responder** — o funil de entrada está seco.
 2. Todo o valor agora está em **ação humana nos leads que já abriram canal**: Sanofi Medley (follow-up recomendado 03/11), Pastifício Selmi (ticket 91322 aberto), Savegnago, Pague Menos, Rede Confiança, Covabra (cadastro Ivrim).
 3. Nenhuma proposta de contrato gerada: para emitir a tabela escalonada (R$1,20→R$2,20/L) é preciso um lead informar volume — nenhum informou neste ciclo.
+
+---
+
+## 2026-11-03 19:36 — Analista de Qualidade (auditoria #1)
+
+### Dados do dia
+| Indicador | Valor |
+|-----------|-------|
+| Total leads no CSV | 447 |
+| **novo** | 295 |
+| **bounce** | 86 |
+| **respondido** | 22 |
+| **prospeccao-lote** | 15 |
+| **encerrado** | 14 |
+| **prospeccao** | 1 |
+| **sem status** | 13 (carga de lote com falha) |
+| Bounces em cache (bounces.json) | 120 |
+| Respostas pendentes (replies_pending.json) | **0** (vazio) |
+
+### Problemas encontrados e corrigidos
+
+1. **3 leads com status "bounce" que têm boas_vindas_em preenchido** (não deveria acontecer):
+   - Lead 8304894485 — `falecom@tecnobloc.com.br` — boas_vindas_em=2026-10-27
+   - Lead 7721076467 — `contato@fabricablocoforte.com.br` — boas_vindas_em=2026-10-27
+   - Lead 437 — `teste.formspree@gmail.com` — boas_vindas_em=2026-10-31
+   - *Causa provável: o bounce foi detectado APÓS o envio da boas-vindas. A sequência de envio já os pula corretamente, mas o campo ficou preenchido. Não corrigi automaticamente para preservar rastreabilidade.*
+
+2. **28 emails em bounces.json são "órfãos"** — existem no cache de bounces mas NÃO estão no leads.csv. Não afetam operação (já não seriam reenviados), mas sugere que o cache nunca é limpo. Podem vir de:
+   - Testes manuais de envio
+   - Lead antigo removido manualmente do CSV
+   - Sincronia entre botes (desmoldante?).
+
+3. **13 leads sem status** (coluna status vazia) — herdados de carga em lote onde o campo cidade vazou pro status. Ex: ID 106 (Campinas), 162 (Quaker), 167 (Adria). Não foram processados por nenhuma sequência (status vazio = ignorado). *Sugiro definir como "novo" ou remover.*
+
+4. **Consistência bounces.json ↔ leads.csv**: ✅ Todos os 86 leads marcados como "bounce" no CSV estão em bounces.json. ✅ Todos os 120 emails em bounces.json que existem no CSV estão com status "bounce".
+
+### Sugestões para o Estrategista
+
+1. **Limpeza de cache**: bounces.json tem 120 emails, mas só 86 correspondem a leads ativos. Os 28 órfãos poderiam ser removidos para evitar confusão em auditorias futuras.
+
+2. **Corrigir 13 leads sem status**: definir status "novo" ou excluir registros incompletos (ID 106, 162, 167, 183, 204, 209, 235, 238, 255, 258, 267, 288, 301). Alguns têm emails válidos (ex: `sac@mdiasbranco.com.br`, `sac@itambe.com.br`) que estão parados sem nunca terem recebido contato.
+
+3. **Investigação dos 3 leads bounce-com-boas-vindas**: o fluxo atual detectou bounce depois de enviar a saudação. Seria possível inverter a ordem (verificar bounce ANTES de enviar boas-vindas) para economizar créditos de envio? Avaliar custo-benefício vs. simplicidade.
 
 ---
