@@ -1508,3 +1508,46 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 - **Pipeline de fechamento 100% parado** em ação humana — sem scripts que façam ligação ou WhatsApp.
 - **Bug conhecido**: proposta_contrato.py calcula faixa de preço incorretamente (800 L/mês mostra R$1,40/L em vez de R$1,60/L). Ajuste na função `preco_por_litro` é necessário — os parâmetros de entrada `(200, 1.20), (500, 1.40), (1000, 1.60)...` têm a faixa deslocada em 1 posição.
 
+
+
+## 2026-11-04 (quarta-feira) — 18:37 (Atendente IA - cron tick)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 120 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces novos processados
+- ✅ prospecao_followup: **0 follow-ups devidos** — fila de FP em dia
+- ✅ send_sequence: sequência processada, nada a enviar
+- ✅ check-replies: **0 respostas pendentes**
+- ✅ _miniscan_inbox: INBOX limpa (0 não lidas)
+- ✅ Proposta/ESG: não acionados (nenhum lead informou volume novo)
+- 🔴 **35 dias sem resposta humana real nova** no fluxo de COMPRA de óleo
+- 🔴 Fila de prospecção ZERADA — 0 MX-válidos pendentes para contatar
+
+### Leads QUENTES (fluxo de compra de óleo — fechamento depende de ação humana)
+0. 🔥 **Pastificio Selmi S/A** (compras@selmi.com.br) — SAC redirecionou 03/11. Proposta 800 L/mês enviada. **Aguardar retorno.**
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 35+ dias sem ação humana. WhatsApp (11) 96785-9631.
+2. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 21 dias sem retorno.
+3. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês.
+4. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br).
+5. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste.
+6. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+8. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (35 dias).
+9. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+10. 🟡 **Sanofi Medley** — encaminhado a Compras 29/10, protocolo 03065348.
+
+### Observações
+- **35 dias sem resposta humana nova** no fluxo de compra. Selmi (03/11) foi o 4º padrão SAC→comercial (Savegnago, Pague Menos, Rede Confiança, Selmi). Todos aguardam ação humana.
+- **Pipeline 100% parado em ação humana** — sem scripts que façam ligação ou WhatsApp. O sistema automatizado já exauriu sua capacidade de frio/calor.
+- **Fila de prospecção zerada** — 0 MX-válidos pendentes. A próxima fronteira é comprar listas CNPJ (Leadjet) para reabastecer.
+- **Único lead novo** que poderia avançar: nenhum neste ciclo. Nenhum lead respondeu hoje.
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados |
+| prospecao_followup.py | 0 follow-ups devidos |
+| send_sequence | nada a enviar |
+| check-replies | 0 pendentes |
+| _miniscan_inbox.py | 0 não lidas |
+| **Prospecção** | **Fila zerada — precisa reposição via listas CNPJ** |
+|| **37º dia sem resposta humana** | **Tauste 30/09 — último lead com resposta real** |

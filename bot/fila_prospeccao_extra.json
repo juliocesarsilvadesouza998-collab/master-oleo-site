@@ -2745,10 +2745,31 @@
     "segmento": "Industria de amendoim (torra/fritura - oleo de fritura em volume) - NICHO 3 (fritura); email oficial do site; MX valido 03/11"
   },
   {
-    "nome": "Deliart Brasil",
-    "empresa": "Deliart - Delicias Artesanais do Brasil (queijos, manteigas e laticinios especiais)",
-    "email": "contato@deliartbrasil.com.br",
-    "cidade": "Rio de Janeiro/RJ (vendas nacionais; DDD 21)",
-    "segmento": "Comercio/industria de laticinios especiais (queijos, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios/gorduras); email oficial do site; MX Hostinger valido 03/11"
-  }
-]
+      "nome": "Deliart Brasil",
+      "empresa": "Deliart - Delicias Artesanais do Brasil (queijos, manteigas e laticinios especiais)",
+      "email": "contato@deliartbrasil.com.br",
+      "cidade": "Rio de Janeiro/RJ (vendas nacionais; DDD 21)",
+      "segmento": "Comercio/industria de laticinios especiais (queijos, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios/gorduras); email oficial do site; MX Hostinger valido 03/11"
+    },
+    {
+      "nome": "Polenghi",
+      "empresa": "Polenghi Indústrias Alimentícias Ltda",
+      "email": "sac@polenghi.com.br",
+      "cidade": "São Paulo/SP",
+      "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
+    },
+    {
+      "nome": "Tourinho Alimentos",
+      "empresa": "Tourinho Alimentos Ltda (manteiga em lata desde 1991)",
+      "email": "compras@tourinhoalimentos.com.br",
+      "cidade": "Uberlandia/MG",
+      "segmento": "industria de manteiga (manteiga comum, primeira qualidade, food service) - NICHO PRIORITARIO (vencidos >40% gordura); MX Google valido 05/11"
+    },
+    {
+      "nome": "Scala Laticinios",
+      "empresa": "Scala Laticinios S.A. (queijos, manteiga, requeijao)",
+      "email": "sac@scala.com.br",
+      "cidade": "Sacramento/MG",
+      "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
+    }
+  ]

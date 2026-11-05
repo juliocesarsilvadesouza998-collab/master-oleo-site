@@ -1,3 +1,92 @@
+## 2026-11-05 18:34 (Melhorador Contínuo — cron #172 — quinta-feira)
+
+### Diagnóstico
+- **447 leads** (316 novo, 92 bounce, 24 respondido, 15 encerrado).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 respostas pendentes.
+- **Follow-ups: 41 atrasados** encontrados pelo watchdog — prospecao_followup.py enviando FP1/FP2/FP3 em bg.
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos (480 empresas, 419 contatados, 94 bounce).
+- **37º dia sem resposta humana REAL** (Tauste 30/09).
+- SMTP/IMAP OK.
+
+### Melhorias implementadas
+1. **41 follow-ups atrasados processados** — prospecao_followup.py rodando em 2º plano.
+2. **Site (index.html) stats atualizado** — "36+ dias consecutivos de operação".
+3. **ecossistema.json** atualizado com data/hora de hoje.
+
+### Gargalos
+1. 🔴 **37 DIAS SEM RESPOSTA HUMANA** — Savegnago, Pague Menos, Covabra, Brasfrigo aguardam ação humana.
+2. 🔴 **FILA DE PROSPECÇÃO ZERADA** — 0 pendentes MX-válidos. Cold email parado.
+3. 🔴 **BOUNCE 23%** — acima da meta de 15%.
+4. 🟡 **Nenhum contrato fechado** — leads quentes esfriam sem ação humana.
+
+## 2026-11-04 19:30 (Analista de Qualidade — cron quarta-feira #170)
+
+### Números do dia
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **447** |
+| `novo` | 316 |
+| `respondido` | 24 |
+| `bounce` | 92 |
+| `encerrado` | 15 |
+| Emails em bounce cache (bounces.json) | **120** |
+| Bounces no cache sem lead correspondente | 28 (órfãos históricos — normal) |
+| Respostas pendentes (replies_pending.json) | **0** |
+| Notificações Formspree processadas | 0 |
+
+### Diagnóstico da auditoria
+- ✅ **sync_formspree.py**: 120 bounces em cache, **0 notificações Formspree novas**. Cache estável.
+- ✅ **bounces.json × leads.csv — consistência**: todos os 92 leads `bounce` têm entrada no cache. 28 emails órfãos no cache sem lead — comportamento normal (cache nunca é limpo para evitar reenvio).
+- ⚠️ **3 leads `bounce` com `boas_vindas_em` preenchido** — mesma anomalia de ciclos anteriores (Tecnobloc, Fábrica Bloco Forte, teste.formspree@gmail.com). Nenhum caso novo. Anomalia recorrente: fluxo desmoldante insere e envia antes do sync detectar o bounce.
+- ✅ **replies_pending.json**: `[]` — 0 respostas pendentes.
+- ✅ **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos.
+
+### Problemas encontrados e correções
+1. **Nenhum problema de integridade novo** — sync e cache consistentes, zero correção de dados necessária.
+2. **Anomalia recorrente (3 leads bounce com boas-vindas enviadas)**: Tecnobloc, Fábrica Bloco Forte e teste.formspree continuam como casos conhecidos — o script `send_sequence` já pula bounces, então não há reenvio; é apenas um registro de timing race condition no fluxo desmoldante.
+3. **Fila de prospecção 100% drenada**: 0 pendentes MX-válidos. Pipeline de cold email parado até reposição.
+
+### Sugestões para o Estrategista
+1. 🔴 **Ação humana urgente nos leads quentes**: Savegnago (WhatsApp — 37º dia!), Pague Menos (ticket 407470), Covabra (cadastro Ivrim), Rede Confiança (proposta), Brasfrigo e Queijos Itupeva (coleta-teste). A fila de cold email está zerada — a única alavanca de receita agora é ação humana.
+2. 🔴 **37º dia sem resposta humana REAL** (Tauste 30/09). Se o Estrategista não agir esta semana, os leads quentes esfriam e o funil para completamente.
+3. 🟡 **sync_formspree.py está lento** — levou >60s para completar (timeout na primeira execução). Pode ser IMAP congestionado com mensagens antigas na caixa. Considerar limpeza periódica da caixa postal ou aumentar timeout.
+
+## 2026-11-04 18:01 (Atendente IA — cron quarta-feira #169)
+
+### Ações do tick
+- ✅ **sync_formspree.py** — 120 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py** — 0 bounces novos processados (todos os 120 já tentados anteriormente)
+- ✅ **prospecao_followup.py** — 0 follow-ups atrasados (fila zerada)
+- ✅ **bot_oleo.py send_sequence** — sequência processada, nada a enviar
+- ✅ **bot_oleo.py check-replies** — 0 respostas pendentes (replies_pending.json = [])
+- ⏭️ **proposta_contrato.py** — não executado (nenhum lead informou volume novo)
+- ⏭️ **relatorio_esg.py** — não executado (nenhuma solicitação ESG/certificado)
+
+### Diagnóstico
+- **447 leads** (294 novo, 86 bounce, 23 respondido, 14 encerrado, 15 prospeccao-lote).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 respostas pendentes.
+- **0 follow-ups enviados** — fila zerada (0 atrasados).
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos.
+- **36º dia sem resposta humana REAL** (Tauste 30/09).
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas sem novidades — 36º dia sem resposta humana REAL.
+
+### Leads QUENTES (inalterados — 36 dias sem ação humana)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — respondido 30/10, follow-up humano pendente desde 03/11.
+2. 🍀 **PASTIFICIO SELMI** (Zendesk ticket 91322, 02/11) — SAC abriu ticket, proposta enviada 03/11.
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631, 36+ dias sem ação humana.
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi, #2 interior SP) — ticket 407470 (Josiane Marinho), 21+ dias sem retorno.
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada, aguardando.
+6. 🔴🔴🔴 **COVABRA** — ação humana: cadastro fornecedor portal Ivrim (isac.ivrim.com.br).
+7. 🔴🔴 **BRASFRIGO** (Salto/SP) / **QUEIJOS ITUPEVA** — coleta-teste a agendar.
+8. 🟡 **SONDA** (R$6,12bi) — ligar (11) 2145-6200 / **TAUSTE** — ligar (15) 3324-4680.
+
+---
+
 ## 2026-11-04 17:28 (Bot SEO — cron)
 
 ### Ações do tick
@@ -6895,3 +6984,39 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 - Pipeline travado em ação humana (WhatsApp/telefone). Leads quentes: Savegnago, Pague Menos, Covabra, Rede Confiança.
 - Fonte gratuita de leads exaurida. Recomendação: lista Leadjet CNPJ para reabastecer.
 - Site melhorado com prova social numérica (visível em masteroleo.eco.br).
+
+---
+
+## 2026-11-04 19:34 (Atendente IA — cron quarta-feira #170)
+
+### Ações do tick
+- ✅ **sync_formspree.py** — 120 bounces cache, 0 notificações Formspree novas
+- ✅ **corrigir_emails.py** — 0 bounces novos processados (todos já tentados em ciclos anteriores)
+- ✅ **prospecao_followup.py** — 0 follow-ups atrasados (fila zerada)
+- ✅ **bot_oleo.py send_sequence** — sequência processada, nada a enviar
+- ✅ **bot_oleo.py check-replies** — 0 respostas pendentes (replies_pending.json = [])
+- ⏭️ **proposta_contrato.py** — não executado (nenhum lead informou volume novo)
+- ⏭️ **relatorio_esg.py** — não executado (nenhuma solicitação ESG/certificado)
+
+### Diagnóstico
+- **447 leads** (316 novo, 92 bounce, 24 respondido, 15 encerrado).
+- **120 bounces em cache**, 0 notificações Formspree novas, 0 respostas pendentes.
+- **0 follow-ups enviados** — fila zerada (0 atrasados).
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos.
+- **36º dia sem resposta humana REAL** (Tauste 30/09).
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Problemas resolvidos
+- Nenhum bounce novo — zero correções de email na fila/leads.
+- Nenhuma resposta pendente — zero atendimentos em atraso.
+- Pipeline 100% operacional, mas sem novidades — 36º dia sem resposta humana REAL.
+
+### Leads QUENTES (inalterados — 36 dias sem ação humana)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — respondido 30/10, follow-up humano pendente desde 03/11.
+2. 🍀 **PASTIFICIO SELMI** (Zendesk ticket 91322, 02/11) — SAC abriu ticket, proposta enviada 03/11.
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631, 36+ dias sem ação humana.
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi, #2 interior SP) — ticket 407470 (Josiane Marinho), 21+ dias sem retorno.
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada, aguardando.
+6. 🔴🔴🔴 **COVABRA** — ação humana: cadastro fornecedor portal Ivrim (isac.ivrim.com.br).
+7. 🔴🔴 **BRASFRIGO** (Salto/SP) / **QUEIJOS ITUPEVA** — coleta-teste a agendar.
+8. 🟡 **SONDA** (R$6,12bi) — ligar (11) 2145-6200 / **TAUSTE** — ligar (15) 3324-4680.
