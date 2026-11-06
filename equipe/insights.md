@@ -1,3 +1,60 @@
+## 2026-11-06 ~18:50 (Bot de SEO — tick diário — sexta-feira)
+
+### Diagnóstico
+- ✅ Site HTTP 200; `seo_bot.py --rank`: NENHUMA keyword no top 10/7 (todas fora do topo ou INCONCLUSIVO no Bing) — sem mudança vs. tick anterior
+- 🔴 **site:masteroleo.eco.br no Bing devolve FALLBACK (resultados de Bora Bora, zero do domínio)** → domínio AINDA NÃO indexado no Bing; não é "sandbox wait", foi feito re-ping ativo
+- Cobertura de conteúdo 23/23 keywords presentes; sitemap 29 URLs; Schema LocalBusiness + FAQPage OK no index.html
+
+### Ações executadas
+- ✅ **IndexNow: re-ping de TODAS as 29 URLs do sitemap** → HTTP 200 aceito (re-ping a cada poucos dias até `site:` mostrar resultados reais)
+- ✅ blog/index.html: +2 cards faltantes (quem-compra-manteiga-vencida, vender-oleo-cozinha-usado) → hub com 12/12 artigos
+- ✅ Commit 7a8a4b4: removida seção #blog DUPLICADA na home — minhas edições foram varridas pelo `git add -A` do tick #176 (18:39) antes do commit próprio; revertido e verificado no live (1 seção #blog)
+- ⏭️ Nenhum artigo novo criado: 100% das keywords já têm página dedicada
+
+### Lições
+- A home JÁ TINHA #blog com 12 cards em links SEM extensão (`/blog/x`) — greps por `.html` dão falso negativo (idem "Continue a leitura" nos artigos)
+- `git add -A` de cron irmão varre trabalho não-commitado de outro bot — commitar edições de deploy-vercel IMEDIATAMENTE
+
+### Próximo tick
+- Re-checar `site:masteroleo.eco.br` no Bing em 3-7 dias (se ainda vazio, verificar Bing Webmaster Tools)
+- Auditar/expandir cross-links "Continue a leitura" nos artigos que ainda não têm
+
+## 2026-11-06 18:39 (Atendente IA — cron tick #176 — sexta-feira)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados)
+- ✅ prospecao_followup.py — 0 follow-ups atrasados (fila zerada)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **452 leads** (297 novo, 87 bounce, 23 respondido, 15 prospeccao-lote, 14 encerrado)
+- **122 bounces cache**, 0 bounces novos
+- **0 respostas pendentes** — caixa IMAP limpa
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos
+- **38º dia sem resposta humana REAL** (Tauste 30/09)
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads quentes (inalterados — 38 dias sem ação humana)
+1. 🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 38+ dias sem ação WhatsApp
+4. 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470, 23+ dias
+5. 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 COVABRA — cadastro Ivrim pendente
+7. 🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar
+8. 🟡 SONDA / TAUSTE — ligações pendentes
+
+### Gargalos
+1. 🔴 **Fechamento humano**: 38 dias sem resposta humana. Leads quentes esfriam.
+2. 🔴 **Fila de prospecção zerada**: cold email parado. Reposição depende de listas CNPJ pagas (Leadjet) ou ciclo do Prospector.
+3. 🟡 **Bounce ~21%**: acima da meta de 15%.
+
+---
+
 ## 2026-11-06 08:36 (Atendente IA — cron tick #175 — sexta-feira)
 
 ### Ações executadas
