@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-05 18:34 (Melhorador Contínuo - cron #172 - quinta-feira)",
+  "atualizado_em": "2026-11-05 19:31 (Atendente IA - cron #174 - quinta-feira)",
   "criado_em": "2026-08-13",
   "metas_semana_13_10_a_19_10": {
     "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1582,6 +1582,147 @@
       "O SISTEMA ATINGIU O LIMITE DO COLD EMAIL: com 480 empresas na fila e 0 pendentes, a cobertura de empresas com email público na região de 80km de Salto está essencialmente completa. A prospecção só avança com listas CNPJ pagas (CNAE 1052-0, 1041-4, 1043-1 via Leadjet) ou expandindo o raio geográfico.",
       "37 DIAS SEM RESPOSTA HUMANA: O ecossistema mantém 447+ empresas contatadas, 23 respostas acumuladas e leads quentes com 3 das maiores redes do interior SP, mas nenhum contrato fechado. Isso não é problema de prospecção — é gargalo de fechamento humano.",
       "BOUNCE RATE ESTABILIZOU EM 23%: Após centenas de correções de email, o bounce rate não cai abaixo de ~20% porque os SACs de mega-corporações (Assaí, Carrefour, Atacadão, BRF, Bimbo) têm proteção anti-bot que rejeita conexões SMTP mesmo com MX válido. Próxima melhoria: filtrar domínios com proteção anti-bot conhecida."
+    ]
+  },
+  "ciclo_2026_11_05_atendente_173": {
+    "timestamp": "2026-11-05 18:43 (Atendente IA - cron tick #173 - quinta-feira)",
+    "acoes": [
+      "sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas",
+      "corrigir_emails.py — 0 bounces processados (todos os 122 já tentados anteriormente)",
+      "prospecao_followup.py — 41 follow-ups processados (FP2/FP3) no tick anterior 18:34",
+      "bot_oleo.py send_sequence — sequência processada, nada a enviar",
+      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json = [])",
+      "proposta_contrato.py — não executado (nenhum lead informou volume novo)",
+      "relatorio_esg.py — não executado (nenhuma solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads_csv": 447,
+      "status_csv": "novo 316 | respondido 24 | bounce 92 | encerrado 15",
+      "bounce_cache_json": 122,
+      "fila_prospeccao_pendentes": 0,
+      "respostas_novas": 0,
+      "followups_enviados": 41,
+      "propostas_contrato": 0,
+      "relatorios_esg": 0,
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana_real": "37 (última: Tauste 30/09)",
+      "watchdog": "exit 1 — 2 bounces sem tentativa de correção (aguardando corrigir_emails.py)",
+      "observacao": "37º dia sem resposta humana REAL. 41 follow-ups processados no dia (FP2/FP3). Caixa limpa, sem respostas pendentes, sem bounces novos. Fila de prospecção 100% drenada (0 pendentes MX-válidos). Pipeline de cold email parado aguardando reposição do Prospector. Gargalo de fechamento continua bloqueado em ação humana (WhatsApp/telefone/cadastro Ivrim).",
+      "leads_quentes": [
+        "🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente desde 03/11.",
+        "🍀 PASTIFICIO SELMI (Zendesk ticket 91322, 02/11) — SAC abriu ticket, proposta enviada 03/11.",
+        "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631, 37+ dias sem ação humana.",
+        "🔴🔴🔴 PAGUE MENOS (R$4,33bi, #2 interior SP) — ticket 407470 (Josiane Marinho), 22+ dias sem retorno.",
+        "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada, aguardando.",
+        "🔴🔴🔴 COVABRA — ação humana: cadastro fornecedor portal Ivrim (isac.ivrim.com.br).",
+        "🔴🔴 BRASFRIGO (Salto/SP) / QUEIJOS ITUPEVA — coleta-teste a agendar.",
+        "🟡 SONDA (R$6,12bi) — ligar (11) 2145-6200 / TAUSTE — ligar (15) 3324-4680."
+      ]
+    }
+  },
+  "ciclo_2026_11_05_prospector_05": {
+    "timestamp": "2026-11-05 ~21:00 (Prospector - cron #05 - quinta-feira)",
+    "diagnostico": {
+      "fila_total_empresas": 483,
+      "fila_contatados": 422,
+      "fila_bounce": 94,
+      "fila_pendentes_validas": "0 — fila 100% drenada novamente (3 novos enviados hoje)",
+      "total_leads_csv": 450,
+      "bounce_cache_json": 122,
+      "dias_sem_resposta_humana": "37 (última: Tauste 30/09)"
+    },
+    "problema_critico": "FILA ZERADA NOVAMENTE. 4 buscas web renderam 3 emails validos de laticinios NICHO PRIORITARIO. Cobertura de emails publicos na regiao de 80km de Salto esta essencialmente completa.",
+    "acoes": [
+      "✅ Diagnostico inicial: 0 pendentes — fila 100% drenada, necessidade de reposicao",
+      "✅ 4 buscas web realizadas (limite maximo)",
+      "  ⭐ Polenghi (sac@polenghi.com.br) — laticinios gigante (queijos, manteiga) - NICHO PRIORITARIO; MX Outlook valido",
+      "  ⭐ Tourinho Alimentos (compras@tourinhoalimentos.com.br) — industria de manteiga - NICHO PRIORITARIO; MX Google valido",
+      "  ⭐ Scala Laticinios (sac@scala.com.br) — laticinios gigante (queijos, manteiga) - NICHO PRIORITARIO; MX Outlook valido",
+      "✅ enviar_lote.py --max 15: 3 emails enviados com sucesso",
+      "✅ ecossistema.json atualizado com numeros pos-envio"
+    ],
+    "insights": [
+      "FILA ESGOTADA PELA N-ESIMA VEZ: A prospeccao via buscas web publicas atingiu o limite na regiao de 80km de Salto. Para continuar crescendo a fila, sera necessario expandir o raio ou usar listas CNPJ pagas.",
+      "3 NOVOS LEADS DE LATICINIOS: Polenghi (queijos, gigante nacional), Tourinho Alimentos (manteiga, MG), Scala Laticinios (queijos, MG) — todos NICHO PRIORITARIO de vencidos >40% gordura, com descaracterizacao."
+    ]
+  },
+  "ciclo_2026_11_06_atendente_cron_175": {
+    "timestamp": "2026-11-06 08:36 (Atendente IA - cron tick #175 - sexta-feira)",
+    "diagnostico": {
+      "sync_formspree": "122 bounces cache, 0 notificações Formspree novas (timeout na 1ª tentativa, concluído na 2ª)",
+      "corrigir_emails": "0 bounces processados (todos os 122 já tentados anteriormente)",
+      "prospecao_followup": "0 follow-ups atrasados (fila zerada)",
+      "send_sequence": "sequência processada (0 envios pendentes)",
+      "check_replies": "0 respostas (replies_pending.json vazio)",
+      "watchdog": "449 leads, bounce 87 CSV, 122 bounces cache, 0 follow-ups atrasados, SMTP/IMAP OK",
+      "fila_pendentes": "0 MX-válidos — fila 100% drenada",
+      "dias_sem_resposta_humana": "38 (última: Tauste 30/09; Sanofi Medley 30/10 follow-up automático)"
+    },
+    "acoes": [
+      "✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados",
+      "✅ bot_oleo.py send_sequence — sequência processada, 0 envios",
+      "✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
+      "⏭️ proposta_contrato.py — não executado (sem lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+    ],
+    "observacao": "38º dia sem resposta humana REAL no fluxo de compra de óleo (Tauste 30/09). Sistema saudável — watchdog exit 0, SMTP/IMAP OK, 0 follow-ups atrasados. Fila de prospecção 100% drenada (0 pendentes MX-válidos). Nenhuma resposta nova. Leads quentes inalterados — fechamento 100% bloqueado em ação humana (WhatsApp/telefone/cadastro Ivrim)."
+  },
+  "ciclo_2026_11_06_prospector_cron": {
+    "timestamp": "2026-11-06 ~20:00 (Prospector - cron - sexta-feira)",
+    "diagnostico": {
+      "fila_total_empresas": 486,
+      "fila_contatados": 424,
+      "fila_bounce": 96,
+      "fila_pendentes_validas": "0 (3 novos enviados nesta rodada, fila drenada novamente)",
+      "total_leads_csv": 450,
+      "bounce_cache_json": 122,
+      "dias_sem_resposta_humana": "38 (última: Tauste 30/09)"
+    },
+    "problema_critico": "FILA ZERADA NOVAMENTE. Cobertura de emails publicos na regiao de 80km de Salto esta essencialmente completa. 3 novos leads de alto valor adicionados.",
+    "acoes": [
+      "✅ Diagnostico inicial: 0 pendentes — fila 100% drenada, necessidade de reposicao",
+      "✅ Descoberta: 3 novas empresas com MX valido adicionadas a fila_prospeccao_extra.json via buscas web",
+      "  ⭐ Paulispan (contato@paulispan.com.br) — Itapetininga/SP - industria de panificacao congelada (margarinas e gorduras vegetais) - NICHO PRIORITARIO; MX paulispan.com.br valido",
+      "  ⭐ EMS Pharma (sac@ems.com.br) — Hortolandia/SP - maior laboratorio farmaceutico do Brasil - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido",
+      "  ⭐ Farmoquimica (sac@farmoquimica.com.br) — Campinas/SP - industria farmaceutica (medicamentos) - NICHO PRIORITARIO (encapsulados/farmaceuticas); MX correio.biz valido",
+      "✅ enviar_lote.py --max 15: 3 emails enviados com sucesso, 0 falhas",
+      "✅ ecossistema.json atualizado com numeros pos-envio"
+    ],
+    "insights": [
+      "FILA ESGOTADA MAIS UMA VEZ: Com 486 empresas totais e apenas 3 pendentes encontrados, a prospeccao via buscas web publicas na regiao de 80km de Salto atingiu o limite.",
+      "3 LEADS DE ALTO VALOR: Paulispan (panificacao congelada em Itapetininga, usa gorduras vegetais e margarinas), EMS Pharma (maior farmaceutica do Brasil, Hortolandia, limpeza de maquinas com oleo vegetal), Farmoquimica (farmaceutica Campinas, mesmo nicho).",
+      "NENHUM BOUNCE OU FALHA: Todos os 3 emails foram entregues com sucesso, sem bounces."
+    ]
+  },
+  "ciclo_2026_11_06_melhorador_continuo": {
+    "timestamp": "2026-11-06 18:34 (Melhorador Contínuo - cron diário - sexta-feira)",
+    "diagnostico": {
+      "total_leads_csv": 449,
+      "status_csv": "novo 317 | respondido 23 | bounce 93 | encerrado 15",
+      "bounce_cache_json": 122,
+      "fila_principal_pendentes": 0,
+      "fila_extra_total": 492,
+      "respostas_novas": 0,
+      "followups_enviados": 2,
+      "bounces_corrigidos": 0,
+      "watchdog": "exit 0 — 2 follow-ups enviados, 0 atrasados restantes",
+      "dias_sem_resposta_humana_real": "38 (última: Tauste 30/09)"
+    },
+    "acoes": [
+      "✅ prospecao_followup.py — 2 FP2 enviados (Essência Portuguesa, Yesfoods)",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados)",
+      "✅ bot_oleo.py send-sequence — sequência processada (0 envios pendentes)",
+      "✅ Template genérico aprimorado em bot/prospecao.py: anti-furto (bombona com trava, crachá, MTR) + selo de segurança no PS",
+      "✅ +7 NOVAS EMPRESAS adicionadas à fila_prospeccao_extra.json: Cargill, Vigor/Lactalis, Danone, Dori, Copacol, Jundia Foods, Batavo/Lactalis",
+      "⏭️ proposta_contrato.py — não executado (sem lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+    ],
+    "aprendizados": [
+      "ANTI-FURTO É DIFERENCIAL: Incorporado ao template genérico — bombona com trava, crachá, pesagem na hora, MTR. Óleo virou 'ouro líquido' e alvo de quadrilhas.",
+      "FILA EXTRA REABASTECIDA: +7 empresas de grande porte (Cargill, Lactalis/Vigor, Danone, Dori, Copacol, Jundia Foods, Batavo) com MX comprovado via nslookup.",
+      "EXPANSÃO NECESSÁRIA: Cargill, Danone, Dori e Copacol são nacionais — cobertura local de 80km essencialmente completa. Próxima fronteira: listas CNPJ pagas."
     ]
   }
 }

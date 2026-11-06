@@ -2745,31 +2745,101 @@
     "segmento": "Industria de amendoim (torra/fritura - oleo de fritura em volume) - NICHO 3 (fritura); email oficial do site; MX valido 03/11"
   },
   {
-      "nome": "Deliart Brasil",
-      "empresa": "Deliart - Delicias Artesanais do Brasil (queijos, manteigas e laticinios especiais)",
-      "email": "contato@deliartbrasil.com.br",
-      "cidade": "Rio de Janeiro/RJ (vendas nacionais; DDD 21)",
-      "segmento": "Comercio/industria de laticinios especiais (queijos, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios/gorduras); email oficial do site; MX Hostinger valido 03/11"
-    },
-    {
-      "nome": "Polenghi",
-      "empresa": "Polenghi Indústrias Alimentícias Ltda",
-      "email": "sac@polenghi.com.br",
-      "cidade": "São Paulo/SP",
-      "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
-    },
-    {
-      "nome": "Tourinho Alimentos",
-      "empresa": "Tourinho Alimentos Ltda (manteiga em lata desde 1991)",
-      "email": "compras@tourinhoalimentos.com.br",
-      "cidade": "Uberlandia/MG",
-      "segmento": "industria de manteiga (manteiga comum, primeira qualidade, food service) - NICHO PRIORITARIO (vencidos >40% gordura); MX Google valido 05/11"
-    },
-    {
-      "nome": "Scala Laticinios",
-      "empresa": "Scala Laticinios S.A. (queijos, manteiga, requeijao)",
-      "email": "sac@scala.com.br",
-      "cidade": "Sacramento/MG",
-      "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
-    }
-  ]
+    "nome": "Deliart Brasil",
+    "empresa": "Deliart - Delicias Artesanais do Brasil (queijos, manteigas e laticinios especiais)",
+    "email": "contato@deliartbrasil.com.br",
+    "cidade": "Rio de Janeiro/RJ (vendas nacionais; DDD 21)",
+    "segmento": "Comercio/industria de laticinios especiais (queijos, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios/gorduras); email oficial do site; MX Hostinger valido 03/11"
+  },
+  {
+    "nome": "Polenghi",
+    "empresa": "Polenghi Indústrias Alimentícias Ltda",
+    "email": "sac@polenghi.com.br",
+    "cidade": "São Paulo/SP",
+    "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
+  },
+  {
+    "nome": "Tourinho Alimentos",
+    "empresa": "Tourinho Alimentos Ltda (manteiga em lata desde 1991)",
+    "email": "compras@tourinhoalimentos.com.br",
+    "cidade": "Uberlandia/MG",
+    "segmento": "industria de manteiga (manteiga comum, primeira qualidade, food service) - NICHO PRIORITARIO (vencidos >40% gordura); MX Google valido 05/11"
+  },
+  {
+    "nome": "Scala Laticinios",
+    "empresa": "Scala Laticinios S.A. (queijos, manteiga, requeijao)",
+    "email": "sac@scala.com.br",
+    "cidade": "Sacramento/MG",
+    "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
+  },
+  {
+    "nome": "Paulispan",
+    "empresa": "Paulispan Industria de Panificacao Ltda",
+    "email": "contato@paulispan.com.br",
+    "cidade": "Itapetininga/SP",
+    "segmento": "industria de panificacao congelada (paes, salgados, pudins - usa margarinas e gorduras vegetais em escala industrial) - NICHO PRIORITARIO (gorduras/panificacao)"
+  },
+  {
+    "nome": "EMS Pharma",
+    "empresa": "EMS S/A (Hortolândia/SP) - maior laboratório farmacêutico do Brasil",
+    "email": "sac@ems.com.br",
+    "cidade": "Hortolândia/SP",
+    "segmento": "industria farmaceutica (maior do Brasil, fabrica de medicamentos - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
+  },
+  {
+    "nome": "Farmoquímica",
+    "empresa": "Farmoquímica S/A",
+    "email": "sac@farmoquimica.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "industria farmaceutica (medicamentos, genéricos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
+      },
+      {
+        "nome": "Cargill (Campinas)",
+        "empresa": "Cargill Agricola S.A. - Centro de Inovacao Campinas/SP",
+        "email": "sac@sac-cargill.com.br",
+        "cidade": "Campinas/SP",
+        "segmento": "gigante mundial de alimentos e ingredientes (oleos vegetais, gorduras, fritura industrial) - NICHO PRIORITARIO (oleo de fritura industrial, vencidos); MX Locaweb valido 06/11"
+      },
+      {
+        "nome": "Vigor (Lactalis)",
+        "empresa": "Vigor Alimentos S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
+        "email": "sac@vigor.com.br",
+        "cidade": "Sao Paulo/SP (atuacao nacional)",
+        "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 06/11"
+      },
+      {
+        "nome": "Danone Brasil",
+        "empresa": "Danone Ltda. (iogurtes, lacteos, nutricao)",
+        "email": "faleconosco@danone.com",
+        "cidade": "Sao Paulo/SP (fabrica em Pocos de Caldas/MG e outras)",
+        "segmento": "laticinios e nutricao (iogurtes, sobremesas lacteas, manteiga, nata, creme de leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
+      },
+      {
+        "nome": "Dori Alimentos",
+        "empresa": "Dori Alimentos Ltda. (balas, confeitos, guloseimas)",
+        "email": "sac@dori.com.br",
+        "cidade": "Marilia/SP (atuacao nacional)",
+        "segmento": "industria de balas e guloseimas (gordura vegetal, oleo de fritura industrial, vencidos) - NICHO PRIORITARIO; MX PPHosted valido 06/11"
+      },
+      {
+        "nome": "Copacol",
+        "empresa": "Copacol - Cooperativa Agroindustrial Consolata",
+        "email": "sac@copacol.com.br",
+        "cidade": "Cafelandia/PR (atuacao nacional)",
+        "segmento": "cooperativa agroindustrial (frango, suinos, peixes - fritura industrial, oleo de cozinha usado em escala, gordura animal) - NICHO PRIORITARIO; MX constel valido 06/11"
+      },
+      {
+        "nome": "Sorvetes Jundia Foods",
+        "empresa": "Jundia Foods S.A. (Sorvetes Jundia)",
+        "email": "sac@jundiafoods.com.br",
+        "cidade": "Mogi das Cruzes/SP e Barueri/SP (atuacao nacional)",
+        "segmento": "industria de sorvetes (gordura vegetal, oleo, lacteos, vencidos) - NICHO PRIORITARIO; MX spfbl valido 06/11"
+      },
+      {
+        "nome": "Batavo (Lactalis)",
+        "empresa": "Batavo S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
+        "email": "sac@batavo.com.br",
+        "cidade": "Sao Paulo/SP (fabrica em Carambey/PR, atuacao nacional)",
+        "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
+      }
+    ]

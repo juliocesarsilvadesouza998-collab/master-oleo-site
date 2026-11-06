@@ -1,3 +1,54 @@
+## 2026-11-05 (quinta-feira) — 19:05 (Atendente IA - cron tick)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 122 bounces cache, 0 notificações Formspree novas (timeout 1ª tent, OK 2ª)
+- ✅ corrigir_emails: 0 bounces processados (todos 122 já tentados; Frigorifico Verdi sem email alt)
+- ✅ prospecao_followup: 0 follow-ups atrasados (fila zerada)
+- ✅ send_sequence: sequência processada (0 envios pendentes)
+- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+- ✅ enviar_lote: 2 emails enviados (Tourinho Alimentos, Scala Laticinios) — pendentes MX-válidos
+- ✅ watchdog: exit 1 — **449 leads, 317 ativos, 122 bounces, SMTP/IMAP OK**
+- 🔴 **36 dias sem resposta humana nova no fluxo de COMPRA de óleo** (última: Tauste 30/09)
+- 🔴 **Fila de prospecção ZERADA** — 0 pendentes MX-válidos; 394 na fila_extra (9 não integradas ao leads.csv)
+- 🔴 **Pipeline de fechamento 100% bloqueado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 122 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos 122 já tentados) |
+| prospecao_followup.py | **0 FP** (fila de follow-ups zerada) |
+| send_sequence | sequência processada (0 envios) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| _miniscan_inbox | INBOX: 0 não lidas |
+| enviar_lote.py --max 5 | 2 enviados: Tourinho e Scala |
+| proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume) |
+
+### Leads QUENTES (fluxo de compra de óleo)
+0. 🍀 **Du Porto** (sac@duporto.com.br) — respondeu 04/11, não gera óleo de fritura; ofertado vencidos >40% gordura.
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 36+ dias sem ação humana. WhatsApp (11) 96785-9631.
+2. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 22 dias sem retorno.
+3. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+4. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br). 44+ dias sem ação.
+5. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+6. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+8. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (36 dias).
+9. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+10. 🟢 **União Supermercados** (14 lojas, Itu) — Apresentação enviada 28/10.
+11. 🟢 **Tourinho Alimentos** — Enviado hoje (05/11), aguardar retorno.
+12. 🟢 **Scala Laticinios** — Enviado hoje (05/11), aguardar retorno.
+
+### Observações
+- **36 dias sem resposta humana nova** no fluxo de compra. Última resposta real: Tauste (30/09).
+- **Única resposta recente**: Du Porto (04/11) informou que não gera óleo de fritura — ofertamos compra de vencidos >40% gordura com descaracterização.
+- **Sanofi Medley** (protocolo 03065348, encaminhado a Compras 30/10): follow-up humano venceu 03/11 — **ainda pendente**.
+- **Fila de prospecção zerada** após envio de 2 pendentes (Tourinho, Scala). 394 empresas em fila_extra (9 não integradas ao leads.csv).
+- **Pipeline de fechamento 100% parado** — as 8 maiores oportunidades (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste) aguardam ação humana.
+- Nenhum lead informou volume para gerar proposta de contrato ou relatório ESG.
+
+---
+
 ## 2026-11-02 (segunda-feira) — 12:34 (Atendente IA - cron tick #159)
 
 ### Diagnóstico do ciclo

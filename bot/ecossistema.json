@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-04 18:37 (Atendente IA - cron tick - quarta-feira)",
+ "atualizado_em": "2026-11-05 19:05 (Atendente IA - cron tick - quinta-feira)",
  "ciclo_2026_11_02_cron_atendente": {
   "timestamp": "2026-11-02 19:45 (Atendente IA - cron tick - segunda-feira)",
   "acoes": [
@@ -1691,5 +1691,50 @@
    "relatorios_esg_gerados": 0,
    "fila_pendentes": "0 MX-válidos (fila de prospecção zerada)"
   }
+ },
+ "ciclo_2026_11_05_cron_atendente": {
+  "timestamp": "2026-11-05 19:05 (Atendente IA - cron tick - quinta-feira)",
+  "acoes": [
+   "sync_formspree.py - 122 bounces cache, 0 notificacoes Formspree novas (1a tentativa timeout, 2a OK)",
+   "corrigir_emails.py - 0 bounces processados (todos os 122 ja tentados; Frigorifico Verdi sem email alternativo)",
+   "prospecao_followup.py - 0 follow-ups atrasados (fila de FP zerada)",
+   "bot_oleo.py send_sequence - sequencia processada, nada a enviar",
+   "bot_oleo.py check-replies - 0 respostas (replies_pending.json vazio)",
+   "_miniscan_inbox.py - INBOX: 0 nao lidas",
+   "enviar_lote.py --max 5 - 2 emails enviados (Tourinho Alimentos e Scala Laticinios) - pendentes MX-validos",
+   "proposta_contrato/relatorio_ESG - nao acionados (0 leads com volume ou solicitacao)"
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 449,
+   "ativos_watchdog": 317,
+   "bounce_cache_json": 122,
+   "fila_total_empresas": 483,
+   "fila_contatados": 421,
+   "fila_bounce": 96,
+   "fila_pendentes": 0,
+   "watchdog": "exit 1 - SMTP/IMAP OK; 1 bounce sem correcao (Frigorifico Verdi, sem email alt - ja tentado)",
+   "dias_sem_resposta_humana_fluxo_oleo": "36 (ultima: Tauste 30/09); 22 dias desde Pague Menos (14/10)",
+   "respostas_reais": 0,
+   "respostas_humanas_fluxo_oleo": "Nenhuma - replies_pending.json vazio, INBOX limpa (0 nao lidas)",
+   "leads_com_volume_informado": 0,
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "observacao": "36o dia sem respostas humanas novas no fluxo de COMPRA de oleo. Sistema saudavel - watchdog exit 1 (449 leads, 317 ativos, 122 bounces), SMTP/IMAP OK. Fila zerada apos envio de 2 pendentes (Tourinho e Scala). Fila_extra.json com 394 empresas (9 nao integradas ao leads.csv). Nenhuma resposta para processar, nenhum lead informou volume. Pipeline de fechamento bloqueado em acao humana - todos os leads quentes aguardam WhatsApp/telefone."
+  },
+  "leads_quentes": [
+   "SANOFI MEDLEY - SAC encaminhou a Compras 29/10 (protocolo 03065348); follow-up humano venceu 03/11 - PENDENTE.",
+   "SAVEGNAGO (R$7,98bi, #1 interior SP) - WhatsApp (11) 96785-9631. 36 dias sem acao humana.",
+   "PAGUE MENOS (R$4,33bi) - Ticket 407470 (Josiane Marinho). Sem retorno desde 14/10.",
+   "REDE CONFIANCA (Sorocaba) - proposta 2.500 L/mes na mesa, sem resposta.",
+   "COVABRA - ACAO HUMANA: preencher cadastro fornecedor (isac.ivrim.com.br). 44+ dias sem acao.",
+   "BRASFRIGO (Salto/SP) - Agendar coleta-teste. Local, respondeu.",
+   "QUEIJOS ITUPEVA (Rafael) - Agendar coleta-teste.",
+   "SONDA (R$6,12bi) - Ligar (11) 2145-6200.",
+   "TAUSTE - Ligar (15) 3324-4680. Respondeu 30/09 - 36 dias.",
+   "NAGUMO - Caso 00143542, proposta anexada 14/10.",
+   "UNIAO SUPERMERCADOS (14 lojas, Itu) - Apresentacao enviada 28/10; vigiar resposta.",
+   "TOURINHO ALIMENTOS - Enviado hoje (05/11), aguardar retorno.",
+   "SCALA LATICINIOS - Enviado hoje (05/11), aguardar retorno."
+  ]
  }
 }
