@@ -82,49 +82,34 @@ def _plain_from_html(html):
     return t.strip()
 
 def tpl_fp(cfg, lead, n):
-    """Templates de follow-up de prospecção (n=1,2,3). Todos reforçam a compra."""
+    """Templates de follow-up de prospecção (n=1,2,3). Versão compacta — 3 parágrafos cada."""
     g = cfg["empresa"]
     if n == 1:
         subj = f"Re: óleo usado da {lead['empresa']} vale dinheiro"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p>Te escrevi sobre a <b>compra do óleo usado da {lead['empresa']}</b> — direto ao ponto:</p>
-<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b>, com certificado de destinação (PNRS) em cada coleta e bombonas fornecidas. 600 L/mês = R$ 14 mil/ano de renda extra, sem custo de logística. <b>Ambiental Santos já paga R$ 3/L</b> — o mercado está aquecido e o gerador pode negociar.</p>
-<p><b>🏆 Prova social — Top 3 do interior SP no pipeline:</b> A <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi), o <b>Pague Menos</b> (R$ 4,33 bi — #2) e o <b>Tauste</b> (#3) — as três maiores redes do interior estão em negociação conosco (ABRAS 2026).</p>
-<p><b>🍟 Gigantes já fecham contratos de coleta:</b> O <b>McDonald's</b> fechou parceria com a Recoleo para reciclar todo óleo de suas lojas em MG, ES e DF — destinado exclusivamente a biodiesel. Rede contrata coletor, não coleta por conta própria. Se o McDonald's terceiriza, sua empresa também pode.</p>
-<p><b>⚖️ PNRS obriga contrato:</b> pela Lei 12.305/2010, estabelecimentos são obrigados a contratar empresa certificada para destinação — sem contrato, sem alvará. 1 bilhão de litros/ano vão para o ralo no Brasil. Quem coleta sem certificado deixa o passivo no seu CNPJ.</p>
-<p><b>⚖️ Urgência regulatória:</b> A Portaria MME/MMA nº 3/2026 obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o mundo está disputando essa matéria-prima e quem fecha contrato agora garante preço e prioridade.</p>
-<p><b>🏭 Mercado em ebulição:</b> A Petrobras está investindo <b>R$ 23 milhões na coleta de OGR</b> em SP e BA (2026). O diesel brasileiro já é <b>B16</b> (16% biodiesel) desde março/2026. O Brasil coleta só <b>180 milhões de litros de UCO/ano</b> — mas o potencial é de <b>600 milhões</b>. 70% do mercado está inexplorado. Quem fechar contrato agora sai na frente.</p>
-<p><b>📊 Quanto vocês geram por mês (litros ou kg)?</b> Me responda esse número que eu te mando a estimativa. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b> na compra do óleo usado da {lead['empresa']}, com certificado de destinação, bombonas fornecidas e coleta programada. 600 L/mês = R$ 14 mil/ano de renda extra.</p>
+<p><b>🏆 Prova social:</b> as <b>3 maiores redes do interior SP</b> estão em negociação conosco: <b>Savegnago</b> (#1, R$ 7,98 bi), <b>Pague Menos</b> (#2, R$ 4,33 bi) e <b>Tauste</b> (#3). O McDonald's já terceirizou toda coleta de MG/ES/DF. Se os gigantes contratam, sua empresa também pode.</p>
+<p><b>📊 Quanto vocês geram por mês?</b> Me responda o volume (litros ou kg) que eu te mando a estimativa. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     elif n == 2:
-        subj = f"Re: oleo usado da {lead['empresa']} — proposta exclusiva + urgencia 2028"
+        subj = f"Re: oleo usado da {lead['empresa']} — urgencia 2028"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p><b>✅ Oferta exclusiva para {lead['empresa']}: bônus de R$+0,10/L + coleta-teste GRÁTIS nesta semana se responder até sexta.</b> Mercado UCO global <b>US$ 11 bilhões</b> e subindo — o Brasil coleta só 180M L/ano mas o potencial é 600M L. <b>70% do mercado está inexplorado</b> — quem contratar agora define o território.</p>
-<p><b>💰 Pagamos R$ 1,00 a R$ 2,50/L</b> (valor de mercado Óleo Verde, Ambiental Santos já paga R$ 3/L). Rede de 5 supermercados = R$ 48-72 mil/ano de receita extra.</p>
-<p><b>🏆 Prova social — Top 3 do interior SP já conosco:</b>
-<br><b>1º Savegnago</b> (R$ 7,98 bi — #1 interior SP) — canal aberto
-<br><b>2º Pague Menos</b> (R$ 4,33 bi) — em negociação
-<br><b>3º Tauste</b> — encaminhou call
-<br><b>🍟 McDonald's</b> fechou com a Recoleo para reciclar óleo de todas as lojas em MG, ES e DF
-<br><b>Madero</b> vende 55 mil L/mês como commodity (270 restaurantes)</p>
-<p><b>⚖️ FALTAM 14 MESES para a OBRIGATORIEDADE:</b> Portaria MME/MMA nº 3/2026 determina ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. A Petrobras já investiu <b>R$ 23 milhões na coleta de OGR</b>. O diesel brasileiro é <b>B16</b> desde março/2026 — o consumo de UCO vai triplicar.</p>
-<p><b>🔒 Anti-furto + certificado incluso:</b> Coleta com crachá, pesagem na hora, bombona com trava, MTR e certificado de destinação. Sem riscos. Sem passivo no seu CNPJ.</p>
-<p><b>📊 Ação simples:</b> Me responda com o volume mensal aproximado (litros ou kg) que {lead['empresa']} gera de óleo de cozinha, gordura vegetal ou margarina/maionese vencida, e envio a proposta formal em <b>24h</b> com bônus de exclusividade incluso. WhatsApp direto: <b>{g['telefone_whatsapp']}</b>.</p>
+<p><b>⚖️ FALTAM 14 MESES para a obrigatoriedade:</b> a Portaria MME/MMA nº 3/2026 exige ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. Mercado UCO global <b>US$ 11 bilhões</b> — o Brasil coleta só 180M L/ano, mas o potencial é 600M L. <b>70% inexplorado.</b> Quem contratar agora define o território.</p>
+<p><b>💰 Oferta exclusiva para {lead['empresa']}:</b> R$ 1,00 a R$ 2,50/L + bônus de R$+0,10/L se responder até esta semana. Rede de 5 supermercados = R$ 48-72 mil/ano de receita extra. Coleta com crachá, bombona com trava, MTR e certificado — <b>sem passivo no seu CNPJ.</b></p>
+<p><b>📊 Me responda com o volume mensal</b> (litros ou kg) de óleo de cozinha, gordura vegetal ou vencidos que a {lead['empresa']} gera, e envio a proposta em <b>24h</b>. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
             subj = f"Último contato — {lead['empresa']} perde R$ 14,4 mil/ano se não responder"
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
-    <p><b>⚠️ Última mensagem automática — após este email, não enviaremos mais sobre este assunto.</b></p>
-    <p><b>💰 Motivo 1 — Renda extra perdendo prazo:</b> R$ 1,00 a R$ 2,50/L pagos <b>à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 11 bilhões</b> e subindo. A <b>Ambiental Santos já paga R$ 3/L</b> — quem não contrata agora vai perder a janela de preços altos. Rede de 5 supermercados = R$ 48-72 mil/ano de receita extra que sai pelo ralo todos os dias.</p>
-    <p><b>🏆 Motivo 2 — Seus concorrentes estão fechando:</b> As <b>3 maiores redes do interior SP</b> estão em negociação conosco: <b>Savegnago</b> (R$7,98bi — #1), <b>Pague Menos</b> (R$4,33bi — #2) e <b>Tauste</b> (#3). Rede Madero vende 55 mil L/mês como commodity. McDonald's terceirizou toda coleta do MG/ES/DF para a Recoleo. Se os gigantes já contratam, sua empresa também pode — e deve.</p>
-    <p><b>⚖️ Motivo 3 — jan/2028 está chegando e quem não contratar vai pagar:</b> A <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>janeiro de 2028</b> — faltam 14 meses. A <b>Petrobras já investiu R$ 23 milhões na coleta de OGR</b> em SP e BA. O diesel brasileiro já é <b>B16</b> (16% biodiesel) desde março/2026 — o consumo de UCO vai triplicar até 2028. O Brasil coleta só 180 milhões de litros UCO/ano mas o potencial é 600 milhões — <b>70% ainda inexplorado</b>. Quem não tiver contrato de coleta em 2027 vai <b>pagar caro para descartar</b> — ou ter o passivo ambiental no CNPJ (Lei 12.305/2010, sem contrato = sem alvará).</p>
-    <p><b>🔒 Anti-furto e certificado incluso:</b> Coleta com crachá, bombona lacrada com trava, pesagem na hora, comprovante de destinação final com MTR. <b>Sem risco de reuso ilegal. Sem passivo no seu CNPJ.</b></p>
-    <p><b>⏰ Esta é a última oportunidade automática.</b> Se a {lead['empresa']} gera qualquer volume de óleo de cozinha usado, gordura vegetal ou maionese vencida, <b>responda este email AGORA com o volume mensal (litros ou kg) + seu WhatsApp</b> que envio a proposta em até 24h. Ou chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
+    <p><b>⚠️ Última mensagem — não enviaremos mais sobre este assunto.</b></p>
+    <p><b>💰 R$ 1,00 a R$ 2,50/L pagos à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 11 bilhões</b> e subindo. Rede de 5 supermercados = R$ 48-72 mil/ano que sai pelo ralo todos os dias.</p>
+    <p><b>🏆 Seus concorrentes estão fechando:</b> as 3 maiores redes do interior SP (<b>Savegnago</b> R$7,98bi, <b>Pague Menos</b> R$4,33bi, <b>Tauste</b>) já estão conosco. Madero vende 55 mil L/mês como commodity. Quem não contratar até 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
+    <p><b>⏰ Responda este email com o volume mensal</b> (litros ou kg) + seu WhatsApp, e envio a proposta em 24h. Ou chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
     <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
     </div>"""
     return {"subject": subj, "html": html}

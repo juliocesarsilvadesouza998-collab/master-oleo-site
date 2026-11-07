@@ -2792,54 +2792,61 @@
     "email": "sac@farmoquimica.com.br",
     "cidade": "Campinas/SP",
     "segmento": "industria farmaceutica (medicamentos, genéricos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
-      },
-      {
-        "nome": "Cargill (Campinas)",
-        "empresa": "Cargill Agricola S.A. - Centro de Inovacao Campinas/SP",
-        "email": "sac@sac-cargill.com.br",
-        "cidade": "Campinas/SP",
-        "segmento": "gigante mundial de alimentos e ingredientes (oleos vegetais, gorduras, fritura industrial) - NICHO PRIORITARIO (oleo de fritura industrial, vencidos); MX Locaweb valido 06/11"
-      },
-      {
-        "nome": "Vigor (Lactalis)",
-        "empresa": "Vigor Alimentos S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
-        "email": "sac@vigor.com.br",
-        "cidade": "Sao Paulo/SP (atuacao nacional)",
-        "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 06/11"
-      },
-      {
-        "nome": "Danone Brasil",
-        "empresa": "Danone Ltda. (iogurtes, lacteos, nutricao)",
-        "email": "faleconosco@danone.com",
-        "cidade": "Sao Paulo/SP (fabrica em Pocos de Caldas/MG e outras)",
-        "segmento": "laticinios e nutricao (iogurtes, sobremesas lacteas, manteiga, nata, creme de leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
-      },
-      {
-        "nome": "Dori Alimentos",
-        "empresa": "Dori Alimentos Ltda. (balas, confeitos, guloseimas)",
-        "email": "sac@dori.com.br",
-        "cidade": "Marilia/SP (atuacao nacional)",
-        "segmento": "industria de balas e guloseimas (gordura vegetal, oleo de fritura industrial, vencidos) - NICHO PRIORITARIO; MX PPHosted valido 06/11"
-      },
-      {
-        "nome": "Copacol",
-        "empresa": "Copacol - Cooperativa Agroindustrial Consolata",
-        "email": "sac@copacol.com.br",
-        "cidade": "Cafelandia/PR (atuacao nacional)",
-        "segmento": "cooperativa agroindustrial (frango, suinos, peixes - fritura industrial, oleo de cozinha usado em escala, gordura animal) - NICHO PRIORITARIO; MX constel valido 06/11"
-      },
-      {
-        "nome": "Sorvetes Jundia Foods",
-        "empresa": "Jundia Foods S.A. (Sorvetes Jundia)",
-        "email": "sac@jundiafoods.com.br",
-        "cidade": "Mogi das Cruzes/SP e Barueri/SP (atuacao nacional)",
-        "segmento": "industria de sorvetes (gordura vegetal, oleo, lacteos, vencidos) - NICHO PRIORITARIO; MX spfbl valido 06/11"
-      },
-      {
-        "nome": "Batavo (Lactalis)",
-        "empresa": "Batavo S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
-        "email": "sac@batavo.com.br",
-        "cidade": "Sao Paulo/SP (fabrica em Carambey/PR, atuacao nacional)",
-        "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
-      }
-    ]
+  },
+  {
+    "nome": "Cargill (Campinas)",
+    "empresa": "Cargill Agricola S.A. - Centro de Inovacao Campinas/SP",
+    "email": "sac@sac-cargill.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "gigante mundial de alimentos e ingredientes (oleos vegetais, gorduras, fritura industrial) - NICHO PRIORITARIO (oleo de fritura industrial, vencidos); MX Locaweb valido 06/11"
+  },
+  {
+    "nome": "Vigor (Lactalis)",
+    "empresa": "Vigor Alimentos S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
+    "email": "sac@vigor.com.br",
+    "cidade": "Sao Paulo/SP (atuacao nacional)",
+    "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 06/11"
+  },
+  {
+    "nome": "Danone Brasil",
+    "empresa": "Danone Ltda. (iogurtes, lacteos, nutricao)",
+    "email": "faleconosco@danone.com",
+    "cidade": "Sao Paulo/SP (fabrica em Pocos de Caldas/MG e outras)",
+    "segmento": "laticinios e nutricao (iogurtes, sobremesas lacteas, manteiga, nata, creme de leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
+  },
+  {
+    "nome": "Dori Alimentos",
+    "empresa": "Dori Alimentos Ltda. (balas, confeitos, guloseimas)",
+    "email": "sac@dori.com.br",
+    "cidade": "Marilia/SP (atuacao nacional)",
+    "segmento": "industria de balas e guloseimas (gordura vegetal, oleo de fritura industrial, vencidos) - NICHO PRIORITARIO; MX PPHosted valido 06/11"
+  },
+  {
+    "nome": "Copacol",
+    "empresa": "Copacol - Cooperativa Agroindustrial Consolata",
+    "email": "sac@copacol.com.br",
+    "cidade": "Cafelandia/PR (atuacao nacional)",
+    "segmento": "cooperativa agroindustrial (frango, suinos, peixes - fritura industrial, oleo de cozinha usado em escala, gordura animal) - NICHO PRIORITARIO; MX constel valido 06/11"
+  },
+  {
+    "nome": "Sorvetes Jundia Foods",
+    "empresa": "Jundia Foods S.A. (Sorvetes Jundia)",
+    "email": "sac@jundiafoods.com.br",
+    "cidade": "Mogi das Cruzes/SP e Barueri/SP (atuacao nacional)",
+    "segmento": "industria de sorvetes (gordura vegetal, oleo, lacteos, vencidos) - NICHO PRIORITARIO; MX spfbl valido 06/11"
+  },
+  {
+    "nome": "Batavo (Lactalis)",
+    "empresa": "Batavo S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
+    "email": "sac@batavo.com.br",
+    "cidade": "Sao Paulo/SP (fabrica em Carambey/PR, atuacao nacional)",
+    "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
+  },
+  {
+    "nome": "EcoTaua (Taua Food)",
+    "empresa": "EcoTaua Industria e Comercio de Oleo de Palma Ltda (Taua Food)",
+    "email": "sac@ecotaua.com.br",
+    "cidade": "Santo Antonio do Taua/PA (escritorio SP)",
+    "segmento": "industria de oleo de palma e gordura vegetal - NICHO PRIORITARIO (oleos e gorduras vegetais)"
+  }
+]

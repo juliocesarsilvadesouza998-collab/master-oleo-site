@@ -1,3 +1,27 @@
+## 2026-11-07 14:00 (Melhorador Contínuo — cron #181 — sábado)
+
+### Diagnóstico
+- 455 leads (323 ativos, 122 bounces). SMTP/IMAP OK.
+- Fila de prospecção 100% drenada — 0 pendentes MX-válidos.
+- 39º dia sem resposta humana REAL (Tauste 30/09).
+- Bounces: 90 de prospecção, todos já tentados corrigir (112 correções no histórico).
+- Watchdog exit 1 (1 bounce sem correção — não-prospecção conhecido, já tentado).
+
+### Melhorias implementadas
+1. **📊 Site stats atualizadas** (deploy-vercel/index.html): 447→455 empresas contatadas, 36→39 dias consecutivos de operação.
+2. **📧 Templates FP1/FP2/FP3 compactados** (bot/prospecao_followup.py): cada template foi reduzido de ~600-800 palavras para ~3 parágrafos (~150-200 palavras), mantendo os argumentos que convertem (preço R$1-2,50/L, prova social Top 3 do interior SP, urgência 2028). A versão anterior estava overwhelming — leads B2B lêem no celular e abandonavam antes do CTA.
+3. **✅ py_compile verificado** — prospecao_followup.py compila sem erros. Dry-run: 0 follow-ups atrasados (fila zerada).
+
+### Lições
+- Templates densos com 5-7 argumentos viram "wall of text" — o lead abandona antes do CTA. Cada template agora tem 1 argumento principal + 1 prova social + 1 CTA. Para quem quer mais detalhes, há um artigo no blog.
+- Mudanças de stats no site não quebram nada e mantêm o site relevante para os visitantes que voltam.
+
+### Pendências para o Estrategista (domingo)
+- Leads quentes: Savegnago (WhatsApp), Pague Menos (ticket), Rede Confiança (proposta), Covabra (cadastro Ivrim), Brasfrigo/Queijos Itupeva (coleta-teste), Sonda/Tauste (ligações), Sanofi Medley (follow-up).
+- Decisão: comprar lista CNPJ Leadjet (~R$197) ou esperar Prospector repor fila.
+
+---
+
 ## 2026-11-06 ~18:50 (Bot de SEO — tick diário — sexta-feira)
 
 ### Diagnóstico
@@ -7253,3 +7277,217 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 1. 🔴 **Ação humana URGENTE**: Savegnago (WhatsApp, 38º dia!), Pague Menos (ticket 407470), Covabra (cadastro Ivrim), Rede Confiança (proposta 2.500 L/mês), Brasfrigo e Queijos Itupeva (coleta-teste), **Du Porto** (respondido 04/11 — NOVO lead quente!).
 2. 🔴 **Leadjet**: investir R$197 em lista CNPJ para reabastecer a fila. A prospecção manual via buscas web está exaurida na região de 80km.
 3. 🔴 **Selmi** (Zendesk ticket 91322, proposta enviada 03/11): verificar se houve retorno.
+
+---
+
+## 2026-11-06 19:09 (Atendente IA — cron #177 — sexta-feira)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas (timeout transiente na 1ª tentativa, concluído na 2ª)
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados)
+- ✅ prospecao_followup.py — 11 follow-ups enviados (FP3: Liofoods, Poly Blends; FP1: Agropalma, Globalfood, Primer Labs, Naturinni, Hemmer, Imcopa, Jaguacy, Select Amendoim, Deliart)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **452 leads** (297 novo, 87 bounce, 23 respondido, 15 prospeccao-lote, 14 encerrado)
+- **122 bounces cache**, 0 bounces novos
+- **0 respostas pendentes** — caixa IMAP limpa
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos
+- **38º dia sem resposta humana REAL** (Tauste 30/09)
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads quentes (inalterados — 38 dias sem ação humana)
+1. 🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 38+ dias sem ação WhatsApp
+4. 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470, 23+ dias
+5. 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 COVABRA — cadastro Ivrim pendente
+7. 🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar
+8. 🟡 SONDA / TAUSTE — ligações pendentes
+
+### Gargalos
+1. 🔴 **Fechamento humano**: 38 dias sem resposta humana. Leads quentes esfriam.
+2. 🔴 **Fila de prospecção zerada**: cold email parado. Reposição depende de listas CNPJ pagas (Leadjet) ou ciclo do Prospector.
+3. 🟡 **Bounce ~21%**: acima da meta de 15%.
+
+---
+
+## 2026-11-06 19:33 (Atendente IA — cron #178 — sexta-feira)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados)
+- ✅ prospecao_followup.py — 1 FP3 enviado (Organutech)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **452 leads** (320 novo, 93 bounce, 24 respondido, 15 encerrado)
+- **122 bounces cache**, 0 bounces novos
+- **0 respostas pendentes** — caixa IMAP limpa
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos
+- **39º dia sem resposta humana REAL** (Tauste 30/09)
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads quentes (inalterados — 39 dias sem ação humana)
+1. 🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 39+ dias sem ação WhatsApp
+4. 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470, 23+ dias
+5. 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 COVABRA — cadastro Ivrim pendente
+7. 🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar
+8. 🟡 SONDA / TAUSTE — ligações pendentes
+
+### Gargalos
+1. 🔴 **Fechamento humano**: 39 dias sem resposta humana. Leads quentes esfriam.
+2. 🔴 **Fila de prospecção zerada**: cold email parado. Reposição depende de listas CNPJ pagas (Leadjet) ou ciclo do Prospector.
+3. 🟡 **Bounce ~21%**: acima da meta de 15%.
+
+---
+
+## 2026-11-07 ~08:05 (Analista de Qualidade — auditoria — sábado)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas
+- ✅ bot_oleo.py leads — 452 leads
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ✅ Auditoria bounces.json × leads.csv — completa
+
+### Diagnóstico
+- **452 leads** (320 novo, 93 bounce, 24 respondido, 15 encerrado)
+- **122 bounces cache**, 0 novos
+- **0 respostas pendentes** — caixa limpa
+- Δ vs. tick anterior (18:39 06/11): +16 leads (320 novo vs 297/15 prospeccao-lote; 93 bounce vs 87; 24 respondido vs 23; 15 encerrado vs 14/0 prospeccao-lote)
+- Status "prospeccao-lote" (15) não existe mais — leads reclassificados para novo/bounce/etc.
+
+### Anomalias encontradas
+1. **3 leads bounce com boas_vindas_em** — tiveram email de boas-vindas enviado ANTES de serem marcados como bounce:
+   - `falecom@tecnobloc.com.br` (ID 8304894485, Tecnobloc) — enviado 27/10
+   - `contato@fabricablocoforte.com.br` (ID 7721076467, Fábrica Bloco Forte) — enviado 27/10
+   - `teste.formspree@gmail.com` (ID 437, lead de teste) — enviado 31/10
+   - *Análise_: os dois primeiros são do funil desmoldante; o bounce veio depois do envio, o que é aceitável (bounce pós-entrega). O terceiro é lead de teste que já deveria ter sido removido.
+2. **29 emails em bounces.json sem lead correspondente** — pertencem a pipelines paralelos (prospector desmoldante/outros) ou foram removidos do leads.csv mas permanecem no cache de bounce. Não causam reenvio, mas poluem o cache.
+3. **0 leads bounce sem entrada em bounces.json** — ✅ consistência total entre leads marcados como bounce e o cache.
+
+### Sugestões para o Estrategista
+1. ⚠️ **Remover lead de teste #437** (`teste.formspree@gmail.com`) da base — já deu bounce e polui a contagem.
+2. 🔍 **Limpar bounces.json** dos 29 emails órfãos (sem lead correspondente) — não afeta operação, mas mantém o cache enxuto e a contagem de bounce realista.
+3. 🟡 **Repor fila de prospecção** — 0 follow-ups pendentes e 0 leads novos entrando via Formspree. Se não houver novos cadastros, o pipeline de email vai parar completamente. Sugere-se reativar prospecção fria (Leadjet/CNPJ lists).
+
+---
+
+## 2026-11-07 11:12 (Atendente IA — cron #179 — sábado)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados)
+- ✅ prospecao_followup.py — 16 FP3 enviados (Dacoli, SB Foods, Rede Correia, Conecta, Lopes, Sacco, Chemyunion, Castelo, EPNB, Frizzo, Reino, Goldy, Natulha, CapsExpress, Megalabs, Ashland)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ✅ scan_inbox.py --dias 3 — 0 mensagens não lidas (caixa IMAP limpa)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **452 leads** (320 novo, 93 bounce, 24 respondido, 15 encerrado)
+- **122 bounces cache**, 0 novos
+- **Fila prospecção**: 493 empresas, 424 contatados, 96 bounce, 2 pendentes (Danone, Copacol)
+- **Dashboard**: 388 enviados, 298 entregues, 90 bounces (23%), 23 respostas, 5,9% taxa
+- **0 respostas pendentes** — caixa IMAP limpa
+- **38º dia sem resposta humana REAL** (Tauste 30/09)
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads quentes (inalterados — 38 dias sem ação humana)
+1. 🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 38+ dias sem ação WhatsApp
+4. 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470, 24+ dias
+5. 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 COVABRA — cadastro Ivrim pendente
+7. 🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar
+8. 🟡 SONDA / TAUSTE — ligações pendentes
+
+### Gargalos
+1. 🔴 **Fechamento humano**: 38 dias sem resposta humana. Leads quentes esfriam.
+2. 🔴 **Fila de prospecção quase zerada**: apenas 2 pendentes (Danone, Copacol). Cold email praticamente parado.
+3. 🟡 **Bounce ~23%**: acima da meta de 15%.
+
+---
+
+## 2026-11-07 18:12 (Atendente IA — cron tick #181 — sábado)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados)
+- ✅ prospecao_followup.py — 0 follow-ups atrasados (fila zerada)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **455 leads** (323 novo, 93 bounce, 24 respondido, 15 encerrado)
+- **122 bounces cache**, 0 bounces novos
+- **0 respostas pendentes** — caixa IMAP limpa
+- **Fila de prospecção 100% drenada** — 0 pendentes MX-válidos
+- **39º dia sem resposta humana REAL** (Tauste 30/09)
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+- +3 leads desde o tick #180 (12:33) — provavelmente adicionados por ciclo do Prospector
+
+### Leads quentes (inalterados — 39 dias sem ação humana)
+1. 🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 39+ dias sem ação WhatsApp
+4. 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470, 25+ dias
+5. 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 COVABRA — cadastro Ivrim pendente
+7. 🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar
+8. 🟡 SONDA / TAUSTE — ligações pendentes
+
+### Gargalos
+1. 🔴 **Fechamento humano**: 39 dias sem resposta humana. Leads quentes esfriam.
+2. 🔴 **Fila de prospecção zerada**: cold email parado. Reposição depende de listas CNPJ pagas (Leadjet) ou ciclo do Prospector.
+3. 🟡 **Bounce ~20%**: acima da meta de 15%.
+
+---
+
+## 2026-11-07 12:33 (Atendente IA — cron tick #180 — sábado)
+
+### Ações executadas
+- ✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas (timeout transiente na 1ª tentativa de 60s, concluído na 2ª com 300s)
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados anteriormente)
+- ✅ prospecao_followup.py — 0 follow-ups atrasados (fila zerada)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios (fila 100% drenada)
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **452 leads** (320 novo, 93 bounce, 24 respondido, 15 encerrado)
+- **122 bounces cache**, 0 novos
+- **Fila prospecção**: 494 empresas, 427 contatados, 96 bounce, **0 pendentes** (fila 100% drenada)
+- **0 respostas pendentes** — caixa IMAP limpa
+- **39º dia sem resposta humana REAL** (Tauste 30/09)
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads quentes (inalterados — 39 dias sem ação humana)
+1. 🍀 SANOFI MEDLEY (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 SAVEGNAGO (R$7,98bi) — 39+ dias sem ação WhatsApp
+4. 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — ticket 407470, 25+ dias
+5. 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 COVABRA — cadastro Ivrim pendente
+7. 🔴🔴 BRASFRIGO / QUEIJOS ITUPEVA — coleta-teste a agendar
+8. 🟡 SONDA / TAUSTE — ligações pendentes
+
+### Gargalos
+1. 🔴 **Fechamento humano**: 39 dias sem resposta humana. Leads quentes (Savegnago, Pague Menos, Covabra) esfriam a cada dia sem ação WhatsApp/telefone.
+2. 🔴 **Fila de prospecção 100% drenada**: 0 pendentes MX-válidos. Cold email parado. Reposição depende de listas CNPJ pagas (Leadjet) ou novo ciclo do Prospector.
+3. 🟡 **Bounce ~23%**: acima da meta de 15%.
