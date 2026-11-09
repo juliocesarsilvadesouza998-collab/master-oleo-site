@@ -1,7 +1,7 @@
 {
-  "atualizado_em": "2026-11-07 14:00 (Melhorador Contínuo - cron #181 - sábado)",
+  "atualizado_em": "2026-11-09 17:39 (Atendente IA - cron #185 - segunda-feira)",
   "criado_em": "2026-08-13",
-  "metas_semana_13_10_a_19_10": {
+  "ciclo_2026_11_07_cron_184_atendente": {
     "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
     "meta_contrato_2": "🔴 FECHAR Brasfrigo (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
     "meta_contrato_3": "🔴 Queijos Itupeva (Rafael) — agendar coleta-teste. Lead mais quente individual.",
@@ -1812,6 +1812,238 @@
       "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
       "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
       "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10."
+    ]
+  },
+  "ciclo_2026_11_07_atendente_cron_183": {
+    "timestamp": "2026-11-07 ~20:30 (Atendente IA - cron tick #183 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 10 FP3 enviados (Unialimentar, Stabile, MM, Elias Moreira, Tiba, Potiguara, TBS Minimercado, Atual, Boi na Brasa Sorocaba, União Supermercados)",
+      "✅ bot_oleo.py send_sequence — sequência processada, 0 envios (fila 100% drenada)",
+      "✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
+      "⏭️ proposta_contrato.py — não executado (sem lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "watchdog": "exit 0 — pipeline saudável, SMTP/IMAP OK",
+      "total_leads_csv": 455,
+      "status_csv": "novo 323 | respondido 24 | bounce 93 | encerrado 15",
+      "bounce_cache_json": 122,
+      "fila_total_empresas": 494,
+      "fila_contatados": 427,
+      "fila_bounce": 96,
+      "fila_pendentes": 0,
+      "fila_pendentes_validas": "0 — fila 100% drenada (sem reposição de leads)",
+      "respostas_novas": 0,
+      "followups_enviados": 10,
+      "propostas_contrato": 0,
+      "relatorios_esg": 0,
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana_real": "39 (última: Tauste 30/09 — Sanofi Medley 30/10 foi follow-up automático)",
+      "observacao": "39º dia sem resposta humana REAL. Sistema saudável, caixa limpa, sem bounces novos. 10 FP3 follow-ups enviados (supermercados de pequeno/médio porte). Fila de prospecção 100% drenada (0 pendentes MX-válidos). Pipeline de cold email parado — reposição depende de listas CNPJ pagas (Leadjet) ou ciclo do Prospector. Gargalo de fechamento continua 100% bloqueado em ação humana (WhatsApp/telefone/cadastro Ivrim)."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10. Follow-up humano recomendado.",
+      "🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11. Aguardando compras@selmi.com.br",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 39+ dias sem ação humana. PRIORIDADE ABSOLUTA.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 25+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — Cadastro de fornecedor Ivrim (isac.ivrim.com.br) pendente desde 22/09.",
+      "🔴🔴 BRASFRIGO (Salto/SP) / QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10."
+    ]
+  },
+  "ciclo_2026_11_07_atendente_cron_182": {
+    "timestamp": "2026-11-07 ~19:30 (Atendente IA - cron tick #182 - sábado)",
+    "acoes": [
+      "✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas",
+      "✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 0 follow-ups atrasados (fila zerada)",
+      "✅ bot_oleo.py send_sequence — sequência processada, 0 envios (fila 100% drenada)",
+      "✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
+      "⏭️ proposta_contrato.py — não executado (sem lead com volume novo)",
+      "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "watchdog": "exit 0 — pipeline saudável, SMTP/IMAP OK",
+      "total_leads_csv": 455,
+      "status_csv": "novo 323 | respondido 24 | bounce 93 | encerrado 15",
+      "bounce_cache_json": 122,
+      "fila_total_empresas": 494,
+      "fila_contatados": 427,
+      "fila_bounce": 96,
+      "fila_pendentes": 0,
+      "fila_pendentes_validas": "0 — fila 100% drenada (sem reposição de leads)",
+      "respostas_novas": 0,
+      "followups_enviados": 0,
+      "propostas_contrato": 0,
+      "relatorios_esg": 0,
+      "caixa_nao_lidas": 0,
+      "dias_sem_resposta_humana_real": "39 (última: Tauste 30/09 — Sanofi Medley 30/10 foi follow-up automático)",
+      "observacao": "39º dia sem resposta humana REAL. Sistema saudável, caixa limpa, sem bounces novos, sem follow-ups atrasados, sem respostas para atender. Fila de prospecção 100% drenada (0 pendentes MX-válidos). Pipeline de cold email parado — reposição depende de listas CNPJ pagas (Leadjet) ou ciclo do Prospector. Gargalo de fechamento continua 100% bloqueado em ação humana (WhatsApp/telefone/cadastro Ivrim)."
+    },
+    "leads_quentes": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — encaminhado a Compras 29/10, respondido 30/10. Follow-up humano recomendado.",
+      "🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11. Aguardando compras@selmi.com.br",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 39+ dias sem ação humana. PRIORIDADE ABSOLUTA.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 25+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — Cadastro de fornecedor Ivrim (isac.ivrim.com.br) pendente desde 22/09.",
+      "🔴🔴 BRASFRIGO (Salto/SP) / QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10."
+    ]
+  },
+  "estrategista_2026_11_08_cron_estrategista": {
+    "timestamp": "2026-11-08 08:00 (Estrategista - cron dominical)",
+    "diagnostico_semana": {
+      "total_leads_csv": 455,
+      "novo": 322,
+      "respondido": 24,
+      "bounce_csv": 94,
+      "encerrado": 15,
+      "bounce_cache_json": 123,
+      "taxa_resposta_bruta": "24/455 = 5,3%",
+      "taxa_bounce_csv": "94/455 = 20,7% (acima da meta 15%)",
+      "taxa_resposta_dashboard": "23/388 = 5,9%",
+      "bounce_rate_dashboard": "90/388 = 23,2%",
+      "dias_sem_resposta_humana": 39,
+      "ultima_resposta_humana_real": "Tauste Supermercados (30/09/2026)",
+      "fila_prospeccao_pendentes_validas": "0 MX-válidos — fila 100% drenada",
+      "fila_total_empresas": 494,
+      "fila_contatados": 427,
+      "fila_bounce": 96,
+      "watchdog": "exit 0 — saudável, SMTP/IMAP OK",
+      "caixa_nao_lidas": 0,
+      "followups_atrasados": 0,
+      "contratos_fechados": 0
+    },
+    "insight_central": "39 DIAS SEM RESPOSTA HUMANA. O sistema automatizado atingiu o teto do cold email — 455 leads, 24 respostas (5,3%), taxa acima da média de mercado (1-5%), mas ZERO contratos fechados. As maiores oportunidades (Savegnago R$7,98bi, Pague Menos R$4,33bi, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva, Sonda R$6,12bi, Tauste) estão todas paradas aguardando ação humana via WhatsApp/telefone. A fila de prospecção está 100% drenada — as buscas web gratuitas na região de 80km de Salto esgotaram. O projeto não precisa de mais automação; precisa de FECHAMENTO HUMANO e REPOSIÇÃO DE FILA VIA LISTA CNPJ PAGA.",
+    "descobertas_da_pesquisa_web": [
+      "DESCOBERTA #1 — CONFIRMADO: US$ 7,68 bilhões (2026) → US$ 10,29 bi (2031), CAGR 6,03% (Mordor Intelligence). Biodiesel/HVO responde por 78,65% do consumo de UCO. Mercado global estável e crescente.",
+      "DESCOBERTA #2 — CONFIRMADO: Preço UCO na indústria subiu 18,7% em agosto/2026 (Fastmarkets/Vespertool). Demanda global por biodiesel segue aquecida mesmo com margens comprimidas.",
+      "DESCOBERTA #3 — Confirmed: Leadjet (leadjet.com.br) — R$97 pagamento único, 150 mil empresas com CNPJ, telefone e email. 6.335 laticínios ativos (CNAE 1052-0/1051-1), 1.580 distribuidoras de laticínios (CNAE 4631-1), 49.731 distribuidoras de alimentos. Filtro por estado (SP) e cidade. ESSA É A SOLUÇÃO PARA REPOR A FILA DE PROSPECÇÃO.",
+      "DESCOBERTA #4 — Z-API/WhatsApp Business API: custo R$0,3217/template marketing, R$0,035/template utilidade. Precisa de Meta Business Manager verificado com CNPJ. Custo estimado ~R$144/mês para 15 leads/dia. VIÁVEL para destravar follow-up de WhatsApp automatizado.",
+      "DESCOBERTA #5 — A fila de 950+ empresas na fila_prospeccao_extra.json já foi totalmente consumida pelo leads.csv ou bounces — 0 candidatas novas disponíveis via busca web gratuita. A cobertura de empresas com email público na região de 80km de Salto está COMPLETA."
+    ],
+    "decisoes_da_semana": [
+      "1. PRIORIDADE ABSOLUTA — AÇÃO HUMANA NOS LEADS QUENTES: 39 dias sem resposta humana é inaceitável. Os 8 leads quentes (Savegnago WhatsApp, Pague Menos ticket, Covabra cadastro Ivrim, Rede Confiança proposta, Brasfrigo coleta-teste, Queijos Itupeva coleta-teste, Sonda e Tauste ligações) PRECISAM de ação manual esta semana. Sem isso, o funil apodrece.",
+      "2. COMPRA DE LISTA LEADJET (R$97): A única forma de reabastecer a fila de prospecção é comprar lista CNPJ paga. Recomendo filtro SP + CNAE 1052-0 (laticínios — prioridade vencidos >40% gordura) + CNAE 4631-1 (distribuidoras de laticínios) + CNAE 1043-1 (margarinas/gorduras). Estimar ~50-150 novas empresas MX-válidas.",
+      "3. TEMPLATE FP3 AJUSTADO: Substituído 'Rede de 5 supermercados = R$ 48-72 mil/ano' por '200 L/mês = R$ 4.080/ano; 1.000 L/mês = R$ 20.400/ano'. O template anterior só falava para redes; agora fala para qualquer porte de negócio. py_compile OK.",
+      "4. PREPARAR TERRENO PARA WHATSAPP API: Assim que o primeiro contrato fechar (gerando receita), investir em integração WhatsApp Cloud API (Z-API ou direto pela Meta). Custo estimado R$100-200/mês + R$0,32/envio. Isso destrava follow-up automatizado sem depender de ação humana.",
+      "5. MANTER SISTEMA OPERACIONAL: O ecossistema está saudável (watchdog exit 0, SMTP/IMAP OK, 0 follow-ups atrasados, 0 respostas pendentes). A automação está em 'modo de espera' até a fila ser reposta."
+    ],
+    "acoes_implementadas_08_11": [
+      "1. TEMPLATE FP3 AJUSTADO (prospecao_followup.py): removida referência exclusiva a redes ('Rede de 5 supermercados'), adicionado cálculo individual (200L = R$4.080/ano, 1.000L = R$20.400/ano) + 'para biodiesel' no case Madero. py_compile OK.",
+      "2. ESTRATÉGIA REDEFINIDA: Foco em FECHAMENTO HUMANO (não mais em volume de prospecção). A fila está zerada e a automação não tem o que fazer. A semana é de ação manual nos 8 leads quentes.",
+      "3. PRIORIDADE COVABRA: Único lead com ação concreta pendente (cadastro Ivrim). Se feito, destrava contrato com rede de ~15 lojas. Deve ser a PRIMEIRA ação manual da semana."
+    ],
+    "metas_da_semana_08_11_a_14_11": {
+      "foco_geral": "FECHAMENTO HUMANO — não existe mais meta de volume de prospecção até fila ser reposta",
+      "meta_acao_1": "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — enviar WhatsApp (11) 96785-9631. 39+ dias SEM AÇÃO. PRIORIDADE MÁXIMA.",
+      "meta_acao_2": "🔴🔴🔴 COVABRA — preencher cadastro fornecedor Ivrim (isac.ivrim.com.br). Único lead com caminho claro para contrato.",
+      "meta_acao_3": "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — retomar ticket 407470 (Josiane Marinho). 25+ dias parado.",
+      "meta_acao_4": "🔴🔴🔴 REDE CONFIANÇA — follow-up via social@confianca.com.br. Proposta 2.500 L/mês aguardando.",
+      "meta_acao_5": "🔴🔴 BRASFRIGO (Salto/SP) — AGENDAR COLETA-TESTE. Local, respondeu. 39+ dias parado.",
+      "meta_acao_6": "🔴🔴 QUEIJOS ITUPEVA (Rafael) — AGENDAR COLETA-TESTE. Lead mais quente individual. 39+ dias.",
+      "meta_acao_7": "🟡 SONDA (R$6,12bi) — ligar (11) 2145-6200. TAUSTE — ligar (15) 3324-4680.",
+      "meta_acao_8": "🟡 SANOFI MEDLEY — follow-up SAC (protocolo 03065348). SELMI — follow-up ticket 91322.",
+      "meta_acao_9": "🟡 COMPRAR LISTA LEADJET (R$97) — laticínios SP + distribuidoras. Repor fila de prospecção.",
+      "meta_acao_10": "🟢 MANTER SISTEMA — watchdog exit 0, SMTP/IMAP OK, 0 follow-ups atrasados, 0 respostas pendentes.",
+      "nicho_prioritario_reposicao": "laticínios (CNAE 1052-0) + distribuidoras laticínios (CNAE 4631-1) + margarinas/gorduras (CNAE 1043-1) — comprar via Leadjet",
+      "prazo_leadjet": "comprar até 14/11 para repor fila no ciclo do Prospector do sábado (14/11)"
+    },
+    "pendente_humano_critico": [
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 39+ dias. PRIORIDADE ABSOLUTA.",
+      "🔴🔴🔴 COVABRA — cadastro fornecedor Ivrim pendente desde 22/09. Ação mais concreta para contrato.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi, #2 interior SP) — ticket 407470 (Josiane Marinho). 25+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — proposta 2.500 L/mês enviada. Aguardando retorno.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — coleta-teste a agendar.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — coleta-teste a agendar.",
+      "🟡 SONDA (R$6,12bi) — ligar (11) 2145-6200.",
+      "🟡 TAUSTE — ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10.",
+      "🟡 SANOFI MEDLEY — SAC 03065348, follow-up pendente.",
+      "🟡 PASTIFICIO SELMI — ticket 91322, proposta enviada 03/11."
+    ],
+    "leads_quentes_08_11": [
+      "🍀 SANOFI MEDLEY (SAC 03065348) — SAC encaminhou a Compras 29/10. Follow-up humano pendente.",
+      "🍀 PASTIFICIO SELMI (ticket 91322) — proposta enviada 03/11 para compras@selmi.com.br",
+      "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 39+ dias sem ação humana. PRIORIDADE ABSOLUTA.",
+      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 25+ dias sem retorno.",
+      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.",
+      "🔴🔴🔴 COVABRA — Cadastro de fornecedor Ivrim (isac.ivrim.com.br) pendente desde 22/09.",
+      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar.",
+      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
+      "🟡 SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+      "🟡 TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09.",
+      "🟡 NAGUMO — Caso 00143542, proposta anexada 14/10."
+    ]
+  },
+  "ciclo_2026_11_09_prospector_177": {
+    "timestamp": "2026-11-09 (Prospector - cron #177 - segunda-feira)",
+    "diagnostico_fila": {
+      "fila_total_empresas": 496,
+      "fila_contatados": 429,
+      "fila_bounce": 97,
+      "fila_pendentes": 0,
+      "emails_enviados_hoje": 2,
+      "novas_empresas_adicionadas": 2
+    },
+    "acoes": [
+      "✅ Status: fila com 496 empresas (total), 429 contatados, 97 bounces, 0 pendentes",
+      "✅ Descoberta: Laticinios Alegria (Santo Antonio da Alegria/SP) - laticinios com manteiga e queijos - NICHO PRIORITARIO - contato@laticiniosalegria.com.br (MX valido: comquatro)",
+      "✅ Descoberta: Nacon Lacteos (Araraquara/SP) - fracionamento de queijos e manteiga - NICHO PRIORITARIO - nacon@naconlacteos.com.br (MX valido: self-hosted)",
+      "✅ Envio: enviar_lote.py --max 15 -> 2 emails enviados (Laticinios Alegria, Nacon Lacteos), 0 falhas",
+      "✅ ecossistema.json atualizado com numeros pos-envio"
+    ],
+    "observacao": "Fila continua praticamente zerada (0 pendentes apos envio). As 2 empresas descobertas sao do nicho laticinios (manteiga/queijos) - prioritario para vencidos >40% gordura. Cobertura de email publico na regiao de 80km de Salto esta essencialmente completa - reposicao via lista CNPJ paga (Leadjet R$97) e a unica saida para reabastecer a fila significativamente."
+  },
+  "ciclo_2026_11_09_cron_185_atendente": {
+    "timestamp": "2026-11-09 17:39 (Atendente IA - cron #185 - segunda-feira)",
+    "acoes_executadas": [
+      "✅ sync_formspree.py — 123 bounces cache, 0 notificações Formspree novas (timeout transiente na 1ª tentativa, concluído na 2ª)",
+      "✅ corrigir_emails.py — 0 bounces novos processados (todos os 123 já tentados anteriormente)",
+      "✅ prospecao_followup.py — 36 FP3 + 1 FP1 enviados (Tourinho Alimentos, Scala Laticinios + lote de supermercados e indústrias)",
+      "✅ bot_oleo.py send_sequence — sequência processada",
+      "✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+      "⏭️ proposta_contrato.py — não executado (sem lead com volume novo para proposta)",
+      "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+    ],
+    "diagnostico": {
+      "total_leads": 457,
+      "status_novo": 298,
+      "status_respondido": 23,
+      "status_bounce": 88,
+      "status_encerrado": 14,
+      "status_prospeccao_lote": 15,
+      "bounces_cache": 123,
+      "respostas_pendentes": 0,
+      "dias_sem_resposta_humana": 40,
+      "fila_pendentes": 0
+    },
+    "leads_quentes": {
+      "savegnago": "🔴🔴🔴 #1 interior SP (R$7,98bi) — 40+ dias sem ação WhatsApp",
+      "pague_menos": "🔴🔴🔴 #2 interior SP (R$4,33bi) — ticket 407470 Josiane Marinho, 27+ dias",
+      "rede_confianca": "🔴🔴🔴 Sorocaba — proposta 2.500 L/mês, aguardando retorno",
+      "covabra": "🔴🔴🔴 cadastro portal Ivrim (isac.ivrim.com.br) — ação humana necessária",
+      "sanofi_medley": "🍀 SAC 03065348 — respondido 30/10, follow-up humano atrasado",
+      "selmi": "🍀 Zendesk ticket 91322 — SAC abriu ticket, proposta enviada",
+      "brasfrigo": "🔴🔴 coleta-teste a agendar (Salto/SP)",
+      "queijos_itupeva": "🔴🔴 coleta-teste a agendar (Rafael)",
+      "sonda": "🟡 ligar (11) 2145-6200",
+      "tauste": "🟡 ligar (15) 3324-4680"
+    },
+    "gargalos": [
+      "🔴 40 dias sem resposta humana REAL (Tauste 30/09) — leads quentes esfriando",
+      "🔴 Fila de prospecção zerada: 0 pendentes MX-válidos — cold email parado",
+      "🟡 Bounce ~20% (88/457) acima da meta de 15%",
+      "🔴 Nenhum contrato fechado após 457 leads contatados",
+      "🔴 Reposição de fila depende de lista CNPJ paga (Leadjet ~R$97) ou ciclo do Prospector"
     ]
   }
 }

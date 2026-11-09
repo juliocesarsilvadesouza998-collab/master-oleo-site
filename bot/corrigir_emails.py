@@ -149,6 +149,8 @@ def buscar_email_web(empresa, cidade):
         "Penina Alimentos LTDA": "info@penina.com.br",
         "Nutraway Suplementos Alimentares LTDA": "nutraway@nutraway.com.br",
         "Delta Terceirizacoes LTDA": "adm@deltaterceirizacoes.com.br",
+        "Farmoquímica S/A": "sac@fqmgrupo.com.br",
+        "Farmoquimica S/A": "sac@fqmgrupo.com.br",
 
     }
     for nome_emp, email_certo in MANUAIS.items():

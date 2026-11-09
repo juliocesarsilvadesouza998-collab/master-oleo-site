@@ -1,4 +1,4 @@
-## 2026-11-07 (sábado) — 18:05 (Atendente IA - cron tick #184)
+## 2026-11-07 (sábado) — 18:30 (Atendente IA - cron tick #186)
 
 ### Diagnóstico do ciclo
 - ✅ sync_formspree: 122 bounces cache, 0 notificações Formspree novas
@@ -9,8 +9,9 @@
 - 🔴 **38 dias sem resposta humana nova no fluxo de COMPRA de óleo** (última: Tauste 30/09)
 - 🔴 **Fila de prospecção ZERADA** — 0 pendentes MX-válidos
 - 🔴 **Pipeline de fechamento 100% bloqueado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
-- 📊 **456 leads** (323 novo, 93 bounce, 24 respondido, 15 encerrado, 1 sequencia)
-- 🆕 **7 novos leads adicionados hoje** (06-07/11): Paulispan, EMS, Farmoquímica, Danone, Copacol, EcoTaua; 1 novo (Agropalma → Globalfood → Primer Labs → Naturinni → Hemmer → Imcopa → Jaguacy → Select Amendoim → Deliart = 9 já em follow-up)
+|- 📊 **456 leads** (323 novo, 93 bounce, 24 respondido, 15 encerrado, 1 sequencia)
+|- 🆕 **Pipeline inalterado desde tick #184** — sem leads novos, sem respostas novas, fila zerada
+|- 🔴 **38 dias de silêncio comercial** — nenhuma resposta humana desde Tauste (30/09)
 
 ### Ações deste ciclo
 | Ação | Resultado |
