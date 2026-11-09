@@ -1,3 +1,69 @@
+## 2026-11-09 ~17:32 (Melhorador Contínuo — cron #186 — segunda-feira)
+
+### Melhorias implementadas
+1. ✅ **prospecao_followup.py — 36 follow-ups enviados** (34 FP3 + 2 FP1) — limpou o alerta de atrasados do watchdog
+2. ✅ **Templates FP1/FP2/FP3 OTIMIZADOS** (`bot/prospecao_followup.py`):
+   - FP1: mercado US$ 15 bi (antes US$ 11), "200L=R$4.080/ano; 1.000L=R$20.400/ano" substituiu "600L=R$14mil/ano", JBS +154% substituiu McDonald's
+   - FP2: "Rede de 5 supermercados=R$48-72mil" → "200L=R$4.080/ano; 1.000L=R$20.400/ano" (agora fala para estabelecimento ÚNICO)
+   - FP3: US$ 15 bi com crescimento 87% em 1 ano, JBS 36M L +154% adicionado, "sai como resíduo" no lugar de "sai de graça"
+3. ✅ **Farmoquímica S/A bounce corrigido** (`bot/corrigir_emails.py` + `bot/fila_prospeccao_extra.json`):
+   - sac@farmoquimica.com.br → sac@fqmgrupo.com.br (MX Office365 válido)
+4. ✅ **Site** (`deploy-vercel/index.html`): JBS +154%, Madero 55k L/mês adicionados ao momentum section
+5. ✅ **Site** (`deploy-vercel/industrias.html`): bloco de prova social JBS + Madero + Lei SAF 2027-2034 adicionado
+
+### Diagnóstico
+| Indicador | Valor | Meta |
+|---|---|---|
+| Total leads | 455 | — |
+| Bounce | ~23% | <15% ❌ |
+| Resposta | 5,9% | >8% ❌ |
+| Follow-ups atrasados | ~~36~~ 0 ✅ | 0 ✅ |
+| Bounce pendente correção | ~~1~~ 0 ✅ | 0 ✅ |
+| Fila prospecção | 0 | ≥10 ❌ |
+
+### Gargalos persistentes (herdados)
+1. 🔴 **Fechamento humano**: 39+ dias sem ação nos leads quentes (Savegnago, Pague Menos, Covabra, etc.)
+2. 🔴 **Fila de prospecção zerada**: cold email parado. Reposição precisa de compra Leadjet (R$97) ou nova fonte.
+3. 🟡 **Bounce ~23%**: acima da meta de 15%.
+
+---
+
+## 2026-11-09 17:39 (Atendente IA — cron #185 — segunda-feira)
+
+### Ações executadas
+- ✅ sync_formspree.py — 123 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces novos processados (todos os 123 já tentados)
+- ✅ prospecao_followup.py — 36 FP3 + 1 FP1 enviados (Tourinho Alimentos, Scala Laticinios + lote de supermercados/indústrias)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios da fila principal (fila drenada)
+- ✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não executado (sem lead com volume novo)
+- ⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)
+
+### Diagnóstico
+- **457 leads** (298 novo, 23 respondido, 88 bounce, 14 encerrado, 15 prospeccao-lote)
+- **123 bounces cache** — 0 bounces novos
+- **0 respostas pendentes** — IMAP limpo, replies_pending.json vazio
+- **40º dia sem resposta humana REAL** (Tauste 30/09)
+- **36 FP3 + 1 FP1** follow-ups enviados (lote de supermercados e indústrias)
+- Fila de prospecção: **0 pendentes MX-válidos** — cold email parado
+- SMTP/IMAP OK. Pipeline operacional em modo de espera.
+
+### Leads quentes (inalterados — 40 dias sem ação humana)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — respondido 30/10; follow-up humano atrasado
+2. 🍀 **PASTIFICIO SELMI** (Zendesk ticket 91322) — SAC abriu ticket, proposta enviada 03/11
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 40+ dias sem ação WhatsApp (11) 96785-9631
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 Josiane Marinho, 27+ dias
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 **COVABRA** — cadastro Ivrim pendente (isac.ivrim.com.br)
+7. 🔴🔴 **BRASFRIGO** (Salto/SP) / **QUEIJOS ITUPEVA** — coleta-teste a agendar
+8. 🟡 **SONDA** / **TAUSTE** — ligações pendentes
+
+### Gargalos
+1. 🔴 **40 dias sem resposta humana** — leads quentes esfriando
+2. 🔴 **Fila de prospecção zerada** — cold email parado; reposição depende de listas CNPJ pagas (Leadjet ~R$97) ou ciclo do Prospector
+3. 🟡 **Bounce ~19%** (88/457) — acima da meta de 15%
+4. 🔴 **Nenhum contrato fechado** após 457 leads contatados
+
 ## 2026-11-09 12:00 (Bot de SEO — cron semanal — segunda-feira)
 
 ### Melhorias aplicadas

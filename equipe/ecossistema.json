@@ -1,6 +1,25 @@
 {
-  "atualizado_em": "2026-11-09 17:39 (Atendente IA - cron #185 - segunda-feira)",
-  "criado_em": "2026-08-13",
+  "atualizado_em": "2026-11-09 17:32 (Melhorador Contínuo - cron #186 - segunda)",
+    "criado_em": "2026-08-13",
+  "ciclo_2026_11_09_cron_186_melhorador": {
+    "timestamp": "2026-11-09 17:32 (Melhorador Contínuo - cron #186)",
+    "melhorias": [
+      "1. 36 follow-ups processados (34 FP3 + 2 FP1) — watchdog zerado",
+      "2. Templates FP1/FP2/FP3 otimizados: US$ 15 bi, JBS +154%, volumes individuais",
+      "3. Farmoquímica S/A bounce corrigido: sac@fqmgrupo.com.br (MX Office365)",
+      "4. Site index.html: JBS + Madero no momentum section",
+      "5. Site industrias.html: prova social JBS + Lei SAF 2027-2034"
+    ],
+    "templates_atualizados": "bot/prospecao_followup.py (FP1, FP2, FP3)",
+    "bounce_corrigido": "Farmoquímica S/A — sac@fqmgrupo.com.br (domínio correto fqmgrupo.com.br, MX Outlook válido)",
+    "fila_pendentes": "0 MX-válidos (fila drenada — precisa Leadjet)",
+    "bounce_cache": 123,
+    "bounce_csv": 94,
+    "taxa_bounce": "~23% (acima da meta 15%)",
+    "taxa_resposta": "5,9% (abaixo da meta 8%)",
+    "dias_sem_resposta_humana": 39,
+    "proximo_passo": "ação humana nos leads quentes + compra Leadjet (R$97) para repor fila"
+  },
   "ciclo_2026_11_07_cron_184_atendente": {
     "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
     "meta_contrato_2": "🔴 FECHAR Brasfrigo (Salto/SP) — local, respondeu. AGENDAR COLETA-TESTE.",
