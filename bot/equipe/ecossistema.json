@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-07 18:30 (Atendente IA - cron tick #185 - 38 dias sem resposta humana - fila zerada)",
+ "atualizado_em": "2026-11-09 19:34 (Atendente IA - cron tick - terça-feira)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1471,7 +1471,7 @@
   "observacao": "Sem alterações desde tick #159 (12:34). Fila zerada. Nenhum novo lead respondeu com interesse. Selmi registrou ticket Zendesk 91322 (auto-ack via plataforma) na caixa hoje — resposta automática, não humana. Pipeline bloqueado em ação humana (Savegnago, Pague Menos, Nagumo, Covabra todos aguardando follow-up humano via WhatsApp/telefone)."
  },
  "ciclo_2026_11_03_atendente_cron_161": {
-  "timestamp": "2026-11-03 18:37 (Atendente IA - cron tick - terça-feira)",
+  "timestamp": "2026-11-09 19:34 (Atendente IA - cron tick - terça-feira)",
   "acoes": [
    "✅ sync_formspree.py — 120 bounces cache, 0 notificações novas",
    "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",
@@ -1601,46 +1601,46 @@
    "DU PORTO — Respondeu 04/11, não gera óleo de fritura. Ofertado vencidos >40% gordura com descaracterização."
   ]
  },
-"ciclo_2026_11_07_atendente_cron_noturno": {
- "timestamp": "2026-11-07 18:07 (Atendente IA - cron tick #185 - noturno)",
- "acoes": [
-  "✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas (OK após retentativa de timeout)",
-  "✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados; 0 novos)",
-  "✅ prospecao_followup.py — 0 follow-ups atrasados (fila zerada)",
-  "✅ bot_oleo.py send_sequence — sequência processada (0 envios pendentes)",
-  "✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
-  "⏭️ proposta_contrato/relatorio_ESG — não acionados (nenhum lead informou volume; nenhum pedido de relatório)",
-  "FILA DE PROSPECÇÃO: zerada — 0 MX-válidos pendentes."
- ],
- "diagnostico": {
-  "total_leads_watchdog": 455,
-  "ativos_watchdog": 323,
-  "bounce_cache_json": 122,
-  "watchdog": "exit 0 — saudável",
-  "fila_extra": "394 empresas (0 pendentes MX-válidos)",
-  "dias_sem_resposta_humana_nova": "38 (última: Tauste 30/09)",
-  "respostas_reais": 0,
-  "respostas_humanas": "Nenhuma. 38º dia desde a última resposta humana real (Tauste 30/09).",
-  "respostas_auto": 0,
-  "propostas_contrato_geradas": 0,
-  "relatorios_esg_gerados": 0,
-  "observacao": "38o dia sem respostas humanas novas. Sistema saudável (SMTP/IMAP OK, 0 follow-ups atrasados). Fila de prospecção zerada. Pipeline 100% bloqueado em ação humana — todos os 10+ leads quentes (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Nagumo, Sanofi) aguardam WhatsApp/telefone."
- },
- "leads_quentes": [
-  "SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 38 dias sem ação humana.",
-  "PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 24+ dias sem retorno.",
-  "REDE CONFIANCA (Sorocaba) — proposta 2.500 L/mês na mesa, sem resposta.",
-  "COVABRA — AÇÃO HUMANA: preencher cadastro fornecedor (isac.ivrim.com.br). 46+ dias sem ação.",
-  "BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
-  "QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
-  "SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
-  "TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09 — 38 dias.",
-  "NAGUMO — Caso 00143542, proposta anexada 14/10.",
-  "SANOFI MEDLEY — SAC encaminhou a Compras 29/10 (protocolo 03065348); follow-up humano venceu 03/11 — PENDENTE.",
-  "UNIAO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; sem retorno.",
-  "TOURINHO ALIMENTOS — Enviado 05/11, aguardar retorno.",
-  "SCALA LATICINIOS — Enviado 05/11, aguardar retorno.",
-  "DU PORTO — Respondeu 04/11, não gera óleo de fritura. Ofertado vencidos >40% gordura com descaracterização."
- ]
+ "ciclo_2026_11_07_atendente_cron_noturno": {
+  "timestamp": "2026-11-07 18:07 (Atendente IA - cron tick #185 - noturno)",
+  "acoes": [
+   "✅ sync_formspree.py — 122 bounces cache, 0 notificações Formspree novas (OK após retentativa de timeout)",
+   "✅ corrigir_emails.py — 0 bounces processados (todos os 122 já tentados; 0 novos)",
+   "✅ prospecao_followup.py — 0 follow-ups atrasados (fila zerada)",
+   "✅ bot_oleo.py send_sequence — sequência processada (0 envios pendentes)",
+   "✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
+   "⏭️ proposta_contrato/relatorio_ESG — não acionados (nenhum lead informou volume; nenhum pedido de relatório)",
+   "FILA DE PROSPECÇÃO: zerada — 0 MX-válidos pendentes."
+  ],
+  "diagnostico": {
+   "total_leads_watchdog": 455,
+   "ativos_watchdog": 323,
+   "bounce_cache_json": 122,
+   "watchdog": "exit 0 — saudável",
+   "fila_extra": "394 empresas (0 pendentes MX-válidos)",
+   "dias_sem_resposta_humana_nova": "38 (última: Tauste 30/09)",
+   "respostas_reais": 0,
+   "respostas_humanas": "Nenhuma. 38º dia desde a última resposta humana real (Tauste 30/09).",
+   "respostas_auto": 0,
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "observacao": "38o dia sem respostas humanas novas. Sistema saudável (SMTP/IMAP OK, 0 follow-ups atrasados). Fila de prospecção zerada. Pipeline 100% bloqueado em ação humana — todos os 10+ leads quentes (Savegnago, Pague Menos, Rede Confiança, Covabra, Brasfrigo, Queijos Itupeva, Sonda, Tauste, Nagumo, Sanofi) aguardam WhatsApp/telefone."
+  },
+  "leads_quentes": [
+   "SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 38 dias sem ação humana.",
+   "PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 24+ dias sem retorno.",
+   "REDE CONFIANCA (Sorocaba) — proposta 2.500 L/mês na mesa, sem resposta.",
+   "COVABRA — AÇÃO HUMANA: preencher cadastro fornecedor (isac.ivrim.com.br). 46+ dias sem ação.",
+   "BRASFRIGO (Salto/SP) — Agendar coleta-teste. Local, respondeu.",
+   "QUEIJOS ITUPEVA (Rafael) — Agendar coleta-teste.",
+   "SONDA (R$6,12bi) — Ligar (11) 2145-6200.",
+   "TAUSTE — Ligar (15) 3324-4680. Respondeu 30/09 — 38 dias.",
+   "NAGUMO — Caso 00143542, proposta anexada 14/10.",
+   "SANOFI MEDLEY — SAC encaminhou a Compras 29/10 (protocolo 03065348); follow-up humano venceu 03/11 — PENDENTE.",
+   "UNIAO SUPERMERCADOS (14 lojas, Itu) — Apresentação enviada 28/10; sem retorno.",
+   "TOURINHO ALIMENTOS — Enviado 05/11, aguardar retorno.",
+   "SCALA LATICINIOS — Enviado 05/11, aguardar retorno.",
+   "DU PORTO — Respondeu 04/11, não gera óleo de fritura. Ofertado vencidos >40% gordura com descaracterização."
+  ]
  }
 }

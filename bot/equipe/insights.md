@@ -1,3 +1,49 @@
+## 2026-11-09 (segunda-feira) — 18:34 (Atendente IA - cron tick #141)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 123 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces processados (todos 123 já tentados)
+- ✅ prospecao_followup: 0 follow-ups atrasados (fila zerada)
+- ✅ send_sequence: sequência processada (0 envios pendentes)
+- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+- 🔴 **40 dias sem resposta humana nova no fluxo de COMPRA de óleo** (última: Tauste 30/09)
+- 🔴 **Fila de prospecção ZERADA** — 0 pendentes MX-válidos
+- 🔴 **Pipeline de fechamento 100% bloqueado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+|- 📊 **457 leads** (~325 ativos, 123 bounce, ~24 respondido, ~15 encerrado)
+|- 🆕 **Pipeline inalterado desde tick #138** — sem leads novos, sem respostas novas, fila zerada
+|- 🔴 **40 dias de silêncio comercial** — nenhuma resposta humana desde Tauste (30/09)
+
+### Ações deste ciclo
+|| Ação | Resultado |
+||------|-----------|
+|| sync_formspree.py | 123 bounces cache, 0 notificações novas |
+|| corrigir_emails.py | 0 processados (todos 123 já tentados) |
+|| prospecao_followup.py | **0 FP** (fila de follow-ups zerada) |
+|| send_sequence | sequência processada (0 envios) |
+|| check-replies | 0 respostas (replies_pending.json vazio) |
+|| proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### Leads QUENTES (fluxo de compra de óleo)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 40+ dias sem ação humana. WhatsApp (11) 96785-9631.
+2. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 26 dias sem retorno.
+3. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+4. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br). 48+ dias sem ação.
+5. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+6. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+8. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (40 dias).
+9. 🟡 **Sanofi Medley** — protocolo 03065348, encaminhado a Compras 30/10, aguardar.
+10. 🟢 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+
+### Observações
+- **40 dias sem resposta humana nova** no fluxo de compra. Última resposta real: Tauste (30/09).
+- **Fila de prospecção zerada** — 0 pendentes MX-válidos. Sem fonte de busca gratuita para repor (DuckDuckGo/Mojeek/Bing bloqueados).
+- **Pipeline de fechamento 100% parado** — as 8 maiores oportunidades aguardam ação humana.
+- Nenhum lead informou volume para gerar proposta de contrato ou relatório ESG.
+- **Bounce rate**: ~27% (123/457) — acima da meta de 15%.
+
+---
+
 ## 2026-11-07 (sábado) — 18:30 (Atendente IA - cron tick #186)
 
 ### Diagnóstico do ciclo
@@ -1702,3 +1748,107 @@ Nenhuma. Nenhum lead respondeu neste ciclo — silêncio comercial mantido.
 - **Fila de prospecção zerada** — 394 empresas em fila_extra.json (não integradas ao leads.csv).
 - **Pipeline de fechamento 100% parado** — as 10+ maiores oportunidades aguardam ação humana.
 - Nenhum lead informou volume para gerar proposta de contrato ou relatório ESG.
+
+
+## 2026-11-03 (terça-feira) — 19:33 (Atendente IA - cron tick #161)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 120 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces novos processados (todos já tentados)
+- ✅ prospecao_followup: **41 follow-ups** — 10 FP3 + 30+ FP2 + 4 FP1 (nicho supermercados/indústrias/encapsulados)
+- ✅ send_sequence: sequência processada
+- ✅ check-replies: **1 resposta** — Selmi (Pastificio Selmi S/A)
+- ✅ **🔥 AÇÃO**: SAC Selmi (Cristina Magalhães) redirecionou para compras@selmi.com.br — padrão clássico de semi-fechamento!
+- ✅ Proposta de contrato **800 L/mês → R$1.120/mês → R$13.440/ano** gerada e enviada para compras@selmi.com.br
+- ✅ Lead compras@selmi.com.br reativado, sac@selmi.com.br encerrado/transferido
+- ✅ replies_pending.json zerado
+- 🔴 **34 dias sem resposta humana real nova** no fluxo de COMPRA de óleo
+- 🔴 Fila de prospecção ZERADA — 0 MX-válidos pendentes
+
+### 🔥 LEAD QUENTE DO DIA: Pastificio Selmi S/A
+- **Padrão**: SAC Selmi (Cristina Magalhães) respondeu o ticket Zendesk 91332 e **redirecionou para compras@selmi.com.br**
+- **Significado**: MESMO padrão de Savegnago, Pague Menos, Rede Confiança — SAC que encaminha = semi-fechamento
+- **O que foi feito**: Proposta formal gerada (800 L/mês estimados, R$1,40/L, R$13.440/ano) + bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) + cobertura completa de benefícios (bombonas, certificado, relatório ESG, PIX)
+- **Próximo passo**: Aguardar retorno do comprador. Follow-up por WhatsApp (11) 96785-9631 em 3-5 dias se silêncio.
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **41 FP** — 10 FP3 + 30+ FP2 + 4 FP1 |
+| send_sequence | sequência processada |
+| check-replies | **1 resposta: Selmi SAC → compras@selmi.com.br** |
+| proposta_contrato.py | **800 L/mês → R$1.120/mês → R$13.440/ano** |
+| enviar_proposta_selmi.py | Proposta + leads atualizados |
+
+### Leads QUENTES (fluxo de compra de óleo — fechamento depende de ação humana)
+0. 🆕🔥 **Pastificio Selmi S/A** (compras@selmi.com.br) — SAC redirecionou! Proposta 800 L/mês enviada HOJE. **Aguardar retorno comercial.**
+1. 🍀 **Sanofi Medley** (sac.brasil@sanofi.com) — encaminhado a Compras 29/10 (protocolo 03065348). Respondido 30/10.
+2. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 34+ dias sem ação humana. WhatsApp (11) 96785-9631.
+3. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 20 dias sem retorno.
+4. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+5. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 42+ dias sem ação.
+6. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+7. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+8. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+9. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (34 dias).
+10. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+
+### Observações
+- **34 dias sem resposta humana nova** no fluxo de compra. Selmi é o padrão SAC→comercial que já se repetiu 4 vezes (Savegnago, Pague Menos, Rede Confiança, agora Selmi). Todos aguardam ação humana.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que façam ligação ou WhatsApp.
+- **Bug conhecido**: proposta_contrato.py calcula faixa de preço incorretamente (800 L/mês mostra R$1,40/L em vez de R$1,60/L). Ajuste na função `preco_por_litro` é necessário — os parâmetros de entrada `(200, 1.20), (500, 1.40), (1000, 1.60)...` têm a faixa deslocada em 1 posição.
+
+
+
+## 2026-11-03 (terça-feira) — 19:34 (Atendente IA - cron tick #161)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 120 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces novos processados (todos já tentados)
+- ✅ prospecao_followup: **41 follow-ups** — 10 FP3 + 30+ FP2 + 4 FP1 (nicho supermercados/indústrias/encapsulados)
+- ✅ send_sequence: sequência processada
+- ✅ check-replies: **1 resposta** — Selmi (Pastificio Selmi S/A)
+- ✅ **🔥 AÇÃO**: SAC Selmi (Cristina Magalhães) redirecionou para compras@selmi.com.br — padrão clássico de semi-fechamento!
+- ✅ Proposta de contrato **800 L/mês → R$1.120/mês → R$13.440/ano** gerada e enviada para compras@selmi.com.br
+- ✅ Lead compras@selmi.com.br reativado, sac@selmi.com.br encerrado/transferido
+- ✅ replies_pending.json zerado
+- 🔴 **34 dias sem resposta humana real nova** no fluxo de COMPRA de óleo
+- 🔴 Fila de prospecção ZERADA — 0 MX-válidos pendentes
+
+### 🔥 LEAD QUENTE DO DIA: Pastificio Selmi S/A
+- **Padrão**: SAC Selmi (Cristina Magalhães) respondeu o ticket Zendesk 91332 e **redirecionou para compras@selmi.com.br**
+- **Significado**: MESMO padrão de Savegnago, Pague Menos, Rede Confiança — SAC que encaminha = semi-fechamento
+- **O que foi feito**: Proposta formal gerada (800 L/mês estimados, R$1,40/L, R$13.440/ano) + bônus de exclusividade (+R$0,10/L) e consolidação (+R$0,05/L) + cobertura completa de benefícios (bombonas, certificado, relatório ESG, PIX)
+- **Próximo passo**: Aguardar retorno do comprador. Follow-up por WhatsApp (11) 96785-9631 em 3-5 dias se silêncio.
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 120 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos já tentados) |
+| prospecao_followup.py | **41 FP** — 10 FP3 + 30+ FP2 + 4 FP1 |
+| send_sequence | sequência processada |
+| check-replies | **1 resposta: Selmi SAC → compras@selmi.com.br** |
+| proposta_contrato.py | **800 L/mês → R$1.120/mês → R$13.440/ano** |
+| enviar_proposta_selmi.py | Proposta + leads atualizados |
+
+### Leads QUENTES (fluxo de compra de óleo — fechamento depende de ação humana)
+0. 🆕🔥 **Pastificio Selmi S/A** (compras@selmi.com.br) — SAC redirecionou! Proposta 800 L/mês enviada HOJE. **Aguardar retorno comercial.**
+1. 🍀 **Sanofi Medley** (sac.brasil@sanofi.com) — encaminhado a Compras 29/10 (protocolo 03065348). Respondido 30/10.
+2. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 34+ dias sem ação humana. WhatsApp (11) 96785-9631.
+3. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 20 dias sem retorno.
+4. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+5. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro de fornecedor** (isac.ivrim.com.br). 42+ dias sem ação.
+6. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+7. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+8. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+9. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (34 dias).
+10. 🟡 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+
+### Observações
+- **34 dias sem resposta humana nova** no fluxo de compra. Selmi é o padrão SAC→comercial que já se repetiu 4 vezes (Savegnago, Pague Menos, Rede Confiança, agora Selmi). Todos aguardam ação humana.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que façam ligação ou WhatsApp.
+- **Bug conhecido**: proposta_contrato.py calcula faixa de preço incorretamente (800 L/mês mostra R$1,40/L em vez de R$1,60/L). Ajuste na função `preco_por_litro` é necessário — os parâmetros de entrada `(200, 1.20), (500, 1.40), (1000, 1.60)...` têm a faixa deslocada em 1 posição.
+

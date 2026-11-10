@@ -1,3 +1,48 @@
+## 2026-11-09 19:04 (Atendente IA — cron #187 — segunda-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 123 bounces cache, 0 notificações Formspree novas (timeout na 1ª tentativa, concluído na 2ª) |
+| ✅ corrigir_emails.py | 0 bounces novos processados (todos os 123 já tentados) |
+| ✅ prospecao_followup.py | 11 follow-ups enviados (8 FP2 + 3 FP1) a supermercados/indústrias |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios da fila principal |
+| ✅ bot_oleo.py check-replies | 0 respostas pendentes (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor | Meta |
+|-----------|-------|------|
+| Total leads | 457 | — |
+| `novo` | 325 | — |
+| `respondido` | 24 | — |
+| `bounce` | 93 | — |
+| `encerrado` | 15 | — |
+| Bounce cache | 123 | — |
+| Follow-ups atrasados | 0 ✅ | 0 ✅ |
+| Respostas pendentes | 0 ✅ | 0 ✅ |
+| Fila prospecção | 0 | ≥10 ❌ |
+| Dias sem resposta humana | 40+ | — |
+
+### Lead quentes (inalterados — 40+ dias sem ação humana)
+1. 🍀 **SANOFI MEDLEY** (SAC 03065348) — respondido 30/10; follow-up humano pendente
+2. 🍀 **PASTIFICIO SELMI** (ticket 91322) — proposta enviada 03/11
+3. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — 40+ dias sem ação WhatsApp (11) 96785-9631
+4. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho), 27+ dias
+5. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês
+6. 🔴🔴🔴 **COVABRA** — cadastro Ivrim pendente (isac.ivrim.com.br)
+7. 🔴🔴 **BRASFRIGO** / **QUEIJOS ITUPEVA** — coleta-teste a agendar
+8. 🟡 **SONDA** / **TAUSTE** — ligações pendentes
+
+### Gargalos
+1. 🔴 **40+ dias sem resposta humana** — leads quentes esfriando
+2. 🔴 **Fila de prospecção zerada** — cold email parado; reposição depende de Leadjet
+3. 🟡 **Bounce ~20%** (93/457) — acima da meta de 15%
+4. 🔴 **Nenhum contrato fechado** após 457 leads contatados
+
+---
+
 ## 2026-11-09 ~17:32 (Melhorador Contínuo — cron #186 — segunda-feira)
 
 ### Melhorias implementadas
@@ -7746,3 +7791,64 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 1. 🔴 **Ação humana urgente nos leads quentes**: Savegnago (WhatsApp — 40º dia!), Pague Menos (ticket 407470, 26+ dias), Covabra (cadastro Ivrim), Rede Confiança (proposta), Brasfrigo e Queijos Itupeva (coleta-teste). A fila de cold email está zerada — a única alavanca de receita agora é ação humana.
 2. 🟡 **Corrigir fluxo desmoldante**: 5 leads (Tecnoblock, Precon, Armando, Scirocco, Tubos Tradição) receberam boas-vindas mas status continua `novo`. Revisar script de envio do desmoldante para avançar status após disparo, ou criar um script de reconciliação.
 3. 🟢 **bounces.json com 123 entradas**: cresceu de 122 para 123 (+3d@gmail.com). Considerar limpeza periódica de entradas com >90 dias sem lead correspondente, para manter o cache enxuto.
+
+---
+
+## 2026-11-09 19:21 (Analista de Qualidade — cron #189 — segunda-feira)
+
+### Resultados do dia
+| Métrica | Valor |
+|---------|-------|
+| Total leads | 457 |
+| Leads novo | 325 |
+| Leads bounce | 93 |
+| Leads respondido | 24 |
+| Leads encerrado | 15 |
+| Bounces.json cache | 123 emails |
+| Formspree notificações novas | 0 |
+| Replies pending | 0 (vazio) |
+| Respondidos por IA | 20 |
+| Respondidos por humano | 0 |
+| Bounces com boas_vindas_em | 3 (conhecidos, race condition) |
+
+### Auditoria — correções e verificações
+1. **Sync executado**: sync_formspree.py rodou — 123 bounces em cache, 0 Formspree.
+2. **bounces.json × leads.csv**: 93 bounces no CSV batem com o cache. 30 emails extras no cache são de atividade não-lead (testes, prospecção externa) — sem correção necessária.
+3. **Proteção de status terminais**: nenhum lead respondido/encerrado foi incorretamente rebaixado a bounce. A proteção da linha 178-179 do sync_formspree.py está funcionando.
+4. **3 bounces com boas_vindas_em**: falecom@tecnobloc.com.br, contato@fabricablocoforte.com.br e teste.formspree@gmail.com. Todos são casos de welcome enviado ANTES do bounce ser detectado (timing/race condition). Nenhum reenvio ocorreu. Sem correção necessária — o sistema já previne reenvio.
+5. **Respostas pendentes**: 0. Nada para o Atendente processar.
+
+### Problemas encontrados (novos)
+- Nenhum problema de integridade novo detectado. Cache e CSV consistentes.
+- Nenhum bounce novo detectado (cache estável em 123).
+- Nenhum Formspree novo — leadsheet sem novos cadastros.
+
+### Sugestões para o Estrategista
+1. 🔴 **Ação humana ainda urgente**: mesma lista do tick anterior — Savegnago (WhatsApp, 40+ dias), Pague Menos (26+), Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva. A fila de cold email está seca; receita depende de follow-up humano.
+2. 🟡 **5 leads desmoldantes estagnados**: Tecnoblock, Precon, Armando, Scirocco, Tubos Tradição — boas-vindas enviadas mas status `novo`. Continua pendente da última recomendação; corrigir o script de envio do desmoldante.
+3. 🟢 **Dashboard de conversão**: com 20 leads respondidos por IA e 0 por humano, considerar revisar se a IA está convertendo ou apenas coletando respostas frias. Medir taxa de conversão (respondido → negócio fechado) separada para IA vs humano.
+
+## 2026-11-10 18:07 (Melhorador Contínuo — cron #188 — terça-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ prospecao_followup.py | 5 follow-ups enviados (3 FP3 + 2 FP1) — watchdog zerado |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ✅ corrigir_emails.py | 0 bounces processados (todos já tentados) |
+| ✅ Site stats atualizadas | 455→457 empresas, 39→41 dias consecutivos |
+
+### Diagnóstico
+| Indicador | Valor | Meta |
+|-----------|-------|------|
+| Total leads | 457 | — |
+| Bounce rate | ~23% | <15% ❌ |
+| Taxa resposta | 5,9% | >8% ❌ |
+| Follow-ups atrasados | 0 ✅ | 0 |
+| Fila prospecção | 0 | ≥10 ❌ |
+| Dias sem resposta humana | 41+ | — |
+
+### Gargalos
+1. 🔴 **41+ dias sem ação humana** nos leads quentes (Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo)
+2. 🔴 **Fila de prospecção zerada** — cold email parado; depende de Leadjet (R$97)
+3. 🟡 **Bounce ~23%** — acima da meta de 15%

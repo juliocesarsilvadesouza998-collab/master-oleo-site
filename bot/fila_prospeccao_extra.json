@@ -2857,10 +2857,31 @@
         "segmento": "laticinios (manteiga, queijos, mussarela) - NICHO PRIORITARIO (vencidos >40% gordura)"
       },
       {
-        "nome": "Nacon Lacteos",
-        "empresa": "Nacon Lacteos (fracionamento de queijos, manteiga, distribuicao)",
-        "email": "nacon@naconlacteos.com.br",
-        "cidade": "Araraquara/SP",
-        "segmento": "laticinios (fracionamento de queijos, manteiga, distribuicao) - NICHO PRIORITARIO (vencidos >40% gordura)"
-      }
-    ]
+              "nome": "Nacon Lacteos",
+              "empresa": "Nacon Lacteos (fracionamento de queijos, manteiga, distribuicao)",
+              "email": "nacon@naconlacteos.com.br",
+              "cidade": "Araraquara/SP",
+              "segmento": "laticinios (fracionamento de queijos, manteiga, distribuicao) - NICHO PRIORITARIO (vencidos >40% gordura)"
+            },
+            {
+              "nome": "Nutrisanti",
+              "empresa": "Santi Industria e Comercio Ltda (Nutrisanti, Trisanti, Novita)",
+              "email": "sac@nutrisanti.com.br",
+              "cidade": "Sao Paulo/SP",
+              "segmento": "industria de alimentos (margarinas, gorduras vegetais, oleos) - NICHO PRIORITARIO (gorduras/oleos); MX Titan valido 10/11"
+            },
+            {
+              "nome": "Bufalat Laticinios",
+              "empresa": "Laticinios Auricchio (Bufalat)",
+              "email": "bufalat@bufalat.com.br",
+              "cidade": "Sao Luiz do Paraitinga/SP",
+              "segmento": "laticinios (manteiga, queijos de bufala, mozarela) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 10/11"
+            },
+            {
+              "nome": "Diffucap",
+              "empresa": "Diffucap-Chemobras Quimica Farmaceutica Ltda",
+              "email": "sac@diffucap.com.br",
+              "cidade": "Rio de Janeiro/RJ",
+              "segmento": "industria farmaceutica (encapsulados, capsulas gelatinosas, medicamentos solidos orais) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 10/11"
+            }
+          ]
