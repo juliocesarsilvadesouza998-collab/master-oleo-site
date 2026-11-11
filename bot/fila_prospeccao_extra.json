@@ -2790,8 +2790,8 @@
     "nome": "Farmoquímica",
     "empresa": "Farmoquímica S/A",
     "email": "sac@fqmgrupo.com.br",
-        "cidade": "Campinas/SP",
-        "segmento": "industria farmaceutica (medicamentos, genéricos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); CORRIGIDO: farmoquimica.com.br bounce -> fqmgrupo.com.br (MX Office365 valido)"
+    "cidade": "Campinas/SP",
+    "segmento": "industria farmaceutica (medicamentos, genéricos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); CORRIGIDO: farmoquimica.com.br bounce -> fqmgrupo.com.br (MX Office365 valido)"
   },
   {
     "nome": "Cargill (Campinas)",
@@ -2848,47 +2848,54 @@
     "email": "sac@ecotaua.com.br",
     "cidade": "Santo Antonio do Taua/PA (escritorio SP)",
     "segmento": "industria de oleo de palma e gordura vegetal - NICHO PRIORITARIO (oleos e gorduras vegetais)"
-      },
-      {
-        "nome": "Laticinios Alegria",
-        "empresa": "Laticinios Alegria (queijos, manteiga, mussarela)",
-        "email": "contato@laticiniosalegria.com.br",
-        "cidade": "Santo Antonio da Alegria/SP",
-        "segmento": "laticinios (manteiga, queijos, mussarela) - NICHO PRIORITARIO (vencidos >40% gordura)"
-      },
-      {
-              "nome": "Nacon Lacteos",
-              "empresa": "Nacon Lacteos (fracionamento de queijos, manteiga, distribuicao)",
-              "email": "nacon@naconlacteos.com.br",
-              "cidade": "Araraquara/SP",
-              "segmento": "laticinios (fracionamento de queijos, manteiga, distribuicao) - NICHO PRIORITARIO (vencidos >40% gordura)"
-            },
-            {
-              "nome": "Nutrisanti",
-              "empresa": "Santi Industria e Comercio Ltda (Nutrisanti, Trisanti, Novita)",
-              "email": "sac@nutrisanti.com.br",
-              "cidade": "Sao Paulo/SP",
-              "segmento": "industria de alimentos (margarinas, gorduras vegetais, oleos) - NICHO PRIORITARIO (gorduras/oleos); MX Titan valido 10/11"
-            },
-            {
-              "nome": "Bufalat Laticinios",
-              "empresa": "Laticinios Auricchio (Bufalat)",
-              "email": "bufalat@bufalat.com.br",
-              "cidade": "Sao Luiz do Paraitinga/SP",
-              "segmento": "laticinios (manteiga, queijos de bufala, mozarela) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 10/11"
-            },
-            {
-                          "nome": "Diffucap",
-                          "empresa": "Diffucap-Chemobras Quimica Farmaceutica Ltda",
-                          "email": "sac@diffucap.com.br",
-                          "cidade": "Rio de Janeiro/RJ",
-                          "segmento": "industria farmaceutica (encapsulados, capsulas gelatinosas, medicamentos solidos orais) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 10/11"
-                        },
-                        {
-                          "nome": "ALL COMEX BR",
-                          "empresa": "ALCOMEX International Business Ltda",
-                          "email": "info@allcomexbr.com.br",
-                          "cidade": "Campinas/SP",
-                          "segmento": "trading de oleos, gorduras e margarinas - potenciais vencidos >40% gordura; MX Lexxa valido 10/11"
-                        }
-                      ]
+  },
+  {
+    "nome": "Laticinios Alegria",
+    "empresa": "Laticinios Alegria (queijos, manteiga, mussarela)",
+    "email": "contato@laticiniosalegria.com.br",
+    "cidade": "Santo Antonio da Alegria/SP",
+    "segmento": "laticinios (manteiga, queijos, mussarela) - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Nacon Lacteos",
+    "empresa": "Nacon Lacteos (fracionamento de queijos, manteiga, distribuicao)",
+    "email": "nacon@naconlacteos.com.br",
+    "cidade": "Araraquara/SP",
+    "segmento": "laticinios (fracionamento de queijos, manteiga, distribuicao) - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Nutrisanti",
+    "empresa": "Santi Industria e Comercio Ltda (Nutrisanti, Trisanti, Novita)",
+    "email": "sac@nutrisanti.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "industria de alimentos (margarinas, gorduras vegetais, oleos) - NICHO PRIORITARIO (gorduras/oleos); MX Titan valido 10/11"
+  },
+  {
+    "nome": "Bufalat Laticinios",
+    "empresa": "Laticinios Auricchio (Bufalat)",
+    "email": "bufalat@bufalat.com.br",
+    "cidade": "Sao Luiz do Paraitinga/SP",
+    "segmento": "laticinios (manteiga, queijos de bufala, mozarela) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 10/11"
+  },
+  {
+    "nome": "Diffucap",
+    "empresa": "Diffucap-Chemobras Quimica Farmaceutica Ltda",
+    "email": "sac@diffucap.com.br",
+    "cidade": "Rio de Janeiro/RJ",
+    "segmento": "industria farmaceutica (encapsulados, capsulas gelatinosas, medicamentos solidos orais) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 10/11"
+  },
+  {
+    "nome": "ALL COMEX BR",
+    "empresa": "ALCOMEX International Business Ltda",
+    "email": "info@allcomexbr.com.br",
+    "cidade": "Campinas/SP",
+    "segmento": "trading de oleos, gorduras e margarinas - potenciais vencidos >40% gordura; MX Lexxa valido 10/11"
+  },
+  {
+    "nome": "VitaVita Comercio e Industria",
+    "empresa": "VitaVita Comercio e Industria de Exportacao e Importacao Ltda",
+    "email": "vitavitacomercioindustria@gmail.com",
+    "cidade": "Hortolandia/SP",
+    "segmento": "Industria nutraceutica (fabricacao de suplementos alimentares e nutraceuticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
+  }
+]

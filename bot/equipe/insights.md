@@ -1,3 +1,50 @@
+## 2026-11-11 (quarta-feira) — 12:03 (Atendente IA - cron tick #147)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 128 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces processados (todos 128 já tentados)
+- ✅ prospecao_followup: 0 follow-ups atrasados (fila zerada)
+- ✅ send_sequence: sequência processada (0 envios pendentes)
+- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+- 🔴 **42 dias sem resposta humana nova no fluxo de COMPRA de óleo** (última: Tauste 30/09)
+- 🔴 **Fila de prospecção ZERADA** — 0 pendentes MX-válidos
+- 🔴 **Pipeline de fechamento 100% bloqueado** — todos os leads quentes aguardam ação humana via WhatsApp/telefone
+- 📊 **462 leads** (~330 ativos, 128 bounce, ~24 respondido, ~18 encerrado)
+- 🆕 **128 bounces (novos +5 no cache)** — todos sem alternativa de correção
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 128 bounces cache, 0 notificações novas |
+| corrigir_emails.py | 0 processados (todos 128 já tentados) |
+| prospecao_followup.py | **0 FP** (fila de follow-ups zerada) |
+| send_sequence | sequência processada (0 envios) |
+| check-replies | 0 respostas (replies_pending.json vazio) |
+| watchdog | exit 1 — 462 leads, 330 ativos, 128 bounces, SMTP/IMAP OK |
+| proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### Leads QUENTES (fluxo de compra de óleo)
+1. 🔥🔥🔥 **Savegnago** (R$7,98bi — #1 interior SP) — 42+ dias sem ação humana. WhatsApp (11) 96785-9631.
+2. 🔥🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 28 dias sem retorno.
+3. 🔥🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês. Aguardando retorno.
+4. 🔥🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br). 50+ dias sem ação.
+5. 🔥🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local, respondeu.
+6. 🔥🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — Ligar (11) 2145-6200.
+8. 🟡 **Tauste** — Ligar (15) 3324-4680. Respondeu 30/09 (42 dias).
+9. 🟡 **Sanofi Medley** — protocolo 03065348, encaminhado a Compras 30/10, aguardar.
+10. 🟢 **Nagumo** — Caso 00143542, proposta anexada 14/10.
+
+### Observações
+- **42 dias sem resposta humana nova** no fluxo de compra. Última resposta real: Tauste (30/09).
+- **Fila de prospecção zerada** — 0 pendentes MX-válidos. Sem fonte de busca gratuita para repor.
+- **Pipeline de fechamento 100% parado** — as maiores oportunidades aguardam ação humana (WhatsApp/telefone) que o sistema não pode realizar.
+- Nenhum lead informou volume para gerar proposta de contrato ou relatório ESG.
+- **+5 bounces no cache** (128 total) — todos sem alternativa de correção.
+- **Bounce rate**: ~28% (128/462) — acima da meta de 15%.
+
+---
+
 ## 2026-11-10 (terça-feira) — 19:33 (Atendente IA - cron tick #144)
 
 ### Diagnóstico do ciclo
