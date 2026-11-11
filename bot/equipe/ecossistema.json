@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-09 19:34 (Atendente IA - cron tick - terça-feira)",
+ "atualizado_em": "2026-11-10 18:32 (Atendente IA - cron tick - terça-feira)",
  "criado_em": "2026-08-13",
  "metas_semana_13_10_a_19_10": {
   "meta_contrato_1": "🔴 FECHAR Savegnago (#1 interior SP, R$7,98bi) — WhatsApp (11) 96785-9631. 13 dias sem resposta humana. PRIORIDADE ABSOLUTA.",
@@ -1471,7 +1471,7 @@
   "observacao": "Sem alterações desde tick #159 (12:34). Fila zerada. Nenhum novo lead respondeu com interesse. Selmi registrou ticket Zendesk 91322 (auto-ack via plataforma) na caixa hoje — resposta automática, não humana. Pipeline bloqueado em ação humana (Savegnago, Pague Menos, Nagumo, Covabra todos aguardando follow-up humano via WhatsApp/telefone)."
  },
  "ciclo_2026_11_03_atendente_cron_161": {
-  "timestamp": "2026-11-09 19:34 (Atendente IA - cron tick - terça-feira)",
+  "timestamp": "2026-11-10 18:32 (Atendente IA - cron tick - terça-feira)",
   "acoes": [
    "✅ sync_formspree.py — 120 bounces cache, 0 notificações novas",
    "✅ corrigir_emails.py — 0 bounces processados (todos já tentados anteriormente)",

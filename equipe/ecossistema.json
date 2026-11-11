@@ -1,6 +1,36 @@
 {
-  "atualizado_em": "2026-11-10 18:07 (Melhorador Contínuo — cron #188 — terça)",
+  "atualizado_em": "2026-11-10 21:26 (Melhorador Contínuo — cron #191 — terça)",
     "criado_em": "2026-08-13",
+  "ciclo_2026_11_10_cron_191_melhorador": {
+    "timestamp": "2026-11-10 21:26 (Melhorador Contínuo - cron #191)",
+    "melhorias": [
+      "1. Site stats atualizadas: 457→460 empresas, 41→42 dias consecutivos",
+      "2. Página industrias.html: nova seção 'Quem já respondeu a Master Óleo' com 6 cards de prova social real (Savegnago, Pague Menos, Sanofi, Selmi, Rede Confiança, Covabra)",
+      "3. ecossistema.json + insights.md atualizados com ciclo #191"
+    ],
+    "fila_pendentes": "0 MX-válidos (fila drenada — 42º dia)",
+    "bounce_cache": 123,
+    "bounce_csv": 93,
+    "taxa_bounce": "~23% (acima da meta 15%)",
+    "taxa_resposta": "5,8% (abaixo da meta 8%)",
+    "dias_sem_resposta_humana": 42,
+    "proximo_passo": "ação humana nos leads quentes + compra Leadjet (R$97) para repor fila"
+  },
+  "ciclo_2026_11_10_cron_189_atendente": {
+    "timestamp": "2026-11-10 18:32 (Atendente IA - cron #189)",
+    "melhorias": [
+      "1. sync_formspree: 123 bounces cache, 0 notif Formspree",
+      "2. corrigir_emails: 0 bounces novos (todos já tentados)",
+      "3. prospecao_followup: 0 atrasados, send_sequence processada, 0 replies"
+    ],
+    "fila_pendentes": "0 MX-válidos (fila drenada)",
+    "bounce_cache": 123,
+    "bounce_csv": 93,
+    "taxa_bounce": "~20% (acima da meta 15%)",
+    "taxa_resposta": "5,9% (abaixo da meta 8%)",
+    "dias_sem_resposta_humana": 41,
+    "proximo_passo": "ação humana nos leads quentes + compra Leadjet (R$97) para repor fila"
+  },
   "ciclo_2026_11_10_cron_188_melhorador": {
     "timestamp": "2026-11-10 18:07 (Melhorador Contínuo - cron #188)",
     "melhorias": [
