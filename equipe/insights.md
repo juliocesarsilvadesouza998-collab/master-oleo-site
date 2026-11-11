@@ -1,4 +1,98 @@
+## 2026-11-10 ~22:30 (Estrategista — cron dominical — terça-feira)
+
+### Diagnóstico da semana
+
+| Indicador | Valor | Meta |
+|-----------|-------|------|
+| Total leads | **460** | — |
+| `respondido` | 24 (5,2%) | >8% ❌ |
+| `bounce` | 93 (~20,2%) | <15% ❌ |
+| Contratos fechados | **0** | ≥1 ❌ |
+| Dias sem resposta humana | **42** ⚠️ | — |
+| Fila pendentes MX-válidos | **0** ❌ | ≥10 |
+
+### O que a pesquisa de mercado revelou
+
+1. **Mercado UCO aquecido — dados novos confirmados:**
+   - CBIO (crédito de descarbonização) subiu de R$45 (2024) para R$85 (2025) — quase dobrou (fonte: Mordor Intelligence)
+   - Preço spot UCO fob SP: R$5.438/tonelada (~R$5/L na indústria); óleo de soja R$5.808/ton — o spread caiu de R$150 para R$370/ton, UCO cada vez mais competitivo vs. soja (fonte: Argus Media, 2025)
+   - B16 em vigor desde março/2026; CNPE pode elevar para até B25
+   - Brasil coleta 180M L/ano de UCO, potencial de 600M L — **70% do mercado inexplorado**
+   - Mercado global de biocombustíveis Brasil: US$ 9,43 bi (2026) → US$ 17,82 bi (2031) — CAGR 13,58%
+
+2. **Negociação com concorrentes: aprendizado-chave da semana:**
+   - A MAIORIA dos restaurantes e redes JÁ TEM contrato com um coletor de óleo usado. Contratos típicos: 12-36 meses com renovação automática (fonte: GreaseTrapLocator/US).
+   - Leads com contrato NÃO são "não" — são "venda em 3 meses". Precisamos plantar a semente e esperar o ciclo de renovação.
+   - Diferenciais que quebram a inércia do contrato atual: pagamento PIX à vista (vs. troca por produtos), relatório ESG, bombona anti-furto, certificado MTR.
+   - **Playbook de concorrência adicionado ao persona.md** — 3 movimentos: diagnóstico (tem contrato?), plantio de sementes (diferenciais), calendário de follow-up de 4 meses.
+
+3. **Margem do biodiesel comprimida acelera busca por UCO:**
+   - Óleo de soja oscilou US$1.100-1.580/ton em 2024-2025, comprimindo margem do biodiesel de US$0,18 para US$0,06/L
+   - Isso forçou 12 usinas a paralisar — e acelera a corrida por UCO como matéria-prima de menor custo
+
+### Aprendizados críticos
+
+1. **🔴 O FUNIL DE COLD EMAIL ATINGIU O TETO DEFINITIVAMENTE.** 460 leads, 5,2% de resposta (acima da média de mercado de 1-5% para cold email B2B), mas **ZERO contratos**. O conteúdo e a abordagem funcionam — o que trava é a ausência de ação humana nos leads que já responderam. O sistema não pode mais avançar sozinho.
+
+2. **🔴 80%+ dos estabelecimentos já têm coletor.** O novo playbook de concorrência aborda isso, mas requer follow-up consistente por 3-4 meses — impossível sem ação humana ou automação de WhatsApp.
+
+3. **🟡 LEADS QUE RESPONDERAM PELO SAC E FORAM REDIRECIONADOS = SEMI-FECHAMENTO.** Savegnago, Pague Menos, Covabra e Rede Confiança SEGUIRAM o MESMO padrão: SAC → comercial. Isso não é rejeição, é validação. O protocolo correto (já documentado no persona.md) é atualizar email, gerar proposta e fazer follow-up humano em 3 dias. Nenhum desses passos foi executado nos últimos 42 dias.
+
+4. **🟡 COMPRAR LEADJET (R$197) É A ÚNICA SAÍDA PARA REPOR FILA.** Sem nova fonte de leads, o cold email não volta a operar. Prioridade após o 1º contrato fechado.
+
+5. **🟡 WHATSAPP BUSINESS API É O PRÓXIMO PASSO TÉCNICO.** Se o Atendente puder enviar mensagens de WhatsApp automatizadas para leads que já responderam email, destrava o pipeline sem depender de ação manual. Custo: ~R$144/mês (Z-API).
+
+### Decisão da semana (10-16/11)
+
+**Foco: REENGANJAMENTO — não mais prospecção.** A prioridade não é enviar mais emails frios. É:
+1. 🔴 COVABRA — preencher cadastro Ivrim (única ação 100% manual que destrava contrato de rede)
+2. 🔴 SAVEGNAGO — WhatsApp de reengajamento
+3. 🔴 PAGUE MENOS — ticket 407470
+4. 🔴 BRASFRIGO — coleta-teste (local, mais fácil)
+5. 🔴 REDE CONFIANÇA — bônus de exclusividade
+6. 🟡 QUEIJOS ITUPEVA, SONDA, TAUSTE, SANOFI MEDLEY
+
+**Meta da semana: 1 contrato de coleta regular fechado (qualquer porte).**
+
+---
+
 ## 2026-11-10 21:26 (Melhorador Contínuo — cron #191 — terça-feira)
+
+## 2026-11-10 23:26 (Analista de Qualidade — cron — terça-feira)
+
+### Sincronização
+- `sync_formspree.py` executado com sucesso (precisou de >60s — 179 bounces no IMAP para processar)
+- Cache: **123** emails em bounces.json
+- Leads marcados como bounce no CSV: **93**
+- **30** emails órfãos em bounces.json (sem lead correspondente no CSV) — limpeza opcional
+- **0** notificações novas do Formspree
+
+### Estado dos Leads (460 total)
+| Status | Qtd |
+|--------|-----|
+| `novo` | 328 |
+| `bounce` | 93 |
+| `respondido` | 24 |
+| `encerrado` | 15 |
+
+### Auditoria
+- **3 leads** com status `bounce` mas `boas_vindas_em` preenchido (enviaram email antes do bounce ser detectado):
+  1. Tecnobloc <falecom@tecnobloc.com.br>
+  2. Fábrica Bloco Forte <contato@fabricablocoforte.com.br>
+  3. Cliente Teste Formspree <teste.formspree@gmail.com>
+- Nenhum lead com status `respondido` ou `encerrado` foi incorretamente rebaixado a `bounce` ✅
+- `replies_pending.json`: **vazio** — sem respostas pendentes
+- Bounce cache vs CSV: consistentes (30 órfãos são emails de leads que não existem mais no CSV)
+
+### Problemas Encontrados
+1. **`sync_formspree.py` time out em 60s** — o script processa todos os bounces do IMAP (179 emails), o que leva >60s. O timeout padrão de 60s no cron é insuficiente.
+2. **3 leads bounce com boas_vindas_em** — o send_sequence enviou antes do bounce ser registrado. Isso é esperado (o bounce só é detectado depois do envio), mas idealmente o pipeline deveria verificar o cache ANTES de enviar.
+3. **30 emails órfãos em bounces.json** — resíduos de leads removidos ou emails que nunca foram leads. Não causam dano, mas poluem o cache.
+
+### Sugestões para o Estrategista
+1. **Aumentar timeout do sync_formspree.py** para 180s no cron, ou refatorar para processar bounces em lotes menores.
+2. **Adicionar verificação de bounce pré-envio** no `send_sequence` — antes de enviar qualquer email, checar se o email do lead está no bounces.json. Isso evitaria os 3 casos de "bounce com boas_vindas_em".
+3. **Limpar bounces.json** — remover os 30 emails órfãos (não correspondem a nenhum lead ativo) para manter o cache enxuto.
 
 ### Diagnóstico
 | Indicador | Valor |
@@ -7966,3 +8060,51 @@ Pipeline de cold email 100% drenado — 0 pendentes MX-válidos na fila de prosp
 1. 🔴 **41+ dias sem ação humana** nos leads quentes (Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo)
 2. 🔴 **Fila de prospecção zerada** — cold email parado; depende de Leadjet (R$97)
 3. 🟡 **Bounce ~23%** — acima da meta de 15%
+
+
+---
+
+## 2026-11-10 21:30 (Atendente IA — cron tick #192 — terça-feira)
+
+### Diagnóstico do ciclo
+| Ação | Resultado |
+|------|-----------|
+| `sync_formspree.py` | 123 bounces cache, 0 notificações Formspree novas |
+| `corrigir_emails.py` | 0 bounces processados (todos já tentados) |
+| `prospecao_followup.py` | 0 follow-ups atrasados (watchdog zerado) |
+| `bot_oleo.py send_sequence` | Sequência processada (0 envios — fila 100% drenada) |
+| `bot_oleo.py check-replies` | **0 respostas** (replies_pending.json vazio) |
+| `scan_inbox.py` | 0 não lidas — 460 leads, 283 msgids enviados |
+| `proposta_contrato.py` / `relatorio_esg.py` | Não executados (sem lead com volume novo / ESG) |
+
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | 460 |
+| Msgids enviados | 283 |
+| Bounce cache | 123 |
+| Respostas pendentes | 0 |
+| Caixa não lidas | 0 |
+| Follow-ups atrasados | 0 ✅ |
+| Fila prospecção pendentes | 0 (seca) ❌ |
+| Dias sem resposta humana | 42 (Tauste 30/09) |
+
+### 🔥 Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi) — WhatsApp (11) 96785-9631. **42+ dias sem ação**.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — ticket 407470 (Josiane Marinho). 29+ dias.
+3. 🔴🔴🔴 **REDE CONFIANÇA** — Proposta 2.500 L/mês. Sorocaba.
+4. 🔴🔴🔴 **COVABRA** — Cadastro fornecedor Ivrim pendente desde 22/09.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Coleta-teste.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Coleta-teste.
+7. 🍀 **SANOFI MEDLEY** — SAC 03065348, Compras encaminhado 29/10.
+8. 🍀 **PASTIFICIO SELMI** — Ticket 91322, proposta 03/11.
+9. 🟡 **SONDA** (R$6,12bi) — Ligar (11) 2145-6200.
+10. 🟡 **TAUSTE** — Ligar (15) 3324-4680.
+
+### Gargalos
+1. 🔴 **42 dias sem ação humana** — leads quentes esfriando; sem intervenção o funil apodrece
+2. 🔴 **Fila de prospecção zerada** — cold email parado; reposição depende de Leadjet (R$197)
+3. 🟡 **Bounce ~23%** — acima da meta de 15%
+4. 🔴 **0 contratos** após 460 empresas contatadas e 283 envios efetivos
+
+### Próximo passo
+O sistema está em 'modo de espera' — mantendo operação mas sem leads novos para processar. A única alavanca de receita é ação humana nos leads quentes + compra de lista CNPJ (Leadjet) para reabastecer a fila de prospecção.

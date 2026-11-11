@@ -2878,10 +2878,17 @@
               "segmento": "laticinios (manteiga, queijos de bufala, mozarela) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 10/11"
             },
             {
-              "nome": "Diffucap",
-              "empresa": "Diffucap-Chemobras Quimica Farmaceutica Ltda",
-              "email": "sac@diffucap.com.br",
-              "cidade": "Rio de Janeiro/RJ",
-              "segmento": "industria farmaceutica (encapsulados, capsulas gelatinosas, medicamentos solidos orais) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 10/11"
-            }
-          ]
+                          "nome": "Diffucap",
+                          "empresa": "Diffucap-Chemobras Quimica Farmaceutica Ltda",
+                          "email": "sac@diffucap.com.br",
+                          "cidade": "Rio de Janeiro/RJ",
+                          "segmento": "industria farmaceutica (encapsulados, capsulas gelatinosas, medicamentos solidos orais) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Outlook valido 10/11"
+                        },
+                        {
+                          "nome": "ALL COMEX BR",
+                          "empresa": "ALCOMEX International Business Ltda",
+                          "email": "info@allcomexbr.com.br",
+                          "cidade": "Campinas/SP",
+                          "segmento": "trading de oleos, gorduras e margarinas - potenciais vencidos >40% gordura; MX Lexxa valido 10/11"
+                        }
+                      ]

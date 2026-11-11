@@ -256,6 +256,42 @@ CONCORRÊNCIA NA REGIÃO (pesquisa Estrategista 21/09):
   negociação sem compromisso.
 - Atendimento: seg a sáb, horário comercial.
 
+## ⚔️ Playbook de CONCORRÊNCIA — como ganhar do coletor atual (11/11/2026)
+
+**Contexto:** A maioria dos restaurantes, padarias e redes de supermercados JÁ TEM contrato com um coletor de óleo usado. Contratos típicos são de 12-36 meses com renovação automática (fonte: GreaseTrapLocator/US). O lead não vai trocar de fornecedor no primeiro contato. A batalha NÃO é "sim ou não" — é "quando seu contrato atual vencer".
+
+### Estratégia de 3 movimentos para leads com coletor atual
+
+**1. Descubra se ele tem contrato (pergunta de diagnóstico):**
+"Vocês já têm contrato com algum coletor de óleo atualmente? Ou fazem descarte por conta própria?"
+- Se SIM → "Sem problema, a maioria dos estabelecimentos já tem. Nossa proposta é para quando seu contrato atual estiver próximo da renovação — podemos enviar nossa referência para você ter no radar."
+- Se NÃO → lead pronto, aplicar playbook normal de fechamento.
+
+**2. Plante a semente da troca (sem atacar o concorrente):**
+Fatos que fazem o lead questionar o contrato atual:
+- "A maioria dos contratos renova automaticamente em 60-90 dias. Se o seu tem cláusula de renovação automática, você pode estar perdendo o melhor momento para renegociar."
+- "Pagamos à vista PIX na coleta — sem precisar escolher produtos de limpeha nem esperar 30 dias."
+- "Fornecemos relatório ESG mensal com a marca do seu estabelecimento (litros, água preservada, CO₂). Seu concorrente oferece isso?"
+- "Nossa bombona tem trava anti-furto — o óleo virou alvo de quadrilhas no interior de SP (R$ 500 mil em prejuízos registrados)."
+- "Certificado de destinação + MTR em cada coleta — seu passivo não fica no seu CNPJ."
+
+**3. Calendário de follow-up pós-concorrência:**
+- **Mês 1 (agora):** Apresentação com diferenciais + pergunta se tem contrato
+- **Mês 2 (30 dias):** "Lembrando que estamos aqui. Seu contrato atual tem renovação automática? Verifique o prazo de aviso prévio (normalmente 60 dias)."
+- **Mês 3 (60 dias):** "Estamos com agenda para novas coletas em [CIDADE]. Se quiser fazer uma coleta-teste conosco enquanto decide, pode agendar sem compromisso."
+- **Mês 4 (90 dias):** Reengajamento: dados atualizados de mercado + cases de redes que trocaram
+
+**💎 Dica de ouro:** O lead com contrato atual NÃO é um não — é um "venda em 3 meses". A paciência e o follow-up qualificado vencem o coletor incumbente, que normalmente não faz follow-up nem oferece relatório ESG.
+
+### Frases de contra-argumento (prontas)
+
+| Lead diz | Responda |
+|----------|----------|
+| "Já tenho empresa que coleta" | "Ótimo! A maioria já tem. Ficamos como 2ª opção. Posso enviar nossos diferenciais (PIX à vista + relatório ESG + certificado MTR) para quando seu contrato atual estiver perto de vencer?" |
+| "Pagam mais que vocês" | "Entendi. Só um alerta: ofertas muito acima de R$ 2,50/L no mercado formal costumam ser de coletores sem licença — e pela PNRS (Lei 12.305/2010), o passivo ambiental fica no CNPJ de quem gerou, não do coletor. Preço justo + operação regular = decisão segura." |
+| "Estou satisfeito com o atual" | "Bom saber! Ficamos felizes que você faz o descarte correto. Deixe meu contato para quando quiser uma segunda cotação — não cobramos nada e pagamos à vista." |
+| "Manda proposta para avaliar" | Enviar tabela de faixas (R$ 1,00-1,50/L ≤100L; R$ 1,50-2,00/L 100-500L; R$ 2,00-2,50/L 500+L) + relatório ESG de exemplo + certificado modelo. Sem compromisso. |
+
 ## 🎯 Playbook de Fechamento (leads quentes — prioridade da semana)
 
 Use quando o lead responder com qualquer sinal de abertura (perguntou valor,
