@@ -17,6 +17,11 @@ FILA = os.path.join(BASE, "fila_prospeccao_extra.json")
 LEADS = os.path.join(BASE, "leads.csv")
 BOUNCES = os.path.join(BASE, "bounces.json")
 
+# Filtro de qualificação de alvo (fonte única: filtros_oleo.py).
+# Laticínios/queijarias estão fora do alvo (sem óleo separável) — decisão 12/11/2026.
+sys.path.insert(0, BASE)
+from filtros_oleo import motivo_exclusao  # noqa: E402
+
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
 
@@ -34,7 +39,6 @@ ALVOS = [
     ("atacadista distribuidora de alimentos Campinas contato", "Campinas/SP", "Distribuidora/atacadista de alimentos (estoque de oleo vegetal vencido + fritura)"),
     ("industria de margarina e gordura vegetal Sao Paulo contato", "Sao Paulo/SP", "Industria de margarinas/gorduras vegetais (vencidos >40% gordura - descaracterizacao)"),
     ("fabrica de maionese e molhos contato comercial", "Sao Paulo/SP", "Industria de maionese/molhos (vencidos emulsionados - descaracterizacao)"),
-    ("laticinio manteiga fabrica Sao Paulo contato comercial", "Sao Paulo/SP", "Laticinio/manteiga (manteiga vencida >40% gordura - descaracterizacao)"),
     ("empresa de alimentacao coletiva refeitorio industrial Campinas", "Campinas/SP", "Alimentacao coletiva/refeitorio industrial (cozinha industrial - fritura alto volume)"),
     ("cozinha industrial refeicoes coletivas Sorocaba", "Sorocaba/SP", "Alimentacao coletiva/refeitorio industrial (cozinha industrial - fritura alto volume)"),
     ("hotel fazenda eventos Campinas contato", "Campinas/SP", "Hotel fazenda (cozinha industrial - fritura continua)"),
@@ -293,7 +297,7 @@ def main():
     with ThreadPoolExecutor(max_workers=8) as ex:
         emails_por_host = list(ex.map(lambda t: (t, site_emails(t[0], t[1])), tarefas))
 
-    novas, sem_email, sem_mx, ja, fora_cidade = [], 0, 0, 0, 0
+    novas, sem_email, sem_mx, ja, fora_cidade, fora_alvo = [], 0, 0, 0, 0, 0
     for (host, cidade, seg), (emails, cidade_ok) in emails_por_host:
         if not emails:
             sem_email += 1
@@ -321,12 +325,18 @@ def main():
         reg = {"nome": nome_empresa(host), "empresa": nome_empresa(host) + " (" + host + ")",
                "email": escolhido, "cidade": cidade, "segmento": seg,
                "fonte": "prospector-web-2026-11-02"}
+        _fora = motivo_exclusao(reg["nome"], reg["empresa"], reg["segmento"])
+        if _fora:
+            fora_alvo += 1
+            print(f"  ⛔ fora do alvo ({_fora}): {host} — não entra na fila")
+            continue
         novas.append(reg)
         conhecidos.add(escolhido)
         print(f"  ✅ {reg['empresa'][:48]:<48} <{escolhido}> MX={mx}")
 
     print(f"\nResumo: {len(novas)} novas | {sem_email} sem email no site | "
-          f"{fora_cidade} fora da cidade | {sem_mx} sem MX valido | {ja} ja conhecidas")
+          f"{fora_cidade} fora da cidade | {sem_mx} sem MX valido | {ja} ja conhecidas | "
+          f"{fora_alvo} fora do alvo (laticinio/nao-oleoso)")
 
     if not novas:
         return

@@ -19,6 +19,10 @@ from email.utils import formataddr, make_msgid
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE, "config.json")
+# Filtro de qualificação de alvo (fonte única: filtros_oleo.py).
+# Regra: laticínios/queijarias NÃO entram (sem óleo separável, ticket baixo) — decisão 12/11/2026.
+sys.path.insert(0, BASE)
+from filtros_oleo import motivo_exclusao  # noqa: E402
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 FIELDS = ["id","nome","empresa","email","tipo","volume","segmento","cidade","fonte","status",
           "criado_em","boas_vindas_em","follow1_em","follow2_em","follow3_em",
@@ -379,6 +383,11 @@ def prospecao(args):
     
     enviados = 0
     for lead_info in EMPRESAS:
+        fora = motivo_exclusao(lead_info.get("nome", ""), lead_info.get("empresa", ""),
+                               lead_info.get("segmento", ""))
+        if fora:
+            print(f"⛔ fora do alvo ({fora}): {lead_info['empresa']} — pulando")
+            continue
         email_addr = lead_info["email"].strip().lower()
         if args.list:
             status = "✅ já cadastrado" if email_addr in existing else "⬜ novo"

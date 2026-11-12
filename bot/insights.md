@@ -1330,3 +1330,63 @@ O canal e-mail está em fim de fôlego: 5,9% de resposta (acima da média de col
 
 ---
 
+
+
+## 2026-11-11 16:34 (Atendente IA - cron tick #148 - quarta-feira)
+
+### Diagnóstico do ciclo
+- **462 leads, 391 envios, 24 respostas (5,9%)** — inalterado
+- ✅ sync_formspree.py: 128 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py: 0 bounces processados (todos os 128 já tentados)
+- ✅ prospecao_followup.py: 0 follow-ups atrasados
+- ✅ bot_oleo.py send_sequence: sequência processada, nada a enviar
+- ✅ bot_oleo.py check-replies: 0 respostas (replies_pending.json vazio)
+- ✅ _miniscan_inbox.py: INBOX 0 não lidas
+- ✅ watchdog.py: exit 1 — 462 leads, 330 ativos, 128 bounces (1 bounce_registrado sem alternativa — inócuo). SMTP/IMAP OK.
+- **🔴 43 dias sem resposta humana com volume** — última: Tauste (30/09)
+- **🔴 Pipeline de fechamento bloqueado** — todos os leads quentes aguardam ação humana (WhatsApp/telefone)
+- 📊 Fila de prospecção zerada — sem fonte de busca para repor (bloqueio DuckDuckGo/Mojeek/Bing)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 128 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 bounces processados (todos os 128 já tentados) |
+| prospecao_followup.py | 0 follow-ups devidos |
+| bot_oleo.py send_sequence | sequência processada, nada a enviar |
+| bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| watchdog.py | exit 1 — 1 bounce sem correção (conhecido, bounce_registrado sem saída) |
+| proposta_contrato/relatorio_ESG | não acionados (0 leads com volume ou solicitação) |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 43+ dias sem ação humana.
+2. 🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 28 dias sem retorno.
+3. 🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br). 51+ dias.
+5. 🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local.
+6. 🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **Tauste** — (15) 3324-4680. Respondeu 30/09.
+9. 🟡 **Sanofi Medley** — Protocolo 03065348 (29/10).
+10. 🟡 **Nagumo** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- 43º dia sem respostas humanas novas no fluxo de COMPRA de óleo. Sistema 100% saudável.
+- O watchdog aponta 1 bounce sem correção — bounce_registrado sem alternativa de email. Inócuo.
+- Fila de prospecção zerada — sem serper_api_key nem buscas web gratuitas para reposição.
+- Pipeline de fechamento totalmente bloqueado em ação humana (WhatsApp/telefone). Protocolo de reengajamento da persona prioriza: **Savegnago → WhatsApp (11) 96785-9631**.
+
+---
+
+## 12/11/2026 — DECISÃO DO JULIO: laticínios estão FORA do alvo (Master Óleo)
+
+**Regra (palavras dele): "Empresa de laticínios, vamos esquecer — eles não têm lucro e nem óleo."**
+
+- **Fora do alvo:** laticínios, queijarias, leiterias, indústrias de leite/iogurte/requeijão, distribuidoras de laticínios/frios e qualquer empresa que processe leite. O resíduo delas é soro/queijo (não é óleo separável) e o ticket de vencido é baixo.
+- **Continua valendo:** empresas que GERAM gordura/óleo — indústria de margarina, gordura vegetal, maionese, óleos, fritura (supermercados, restaurantes, indústria de alimentos, encapsulados).
+- **Implementado em código (fonte única da verdade):** `bot/filtros_oleo.py` → `motivo_exclusao()`. Usado por `prospecao.py`, `prospectar_novos.py`, `enviar_lote.py`, `prospecao_followup.py` e `bot_oleo.py`.
+- **Novo status no leads.csv:** `descartado` (= alvo fora do perfil; nunca recebe apresentação nem follow-up).
+- **Limpeza feita:** 37 leads de laticínio passaram para `descartado`; 69 empresas de laticínio removidas da `fila_prospeccao_extra.json` (backups `.bak-20261112-093039-laticinios`). O alvo `"laticinio manteiga fabrica"` foi retirado da lista de buscas do `prospectar_novos.py` e do prompt do cron Prospector.
+- **Mantidos como falsos positivos** (têm manteiga de cacau / gordura vegetal, não são laticínio): Cacau Show, Kopenhagen, Agropalma, YBI Óleos Vegetais, Supermercados Paraná, JLO Atacadista, De Marchi (pão de queijo), sorveterias.
+- **Efeito na lista de leads quentes:** Queijos Itupeva sai da prioridade de fechamento (era #6) — é laticínio, fora do alvo.
+- **Pendência que continua igual:** fila de prospecção com 0 pendentes (todas as 344 empresas da fila já foram contatadas) — reposição depende de nova fonte de leads.

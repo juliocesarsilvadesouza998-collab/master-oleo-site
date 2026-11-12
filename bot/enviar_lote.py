@@ -19,6 +19,8 @@ from email.utils import formataddr, make_msgid, formatdate
 
 # Reutiliza o template otimizado do prospecao.py (fonte única de verdade)
 from prospecao import tpl_apresentacao as tpl_apresentacao_novo, _plain_from_html
+# Filtro de qualificação de alvo (laticínios fora do alvo — decisão 12/11/2026)
+from filtros_oleo import motivo_exclusao
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE, "config.json")
@@ -181,6 +183,10 @@ def main():
     for p in EMPRESAS:
         em = p["email"].strip().lower()
         if em in contatados or em in bounces:
+            continue
+        _fora = motivo_exclusao(p.get("nome", ""), p.get("empresa", ""), p.get("segmento", ""))
+        if _fora:
+            print(f"⛔ fora do alvo ({_fora}): {p['empresa']} — pulando")
             continue
         if not tem_mx(em.split("@")[-1]):
             sem_mx.append(p)

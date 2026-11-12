@@ -211,7 +211,7 @@ def send_sequence(args):
     now = datetime.datetime.now().astimezone()
     env = cfg["sequencia"]
     for l in leads:
-        if l["status"] in ("respondido", "bounce", "encerrado"):
+        if l["status"] in ("respondido", "bounce", "encerrado", "descartado"):
             continue
         # Leads de prospecção (outbound) têm fluxo próprio (apresentação + follow-ups),
         # NÃO a sequência de boas-vindas do guia (que é para quem nos procurou).

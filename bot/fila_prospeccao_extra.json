@@ -490,25 +490,11 @@
     "segmento": "industria de maioneses, catchups e mostardas (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
-    "nome": "Nutylac",
-    "empresa": "Nutylac Industria de Alimentos",
-    "email": "contato@nutylac.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "industria de alimentos formulados em po e bebidas lacteas - NICHO PRIORITARIO (laticinios)"
-  },
-  {
     "nome": "Gomah Alimentos",
     "empresa": "Gomah Comercio e Industria de Sementes Ltda",
     "email": "comercial@gomah.com.br",
     "cidade": "Sorocaba/SP",
     "segmento": "industria de alimentos (sementes naturais)"
-  },
-  {
-    "nome": "Laticinios Argenzio",
-    "empresa": "Argenzio Industria de Laticinios",
-    "email": "sac@argenzio.com.br",
-    "cidade": "Sao Paulo/SP (sede; fabrica em Buritama/SP)",
-    "segmento": "laticinios (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
     "nome": "Sao Roque Supermercados",
@@ -581,13 +567,6 @@
     "segmento": "Supermercados (rede)"
   },
   {
-    "nome": "Sorocaba Frios",
-    "empresa": "Sorocaba Frios Distribuidora de Frios e Laticinios",
-    "email": "contato@sorocabafrios.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de frios e laticinios (queijos, cremes e derivados alto teor de gordura) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
     "nome": "Megasabor",
     "empresa": "Mega Ingredientes Alimenticios Ltda",
     "email": "contato@megasabor.com.br",
@@ -623,74 +602,11 @@
     "segmento": "supermercados (rede regional, padaria/rotisserie/acougue - NICHO PRIORITARIO)"
   },
   {
-    "nome": "Usina Ipe Campos",
-    "empresa": "Usina Ipe Campos Ltda (beneficiamento de leite)",
-    "email": "ipecampos@uol.com.br",
-    "cidade": "Ipeuna/SP",
-    "segmento": "laticinios industrial (20 mil L/dia: mussarela, minas frescal, ricota) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
     "nome": "Generoso Alimentos",
     "empresa": "Generoso Alimentos (Grupo DJL)",
     "email": "contato@generosoalimentos.com.br",
     "cidade": "Sorocaba/SP",
     "segmento": "industria de alimentos (biscoitos, cafe, massas; food service) - oleo de fritura em volume"
-  },
-  {
-    "nome": "Queijos Itupeva",
-    "empresa": "Queijos Itupeva",
-    "email": "rafaelgalvao@queijositupeva.com.br",
-    "cidade": "Itupeva/SP",
-    "segmento": "laticinios artesanal (minas frescal, meia cura, coalho, colonial) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "Queijaria Laghi & Tosi",
-    "empresa": "Queijaria Laghi & Tosi",
-    "email": "adm@queijarialaghitosi.com.br",
-    "cidade": "Cabreuva/SP",
-    "segmento": "laticinios artesanal (queijos de ovelha: manchego, pecorino) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "Betins Laticinios",
-    "empresa": "Betins Laticinios",
-    "email": "betinslaticinios@gmail.com",
-    "cidade": "Piracicaba/SP (Artemis)",
-    "segmento": "laticinios artesanal (queijos A2A2, iogurtes, doces) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "De Buffalas",
-    "empresa": "De Buffalas (laticinio de bufala)",
-    "email": "debuffalas@gmail.com",
-    "cidade": "Tatui/SP",
-    "segmento": "laticinios de bufala (mozarela, burrata, ricota) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "Queijaria Vale dos Anjos",
-    "empresa": "Queijaria Vale dos Anjos",
-    "email": "fazendavaledosanjos@gmail.com",
-    "cidade": "Itu/SP (Portal do Eden)",
-    "segmento": "laticinios artesanal (queijos autorais Jersey) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "Queijaria Rima",
-    "empresa": "Queijaria Rima",
-    "email": "queijariarima@gmail.com",
-    "cidade": "Porto Feliz/SP",
-    "segmento": "laticinios artesanal (queijos de ovelha) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "Capril Caprioles",
-    "empresa": "Capril Caprioles",
-    "email": "vendas.caprioles@gmail.com",
-    "cidade": "Jundiai/SP",
-    "segmento": "laticinios artesanal (queijos de cabra e vaca) - NICHO PRIORITARIO (laticinios)"
-  },
-  {
-    "nome": "Cabanha Campestre 53",
-    "empresa": "Cabanha Campestre 53",
-    "email": "cabanhacampestre53@gmail.com",
-    "cidade": "Campinas/SP (Joaquim Egidio)",
-    "segmento": "laticinios artesanal (queijos de ovelha) - NICHO PRIORITARIO (laticinios)"
   },
   {
     "nome": "SAC Mambo",
@@ -740,20 +656,6 @@
     "email": "diretoria@muffato.com.br",
     "cidade": "Campinas/SP (Max) - grupo nacional",
     "segmento": "Atacarejo (bandeira Max Atacadista do Grupo Muffato; canal institucional com aba Fornecedor)"
-  },
-  {
-    "nome": "Laticinios Pelissari",
-    "empresa": "Laticinios Pelissari (Mogi Guacu/SP)",
-    "email": "contato@laticiniospelissari.com.br",
-    "cidade": "Mogi Guacu/SP",
-    "segmento": "laticinios (queijos, bebidas lacteas, MANTEIGAS) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 12/09"
-  },
-  {
-    "nome": "Quata Alimentos",
-    "empresa": "Quata Alimentos (Grupo Savencia)",
-    "email": "sac@quataalimentos.com.br",
-    "cidade": "Sao Paulo/SP (sede; fabrica em Quata/SP)",
-    "segmento": "laticinios (leites UHT, queijos, requeijao, cremes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 12/09"
   },
   {
     "nome": "Produtos Marcy",
@@ -826,25 +728,11 @@
     "segmento": "industria de oleos vegetais e gorduras - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
-    "nome": "Mococa",
-    "empresa": "Mococa S/A Produtos Alimenticios",
-    "email": "sac@mococa.com.br",
-    "cidade": "Mococa/SP",
-    "segmento": "laticinios (manteiga, creme de leite, leite condensado, queijos) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
     "nome": "Bionatus",
     "empresa": "Bionatus Laboratorio Botanico Ltda",
     "email": "comunicacao@bionatusfarma.com.br",
     "cidade": "Sao Jose do Rio Preto/SP",
     "segmento": "industria farmaceutica e suplementos (encapsulados) - NICHO PRIORITARIO"
-  },
-  {
-    "nome": "Nestle Brasil (fabrica Araras)",
-    "empresa": "Nestle Industrial e Comercial Ltda (fabrica Araras/SP)",
-    "email": "falecom@nestle.com.br",
-    "cidade": "Araras/SP (fabrica leite condensado e creme de leite)",
-    "segmento": "industria alimenticia gigante - laticinios (leite condensado, creme de leite) - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
     "nome": "Vitafor",
@@ -861,46 +749,11 @@
     "segmento": "industria de molhos artesanais (molhos, condimentos) - usa oleos vegetais; email publico no Facebook oficial"
   },
   {
-    "nome": "Laticinios Aviacao",
-    "empresa": "Goncalves Salles S.A. Industria e Comercio Ltda (Laticinios Aviacao)",
-    "email": "aviacao@mailaviacao.com.br",
-    "cidade": "Sao Paulo/SP",
-    "segmento": "industria de laticinios e manteiga (manteiga em lata, queijos, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Google valido 14/09"
-  },
-  {
-    "nome": "Sitio Piscke",
-    "empresa": "Sitio Piscke Agroindustrial Ltda",
-    "email": "sitiopisckeoficial@gmail.com",
-    "cidade": "Elias Fausto/SP",
-    "segmento": "laticinios artesanal (manteiga, queijo, iogurte) - NICHO PRIORITARIO (vencidos >40% gordura); a ~10km de Salto; MX Gmail valido 14/09"
-  },
-  {
-    "nome": "Bom Rech",
-    "empresa": "Bom Rech Industria de Alimentos Ltda",
-    "email": "contato@bomrech.com.br",
-    "cidade": "Itu/SP",
-    "segmento": "industria de laticinios (doce de leite, cremes, manteiga) - NICHO PRIORITARIO (vencidos >40% gordura); Itu a ~15km de Salto; MX Outlook valido 14/09"
-  },
-  {
     "nome": "Embavi",
     "empresa": "EmbaVi Industria e Comercio Ltda",
     "email": "financeiro@embavi.com.br",
     "cidade": "Valinhos/SP",
     "segmento": "industria de alimentos (molhos, vinagres e oleos vegetais) - usa oleos vegetais; Valinhos a ~30km de Salto; MX Outlook valido 14/09"
-  },
-  {
-    "nome": "Laticinios Manchester",
-    "empresa": "Laticinios Manchester Ltda",
-    "email": "eaparecida@manchesterartesanal.com",
-    "cidade": "Sorocaba/SP",
-    "segmento": "laticinios artesanal (manteiga, queijo, iogurte) - NICHO PRIORITARIO (vencidos >40% gordura); Sorocaba a ~45km de Salto; MX Google valido 14/09"
-  },
-  {
-    "nome": "Laticinios Trani",
-    "empresa": "Trani Industria e Comercio de Laticinios Ltda",
-    "email": "itapirense@itapirense.com.br",
-    "cidade": "Itapira/SP",
-    "segmento": "industria de laticinios (manteiga, queijo, iogurte) - NICHO PRIORITARIO (vencidos >40% gordura); MX Kinghost valido 14/09"
   },
   {
     "nome": "The Best Salgados",
@@ -915,20 +768,6 @@
     "email": "homemade@homemade.com.br",
     "cidade": "Itupeva/SP",
     "segmento": "industria de alimentos (geleias artesanais e food service) - Itupeva a ~30km de Salto; MX Locaweb valido 14/09"
-  },
-  {
-    "nome": "Leiteria Prosperidade",
-    "empresa": "Leiteria Prosperidade Ltda",
-    "email": "leiteriaprosperidade@gmail.com",
-    "cidade": "Sao Miguel Arcanjo/SP",
-    "segmento": "laticinios (queijos e derivados do leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX Gmail valido 14/09"
-  },
-  {
-    "nome": "Queijos Rosa",
-    "empresa": "Queijos Rosa Ltda",
-    "email": "financeiro@queijosrosa.com.br",
-    "cidade": "Paraibuna/SP",
-    "segmento": "laticinios artesanal (queijos e manteiga) - NICHO PRIORITARIO (vencidos >40% gordura); MX Locaweb valido 14/09"
   },
   {
     "nome": "Coocerqui Supermercados",
@@ -1043,13 +882,6 @@
     "segmento": "Hospital e planos de saude - canal SUSTENTABILIDADE (fit ESG)"
   },
   {
-    "nome": "Milk Menk",
-    "empresa": "Milk Menk Laticinios Artesanais",
-    "email": "contato@milkmenk.com.br",
-    "cidade": "Porto Feliz/SP",
-    "segmento": "laticinios artesanal (queijos, iogurte, doce de leite) - NICHO PRIORITARIO (vencidos >40% gordura); fazenda em Porto Feliz a ~40km de Salto; MX valido 16/09"
-  },
-  {
     "nome": "Hospital Regional de Sorocaba",
     "empresa": "Hospital Regional de Sorocaba Dr. Adib Domingos Jatene (SPDM)",
     "email": "ouvidoria@hrs.spdm.org.br",
@@ -1078,13 +910,6 @@
     "segmento": "industria de alimentos (graos, arroz, feijao, farinhas) - 50 anos, 2-8t de graos/dia; Capivari a ~30km de Salto; MX valido 18/09"
   },
   {
-    "nome": "Frinni (Frigodeliss)",
-    "empresa": "Frinni Frigodeliss Ltda (Grupo Bressiani)",
-    "email": "frigodeliss@frigodeliss.com.br",
-    "cidade": "Capivari/SP",
-    "segmento": "laticinios e sobremesas lacteas (iogurtes, doces, sobremesas) - NICHO PRIORITARIO (vencidos >40% gordura); Capivari a ~30km de Salto; MX Locaweb valido 18/09"
-  },
-  {
     "nome": "UNISO - Universidade de Sorocaba",
     "empresa": "Universidade de Sorocaba (UNISO)",
     "email": "ouvidoria@uniso.br",
@@ -1111,13 +936,6 @@
     "email": "sac@mondialealimentos.com.br",
     "cidade": "Sao Roque/SP",
     "segmento": "industria de alimentos (massas, molhos, conservas, antepastos) - usa oleos vegetais em conservas e molhos; Sao Roque a ~20km de Salto; MX Locaweb valido 19/09"
-  },
-  {
-    "nome": "Schreiber Foods Porto Feliz",
-    "empresa": "Schreiber Foods Brasil (fabrica de queijos processados em Porto Feliz/SP)",
-    "email": "contact@schreiberfoods.com",
-    "cidade": "Porto Feliz/SP",
-    "segmento": "laticinios multinacional (queijos processados, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); nova fabrica em Porto Feliz a ~40km de Salto; MX Outlook valido 19/09"
   },
   {
     "nome": "Supermercados Revolucao",
@@ -1225,13 +1043,6 @@
     "segmento": "Industria de biscoitos e massas (fritura industrial em volume MUITO ALTO) - NICHO PRIORITARIO"
   },
   {
-    "nome": "Embaré",
-    "empresa": "Embaré Indústria de Laticínios (manteiga, creme de leite, leite em po)",
-    "email": "sac@embare.com.br",
-    "cidade": "SP (fabrica em SP e regiao)",
-    "segmento": "laticinios gigante (manteiga, creme de leite, leite condensado) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
     "nome": "Kazuo Alimentos",
     "empresa": "Kazuo Alimentos (fabrica de maionese e molhos - Americana/SP)",
     "email": "sac@kazuo.com.br",
@@ -1274,20 +1085,6 @@
     "segmento": "Industria de alimentos frigorifico (Outlook MX)"
   },
   {
-    "nome": "Vigor Alimentos",
-    "empresa": "Vigor Alimentos S.A.",
-    "email": "sac@vigor.com.br",
-    "cidade": "São Paulo/SP",
-    "segmento": "laticinios (manteiga, creme de leite, iogurtes e requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 24/09"
-  },
-  {
-    "nome": "Laticinios Catupiry",
-    "empresa": "Laticinios Catupiry Ltda (requeijao, queijos processados)",
-    "email": "sac@catupiry.com.br",
-    "cidade": "São Paulo/SP",
-    "segmento": "laticinios (requeijao, queijos processados, manteiga) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 24/09"
-  },
-  {
     "nome": "Balan Ingredientes",
     "empresa": "Balan Ingredientes Ltda",
     "email": "comercial@balaningredientes.com.br",
@@ -1300,13 +1097,6 @@
     "email": "comercial@maguacamp.com.br",
     "cidade": "Sorocaba/Campinas-SP",
     "segmento": "distribuidora de alimentos e bebidas (estoque de oleo vegetal vencido) - MX Kinghost valido 24/09"
-  },
-  {
-    "nome": "Yema (Grupo Granarolo)",
-    "empresa": "Granarolo Brasil Ltda (Yema laticinios)",
-    "email": "faleconosco@granarolo.com.br",
-    "cidade": "São Paulo/SP",
-    "segmento": "laticinios (mozzarella, queijos, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 24/09"
   },
   {
     "nome": "Vitall Sorvetes",
@@ -1409,13 +1199,6 @@
     "fonte": "prospector_20260925"
   },
   {
-    "nome": "Piracanjuba",
-    "empresa": "Laticinios Bela Vista S.A. (Grupo Piracanjuba)",
-    "email": "sac@piracanjuba.com.br",
-    "cidade": "Goias/SP (fabrica em Goias, distribuicao nacional)",
-    "segmento": "laticinios gigante (manteiga, creme de leite, leite condensado, queijos) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
     "nome": "Cargill Brasil",
     "empresa": "Cargill Agricola S.A.",
     "email": "sac@sac-cargill.com.br",
@@ -1423,45 +1206,11 @@
     "segmento": "industria de oleos vegetais e gorduras - NICHO PRIORITARIO (oleos e gorduras)"
   },
   {
-    "nome": "Danone Brasil",
-    "empresa": "Danone Ltda.",
-    "email": "dac@danone.com",
-    "cidade": "SP (fabrica em Pocos de Caldas/MG e Sao Paulo/SP)",
-    "segmento": "laticinios multinacional (iogurtes, leites fermentados, queijos, manteiga, cremes) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
-    "nome": "Itambé (Lactalis Brasil)",
-    "empresa": "Lactalis do Brasil (Itambé, Batavo, Parmalat, Président)",
-    "email": "sac@itambe.com.br",
-    "cidade": "SP (23 fabricas no Brasil - manteiga, queijos, cremes, iogurtes)",
-    "segmento": "laticinios gigante - maior grupo lacteo do mundo (manteiga, queijos, creme de leite) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
     "nome": "Predilecta Alimentos",
     "empresa": "Predilecta Alimentos Ltda",
     "email": "falecom@sacresponde.com.br",
     "cidade": "Matao/SP",
     "segmento": "industria de maioneses, condimentos, molhos e conservas - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
-    "nome": "Laticínios Porto Alegre",
-    "empresa": "Laticinios Porto Alegre Ltda",
-    "email": "sac@laticiniosportoalegre.com.br",
-    "cidade": "Ponte Nova/MG (unidades em MG, RJ, ES)",
-    "segmento": "laticinios (queijos, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
-    "nome": "Batavo (Lactalis Brasil)",
-    "empresa": "Lactalis do Brasil (Batavo, Itambé, Président)",
-    "email": "sac@batavo.com.br",
-    "cidade": "SP (fabrica em SP - manteiga, queijos, iogurtes)",
-    "segmento": "laticinios (manteiga, queijos, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
-    "empresa": "Bom Gosto Alimentos Ltda",
-    "email": "contato@bongosto.com.br",
-    "cidade": "Belo Horizonte/MG (e-commerce nacional de queijos e laticinios)",
-    "segmento": "laticinios e queijos artesanais (manteiga, queijos especiais) - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
     "nome": "Tauste Supermercados",
@@ -1504,20 +1253,6 @@
     "email": "contato@grossburger.com.br",
     "cidade": "Jundiai/SP",
     "segmento": "hamburgueria artesanal (fritura alto volume, batata frita)"
-  },
-  {
-    "nome": "Alvoar Lácteos",
-    "empresa": "Alvoar Lácteos S.A. (Betânia, Embaré, Camponesa)",
-    "email": "sac@alvoarlacteos.com.br",
-    "cidade": "São Paulo/SP (marcas Betânia, Embaré, Camponesa - laticínios nacional)",
-    "segmento": "laticínios gigante (manteiga, queijos, creme de leite, leite condensado) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 29/09"
-  },
-  {
-    "nome": "Fort Alimentos",
-    "empresa": "Fort Alimentos (Atacado de Frios e Laticínios)",
-    "email": "vendas@fortalimentossorocaba.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de frios e laticínios (queijos, mortadela, requeijão) - NICHO PRIORITARIO (estoque de laticínios vencidos >40% gordura); MX SpamExperts valido 29/09"
   },
   {
     "nome": "Oil Company",
@@ -1611,34 +1346,6 @@
     "segmento": "Supermercados (rede regional - vencidos de margarina, manteiga, frios e laticinios nas lojas) - NICHO PRIORITARIO (vencidos >40% gordura); email no site oficial; MX Google valido 12/10"
   },
   {
-    "nome": "Maldonado Frios e Laticinios",
-    "empresa": "Maldonado Frios e Laticinios (distribuidora de leite e laticinios - Sorocaba/SP)",
-    "email": "contabildias@terra.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de laticinios e leite (queijos, cremes, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 07.830.778/0001-77 ativa desde 2006; MX Terra valido 12/10"
-  },
-  {
-    "nome": "Probilacto Distribuidora de Alimentos",
-    "empresa": "Probilacto Distribuidora de Alimentos (distribuidora de laticinios - Sorocaba/SP)",
-    "email": "sorocabavendas@grupoaraki.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de laticinios e leite (leite, queijos, derivados - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 45.397.114/0001-55 ativa desde 1971; MX uhserver valido 12/10"
-  },
-  {
-    "nome": "Rocha Distribuidora",
-    "empresa": "Rocha Distribuidora (distribuidora de laticinios - Sorocaba/SP)",
-    "email": "contato@rochadist.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de laticinios e leite (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 03.529.863/0001-49 ativa desde 1999; MX Uni5 valido 12/10"
-  },
-  {
-    "nome": "Line Comercio e Distribuicao",
-    "empresa": "Line Comercio e Distribuicao Ltda (distribuidora de laticinios - Sorocaba/SP)",
-    "email": "anacletaneves.sorocaba@gmail.com",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de laticinios e leite (vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); CNPJ 49.147.494/0001-20 ativa desde 2023; MX Google valido 12/10"
-  },
-  {
     "nome": "Fullcaps",
     "empresa": "Fullcaps Encapsulamento e Envase Ltda",
     "email": "comercial@fullcaps.com.br",
@@ -1653,13 +1360,6 @@
     "segmento": "industria de alimentos (molhos, vinagres, conservas) - usa oleos vegetais em producao - NICHO PRIORITARIO (industria alimenticia)"
   },
   {
-    "nome": "Braslact",
-    "empresa": "Braslact Produtos de Leite Ltda",
-    "email": "braslact@braslact.com.br",
-    "cidade": "Indaiatuba/SP",
-    "segmento": "industria de laticinios (queijos, manteiga, derivados) - PRIORIDADE (gorduras/laticinios, vencidos >40% gordura)"
-  },
-  {
     "nome": "WBM Alimentos",
     "empresa": "WBM Alimentos Ltda",
     "email": "contato@wbmalimentos.com.br",
@@ -1672,13 +1372,6 @@
     "email": "sac@jundiafoods.com.br",
     "cidade": "Barueri/SP",
     "segmento": "distribuidora de alimentos (maioneses, molhos, congelados) - possivel geracao de vencidos"
-  },
-  {
-    "nome": "Sorocaba Frios",
-    "empresa": "Sorocaba Frios Distribuidora de Alimentos Ltda",
-    "email": "contato@sorocabafrios.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de laticinios e frios (queijos, manteiga, cremes - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Google valido 14/10"
   },
   {
     "nome": "Ello Ingredientes",
@@ -1730,25 +1423,11 @@
     "segmento": "industria de alimentos (molhos, conservas, condimentos - usa oleos vegetais em producao, estoque de vencidos) - NICHO PRIORITARIO (industria alimenticia); MX Outlook valido 14/10"
   },
   {
-    "nome": "Prime Food",
-    "empresa": "Prime Food Comercial Ltda (Sorocaba/SP)",
-    "email": "contato@comlprimefood.com.br",
-    "cidade": "Sorocaba/SP",
-    "segmento": "distribuidora de alimentos (mercearia, laticinios, frios - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios); MX Locaweb valido 14/10"
-  },
-  {
     "nome": "Ameripan Distribuidora",
     "empresa": "Ameripan Distribuidora de Produtos para Panificacao Ltda",
     "email": "atendimento@ameripan.com.br",
     "cidade": "Americana/Indaiatuba/Campinas-SP",
     "segmento": "distribuidora de produtos para panificacao, confeitaria e sorveteria (margarinas, gorduras vegetais e oleos - vencidos >40% gordura) - NICHO PRIORITARIO; MX mail.ameripan.com.br valido 14/10"
-  },
-  {
-    "nome": "Gvinah",
-    "empresa": "Gvinah Industria e Comercio de Alimentos Ltda",
-    "email": "marketing@gvinah.com.br",
-    "cidade": "Sao Paulo/SP (fabrica de manteiga no Bom Retiro)",
-    "segmento": "industria de manteiga e laticinios (manteiga, queijos, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 14/10"
   },
   {
     "nome": "Mirassol Refeições",
@@ -1856,20 +1535,6 @@
     "segmento": "INDUSTRIA de edulcorantes e ingredientes alimenticios - contato direto COMERCIAL - oleos e gorduras em producao"
   },
   {
-    "nome": "Level Indústria Comércio e Distribuição de Alimentos",
-    "empresa": "Level Industria Comercio e Distribuicao de Alimentos Ltda",
-    "email": "ocastelan@terra.com.br",
-    "cidade": "Indaiatuba/SP",
-    "segmento": "laticinios (fabricacao de laticinios CNAE 1052-0/00) - NICHO PRIORITARIO (vencidos >40% gordura); Indaiatuba a ~20km de Salto; MX Terra valido 16/10"
-  },
-  {
-    "nome": "Laticinios Modelo",
-    "empresa": "Laticinios Modelo",
-    "email": "atendimento@laticiniosmodelo.com.br",
-    "cidade": "Sao Paulo/SP (sede; entrega nacional)",
-    "segmento": "laticinios (manteiga, queijos, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 17/10"
-  },
-  {
     "nome": "Martins Carnes",
     "empresa": "Supermercado Martins Carnes LTDA",
     "email": "martins@martinscarnes.com",
@@ -1931,20 +1596,6 @@
     "email": "fargimed@fargimed.com.br",
     "cidade": "Indaiatuba/SP",
     "segmento": "industria farmaceutica (medicamentos alopaticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas); MX Locaweb valido 22/10"
-  },
-  {
-    "nome": "Quatrelati Alimentos",
-    "empresa": "Quatrelati Alimentos Ltda (Grupo Tres Marias)",
-    "email": "comercial@quatrelati.com.br",
-    "cidade": "Itapeva/SP (escritorio Sao Paulo/SP)",
-    "segmento": "industria de manteiga e derivados lacteos - NICHO PRIORITARIO (vencidos >40% gordura); MX Umbler valido 22/10"
-  },
-  {
-    "nome": "Matilat (Laticinios Matinal)",
-    "empresa": "Laticinios Matinal (Marca Matilat) - Grupo BRQ",
-    "email": "marketing@matilat.com.br",
-    "cidade": "Catanduva/SP",
-    "segmento": "laticinios (manteiga, queijos, iogurtes, derivados lacteos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 22/10"
   },
   {
     "nome": "Bella Alimentos",
@@ -2059,13 +1710,6 @@
     "segmento": "industria de margarinas, gorduras vegetais e oleos (esmagamento de graos) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook verificado 24/10"
   },
   {
-    "nome": "Bomy Laticinios",
-    "empresa": "Agropecuaria Bomy Ltda (Laticinios Bomy, desde 1965)",
-    "email": "comercial@bomy.com.br",
-    "cidade": "Jambeiro/SP (Vale do Paraiba)",
-    "segmento": "laticinios (queijos, manteiga, requeijao, creme de leite, doce de leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX Locaweb verificado 24/10"
-  },
-  {
     "nome": "Sorocaps",
     "empresa": "Sorocaps Industria Farmaceutica Ltda",
     "email": "sorocaps@sorocaps.com.br",
@@ -2078,27 +1722,6 @@
     "email": "atendimento@afactory.com.br",
     "cidade": "Bauru/SP",
     "segmento": "Industria nutraceutica (capsulas, comprimidos, pos)"
-  },
-  {
-    "nome": "Conduz Laticinios",
-    "empresa": "Conduz Laticinios",
-    "email": "contato@conduzlaticinios.com.br",
-    "cidade": "Sao Paulo/SP",
-    "segmento": "Laticinios e derivados (queijos, manteiga)"
-  },
-  {
-    "nome": "Laticinios PJ",
-    "empresa": "Laticinios PJ",
-    "email": "sac@laticiniospj.com.br",
-    "cidade": "Minas Gerais",
-    "segmento": "Laticinios (queijos)"
-  },
-  {
-    "nome": "Laticinios Piramide",
-    "empresa": "Laticinios Piramide",
-    "email": "latpiramide@gmail.com",
-    "cidade": "Sao Paulo/SP",
-    "segmento": "Laticinios"
   },
   {
     "nome": "Nutrielen",
@@ -2220,13 +1843,6 @@
     "segmento": "Supermercados (rede 30+ lojas, padaria/rotisserie/acougue - email fornecedor direto)"
   },
   {
-    "nome": "Sacco Brasil",
-    "empresa": "Sacco Comercio, Importacao e Exportacao de Alimentos Ltda",
-    "email": "saccobrasil@saccobrasil.com.br",
-    "cidade": "Campinas/SP",
-    "segmento": "Industria de ingredientes e biotecnologia para laticinios - oleos/gorduras no processo"
-  },
-  {
     "nome": "Nha Benta Industria de Alimentos",
     "empresa": "Nha Benta Industria de Alimentos Ltda",
     "email": "mario@nhabenta.com.br",
@@ -2267,13 +1883,6 @@
     "email": "falecom@armazemdamaria.com.br",
     "cidade": "Campinas/SP",
     "segmento": "Mercearias gourmet (rede) - frituras, rotisserie e oleos vencidos"
-  },
-  {
-    "nome": "Laticinios Frizzo",
-    "empresa": "Laticinios Frizzo",
-    "email": "contato@laticiniosfrizzo.com.br",
-    "cidade": "Tuiuti/SP",
-    "segmento": "Laticinios e manteiga - NICHO PRIORITARIO (vencidos >40% gordura)"
   },
   {
     "nome": "Reino Alimentos",
@@ -2500,20 +2109,6 @@
     "segmento": "Frigorifico (gordura animal)"
   },
   {
-    "nome": "Laticinios Uniao do Brasil",
-    "empresa": "Laticinios Uniao do Brasil",
-    "email": "gerentecomercial@laticiniosuniaodobrasil.com.br",
-    "cidade": "SP",
-    "segmento": "Industria de laticinios (manteiga, cremes)"
-  },
-  {
-    "nome": "Schreiber Foods Brasil",
-    "empresa": "Schreiber Foods Brasil",
-    "email": "portofeliz@schreiberfoods.com",
-    "cidade": "Porto Feliz/SP",
-    "segmento": "Laticinios e queijos (vencidos >40% gordura)"
-  },
-  {
     "nome": "Lider Alimentos",
     "empresa": "Lider Alimentos",
     "email": "marketing.gold@lideralimentos.com.br",
@@ -2696,13 +2291,6 @@
     "segmento": "Industria de oleos e gorduras vegetais (oleo de palma, gorduras especiais) - NICHO PRIORITARIO (gorduras/laticinios); email oficial do site; MX Outlook valido 03/11"
   },
   {
-    "nome": "Globalfood",
-    "empresa": "Globalfood Importacao e Comercio de Alimentos Ltda",
-    "email": "globalfood@globalfood.com.br",
-    "cidade": "Sao Paulo/SP",
-    "segmento": "Industria/importacao de laticinios e queijos especiais (40 anos no mercado queijeiro) - NICHO PRIORITARIO (laticinios); email oficial do site; MX Outlook valido 03/11"
-  },
-  {
     "nome": "Primer Labs",
     "empresa": "Primer Labs Industria de Encapsulados Ltda (Sorocaba/SP)",
     "email": "contato@primerlabs.com.br",
@@ -2745,34 +2333,6 @@
     "segmento": "Industria de amendoim (torra/fritura - oleo de fritura em volume) - NICHO 3 (fritura); email oficial do site; MX valido 03/11"
   },
   {
-    "nome": "Deliart Brasil",
-    "empresa": "Deliart - Delicias Artesanais do Brasil (queijos, manteigas e laticinios especiais)",
-    "email": "contato@deliartbrasil.com.br",
-    "cidade": "Rio de Janeiro/RJ (vendas nacionais; DDD 21)",
-    "segmento": "Comercio/industria de laticinios especiais (queijos, manteigas - vencidos >40% gordura) - NICHO PRIORITARIO (laticinios/gorduras); email oficial do site; MX Hostinger valido 03/11"
-  },
-  {
-    "nome": "Polenghi",
-    "empresa": "Polenghi Indústrias Alimentícias Ltda",
-    "email": "sac@polenghi.com.br",
-    "cidade": "São Paulo/SP",
-    "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
-  },
-  {
-    "nome": "Tourinho Alimentos",
-    "empresa": "Tourinho Alimentos Ltda (manteiga em lata desde 1991)",
-    "email": "compras@tourinhoalimentos.com.br",
-    "cidade": "Uberlandia/MG",
-    "segmento": "industria de manteiga (manteiga comum, primeira qualidade, food service) - NICHO PRIORITARIO (vencidos >40% gordura); MX Google valido 05/11"
-  },
-  {
-    "nome": "Scala Laticinios",
-    "empresa": "Scala Laticinios S.A. (queijos, manteiga, requeijao)",
-    "email": "sac@scala.com.br",
-    "cidade": "Sacramento/MG",
-    "segmento": "laticinios gigante (queijos, manteiga, requeijao) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 05/11"
-  },
-  {
     "nome": "Paulispan",
     "empresa": "Paulispan Industria de Panificacao Ltda",
     "email": "contato@paulispan.com.br",
@@ -2801,20 +2361,6 @@
     "segmento": "gigante mundial de alimentos e ingredientes (oleos vegetais, gorduras, fritura industrial) - NICHO PRIORITARIO (oleo de fritura industrial, vencidos); MX Locaweb valido 06/11"
   },
   {
-    "nome": "Vigor (Lactalis)",
-    "empresa": "Vigor Alimentos S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
-    "email": "sac@vigor.com.br",
-    "cidade": "Sao Paulo/SP (atuacao nacional)",
-    "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX Outlook valido 06/11"
-  },
-  {
-    "nome": "Danone Brasil",
-    "empresa": "Danone Ltda. (iogurtes, lacteos, nutricao)",
-    "email": "faleconosco@danone.com",
-    "cidade": "Sao Paulo/SP (fabrica em Pocos de Caldas/MG e outras)",
-    "segmento": "laticinios e nutricao (iogurtes, sobremesas lacteas, manteiga, nata, creme de leite) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
-  },
-  {
     "nome": "Dori Alimentos",
     "empresa": "Dori Alimentos Ltda. (balas, confeitos, guloseimas)",
     "email": "sac@dori.com.br",
@@ -2836,13 +2382,6 @@
     "segmento": "industria de sorvetes (gordura vegetal, oleo, lacteos, vencidos) - NICHO PRIORITARIO; MX spfbl valido 06/11"
   },
   {
-    "nome": "Batavo (Lactalis)",
-    "empresa": "Batavo S.A. (Grupo Lactalis - Itambe, Batavo, Parmalat, Vigor)",
-    "email": "sac@batavo.com.br",
-    "cidade": "Sao Paulo/SP (fabrica em Carambey/PR, atuacao nacional)",
-    "segmento": "laticinios gigante (leite, manteiga, requeijao, iogurtes) - NICHO PRIORITARIO (vencidos >40% gordura); MX PPHosted valido 06/11"
-  },
-  {
     "nome": "EcoTaua (Taua Food)",
     "empresa": "EcoTaua Industria e Comercio de Oleo de Palma Ltda (Taua Food)",
     "email": "sac@ecotaua.com.br",
@@ -2850,32 +2389,11 @@
     "segmento": "industria de oleo de palma e gordura vegetal - NICHO PRIORITARIO (oleos e gorduras vegetais)"
   },
   {
-    "nome": "Laticinios Alegria",
-    "empresa": "Laticinios Alegria (queijos, manteiga, mussarela)",
-    "email": "contato@laticiniosalegria.com.br",
-    "cidade": "Santo Antonio da Alegria/SP",
-    "segmento": "laticinios (manteiga, queijos, mussarela) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
-    "nome": "Nacon Lacteos",
-    "empresa": "Nacon Lacteos (fracionamento de queijos, manteiga, distribuicao)",
-    "email": "nacon@naconlacteos.com.br",
-    "cidade": "Araraquara/SP",
-    "segmento": "laticinios (fracionamento de queijos, manteiga, distribuicao) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  },
-  {
     "nome": "Nutrisanti",
     "empresa": "Santi Industria e Comercio Ltda (Nutrisanti, Trisanti, Novita)",
     "email": "sac@nutrisanti.com.br",
     "cidade": "Sao Paulo/SP",
     "segmento": "industria de alimentos (margarinas, gorduras vegetais, oleos) - NICHO PRIORITARIO (gorduras/oleos); MX Titan valido 10/11"
-  },
-  {
-    "nome": "Bufalat Laticinios",
-    "empresa": "Laticinios Auricchio (Bufalat)",
-    "email": "bufalat@bufalat.com.br",
-    "cidade": "Sao Luiz do Paraitinga/SP",
-    "segmento": "laticinios (manteiga, queijos de bufala, mozarela) - NICHO PRIORITARIO (vencidos >40% gordura); MX valido 10/11"
   },
   {
     "nome": "Diffucap",
@@ -2892,10 +2410,17 @@
     "segmento": "trading de oleos, gorduras e margarinas - potenciais vencidos >40% gordura; MX Lexxa valido 10/11"
   },
   {
-    "nome": "VitaVita Comercio e Industria",
-    "empresa": "VitaVita Comercio e Industria de Exportacao e Importacao Ltda",
-    "email": "vitavitacomercioindustria@gmail.com",
-    "cidade": "Hortolandia/SP",
-    "segmento": "Industria nutraceutica (fabricacao de suplementos alimentares e nutraceuticos) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
+    "nome": "YBI Brazil",
+    "empresa": "YBI Brazil Comercio de Oleos Vegetais Ltda",
+    "email": "contato@ybibrazil.com",
+    "cidade": "Vinhedo/SP",
+    "segmento": "Industria de oleos vegetais especiais, manteigas vegetais e ingredientes botanicos para cosmeticos, farmaceutica e alimentos - NICHO PRIORITARIO (oleos e gorduras vegetais)"
+  },
+  {
+    "nome": "Campestre Oleos Vegetais",
+    "empresa": "Campestre Oleos Vegetais Ltda",
+    "email": "comercial@campestre.com.br",
+    "cidade": "Sao Bernardo do Campo/SP",
+    "segmento": "Industria de oleos vegetais refinados e gorduras vegetais - NICHO PRIORITARIO (oleos e gorduras)"
   }
 ]

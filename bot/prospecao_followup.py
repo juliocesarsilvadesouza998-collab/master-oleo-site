@@ -118,7 +118,10 @@ def fonte_elegivel(l):
     """Só leads do fluxo de COMPRA de óleo recebem follow-up de prospecção.
     `prospeccao_desmoldante` é de OUTRO negócio (Master EcoDesmold) e tem oferta
     diferente — recebeu em 02/11/2026 um FP2 de óleo usado por engano, porque o
-    fallback usava `criado_em` mesmo sem apresentação registrada."""
+    fallback usava `criado_em` mesmo sem apresentação registrada.
+
+    Status `descartado` = alvo fora do perfil (laticínios/queijarias, 12/11/2026):
+    nunca recebe apresentação nem follow-up — ver filtros_oleo.py."""
     f = str(l.get("fonte", ""))
     return f in ("prospeccao", "prospeccao-lote")
 
@@ -150,7 +153,7 @@ def main():
     for l in leads:
         if not fonte_elegivel(l):
             continue
-        if l.get("status") in ("respondido", "bounce", "encerrado"):
+        if l.get("status") in ("respondido", "bounce", "encerrado", "descartado"):
             continue
         ap_em = l.get("apresentacao_em") or l.get("criado_em")
         try:
