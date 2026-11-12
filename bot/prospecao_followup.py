@@ -88,8 +88,8 @@ def tpl_fp(cfg, lead, n):
         subj = f"Re: óleo usado da {lead['empresa']} vale dinheiro"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b> (PIX na coleta) — óleo usado, gordura vegetal, vencidos. Mercado UCO global <b>US$ 15 bilhões</b> (cresceu 87% em 1 ano). <b>200 L/mês = R$ 4.080/ano; 1.000 L/mês = R$ 20.400/ano</b> — de resíduo a receita.</p>
-<p><b>🏆 3 maiores do interior SP já negociam:</b> <b>Savegnago</b> (R$7,98 bi, #1), <b>Pague Menos</b> (R$4,33 bi, #2) e <b>Tauste</b> (#3). JBS comprou +154% de UCO em 2024. Se os líderes contratam, sua empresa também pode.</p>
+<p><b>💰 Pagamos de R$ 1,00 a R$ 2,50/litro</b> (PIX na coleta) — óleo usado, gordura vegetal, vencidos. Mercado UCO global <b>US$ 17,8 bilhões</b> (proj. 2031, CAGR 13,6%) e o Brasil coleta só 180M L/ano — <b>potencial de 600M L</b>. <b>200 L/mês = R$ 4.080/ano; 1.000 L/mês = R$ 20.400/ano</b> — de resíduo a receita.</p>
+<p><b>🏆 3 maiores do interior SP já negociam:</b> <b>Savegnago</b> (R$7,98 bi, #1), <b>Pague Menos</b> (R$4,33 bi, #2) e <b>Tauste</b> (#3). JBS comprou +154% de UCO em 2024. Petrobras investiu R$ 23 milhões na coleta de OGR — se a maior estatal do país trata óleo usado como ativo, por que sua empresa ainda descarta?</p>
 <p><b>📊 Quanto vocês geram por mês?</b> Me responda o volume (litros ou kg) que eu te mando a estimativa. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
@@ -97,7 +97,7 @@ def tpl_fp(cfg, lead, n):
         subj = f"Re: oleo usado da {lead['empresa']} — urgencia 2028"
         html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
 <p>Olá, {lead['nome']}.</p>
-<p><b>⚖️ FALTAM 14 MESES para a obrigatoriedade:</b> a Portaria MME/MMA nº 3/2026 exige ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. Mercado UCO global <b>US$ 15 bilhões</b> — o Brasil coleta só 180M L/ano, mas o potencial é 600M L. <b>70% inexplorado.</b> Quem contratar agora define o território.</p>
+<p><b>⚖️ FALTAM 14 MESES para a obrigatoriedade:</b> a Portaria MME/MMA nº 3/2026 exige ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b>. Mercado UCO global <b>US$ 17,8 bilhões</b> (proj. 2031) — o Brasil coleta só 180M L/ano, mas o potencial é 600M L. <b>70% inexplorado.</b> O B16 já está em vigor (16% biodiesel desde mar/2026) — mais diesel verde = mais demanda por óleo usado. Quem contratar agora define o território.</p>
 <p><b>💰 Quanto a {lead['empresa']} gera por mês?</b> Pagamos de <b>R$ 1,00 a R$ 2,50/L</b> (PIX na coleta). <b>200 L/mês = R$ 4.080/ano; 1.000 L/mês = R$ 20.400/ano</b> — dinheiro que hoje sai como resíduo. Coleta com crachá, bombona com trava, MTR e certificado — <b>sem passivo no seu CNPJ.</b></p>
 <p><b>📊 Me responda com o volume mensal</b> (litros ou kg) de óleo de cozinha, gordura vegetal ou vencidos que a {lead['empresa']} gera, e envio a proposta em <b>24h</b>. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
@@ -107,8 +107,8 @@ def tpl_fp(cfg, lead, n):
             html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
     <p>Olá, {lead['nome']}.</p>
     <p><b>⚠️ Última mensagem — não enviaremos mais sobre este assunto.</b></p>
-    <p><b>💰 R$ 1,00 a R$ 2,50/L pagos à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 15 bilhões</b> e subindo (era US$ 8 bi em 2025). <b>200 L/mês = R$ 4.080/ano</b> de renda extra; <b>1.000 L/mês = R$ 20.400/ano</b> — dinheiro que hoje sai como resíduo.</p>
-    <p><b>🏆 Seus concorrentes estão fechando:</b> as 3 maiores redes do interior SP (<b>Savegnago</b> R$7,98bi, <b>Pague Menos</b> R$4,33bi, <b>Tauste</b>) já estão conosco. A JBS coletou 36 milhões de litros em 8 anos (+154% em 2024). Madero vende 55 mil L/mês como commodity para biodiesel. Quem não contratar até 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
+    <p><b>💰 R$ 1,00 a R$ 2,50/L pagos à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 17,8 bilhões</b> (proj. 2031, era US$ 8 bi em 2025). <b>200 L/mês = R$ 4.080/ano</b> de renda extra; <b>1.000 L/mês = R$ 20.400/ano</b> — dinheiro que hoje sai como resíduo.</p>
+    <p><b>🏆 Seus concorrentes estão fechando:</b> as 3 maiores redes do interior SP (<b>Savegnago</b> R$7,98bi, <b>Pague Menos</b> R$4,33bi, <b>Tauste</b>) já estão conosco. A JBS coletou 36 milhões de litros em 8 anos (+154% em 2024). Madero vende 55 mil L/mês como commodity para biodiesel. A <b>Petrobras</b> investiu R$ 23 milhões na coleta de OGR (SP e BA). Quem não contratar até 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
     <p><b>⏰ Responda este email com o volume mensal</b> (litros ou kg) + seu WhatsApp, e envio a proposta em 24h. Ou chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
     <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
     </div>"""

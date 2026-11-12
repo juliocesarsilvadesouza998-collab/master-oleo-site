@@ -2422,5 +2422,26 @@
     "email": "comercial@campestre.com.br",
     "cidade": "Sao Bernardo do Campo/SP",
     "segmento": "Industria de oleos vegetais refinados e gorduras vegetais - NICHO PRIORITARIO (oleos e gorduras)"
+  },
+  {
+    "nome": "Padaria Real Conveniencia",
+    "empresa": "Padaria Real Conveniencia Ltda",
+    "email": "relacionamento@padariareal.com.br",
+    "cidade": "Sorocaba/SP",
+    "segmento": "Padaria e restaurante (rede 7+ lojas - fritura continua, restaurante, pizzaria - 500+ funcionarios)"
+  },
+  {
+    "nome": "Supermercados Sao Vicente Online",
+    "empresa": "Supermercados Cavicchiolli Ltda",
+    "email": "online@svicente.com.br",
+    "cidade": "Nova Odessa/SP",
+    "segmento": "Supermercados (rede - canal de vendas online, padaria/rotisserie)"
+  },
+  {
+    "nome": "Tenda Atacado Salto",
+    "empresa": "Tenda Atacado SA",
+    "email": "sac@tendaatacado.com.br",
+    "cidade": "Salto/SP",
+    "segmento": "Atacarejo (padaria/rotisserie - alto volume de fritura, loja em Salto/SP)"
   }
 ]
