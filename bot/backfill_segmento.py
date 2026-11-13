@@ -19,7 +19,7 @@ for e in P.EMPRESAS + EXTRA:
     seg_by_empresa[e["empresa"].strip().lower()] = (e.get("segmento", ""), e.get("cidade", ""))
 
 LEADS = os.path.join(BASE, "leads.csv")
-with open(LEADS, newline="", encoding="utf-8") as f:
+with open(LEADS, newline="", encoding="utf-8-sig") as f:
     rows = list(csv.DictReader(f))
 
 header = list(rows[0].keys()) if rows else []

@@ -44,7 +44,7 @@ def now_iso():
 def read_leads():
     if not os.path.exists(LEADS_PATH):
         return []
-    with open(LEADS_PATH, newline="", encoding="utf-8") as f:
+    with open(LEADS_PATH, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
 def write_leads(leads):
@@ -216,6 +216,11 @@ def send_sequence(args):
         # Leads de prospecção (outbound) têm fluxo próprio (apresentação + follow-ups),
         # NÃO a sequência de boas-vindas do guia (que é para quem nos procurou).
         if str(l.get("fonte","")).startswith("prospeccao"):
+            continue
+        # Já recebeu a apresentação outbound? Então NÃO entra na sequência de guia —
+        # senão a empresa leva 5 emails (apresentação + boas-vindas + 3 follow-ups).
+        # Aconteceu com 11 fabricantes de fritas importados sem `fonte` (25/09/2026).
+        if (l.get("apresentacao_em") or "").strip():
             continue
         try:
             criado = datetime.datetime.fromisoformat(l["criado_em"])

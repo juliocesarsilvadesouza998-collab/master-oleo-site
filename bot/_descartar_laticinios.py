@@ -34,7 +34,9 @@ def read_leads():
 
 
 def write_leads(leads):
-    with open(LEADS, "w", encoding="utf-8-sig", newline="") as f:
+    # SEM BOM: os scripts do pipeline leem com utf-8 puro — BOM quebra a 1a coluna
+    # (foi a causa do incidente de 12/11/2026, ids zerados).
+    with open(LEADS, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         w.writeheader()
         for l in leads:

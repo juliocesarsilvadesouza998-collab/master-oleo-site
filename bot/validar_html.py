@@ -6,14 +6,14 @@ DEPLOY = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "deploy-
 arquivos = ["index.html", "industrias.html", "descaracterizacao.html"]
 
 def validar_jsonld(path):
-    html = open(path, encoding="utf-8").read()
+    html = open(path, encoding="utf-8-sig").read()
     blocos = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
     for b in blocos:
         json.loads(b)  # sobe exceção se inválido
     return len(blocos)
 
 def checar_tags(path):
-    html = open(path, encoding="utf-8").read()
+    html = open(path, encoding="utf-8-sig").read()
     # remove scripts e styles para checar tags estruturais principais
     problemas = []
     for tag in ["div", "section", "header", "footer", "main", "nav", "h1", "h2", "h3", "p", "ul", "li", "a", "script", "style", "table"]:

@@ -23,7 +23,7 @@ def now_iso():
 
 shutil.copy(LEADS_PATH, LEADS_PATH + ".bak-20260914-sac")
 leads = []
-with open(LEADS_PATH, newline="", encoding="utf-8") as f:
+with open(LEADS_PATH, newline="", encoding="utf-8-sig") as f:
     leads = list(csv.DictReader(f))
 
 alterados = 0

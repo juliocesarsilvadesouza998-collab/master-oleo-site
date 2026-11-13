@@ -7,7 +7,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(BASE, "leads.csv")
 now = datetime.datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S%z")
 
-rows = list(csv.DictReader(open(path, encoding="utf-8")))
+rows = list(csv.DictReader(open(path, encoding="utf-8-sig")))
 achou = 0
 for r in rows:
     if r["id"] == "289":

@@ -39,7 +39,7 @@ def load_config():
 def read_leads():
     if not os.path.exists(LEADS_PATH):
         return []
-    with open(LEADS_PATH, newline="", encoding="utf-8") as f:
+    with open(LEADS_PATH, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
 def write_leads(leads):
@@ -103,15 +103,15 @@ def tpl_fp(cfg, lead, n):
 <p>Abraço,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
 </div>"""
     else:
-            subj = f"Último contato — {lead['empresa']} perde R$ 14,4 mil/ano se não responder"
-            html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-    <p>Olá, {lead['nome']}.</p>
-    <p><b>⚠️ Última mensagem — não enviaremos mais sobre este assunto.</b></p>
-    <p><b>💰 R$ 1,00 a R$ 2,50/L pagos à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 17,8 bilhões</b> (proj. 2031, era US$ 8 bi em 2025). <b>200 L/mês = R$ 4.080/ano</b> de renda extra; <b>1.000 L/mês = R$ 20.400/ano</b> — dinheiro que hoje sai como resíduo.</p>
-    <p><b>🏆 Seus concorrentes estão fechando:</b> as 3 maiores redes do interior SP (<b>Savegnago</b> R$7,98bi, <b>Pague Menos</b> R$4,33bi, <b>Tauste</b>) já estão conosco. A JBS coletou 36 milhões de litros em 8 anos (+154% em 2024). Madero vende 55 mil L/mês como commodity para biodiesel. A <b>Petrobras</b> investiu R$ 23 milhões na coleta de OGR (SP e BA). Quem não contratar até 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
-    <p><b>⏰ Responda este email com o volume mensal</b> (litros ou kg) + seu WhatsApp, e envio a proposta em 24h. Ou chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
-    <p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
-    </div>"""
+        subj = f"Último contato — {lead['empresa']} perde R$ 14,4 mil/ano se não responder"
+        html = f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead['nome']}.</p>
+<p><b>⚠️ Última mensagem — não enviaremos mais sobre este assunto.</b></p>
+<p><b>💰 R$ 1,00 a R$ 2,50/L pagos à vista (PIX)</b> na coleta. Mercado UCO global <b>US$ 17,8 bilhões</b> (proj. 2031, era US$ 8 bi em 2025). <b>200 L/mês = R$ 4.080/ano</b> de renda extra; <b>1.000 L/mês = R$ 20.400/ano</b> — dinheiro que hoje sai como resíduo.</p>
+<p><b>🏆 Seus concorrentes estão fechando:</b> as 3 maiores redes do interior SP (<b>Savegnago</b> R$7,98bi, <b>Pague Menos</b> R$4,33bi, <b>Tauste</b>) já estão conosco. A JBS coletou 36 milhões de litros em 8 anos (+154% em 2024). Madero vende 55 mil L/mês como commodity para biodiesel. A <b>Petrobras</b> investiu R$ 23 milhões na coleta de OGR (SP e BA). Quem não contratar até 2027 vai pagar caro para descartar — ou ter o passivo no CNPJ (Lei 12.305/2010).</p>
+<p><b>⏰ Responda este email com o volume mensal</b> (litros ou kg) + seu WhatsApp, e envio a proposta em 24h. Ou chame direto: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Atenciosamente,<br><b>{g['nome']}</b> · {g['telefone_whatsapp']}</p>
+</div>"""
     return {"subject": subj, "html": html}
 
 def fonte_elegivel(l):

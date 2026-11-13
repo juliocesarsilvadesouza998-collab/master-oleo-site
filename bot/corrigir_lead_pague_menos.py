@@ -6,7 +6,7 @@ import csv, os
 BASE = os.path.dirname(os.path.abspath(__file__))
 path = os.path.join(BASE, "leads.csv")
 
-rows = list(csv.DictReader(open(path, encoding="utf-8")))
+rows = list(csv.DictReader(open(path, encoding="utf-8-sig")))
 email_final = "falecom@supermercadospaguemenos.com.br"
 achou = 0
 for r in rows:

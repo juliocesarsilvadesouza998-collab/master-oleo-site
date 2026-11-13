@@ -70,7 +70,7 @@ FP_LIMITES = {"fp1_em": 3, "fp2_em": 6, "fp3_em": 10}
 def read_leads():
     if not os.path.exists(LEADS_PATH):
         return []
-    with open(LEADS_PATH, newline="", encoding="utf-8") as f:
+    with open(LEADS_PATH, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
 def load_bounces():

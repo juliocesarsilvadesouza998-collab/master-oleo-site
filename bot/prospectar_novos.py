@@ -241,7 +241,7 @@ def nome_empresa(host):
 def carregar_conhecidos():
     conhecidos = set()
     if os.path.exists(LEADS):
-        with open(LEADS, newline="", encoding="utf-8") as f:
+        with open(LEADS, newline="", encoding="utf-8-sig") as f:
             for r in csv.DictReader(f):
                 e = (r.get("email") or "").strip().lower()
                 if e:
@@ -251,12 +251,12 @@ def carregar_conhecidos():
             continue
         try:
             if path.endswith(".json"):
-                for it in json.load(open(path, encoding="utf-8")):
+                for it in json.load(open(path, encoding="utf-8-sig")):
                     e = (it.get("email") or "").strip().lower()
                     if e:
                         conhecidos.add(e)
             else:
-                for line in open(path, encoding="utf-8", errors="replace"):
+                for line in open(path, encoding="utf-8-sig", errors="replace"):
                     line = line.strip().lower()
                     if "@" in line:
                         conhecidos.add(line)

@@ -15,6 +15,11 @@ from collections import Counter
 BASE = os.path.dirname(os.path.abspath(__file__))
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 
+# Alvo fora do perfil (laticínios etc.) não aparece em lista de lead quente.
+sys.path.insert(0, BASE)
+from filtros_oleo import motivo_exclusao  # noqa: E402
+
+
 def fmt_data(iso):
     if not iso:
         return "—"
@@ -32,19 +37,35 @@ def main():
         print("leads.csv não encontrado — rode sync_formspree.py primeiro.")
         return 1
 
-    with open(LEADS_PATH, newline="", encoding="utf-8") as f:
+    with open(LEADS_PATH, newline="", encoding="utf-8-sig") as f:
         leads = list(csv.DictReader(f))
 
-    # Separa prospecção (outbound) de inbound
-    outbound = [l for l in leads if str(l.get("fonte","")).startswith("prospeccao")]
-    inbound = [l for l in leads if not str(l.get("fonte","")).startswith("prospeccao")]
+    # Separa prospecção (outbound) de inbound. Leads do desmoldante são OUTRO
+    # negócio (Master EcoDesmold) e não entram nas métricas do óleo.
+    def _eh_desmoldante(l):
+        return "desmoldante" in str(l.get("fonte", "")).lower()
+    outbound = [l for l in leads if str(l.get("fonte","")).startswith("prospeccao") and not _eh_desmoldante(l)]
+    # Inbound = veio até nós (formulário do site, guia). Lista explícita: evita
+    # contar linha importada sem `fonte` como se fosse formulário do site.
+    _FONTES_INBOUND = ("formspree", "site", "guia", "contato-site", "inbound")
+    inbound = [l for l in leads if str(l.get("fonte", "")).lower() in _FONTES_INBOUND]
 
     enviados = [l for l in outbound if l.get("apresentacao_em")]
     respondidos = [l for l in outbound if l.get("status") == "respondido"]
     bounces = [l for l in outbound if l.get("status") == "bounce"]
-    ativos = [l for l in outbound if l.get("status") not in ("bounce","respondido","encerrado")]
+    ativos = [l for l in outbound if l.get("status") not in ("bounce","respondido","encerrado","descartado")]
+
+    # ATENÇÃO: `status == respondido` é gravado quando NÓS respondemos (inclusive
+    # auto-ack de SAC e correção de bounce), não quando o lead responde de fato.
+    # Resposta humana real = existe teor em `ultima_resposta` e ele não é marcador
+    # automático. Sem isso o dashboard infla a taxa de resposta (5,8% vs ~0,7% reais).
+    _NAO_HUMANO = ("corrigido de", "email inválido", "auto-ack", "não reenviar", "nao reenviar")
+    humanos = [l for l in respondidos
+               if (l.get("ultima_resposta") or "").strip()
+               and not any(m in (l.get("ultima_resposta") or "").lower() for m in _NAO_HUMANO)]
 
     taxa_resposta = (len(respondidos)/len(enviados)*100) if enviados else 0
+    taxa_humana = (len(humanos)/len(enviados)*100) if enviados else 0
     taxa_entrega = ((len(enviados)-len(bounces))/len(enviados)*100) if enviados else 0
 
     now = datetime.datetime.now().astimezone()
@@ -56,8 +77,9 @@ def main():
     print(f"  📨 Emails de apresentação enviados : {len(enviados)}")
     print(f"  ✅ Entregues (sem bounce)          : {len(enviados)-len(bounces)}")
     print(f"  ❌ Bounces                         : {len(bounces)}  ({100-taxa_entrega:.0f}%)")
-    print(f"  💬 RESPOSTAS RECEBIDAS             : {len(respondidos)}")
-    print(f"  📈 Taxa de resposta                : {taxa_resposta:.1f}%")
+    print(f"  💬 Leads que NÓS respondemos       : {len(respondidos)}  (inclui auto-ack de SAC)")
+    print(f"  🔥 RESPOSTA HUMANA de verdade      : {len(humanos)}  ({taxa_humana:.1f}% dos enviados)")
+    print(f"  📈 Taxa 'respondido' (métrica antiga, inflada): {taxa_resposta:.1f}%")
     print(f"  ⏳ Aguardando resposta/follow-up   : {len(ativos)}")
     print(f"  🧊 Inbound (formulário do site)    : {len(inbound)}")
     print()
@@ -65,6 +87,8 @@ def main():
     if args.detalhe:
         print("  --- LEADS QUE RESPONDERAM (quentes!) ---")
         for l in respondidos:
+            if motivo_exclusao(l.get("nome", ""), l.get("empresa", ""), l.get("segmento", "")):
+                continue  # laticínio/fora do alvo: não é lead quente
             print(f"    🔥 {l.get('empresa','')[:40]:<42} {l.get('email','')}")
             if l.get("ultima_resposta"):
                 print(f"       💬 {l['ultima_resposta'][:110]}")

@@ -38,7 +38,7 @@ novo_ciclo = {
 
 # Atualiza ecossistema.json
 ecopath = os.path.join(BASE, "equipe", "ecossistema.json")
-with open(ecopath, "r", encoding="utf-8") as f:
+with open(ecopath, "r", encoding="utf-8-sig") as f:
     eco = json.load(f)
 
 # Atualiza timestamp root

@@ -50,7 +50,7 @@ def load_config():
 def read_leads():
     if not os.path.exists(LEADS_PATH):
         return []
-    with open(LEADS_PATH, newline="", encoding="utf-8") as f:
+    with open(LEADS_PATH, newline="", encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
 def write_leads(leads):

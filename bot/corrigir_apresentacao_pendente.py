@@ -37,7 +37,7 @@ def smtp_send(cfg, e, to, subject, html):
 def main():
     cfg = json.load(open(CONFIG_PATH, encoding="utf-8"))
     e = cfg["email"]
-    leads = list(csv.DictReader(open(LEADS_PATH, newline="", encoding="utf-8")))
+    leads = list(csv.DictReader(open(LEADS_PATH, newline="", encoding="utf-8-sig")))
     alvos = [l for l in leads if l.get("status") == "novo" and not l.get("apresentacao_em") and not l.get("boas_vindas_em")]
     if not alvos:
         print("Nenhum lead parado.")

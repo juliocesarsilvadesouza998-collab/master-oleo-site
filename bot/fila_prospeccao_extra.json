@@ -2443,5 +2443,19 @@
     "email": "sac@tendaatacado.com.br",
     "cidade": "Salto/SP",
     "segmento": "Atacarejo (padaria/rotisserie - alto volume de fritura, loja em Salto/SP)"
+  },
+  {
+    "nome": "Joao Gava & Filhos",
+    "empresa": "Joao Gava & Filhos Ltda",
+    "email": "gava@joaogava.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de margarina e gorduras vegetais - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Vida Alimentos",
+    "empresa": "Vida Alimentos Ltda",
+    "email": "vidaalimentos@vidaalimentos.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "Industria de margarinas, gorduras vegetais e maioneses - NICHO PRIORITARIO (vencidos >40% gordura)"
   }
 ]

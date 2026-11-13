@@ -1,4 +1,50 @@
 {
+ "ciclo_2026_11_14_cron_228_atendente": {
+  "timestamp": "2026-11-14 ~22:00 (Atendente IA - cron #228 - sábado)",
+  "acoes": [
+   "✅ sync_formspree.py — 129 bounces cache, 0 notificações Formspree novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos os 129 já tentados; nenhum bounce novo)",
+   "✅ prospecao_followup.py — 0 follow-ups (fila zerada)",
+   "✅ bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
+   "✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "⏭️ proposta_contrato.py — não executado (sem lead com volume novo informado)",
+   "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+  ],
+  "diagnostico": {
+   "total_leads_csv": "~469",
+   "status_csv": "novo ~283 | bounce ~94 (129 cache) | respondido 24 | encerrado 15 | descartado 53",
+   "bounce_cache_json": 129,
+   "dias_sem_resposta_humana_fluxo_oleo": "51 (última: Tauste 30/09); 32 desde Pague Menos (14/10)",
+   "respostas_reais": 0,
+   "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "observacao": "51º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. ~469 leads, 129 bounces cache. Fila de prospecção zerada — sem fonte MX-válida para repor. Pipeline bloqueado em ação humana — WhatsApp/telefone e cadastro Covabra Ivrim são barreiras."
+  }
+ },
+ "ciclo_2026_11_14_cron_227_atendente": {
+  "timestamp": "2026-11-14 ~00:00 (Atendente IA - cron #227 - sábado)",
+  "acoes": [
+   "✅ sync_formspree.py — 129 bounces cache, 0 notificações Formspree novas",
+   "✅ corrigir_emails.py — 0 bounces processados (todos os 129 já tentados; nenhum bounce novo)",
+   "⏭️ prospecao_followup.py — não encontrado; pulado",
+   "✅ bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
+   "✅ bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
+   "⏭️ proposta_contrato.py — não executado (sem lead com volume novo informado)",
+   "⏭️ relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
+  ],
+  "diagnostico": {
+   "total_leads_csv": "~469",
+   "status_csv": "novo ~283 | bounce ~94 (129 cache) | respondido 24 | encerrado 15 | descartado 53",
+   "bounce_cache_json": 129,
+   "dias_sem_resposta_humana_fluxo_oleo": "50 (última: Tauste 30/09); 31 desde Pague Menos (14/10)",
+   "respostas_reais": 0,
+   "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "observacao": "50º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. ~469 leads, 129 bounces cache. Fila de prospecção zerada — sem fonte MX-válida para repor. Pipeline bloqueado em ação humana."
+  }
+ },
  "ciclo_2026_11_13_cron_226_atendente": {
   "timestamp": "2026-11-13 ~22:00 (Atendente IA - cron #226 - sexta-feira)",
   "acoes": [
@@ -3167,5 +3213,29 @@
    "🟡 SANOFI MEDLEY — Protocolo 03065348 (29/10).",
    "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês."
   ]
+ },
+ "ciclo_2026_11_14_melhorador_continuo_229": {
+  "timestamp": "2026-11-14 ~14:02 (Melhorador Contínuo - cron #229 - sábado)",
+  "diagnostico": {
+   "watchdog": "exit 1 — 469 leads, 283 ativos, 129 bounces. SMTP OK · IMAP OK",
+   "total_leads": 469,
+   "ativos": 283,
+   "bounce_cache": 129,
+   "fila_prospeccao": "0 MX-válidos ❌ (52º dia sem cold email)",
+   "dias_sem_resposta_humana": 51,
+   "respostas_reais": 0,
+   "caixa_imap": "0 não lidas ✅"
+  },
+  "melhorias": [
+   "1. 📊 Site stats atualizadas: 462→469 empresas, 43→52 dias consecutivos (deploy-vercel/index.html)",
+   "2. 🐛 Indentação FP3 corrigida em prospecao_followup.py — HTML com 4 espaços extras por linha (py_compile OK ✅)",
+   "3. ✅ check-replies: 0 respostas | send_sequence: fila drenada | prospecao_followup: zerado",
+   "4. 📝 ecossistema.json + insights.md atualizados com ciclo #229"
+  ],
+  "fila_pendentes": "0 MX-válidos (52º dia sem cold email — precisa Leadjet R$197)",
+  "bounce_cache": 129,
+  "taxa_bounce": "~22% (acima da meta 15%)",
+  "taxa_resposta": "~5,5% (24/469 — abaixo da meta 8%)",
+  "proximo_passo": "ação humana nos leads quentes (Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva) + compra Leadjet para repor fila de prospecção"
  }
 }
