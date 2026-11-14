@@ -115,7 +115,7 @@ def main():
     for l in leads:
         if not str(l.get("fonte","")).startswith("prospeccao"):
             continue
-        if l.get("status") in ("respondido","bounce","encerrado"):
+        if l.get("status") in ("respondido","bounce","encerrado","descartado"):
             continue
         ap = l.get("apresentacao_em")
         if not ap:

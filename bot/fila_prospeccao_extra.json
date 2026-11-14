@@ -2457,5 +2457,19 @@
     "email": "vidaalimentos@vidaalimentos.com.br",
     "cidade": "Sao Paulo/SP",
     "segmento": "Industria de margarinas, gorduras vegetais e maioneses - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Primos Eco Bio",
+    "empresa": "Primos Eco Bio Comercial e Industrial Ltda",
+    "email": "primosecobio@gmail.com",
+    "cidade": "Ibate/SP",
+    "segmento": "Industria de oleos vegetais e glicerina (fabricacao de margarina e gorduras vegetais - CNAE 1043-1/00) - NICHO PRIORITARIO"
+  },
+  {
+    "nome": "SITOL",
+    "empresa": "Sitol Sociedade Industrial Tecnica de Oleos Ltda",
+    "email": "st.sitol@hotmail.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de margarina e gorduras vegetais (CNAE 1043-1/00) - NICHO PRIORITARIO"
   }
 ]

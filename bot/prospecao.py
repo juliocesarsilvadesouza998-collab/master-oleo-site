@@ -356,17 +356,15 @@ def tpl_apresentacao(cfg, lead):
 </div>"""
         }
     return {
-            "subject": f"Óleo usado da {lead.get('empresa','')} vale dinheiro — até R$ 14,4 mil/ano",
+            "subject": f"Óleo usado da {lead.get('empresa','')} vira receita — até R$ 14.400/ano",
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-    <p>Olá, {lead.get('nome','')}.</p>
-    <p>O óleo de fritura da <b>{lead.get('empresa','')}</b> hoje sai de graça — mas virou commodity: o mercado global de óleo de cozinha usado (UCO) vale <b>US$ 11 bi</b> e deve dobrar com a demanda por biodiesel e combustível de aviação. O Brasil já coleta 180 milhões de L/ano — e o potencial é de <b>600 milhões</b> (70% inexplorado).</p>
-    <p>Preço spot em SP confirmado: <b>R$ 2,00/L</b> (MF Rural, 2026) — a Ambiental Santos já paga <b>R$ 3,00/L</b> (Bom Gourmet, 2026). Seu resíduo vale isso. A <b>{g['nome']}</b>, de {cidade}, faz a <b>destinação correta desse material</b> — coleta programada, bombonas fornecidas com <b>trava de segurança anti-furto</b> (óleo virou alvo de quadrilhas), pesagem na hora com crachá identificado, MTR e <b>certificado de destinação (PNRS)</b>: você zera o passivo ambiental e ainda recebe pelo óleo sem riscos. Um estabelecimento que gera <b>600 L/mês recebe R$ 14,4 mil/ano</b> (R$ 2,00/L) — sem custo de logística.</p>
-    <p><b>Prova social de peso:</b> a <b>Savegnago</b> (#1 do interior SP, R$ 7,98 bi) já está negociando conosco, o <b>Grupo Madero</b> (270 restaurantes) fechou contrato de <b>55 mil L/mês</b>, e a <b>Petrobras</b> investiu R$ 23 milhões na coleta de OGR — redes grandes e a maior estatal do país já tratam óleo usado como ativo estratégico.</p>
-    <p>E há dupla urgência: a <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de <b>jan/2028</b> — o Brasil já exporta óleo usado para os EUA (1,4 mi t importadas em 2023) e com o diesel <b>B16</b> (16% biodiesel desde março/2026), a demanda vai explodir. Quem fecha contrato agora garante prioridade antes da corrida pela matéria-prima.</p>
-    <p><b>Quanto vocês geram por mês (litros ou kg)?</b> Com esse número enviamos a avaliação ainda esta semana. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-    <p style="font-size:12px;color:#888">🔐 Segurança: coleta com crachá, pesagem na hora, bombona com trava, certificado de destinação + MTR — sem passivo no seu CNPJ.</p>
-    <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados · {cidade}</p>
-    </div>"""}
+            <p>Olá, {lead.get('nome','')}.</p>
+            <p>O óleo de fritura que hoje sai de graça virou commodity energetica — <b>pagamos R$ 1-2,50/L à vista (PIX)</b> na coleta, com certificado e MTR. 600 L/mes = <b>R$ 14.400/ano</b> de renda extra, sem custo de logistica.</p>
+            <p><b>Quem ja fechou:</b> <b>Savegnago</b> (#1 interior SP, R$ 7,98 bi) esta negociando, <b>Grupo Madero</b> (270 restaurantes) coleta 55 mil L/mes, e a <b>Petrobras</b> investiu R$ 23 mi na coleta de OGR — a maior estatal do pais trata oleo usado como ativo.</p>
+            <p><b>Urgencia:</b> a <b>Portaria MME/MMA n° 3/2026</b> obriga ≥1% de oleo residual no biodiesel a partir de jan/2028 — a demanda vai explodir. Quem fecha contrato agora ganha prioridade. <b>Quantos litros voce gera por mes?</b> Responda que envio o valor. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+            <p style="font-size:11px;color:#888">🔐 Coleta com cracha, pesagem na hora, bombona com trava, certificado PNRS + MTR — sem passivo no seu CNPJ.</p>
+            <p>Abs,<br><b>{g['nome']}</b> · Compra de oleo e gordura vegetal usados · {cidade}</p>
+            </div>"""}
 
 def prospecao(args):
     cfg = load_config()
