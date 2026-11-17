@@ -92,14 +92,21 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   pagamento, emitimos **relatório de impacto ambiental** (litros coletados,
   água preservada — 1 litro de óleo contamina até 25 mil litros de água).
   Isso agrega valor à imagem da empresa e ajuda em licenciamentos.
-- ARGUMENTO DE URGÊNCIA (2028, VERIFICADO — Portaria Interministerial MME/MMA
-  nº 3/2026, publicada jan/2026): a partir de <b>01/01/2028</b> será obrigatório o
-  uso de <b>≥1% de óleos e gorduras residuais (OGR)</b> na produção de biodiesel,
-  SAF e diesel verde (para produtores que usam óleos/gorduras como
-  matéria-prima). As usinas vão disputar matéria-prima — quem fechar contrato
-  de coleta agora garante preço e prioridade. Use isso para acelerar
-  assinaturas de longo prazo. (Complemento: a Lei 14.993/2024 — Combustível
-  do Futuro — criou o mandato de SAF de 1% em 2027 até 7% em 2034.)
+|- ARGUMENTO DE URGÊNCIA (2028, CONFIRMADO — Portaria Interministerial MME/MMA
+|  nº 3/2026, publicada em 13/05/2026, FONTE: gov.br/mme): a partir de
+|  <b>01/01/2028</b> será OBRIGATÓRIO o uso de <b>≥1% de óleos e gorduras
+|  residuais (OGR)</b> na produção de biodiesel, SAF e diesel verde. Vigência
+|  voluntária em 2026-2027, obrigatória a partir de 2028. A ANP vai monitorar
+|  o cumprimento (Portaria Interministerial MME/MMA nº 3/2026, arts. 1-5).
+|  CONSEQUÊNCIA: as usinas vão DISPUTAR matéria-prima OGR — a oferta formal
+|  de UCO no Brasil hoje é de ~180 milhões de L/ano, mas o potencial é de
+|  600 milhões (70% inexplorado, fonte: Mordor Intelligence). Quem fechar
+|  contrato de coleta agora garante preço e prioridade. Este é o argumento
+|  MAIS FORTE para acelerar assinaturas de longo prazo: <b>"daqui a 13 meses
+|  (jan/2028) a lei OBRIGA as usinas a comprar UCO — quem tiver contrato de
+|  coleta hoje vai ter matéria-prima valorizada."</b>
+|  (Complemento: Lei 14.993/2024 — Combustível do Futuro — mandato SAF
+|  1% em 2027 → 7% em 2034.)
 - ESCASSEZ GLOBAL DE UCO (argumento novo 13/09 — VERIFICADO, fonte APROBIO/
   Exame 2024): o Brasil passou a poder exportar óleo de cozinha usado para os
   EUA (Certificado Sanitário Internacional Vegetal — CSIV, aceito pelo
