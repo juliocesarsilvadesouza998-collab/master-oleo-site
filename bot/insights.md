@@ -1,3 +1,81 @@
+## 2026-11-17 13:04 (Atendente IA - cron 2º tick - terça-feira)
+
+### Diagnóstico do ciclo
+- **473 leads, ~286 ativos, 24 respondidos, 133 bounces cache**
+- ✅ sync_formspree: 133 bounces cache, 0 notificações Formspree novas (OK)
+- ✅ corrigir_emails: 0 bounces processados (todos os 133 já tentados)
+- ✅ prospecao_followup: 0 follow-ups atrasados (fila zerada)
+- ✅ send_sequence: sequência processada, 0 envios novos
+- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+- **🔴 48 dias sem resposta humana** — última: Tauste (30/09)
+- **🔴 Pipeline de fechamento bloqueado** — todos os leads quentes aguardam ação humana (WhatsApp/telefone)
+- 📊 Fila de prospecção zerada — sem serper_api_key para reposição
+
+### Observações
+- **48º dia consecutivo sem respostas humanas.** 2º tick do dia (13:04) — mesmo cenário do tick das 12:03. Nada mudou.
+- Sistema 100% saudável. Nenhuma resposta para processar. Pipeline bloqueado em ação humana.
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 48+ dias sem ação.
+2. 🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 34 dias sem retorno.
+3. 🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔥🔥 **Covabra** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 65+ dias.
+5. 🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local.
+6. 🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **Tauste** — (15) 3324-4680. Respondeu 30/09 (48 dias).
+9. 🟡 **Sanofi Medley** — Protocolo 03065348 (29/10).
+10. 🟡 **Nagumo** — Caso 00143542, proposta 5.000 L/mês.
+
+---
+
+## 2026-11-17 12:03 (Atendente IA - cron #237 - terça-feira)
+
+### Diagnóstico do ciclo
+|- **473 leads, 286 ativos, 24 respondidos, 133 bounces cache**
+|- ✅ sync_formspree: 133 bounces cache, 0 notificações Formspree novas
+|- ✅ corrigir_emails: 0 bounces processados (todos os 133 já tentados)
+|- ✅ prospecao_followup: 0 follow-ups atrasados (fila zerada)
+|- ✅ send_sequence: sequência processada, nada a enviar
+|- ✅ check-replies: 0 respostas (replies_pending.json vazio)
+|- ✅ _miniscan_inbox: INBOX 0 não lidas
+|- ✅ watchdog: exit 1 — 473 leads, 286 ativos, 133 bounces (1 bounce sem correção — conhecido). SMTP/IMAP OK.
+|- **🔴 48 dias sem resposta humana com volume** — última: Tauste (30/09)
+|- **🔴 Pipeline de fechamento bloqueado** — todos os leads quentes aguardam ação humana (WhatsApp/telefone)
+|- 📊 Fila de prospecção zerada — sem serper_api_key para reposição (DuckDuckGo/Mojeek/Bing bloqueados)
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| corrigir_emails.py | 0 bounces processados (todos os 133 já tentados) |
+| prospecao_followup.py | 0 follow-ups atrasados (fila zerada) |
+| bot_oleo.py send_sequence | sequência processada, nada a enviar |
+| bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| _miniscan_inbox.py | INBOX: 0 não lidas |
+| watchdog.py | exit 1 — 1 bounce sem correção (conhecido, bounce_registrado sem saída) |
+| proposta_contrato/relatorio_ESG | não acionados (0 leads com volume informado ou solicitação de relatório) |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥🔥 **Savegnago** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 48+ dias sem ação humana.
+2. 🔥🔥 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 34 dias sem retorno.
+3. 🔥🔥 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔥🔥 **Covabra** — **AÇÃO HUMANA: preencher cadastro fornecedor** (isac.ivrim.com.br). 65+ dias.
+5. 🔥 **Brasfrigo (Salto/SP)** — Agendar coleta-teste. Local.
+6. 🔥 **Queijos Itupeva (Rafael)** — Agendar coleta-teste.
+7. 🟡 **Sonda** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **Tauste** — (15) 3324-4680. Respondeu 30/09.
+9. 🟡 **Sanofi Medley** — Protocolo 03065348 (29/10).
+10. 🟡 **Nagumo** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- **48º dia consecutivo sem respostas humanas no fluxo de COMPRA de óleo** (última: Tauste 30/09). Sistema 100% saudável.
+- Mesmo cenário do tick anterior: fila zerada, sem respostas, sem bounces novos, sem leads com volume para proposta/ESG.
+- Pipeline de fechamento completamente bloqueado em ação humana (WhatsApp/telefone).
+- Fila de prospecção zerada — sem serper_api_key para repor (DuckDuckGo/Mojeek/Bing bloqueados).
+
+---
+
 |## 2026-11-12 12:33 (Atendente IA - cron tick #210 - quarta-feira)
 |
 |### Diagnóstico do ciclo
