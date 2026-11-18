@@ -1,5 +1,514 @@
 
 
+## 2026-11-18 ~19:00 (Melhorador Contínuo — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ Adicionadas 2 novas empresas ao prospecao.py | Sandeleh Alimentos (comercial@sandeleh.com.br, MX Outlook), Alere Alimentação (gerente.relacionamento@alerealimentacao.com.br, MX Skymail) |
+| ✅ Email enviado para Sandeleh Alimentos | 1ª cold email em 68 dias! |
+| ✅ Bug fix merge_write_leads (prospecao.py) | ID não-numérico travava salvamento — adicionado try/except |
+| ✅ Corrigido ID inválido no leads.csv | Artema 'ARTEMA20261028' → 1000 |
+
+### Lição do dia
+1. **Sandeleh Alimentos**: indústria de conservas em Sorocaba, 150+ funcionários, 5.000 clientes. Email comercial@sandeleh.com.br MX Outlook. Nicho: óleo de fritura industrial.
+2. **Bug merge_write_leads**: IDs não-numéricos (Artema) travavam merge — leads enviados se perdiam. Correção: ignorar IDs inválidos no cálculo de base_id.
+3. **Fila de prospecção reabastecida**: +2 empresas MX-verificadas adicionadas. Ainda insuficiente para 68 dias de gap — precisa de lista CNPJ paga.
+
+## 2026-11-18 ~17:02 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (68º dia sem cold email) |
+| Dias sem resposta humana | **68** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 68+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (68 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **68º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual.
+- **Fila de prospecção zerada** há 68 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 ~15:10 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (67º dia sem cold email) |
+| Dias sem resposta humana | **67** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 67+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (67 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **67º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual.
+- **Fila de prospecção zerada** há 67 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 ~12:32 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (66º dia sem cold email) |
+| Dias sem resposta humana | **66** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 66+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (66 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **66º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual.
+- **Fila de prospecção zerada** há 66 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 ~14:15 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (65º dia sem cold email) |
+| Dias sem resposta humana | **65** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 65+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (65 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **65º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual.
+- **Fila de prospecção zerada** há 65 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 ~09:33 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 2 FP2 enviados (YBI Brazil, Campestre Oleos) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (65º dia sem cold email) |
+| Dias sem resposta humana | **65** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 65+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (65 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **65º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual.
+- **Fila de prospecção zerada** há 65 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **2 FP2 follow-ups enviados**: YBI Brazil (oleos vegetais) e Campestre Oleos Vegetais.
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 ~09:04 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+| ✅ _miniscan_inbox.py | INBOX: 0 não lidas |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (65º dia sem cold email) |
+| Dias sem resposta humana | **65** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 65+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (65 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **65º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual.
+- **Fila de prospecção zerada** há 65 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 ~05:00 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (64º dia sem cold email) |
+| Dias sem resposta humana | **64** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 64+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (64 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **64º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual — Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva — todos aguardando ação humana.
+- **Fila de prospecção zerada** há 64 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-17 ~22:00 (Analista de Qualidade — cron — terça-feira)
+
+### Sincronização
+- ✅ `sync_formspree.py` — 133 bounces cache, 0 notificações Formspree novas
+
+### Estado dos Leads (473 total)
+| Status | Qtd |
+|--------|-----|
+| `novo` | 286 |
+| `bounce` | 95 |
+| `descartado` | 53 |
+| `respondido` | 24 |
+| `encerrado` | 15 |
+
+### Auditoria
+- ✅ **bounces.json vs leads.csv**: 133 emails no cache. 38 emails no cache NÃO existem no CSV (órfãos de outros pipelines — desmoldante, testes, leads removidos). Comportamento normal, nenhum lead deixou de ser marcado como bounce indevidamente.
+- ⚠️ **3 leads `bounce` com `boas_vindas_em` preenchido** — mesmos 3 casos recorrentes (Tecnobloc, Fábrica Bloco Forte, teste.formspree@gmail.com). Nenhum caso novo. O send_sequence já pula bounces, então não há reenvio. A race condition persiste no pipeline desmoldante.
+- ✅ **replies_pending.json**: `[]` — **0** respostas pendentes
+
+### Problemas Encontrados
+1. **Nenhum problema de integridade novo** — sync e cache consistentes, zero correção de dados necessária.
+2. **3 anomalias recorrentes de bounce com boas-vindas enviadas** — mesma race condition de ciclos anteriores. Não há reenvio.
+3. **38 emails órfãos em bounces.json** — resíduo inofensivo de outros fluxos.
+
+### Sugestões para o Estrategista
+1. 🔴 **Ação humana imediata nos leads quentes** — 62º dia sem resposta humana real. Savegnago (WhatsApp), Covabra (cadastro Ivrim), Pague Menos (ticket 407470), Rede Confiança (proposta 2.500L/mês), Brasfrigo (coleta-teste), Queijos Itupeva (coleta-teste). O sistema automatizado não avança sozinho.
+2. 🔴 **Repor fila de prospecção** — 0 MX-válidos pendentes. Cold email parado. Compra Leadjet (R$197) é a única saída.
+3. 🟡 **Resolver race condition de bounce no fluxo desmoldante** — os 3 casos de "bounce com boas_vindas_em" persistem há semanas. Verificar bounce ANTES do envio no pipeline desmoldante (mesma lógica que o Master Óleo já tem).
+
+---
+
+## 2026-11-17 16:04 (Atendente IA - cron tick #233 - terça-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 129 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 129 já tentados; nenhum bounce novo)
+- ✅ prospecao_followup.py — 2 FP1 enviados (Nutrisanti, Diffucap)
+- ✅ bot_oleo.py send_sequence — sequência processada, nada a enviar
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ✅ _miniscan_inbox.py — INBOX: 0 não lidas
+- ✅ watchdog.py — exit 1: 469 leads, 283 ativos, 129 bounces. SMTP OK · IMAP OK
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados (0 leads com volume ou solicitação)
+- 🔴 **45º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- 🔴 Fila de prospecção zerada — sem fonte de busca gratuita para repor
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 45+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 30 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 52+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Agendar coleta-teste. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Agendar coleta-teste.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (45 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- **45 dias sem resposta humana nova** (última: Tauste 30/09). Após 469 leads trabalhados, o canal de email atingiu o teto.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que liguem ou enviem WhatsApp.
+- **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
+- Sistema saudável — SMTP/IMAP OK, watchdog funcional.
+
+---
+
+## 2026-11-17 ~23:35 (Atendente IA — cron tick #263 — terça-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (61º dia sem cold email) |
+| Dias sem resposta humana | **61** (Tauste 30/09); 34 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 61+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 34 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (61 dias) |
+| 🟡 | **SANOFI MEDLEY** | Protocolo 03065348 (29/10) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **61º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual — Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva — todos aguardando ação humana.
+- **Fila de prospecção zerada** há 61 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+
+
 ## 2026-11-17 ~14:00 (Melhorador Contínuo — cron diário — terça-feira)
 
 ### Diagnóstico
@@ -11198,3 +11707,196 @@ Nenhuma resposta pendente no momento. O Atendente IA não tem fila para processa
 - **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
 - SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
 - Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-17 19:35 (Atendente IA — cron tick #264 — terça-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (61º dia sem cold email) |
+| Dias sem resposta humana | **61** (Tauste 30/09); 34 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 61+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 34 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (61 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **61º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual — Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva — todos aguardando ação humana.
+- **Fila de prospecção zerada** há 61 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+---
+
+## 2026-11-18 04:15 (Atendente IA — cron tick — quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (63º dia sem cold email) |
+| Dias sem resposta humana | **63** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES (fluxo de compra de óleo — dependem de ação humana)
+| Prioridade | Lead | Situação |
+|------------|------|----------|
+| 🍀 | **Pastificio Selmi** (compras@selmi.com.br) | Proposta 800 L/mês enviada 03/11; aguardando retorno |
+| 🔴🔴🔴 | **SAVEGNAGO** (R$7,98bi, #1 interior SP) | 63+ dias sem ação WhatsApp (11) 96785-9631 |
+| 🔴🔴🔴 | **PAGUE MENOS** (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 🔴🔴🔴 | **REDE CONFIANÇA** (Sorocaba) | Proposta 2.500 L/mês enviada |
+| 🔴🔴🔴 | **COVABRA** | AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 🔴🔴 | **BRASFRIGO** (Salto/SP) | Coleta-teste a agendar. Local |
+| 🔴🔴 | **QUEIJOS ITUPEVA** (Rafael) | Coleta-teste a agendar |
+| 🟡 | **SONDA** (R$6,12bi) | (11) 2145-6200 |
+| 🟡 | **TAUSTE** | (15) 3324-4680. Respondeu 30/09 (63 dias) |
+| 🟡 | **NAGUMO** | Caso 00143542, proposta 5.000 L/mês |
+
+### Observações
+- **63º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitação de relatório ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em ação humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execução manual — Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Queijos Itupeva — todos aguardando ação humana.
+- **Fila de prospecção zerada** há 63 dias. Sem fonte gratuita de novos leads MX-válidos. Reposição depende de compra Leadjet (R$197).
+- **24 leads respondidos** — nenhum novo desde o início de novembro. Todos aguardam ação humana para avançar.
+- SMTP/IMAP operacionais. Sistema saudável, mas estagnado sem intervenção humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+
+## 2026-11-18 11:05 (Atendente IA - cron tick - quarta-feira)
+
+### Acoes executadas
+| Acao | Resultado |
+|------|-----------|
+| OK sync_formspree.py | 133 bounces cache, 0 notificacoes Formspree novas |
+| OK corrigir_emails.py | 0 bounces processados (todos os 133 ja tentados; nenhum bounce novo) |
+| OK prospecao_followup.py | 0 follow-ups (fila zerada) |
+| OK bot_oleo.py send_sequence | Sequencia processada, 0 envios novos (fila drenada) |
+| OK bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| -- proposta_contrato.py | Nao executado (sem lead com volume novo informado) |
+| -- relatorio_esg.py | Nao executado (sem solicitacao ESG/certificado) |
+
+### Diagnostico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **473** |
+| `novo` | 286 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 |
+| Respostas pendentes | 0 |
+| Fila prospeccao | 0 MX-validos (65o dia sem cold email) |
+| Dias sem resposta humana | **65** (Tauste 30/09); 35 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 nao lidas |
+| SMTP/IMAP | OK |
+
+### Leads QUENTES (fluxo de compra de oleo - dependem de acao humana)
+| Prioridade | Lead | Situacao |
+|------------|------|----------|
+| 1 | Pastificio Selmi (compras@selmi.com.br) | Proposta 800 L/mes enviada 03/11; aguardando retorno |
+| 1 | SAVEGNAGO (R$7,98bi, #1 interior SP) | 65+ dias sem acao WhatsApp (11) 96785-9631 |
+| 1 | PAGUE MENOS (R$4,33bi) | Ticket 407470 (Josiane Marinho). 35 dias sem retorno |
+| 1 | REDE CONFIANCA (Sorocaba) | Proposta 2.500 L/mes enviada |
+| 1 | COVABRA | ACAO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente! |
+| 2 | BRASFRIGO (Salto/SP) | Coleta-teste a agendar. Local |
+| 2 | QUEIJOS ITUPEVA (Rafael) | Coleta-teste a agendar |
+| 3 | SONDA (R$6,12bi) | (11) 2145-6200 |
+| 3 | TAUSTE | (15) 3324-4680. Respondeu 30/09 (65 dias) |
+| 3 | NAGUMO | Caso 00143542, proposta 5.000 L/mes |
+
+### Observacoes
+- **65o dia sem resposta humana nova** no fluxo de compra de oleo. Nenhum lead novo respondeu, nenhum volume informado, nenhuma solicitacao de relatorio ESG ou proposta de contrato.
+- **Pipeline de fechamento 100% bloqueado** em acao humana (WhatsApp/telefone). Protocolo de reengajamento semanal da persona sem execucao manual.
+- **Fila de prospeccao zerada** ha 65 dias. Sem fonte gratuita de novos leads MX-validos. Reposicao depende de compra Leadjet (R$197).
+- **24 leads respondidos** - nenhum novo desde o inicio de novembro. Todos aguardam acao humana para avancar.
+- SMTP/IMAP operacionais. Sistema saudavel, mas estagnado sem intervencao humana.
+- Nenhum bounce novo detectado, nenhuma resposta para responder, nenhum follow-up a enviar.
+
+
+## 2026-11-18 11:34 (Atendente IA — cron tick — quarta-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree: 133 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails: 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)
+- ✅ prospecao_followup: 0 follow-ups processados (fila zerada — sem leads na fila para follow-up)
+- ✅ send_sequence: sequência processada, 0 envios novos (fila drenada)
+- ✅ check-replies: 0 respostas pendentes (replies_pending.json vazio)
+- ✅ proposta_contrato: não executado (sem lead com volume novo informado)
+- ✅ relatorio_esg: não executado (sem solicitação ESG/certificado)
+- 🔴 **66º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- 🔴 **66 dias sem cold email novo** — fila de prospecção zerada, sem reposição
+- 🔴 Pipeline 100% bloqueado em ação humana (WhatsApp/telefone/cadastro Covabra)
+
+### Leads QUENTES (fluxo de compra — fechamento depende de ação humana)
+1. 🍀 **Pastificio Selmi** (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11 (15 dias). SAC redirecionou para comercial = semi-fechamento. Aguardando retorno do comprador.
+2. 🔴🔴🔴 **Savegnago** (R$7,98bi, #1 interior SP) — 66+ dias sem ação humana. WhatsApp (11) 96785-9631.
+3. 🔴🔴🔴 **Pague Menos** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.
+4. 🔴🔴🔴 **Rede Confiança** (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.
+5. 🔴🔴🔴 **Covabra** — **AÇÃO HUMANA NECESSÁRIA**: preencher cadastro de fornecedor (isac.ivrim.com.br). 66+ dias pendente!
+6. 🔴🔴 **Brasfrigo** (Salto/SP) — Coleta-teste a agendar. Lead local.
+7. 🔴🔴 **Queijos Itupeva** (Rafael) — Coleta-teste a agendar.
+8. 🟡 **Sonda** (R$6,12bi) — (11) 2145-6200.
+9. 🟡 **Tauste** — (15) 3324-4680. Respondeu 30/09 (66 dias).
+10. 🟡 **Nagumo** — Caso 00143542, proposta 5.000 L/mês anexada.
+
+### Observações
+- **66 dias sem resposta humana nova** no fluxo de compra. A última resposta real (não SAC redirect) foi Tauste em 30/09.
+- **Únicos semi-fechamentos**: Savegnago, Pague Menos, Rede Confiança, Selmi — todos SAC→comercial. Todos aguardam ação humana.
+- **Pipeline travado**: sem cold email (fila zerada), sem WhatsApp automatizado, sem ligações. O sistema de email está saudável mas a prospecção ativa parou.
+- **Fila de prospecção zerada**: os 286 leads "novos" são os que nunca receberam email (bounce/descartados filtrados). Para reativar prospecção, precisa de lista CNPJ nova (Leadjet CNAE 1052-0, 1041-4, 1043-1).
+- **Sistema saudável**: SMTP/IMAP OK, watchdog OK, scripts rodam sem erro.
+

@@ -156,8 +156,13 @@ EMPRESAS = [
                                                                                                                                                                                                                                                                 {"nome": "Aleatory Alimentos", "empresa": "Aleatory Alimentos Ltda", "email": "contato@aleatory.com.br", "cidade": "Campinas/SP", "segmento": "Industria de alimentos (cozinha industrial, oleo fritura) - MX Kinghost valido 29/09"},
                                                                                                                                                                                                                                                                 # Cacique Alimentos - Campinas - grande industria
                                                                                                                                                                                                                                                                 {"nome": "Cacique Alimentos", "empresa": "Cacique Alimentos (tradicional em SP)", "email": "sac@cacique.com.br", "cidade": "Campinas/SP", "segmento": "Industria alimenticia (refeitorio, oleo fritura) - MX Google valido 29/09"},
+                                                                                                                                                                                                                                                                                                                                # --- NOVAS EMPRESAS (adicionadas 18/11 - Melhorador Continuo, MX verificado) ---
+                                                                                                                                                                                                                                                                                                                                # Sandeleh Alimentos - Sorocaba - industria de conservas (150+ func, oleo fritura)
+                                                                                                                                                                                                                                                                                                                                {"nome": "Sandeleh Alimentos", "empresa": "Sandeleh Alimentos Ltda", "email": "comercial@sandeleh.com.br", "cidade": "Sorocaba/SP", "segmento": "Industria de conservas (oleo vegetal fritura, 150+ funcionarios) - MX Outlook valido 18/11"},
+                                                                                                                                                                                                                                                                                                                                # Alere Alimentacao - Sorocaba - refeicoes coletivas (1001-5000 func, cozinha industrial)
+                                                                                                                                                                                                                                                                                                                                {"nome": "Alere Alimentacao", "empresa": "Alere Alimentacao e Servicos LTDA", "email": "gerente.relacionamento@alerealimentacao.com.br", "cidade": "Sorocaba/SP", "segmento": "Refeicoes coletivas (cozinha industrial, 1001-5000 funcionarios) - MX Skymail valido 18/11"},
 
-                                                                                                                                                                                                                                                            ]
+                                                                                                                                                                                                                                                                                                                                                                                            ]
 
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
@@ -211,7 +216,14 @@ def merge_write_leads(novos_em_memoria):
             existentes = {l.get("email", "").strip().lower() for l in atuais}
             a_adicionar = [l for l in novos_em_memoria
                            if l.get("email", "").strip().lower() not in existentes]
-            base_id = max((int(l.get("id") or 0) for l in atuais), default=0)
+            base_id = 0
+            for l in atuais:
+                try:
+                    val = int(l.get("id") or 0)
+                    if val > base_id:
+                        base_id = val
+                except (ValueError, TypeError):
+                    continue
             for i, l in enumerate(a_adicionar, start=base_id + 1):
                 l["id"] = str(i)
             write_leads(atuais + a_adicionar)
