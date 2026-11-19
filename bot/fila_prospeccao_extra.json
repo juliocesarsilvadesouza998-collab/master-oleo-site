@@ -2478,5 +2478,19 @@
     "email": "contato@livhealth.com.br",
     "cidade": "Araçoiaba da Serra/SP",
     "segmento": "indústria de suplementos e nutracêuticos (encapsulados, softgel, comprimidos, gomas) - NICHO PRIORITARIO (encapsulados/farmacêuticas, óleo vegetal limpeza máquinas)"
-  }
-]
+      },
+      {
+        "nome": "Jund Coco",
+        "empresa": "Jund Coco Ltda",
+        "email": "jundcoco.ecommerce@gmail.com",
+        "cidade": "Jundiai/SP",
+        "segmento": "Industria de oleos vegetais refinados (oleo de coco) - NICHO PRIORITARIO (oleos vegetais)"
+      },
+      {
+        "nome": "Food Brands (KiSabor)",
+        "empresa": "Food Brands Industria de Produtos Alimenticios S/A (KiSabor)",
+        "email": "sac@kisabor.ind.br",
+        "cidade": "Jundiai/SP",
+        "segmento": "Industria de maioneses, molhos e temperos - NICHO PRIORITARIO (vencidos >40% gordura)"
+      }
+    ]

@@ -160,9 +160,14 @@ EMPRESAS = [
                                                                                                                                                                                                                                                                                                                                 # Sandeleh Alimentos - Sorocaba - industria de conservas (150+ func, oleo fritura)
                                                                                                                                                                                                                                                                                                                                 {"nome": "Sandeleh Alimentos", "empresa": "Sandeleh Alimentos Ltda", "email": "comercial@sandeleh.com.br", "cidade": "Sorocaba/SP", "segmento": "Industria de conservas (oleo vegetal fritura, 150+ funcionarios) - MX Outlook valido 18/11"},
                                                                                                                                                                                                                                                                                                                                 # Alere Alimentacao - Sorocaba - refeicoes coletivas (1001-5000 func, cozinha industrial)
-                                                                                                                                                                                                                                                                                                                                {"nome": "Alere Alimentacao", "empresa": "Alere Alimentacao e Servicos LTDA", "email": "gerente.relacionamento@alerealimentacao.com.br", "cidade": "Sorocaba/SP", "segmento": "Refeicoes coletivas (cozinha industrial, 1001-5000 funcionarios) - MX Skymail valido 18/11"},
+                                                                                                                                                                                                                                                                                                                                                                                                {"nome": "Alere Alimentacao", "empresa": "Alere Alimentacao e Servicos LTDA", "email": "gerente.relacionamento@alerealimentacao.com.br", "cidade": "Sorocaba/SP", "segmento": "Refeicoes coletivas (cozinha industrial, 1001-5000 funcionarios) - MX Skymail valido 18/11"},
+                                                                                                                                                                                                                                                                                                                                                                                                # --- NOVAS EMPRESAS (adicionadas 19/11 - Melhorador Continuo, MX verificado) ---
+                                                                                                                                                                                                                                                                                                                                                                                                # Kreps Cafe - Salto - cafeteria/restaurante (fritura diaria, centro de Salto)
+                                                                                                                                                                                                                                                                                                                                                                                                {"nome": "Kreps Cafe", "empresa": "Kreps Cafe", "email": "contato@krepscafe.com.br", "cidade": "Salto/SP", "segmento": "Cafe e restaurante (fritura diaria, centro Salto) - MX Outlook valido 19/11"},
+                                                                                                                                                                                                                                                                                                                                                                                                # Supermercado Union (COOPBOM) - Cerquilho - supermercado (padaria/rotisserie/acougue)
+                                                                                                                                                                                                                                                                                                                                                                                                {"nome": "Supermercado Union", "empresa": "Supermercado Union Ltda (COOPBOM)", "email": "adm@supermercadounion.com.br", "cidade": "Cerquilho/SP", "segmento": "Supermercados (rede, padaria/rotisserie/acougue) - MX Skymail valido 19/11"},
 
-                                                                                                                                                                                                                                                                                                                                                                                            ]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            ]
 
 def now_iso():
     return datetime.datetime.now().astimezone().isoformat(timespec="seconds")
@@ -368,15 +373,16 @@ def tpl_apresentacao(cfg, lead):
 </div>"""
         }
     return {
-            "subject": f"Óleo usado da {lead.get('empresa','')} vira receita — até R$ 14.400/ano",
-            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-            <p>Olá, {lead.get('nome','')}.</p>
-            <p>O óleo de fritura que hoje sai de graça virou commodity energetica — <b>pagamos R$ 1-2,50/L à vista (PIX)</b> na coleta, com certificado e MTR. 600 L/mes = <b>R$ 14.400/ano</b> de renda extra, sem custo de logistica.</p>
-            <p><b>Quem ja fechou:</b> <b>Savegnago</b> (#1 interior SP, R$ 7,98 bi) esta negociando, <b>Grupo Madero</b> (270 restaurantes) coleta 55 mil L/mes, e a <b>Petrobras</b> investiu R$ 23 mi na coleta de OGR — a maior estatal do pais trata oleo usado como ativo.</p>
-            <p><b>Urgencia:</b> a <b>Portaria MME/MMA n° 3/2026</b> obriga ≥1% de oleo residual no biodiesel a partir de jan/2028 — a demanda vai explodir. Quem fecha contrato agora ganha prioridade. <b>Quantos litros voce gera por mes?</b> Responda que envio o valor. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
-            <p style="font-size:11px;color:#888">🔐 Coleta com cracha, pesagem na hora, bombona com trava, certificado PNRS + MTR — sem passivo no seu CNPJ.</p>
-            <p>Abs,<br><b>{g['nome']}</b> · Compra de oleo e gordura vegetal usados · {cidade}</p>
-            </div>"""}
+                "subject": f"{lead.get('empresa','')} — óleo de fritura vira receita em {cidade}",
+                "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+    <p>Olá, {lead.get('nome','')}.</p>
+    <p>A Master Óleo coleta <b>óleo de fritura usado e gordura vegetal</b> em {cidade}, com pagamento à vista (PIX) e certificado de destinação (MTR).</p>
+    <p><b>Duas perguntas rápidas:</b></p>
+    <p>1. Vocês geram óleo de cozinha usado na operação de vocês?<br>
+    2. Se sim, qual o volume mensal aproximado (litros/kg)?</p>
+    <p>Com essas informações envio uma avaliação em 24h. Se não gerarem, é só ignorar esta mensagem.</p>
+    <p>Abs,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados</p>
+    </div>"""}
 
 def prospecao(args):
     cfg = load_config()
