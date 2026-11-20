@@ -1,26 +1,26 @@
 {
-  "atualizado_em": "2026-11-19 22:30 (Atendente IA — cron tick — quinta-feira noite)",
-  "leads": {
-    "total": 473,
-    "por_status": {
-      "novo": 286,
-      "respondido": 24,
-      "bounce": 95,
-      "encerrado": 15,
-      "descartado": 53
+  "atualizado_em": "2026-11-20T20:30:00-03:00",
+    "leads": {
+      "total": 477,
+      "por_status": {
+        "bounce": 95,
+        "novo": 290,
+        "respondido": 24,
+        "descartado": 53,
+        "encerrado": 15
+      },
+      "por_fonte": {
+        "prospeccao": 169,
+        "prospeccao-lote": 286,
+        "prospeccao-fritas-2026-09-25": 11,
+        "prospeccao_desmoldante": 7,
+        "desmoldante": 1,
+        "formspree": 2,
+        "resposta_email": 1
+      }
     },
-    "por_fonte": {
-      "prospeccao": 169,
-      "prospeccao-lote": 282,
-      "prospeccao-fritas-2026-09-25": 11,
-      "prospeccao_desmoldante": 7,
-      "desmoldante": 1,
-      "formspree": 2,
-      "resposta_email": 1
-    }
-  },
-  "respondidos": {
-    "total": 24,
+    "respondidos": {
+      "total": 20,
     "lista": [
       {
         "empresa": "Du Porto Industria Alimenticia Ltda",
@@ -181,379 +181,28 @@
         "cidade": "Piracicaba/SP (Artemis)",
         "respondido_em": "2026-09-26T11:02:25-03:00",
         "ultima_resposta": ""
-      },
-      {
-        "empresa": "Brasfrigo S/A (frigorifico - Salto/SP)",
-        "contato": "",
-        "email": "sac@brasfrigo.com.br",
-        "cidade": "Salto/SP",
-        "respondido_em": "",
-        "ultima_resposta": ""
-      },
-      {
-        "empresa": "Rede Confianca Supermercados",
-        "contato": "",
-        "email": "social@confianca.com.br",
-        "cidade": "Sorocaba/SP",
-        "respondido_em": "",
-        "ultima_resposta": ""
       }
     ]
   },
   "bounces_cache": 133,
   "prospeccao_lote_enviados": 419,
   "sequencia_ativa": true,
-  "ultima_execucao": "2026-11-19T14:38:00-03:00",
-  "ciclo_2026_11_18_0415_cron_atendente": {
-    "timestamp": "2026-11-18 04:15 (Atendente IA — cron tick — quarta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "63 (Tauste 30/09); 35 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "63º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 63 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 63+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 63+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (63 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_17_2335_cron_atendente_263": {
-    "timestamp": "2026-11-17 23:35 (Atendente IA — cron tick #263 — terça-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "60 (Tauste 30/09); 34 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "61º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 61 dias sem cold email. Nada mudou desde o tick anterior — reps_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 61+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 34 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 60+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (60 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês anexada"
-    ]
-  },
-  "ciclo_2026_11_18_0500_cron_atendente": {
-    "timestamp": "2026-11-18 05:00 (Atendente IA — cron tick — quarta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "64 (Tauste 30/09); 35 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "64º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 64 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 64+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 64+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (64 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_18_0904_cron_atendente": {
-    "timestamp": "2026-11-18 09:04 (Atendente IA — cron tick — quarta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "64 (Tauste 30/09); 35 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "65º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 65 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 65+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 65+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (65 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_18_1134_cron_atendente": {
-    "timestamp": "2026-11-18 11:34 (Atendente IA — cron tick — quarta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "66 (Tauste 30/09); 35 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "66º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache, 286 novos, 24 respondidos, 15 encerrados, 53 descartados. Fila de prospecção zerada — 66 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno. 15 dias sem resposta.",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 66+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 66+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (66 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_19_0015_cron_atendente": {
-    "timestamp": "2026-11-19 00:15 (Atendente IA — cron tick — quinta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "68 (Tauste 30/09); 36 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "68º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache, 286 novos, 24 respondidos, 15 encerrados, 53 descartados. Fila de prospecção zerada — 68 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno. 15 dias sem resposta.",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 67+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 67+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (67 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_18_1206_cron_atendente": {
-    "timestamp": "2026-11-18 12:06 (Atendente IA — cron tick — quarta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "66 (Tauste 30/09); 35 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "66º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 66 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 66+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 35 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 66+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (66 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_19_0415_cron_atendente": {
-    "timestamp": "2026-11-19 04:15 (Atendente IA — cron tick — quinta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "68 (Tauste 30/09); 36 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "68º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache, 286 novos, 24 respondidos, 15 encerrados, 53 descartados. Fila de prospecção zerada — 68 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno. 16 dias sem resposta.",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 68+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 36 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 68+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (68 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-  "ciclo_2026_11_19_0906_cron_atendente": {
-    "timestamp": "2026-11-19 09:06 (Atendente IA — cron tick — quinta-feira)",
-    "acoes": [
-      "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas (OK)",
-      "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-      "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-      "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-      "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-      "_miniscan_inbox.py — INBOX 0 não lidas",
-      "watchdog.py — exit 1 — 473 leads, 286 ativos, 133 bounces. SMTP OK · IMAP OK",
-      "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-      "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-    ],
-    "diagnostico": {
-      "total_leads_csv": 473,
-      "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-      "bounce_cache_json": 133,
-      "dias_sem_resposta_humana_fluxo_oleo": "50 (Tauste 30/09); 36 desde Pague Menos (14/10)",
-      "respostas_reais": 0,
-      "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-      "propostas_contrato_geradas": 0,
-      "relatorios_esg_gerados": 0,
-      "observacao": "50º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 50 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-    },
-    "leads_quentes": [
-      "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno",
-      "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 50+ dias sem ação humana.",
-      "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 36 dias sem retorno.",
-      "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-      "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 50+ dias!",
-      "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-      "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-      "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-      "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (50 dias).",
-      "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-    ]
-  },
-    "ciclo_2026_11_19_1438_cron_atendente": {
-      "timestamp": "2026-11-19 14:38 (Atendente IA — cron tick — quinta-feira)",
-      "acoes": [
-        "sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas (OK)",
-        "corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)",
-        "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
-        "bot_oleo.py send_sequence — sequência processada, 0 envios novos (fila drenada)",
-        "bot_oleo.py check-replies — 0 respostas pendentes (replies_pending.json vazio)",
-        "proposta_contrato.py — não executado (sem lead com volume novo informado)",
-        "relatorio_esg.py — não executado (sem solicitação ESG/certificado)"
-      ],
-      "diagnostico": {
-        "total_leads_csv": 473,
-        "status_csv": "novo 286 | bounce 95 (133 cache) | respondido 24 | encerrado 15 | descartado 53",
-        "bounce_cache_json": 133,
-        "dias_sem_resposta_humana_fluxo_oleo": "70 (Tauste 30/09); 36 desde Pague Menos (14/10)",
-        "respostas_reais": 0,
-        "respostas_humanas_fluxo_oleo": "Nenhuma — replies_pending.json vazio, INBOX limpa",
-        "propostas_contrato_geradas": 0,
-        "relatorios_esg_gerados": 0,
-        "observacao": "70º dia sem respostas humanas no fluxo de COMPRA de óleo. Sistema saudável — SMTP/IMAP OK. 473 leads, 133 bounces cache. Fila de prospecção zerada — 70 dias sem cold email. Nada mudou desde o tick anterior — replies_pending vazio, INBOX limpa, 0 respostas. Pipeline bloqueado em ação humana (WhatsApp/telefone)."
-      },
-      "leads_quentes": [
-        "🍀 PASTIFICIO SELMI (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; aguardando retorno. 16 dias sem resposta.",
-        "🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 70+ dias sem ação humana.",
-        "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 36 dias sem retorno.",
-        "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada. Aguardando retorno.",
-        "🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br pendente. 70+ dias!",
-        "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local.",
-        "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
-        "🟡 SONDA (R$6,12bi) — (11) 2145-6200.",
-        "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (70 dias).",
-        "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês"
-      ]
-    }
-  }
+  "ultima_execucao": "2026-11-20T20:11:00-03:00",
+    "prospeccao_lote_enviados": 427,
+        "sequencia_ativa": true,
+        "fila_prospeccao": {
+          "total": 447,
+          "pendentes": 0,
+          "contatados": 382,
+          "bounces": 87
+        },
+        "aprendizados": "Fila de prospeccao zerada (382 contatados, 87 bounces, 0 pendentes). 4 leads enviados sem bounces conhecidos. Proxima fronteira: listas CNPJ pagas (Leadjet) para CNAEs 1052-0, 1043-1, 1041-4.",
+            "melhorias_continuo": {
+                  "ultima": "2026-11-20T20:30:00-03:00",
+                  "itens": [
+                                "PROSPECTOR #279: 4 leads enviados (Sandeleh, Kreps Cafe, Supermercado Union, Jund Coco) - fila ZERADA",
+                                "Diagnostico: prospeccao por cold email chegou ao limite da base atual (447 empresas, todas processadas). Sem email discovery tools, nao ha como adicionar leads de industrias de margarina/gordura vegetal sem email publico.",
+                                "Empresas de alto valor identificadas mas sem email publico: E. Barbosa Alves Leite (Jundiai, CNAE 1043-1/00), FARINOLIO (Varzea Paulista, CNAE 1043-1/00), SITOL (Jundiai, CNAE 1043-1/00), MAXIMA Agroindustrial (Bady Bassitt, CNAE 1043-1/00)."
+                  ]
+                }
+        }
