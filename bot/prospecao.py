@@ -265,7 +265,7 @@ def tpl_apresentacao(cfg, lead):
     segmento = (lead.get("segmento") or "alimentação").lower()
     # Ângulo específico: supermercados/atacarejo — padaria+rotisserie+açougue = óleo toda semana
     if any(k in segmento for k in ["supermercado", "supermercados", "atacarejo",
-                                        "atacado", "varejo", "rede"]):
+                                        "atacado", "atacadista", "varejo", "rede", "hiper"]):
         return {
             "subject": f"Óleo de fritura da {lead.get('empresa','')} vira renda — coleta na rede toda",
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
@@ -335,6 +335,22 @@ def tpl_apresentacao(cfg, lead):
 <p>Abraço,<br><b>{g['nome']}</b> · Compra de óleo vegetal usado industrial · {cidade}</p>
 </div>"""
         }
+    # Ângulo específico: RESTAURANTES/PADARIAS/FAST FOOD/ROTISSERIE — fritura todo dia
+    # (restaurantes, padarias, lanchonetes, fast food, pizzarias, confeitarias, rotisserias)
+    if any(k in segmento for k in ["restaurant", "padaria", "lanchonet", "fast food", "fastfood",
+                                    "pizzaria", "confeitaria", "sorveteria", "rotisserie",
+                                    "hamburguer", "steak house", "lanche", "salgado",
+                                    "comida", "bar", "café", "cafe", "self service"]):
+        return {
+            "subject": f"Óleo de fritura vira receita ({cidade}) — PIX na coleta",
+            "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Cada cozinha gera <b>óleo de fritura todos os dias</b> — o mercado global de óleo usado (UCO) vale <b>US$ 15,16 bilhões</b> (Fortune Business Insights proj. 2033). Um estabelecimento médio gera 200-400 L/mês = <b>R$ 4.080 a R$ 9.600/ano</b> que hoje sai como resíduo.</p>
+<p>A <b>{g['nome']}</b> coleta com <b>certificado PNRS + pagamento à vista (PIX)</b> na coleta, bombona com trava anti-furto e relatório ESG mensal. <b>Sem passivo no seu CNPJ.</b></p>
+<p><b>Qual o volume mensal de óleo de fritura que vocês geram?</b> Responda com litros/kg que envio a avaliação em 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Urgência: <b>Portaria MME/MMA 3/2026</b> obriga ≥1% OGR no biodiesel a partir jan/2028 — quem contrata agora garante prioridade.</p>
+<p>Abraço,<br><b>{g['nome']}</b> · Master Óleo · {cidade}</p>
+</div>"""}
     # Ângulo específico: HOTÉIS/RESORTS/POUSADAS — cozinha industrial de pensão completa
     # (café da manhã + almoço + jantar todos os dias = fritura constante o ano todo)
     # V6 (12/09): 5 hotéis-fazenda de Itu/região adicionados à fila — nicho sub-coberto,
@@ -373,16 +389,15 @@ def tpl_apresentacao(cfg, lead):
 </div>"""
         }
     return {
-                "subject": f"{lead.get('empresa','')} — óleo de fritura vira receita em {cidade}",
+                "subject": f"Resíduo oleoso da {lead.get('empresa','')} vira receita — coleta em {cidade}",
                 "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
-    <p>Olá, {lead.get('nome','')}.</p>
-    <p>A Master Óleo coleta <b>óleo de fritura usado e gordura vegetal</b> em {cidade}, com pagamento à vista (PIX) e certificado de destinação (MTR).</p>
-    <p><b>Duas perguntas rápidas:</b></p>
-    <p>1. Vocês geram óleo de cozinha usado na operação de vocês?<br>
-    2. Se sim, qual o volume mensal aproximado (litros/kg)?</p>
-    <p>Com essas informações envio uma avaliação em 24h. Se não gerarem, é só ignorar esta mensagem.</p>
-    <p>Abs,<br><b>{g['nome']}</b> · Compra de óleo e gordura vegetal usados</p>
-    </div>"""}
+<p>Olá, {lead.get('nome','')}.</p>
+<p>Se sua empresa gera <b>óleo de cozinha usado, gordura vegetal, margarina/maionese vencida ou resíduo oleoso</b>, o mercado de biodiesel transforma isso em receita. O mercado global de óleo usado (UCO) vale <b>US$ 15,16 bilhões</b> (Fortune Business Insights proj. 2033). <b>Pagamos R$ 1,00 a R$ 2,50/L (PIX na coleta)</b>.</p>
+<p>A <b>{g['nome']}</b> coleta em {cidade} com <b>certificado de destinação (PNRS/MTR)</b>, bombonas fornecidas e relatório ESG. <b>Você zera o passivo do CNPJ e recebe pelo material.</b></p>
+<p><b>Qual o volume mensal (litros/kg) e o tipo de material que sua empresa gera?</b> Com isso envio a avaliação em 24h. WhatsApp: <b>{g['telefone_whatsapp']}</b>.</p>
+<p>Urgência regulatória: <b>Portaria MME/MMA nº 3/2026</b> obriga ≥1% de óleo residual no biodiesel a partir de jan/2028 — a demanda por óleo usado vai disparar.</p>
+<p>Abs,<br><b>{g['nome']}</b> · Master Óleo · {cidade}</p>
+</div>"""}
 
 def prospecao(args):
     cfg = load_config()

@@ -2478,19 +2478,43 @@
     "email": "contato@livhealth.com.br",
     "cidade": "Araçoiaba da Serra/SP",
     "segmento": "indústria de suplementos e nutracêuticos (encapsulados, softgel, comprimidos, gomas) - NICHO PRIORITARIO (encapsulados/farmacêuticas, óleo vegetal limpeza máquinas)"
-      },
-      {
-        "nome": "Jund Coco",
-        "empresa": "Jund Coco Ltda",
-        "email": "jundcoco.ecommerce@gmail.com",
-        "cidade": "Jundiai/SP",
-        "segmento": "Industria de oleos vegetais refinados (oleo de coco) - NICHO PRIORITARIO (oleos vegetais)"
-      },
-      {
-        "nome": "Food Brands (KiSabor)",
-        "empresa": "Food Brands Industria de Produtos Alimenticios S/A (KiSabor)",
-        "email": "sac@kisabor.ind.br",
-        "cidade": "Jundiai/SP",
-        "segmento": "Industria de maioneses, molhos e temperos - NICHO PRIORITARIO (vencidos >40% gordura)"
-      }
-    ]
+  },
+  {
+    "nome": "Jund Coco",
+    "empresa": "Jund Coco Ltda",
+    "email": "jundcoco.ecommerce@gmail.com",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de oleos vegetais refinados (oleo de coco) - NICHO PRIORITARIO (oleos vegetais)"
+  },
+  {
+    "nome": "Food Brands (KiSabor)",
+    "empresa": "Food Brands Industria de Produtos Alimenticios S/A (KiSabor)",
+    "email": "sac@kisabor.ind.br",
+    "cidade": "Jundiai/SP",
+    "segmento": "Industria de maioneses, molhos e temperos - NICHO PRIORITARIO (vencidos >40% gordura)"
+  },
+  {
+    "nome": "Industrias Xhara",
+    "empresa": "Industrias Xhara Ltda",
+    "email": "comercial@xhara.com.br",
+    "cidade": "Limeira/SP",
+    "segmento": "Industria de oleos e gorduras vegetais (margarinas, cremes, frituras) - NICHO PRIORITARIO",
+    "fonte": "prospector_20261121"
+  },
+  {
+    "nome": "Oleon Brasil (A. Azevedo Oleos)",
+    "empresa": "Oleon Brasil S.A. (A. Azevedo Industria e Comercio de Oleos Ltda)",
+    "email": "atendimento@azevedooleos.com.br",
+    "cidade": "Itupeva/SP",
+    "segmento": "Industria de oleos vegetais (extracao, refinaria, gorduras) - NICHO PRIORITARIO",
+    "fonte": "prospector_20261121"
+  },
+  {
+    "nome": "Concepta Ingredients",
+    "empresa": "Concepta Ingredients (Valinhos/SP)",
+    "email": "vendas@conceptaingredients.com",
+    "cidade": "Valinhos/SP",
+    "segmento": "Industria de ingredientes naturais (oleos, gorduras, extratos) - NICHO PRIORITARIO",
+    "fonte": "prospector_20261121"
+  }
+]

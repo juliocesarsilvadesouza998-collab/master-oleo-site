@@ -1,3 +1,40 @@
+## 2026-11-21 ~19:23 (Melhorador Contínuo — #279 — sábado)
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **477** |
+| `novo` | 290 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ (2 FP3 enviados) |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ |
+| Dias sem resposta humana | **75** (Tauste 30/09); 38 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### ▸ Melhorias executadas
+1. **PROSPECAO.PY: Novo template para RESTAURANTES/PADARIAS/FAST FOOD** — adicionado bloco de detecção para ~20 keywords (restaurante, padaria, lanchonete, fast food, pizzaria, confeitaria, sorveteria, rotisserie, hamburguer, etc.) que antes caíam no fallback genérico. Template com mercado US$15,16bi, renda calculada R$4.080-9.600/ano, PIX, certificado PNRS, anti-furto, urgência 2028.
+2. **PROSPECAO.PY: Fallback genérico fortalecido** — de 2 perguntas vagas para argumento completo: US$15,16bi, R$1-2,50/L, certificado PNRS/MTR, urgência 2028, passivo CNPJ.
+3. **PROSPECAO.PY: Keywords adicionadas** — "atacadista" e "hiper" ao template supermercados
+4. **2 follow-ups FP3 enviados** — ALCOMEX, VitaVita
+5. **corrigir_emails** — 0 bounces novos (todos 133 já tentados)
+6. **Testado: py_compile + execução** para todos os 6 segmentos de template
+
+### ▸ Aprendizado do dia
+**O maior gargalo de conversão está nos TEMPLATES genéricos, não na fila.** Com fila zerada, a única alavanca de crescimento é maximizar a taxa de resposta dos 285 leads que já receberam apresentação mas não responderam — e dos novos leads que eventualmente entrarem. O template genérico (que atendia restaurantes, padarias, fast food e indústrias sem classificação específica) era o ponto mais fraco: só 2 perguntas vagas, sem valor, sem urgência. Agora cada segmento tem template com dados de mercado, renda calculada, urgência regulatória e CTA claro.
+
+### ▸ Para o Estrategista dominical
+- **Leadjet ou similar**: comprar lista CNPJ CNAEs prioritários é a única forma de reabastecer a fila
+- **Covabra**: ação humana no portal Ivrim (isac.ivrim.com.br) — lead mais maduro
+- **Savegnago/Pague Menos/Rede Confiança**: reengajamento WhatsApp (scripts prontos na persona.md)
+- **Considerar migração do cold email para WhatsApp API** (Z-API/Twilio) para destravar pipeline sem depender de ação manual
+
+---
+
 ## 2026-11-20 ~20:11 (Melhorador Contínuo — #278 — quinta-feira)
 
 ### ▸ Diagnóstico
@@ -12801,3 +12838,85 @@ Nenhuma resposta pendente no momento. O Atendente IA não tem fila para processa
 - **71º dia sem resposta humana nova** no fluxo de compra de óleo. Nenhum lead respondeu, nenhum volume informado. Pipeline 100% bloqueado em ação humana (WhatsApp/telefone).
 - **Fila de prospecção zerada** há 71 dias. Reposição depende de compra Leadjet (R$197).
 - **Sistema saudável**: SMTP/IMAP OK, 0 bounces novos, 0 respostas pendentes, 0 follow-ups a enviar.
+
+---
+
+## 2026-11-20 ~20:15 (Analista Qualidade — auditoria — sexta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ bot_oleo.py leads | 477 leads listados e auditados |
+| ✅ Auditoria bounces.json vs leads.csv | Consistente: todo bounce no cache está marcado como bounce no CSV |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **477** |
+| `novo` | 290 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Respostas pendentes | 0 ✅ |
+| Bounce com boas_vindas_em preenchido | **3** ⚠️ |
+
+### Problema encontrado — Bounce com boas_vindas_em ⚠️
+3 leads com status `bounce` possuem `boas_vindas_em` preenchido (não deveria, pois o send_sequence deveria pular bounces):
+1. **ID 8304894485** — Tecnobloc (`falecom@tecnobloc.com.br`) — boas_vindas_em = criado_em, welcome enviado antes do bounce ser detectado
+2. **ID 7721076467** — Fábrica Bloco Forte (`contato@fabricablocoforte.com.br`) — mesmo caso, welcome enviado antes do bounce
+3. **ID 437** — Teste Formspree (`teste.formspree@gmail.com`) — welcome enviado antes de ser marcado como bounce
+
+**Causa**: O boas_vindas_em foi gravado no momento da criação do lead (prospecção manual ou formulário) e o bounce só foi detectado depois pelo sync_formspree.py. O sistema envia o e-mail de boas-vindas antes de cruzar com o cache de bounces.
+
+### Sugestões de melhoria
+1. **Verificar bounces.json antes do boas-vindas**: No `send_sequence`, antes de enviar `apresentacao` (boas-vindas), consultar `bounces.json`. Se o e-mail do lead estiver no cache, pular o envio e marcar direto como bounce.
+2. **Limpar boas_vindas_em de bounces**: Após sync_formspree.py marcar um lead como bounce, zerar o campo `boas_vindas_em` para consistência (opcional, baixo impacto).
+3. **Fila de prospecção zerada**: 72º dia sem cold email novo. Leadjet R$197 ainda pendente.
+
+---
+
+## 2026-11-21 ~19:21 (Atendente IA — sábado)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+| ✅ ecossistema.json | Atualizado (timestamps) |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **477** |
+| `novo` | 290 |
+| `respondido` | 24 |
+| `bounce` CSV | 95 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (**75º dia sem cold email**) |
+| Dias sem resposta humana | **75** (Tauste 30/09); 38 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### ▸ 🔥 Leads QUENTES — nenhuma mudança
+- **Pastifício Selmi** — proposta 800 L/mês aguardando há 18 dias
+- **SAVEGNAGO** (R$7,98bi) — 75+ dias sem ação WhatsApp
+- **PAGUE MENOS** (R$4,33bi) — 38 dias sem retorno (Josiane Marinho)
+- **REDE CONFIANÇA** — proposta 2.500 L/mês enviada
+- **COVABRA** — cadastro fornecedor isac.ivrim.com.br pendente!
+- **BRASFRIGO** + **QUEIJOS ITUPEVA** — coleta-teste a agendar
+
+### ▸ Observações
+- **75º dia sem resposta humana nova** no fluxo de compra de óleo. Pipeline 100% bloqueado em ação humana (WhatsApp/telefone).
+- **Fila de prospecção zerada** há 75 dias. Reposição depende de compra Leadjet (R$197).
+- **Sistema saudável**: SMTP/IMAP OK, 0 bounces novos, 0 respostas pendentes, 0 follow-ups a enviar.
+- Nada de novo neste ciclo — todos os scripts rodaram sem erros, sem leads novos, sem respostas.

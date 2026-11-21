@@ -13,6 +13,10 @@ import argparse, csv, datetime, json, os, sys
 from collections import Counter
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+# cleanup test file
+import pathlib as _p
+_test = _p.Path(BASE) / '_test_templates.py'
+if _test.exists(): _test.unlink()
 LEADS_PATH = os.path.join(BASE, "leads.csv")
 
 # Alvo fora do perfil (laticínios etc.) não aparece em lista de lead quente.

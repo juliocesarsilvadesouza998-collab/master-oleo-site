@@ -80,6 +80,54 @@
 
 ---
 
+## 2026-11-20 ~20:30 (Atendente IA — cron tick #279 — sexta-feira)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 133 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 133 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ✅ scan_inbox.py | INBOX: 0 não lidas, 477 leads, 299 msgids enviados |
+| ⏭️ proposta_contrato.py | Não executado (sem lead com volume novo informado) |
+| ⏭️ relatorio_esg.py | Não executado (sem solicitação ESG/certificado) |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **478** (+5 desde 19/11) |
+| `novo` | 290 |
+| `respondido` | 24 |
+| `bounce` CSV | 97 (133 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ (**74º dia sem cold email**) |
+| Dias sem resposta humana | **74** (Tauste 30/09); 37 desde Pague Menos (14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### ▸ 🔥 Leads QUENTES — sem mudança
+Mesmos leads aguardando ação humana:
+- **Pastifício Selmi** (compras@selmi.com.br) — proposta 800 L/mês, 17 dias sem retorno
+- **SAVEGNAGO** (R$7,98bi, #1 interior SP) — 74+ dias sem ação WhatsApp
+- **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho), 37 dias
+- **REDE CONFIANÇA** (Sorocaba) — proposta 2.500 L/mês enviada
+- **COVABRA** — cadastro fornecedor isac.ivrim.com.br pendente! (74+ dias)
+- **BRASFRIGO** (Salto/SP) + **QUEIJOS ITUPEVA** — coleta-teste a agendar
+- **SONDA** (R$6,12bi), **TAUSTE**, **NAGUMO** (caso 00143542, 5.000 L/mês)
+
+### ▸ Observações
+- **74º dia sem resposta humana nova.** Nenhum lead respondeu desde 14/10 (Pague Menos).
+- **2 novos bounces** desde o último tick: Padaria Real Conveniencia e Restaurante Sabor Divino.
+- **4 novos leads** enviados hoje (via Melhorador): Sandeleh Alimentos, Kreps Cafe, Supermercado Union, Jund Coco.
+- Pipeline 100% bloqueado em ação humana — scripts automáticos operam sem falhas, mas sem leads entrando ou respondendo, o sistema mantém o status quo.
+
+---
+
 ## 2026-11-19 ~19:33 (Analista de Qualidade — auditoria #1 — quinta-feira)
 
 ### ▸ Ações executadas
