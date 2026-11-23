@@ -59,11 +59,32 @@ def enviar(destino, empresa):
     email = cfg["email"]
     marca = cfg["empresa"]
 
-    msg = MIMEText(TEMPLATE, "plain", "utf-8")
+    # Template HTML profissional (email_templates.py)
+    from email.mime.multipart import MIMEMultipart
+    from email_templates import tpl_desmoldante
+    import re
+
+    def _plain_from_html(html):
+        t = re.sub(r'<style.*?</style>', '', html, flags=re.DOTALL)
+        t = re.sub(r'<br\s*/?>', '\n', t)
+        t = re.sub(r'</(p|tr|div|table|h[1-6])>', '\n', t)
+        t = re.sub(r'<[^>]+>', '', t)
+        t = re.sub(r'\n{3,}', '\n\n', t)
+        return t.strip()
+
+    html = tpl_desmoldante(empresa=empresa)
+    plain = _plain_from_html(html)
+
+    msg = MIMEMultipart("alternative")
     msg["From"] = formataddr((str(Header(marca["nome"], "utf-8")), email["usuario"]))
     msg["To"] = destino
-    msg["Subject"] = str(Header("Desmoldante vegetal para concreto pré-moldado — " + marca["marca"], "utf-8"))
+    msg["Subject"] = str(Header("Desmoldante vegetal concentrado — amostra grátis para pré-moldados", "utf-8"))
     msg["Message-ID"] = make_msgid()
+    msg["Reply-To"] = email["usuario"]
+    msg["List-Unsubscribe"] = f"<mailto:{email['usuario']}?subject=unsubscribe>"
+    msg["Date"] = datetime.now().strftime("%a, %d %b %Y %H:%M:%S +0000")
+    msg.attach(MIMEText(plain, "plain", "utf-8"))
+    msg.attach(MIMEText(html, "html", "utf-8"))
 
     ctx = ssl.create_default_context()
     s = smtplib.SMTP_SSL(email["smtp_host"], email["smtp_port"], context=ctx, timeout=30)

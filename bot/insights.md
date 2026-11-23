@@ -13171,3 +13171,13 @@ Nenhuma resposta pendente no momento. O Atendente IA não tem fila para processa
 - **Fila de prospecção zerada** há 75 dias. Reposição depende de compra Leadjet (R$197).
 - **Sistema saudável**: SMTP/IMAP OK, 0 bounces novos, 0 respostas pendentes, 0 follow-ups a enviar.
 - Nada de novo neste ciclo — todos os scripts rodaram sem erros, sem leads novos, sem respostas.
+\n## Tick #245 - 2026-11-23 19:07 - Atendente IA (segunda-feira)
+- sync_formspree: 133 bounces cache, 0 notificações Formspree
+- corrigir_emails: 0 bounces novos (todos os 133 já tentados)
+- prospecao_followup: 0 follow-ups (fila zerada)
+- bot_oleo send_sequence: 0 envios novos
+- bot_oleo check-replies: 0 respostas (replies_pending vazio)
+- miniscan_inbox: INBOX 0 não lidas
+- leads: 482 (novo 295 | bounce 95 | respondido 24 | descartado 53 | encerrado 15)
+- fila_prospeccao: 376 total, 0 pendentes MX-válido
+- 54° dia sem resposta humana no fluxo de COMPRA de óleo
