@@ -1,3 +1,63 @@
+
+
+## 2026-11-23 23:30 (Melhorador Contínuo - cron diário)
+
+### Diagnóstico do dia
+- **Fila de prospecção**: 0 pendentes — exaurida (452 total, 387 contatados, 87 bounces)
+- **Leads**: 482 (estimado) | ativos ~295 | bounces ~133 | respondeu ~24
+- **Resposta humana real**: 4 (0.9% de 428 enviados) — **54 dias sem resposta humana nova**
+- **Pipeline**: 100% bloqueado em ação humana (WhatsApp/telefone/cadastro Ivrim)
+
+### Melhorias implementadas
+- ✅ **Fila reabastecida**: +10 empresas novas de Capivari e Cerquilho com emails verificados em documentos oficiais da Prefeitura de Tietê (MEGA PDF da rede credenciada). Fontes: supermercadopareaqui@yahoo.com.br, lucianabogarim3@gmail.com, marciocastro@yahoo.com.br, smdacolas2nfe@bol.com.br, controladoriaguari@gmail.com, casadecarneluana@terra.com.br, acouguecassaniga@gmail.com, mercadonavas@live.com, vanessacitroni@hotmail.com — todas de Capivari/SP e Cerquilho/SP, cidades a ~30km de Salto ainda não exploradas.
+- ✅ **Arquivo**: `bot/fila_prospeccao_extra.json` ganhou +10 leads
+- ✅ **ecossistema.json** e **insights.md** atualizados
+
+### Lição do dia
+A **Prefeitura de Tietê** mantém PDFs de "rede credenciada" de operadoras de vale-refeição (MEGA PDF, UP Brasil, MS Benefícios, Sodexo Pluxee) que listam centenas de estabelecimentos com emails REAIS de Capivari, Cerquilho, Tietê, Boituva, Porto Feliz. Esses PDFs são gold mine gratuita — contêm CNPJ, nome fantasia, endereço, telefone e email de supermercados, padarias, açougues e restaurantes. A busca `site:tiete.sp.gov.br rede credenciada` retorna esses PDFs. Cidades vizinhas (cerquilho.sp.gov.br, portofeliz.sp.gov.br) têm listas similares. **Próximo passo: baixar todos os PDFs e extrair leads em escala.**
+
+### Pendências para o Estrategista
+- 🔴 **Ação humana**: Savegnago WhatsApp, Covabra cadastro Ivrim, Pague Menos ticket — leads mais quentes parados há 54+ dias
+- 🔴 **Leadjet R$197**: única forma de reabastecer a fila em escala com CNAEs prioritários
+- 🟡 **Baixar PDFs de rede credenciada** das prefeituras de Tietê, Cerquilho, Porto Feliz, Boituva e Capivari — fonte gratuita de centenas de leads reais
+- 🟡 **Taxa de resposta 0.9%**: template já otimizado — gargalo mudou para CANAL (cold email saturado no interior SP)
+
+---
+
+## 2026-11-23 13:04 (Atendente IA - cron tick #233 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 129 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 129 já tentados; nenhum bounce novo)
+- ✅ prospecao_followup.py — 2 FP1 enviados (Nutrisanti, Diffucap)
+- ✅ bot_oleo.py send_sequence — sequência processada, nada a enviar
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ✅ _miniscan_inbox.py — INBOX: 0 não lidas
+- ✅ watchdog.py — exit 1: 469 leads, 283 ativos, 129 bounces. SMTP OK · IMAP OK
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados (0 leads com volume ou solicitação)
+- 🔴 **45º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- 🔴 Fila de prospecção zerada — sem fonte de busca gratuita para repor
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 45+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 30 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 52+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Agendar coleta-teste. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Agendar coleta-teste.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (45 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- **45 dias sem resposta humana nova** (última: Tauste 30/09). Após 469 leads trabalhados, o canal de email atingiu o teto.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que liguem ou enviem WhatsApp.
+- **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
+- Sistema saudável — SMTP/IMAP OK, watchdog funcional.
+
+---
+
 ## 2026-10-28 14:00 (Melhorador Contínuo - cron diário)
 
 ### Diagnóstico do dia

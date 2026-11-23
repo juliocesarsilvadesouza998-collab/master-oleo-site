@@ -1,26 +1,26 @@
 {
-  "atualizado_em": "2026-11-21T19:21:42-03:00",
-    "leads": {
-      "total": 477,
-      "por_status": {
-        "bounce": 95,
-        "novo": 290,
-        "respondido": 24,
-        "descartado": 53,
-        "encerrado": 15
-      },
-      "por_fonte": {
-        "prospeccao": 169,
-        "prospeccao-lote": 286,
-        "prospeccao-fritas-2026-09-25": 11,
-        "prospeccao_desmoldante": 7,
-        "desmoldante": 1,
-        "formspree": 2,
-        "resposta_email": 1
-      }
+  "atualizado_em": "2026-11-23T12:31:00-03:00",
+  "leads": {
+    "total": 482,
+    "por_status": {
+      "bounce": 95,
+      "novo": 295,
+      "respondido": 24,
+      "descartado": 53,
+      "encerrado": 15
     },
-    "respondidos": {
-      "total": 20,
+    "por_fonte": {
+      "prospeccao": 169,
+      "prospeccao-lote": 286,
+      "prospeccao-fritas-2026-09-25": 11,
+      "prospeccao_desmoldante": 7,
+      "desmoldante": 1,
+      "formspree": 2,
+      "resposta_email": 1
+    }
+  },
+  "respondidos": {
+    "total": 20,
     "lista": [
       {
         "empresa": "Du Porto Industria Alimenticia Ltda",
@@ -185,24 +185,22 @@
     ]
   },
   "bounces_cache": 133,
-  "prospeccao_lote_enviados": 419,
+  "prospeccao_lote_enviados": 427,
   "sequencia_ativa": true,
-  "ultima_execucao": "2026-11-21T19:21:42-03:00",
-    "prospeccao_lote_enviados": 427,
-        "sequencia_ativa": true,
-        "fila_prospeccao": {
-          "total": 447,
-          "pendentes": 0,
-          "contatados": 382,
-          "bounces": 87
-        },
-        "aprendizados": "Fila de prospeccao zerada (382 contatados, 87 bounces, 0 pendentes). 4 leads enviados sem bounces conhecidos. Proxima fronteira: listas CNPJ pagas (Leadjet) para CNAEs 1052-0, 1043-1, 1041-4.",
-            "melhorias_continuo": {
-                  "ultima": "2026-11-20T20:30:00-03:00",
-                  "itens": [
-                                "PROSPECTOR #279: 4 leads enviados (Sandeleh, Kreps Cafe, Supermercado Union, Jund Coco) - fila ZERADA",
-                                "Diagnostico: prospeccao por cold email chegou ao limite da base atual (447 empresas, todas processadas). Sem email discovery tools, nao ha como adicionar leads de industrias de margarina/gordura vegetal sem email publico.",
-                                "Empresas de alto valor identificadas mas sem email publico: E. Barbosa Alves Leite (Jundiai, CNAE 1043-1/00), FARINOLIO (Varzea Paulista, CNAE 1043-1/00), SITOL (Jundiai, CNAE 1043-1/00), MAXIMA Agroindustrial (Bady Bassitt, CNAE 1043-1/00)."
-                  ]
-                }
-        }
+  "ultima_execucao": "2026-11-23T12:31:00-03:00",
+  "fila_prospeccao": {
+    "total": 447,
+    "pendentes": 0,
+    "contatados": 382,
+    "bounces": 87
+  },
+  "aprendizados": "Fila de prospeccao zerada (382 contatados, 87 bounces, 0 pendentes). 4 leads enviados sem bounces conhecidos. Proxima fronteira: listas CNPJ pagas (Leadjet) para CNAEs 1052-0, 1043-1, 1041-4.",
+  "melhorias_continuo": {
+    "ultima": "2026-11-20T20:30:00-03:00",
+    "itens": [
+      "PROSPECTOR #279: 4 leads enviados (Sandeleh, Kreps Cafe, Supermercado Union, Jund Coco) - fila ZERADA",
+      "Diagnostico: prospeccao por cold email chegou ao limite da base atual (447 empresas, todas processadas). Sem email discovery tools, nao ha como adicionar leads de industrias de margarina/gordura vegetal sem email publico.",
+      "Empresas de alto valor identificadas mas sem email publico: E. Barbosa Alves Leite (Jundiai, CNAE 1043-1/00), FARINOLIO (Varzea Paulista, CNAE 1043-1/00), SITOL (Jundiai, CNAE 1043-1/00), MAXIMA Agroindustrial (Bady Bassitt, CNAE 1043-1/00)."
+    ]
+  }
+}
