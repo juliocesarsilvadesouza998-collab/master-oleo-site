@@ -48,6 +48,20 @@ ALVOS = [
     ("industria de alimentos Jundiai contato comercial", "Jundiai/SP", "Industria de alimentos (oleo vegetal vencido + fritura)"),
     ("distribuidora de oleos e gorduras vegetais contato comercial", "Sao Paulo/SP", "Industria/distribuidora de oleos e gorduras (nicho prioritario)"),
     ("fabrica de biscoitos e salgadinhos Campinas contato", "Campinas/SP", "Industria de biscoitos/snacks (fritura industrial - alto volume)"),
+    # --- ITU e INDAIATUBA (pedido do Julio, 23/11/2026: coleta nesses dois municipios,
+    #     teto de compra ate R$ 3,00/L por causa da concorrencia local) ---
+    ("restaurante self service Itu SP contato email", "Itu/SP", "Restaurante self service (fritura diaria - oleo usado em volume)"),
+    ("pastelaria e lanchonete Itu SP contato", "Itu/SP", "Pastelaria/lanchonete (fritura continua - oleo de fritura usado)"),
+    ("supermercado Itu SP fale conosco", "Itu/SP", "Supermercado (padaria/rotisserie - fritura continua + oleo vencido)"),
+    ("churrascaria e hamburgueria Itu SP contato", "Itu/SP", "Churrascaria/hamburgueria (fritura continua - oleo usado)"),
+    ("industria de alimentos Itu SP contato comercial", "Itu/SP", "Industria de alimentos (oleo vegetal vencido + fritura)"),
+    ("hotel e buffet Itu SP contato", "Itu/SP", "Hotel/buffet (cozinha industrial - fritura continua)"),
+    ("restaurante self service Indaiatuba contato email", "Indaiatuba/SP", "Restaurante self service (fritura diaria - oleo usado em volume)"),
+    ("pastelaria e lanchonete Indaiatuba contato", "Indaiatuba/SP", "Pastelaria/lanchonete (fritura continua - oleo de fritura usado)"),
+    ("supermercado Indaiatuba fale conosco", "Indaiatuba/SP", "Supermercado (padaria/rotisserie - fritura continua + oleo vencido)"),
+    ("churrascaria e hamburgueria Indaiatuba contato", "Indaiatuba/SP", "Churrascaria/hamburgueria (fritura continua - oleo usado)"),
+    ("industria de alimentos Indaiatuba contato comercial", "Indaiatuba/SP", "Industria de alimentos (oleo vegetal vencido + fritura)"),
+    ("hotel e buffet Indaiatuba contato", "Indaiatuba/SP", "Hotel/buffet (cozinha industrial - fritura continua)"),
 ]
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
@@ -275,6 +289,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-por-query", type=int, default=5)
     ap.add_argument("--max-queries", type=int, default=len(ALVOS))
+    ap.add_argument("--cidade", action="append", default=None,
+                    help="filtra os alvos por cidade (pode repetir: --cidade Itu/SP --cidade Indaiatuba/SP)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -283,7 +299,12 @@ def main():
 
     tarefas = []  # (host, cidade, segmento)
     vistos = set()
-    for query, cidade, seg in ALVOS[:args.max_queries]:
+    alvos = ALVOS
+    if args.cidade:
+        filtro = [c.strip().lower() for c in args.cidade]
+        alvos = [t for t in ALVOS if any(f in t[1].lower() for f in filtro)]
+        print(f"Filtro de cidade {args.cidade}: {len(alvos)} alvo(s) de {len(ALVOS)}")
+    for query, cidade, seg in alvos[:args.max_queries]:
         hosts = bing_domains(query)[:args.max_por_query]
         print(f"[busca] {query[:52]:<52} -> {len(hosts)} dominios")
         for h in hosts:

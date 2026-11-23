@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-23T12:31:00-03:00",
+  "atualizado_em": "2026-11-23T17:33:33-03:00",
   "leads": {
     "total": 482,
     "por_status": {
@@ -187,7 +187,7 @@
   "bounces_cache": 133,
   "prospeccao_lote_enviados": 427,
   "sequencia_ativa": true,
-  "ultima_execucao": "2026-11-23T12:31:00-03:00",
+  "ultima_execucao": "2026-11-23T17:33:33-03:00",
   "fila_prospeccao": {
     "total": 447,
     "pendentes": 0,
@@ -201,6 +201,47 @@
       "PROSPECTOR #279: 4 leads enviados (Sandeleh, Kreps Cafe, Supermercado Union, Jund Coco) - fila ZERADA",
       "Diagnostico: prospeccao por cold email chegou ao limite da base atual (447 empresas, todas processadas). Sem email discovery tools, nao ha como adicionar leads de industrias de margarina/gordura vegetal sem email publico.",
       "Empresas de alto valor identificadas mas sem email publico: E. Barbosa Alves Leite (Jundiai, CNAE 1043-1/00), FARINOLIO (Varzea Paulista, CNAE 1043-1/00), SITOL (Jundiai, CNAE 1043-1/00), MAXIMA Agroindustrial (Bady Bassitt, CNAE 1043-1/00)."
+    ]
+  },
+  "ciclo_2026-11-23_1701_cron_atendente_243": {
+    "timestamp": "2026-11-23 17:01 (Atendente IA - cron tick #243 - segunda-feira)",
+    "acoes": [
+      "sync_formspree.py — 133 bounces cache, 0 notificacoes Formspree novas (OK)",
+      "corrigir_emails.py — 0 bounces processados (todos os 133 ja tentados; nenhum bounce novo)",
+      "prospecao_followup.py — 0 follow-ups (fila zerada)",
+      "bot_oleo.py send_sequence — sequencia processada, 0 envios novos",
+      "bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
+      "_miniscan_inbox.py — INBOX: 0 nao lidas",
+      "proposta_contrato.py — nao acionado (0 leads com volume novo informado)",
+      "relatorio_ESG — nao acionado (nenhum lead solicitou relatorio de impacto)"
+    ],
+    "diagnostico": {
+      "total_leads_csv": 482,
+      "status_csv": "novo 295 | bounce 97 | respondido 25 | encerrado 15 | descartado 53",
+      "bounce_cache_json": 133,
+      "dias_sem_resposta_humana_fluxo_oleo": "47 (ultima: Tauste 30/09); 40 dias desde Pague Menos (14/10)",
+      "prospector_fila": "0 pendentes MX-valido (fila zerada — sem serper_api_key)",
+      "propostas_geradas": 0,
+      "propostas_enviadas": "nenhuma neste ciclo"
+    },
+    "leads_quentes": [
+      "🔥🔥 Savegnago Supermercados (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 47+ dias sem acao humana.",
+      "🔥🔥 Pague Menos (R$4,33bi) — Ticket 407470 (Josiane Marinho). 40 dias sem retorno.",
+      "🔥🔥 Rede Confianca (Sorocaba) — Proposta 2.500 L/mes enviada. Sem retorno.",
+      "🔥🔥 Covabra — ACAO HUMANA: cadastro fornecedor isac.ivrim.com.br (62+ dias).",
+      "🔥 Brasfrigo (Salto/SP) — Agendar coleta-teste. Local.",
+      "🟡 Sonda (R$6,12bi) — (11) 2145-6200.",
+      "🟡 Tauste — (15) 3324-4680. Respondeu 30/09 — 54 dias.",
+      "🟡 Sanofi Medley — Protocolo 03065348 (29/10).",
+      "🟡 Nagumo — Caso 00143542, proposta 5.000 L/mes.",
+      "🟡 Pastificio Selmi — compras@selmi.com.br, proposta 800 L/mes."
+    ],
+    "observacoes": [
+      "47o dia sem respostas humanas novas no fluxo de COMPRA de oleo.",
+      "Sistema 100% saudavel — SMTP/IMAP OK, fila de envios zerada.",
+      "Fila de prospeccao zerada — sem serper_api_key nem buscas web gratuitas para reposicao.",
+      "Pipeline de fechamento continua bloqueado em acao humana (WhatsApp/telefone).",
+      "482 leads no total, 295 ativos, 25 respondidos — sem novidades desde o ultimo ciclo."
     ]
   }
 }

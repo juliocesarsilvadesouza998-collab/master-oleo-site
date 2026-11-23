@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel Comercial — Master Óleo</title><style>
+:root{--green:#14532d;--amber:#f59e0b;--ink:#1c2a21;--muted:#5b6b60;--paper:#faf9f4;--line:#dce2d7}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",Arial,sans-serif;padding:28px}
+h1{font-size:26px;color:var(--green);margin:0 0 4px}h1 small{color:var(--muted);font-size:13px;font-weight:400}
+.sub{color:var(--muted);font-size:13px;margin-bottom:22px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:26px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.kpi .v{font-size:28px;font-weight:800;color:var(--green)}
+.kpi .l{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-top:4px}
+.kpi.hot .v{color:#b91c1c}
+h2{font-size:17px;margin:22px 0 10px;color:var(--green)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--green);color:#fff;font-size:11.5px;text-transform:uppercase;letter-spacing:.5px}
+tr:last-child td{border-bottom:none}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700}
+.b-A{background:#e7f6ec;color:#14532d}.b-B{background:#fdf3e0;color:#92610f}.b-C{background:#f1f1f1;color:#58675e}
+.s-respondido{background:#fde8e8;color:#b91c1c}.s-negociando{background:#fdf3e0;color:#92610f}.s-novo{background:#e7f6ec;color:#14532d}.s-contrato{background:#14532d;color:#fff}
+.seg-bar{height:14px;border-radius:7px;background:var(--green);display:inline-block;vertical-align:middle;margin-right:8px}
+.footer{margin-top:24px;color:var(--muted);font-size:11.5px;text-align:center}
+</style></head><body>
+<h1>💼 Painel Comercial Master Óleo <small>· 23/11/2026</small></h1>
+<div class="sub">Inteligência comercial · CRM 485 empresas · Backlog direto do banco de dados</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="v">485</div><div class="l">Empresas no CRM</div></div>
+  <div class="kpi"><div class="v">356</div><div class="l">Potencial alto</div></div>
+  <div class="kpi"><div class="v">51</div><div class="l">Potencial médio</div></div>
+  <div class="kpi hot"><div class="v">27</div><div class="l">Leads quentes</div></div>
+  <div class="kpi hot"><div class="v">3</div><div class="l">Em negociação</div></div>
+  <div class="kpi"><div class="v">0</div><div class="l">Contratos</div></div>
+  <div class="kpi"><div class="v">5.6%</div><div class="l">Taxa resposta</div></div>
+</div>
+
+<h2>📊 Leads quentes / potenciais prioritários</h2>
+<table><tr><th>Empresa</th><th>Cidade</th><th>Status</th><th>Pot</th><th>Próximo contato</th><th>Ação</th><th>Nota</th></tr>
+<tr><td><b>Tegofort Ind Com Telhas</b></td><td>São José do Rio Preto/</td>
+<td><span class="badge s-negociando">negociando</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)">Telha de concreto, forma de alumínio, pulverizador malha 100. Enviada </td></tr><tr><td><b>Cliente 200L (desmoldante)</b></td><td>—</td>
+<td><span class="badge s-negociando">negociando</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)">Interessado em galão 200L concentrado (R$2.600). Pediu amostra + condi</td></tr><tr><td><b>Cliente ES (desmoldante)</b></td><td>Espírito Santo</td>
+<td><span class="badge s-negociando">negociando</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)">Interessado em testar desmoldante para concreto seco/molhado. Aguardan</td></tr><tr><td><b>Campestre Oleos Vegetais Ltda</b></td><td>Sao Bernardo do Campo/</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>YBI Brazil Comercio de Oleos Vegetai</b></td><td>Vinhedo/SP</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Diffucap-Chemobras Quimica Farmaceut</b></td><td>Rio de Janeiro/RJ</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Laticinios Auricchio (Bufalat)</b></td><td>Sao Luiz do Paraitinga</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Santi Industria e Comercio Ltda (Nut</b></td><td>Sao Paulo/SP</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Farmoquímica S/A</b></td><td>Campinas/SP</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Nacon Lacteos (fracionamento de quei</b></td><td>Araraquara/SP</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Laticinios Alegria (queijos, manteig</b></td><td>Santo Antonio da Alegr</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>EcoTaua Industria e Comercio de Oleo</b></td><td>Santo Antonio do Taua/</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Copacol - Cooperativa Agroindustrial</b></td><td>Cafelandia/PR (atuacao</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Danone Ltda. (iogurtes, lacteos, nut</b></td><td>Sao Paulo/SP (fabrica </td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>EMS S/A (Hortolândia/SP) - maior lab</b></td><td>Hortolândia/SP</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Paulispan Industria de Panificacao L</b></td><td>Itapetininga/SP</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Scala Laticinios S.A. (queijos, mant</b></td><td>Sacramento/MG</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Tourinho Alimentos Ltda (manteiga em</b></td><td>Uberlandia/MG</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Du Porto Industria Alimenticia Ltda</b></td><td>Sorocaba/SP</td>
+<td><span class="badge s-respondido">respondido</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Deliart - Delicias Artesanais do Bra</b></td><td>Rio de Janeiro/RJ (ven</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Select Amendoim Industria e Comercio</b></td><td>Tupassi/PR</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Jaguacy Brasil Avocado Oil (oleo de </b></td><td>Interior de SP (DDD 14</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Imcopa Importacao, Exportacao e Indu</b></td><td>Araucaria/PR</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Hemmer Alimentos Ltda</b></td><td>Blumenau/SC</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Naturinni Alimentos Ltda (maioneses </b></td><td>Florianopolis/SC (DDD </td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Primer Labs Industria de Encapsulado</b></td><td>Sorocaba/SP</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Globalfood Importacao e Comercio de </b></td><td>Sao Paulo/SP</td>
+<td><span class="badge s-descartado">descartado</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Agropalma S.A. (Companhia Refinadora</b></td><td>Sao Paulo/SP (escritor</td>
+<td><span class="badge s-novo">novo</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Pastificio Selmi S/A</b></td><td>Sumare/SP</td>
+<td><span class="badge s-respondido">respondido</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr><tr><td><b>Pastificio Selmi S/A</b></td><td>Campinas/SP</td>
+<td><span class="badge s-respondido">respondido</span></td>
+<td><span class="badge b-A">A</span></td><td>—</td><td>follow-up</td><td style="color:var(--muted)"></td></tr></table>
+<h2>🏭 Segmentos na base</h2>
+<table><tr><th>Segmento</th><th>Empresas</th><th></th></tr><tr><td>não-classificado</td><td>34</td><td><span class="seg-bar" style="width:100%"></span>100%</td></tr><tr><td>Supermercados (rede)</td><td>17</td><td><span class="seg-bar" style="width:50%"></span>50%</td></tr><tr><td>Industria de snacks/fritas (fritura indust</td><td>11</td><td><span class="seg-bar" style="width:32%"></span>32%</td></tr><tr><td>Supermercado</td><td>8</td><td><span class="seg-bar" style="width:23%"></span>23%</td></tr><tr><td>Frigorifico (gordura animal)</td><td>4</td><td><span class="seg-bar" style="width:11%"></span>11%</td></tr><tr><td>desmoldante</td><td>3</td><td><span class="seg-bar" style="width:8%"></span>8%</td></tr><tr><td>Supermercado local (padaria/rotisserie - f</td><td>3</td><td><span class="seg-bar" style="width:8%"></span>8%</td></tr><tr><td>Hotel fazenda - pensao completa (cozinha i</td><td>3</td><td><span class="seg-bar" style="width:8%"></span>8%</td></tr><tr><td>Fast food (fritura alto volume)</td><td>3</td><td><span class="seg-bar" style="width:8%"></span>8%</td></tr><tr><td>laticinios artesanal (queijos de ovelha) -</td><td>2</td><td><span class="seg-bar" style="width:5%"></span>5%</td></tr></table>
+<div class="footer">Gerado automaticamente pelo CRM Master Óleo · python painel_comercial.py</div>
+</body></html>

@@ -1,5 +1,38 @@
 
 
+## 2026-11-24 08:30 (Atendente IA - cron - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 133 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 133 já tentados; nenhum bounce novo)
+- ✅ prospecao_followup.py — 0 follow-ups (fila zerada)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios novos
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados (0 leads com volume ou solicitação)
+- 🔴 **58º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- 🔴 Fila de prospecção zerada — sem fonte de busca gratuita para repor
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 58+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 41 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 64+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Agendar coleta-teste. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Agendar coleta-teste.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (58 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- **58 dias sem resposta humana nova** (última: Tauste 30/09). Após 482 leads trabalhados, o canal de email atingiu o teto.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que liguem ou enviem WhatsApp.
+- **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
+- Sistema saudável — SMTP/IMAP OK, watchdog funcional.
+- **Nenhum lead com volume informado** — proposta_contrato.py e relatorio_esg.py não acionados.
+
+---
+
 ## 2026-11-23 23:30 (Melhorador Contínuo - cron diário)
 
 ### Diagnóstico do dia
