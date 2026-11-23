@@ -1,3 +1,73 @@
+
+
+## 2026-11-23 09:33 (Atendente IA - cron tick #233 - segunda-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 129 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 129 já tentados; nenhum bounce novo)
+- ✅ prospecao_followup.py — 2 FP1 enviados (Nutrisanti, Diffucap)
+- ✅ bot_oleo.py send_sequence — sequência processada, nada a enviar
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ✅ _miniscan_inbox.py — INBOX: 0 não lidas
+- ✅ watchdog.py — exit 1: 469 leads, 283 ativos, 129 bounces. SMTP OK · IMAP OK
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados (0 leads com volume ou solicitação)
+- 🔴 **45º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- 🔴 Fila de prospecção zerada — sem fonte de busca gratuita para repor
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 45+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 30 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 52+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Agendar coleta-teste. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Agendar coleta-teste.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (45 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- **45 dias sem resposta humana nova** (última: Tauste 30/09). Após 469 leads trabalhados, o canal de email atingiu o teto.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que liguem ou enviem WhatsApp.
+- **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
+- Sistema saudável — SMTP/IMAP OK, watchdog funcional.
+
+---
+
+## 2026-11-23 08:21 (Atendente IA - cron tick - segunda-feira)
+
+### Resumo do ciclo
+|- **480 leads**, 293 ativos, 24 respostas
+|- ✅ sync_formspree.py: rodando (background)
+|- ✅ corrigir_emails.py: 0 bounces processados
+|- ✅ prospecao_followup.py: 2 follow-ups enviados (FP3 → YBI Brazil, Campestre Oleos)
+|- ✅ bot_oleo.py send_sequence: sequência processada
+|- ✅ bot_oleo.py check-replies: 0 respostas (replies_pending.json vazio)
+|- 📊 Fila prospecção extra: 357 pendentes
+
+### Ações deste ciclo
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | rodando (background) |
+| corrigir_emails.py | 0 bounces processados |
+| prospecao_followup.py | 2 follow-ups (YBI Brazil, Campestre Oleos) |
+| bot_oleo.py send_sequence | sequência processada |
+| bot_oleo.py check-replies | 0 respostas |
+| proposta_contrato.py | não acionado (sem interesse novo) |
+| relatorio_ESG | não solicitado |
+
+### Leads QUENTES — prioridade de fechamento
+1. 🔥 **Sumerbol Supermercados LTDA** (Indaiatuba/SP) — atendimento@sumerbol.com.br
+2. 🔥 **GoodBom Supermercados LTDA** (Tatui/SP) — contato@goodbom.com.br
+3. 🔥 **Covabra Supermercados LTDA** (Limeira/SP) — sac@covabra.com.br
+4. 🔥 **Supermercados Pague Menos SA** (Campinas/SP) — falecom@supermercadospaguemenos.com.br
+5. 🔥 **Pastificio Selmi S/A** (Sumare/SP) — compras@selmi.com.br
+6. 🔥 **Pimenta Verde Alimentos Ltda (Rede Frango Assado)** (Louveira/SP (sede, Rod. Anhanguera km 72)) — sac@redefrangoassado.com.br
+7. 🔥 **Rede Confianca Supermercados** (Sorocaba/SP (2 lojas: Pannunzio e Av. Sao Paulo 27mil m2; rede: Bauru, Marilia, Jau, Botucatu, Pederneiras)) — social@confianca.com.br
+8. 🔥 **Andorinha Hiper Center Supermercados LTDA** (Salto/Itu/Campinas-SP) — sugestoes@andorinhahiper.com.br
+9. 🔥 **Supermercados Dalben LTDA** (Campinas/Valinhos-SP) — escutadalben@supermercadosdalben.com.br
+10. 🔥 **Queijos Itupeva** (Itupeva/SP) — rafaelgalvao@queijositupeva.com.br
+
 ## 2026-11-20 ~20:11 (Melhorador Contínuo — #278 — quinta-feira)
 
 ### ▸ Diagnóstico

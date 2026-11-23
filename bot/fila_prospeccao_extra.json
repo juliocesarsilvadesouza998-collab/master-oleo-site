@@ -2516,5 +2516,19 @@
     "cidade": "Valinhos/SP",
     "segmento": "Industria de ingredientes naturais (oleos, gorduras, extratos) - NICHO PRIORITARIO",
     "fonte": "prospector_20261121"
-  }
-]
+      },
+      {
+        "nome": "HRP Industria",
+        "empresa": "HRP Industria e Comercio de Pecas Ltda",
+        "email": "comercial@hrpindustria.com",
+        "cidade": "Indaiatuba/SP",
+        "segmento": "industria de encapsulados (matrizes softgel) - NICHO PRIORITARIO (encapsulados/farmaceuticas, oleo vegetal limpeza maquinas)"
+      },
+      {
+        "nome": "3G Foods",
+        "empresa": "3GX Comercio de Alimentos EIRELI",
+        "email": "contato@3gfoods.com.br",
+        "cidade": "Valinhos/SP",
+        "segmento": "distribuidora de alimentos (estoque de oleo vegetal vencido)"
+      }
+    ]

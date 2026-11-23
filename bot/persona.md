@@ -237,6 +237,18 @@ CONCORRÊNCIA NA REGIÃO (pesquisa Estrategista 21/09):
   anti-furto com bombona travada, (4) foco em Salto/SP + raio de 80 km, (5)
   atendimento por IA que responde em minutos. NUNCA criticar — focar nos
   diferenciais.
+- **CaptÓleo (Abrasel SP, descoberto 23/11/2026)** — parceiro oficial da
+  Abrasel (Associação Brasileira de Bares e Restaurantes, Seccional SP) que
+  paga **R$ 3,00/L** pelo óleo de fritura coletado. Atua em São Paulo capital
+  e região metropolitana. Fonte: sp.abrasel.com.br/parceiros/captoleo. Este
+  valor confirma o aquecimento do mercado. Ao abordar restaurantes associados
+  à Abrasel, mencionar que a CaptÓleo atende SP capital; para o interior,
+  a Master Óleo oferece agilidade local, PIX na coleta e certificado.
+  Não usar mais o argumento genérico "ofertas acima de R$2,50/L são de
+  coletores irregulares" — qualificar: "a média do mercado formal está em
+  R$2,00-2,50/L, mas operações em SP capital chegam a R$3,00/L em parceiros
+  como a CaptÓleo/Abrasel. Oferecemos preço justo + operação regular com
+  certificado."
 - Concorrentes em Sorocaba oferecem troca por produtos de limpeza (modelo Óleo
   Verde). Nosso diferencial: pagamento em DINHEIRO/PIX, à vista, sem amarrar
   o cliente a catálogo de produtos.

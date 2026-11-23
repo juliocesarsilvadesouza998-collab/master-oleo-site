@@ -15,6 +15,9 @@ bot/correcoes_emails.json
 # Histórico de monitoramento do SEO (log de runtime, muda a cada execução)
 equipe/seo.json
 
+# Windows artifact — conflito com device NUL
+bot/NUL
+
 # Empacotamento
 site-deploy.zip
 

@@ -138,4 +138,17 @@
 - Cargill/Liza × Rede Zona Sul (pontos de coleta em supermercados): https://www.cargill.com.br/pt_BR/2018/cargill-e-rede-zona-sul-supermercados e https://www.liza.com.br/sustentabilidade/reciclagem-de-oleo
 - Impacto de 1 L = 25 mil L de água (SABESP): https://www.sabesp.com.br/site/toq/sabesp-caixa-gordura.pdf
 
+## 9. Novo concorrente descoberto: CaptOleo (Abrasel SP) — 23/11/2026
+
+A CaptOleo e parceira oficial da Abrasel (Associacao Brasileira de Bares e Restaurantes, Seccional SP) e oferece:
+- **R$ 3,00/L pagos por litro de oleo coletado** — valor ACIMA do teto sustentavel de R$ 2,50/L.
+- Atuacao em Sao Paulo capital e regiao metropolitana via Abrasel.
+- Contato: (11) 3783-8612 / captoleo.eco.br
+- Fonte: https://sp.abrasel.com.br/parceiros/captoleo-captacao-de-oleo/
+
+**Analise competitiva:**
+- O preco de R$ 3,00/L confirma que o mercado esta AQUECIDO — operadores formais ja pagam acima da faixa historica.
+- Ajuste no discurso: nao podemos mais dizer "ofertas acima de R$ 2,50/L sao de irregulares" sem qualificar. Novo argumento: *"a media do mercado formal esta em R$ 2,00-2,50/L, mas operacoes em SP capital chegam a R$ 3,00/L em parceiros como a CaptOleo/Abrasel. Oferecemos preco justo + operacao regular com certificado."*
+- CaptOleo foca em SP capital (via Abrasel); Master Oleo atua no interior (Salto/Campinas/Sorocaba) — concorrencia indireta. Nosso diferencial: atendimento local, PIX na hora, coleta em cidades que a CaptOleo nao alcanca.
+
 ---
