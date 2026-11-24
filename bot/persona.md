@@ -370,6 +370,58 @@ resposta em COLETA AGENDADA ou CONTRATO — não parar no "ok, obrigado".
    biodiesel é VOLUNTÁRIO em 2026-27 e OBRIGATÓRIO em 01/01/2028 (Resolução
    CNPE). É o argumento de aceleração para contratos de longo prazo.
 
+## 📱 Scripts de WhatsApp para Reengajamento (24/11/2026 — Estrategista)
+
+Use estes scripts prontos para destravar os leads quentes parados há 58+ dias. Cada script tem o gatilho correto baseado no histórico do lead.
+
+### 🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP)
+**Contexto:** Assistente virtual respondeu em 14/10 + Pâmela (protocolo 00136403). Proposta enviada. **58+ dias parado.**
+```
+Olá Pâmela, tudo bem? Sou o Julio, da Master Óleo. Falamos em outubro sobre a coleta de óleo usado do Savegnago. Deixei a proposta de coleta programada com certificado de destinação e relatório ESG mensal. A portaria MME/MMA nº 3/2026 acaba de sair — a partir de jan/2028 é OBRIGATÓRIO usar 1% de óleo residual no biodiesel. Quem fechar contrato agora define o preço e prioridade. Podemos retomar essa conversa?
+```
+**Alternativa (se Pâmela não responder em 3 dias):**
+```
+Olá, vi que o SAC do Savegnago registrou nosso protocolo 00136403 em outubro. Com a portaria do governo exigindo óleo residual no biodiesel a partir de 2028, as usinas vão disputar matéria-prima. Quem tiver contrato de coleta sai na frente. Posso alinhar uma proposta definitiva com vocês esta semana?
+```
+
+### 🔴🔴🔴 PAGUE MENOS (R$4,33bi, #2 interior SP)
+**Contexto:** Josiane Marinho, ticket 407470. SAC redirecionou para comercial. **41 dias parado.**
+```
+Josiane, tudo bem? Sou o Julio, da Master Óleo. Falamos em outubro sobre a coleta de óleo usado do Pague Menos. Com as 17 lojas de Campinas, vocês devem gerar uns 10.000 L/mês — isso dá ~R$ 240 mil/ano de receita com o resíduo. Temos PIX na hora e certificado MTR em cada coleta. Posso enviar uma proposta atualizada?
+```
+
+### 🔴🔴🔴 COVABRA — Cadastro Fornecedor isac.ivrim.com.br
+**Contexto:** Única ação 100% MANUAL necessária. Portal Ivrim. **64+ dias parado.**
+```
+[ABRIR NAVEGADOR → isac.ivrim.com.br → Cadastro de Fornecedor]
+Dados necessários:
+- Razão social: Master Óleo Ltda (ou o nome correto no CNPJ)
+- CNPJ: [INSERIR CNPJ]
+- Segmento: Coleta de resíduos / Reciclagem de óleo
+- Contato: Julio Cesar
+- WhatsApp: (11) 96785-9631
+- Site: masteroleo.eco.br
+Após cadastro, avisar via sac@covabra.com.br que o cadastro foi concluído.
+```
+
+### 🔴🔴 REDE CONFIANÇA (Sorocaba)
+**Contexto:** social@confianca.com.br respondeu. Proposta 2.500 L/mês enviada com bônus exclusividade.
+```
+Olá, tudo bem? Sou o Julio, da Master Óleo. Enviamos a proposta de coleta de óleo usado para a Rede Confiança — 2.500 L/mês estimados com bônus de exclusividade de +R$0,10/L. Com a portaria do governo (MME/MMA nº 3/2026) exigindo óleo residual no biodiesel a partir de 2028, a tendência é o preço do óleo usado SUBIR. Fechar agora garante preço e prioridade. Podemos agendar uma coleta-teste esta semana?
+```
+
+### 🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste
+**Contexto:** Local, respondeu. Agendar coleta-teste.
+```
+Olá, tudo bem? Sou o Julio, da Master Óleo. Vocês já responderam nosso contato sobre a coleta de óleo usado. Como a Brasfrigo é aqui de Salto, podemos agendar uma coleta-teste essa semana sem compromisso — conhecer o processo, ver a bombona, emitir o certificado. Qual dia fica melhor?
+```
+
+### 🟡 SONDA (R$6,12bi)
+**Contexto:** sac@sonda.com.br respondeu 29/09. Telefone (11) 2145-6200.
+```
+Olá, tudo bem? Sou o Julio, da Master Óleo. Entramos em contato com o SAC da Sonda em setembro sobre a coleta de óleo usado. Com a nova portaria do governo (MME/MMA nº 3/2026), o óleo residual virou commodity energética — a Sonda, com dezenas de lojas, deve gerar um volume expressivo. Posso enviar uma proposta de coleta programada com certificado e relatório ESG?
+```
+
 ## 🏆 Aprendizados do dia (15/09 — Melhorador contínuo)
 
 1. **Página de "Fornecedores" de cooperativas/redes expõe email de COMPRADOR**

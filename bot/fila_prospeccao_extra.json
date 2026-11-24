@@ -2666,5 +2666,15 @@
     "email": "contato@binatural.com.br",
     "segmento": "biodiesel",
     "potencial": "A"
-  }
-]
+      },
+      {
+        "nome": "Coocerqui (Financeiro)",
+        "empresa": "Cooperativa de Consumo Popular de Cerquilho - COOCERQUI",
+        "email": "contabil.tecnico@coocerqui.com.br",
+        "cidade": "Cerquilho/SP (+ lojas Boituva, Tietê, Porto Feliz, Tatuí)",
+        "segmento": "Rede de supermercados cooperativa (6 lojas + 8 drogarias)",
+        "fonte": "PDF rede credenciada MegaVale Card - Câmara Bauru (24/11/2026)",
+        "mx": "smtp.google.com (Google Workspace)",
+        "potencial": "A"
+      }
+    ]

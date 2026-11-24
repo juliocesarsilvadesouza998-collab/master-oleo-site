@@ -126,7 +126,36 @@
    "🟡 SONDA (R$6,12bi), TAUSTE, SANOFI MEDLEY, NAGUMO"
   ]
  },
- "atualizado_em": "2026-11-23 23:30 (Melhorador Contínuo - cron diário)",
+ "ciclo_2026_11_24_0852_melhorador_continuo": {
+  "timestamp": "2026-11-24 08:52 (Melhorador Contínuo - cron diário)",
+  "acoes": [
+   "✅ Site stats atualizadas: index.html 473+→482+ empresas contatadas, 71+→59+ dias de operação",
+   "✅ Fila reabastecida: +1 COOCERQUI (contabil.tecnico@coocerqui.com.br) — MX smtp.google.com (Google Workspace) confirmado",
+   "✅ corrigir_emails.py: 0 bounces novos (todos 133 já tentados)",
+   "✅ PDFs Sodexo Pluxee Tietê explorados — centenas de leads Capivari/Tietê/Tatuí, mas maioria sem email",
+   "✅ insights.md e ecossistema.json atualizados"
+  ],
+  "diagnostico": {
+   "total_leads_csv": 482,
+   "status_csv": "novo 295 | respondido 24 | bounce 95 (133 cache) | descartado 53 | encerrado 15",
+   "bounce_cache_json": 133,
+   "fila_total": 452,
+   "fila_pendentes_enviáveis": 1,
+   "dias_sem_resposta_humana": "59 (última: Tauste 30/09)",
+   "respostas_reais": 0,
+   "observacao": "59º dia sem respostas humanas. 482 leads, 295 ativos, 24 respondidos. Fila zerada (exceto 1 novo: COOCERQUI). Pipeline 100% bloqueado em ação humana. Site stats corrigidas para valores reais."
+  },
+  "leads_quentes": [
+   "🍀 Pastificio Selmi (compras@selmi.com.br) — proposta 800 L/mês enviada 03/11; 21 dias aguardando",
+   "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 59+ dias sem ação.",
+   "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 42 dias sem retorno.",
+   "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada.",
+   "🔴🔴🔴 COVABRA — Cadastro fornecedor isac.ivrim.com.br pendente (65+ dias).",
+   "🔴🔴 BRASFRIGO (Salto) + QUEIJOS ITUPEVA — Coleta-teste a agendar.",
+   "🟡 SONDA (R$6,12bi), TAUSTE, SANOFI MEDLEY, NAGUMO"
+  ]
+ },
+ "atualizado_em": "2026-11-24 08:52 (Melhorador Contínuo - cron diário)",
  "leads": {
   "total": 482,
   "por_status": {
@@ -442,5 +471,39 @@
    "🟡 SANOFI MEDLEY — Protocolo 03065348 (29/10).",
    "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês."
   ]
- }
+ },
+ "ciclo_2026_11_24_0800_estrategista_domingo": {
+  "timestamp": "2026-11-24 08:00 (Estrategista - cron dominical)",
+  "acoes": [
+   "✅ Diagnóstico: 58+ dias sem resposta humana no fluxo de COMPRA de óleo. Sistema saudável mas parado.",
+   "✅ Pesquisa de mercado: mandato OGR 1% CONFIRMADO (Portaria MME/MMA nº 3/2026, 13/05/2026, obrigatório 01/01/2028). Mercado UCO Brasil US$127M (2025) → US$234M (2034) CAGR 6,68% (IMARC). Cold email B2B taxa média 3,43% (Instantly 2026) — nossa taxa de ~6,2% está acima da média.",
+   "✅ persona.md atualizado: adicionada seção completa de scripts WhatsApp para reengajamento dos 6 leads quentes (Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Sonda) com contexto de cada lead + gatilho correto + argumento OGR 2028.",
+   "✅ insights.md atualizado com dados da pesquisa e plano da semana.",
+   "✅ Foco mudou definitivamente de COLD EMAIL para WHATSAPP REENGAGEMENT — cold email saturou, fila zerada há 70+ dias."
+  ],
+  "diagnostico": {
+   "total_leads_csv": 482,
+   "status_csv": "novo 295 | respondido 24 | bounce 95 (133 cache) | descartado 53 | encerrado 15",
+   "bounce_cache_json": 133,
+   "dias_sem_resposta_humana_fluxo_oleo": 58,
+   "fila_prospeccao_mx_validos": 0,
+   "taxa_resposta_cold_email": "~6.2% (acima da média global de 3,43%)",
+   "contratos_fechados": 0,
+   "observacao": "58 dias sem resposta humana. 482 leads, 24 respondidos (6.2% taxa), ZERO contratos. Gargalo crítico: ação humana. Cold email cumpriu papel. Próxima fase: WhatsApp reengajamento nos 24 respondidos + cadastro Covabra Ivrim."
+  },
+  "leads_quentes": [
+   "🔴🔴🔴 SAVEGNAGO (R$7,98bi) — WhatsApp (11) 96785-9631. 58+ dias. Script pronto na persona.md.",
+   "🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470 (Josiane Marinho). 41 dias. Script pronto.",
+   "🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês. Script pronto.",
+   "🔴🔴🔴 COVABRA — Cadastro fornecedor isac.ivrim.com.br. 64+ dias. Passo a passo na persona.md.",
+   "🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar. Local. Script pronto.",
+   "🔴🔴 QUEIJOS ITUPEVA (Rafael) — Coleta-teste a agendar.",
+   "🟡 SONDA (R$6,12bi) — (11) 2145-6200. 58 dias. Script pronto.",
+   "🟡 TAUSTE — (15) 3324-4680. Respondeu 30/09 (58 dias).",
+   "🟡 SANOFI MEDLEY — Protocolo 03065348 (29/10).",
+   "🟡 NAGUMO — Caso 00143542, proposta 5.000 L/mês.",
+   "🍀 Pastificio Selmi — proposta 800 L/mês enviada 03/11."
+  ]
+ },
+ "ultima_execucao_estrategista": "2026-11-24T08:00:00-03:00"
 }

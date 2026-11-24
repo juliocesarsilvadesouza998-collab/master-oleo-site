@@ -13181,3 +13181,14 @@ Nenhuma resposta pendente no momento. O Atendente IA não tem fila para processa
 - leads: 482 (novo 295 | bounce 95 | respondido 24 | descartado 53 | encerrado 15)
 - fila_prospeccao: 376 total, 0 pendentes MX-válido
 - 54° dia sem resposta humana no fluxo de COMPRA de óleo
+
+## Tick #246 - 2026-11-23 ~23:50 - Atendente IA (segunda-feira)
+- sync_formspree: 133 bounces cache, 0 notificações Formspree
+- corrigir_emails: 0 bounces novos (todos os 133 já tentados)
+- prospecao_followup: 0 follow-ups (fila zerada)
+- bot_oleo send_sequence: 0 envios novos (fila drenada)
+- bot_oleo check-replies: 0 respostas (replies_pending vazio)
+- proposta_contrato/relatorio_ESG: não acionados (0 leads com volume ou solicitação)
+- leads: 482 (novo 295 | bounce 95 | respondido 24 | descartado 53 | encerrado 15)
+- fila_prospeccao: 376 total, 0 pendentes MX-válido
+- 54° dia sem resposta humana — nenhuma mudança desde tick #245

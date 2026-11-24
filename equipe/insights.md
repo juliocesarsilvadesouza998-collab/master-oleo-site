@@ -1,5 +1,108 @@
 
 
+## 2026-11-24 08:00 (Estrategista — dominical)
+
+### Resumo da Semana (17-23/nov)
+
+| Indicador | Valor | ∆ |
+|---|---|---|
+| Total leads | **482** | +5 |
+| `novo` | 295 | +5 |
+| `respondido` | 24 | = |
+| `bounce` CSV | 95 (133 cache) | = |
+| `encerrado` | 15 | = |
+| `descartado` | 53 | = |
+| Fila prospecção | 0 MX-válidos | ❌ |
+| Dias sem resposta humana | **58** (Tauste 30/09) | ↑ piorou |
+| Contratos fechados | **0** | = |
+| Caixa IMAP | 0 não lidas | ✅ |
+
+### Diagnóstico: A MÁQUINA FUNCIONA, O GARGALO É HUMANO
+
+**482 leads trabalhados. 295 ativos. 24 responderam. 0 contratos.**
+
+O cold email gerou taxa de resposta de ~6,2% — o DOBRO da média global (3,43% — Instantly 2026). Os templates estão fortes, os dados de mercado atualizados, o sistema SMTP/IMAP saudável.
+
+**O problema:** dos 24 leads que responderam, ZERO recebeu retorno humano. Os leads mais quentes estão parados há 58+ dias:
+
+- **SAVEGNAGO** (R$7,98bi) — WhatsApp com Pâmela, protocolo 00136403. **58 dias parado.**
+- **PAGUE MENOS** (R$4,33bi) — Josiane Marinho, ticket 407470. **41 dias parado.**
+- **COVABRA** — Cadastro fornecedor isac.ivrim.com.br. **64 dias parado.**
+- **REDE CONFIANÇA** — Proposta 2.500 L/mês. **58 dias parado.**
+- **SONDA** (R$6,12bi) — Respondeu 29/09. **58 dias parado.**
+
+### Pesquisa de Mercado (24/11)
+
+**1. Mandato OGR 1% CONFIRMADO — Portaria MME/MMA nº 3/2026 (13/05/2026)**
+- Fonte oficial: gov.br/mme — voluntário 2026-2027, **OBRIGATÓRIO a partir de 01/01/2028**
+- Isso significa que TODAS as usinas de biodiesel do Brasil terão que usar ≥1% de óleo residual
+- **Argumento de urgência mais forte disponível:** "quem fechar contrato de coleta agora define preço e prioridade antes da corrida de 2028"
+- Revisão a cada 3 anos (provavelmente o percentual vai SUBIR)
+
+**2. Mercado UCO Brasil (IMARC Group 2026)**
+- US$ 127 milhões (2025) → US$ 234,2 milhões (2034) — CAGR 6,68%
+- Sudeste domina >50% do mercado
+- Aplicação principal: biodiesel (55-60% do mercado)
+
+**3. Cold email benchmarks 2026 (Instantly, Hunter)**
+- Média global de resposta: **3,43%** (Instantly 2026, bilhões de emails)
+- Nossa taxa: **~6,2%** — estamos ACIMA da média
+- O que melhora resposta: emails <80 palavras, personalização, 2+ follow-ups
+- **Conclusão:** nossos templates já estão otimizados. O gargalo não é mais o email.
+
+**4. Concorrente CaptÓleo (Abrasel SP) — R$3,00/L**
+- Confirma aquecimento do mercado. Opera em SP capital, não no interior.
+- Nosso diferencial: pagamento PIX na hora + certificado MTR + atendimento local
+
+### Melhorias Aplicadas (24/11)
+
+1. **persona.md** — Adicionada seção completa de scripts WhatsApp para reengajamento dos leads quentes (Savegnago, Pague Menos, Covabra, Rede Confiança, Brasfrigo, Sonda) com contexto individualizado + gatilho correto + argumento OGR 2028
+2. **ecossistema.json** — Atualizado com ciclo do estrategista, metas da semana e diagnóstico
+3. **Foco redirecionado:** de cold email para WhatsApp reengajamento
+
+### Metas da Semana (24-30/nov)
+
+**PRIORIDADE ABSOLUTA — FECHAMENTO via WhatsApp:**
+
+🔴 **Segunda (hoje):** Enviar WhatsApp para SAVEGNAGO (Pâmela, protocolo 00136403) + PAGUE MENOS (Josiane Marinho, ticket 407470)
+🔴 **Segunda (hoje):** Preencher cadastro COVABRA no portal isac.ivrim.com.br
+🟠 **Terça:** WhatsApp para REDE CONFIANÇA (proposta 2.500 L/mês)
+🟠 **Quarta:** Agendar coleta-teste BRASFRIGO (Salto — local)
+🟠 **Quinta:** WhatsApp para SONDA (11) 2145-6200
+🟡 **Sexta:** WhatsApp para DU PORTO, ICT FARMACEUTICA, SANOFI MEDLEY
+🟢 **Continuo:** Monitorar caixa de entrada para novas respostas
+
+### Risco
+
+Se nenhuma ação humana for tomada nesta semana, os 24 leads respondidos vão esfriar COMPLETAMENTE — e 10 semanas de prospecção (482 leads) terão sido em vão. **O ecossistema já fez a parte dele. Agora é a vez da ação humana.**
+
+---
+
+## 2026-11-24 08:52 (Melhorador Contínuo - cron diário)
+
+### Diagnóstico do dia
+- **Fila de prospecção**: 0 pendentes (452 total, 387 contatados, 87 bounces) — exaurida
+- **Leads**: 482 | ativos 295 | bounces 133 cache (95 CSV) | respondidos 24
+- **Dias sem resposta humana**: 59 (Tauste 30/09)
+- **1 bounce sem tentativa** → corrigir_emails.py rodou: todos os 133 já tentados, nenhum novo
+
+### Melhorias implementadas
+- ✅ **Site stats atualizadas**: index.html 473+→482+ empresas, 71+→59+ dias
+- ✅ **Fila reabastecida**: +1 lead COOCERQUI (contabil.tecnico@coocerqui.com.br) — rede de 6 supermercados cooperativos em Cerquilho, Boituva, Tietê, Porto Feliz, Tatuí. MX Google Workspace (smtp.google.com) confirmado. Fonte: PDF MegaVale Card Câmara Bauru.
+- ✅ **PDFs de rede credenciada explorados**: Sodexo Pluxee Tietê contém centenas de estabelecimentos de Tietê, Tatuí, Capivari — mas maioria sem email corporativo. MegaVale Card Bauru tem maior concentração de dados com emails.
+- ✅ **ecossistema.json** e **insights.md** atualizados
+
+### Lição do dia
+A **COOCERQUI** (Cooperativa de Consumo Popular de Cerquilho) é uma rede regional consolidada: 6 supermercados, 8 drogarias e 1 CD, presente em Cerquilho, Boituva, Tietê, Porto Feliz e Tatuí — todas a 30-60km de Salto. Domínio coocerqui.com.br usa Google Workspace (MX smtp.google.com). Email contábil/financeiro (contabil.tecnico@coocerqui.com.br) é ponto de contato B2B. Com 600+ colaboradores e delivery próprio, gera volume significativo de óleo de fritura.
+
+### Pendências para o Estrategista
+- 🔴 **Ação humana**: Savegnago WhatsApp (59 dias), Covabra cadastro Ivrim (65 dias), Pague Menos ticket (42 dias)
+- 🔴 **Leadjet R$197**: única forma de reabastecer a fila em escala com CNAEs prioritários
+- 🟡 **Baixar PDFs restantes das prefeituras** — Tietê (UP Brasil, Verocheque, M&S) podem ter emails adicionais não capturados
+- 🟡 **COOCERQUI**: lead novo adicionado à fila — aguardar prospecção automática
+
+---
+
 ## 2026-11-24 08:30 (Atendente IA - cron - segunda-feira)
 
 ### Diagnóstico do ciclo
@@ -13229,3 +13332,33 @@ Nenhuma resposta pendente no momento. O Atendente IA não tem fila para processa
 ### ▸ Sugestões para o Estrategista
 1. 🔴 **Ação humana imediata** — 75 dias sem resposta. Savegnago WhatsApp, Covabra Ivrim, Pague Menos ticket, Rede Confiança, Brasfrigo/Queijos coleta-teste.
 2. 🔴 **Leadjet R$197** — única reposição para fila zerada há 75 dias.
+
+
+## 2026-11-23 18:55 (Analista Qualidade - cron)
+
+### Resumo do dia
+- Sincronização Formspree: 0 novas notificações processadas.
+- Bounces detectados hoje: 0 novos.
+- Respostas pendentes: 0 (fila vazia).
+
+### ▸ Números do dia
+| Indicador | Valor |
+|---|---|
+| Total leads | 482 |
+| Status novo | 295 |
+| Status bounce | 95 |
+| Status descartado | 53 |
+| Status respondido | 24 |
+| Status encerrado | 15 |
+| Emails em bounce cache | 133 |
+| Respostas pendentes | 0 |
+
+### ▸ Problemas encontrados
+- 3 leads bounce com boas_vindas_em preenchido: ID 8304894485 (falecom@tecnobloc.com.br), ID 7721076467 (contato@fabricablocoforte.com.br) e ID 437 (teste.formspree@gmail.com). Race condition: o lead foi marcado bounce DEPOIS do envio da boas-vindas. Nenhum reenvio ocorreu — apenas registro.
+- 38 emails órfãos em bounces.json (de prospecções anteriores/outros projetos) sem registro no leads.csv — inofensivo, apenas cache preventivo.
+- leads.csv e bounces.json consistentes: todos os 95 leads bounce têm entrada no cache. ✅
+
+### ▸ Sugestões para o Estrategista
+1. **Limpar lead teste ID 437** — teste.formspree@gmail.com já deu bounce e nunca será reenviado, mas polui relatórios. Excluir ou marcar como encerrado.
+2. **Priorizar respondidos sem follow-up humano** — 24 leads respondidos. Os mais quentes: Savegnago, Covabra, Pague Menos, Rede Confiança, Brasfrigo/Queijos. Agendar visitas.
+3. **Repor fila de prospecção** — 295 leads 'novo' é estoque razoável, mas sem novos leads entrando (0 Formspree hoje), a fila vai estagnar. Reativar Leadjet ou fonte alternativa.
