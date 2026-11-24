@@ -13533,3 +13533,69 @@ Nenhuma resposta pendente no momento. O Atendente IA não tem fila para processa
 - **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
 - **Pipeline bloqueado** em ação humana — WhatsApp/telefone inacessível via script.
 
+
+---
+
+## 2026-11-24 17:15 (Atendente IA - cron tick #246 - terça-feira)
+
+### Diagnóstico do ciclo
+- sync_formspree.py — 138 bounces cache, 0 notificações Formspree novas (OK)
+- corrigir_emails.py — 0 bounces processados (todos os 138 já tentados; nenhum bounce novo)
+- prospecao_followup.py — 0 follow-ups (fila zerada)
+- bot_oleo.py send_sequence — sequência processada, 0 envios novos
+- bot_oleo.py check-replies — 1 resposta (falso positivo — email marketing automático Fazenda Capoava)
+- replies_pending.json limpo (falso positivo descartado)
+- proposta_contrato/relatorio_ESG — não acionados (0 leads com volume ou solicitação)
+- **55º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- **Fila de prospecção zerada — sem fonte de busca gratuita para repor leads**
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 55+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 41 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 66+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Coleta-teste a agendar. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Coleta-teste a agendar.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (55 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+
+### Observações
+- **55º dia sem resposta humana nova** (última: Tauste 30/09). 503 leads trabalhados, canal email no teto.
+/usr/bin/bash: line 5: printf: `p': invalid format character
+- **Pipeline de fechamento 100
+---
+
+## 2026-11-24 17:15 (Atendente IA - cron tick #246 - terca-feira)
+
+### Diagnostico do ciclo
+- sync_formspree.py - 138 bounces cache, 0 notificacoes Formspree novas (OK)
+- corrigir_emails.py - 0 bounces processados (todos os 138 ja tentados; nenhum bounce novo)
+- prospecao_followup.py - 0 follow-ups (fila zerada)
+- bot_oleo.py send_sequence - sequencia processada, 0 envios novos
+- bot_oleo.py check-replies - 1 resposta (falso positivo - email marketing automatico Fazenda Capoava)
+- replies_pending.json limpo (falso positivo descartado)
+- proposta_contrato/relatorio_ESG - nao acionados (0 leads com volume)
+- **55o dia sem respostas humanas no fluxo de COMPRA de oleo**
+- **Fila de prospeccao zerada - sem fonte de busca gratuita para repor leads**
+
+### Leads QUENTES (fechamento depende de acao humana)
+1. SAVEGNAGO (R,98bi, #1 interior SP) - WhatsApp (11) 96785-9631. 55+ dias sem acao.
+2. PAGUE MENOS (R,33bi) - Ticket 407470 (Josiane Marinho). 41 dias sem retorno.
+3. REDE CONFIANCA (Sorocaba) - Proposta 2.500 L/mes enviada.
+4. COVABRA - ACAO HUMANA: cadastro fornecedor isac.ivrim.com.br. 66+ dias.
+5. BRASFRIGO (Salto/SP) - Coleta-teste a agendar. Local.
+6. QUEIJOS ITUPEVA (Rafael) - Coleta-teste a agendar.
+7. SONDA (R,12bi) - (11) 2145-6200.
+8. TAUSTE - (15) 3324-4680. Respondeu 30/09 (55 dias).
+9. SANOFI MEDLEY - Protocolo 03065348 (29/10).
+10. NAGUMO - Caso 00143542, proposta 5.000 L/mes.
+
+### Observacoes
+- **55o dia sem resposta humana nova** (ultima: Tauste 30/09). 503 leads trabalhados, canal email no teto.
+- **Pipeline de fechamento 100% parado** em acao humana - sem scripts que liguem ou enviem WhatsApp.
+- **Nenhum bounce novo**, nenhuma resposta genuina, nenhuma notificacao Formspree.
+- **1 falso positivo detectado:** Fazenda Capoava enviou email marketing automatico (Black Capoava) - captado como reply mas descartado.
+- Sistema saudavel - SMTP/IMAP OK.
+- Acao humana necessaria: enviar WhatsApp para Savegnago e preencher cadastro Covabra (isac.ivrim.com.br).

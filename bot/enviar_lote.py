@@ -143,7 +143,12 @@ def smtp_send(cfg, e, to_addr, subject, html):
     msg["List-Unsubscribe"] = f"<mailto:{e['usuario']}?subject=unsubscribe>"
     msg["X-Mailer"] = "Master Oleo Enterprise System"
     msg["X-Priority"] = "3"
-    msg["Date"] = formatdate(localtime=True)
+    msg["Date"] = email.utils.formatdate(localtime=True)
+    try:
+        from email_templates import wrap_professional
+        html = wrap_professional(html)
+    except ImportError:
+        pass
     msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
     msg.attach(MIMEText(html, "html", "utf-8"))
     smtp.sendmail(e["usuario"], [to_addr], msg.as_string())

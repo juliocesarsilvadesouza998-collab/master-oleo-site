@@ -24,6 +24,11 @@ TEXTO = "#1c2a21"
 BORDA = "#e4e9e2"
 
 
+def wrap_professional(html_content, titulo="Master Óleo"):
+    """Embrulha qualquer HTML no template profissional com header/footer."""
+    return _base(f'<div style="line-height:1.65;color:{TEXTO};font-size:15px">\n    {html_content}\n    </div>', titulo)
+
+
 def _base(content, titulo="Master Óleo"):
     """Wrapper HTML responsivo com header, conteúdo e footer."""
     return f"""<!DOCTYPE html>

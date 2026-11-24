@@ -1,11 +1,11 @@
 {
- "atualizado_em": "2026-11-24 14:00 (Melhorador Contínuo - cron #283 - terça-feira)",
+ "atualizado_em": "2026-11-24 ~17:15 (Atendente IA - cron tick #246 - terça-feira)",
  "leads": {
   "total": 503,
   "por_status": {
    "bounce": 138,
    "novo": 311,
-   "respondido": 25,
+   "respondido": 24,
    "descartado": 53,
    "encerrado": 15
   }
@@ -239,23 +239,23 @@
   "pendentes": 357
  },
  "aprendizados": "Prospector #246 — 12 emails enviados da fila extra (supermercados Capivari/Cerquilho/Salto). 3 falhas (Bio Óleo, Fertibom, Binatural — faltou campo 'nome'). Pendentes caíram de 15 para 4. Fila precisa de reposição em breve. 55º dia sem resposta humana.",
-   "ultima_execucao": "2026-11-24T09:30:00-03:00",
-   "ciclo_2026_11_24_0930_prospector_246": {
-     "timestamp": "2026-11-24 ~09:30 (Prospector - cron #246 - terça-feira)",
-     "acoes": [
-       "✅ enviar_lote.py --status — 15 pendentes na fila extra (>=10, pulou descoberta)",
-       "✅ enviar_lote.py --max 15 — 12 enviados, 3 falhas (Bio Óleo, Fertibom, Binatural — campo 'nome' vazio)"
-     ],
-     "diagnostico": {
-       "fila_extra_total": 470,
-       "fila_extra_contatados": 398,
-       "fila_extra_bounces": 90,
-       "fila_extra_pendentes": 4,
-       "leads_csv_total": 482,
-       "dias_sem_resposta_humana": "55 (última: Tauste 30/09)",
-       "novas_respostas_humanas": 0
-     }
-   },
+ "ultima_execucao": "2026-11-24T09:30:00-03:00",
+ "ciclo_2026_11_24_0930_prospector_246": {
+  "timestamp": "2026-11-24 ~09:30 (Prospector - cron #246 - terça-feira)",
+  "acoes": [
+   "✅ enviar_lote.py --status — 15 pendentes na fila extra (>=10, pulou descoberta)",
+   "✅ enviar_lote.py --max 15 — 12 enviados, 3 falhas (Bio Óleo, Fertibom, Binatural — campo 'nome' vazio)"
+  ],
+  "diagnostico": {
+   "fila_extra_total": 470,
+   "fila_extra_contatados": 398,
+   "fila_extra_bounces": 90,
+   "fila_extra_pendentes": 4,
+   "leads_csv_total": 482,
+   "dias_sem_resposta_humana": "55 (última: Tauste 30/09)",
+   "novas_respostas_humanas": 0
+  }
+ },
  "ciclo_2026_11_23_1745_cron_atendente_242": {
   "timestamp": "2026-11-23 ~17:45 (Atendente IA - cron tick #242 - segunda-feira)",
   "acoes": [
@@ -517,6 +517,28 @@
    "status_csv": "novo 295 | bounce 95 | respondido 25 | encerrado 15 | descartado 53",
    "bounce_cache_json": 136,
    "dias_sem_resposta_humana_fluxo_oleo": "55 (última: Tauste 30/09; 41 dias desde Pague Menos 14/10)",
+   "fila_prospeccao": "0 pendentes MX-válido (fila zerada)",
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "novas_respostas_humanas": 0
+  }
+ },
+ "ciclo_2026-11-24_1715_cron_atendente_246": {
+  "timestamp": "2026-11-24 ~17:15 (Atendente IA - cron tick #246 - terça-feira)",
+  "acoes": [
+   "sync_formspree.py — 138 bounces cache, 0 notificações Formspree novas (OK)",
+   "corrigir_emails.py — 0 bounces novos (todos os 138 já tentados; nenhum bounce novo)",
+   "prospecao_followup.py — 0 follow-ups (fila zerada)",
+   "bot_oleo.py send_sequence — sequência processada, 0 envios novos",
+   "bot_oleo.py check-replies — 1 resposta (falso positivo — email marketing automático Fazenda Capoava); replies_pending.json limpo",
+   "proposta_contrato.py — não acionado (0 leads com volume ou solicitação)",
+   "relatorio_esg.py — não acionado (sem solicitação de relatório)"
+  ],
+  "diagnostico": {
+   "total_leads_csv": 503,
+   "status_csv": "novo 311 | bounce 100 (cache 138) | respondido 24 | encerrado 15 | descartado 53",
+   "bounce_cache_json": 138,
+   "dias_sem_resposta_humana_fluxo_oleo": "55 (última: Tauste 30/09; 41 desde Pague Menos 14/10)",
    "fila_prospeccao": "0 pendentes MX-válido (fila zerada)",
    "propostas_contrato_geradas": 0,
    "relatorios_esg_gerados": 0,

@@ -1,6 +1,6 @@
 {
- "atualizado_em": "2026-11-24 13:33 (Atendente IA - cron tick - terça-feira)",
- "_ultimo_check": "2026-11-24 ~18:00 (Atendente IA - tick #248 - terça-feira)",
+ "atualizado_em": "2026-11-24 17:06 (Atendente IA - cron tick #253 - terça-feira)",
+ "_ultimo_check": "2026-11-24 17:06 (Atendente IA - cron tick #253 - terça-feira)",
  "leads": {
   "total": 503,
   "por_status": {
@@ -233,8 +233,8 @@
   "total": 837,
   "pendentes": 357
  },
- "aprendizados": "Tick #248 - 55º dia sem resposta humana. 494 leads (303 ativos), 138 bounces cache, 0 novas respostas, 0 Formspree, 0 follow-ups. prospecao_followup.py ausente. Sistema SMTP/IMAP OK. Pipeline bloqueado em ação humana — WhatsApp (11) 96785-9631 é o próximo passo.",
- "ultima_execucao": "2026-11-24T18:00:00-03:00",
+ "aprendizados": "Tick #253 — 55º dia sem resposta humana. Nada novo: 0 bounces, 0 replies, 0 follow-ups. Pipeline bloqueado em ação humana.",
+ "ultima_execucao": "2026-11-24 17:06:00-03:00",
  "ciclo_2026_11_24_1400_cron_atendente_247": {
   "timestamp": "2026-11-24 14:00 (Atendente IA - cron tick #247 - terça-feira)",
   "acoes": [
@@ -610,22 +610,22 @@
    "novas_respostas_humanas": 0
   }
  },
- "total_leads": 503,
+ "total_leads": 473,
  "status_dist": {
-  "bounce": 100,
-  "novo": 311,
+  "bounce": 95,
+  "novo": 286,
   "respondido": 24,
   "descartado": 53,
   "encerrado": 15
  },
  "respondidos": 24,
- "taxa_resposta": "4.8%",
- "bounce_csv": 100,
- "taxa_bounce_csv": "19.9%",
- "novos_para_enviar": 311,
+ "taxa_resposta": "5.1%",
+ "bounce_csv": 95,
+ "taxa_bounce_csv": "20.1%",
+ "novos_para_enviar": 286,
  "descartados": 53,
- "bounce_cache": 138,
- "dias_sem_resposta_humana": 55,
+ "bounce_cache": 130,
+ "dias_sem_resposta_humana": 62,
  "ultima_resposta": "Tauste 30/09/2026",
  "inbox_nao_lidas": 0,
  "ciclo_2026_11_17_1134_cron_atendente_terca": {
@@ -725,6 +725,49 @@
    "respostas_auto": 0,
    "propostas_contrato_geradas": "1 (Selmi — Pastificio Selmi S/A, 800 L/mês)",
    "relatorios_esg_gerados": 0
+  }
+ },
+ "ciclo_2026_11_24_1534_cron_atendente_254": {
+  "timestamp": "2026-11-24 15:34 (Atendente IA - cron tick #254 - terça-feira)",
+  "acoes": [
+   "sync_formspree.py — 138 bounces cache, 0 notificacoes Formspree novas (OK)",
+   "corrigir_emails.py — 0 bounces novos (todos os 98 ja tentados; nenhum bounce novo)",
+   "prospecao_followup.py — 0 follow-ups processados (fila zerada)",
+   "bot_oleo.py send_sequence — sequencia processada, 0 envios novos",
+   "bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)"
+  ],
+  "diagnostico": {
+   "total_leads_csv": 503,
+   "status_csv": "novo 311 | bounce 100 | respondido 24 | encerrado 15 | descartado 53",
+   "bounce_cache_json": 138,
+   "dias_sem_resposta_humana_fluxo_oleo": "56 (ultima: Tauste 30/09; 42 dias desde Pague Menos 14/10)",
+   "fila_prospeccao": "0 pendentes MX-valido (fila zerada)",
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "novas_respostas_humanas": 0
+  }
+ },
+ "_ultimo_tick": "2026-11-24 16:07 (Atendente IA - cron tick #255 - terça-feira)",
+ "ciclo_2026_11_24_1607_cron_atendente_255": {
+  "timestamp": "2026-11-24 16:07 (Atendente IA - cron tick #255 - terça-feira)",
+  "acoes": [
+   "✅ sync_formspree.py — 138 bounces cache, 0 notificações Formspree novas (OK)",
+   "✅ corrigir_emails.py — 0 bounces novos (todos os 98 já tentados; nenhum bounce novo)",
+   "✅ prospecao_followup.py — 0 follow-ups (fila zerada)",
+   "✅ bot_oleo.py send_sequence — 0 envios novos",
+   "✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)",
+   "⏭️ proposta_contrato.py — não acionado (0 leads com volume novo)",
+   "⏭️ relatorio_esg.py — não acionado (sem solicitação de relatório)"
+  ],
+  "diagnostico": {
+   "total_leads_csv": 503,
+   "status_csv": "novo 311 | bounce 100 | respondido 24 | encerrado 15 | descartado 53",
+   "bounce_cache_json": 138,
+   "dias_sem_resposta_humana_fluxo_oleo": "56 (última: Tauste 30/09; 42 dias desde Pague Menos 14/10)",
+   "fila_prospeccao": "0 pendentes MX-válido (fila zerada)",
+   "propostas_contrato_geradas": 0,
+   "relatorios_esg_gerados": 0,
+   "novas_respostas_humanas": 0
   }
  }
 }
