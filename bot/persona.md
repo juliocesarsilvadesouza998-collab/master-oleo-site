@@ -76,6 +76,7 @@ lead rumo a uma negociação**, sem ser invasivo nem insistente.
   2031** (Mordor Intelligence). A JBS coletou 36 milhões de litros em 8 anos
   (+154% em 2024) para biodiesel. O óleo usado virou "ouro líquido" —
   commodity energética.
+- NOVO CONCORRENTE — CAPTOLEO/ABRASEL (descoberto 23/11/2026): a CaptOleo (captoleo.eco.br, tel. (11) 3783-8612) é parceira oficial da Abrasel SP e paga R$ 3,00/L em SP capital. Isso CONFIRMA que o mercado está aquecido — operadores formais já pagam acima da faixa histórica de R$ 2,50/L. Ajuste no discurso: não diga mais "ofertas acima de R$ 2,50/L são de irregulares". Novo argumento: "a média do mercado formal está em R$ 2,00-2,50/L, mas operações em SP capital chegam a R$ 3,00/L em parcerias como a CaptOleo/Abrasel. Oferecemos preço justo + operação regular com certificado, atendimento local no interior (Salto/Campinas/Sorocaba) — onde a CaptOleo não alcança." Use a CaptOleo como prova de VALORIZAÇÃO do mercado, não como ameaça.
 - LEI DO COMBUSTÍVEL DO FUTURO (argumento de urgência — verificado na Lei
   14.993/2024, planalto.gov.br): a lei criou o mercado obrigatório de SAF
   (combustível sustentável de aviação, produzido a partir de óleo usado) com

@@ -462,21 +462,21 @@
     "segmento": "supermercados (rede, frituras e açougue)"
   },
   {
-    "nome": "",
+    "nome": "Savegnago Supermercados",
     "empresa": "Savegnago Supermercados",
     "email": "atendimento@savegnago.com.br",
     "cidade": "Interior de SP (rede; unidades na regiao)",
     "segmento": "supermercados - padaria/rotisserie/fritura alto volume"
   },
   {
-    "nome": "",
+    "nome": "GRSA - Grupo GR",
     "empresa": "GRSA - Grupo GR (Alimentacao Corporativa)",
     "email": "contato@grsa.com.br",
     "cidade": "SP/Campinas (operacao nacional, 1M+ refeicoes/dia)",
     "segmento": "refeicoes coletivas / cozinha industrial"
   },
   {
-    "nome": "",
+    "nome": "Premium Hotel Campinas",
     "empresa": "Premium Hotel Campinas",
     "email": "contato@hotelpremiumcampinas.com.br",
     "cidade": "Campinas/SP",
@@ -2653,28 +2653,120 @@
     "empresa": "Bio Óleo (Jundiaí/SP)",
     "email": "contato@biooleo.com.br",
     "segmento": "biodiesel (parceria/comprar UCO)",
-    "potencial": "A"
+    "potencial": "A",
+    "nome": "Bio Óleo"
   },
   {
     "empresa": "Fertibom (Catanduva/SP)",
     "email": "fertibom@fertibom.com.br",
     "segmento": "biodiesel Biomax",
-    "potencial": "A"
+    "potencial": "A",
+    "nome": "Fertibom"
   },
   {
     "empresa": "Binatural (biodiesel)",
     "email": "contato@binatural.com.br",
     "segmento": "biodiesel",
+    "potencial": "A",
+    "nome": "Binatural"
+  },
+  {
+    "nome": "Coocerqui (Financeiro)",
+    "empresa": "Cooperativa de Consumo Popular de Cerquilho - COOCERQUI",
+    "email": "contabil.tecnico@coocerqui.com.br",
+    "cidade": "Cerquilho/SP (+ lojas Boituva, Tietê, Porto Feliz, Tatuí)",
+    "segmento": "Rede de supermercados cooperativa (6 lojas + 8 drogarias)",
+    "fonte": "PDF rede credenciada MegaVale Card - Câmara Bauru (24/11/2026)",
+    "mx": "smtp.google.com (Google Workspace)",
     "potencial": "A"
-      },
-      {
-        "nome": "Coocerqui (Financeiro)",
-        "empresa": "Cooperativa de Consumo Popular de Cerquilho - COOCERQUI",
-        "email": "contabil.tecnico@coocerqui.com.br",
-        "cidade": "Cerquilho/SP (+ lojas Boituva, Tietê, Porto Feliz, Tatuí)",
-        "segmento": "Rede de supermercados cooperativa (6 lojas + 8 drogarias)",
-        "fonte": "PDF rede credenciada MegaVale Card - Câmara Bauru (24/11/2026)",
-        "mx": "smtp.google.com (Google Workspace)",
-        "potencial": "A"
-      }
-    ]
+  },
+  {
+    "empresa": "Agromais Brasil (representação óleos)",
+    "email": "comercial@agromaisbrasil.com.br",
+    "segmento": "oleos-gorduras",
+    "potencial": "A",
+    "telefone": "(11) 97183-1011",
+    "nome": "Agromais Brasil"
+  },
+  {
+    "empresa": "Manekineko (rede comida japonesa)",
+    "email": "compras@manekineko.com.br",
+    "segmento": "restaurantes-cadeias",
+    "potencial": "A",
+    "fonte": "Canal do fornecedor aberto",
+    "nome": "Manekineko"
+  },
+  {
+    "empresa": "Refeições Ao Ponto (cozinha industrial)",
+    "email": "suprimentos@aoponto.com.br",
+    "segmento": "restaurantes-cadeias",
+    "potencial": "A",
+    "fonte": "Canal fornecedor",
+    "nome": "Refeições Ao Ponto"
+  },
+  {
+    "empresa": "Ralston Alimentos (compras)",
+    "email": "Compras@ralston.com.br",
+    "segmento": "oleos-gorduras",
+    "potencial": "A",
+    "fonte": "Canal compras",
+    "nome": "Ralston Alimentos"
+  },
+  {
+    "empresa": "Carrefour Brasil (fornecedor óleo)",
+    "email": "atendimento.fornecedor@carrefour.com",
+    "segmento": "supermercados-regionais",
+    "potencial": "A",
+    "fonte": "Portal fornecedor",
+    "nome": "Carrefour Brasil"
+  },
+  {
+    "empresa": "Frescatto (Frigorífico Jahu)",
+    "email": "comercial@frescatto.com.br",
+    "segmento": "frigorificos-abatedouros",
+    "potencial": "A"
+  },
+  {
+    "empresa": "Frigoboi Comércio de Carnes",
+    "email": "friigoboi@frigoboi.com.br",
+    "segmento": "frigorificos-abatedouros",
+    "potencial": "A"
+  },
+  {
+    "empresa": "Damm Produtos Alimentícios",
+    "email": "vendas@damm.com.br",
+    "segmento": "frigorificos-abatedouros",
+    "potencial": "A"
+  },
+  {
+    "empresa": "Rede São Paulo Supermercados (compras)",
+    "email": "denis@redespsm.com.br",
+    "segmento": "supermercados-regionais",
+    "potencial": "A"
+  },
+  {
+    "empresa": "Hirota Food (fornecedor)",
+    "email": "recepcao@hirota.com.br",
+    "segmento": "supermercados-regionais",
+    "potencial": "A"
+  },
+  {
+    "empresa": "Lopes Supermercados (fornecedor)",
+    "email": "cpd@supermercadolopes.com.br",
+    "segmento": "supermercados-regionais",
+    "potencial": "A"
+  },
+  {
+    "empresa": "Rede Super Compras (fornecedor)",
+    "email": "central@redesupercompras.com.br",
+    "segmento": "supermercados-regionais",
+    "potencial": "A"
+  },
+  {
+    "nome": "Arrifana Alimentos",
+    "empresa": "Arrifana Industria e Importadora de Alimentos Ltda",
+    "email": "faleconosco@arrifana.com.br",
+    "cidade": "Sao Paulo/SP",
+    "segmento": "industria de maioneses, molhos e condimentos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"
+  }
+]
