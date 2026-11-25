@@ -1,0 +1,31 @@
+{
+  "atualizado_em": "2026-11-25T13:20:00-03:00",
+  "leads": [
+    {
+      "id": "inbound-001",
+      "origem": "whatsapp-inbound",
+      "telefone": "+55 11 99495-2623",
+      "empresa": "(nao informada — pedir razao social e CNPJ)",
+      "perfil": "Industria que produz e comercializa oleos vegetais e oleoquimicos",
+      "material_declarado": [
+        "produtos fora de especificacao e/ou vencidos",
+        "oleoquimicos",
+        "residuos da producao/refino de oleo"
+      ],
+      "volume_declarado": "6 a 25 toneladas/ano",
+      "status": "avaliacao solicitada pelo cliente",
+      "primeira_resposta_em": "2026-11-25",
+      "resposta_enviada_por": "Julio (WhatsApp, texto aprovado)",
+      "o_que_pedimos": [
+        "quais materiais exatamente e se estao segregados",
+        "volume por mes/batelada e acondicionamento (tambor/IBC/granel)",
+        "endereco da planta (cidade/UF)",
+        "ficha/laudo do material (acidez, agua, impurezas)"
+      ],
+      "proximo_passo": "visita tecnica para ver o material e retirar amostra (~1 L por linha)",
+      "janelas_oferecidas": ["quarta 26/11 10h", "quinta 27/11 15h"],
+      "lembrete": "cobrar resposta em 26/11 de manha se nao retornarem",
+      "observacoes": "Nao falar valor antes da analise. Se misturarem oleoquimico com oleo alimentar, pode inviabilizar o lote."
+    }
+  ]
+}

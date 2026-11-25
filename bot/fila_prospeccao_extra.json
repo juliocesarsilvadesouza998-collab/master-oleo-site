@@ -2763,10 +2763,59 @@
     "potencial": "A"
   },
   {
-    "nome": "Arrifana Alimentos",
-    "empresa": "Arrifana Industria e Importadora de Alimentos Ltda",
-    "email": "faleconosco@arrifana.com.br",
-    "cidade": "Sao Paulo/SP",
-    "segmento": "industria de maioneses, molhos e condimentos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"
-  }
-]
+      "nome": "Arrifana Alimentos",
+      "empresa": "Arrifana Industria e Importadora de Alimentos Ltda",
+      "email": "faleconosco@arrifana.com.br",
+      "cidade": "Sao Paulo/SP",
+      "segmento": "industria de maioneses, molhos e condimentos (food service) - NICHO PRIORITARIO (vencidos >40% gordura)"
+    },
+    {
+      "nome": "Bevitali Concept",
+      "empresa": "Bevitali Concept LTDA",
+      "email": "contato@bevitali.com.br",
+      "cidade": "Sorocaba/SP",
+      "segmento": "industria de margarina e gorduras vegetais - NICHO PRIORITARIO (oleos e gorduras)"
+    },
+    {
+      "nome": "Bom Sabor",
+      "empresa": "Bom Sabor SA",
+      "email": "comercial@bomsabor.com.br",
+      "cidade": "Taboao da Serra/SP",
+      "segmento": "industria de maionese e molhos - NICHO PRIORITARIO (vencidos >40% gordura)"
+    },
+    {
+      "nome": "HRP Industria",
+      "empresa": "HRP Industria e Comercio de Pecas e Equipamentos",
+      "email": "comercial@hrpindustria.com",
+      "cidade": "Indaiatuba/SP",
+      "segmento": "industria de equipamentos farmaceuticos (encapsulados softgel) - NICHO PRIORITARIO (encapsulados/farmaceuticas)"
+          },
+          {
+            "nome": "Hotel KK Itu",
+            "empresa": "Hotel KK (Itu/SP)",
+            "email": "comercial@hotelkk.com.br",
+            "cidade": "Itu/SP",
+            "segmento": "Hotel com restaurante - cozinha internacional, fritura diaria - NICHO PRIORITARIO"
+          },
+          {
+            "nome": "Hotel Tucumán Itu",
+            "empresa": "Hotel Tucumán Centro de Convencoes e Resort (Itu/SP)",
+            "email": "reservas@tucumanhotel.com.br",
+            "cidade": "Itu/SP",
+            "segmento": "Resort com restaurante - cozinha industrial alto volume - NICHO PRIORITARIO (oleo de fritura)"
+          },
+          {
+            "nome": "Itu Plaza Hotel",
+            "empresa": "Itu Plaza Hotel (Itu/SP)",
+            "email": "reservas@ituplazahotel.com.br",
+            "cidade": "Itu/SP",
+            "segmento": "Hotel com 2 restaurantes - cozinha industrial, fritura alto volume - NICHO PRIORITARIO"
+          },
+          {
+            "nome": "Hotel Santa Rita Itu",
+            "empresa": "Hotel Santa Rita (Itu/SP)",
+            "email": "reservas@hotelsantarita.com.br",
+            "cidade": "Itu/SP",
+            "segmento": "Hotel com restaurante - cozinha, fritura - NICHO PRIORITARIO"
+          }
+        ]

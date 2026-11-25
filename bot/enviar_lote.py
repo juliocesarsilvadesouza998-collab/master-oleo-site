@@ -143,7 +143,7 @@ def smtp_send(cfg, e, to_addr, subject, html):
     msg["List-Unsubscribe"] = f"<mailto:{e['usuario']}?subject=unsubscribe>"
     msg["X-Mailer"] = "Master Oleo Enterprise System"
     msg["X-Priority"] = "3"
-    msg["Date"] = email.utils.formatdate(localtime=True)
+    msg["Date"] = formatdate(localtime=True)
     try:
         from email_templates import wrap_professional
         html = wrap_professional(html)
@@ -219,8 +219,8 @@ def main():
         try:
             tpl = tpl_apresentacao(cfg, p)
             mid = smtp_send(cfg, e, p["email"], tpl["subject"], tpl["html"])
-            leads.append({"id": str(len(leads)+1), "nome": p["nome"], "empresa": p["empresa"],
-                          "email": p["email"], "tipo": "industria" if "industria" in p["segmento"].lower() else "outro",
+            leads.append({"id": str(len(leads)+1), "nome": p.get("nome") or p["empresa"].split(" (")[0], "empresa": p["empresa"],
+                          "email": p["email"], "tipo": "industria" if "industria" in p.get("segmento","").lower() else "outro",
                           "volume": "", "fonte": "prospeccao-lote", "status": "novo",
                           "criado_em": now_iso(), "boas_vindas_em": "",
                           "follow1_em": "", "follow2_em": "", "follow3_em": "",
