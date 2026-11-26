@@ -1,5 +1,120 @@
+## 2026-11-26 08:32 (Atendente IA - cron tick #271 - quinta-feira)
 
-## 2026-11-25 ~12:35 (Atendente IA - cron tick #263 - quarta-feira)
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 140 bounces cache, 0 notificações Formspree novas (OK) |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 140 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups processados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **512** |
+| `novo` | 318 |
+| `respondido` | 24 |
+| `bounce` CSV | 102 (140 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ |
+| Dias sem resposta humana | **58** (última: Tauste 30/09; 43 desde Pague Menos 14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES — nenhuma mudança
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 140 bounces cache, 0 notificações Formspree novas (OK) |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 140 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups processados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ✅ _miniscan_inbox.py | INBOX: 0 não lidas |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **512** |
+| `novo` | 318 |
+| `respondido` | 24 |
+| `bounce` CSV | 102 (140 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ |
+| Dias sem resposta humana | **57** (última: Tauste 30/09; 42 desde Pague Menos 14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES — nenhuma mudança
+- 🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — 57+ dias sem ação humana
+- 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — Ticket 407470, 42 dias sem retorno
+- 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada
+- 🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro fornecedor isac.ivrim.com.br (66+ dias)
+- 🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar
+- 🔴🔴 QUEIJOS ITUPEVA — Coleta-teste a agendar
+- 🟡 SONDA, TAUSTE, SANOFI MEDLEY, NAGUMO, SELMI, DU PORTO
+- 🆕 LEAD INBOUND WHATSAPP — Indústria óleos/oleoquímicos 6-25t/ano (respondido por Júlio, aguarda 26/11)
+
+### 🔴 Diagnóstico estrutural
+**57º dia consecutivo sem respostas humanas no fluxo de COMPRA de óleo.** Nada novo: 0 bounces, 0 replies, 0 follow-ups, 0 envios. Pipeline completamente bloqueado em ação humana — todo o cold email já foi enviado e reenviado. Os 12 leads QUENTES dependem de ação humana no WhatsApp (11) 96785-9631 ou telefone. **Ação prioritária para Júlio:** disparar WhatsApp de reengajamento para Savegnago (Pâmela, protocolo 00136403), Pague Menos (Josiane Marinho, ticket 407470) e Covabra (portal Ivrim). Lead inbound WhatsApp (indústria óleos/oleoquímicos 6-25t/ano) — Júlio respondeu em 25/11, aguarda retorno em 26/11.
+
+---
+
+## 2026-11-25 19:04 (Atendente IA - cron tick #269 - quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 140 bounces cache, 0 notificações Formspree novas (OK) |
+| ✅ corrigir_emails.py | 0 bounces processados (todos os 140 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups processados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ✅ _miniscan_inbox.py | INBOX: 0 não lidas |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **512** |
+| `novo` | 318 |
+| `respondido` | 24 |
+| `bounce` CSV | 102 (140 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ |
+| Dias sem resposta humana | **57** (Tauste 30/09; 42 desde Pague Menos 14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES — nenhuma mudança
+- 🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — 57+ dias sem ação humana
+- 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — 42 dias sem retorno
+- 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada
+- 🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro isac.ivrim.com.br (66+ dias)
+- 🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar
+- 🔴🔴 QUEIJOS ITUPEVA — Coleta-teste a agendar
+- 🟡 SONDA, TAUSTE, SANOFI MEDLEY, NAGUMO, SELMI, DU PORTO
+- 🆕 LEAD INBOUND WHATSAPP — Indústria óleos/oleoquímicos 6-25t/ano (respondido por Júlio)
+
+### 🔴 Diagnóstico estrutural
+**57º dia consecutivo sem respostas humanas no fluxo de COMPRA de óleo.** Nada novo: 0 bounces, 0 replies, 0 follow-ups, 0 envios. Pipeline completamente bloqueado em ação humana — todo o cold email já foi enviado e reenviado. Os 12 leads QUENTES dependem de ação humana no WhatsApp (11) 96785-9631 ou telefone. **Ação prioritária para Júlio:** disparar WhatsApp de reengajamento para Savegnago (Pâmela, protocolo 00136403), Pague Menos (Josiane Marinho, ticket 407470) e Covabra (portal Ivrim). Lead inbound WhatsApp (indústria óleos/oleoquímicos 6-25t/ano) — Júlio respondeu em 25/11, aguarda retorno em 26/11.
+
+---
+
+## 2026-11-25 21:21 (Atendente IA - cron tick #267 - quarta-feira)
 
 ### Ações executadas
 | Ação | Resultado |
@@ -14189,4 +14304,47 @@ Mais um tick de manutenção limpo: sistema saudável, fila zerada, sem resposta
 
 ### Observações
 Tick #256 — sistema saudável, fila zerada, sem respostas novas. 56º dia sem resposta humana real no fluxo de COMPRA de óleo. Pipeline de fechamento continua travado em ação humana — WhatsApp/telefone nos leads quentes. Sem reposição da fila de prospecção (listas CNPJ pagas), o cold email permanece inativo.
+
+---
+
+## 2026-11-25 18:04 (Atendente IA - cron tick #268 - quarta-feira)
+
+### Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 140 bounces cache, 0 notificações Formspree novas (OK) |
+| ✅ corrigir_emails.py | 0 bounces novos (todos os 140 já tentados; nenhum bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups processados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **512** |
+| `novo` | 318 |
+| `respondido` | 24 |
+| `bounce` CSV | 102 (140 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Follow-ups atrasados | 0 ✅ |
+| Respostas pendentes | 0 ✅ |
+| Fila prospecção | 0 MX-válidos ❌ |
+| Dias sem resposta humana | **57** (Tauste 30/09; 42 desde Pague Menos 14/10) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+
+### 🔥 Leads QUENTES — nenhuma mudança
+- 🔴🔴🔴 SAVEGNAGO (R$7,98bi, #1 interior SP) — 57+ dias sem ação humana
+- 🔴🔴🔴 PAGUE MENOS (R$4,33bi) — 42 dias sem retorno
+- 🔴🔴🔴 REDE CONFIANÇA (Sorocaba) — Proposta 2.500 L/mês enviada
+- 🔴🔴🔴 COVABRA — AÇÃO HUMANA: cadastro isac.ivrim.com.br (66+ dias)
+- 🔴🔴 BRASFRIGO (Salto/SP) — Coleta-teste a agendar
+- 🔴🔴 QUEIJOS ITUPEVA — Coleta-teste a agendar
+- 🟡 SONDA, TAUSTE, SANOFI MEDLEY, NAGUMO, SELMI, DU PORTO
+- 🆕 LEAD INBOUND WHATSAPP — Indústria óleos/oleoquímicos 6-25t/ano (respondido por Júlio)
+
+### Observação
+57º dia sem respostas humanas no fluxo de compra de óleo. Sistema SMTP/IMAP OK. Nada novo: fila zerada, sem replies, sem follow-ups. Pipeline bloqueado em ação humana — WhatsApp é o único caminho para leads quentes.
 

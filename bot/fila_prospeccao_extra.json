@@ -2817,5 +2817,19 @@
             "email": "reservas@hotelsantarita.com.br",
             "cidade": "Itu/SP",
             "segmento": "Hotel com restaurante - cozinha, fritura - NICHO PRIORITARIO"
-          }
-        ]
+                      },
+                      {
+                        "nome": "Matsuko Industria",
+                        "empresa": "Matsuko Industria (Sorocaba/SP)",
+                        "email": "contato@matsuko.com.br",
+                        "cidade": "Sorocaba/SP",
+                        "segmento": "Industria alimenticia - processamento de alimentos"
+                      },
+                      {
+                        "nome": "Mercadao Central Itupeva",
+                        "empresa": "Mercadao Central Itupeva",
+                        "email": "financeiro@mercadaocentral.com.br",
+                        "cidade": "Itupeva/SP",
+                        "segmento": "Supermercado"
+                      }
+                    ]

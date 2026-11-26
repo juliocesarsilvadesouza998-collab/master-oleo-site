@@ -271,9 +271,9 @@ def tpl_apresentacao(cfg, lead):
             "html": f"""<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#1c2a21">
         <p>Olá, <b>{lead.get('nome','')}</b>!</p>
         <p>Cada loja com padaria, rotisserie e acougue gera <b>óleo de fritura todos os dias</b> — hoje vira prejuízo, mas o mercado global de óleo usado valora <b>US$ 8-15 bi</b> (Fortune). Um supermercado com 5 lojas gera <b>2.000-3.000 L/mês = R$ 48-72 mil/ano</b>.</p>
-        <p>A <b>{g['nome']}</b>, de {cidade}, compra com <b>certificado PNRS + relatório ESG mensal</b>: você zera o passivo e recebe <b>R$ 1,00-2,50/L à vista (PIX)</b> na coleta. Validado: Savegnago (#1 interior SP, R$ 7,98 bi) e Madero (55 mil L/mês). </p>
+        <p>A <b>{g['nome']}</b>, de {cidade}, compra com <b>certificado PNRS + relatório ESG mensal</b>: você zera o passivo e recebe <b>R$ 1,00-2,50/L à vista (PIX)</b> na coleta. Validado: Savegnago (#1 interior SP, R$ 7,98 bi) e Madero (55 mil L/mês). A CaptOleo (parceira Abrasel SP) já paga <b>R$ 3,00/L em SP capital</b> — o mercado está aquecido e o preço subindo.</p>
         <p><b>Quantas lojas a rede tem?</b> Envie o número que calculo o valor exato. WhatsApp: <b>{g['telefone_whatsapp']}</b>. </p>
-        <p>Antecipação: <b>Portaria MME/MMA 3/2026</b> obriga ≥1% OGR no biodiesel a partir jan/2028 — quem fechar contrato agora tem prioridade.</p>
+        <p>Antecipação: <b>Lei 14.993/2024 (Combustível do Futuro)</b> obriga ≥1% de óleo residual no diesel a partir jan/2027 — quem fechar contrato agora garante prioridade e preço travado.</p>
         <p>Abcdço,<br><b>{g['nome']}</b> · Master Óleo · {cidade}</p>
         </div>"""
         }

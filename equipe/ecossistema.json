@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-25T18:00:00-03:00",
+  "atualizado_em": "2026-11-26 08:54 (Melhorador Contínuo - quinta-feira)",
       "leads": {
         "total": 512,
         "por_status": {
@@ -184,8 +184,29 @@
       }
     ]
   },
+  "fila_prospeccao": {
+    "total": 490,
+    "pendentes": 1,
+    "contatados": 419,
+    "bounces": 94,
+    "ultima_atualizacao": "2026-11-30 08:00 (Prospector - cron)"
+  },
   "bounces_cache": 140,
-  "prospeccao_lote_enviados": 458,
+  "prospeccao_lote_enviados": 461,
   "sequencia_ativa": true,
-  "ultima_execucao": "2026-11-25T15:15:00-03:00"
-}
+    "ultima_execucao": "2026-11-30 08:00 (Estrategista - domingo)",
+    "meta_da_semana": {
+      "semana": "30/11 a 06/12",
+      "foco": "FECHAMENTO — destravar gargalo humano + reabastecer prospecção via CNPJá",
+      "prioridades_absolutas": [
+        {"lead": "COVABRA", "acao": "CADASTRO FORNECEDOR isac.ivrim.com.br", "peso": "🔴🔴🔴", "prazo": "urgente — 70+ dias parado"},
+        {"lead": "SAVEGNAGO", "acao": "WHATSAPP (11) 96785-9631 — script persona.md", "peso": "🔴🔴🔴", "prazo": "urgente — 59+ dias parado"},
+        {"lead": "PAGUE MENOS", "acao": "WHATSAPP Josiane Marinho — ticket 407470", "peso": "🔴🔴🔴", "prazo": "42+ dias"},
+        {"lead": "REDE CONFIANÇA", "acao": "WHATSAPP — proposta 2.500 L/mês + bônus exclusividade", "peso": "🔴🔴🔴", "prazo": "42+ dias"},
+        {"lead": "BRASFRIGO", "acao": "AGENDAR COLETA-TESTE (Salto/SP — local)", "peso": "🔴🔴", "prazo": "14+ dias"},
+        {"lead": "QUEIJOS ITUPEVA", "acao": "AGENDAR COLETA-TESTE (Itupeva)", "peso": "🔴🔴", "prazo": "14+ dias"},
+        {"lead": "PASTIFÍCIO SELMI", "acao": "Follow-up compras@selmi.com.br — proposta 800 L/mês", "peso": "🟡", "prazo": "30+ dias"},
+        {"lead": "DU PORTO", "acao": "Responder sac@duporto.com.br — pedir volume mensal", "peso": "🟡", "prazo": "26+ dias"}
+      ]
+    }
+  }

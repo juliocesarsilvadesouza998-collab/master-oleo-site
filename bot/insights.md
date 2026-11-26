@@ -1,4 +1,21 @@
-|## 2026-11-12 12:33 (Atendente IA - cron tick #210 - quarta-feira)
+|## 2026-11-25 21:00 (Atendente IA - cron tick - quarta-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 140 bounces cache, 0 notificações Formspree novas (OK)
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 140 já tentados)
+- ✅ prospecao_followup.py — 0 follow-ups (fila zerada)
+- ✅ bot_oleo.py send_sequence — 0 envios novos
+- ✅ bot_oleo.py check-replies — 0 respostas
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados
+- 🔴 **57º dia sem respostas humanas** (última: Tauste 30/09)
+- 🔴 Fila de prospecção zerada — sem fonte gratuita para repor
+
+### Observações
+Sistema SMTP/IMAP OK. 512 leads (318 ativos, 24 respondidos). 12 leads QUENTES parados — todos dependem de ação humana (WhatsApp/telefone). Nada novo neste ciclo.
+
+---
+
+## 2026-11-12 12:33 (Atendente IA - cron tick #210 - quarta-feira)
 |
 |### Diagnóstico do ciclo
 ||- **464 leads, 295 ativos, 24 respostas (5,9%)**
@@ -46,6 +63,40 @@
 |
 |---
 |
+## 2026-11-25 07:30 (Atendente IA - cron tick #255 - quarta-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 140 bounces cache, 0 notificações Formspree novas (OK)
+- ✅ corrigir_emails.py — 0 bounces novos (todos já tentados; nenhum bounce novo)
+- ✅ prospecao_followup.py — 0 follow-ups processados (fila zerada)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios novos
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ⏭️ proposta_contrato.py — não acionado (0 leads com volume ou solicitação)
+- ⏭️ relatorio_esg.py — não acionado (sem solicitação de relatório)
+- 🔴 **56º dia sem respostas humanas no fluxo de COMPRA de óleo** (última: Tauste 30/09; 42 dias desde Pague Menos 14/10)
+- 🔴 Fila de prospecção zerada — sem fonte de busca gratuita para repor leads
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 56+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 42 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 66+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Coleta-teste a agendar. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Coleta-teste a agendar.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (56 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+11. 🟡 **PASTIFÍCIO SELMI** — compras@selmi.com.br, proposta 800 L/mês (22 dias sem retorno).
+
+### Observações
+- **56º dia sem resposta humana nova** (última: Tauste 30/09). 512 leads trabalhados — canal email atingiu o teto.
+- **Pipeline de fechamento 100% parado** em ação humana — sem scripts que liguem ou enviem WhatsApp.
+- **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
+- Sistema saudável — SMTP/IMAP OK. Nada mudou neste ciclo.
+
+---
+
 ## 2026-11-24 17:31 (Atendente IA - cron tick #254 - terça-feira)
 
 ### Diagnóstico do ciclo
@@ -78,7 +129,24 @@
 - **Nenhum bounce novo**, nenhuma resposta pendente, nenhuma notificação Formspree.
 - Sistema saudável — SMTP/IMAP OK. Nada mudou neste ciclo.
 
----|## 2026-11-12 12:33 (Atendente IA - cron tick #210 - quarta-feira)
+---|## 2026-11-25 21:00 (Atendente IA - cron tick - quarta-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 140 bounces cache, 0 notificações Formspree novas (OK)
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 140 já tentados)
+- ✅ prospecao_followup.py — 0 follow-ups (fila zerada)
+- ✅ bot_oleo.py send_sequence — 0 envios novos
+- ✅ bot_oleo.py check-replies — 0 respostas
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados
+- 🔴 **57º dia sem respostas humanas** (última: Tauste 30/09)
+- 🔴 Fila de prospecção zerada — sem fonte gratuita para repor
+
+### Observações
+Sistema SMTP/IMAP OK. 512 leads (318 ativos, 24 respondidos). 12 leads QUENTES parados — todos dependem de ação humana (WhatsApp/telefone). Nada novo neste ciclo.
+
+---
+
+## 2026-11-12 12:33 (Atendente IA - cron tick #210 - quarta-feira)
 |
 |### Diagnóstico do ciclo
 ||- **464 leads, 295 ativos, 24 respostas (5,9%)**
