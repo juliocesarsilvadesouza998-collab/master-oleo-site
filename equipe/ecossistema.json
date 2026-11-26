@@ -1,33 +1,57 @@
 {
-  "atualizado_em": "2026-11-26 08:54 (Melhorador Contínuo - quinta-feira)",
-      "leads": {
-        "total": 512,
-        "por_status": {
-          "bounce": 102,
-          "novo": 318,
-          "respondido": 24,
-          "descartado": 53,
-          "encerrado": 15
-        },
-      "por_fonte": {
-        "prospeccao": 169,
-        "prospeccao-lote": 321,
-        "prospeccao-fritas-2026-09-25": 11,
-        "prospeccao_desmoldante": 7,
-        "desmoldante": 1,
-        "formspree": 2,
-        "resposta_email": 1
-      }
+  "atualizado_em": "2026-11-26T14:30:00-03:00",
+  "leads": {
+    "total": 518,
+    "por_status": {
+      "bounce": 104,
+      "novo": 322,
+      "respondido": 24,
+      "descartado": 53,
+      "encerrado": 15
     },
+    "por_fonte": {
+      "prospeccao": 169,
+      "prospeccao-lote": 327,
+      "prospeccao-fritas-2026-09-25": 11,
+      "prospeccao_desmoldante": 7,
+      "desmoldante": 1,
+      "formspree": 2,
+      "resposta_email": 1
+    }
+  },
   "respondidos": {
-    "total": 20,
+    "total": 24,
     "lista": [
       {
-        "empresa": "Du Porto Industria Alimenticia Ltda",
+        "empresa": "Sumerbol Supermercados LTDA",
         "contato": "",
-        "email": "sac@duporto.com.br",
-        "cidade": "Sorocaba/SP",
-        "respondido_em": "2026-11-04T17:32:05-03:00",
+        "email": "atendimento@sumerbol.com.br",
+        "cidade": "Indaiatuba/SP",
+        "respondido_em": "",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "GoodBom Supermercados LTDA",
+        "contato": "",
+        "email": "contato@goodbom.com.br",
+        "cidade": "Tatui/SP",
+        "respondido_em": "2026-10-14T08:34:12-03:00",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Covabra Supermercados LTDA",
+        "contato": "",
+        "email": "sac@covabra.com.br",
+        "cidade": "Limeira/SP",
+        "respondido_em": "2026-10-14T08:34:24-03:00",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Supermercados Pague Menos SA",
+        "contato": "",
+        "email": "falecom@supermercadospaguemenos.com.br",
+        "cidade": "Campinas/SP",
+        "respondido_em": "2026-10-14T16:08:19-0300",
         "ultima_resposta": ""
       },
       {
@@ -39,91 +63,75 @@
         "ultima_resposta": "SAC Selmi redirecionou para compras — proposta enviada"
       },
       {
-        "empresa": "Pastificio Selmi S/A",
+        "empresa": "Pimenta Verde Alimentos Ltda (Rede Frango Assado)",
         "contato": "",
-        "email": "sac@selmi.com.br",
-        "cidade": "Campinas/SP",
-        "respondido_em": "2026-11-02T14:05:54+00:00",
-        "ultima_resposta": "SAC redirecionou para compras@selmi.com.br — lead transferido"
-      },
-      {
-        "empresa": "Oba Hortifruti SA",
-        "contato": "",
-        "email": "ouvidoria@redeoba.com.br",
-        "cidade": "Sumare/SP",
-        "respondido_em": "2026-10-30T11:34:57-03:00",
-        "ultima_resposta": "2026-10-30T11:34:57-03:00"
-      },
-      {
-        "empresa": "Grupo Oba Hortifruti",
-        "contato": "",
-        "email": "atendimento@redeoba.com.br",
-        "cidade": "SP",
-        "respondido_em": "2026-10-30T11:34:57-03:00",
-        "ultima_resposta": "2026-10-30T11:34:57-03:00"
-      },
-      {
-        "empresa": "Thermas de Sao Pedro Resort",
-        "contato": "",
-        "email": "reservas@saopedrothermasresort.com.br",
-        "cidade": "Sao Pedro/SP",
-        "respondido_em": "2026-10-30T11:32:20-03:00",
-        "ultima_resposta": "2026-09-14T12:43:44+00:00"
-      },
-      {
-        "empresa": "Granol Industria, Comercio e Exportacao S/A",
-        "contato": "",
-        "email": "sac@granol.com.br",
-        "cidade": "Bebedouro/Osvaldo Cruz-SP (fabricas)",
-        "respondido_em": "2026-10-30T11:32:20-03:00",
-        "ultima_resposta": "2026-09-14T12:44:32+00:00"
-      },
-      {
-        "empresa": "Mococa S/A Produtos Alimenticios",
-        "contato": "",
-        "email": "sac@mococa.com.br",
-        "cidade": "Mococa/SP",
-        "respondido_em": "2026-10-30T11:32:20-03:00",
-        "ultima_resposta": "2026-09-14T12:49:47+00:00"
-      },
-      {
-        "empresa": "Sanofi Medley",
-        "contato": "",
-        "email": "sac.brasil@sanofi.com",
-        "cidade": "Hortolandia/SP",
-        "respondido_em": "2026-10-30T10:53:20-03:00",
+        "email": "sac@redefrangoassado.com.br",
+        "cidade": "Louveira/SP (sede, Rod. Anhanguera km 72)",
+        "respondido_em": "",
         "ultima_resposta": ""
       },
       {
-        "empresa": "Artema Pre Moldados",
+        "empresa": "Rede Confianca Supermercados",
         "contato": "",
-        "email": "contato@artemapremoldados.com.br",
-        "cidade": "",
-        "respondido_em": "2026-10-28T14:43:09-03:00",
-        "ultima_resposta": "2026-10-28T14:42:31-03:00"
-      },
-      {
-        "empresa": "ICT Farmaceutica",
-        "contato": "",
-        "email": "suporte@ictfarmaceutica.com.br",
-        "cidade": "Votorantim/SP",
-        "respondido_em": "2026-10-28T09:33:32-03:00",
+        "email": "social@confianca.com.br",
+        "cidade": "Sorocaba/SP (2 lojas: Pannunzio e Av. Sao Paulo 27mil m2; rede: Bauru, Marilia, Jau, Botucatu, Pederneiras)",
+        "respondido_em": "",
         "ultima_resposta": ""
       },
       {
-        "empresa": "Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP)",
+        "empresa": "Andorinha Hiper Center Supermercados LTDA",
         "contato": "",
-        "email": "relacionamento@nagumo.com.br",
-        "cidade": "Guarulhos/SP (lojas na RM SP e interior)",
-        "respondido_em": "2026-10-14T18:35:24-0300",
-        "ultima_resposta": "SAC Nagumo registrou caso Salesforce 00143542 em 14/10/2026 (auto-ack: 'recebemos seu caso'). Propos"
+        "email": "sugestoes@andorinhahiper.com.br",
+        "cidade": "Salto/Itu/Campinas-SP",
+        "respondido_em": "",
+        "ultima_resposta": ""
       },
       {
-        "empresa": "Supermercados Pague Menos SA",
+        "empresa": "Supermercados Dalben LTDA",
         "contato": "",
-        "email": "falecom@supermercadospaguemenos.com.br",
-        "cidade": "Campinas/SP",
-        "respondido_em": "2026-10-14T16:08:19-0300",
+        "email": "escutadalben@supermercadosdalben.com.br",
+        "cidade": "Campinas/Valinhos-SP",
+        "respondido_em": "",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Queijos Itupeva",
+        "contato": "",
+        "email": "rafaelgalvao@queijositupeva.com.br",
+        "cidade": "Itupeva/SP",
+        "respondido_em": "",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Betins Laticinios",
+        "contato": "",
+        "email": "betinslaticinios@gmail.com",
+        "cidade": "Piracicaba/SP (Artemis)",
+        "respondido_em": "2026-09-26T11:02:25-03:00",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Cabanha Campestre 53",
+        "contato": "",
+        "email": "cabanhacampestre53@gmail.com",
+        "cidade": "Campinas/SP (Joaquim Egidio)",
+        "respondido_em": "",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Grupo Muffato / Max Atacadista",
+        "contato": "",
+        "email": "diretoria@muffato.com.br",
+        "cidade": "Campinas/SP (Max) - grupo nacional",
+        "respondido_em": "",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Brasfrigo S/A (frigorifico - Salto/SP)",
+        "contato": "",
+        "email": "sac@brasfrigo.com.br",
+        "cidade": "Salto/SP",
+        "respondido_em": "",
         "ultima_resposta": ""
       },
       {
@@ -132,7 +140,7 @@
         "email": "atendimento@savegnago.com.br",
         "cidade": "Interior de SP (rede; unidades na regiao)",
         "respondido_em": "2026-10-14T08:57:39.791021-03:00",
-        "ultima_resposta": "WHATSAPP ATIVO: assistente virtual + atendente humano Pâmela (protocolo 00136403). Proposta de colet"
+        "ultima_resposta": "WHATSAPP ATIVO: assistente virtual + atendente humano Pâmela (protocolo 00136403). Proposta de coleta apresentada (R$2,00/L rede consolidada, 8.000L = R$16k/mês). Aguardando direcionamento ao setor de compras."
       },
       {
         "empresa": "Paulistao Atacadista (Grupo Savegnago)",
@@ -140,23 +148,7 @@
         "email": "atendimento@paulistaoatacadista.com.br",
         "cidade": "Interior SP - grupo Savegnago",
         "respondido_em": "2026-10-14T08:57:39.791021-03:00",
-        "ultima_resposta": "WHATSAPP ATIVO: assistente virtual + atendente humano Pâmela (protocolo 00136403). Proposta de colet"
-      },
-      {
-        "empresa": "Covabra Supermercados LTDA",
-        "contato": "",
-        "email": "sac@covabra.com.br",
-        "cidade": "Limeira/SP",
-        "respondido_em": "2026-10-14T08:34:24-03:00",
-        "ultima_resposta": ""
-      },
-      {
-        "empresa": "GoodBom Supermercados LTDA",
-        "contato": "",
-        "email": "contato@goodbom.com.br",
-        "cidade": "Tatui/SP",
-        "respondido_em": "2026-10-14T08:34:12-03:00",
-        "ultima_resposta": ""
+        "ultima_resposta": "WHATSAPP ATIVO: assistente virtual + atendente humano Pâmela (protocolo 00136403). Proposta de coleta apresentada (R$2,00/L rede consolidada, 8.000L = R$16k/mês). Aguardando direcionamento ao setor de compras."
       },
       {
         "empresa": "Supermercados Tauste S/A",
@@ -175,38 +167,60 @@
         "ultima_resposta": ""
       },
       {
-        "empresa": "Betins Laticinios",
+        "empresa": "Supermercados Nagumo (Mixter Atacado e Varejo - rede regional SP)",
         "contato": "",
-        "email": "betinslaticinios@gmail.com",
-        "cidade": "Piracicaba/SP (Artemis)",
-        "respondido_em": "2026-09-26T11:02:25-03:00",
+        "email": "relacionamento@nagumo.com.br",
+        "cidade": "Guarulhos/SP (lojas na RM SP e interior)",
+        "respondido_em": "2026-10-14T18:35:24-0300",
+        "ultima_resposta": "SAC Nagumo registrou caso Salesforce 00143542 em 14/10/2026 (auto-ack: 'recebemos seu caso'). Proposta de contrato enviada anexada para relacionamento@nagumo.com.br (rede regional; 5.000 L/mês est. = R$ 120k/ano). Aguardando retorno da equipe Nagumo. Follow-up humano em 3 dias via WhatsApp."
+      },
+      {
+        "empresa": "ICT Farmaceutica",
+        "contato": "",
+        "email": "suporte@ictfarmaceutica.com.br",
+        "cidade": "Votorantim/SP",
+        "respondido_em": "2026-10-28T09:33:32-03:00",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Sanofi Medley",
+        "contato": "",
+        "email": "sac.brasil@sanofi.com",
+        "cidade": "Hortolandia/SP",
+        "respondido_em": "2026-10-30T10:53:20-03:00",
+        "ultima_resposta": ""
+      },
+      {
+        "empresa": "Artema Pre Moldados",
+        "contato": "",
+        "email": "contato@artemapremoldados.com.br",
+        "cidade": "",
+        "respondido_em": "2026-10-28T14:43:09-03:00",
+        "ultima_resposta": "2026-10-28T14:42:31-03:00"
+      },
+      {
+        "empresa": "Pastificio Selmi S/A",
+        "contato": "",
+        "email": "sac@selmi.com.br",
+        "cidade": "Campinas/SP",
+        "respondido_em": "2026-11-02T14:05:54+00:00",
+        "ultima_resposta": "SAC redirecionou para compras@selmi.com.br — lead transferido"
+      },
+      {
+        "empresa": "Du Porto Industria Alimenticia Ltda",
+        "contato": "",
+        "email": "sac@duporto.com.br",
+        "cidade": "Sorocaba/SP",
+        "respondido_em": "2026-11-04T17:32:05-03:00",
         "ultima_resposta": ""
       }
     ]
   },
-  "fila_prospeccao": {
-    "total": 490,
-    "pendentes": 1,
-    "contatados": 419,
-    "bounces": 94,
-    "ultima_atualizacao": "2026-11-30 08:00 (Prospector - cron)"
-  },
-  "bounces_cache": 140,
-  "prospeccao_lote_enviados": 461,
+  "bounces_cache": 130,
+  "prospeccao_lote_enviados": 464,
+  "site_stats_updated": "518 empresas | 85+ dias",
+  "followups_professional_wrapper": true,
+  "melhorias_26_nov": ["index.html: 512→518, 75+→85+", "industrias.html: +512→+518", "prospecao_followup.py: profissional wrapper email_templates", "insights.md: registro do dia"],
   "sequencia_ativa": true,
-    "ultima_execucao": "2026-11-30 08:00 (Estrategista - domingo)",
-    "meta_da_semana": {
-      "semana": "30/11 a 06/12",
-      "foco": "FECHAMENTO — destravar gargalo humano + reabastecer prospecção via CNPJá",
-      "prioridades_absolutas": [
-        {"lead": "COVABRA", "acao": "CADASTRO FORNECEDOR isac.ivrim.com.br", "peso": "🔴🔴🔴", "prazo": "urgente — 70+ dias parado"},
-        {"lead": "SAVEGNAGO", "acao": "WHATSAPP (11) 96785-9631 — script persona.md", "peso": "🔴🔴🔴", "prazo": "urgente — 59+ dias parado"},
-        {"lead": "PAGUE MENOS", "acao": "WHATSAPP Josiane Marinho — ticket 407470", "peso": "🔴🔴🔴", "prazo": "42+ dias"},
-        {"lead": "REDE CONFIANÇA", "acao": "WHATSAPP — proposta 2.500 L/mês + bônus exclusividade", "peso": "🔴🔴🔴", "prazo": "42+ dias"},
-        {"lead": "BRASFRIGO", "acao": "AGENDAR COLETA-TESTE (Salto/SP — local)", "peso": "🔴🔴", "prazo": "14+ dias"},
-        {"lead": "QUEIJOS ITUPEVA", "acao": "AGENDAR COLETA-TESTE (Itupeva)", "peso": "🔴🔴", "prazo": "14+ dias"},
-        {"lead": "PASTIFÍCIO SELMI", "acao": "Follow-up compras@selmi.com.br — proposta 800 L/mês", "peso": "🟡", "prazo": "30+ dias"},
-        {"lead": "DU PORTO", "acao": "Responder sac@duporto.com.br — pedir volume mensal", "peso": "🟡", "prazo": "26+ dias"}
-      ]
-    }
-  }
+  "ultima_execucao": "2026-11-26T14:30:00-03:00"
+}

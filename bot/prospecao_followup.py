@@ -63,8 +63,11 @@ def smtp_send(cfg, e, to, subject, html, in_reply_to=None, conn=None):
     if in_reply_to:
         msg["In-Reply-To"] = in_reply_to
         msg["References"] = in_reply_to
+    # Wrapper profissional para follow-ups (header verde/âmbar + footer Master Óleo)
+    from email_templates import wrap_professional
+    html_prof = wrap_professional(html)
     msg.attach(MIMEText(_plain_from_html(html).strip(), "plain", "utf-8"))
-    msg.attach(MIMEText(html, "html", "utf-8"))
+    msg.attach(MIMEText(html_prof, "html", "utf-8"))
     if conn:
         conn.sendmail(e["usuario"], [to], msg.as_string())
     else:

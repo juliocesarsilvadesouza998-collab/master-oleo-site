@@ -1,4 +1,123 @@
 
+## 2026-11-26 14:30 (Melhorador Contínuo — cron #301 — quinta-feira)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ Stats do site | index.html: 512→518, 75+→85+ |
+| ✅ industrias.html stats | +512→+518 empresas contatadas |
+| ✅ Wrapper profissional em follow-ups | prospecao_followup.py: smtp_send agora usa email_templates.wrap_professional() |
+| ✅ py_compile prospecao_followup.py | OK (sem erros) |
+| ✅ ecossistema.json | atualizado com timestamp e metadados |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **518** |
+| Resposta humana real | **0.9% (4/464)** |
+| Dias sem resposta humana | **62+** (Tauste 30/09) |
+| Bounce rate | **22%** (100/464) |
+| Contratos fechados | **0** |
+| Follow-ups pendentes | ~15 leads novos (24-26/11 aguardando janela de 3d para FP1) |
+| Fonte de leads gratuita | **ESGOTADA** — todos MX-válidos já contatados |
+
+### ▸ Aprendizado
+**Follow-ups sem o template profissional perdem credibilidade.** Os templates de follow-up em `prospecao_followup.py` enviavam HTML inline sem o cabeçalho/rodapé profissional (verde/âmbar) que a apresentação inicial usava via `email_templates.py`. O lead que recebia um follow-up com aparência diferente do primeiro email podia achar que era outro remetente — ou golpe. Agora `wrap_professional()` é chamado em `smtp_send()`, garantindo consistência visual em toda a régua de prospecção. O mesmo problema existe em `prospecao.py` (usa HTML inline sem wrapper) — aplicar lá também quando o template principal for refatorado.
+
+### ▸ Pendências para o Estrategista
+- 🔴 **Ação humana**: Savegnago WhatsApp, Covabra cadastro Ivrim, Pague Menos ticket, Rede Confiança/Brasfrigo/Queijos Itupeva
+- 🔴 **Leadjet R$197** — única saída para reabastecer a prospecção em volume
+- 🔴 **15 leads novos (24-26/11)** vão precisar de FP1 nos próximos dias — o prospecao_followup.py já está com wrapper profissional, então estarão bem formatados
+- 🟡 **Aplicar wrap_professional() também no prospecao.py** — alinhamento completo da marca
+
+---
+
+## 2026-11-26 13:30 (Atendente IA — cron tick #300 — quinta-feira)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 142 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos já tentados; sem bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups enviados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ✅ _miniscan_inbox.py | INBOX: 0 não lidas |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **518** |
+| `novo` | 322 |
+| `respondido` | 24 |
+| `bounce` | 104 (142 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Dias sem resposta humana | **62** (Tauste 30/09); 43 desde Pague Menos (14/10) |
+| Fila prospecção | 0 MX-válidos |
+| SMTP/IMAP | OK ✅ |
+
+### ▸ 🔥 Leads QUENTES — sem mudança
+- **SAVEGNAGO** (R$7,98bi, #1 interior SP) — 62+ dias sem ação WhatsApp
+- **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho), 43 dias
+- **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês, 43+ dias
+- **COVABRA** — Cadastro fornecedor isac.ivrim.com.br pendente! 69+ dias
+- **BRASFRIGO** (Salto/SP) + **QUEIJOS ITUPEVA** — Coleta-teste a agendar
+- **PASTIFÍCIO SELMI** — compras@selmi.com.br, 23 dias sem retorno
+- **DU PORTO** (Sorocaba) — 22 dias sem retorno
+- 🆕 **Lead inbound WhatsApp** — Indústria óleos/oleoquímicos 6-25t/ano (aguarda retorno Júlio)
+
+### ▸ Observações
+- **62º dia sem resposta humana nova.** Nenhum lead respondeu. 0 follow-ups enviados (fila zerada).
+- **0 bounces novos** — todos os 142 bounces no cache já foram tentados.
+- Pipeline 100% bloqueado em ação humana — WhatsApp (11) 96785-9631 é o único caminho.
+- Sistema SMTP/IMAP saudável. Nada de novo neste ciclo.
+
+---
+
+## 2026-11-26 12:33 (Atendente IA — cron tick #296 — quinta-feira)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 142 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces processados (todos já tentados; sem bounce novo) |
+| ✅ prospecao_followup.py | 0 follow-ups enviados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos (fila drenada) |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **518** |
+| `novo` | 322 |
+| `respondido` | 24 |
+| `bounce` | 104 (142 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Dias sem resposta humana | **61** (Tauste 30/09); 47 desde Pague Menos (14/10) |
+| Fila prospecção | 0 MX-válidos |
+| SMTP/IMAP | OK ✅ |
+
+### ▸ 🔥 Leads QUENTES — sem mudança
+- **SAVEGNAGO** (R$7,98bi, #1 interior SP) — 61+ dias sem ação WhatsApp
+- **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho), 47 dias
+- **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês, 47+ dias
+- **COVABRA** — Cadastro fornecedor isac.ivrim.com.br pendente! 68+ dias
+- **BRASFRIGO** (Salto/SP) + **QUEIJOS ITUPEVA** — Coleta-teste a agendar
+- **PASTIFÍCIO SELMI** — compras@selmi.com.br, 27 dias sem retorno
+- **DU PORTO** (Sorocaba) — 26 dias sem retorno
+
+### ▸ Observações
+- **61º dia sem resposta humana nova.** Nenhum lead respondeu. 0 follow-ups enviados (fila zerada).
+- **0 bounces novos** — todos os 142 bounces no cache já foram tentados.
+- Pipeline 100% bloqueado em ação humana — WhatsApp (11) 96785-9631 é o único caminho.
+- Sistema SMTP/IMAP saudável. Nada de novo neste ciclo.
+
+---
+
 ## 2026-11-30 08:00 (Estrategista — domingo — relatório semanal #6)
 
 ### ▸ DIAGNÓSTICO
@@ -35,7 +154,47 @@ SEXTA:   ☐ CNPJá (+20 leads) ☐ Pesquisar ZAP-API
 
 ---
 
-## 2026-11-26 08:54 (Melhorador Contínuo - quinta-feira)
+## 2026-11-30 23:40 (Atendente IA — domingo — cron #294)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 142 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 2 bounces pendentes (Hotel KK, Hotel Santa Rita) sem email alternativo — marcados como tentados |
+| ✅ prospecao_followup.py | 2 FP1 enviados: HRP Industria, 3GX Foods |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ⏭️ proposta_contrato/relatorio_ESG | Não acionados (0 leads com volume ou solicitação) |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **518** |
+| `novo` | 322 |
+| `respondido` | 24 |
+| `bounce` | 104 (142 cache) |
+| `encerrado` | 15 |
+| `descartado` | 53 |
+| Dias sem resposta humana | **61** (Tauste 30/09); 47 desde Pague Menos (14/10) |
+| Fila prospecção | 0 MX-válidos |
+| SMTP/IMAP | OK ✅ |
+
+### ▸ 🔥 Leads QUENTES — sem mudança
+- **SAVEGNAGO** (R$7,98bi, #1 interior SP) — 61+ dias sem ação WhatsApp
+- **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho), 47 dias
+- **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês, 47+ dias
+- **COVABRA** — Cadastro fornecedor isac.ivrim.com.br pendente! 68+ dias
+- **BRASFRIGO** (Salto/SP) + **QUEIJOS ITUPEVA** — Coleta-teste a agendar
+- **PASTIFÍCIO SELMI** — compras@selmi.com.br, 27 dias sem retorno
+- **DU PORTO** (Sorocaba) — 26 dias sem retorno
+
+### ▸ Observações
+- **61º dia sem resposta humana nova.** Nenhum lead respondeu. 2 FP1 enviados para leads novos (HRP, 3GX).
+- **2 bounces de hotéis de Itu** sem correção — corrigir_emails.py não encontrou emails alternativos.
+- Pipeline 100% bloqueado em ação humana — WhatsApp (11) 96785-9631 é o único caminho.
+- Sistema SMTP/IMAP saudável. Nada de novo neste ciclo.
+
+---
 
 ### Diagnóstico
 - 512 leads | 318 ativos | 140 bounces (21%) | 458 enviados | 4 respostas humanas reais (0,9%)
@@ -14253,3 +14412,122 @@ Todos são construção civil (fora do escopo). Todos receberam boas-vindas em 2
 2. **🧹 Limpeza de bounces.json histórico** — os 39 emails no bounces.json que não são leads (ex: `3d@gmail.com`, `ana@alimentossalto.com.br`) podem ser removidos para manter o cache limpo. Não causam dano, mas poluem o arquivo.
 
 3. **📊 Meta de aumentar taxa de envio para leads "novo"** — com 313 leads "novo" sem boas-vindas, o send_sequence está lento ou limitado. Verificar se há rate limit no envio ou se a fila está sendo processada no volume correto por tick. Se possível, aumentar frequência do cron de send_sequence ou volume por lote.
+
+---
+
+## 2026-11-26 08:58 (Analista de Qualidade — auditoria #2 — quinta-feira)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| sync_formspree.py | 142 bounces cache, 0 notificações Formspree novas |
+| bot_oleo.py leads | 515 leads totais (+42 desde auditoria #1 em 19/11) |
+| Auditoria bounces.json vs leads.csv | 39 emails em bounces.json NÃO existem no leads.csv (projetos desmoldante/eco — cache compartilhado, esperado) |
+| Verificação boas_vindas_em em leads bounce | 3 leads bounce com boas_vindas_em: Tecnobloc (8304894485), Fábrica Bloco Forte (7721076467), Teste Formspree (437) — todos de fora do Master Óleo core |
+| replies_pending.json | 0 respostas pendentes |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **515** (+42 desde 19/11) |
+| novo | 321 |
+| respondido | 24 |
+| bounce CSV | 102 (142 cache — inclui desmoldante) |
+| encerrado | 15 |
+| descartado | 53 |
+| Bounces sem lead no CSV | 39 (eco/desmoldante — OK, cache compartilhado) |
+| Bounce com boas_vindas_em (indevido) | 3 (desmoldante + teste — baixo impacto) |
+| Caixa IMAP | 0 não lidas ✅ |
+| SMTP/IMAP | OK ✅ |
+| Replies pendentes | 0 ✅ |
+
+### ▸ Problemas encontrados
+1. **3 leads bounce com boas_vindas_em**: Tecnobloc, Fábrica Bloco Forte (desmoldante/construção) e Teste Formspree — receberam boas-vindas antes do bounce ser detectado. Nenhum lead Master Óleo core tem isso.
+2. **39 emails no bounces.json são de outros projetos** — cache compartilhado polui a auditoria, mas o bot filtra corretamente ao enviar.
+3. **sync_formspree.py lento** (>60s) vs ~30s em ticks anteriores — possível degradação de conexão IMAP.
+
+### ▸ Sugestões de melhoria para o Estrategista
+1. **Separar cache de bounces por projeto**: criar bounces_eco.json (desmoldante) e manter bounces.json só para Master Óleo — elimina 39 falsos positivos da auditoria.
+2. **Pré-validar MX antes do primeiro envio no desmoldante**: adicionar verificação DNS/MX no send_sequence para leads novos antes de disparar boas-vindas.
+3. **Encerrar lead de teste (ID 437)**: está como bounce desde 31/10, poluindo estatísticas. Marcar como encerrado.
+
+---
+
+## 2026-11-26 08:58 (Atendente IA — cron tick #272 — quinta-feira)
+
+### ▸ Ações executadas
+| Ação | Resultado |
+|------|-----------|
+| ✅ sync_formspree.py | 140 bounces cache, 0 notificações Formspree novas |
+| ✅ corrigir_emails.py | 0 bounces novos (todos os 140 já tentados anteriormente) |
+| ✅ prospecao_followup.py | 0 follow-ups processados (fila zerada) |
+| ✅ bot_oleo.py send_sequence | Sequência processada, 0 envios novos |
+| ✅ bot_oleo.py check-replies | 0 respostas (replies_pending.json vazio) |
+| ✅ _miniscan_inbox.py | INBOX: 0 não lidas |
+| ✅ watchdog.py | exit 1 — 515 leads, 319 ativos, 142 bounces. SMTP OK · IMAP OK · 3 bounces sem correção |
+| ⏭️ proposta_contrato.py + relatorio_esg.py | Não acionados (0 leads com volume/solicitação ESG) |
+
+### ▸ Diagnóstico
+| Indicador | Valor |
+|-----------|-------|
+| Total leads | **515** |
+| Ativos (novo + respondido) | ~343 |
+| `bounce` cache | 142 |
+| `descartado` | 53 |
+| `encerrado` | 15 |
+| Respostas pendentes | 0 |
+| Follow-ups atrasados | 0 |
+| Fila prospecção | **0 MX-válidos** (70+ dias sem cold email) |
+| Dias sem resposta humana | **59** (última: Tauste 30/09) |
+| Caixa IMAP | 0 não lidas |
+| SMTP/IMAP | OK |
+
+### ▸ Leads QUENTES (todos aguardam ação humana)
+- 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — 59+ dias. WhatsApp (11) 96785-9631.
+- 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 43 dias.
+- 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+- 🔴🔴🔴 **COVABRA** — Cadastro fornecedor isac.ivrim.com.br pendente (70+ dias!).
+- 🔴🔴 **BRASFRIGO** (Salto/SP) + **QUEIJOS ITUPEVA** — Coleta-teste a agendar.
+- 🟡 **SONDA** (R$6,12bi), **TAUSTE**, **SANOFI MEDLEY**, **NAGUMO**, **PASTIFÍCIO SELMI** (800 L/mês), **DU PORTO**
+- 🆕 Lead inbound WhatsApp — Indústria óleos/oleoquímicos (6-25t/ano) — Julio respondeu 25/11, aguarda retorno.
+
+### ▸ Observações
+- **59º dia consecutivo sem respostas humanas novas.** Última resposta real: Tauste (30/09).
+- **Nada mudou** em relação ao ciclo anterior — zero bounces novos, zero replies, zero follow-ups.
+- **Pipeline 100% bloqueado em ação humana** (WhatsApp/telefone/cadastro Covabra).
+- **3 bounces sem correção** apontados pelo watchdog — leads que o `corrigir_emails.py` não conseguiu endereçar alternativo.
+- Sistema saudável (SMTP/IMAP OK), mas estagnado. A reposição de fila de prospecção (Leadjet CNAE ~R$197) é a única saída para retomar cold email.
+
+## 2026-11-26 12:05 (Atendente IA — cron tick #299 — quinta-feira)
+
+### Diagnóstico do ciclo
+- ✅ sync_formspree.py — 142 bounces cache, 0 notificações Formspree novas
+- ✅ corrigir_emails.py — 0 bounces processados (todos os 142 já tentados; nenhum bounce novo)
+- ✅ prospecao_followup.py — 0 follow-ups (fila zerada)
+- ✅ bot_oleo.py send_sequence — sequência processada, 0 envios novos
+- ✅ bot_oleo.py check-replies — 0 respostas (replies_pending.json vazio)
+- ✅ _miniscan_inbox.py — INBOX: 0 não lidas
+- ⏭️ proposta_contrato/relatorio_ESG — não acionados (0 leads com volume ou solicitação)
+- 🔴 **62º dia sem respostas humanas no fluxo de COMPRA de óleo**
+- 🔴 Fila de prospecção zerada — sem MX-válidos para repor
+
+### Leads QUENTES (fechamento depende de ação humana)
+1. 🔴🔴🔴 **SAVEGNAGO** (R$7,98bi, #1 interior SP) — WhatsApp (11) 96785-9631. 62+ dias sem ação.
+2. 🔴🔴🔴 **PAGUE MENOS** (R$4,33bi) — Ticket 407470 (Josiane Marinho). 43 dias sem retorno.
+3. 🔴🔴🔴 **REDE CONFIANÇA** (Sorocaba) — Proposta 2.500 L/mês enviada.
+4. 🔴🔴🔴 **COVABRA** — **AÇÃO HUMANA: cadastro fornecedor** isac.ivrim.com.br. 69+ dias.
+5. 🔴🔴 **BRASFRIGO** (Salto/SP) — Coleta-teste a agendar. Local.
+6. 🔴🔴 **QUEIJOS ITUPEVA** (Rafael) — Coleta-teste a agendar.
+7. 🟡 **SONDA** (R$6,12bi) — (11) 2145-6200.
+8. 🟡 **TAUSTE** — (15) 3324-4680. Respondeu 30/09 (62 dias).
+9. 🟡 **SANOFI MEDLEY** — Protocolo 03065348 (29/10).
+10. 🟡 **NAGUMO** — Caso 00143542, proposta 5.000 L/mês.
+11. 🟡 **PASTIFÍCIO SELMI** — compras@selmi.com.br, proposta 800 L/mês (23 dias).
+12. 🟡 **DU PORTO** (Sorocaba) — sac@duporto.com.br, 22 dias.
+13. 🟡 **LEAD INBOUND WHATSAPP** — Indústria óleos/oleoquímicos 6-25t/ano (Júlio respondeu 25/11, aguarda retorno)
+
+### Observações
+- **62º dia sem resposta humana nova.** Nenhum lead respondeu, nenhum volume informado, nenhuma solicitação de proposta ou relatório ESG.
+- Pipeline 100% bloqueado em ação humana — WhatsApp (11) 96785-9631 é o único caminho.
+- Sistema SMTP/IMAP saudável. Nada de novo neste ciclo.
+
